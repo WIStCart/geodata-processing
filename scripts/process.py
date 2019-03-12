@@ -1,5 +1,3 @@
-# inputpath = 'C:\\PROJECTS\\Directed_Studies\\XML_Test_Data\\'
-# xmloutputs = 'C:\\PROJECTS\\Directed_Studies\\XML_Test_Data\\Outputs\\'
 isoxslt = 'C:\\PROJECTS\\Directed_Studies\\XML_Test_Data\\xslt\\ArcGIS2ISO19139_uw-geodata.xsl'
 jsonxslt = 'C:\\PROJECTS\\Directed_Studies\\XML_Test_Data\\xslt\\iso2geoBL_uw-geodata.xsl'
 import argparse
@@ -63,10 +61,8 @@ try:
 
     if (args.input_format == 'iso' and args.output_format == 'gbl'):
         iso2gbl(onlyfiles, jsonxslt, inPath, outPath)
-
     elif (args.input_format == 'esri' and args.output_format == 'iso'):
         esri2iso(onlyfiles, isoxslt, inPath, outPath)
-
     elif (args.input_format == 'esri' and args.output_format == 'gbl' ):
         esri2iso(onlyfiles, isoxslt, inPath, outPath)
         isofiles = [f for f in listdir(outPath) if (isfile(join(outPath, f)) and 'iso.xml' in f)]
