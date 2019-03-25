@@ -1,12 +1,21 @@
+# Update.py
+# Author:
+# Description:
+# Dependencies: Python 3.x, pysolr
+
 import os
 import json
-import pysolr
 import argparse
 import sys
 from collections import OrderedDict
 from glob import glob
 import fnmatch
- 
+
+# non-standard Python libraries 
+# requires additional installation
+# e.g., pip install pysolr
+import pysolr
+
 """
  
  to do:
