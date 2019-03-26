@@ -19,6 +19,10 @@ outPath = args.output
 count = 0
 
 try:
+    if (inPath[-1] != '\\'):
+            inPath += '\\'
+    if (outPath[-1] != '\\'):
+        outPath += '\\'
     if ("\\" in inPath):
         inPath.replace("\\","\\\\")
     if ("\\" in outPath):
@@ -26,9 +30,9 @@ try:
     onlyfiles = [f for f in listdir(inPath) if (isfile(join(inPath, f)) and '.xml' in f)]
 
     def iso2gbl (xmlList, jsonxslt, ins, out):
-        print('ISO 19139 to GBL format:')
+        # print('ISO 19139 to GBL format:')
         for xml in xmlList:
-            print(xml)
+            # print(xml)
             if (args.input_format == 'esri'):
                 filename = xml[:-8]
             else:
@@ -39,7 +43,7 @@ try:
             dom = ET.parse(ins + xml)
             transform = ET.XSLT(xslt_root)
             result = transform(dom)
-            f = open(out + filename + '_gbl.json', 'w')
+            f = open(out + filename + '.json', 'w', encoding="utf-8")
             f.write(str(result))
             f.close()
             if (args.input_format == 'esri'):
@@ -47,17 +51,18 @@ try:
 
 
     def esri2iso (xmlList, isoxslt, ins, out):
-        print('Esri format to ISO 19139:')
+        # print('Esri format to ISO 19139:')
         for xml in onlyfiles:
-            print(xml)
+            # print(xml)
             filename = xml[:-4]
             dom = ET.parse(ins + xml)
             xslt = ET.parse(isoxslt)
             transform = ET.XSLT(xslt)
             newdom = transform(dom)
-            infile = unicode((ET.tostring(newdom, pretty_print=True)))
-            outfile = open(out + filename + '_iso.xml', 'w')
-            outfile.write(infile)
+            # infile = unicode((ET.tostring(newdom, pretty_print=True)))
+            outfile = open(out + filename + '_iso.xml', 'w', encoding="utf-8")
+            outfile.write(str(newdom))
+            outfile.close()
 
     if (args.input_format == 'iso' and args.output_format == 'gbl'):
         iso2gbl(onlyfiles, jsonxslt, inPath, outPath)
