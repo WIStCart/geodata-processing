@@ -2,30 +2,37 @@
 # Author: Ben Segal
 # Description: script used for metadata transformations and parsing
 # Dependencies: Python 3.x, lxml
+isoxslt = '..\\XML_Test_Data\\xslt\\ArcGIS2ISO19139_uw-geodata.xsl'
+jsonxslt = '..\\XML_Test_Data\\xslt\\iso2geoBL_uw-geodata.xsl'
 
-isoxslt = '..\\xml_test_data\\xslt\\ArcGIS2ISO19139_uw-geodata.xsl'
-jsonxslt = '..\\xml_test_data\\xslt\\iso2geoBL_uw-geodata.xsl'
+# Standard python packages
 import argparse
 from os import listdir
 from os.path import isfile, join
-from shutil import copyfile
 import os
-import time
 
 # Non standard python libraries
 # requires additional installation
 # lxml: py -m pip install lxml
 import lxml.etree as ET
 
+# Establish input directory and metadata types for data transformations
 parser= argparse.ArgumentParser()
 parser.add_argument('-i', '--input', help='Directory of input files')
-parser.add_argument('-fi', '--input_format', help='Metadata format of input files')
+parser.add_argument('-fi', '--input_format', help='Metadata format of input files', required=False, choices={"esri", "Esri","ESRI", "iso", "ISO"})
 parser.add_argument('-o', '--output', help='Directory for output files')
-parser.add_argument('-fo', '--output_format', help='Metadata format for output files')
+parser.add_argument('-fo', '--output_format', help='Metadata format for output files', required=False, choices={"iso", "ISO", "gbl", "GBL"})
 args = parser.parse_args()
 inPath = args.input
 outPath = args.output
-count = 0
+inForm = args.input_format
+outForm = args.output_format
+
+# Set file types if user leaves these options blank
+if (inForm is None):
+    inForm = 'esri'
+if (outForm is None):
+    outForm = 'gbl'
 
 try:
     if (inPath[-1] != '\\'):
@@ -36,11 +43,15 @@ try:
         inPath.replace("\\","\\\\")
     if ("\\" in outPath):
         outPath.replace("\\","\\\\")
+    
+    # Create list of all files that end in .xml in input file directory
     onlyfiles = [f for f in listdir(inPath) if (isfile(join(inPath, f)) and '.xml' in f)]
 
+    # Transform ISO 19139 metadata to json format
     def iso2gbl (xmlList, jsonxslt, ins, out):
+        gblCount = 0
         for xml in xmlList:
-            if (args.input_format == 'esri'):
+            if (inForm == 'esri' or inForm == 'Esri' or inForm == 'ESRI'):
                 filename = xml[:-8]
             else:
                 filename = xml[:-4]
@@ -53,11 +64,14 @@ try:
             f = open(out + filename + '.json', 'w', encoding="utf-8")
             f.write(str(result))
             f.close()
-            if (args.input_format == 'esri'):
+            gblCount += 1
+            if (inForm == 'esri' or inForm == 'Esri' or inForm == 'ESRI'):
                 os.remove(ins + filename + '_iso.xml')
+        print (str(gblCount) + " records transformed from " + inForm + " to " + outForm)
 
-
+    # Transform esri metadata to ISO 19139 format
     def esri2iso (xmlList, isoxslt, ins, out):
+        isoCount = 0
         for xml in onlyfiles:
             filename = xml[:-4]
             dom = ET.parse(ins + xml)
@@ -67,12 +81,16 @@ try:
             outfile = open(out + filename + '_iso.xml', 'w', encoding="utf-8")
             outfile.write(str(newdom))
             outfile.close()
+            isoCount += 1
+        if (outForm == 'iso' or outForm == 'ISO'):
+            print (str(isoCount) + " records transformed from " + inForm + " to " + outForm)
 
-    if (args.input_format == 'iso' and args.output_format == 'gbl'):
+    # Run transformations based on input file types
+    if ((inForm == 'iso' or inForm == 'ISO') and (outForm == 'gbl' or outForm == 'GBL')):
         iso2gbl(onlyfiles, jsonxslt, inPath, outPath)
-    elif (args.input_format == 'esri' and args.output_format == 'iso'):
+    elif ((inForm == 'esri' or inForm == 'Esri' or inForm == 'ESRI') and (outForm == 'iso' or outForm == 'ISO')):
         esri2iso(onlyfiles, isoxslt, inPath, outPath)
-    elif (args.input_format == 'esri' and args.output_format == 'gbl' ):
+    elif ((inForm == 'esri' or inForm == 'Esri' or inForm == 'ESRI') and (outForm == 'gbl' or outForm == 'GBL')):
         esri2iso(onlyfiles, isoxslt, inPath, outPath)
         isofiles = [f for f in listdir(outPath) if (isfile(join(outPath, f)) and 'iso.xml' in f)]
         iso2gbl(isofiles, jsonxslt, outPath, outPath)
