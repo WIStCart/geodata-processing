@@ -1,12 +1,21 @@
-isoxslt = 'C:\\PROJECTS\\Directed_Studies\\XML_Test_Data\\xslt\\ArcGIS2ISO19139_uw-geodata.xsl'
-jsonxslt = 'C:\\PROJECTS\\Directed_Studies\\XML_Test_Data\\xslt\\iso2geoBL_uw-geodata.xsl'
+# Update.py
+# Author: Ben Segal
+# Description: script used for metadata transformations and parsing
+# Dependencies: Python 3.x, lxml
+
+isoxslt = '..\\xml_test_data\\xslt\\ArcGIS2ISO19139_uw-geodata.xsl'
+jsonxslt = '..\\xml_test_data\\xslt\\iso2geoBL_uw-geodata.xsl'
 import argparse
 from os import listdir
 from os.path import isfile, join
 from shutil import copyfile
 import os
-import lxml.etree as ET
 import time
+
+# Non standard python libraries
+# requires additional installation
+# lxml: py -m pip install lxml
+import lxml.etree as ET
 
 parser= argparse.ArgumentParser()
 parser.add_argument('-i', '--input', help='Directory of input files')
@@ -30,9 +39,7 @@ try:
     onlyfiles = [f for f in listdir(inPath) if (isfile(join(inPath, f)) and '.xml' in f)]
 
     def iso2gbl (xmlList, jsonxslt, ins, out):
-        # print('ISO 19139 to GBL format:')
         for xml in xmlList:
-            # print(xml)
             if (args.input_format == 'esri'):
                 filename = xml[:-8]
             else:
@@ -51,15 +58,12 @@ try:
 
 
     def esri2iso (xmlList, isoxslt, ins, out):
-        # print('Esri format to ISO 19139:')
         for xml in onlyfiles:
-            # print(xml)
             filename = xml[:-4]
             dom = ET.parse(ins + xml)
             xslt = ET.parse(isoxslt)
             transform = ET.XSLT(xslt)
             newdom = transform(dom)
-            # infile = unicode((ET.tostring(newdom, pretty_print=True)))
             outfile = open(out + filename + '_iso.xml', 'w', encoding="utf-8")
             outfile.write(str(newdom))
             outfile.close()
