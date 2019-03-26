@@ -1,7 +1,21 @@
-# Update.py
-# Author:
-# Description:
-# Dependencies: Python 3.x, pysolr
+"""
+Update.py
+
+Author(s): Jim Lacy, Ben Segal
+
+Description: 
+This script is designed to interact with a Solr instance running the GeoBlacklight 1.0 Schema.  It can perform one of four operations: 
+1. Upload and and then ingest a directory of GBL-formatted json files. Optional: recurse into subfolders.
+2. Delete a named "collection" from the Solr index
+3. Delete a single record from the Index using the unique ID (uuid)
+4. Purge the entire Solr index.  The nuclear option!
+
+When processing json inputs, the script performs some basic QA steps before the ingest is run.
+
+All updates to Solr are "auto-committed" (changes are effective immediately)
+
+Dependencies: Python 3.x, pysolr
+"""
 
 import os
 import json
@@ -11,20 +25,20 @@ from collections import OrderedDict
 from glob import glob
 import fnmatch
 
-# non-standard Python libraries 
-# requires additional installation
+# non-standard Python libraries that require additional installation
 # e.g., pip install pysolr
 import pysolr
 
 """
  
- to do:
+ to do (Ben?):
  
  add comments throughout code
  connect to solr instance that use https
  connect to solr instance with username and password
  ++ better error catching throughout
  script does not work on json files with multiple records embedded
+    Modify this script, or modify other scripts that output combined json???
  Can't have a closing \ at end of input file path 
  pre-scan items in dictionary, look for errors before ingest
  add message to indicate which instance is being worked on (delete, add, purge)
@@ -113,17 +127,19 @@ class Update(object):
     def scan_dict_records(self, list_of_dicts):
         # perform QA checks on dictionary object before it is ingested
         print("Performing QA scan...")
-        status = True
+        status = True  # always set to true for now
         """ 
         stuff to test:
             1. Do all required elements have data? (dc_identifier_s, layer_slug_s, dc_title_s,solr_geom, dct_provenance_s, dc_rights_s, geoblacklight_version)
-            2. Bad characters or encodings
+            2. Bad characters or encodings?
+            3. "NaN" in solr_geom?
             3. More stuff as we get additional experience
         """
         # 1. scan required elements
         #
         # read through each item in list
-        # check the required elements, 
+        # check the required elements to make sure they are not empty
+        # check to make sure no elements contain "Nan" (null???).  
         # if any element fails, output message and dc_title_s and layer_slug_s, return false
         # otherwise return true
         
