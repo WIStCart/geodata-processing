@@ -1,2 +1,2 @@
 @echo off
-py process.py %*
+python process.py %*
