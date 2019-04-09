@@ -48,8 +48,8 @@ import pysolr
 SOLR_USERNAME = "username"
 SOLR_PASSWORD = "password" 
 SOLR_URL_DEV = "http://localhost:8983/solr/geodata-core-development/"
-SOLR_URL_TEST = "http://geodata-test.shc.wisc.edu/solr/geodata-development/"
-SOLR_URL_PRODUCTION = "http://geodata-prod.shc.wisc.edu/solr/geodata-production/"
+SOLR_URL_TEST = "http://geodata-test.sco.wisc.edu/solr/geodata-development/"
+SOLR_URL_PRODUCTION = "http://geodata-prod.sco.wisc.edu/solr/geodata-development/"
 
 class SolrInterface(object):
 
