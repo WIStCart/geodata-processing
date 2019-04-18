@@ -24,6 +24,8 @@ import sys
 from collections import OrderedDict
 from glob import glob
 import fnmatch
+import requests
+from requests.auth import HTTPBasicAuth
 
 # non-standard Python libraries that require additional installation
 # e.g., pip install pysolr
@@ -39,17 +41,15 @@ import pysolr
  ++ better error catching throughout
  script does not work on json files with multiple records embedded
     Modify this script, or modify other scripts that output combined json???
- Can't have a closing \ at end of input file path 
- pre-scan items in dictionary, look for errors before ingest
- add message to indicate which instance is being worked on (delete, add, purge)
  
 """
  
-SOLR_USERNAME = "username"
-SOLR_PASSWORD = "password" 
-SOLR_URL_DEV = "http://localhost:8983/solr/geodata-core-development/"
-SOLR_URL_TEST = "http://geodata-test.shc.wisc.edu/solr/geodata-development/"
-SOLR_URL_PRODUCTION = "http://geodata-prod.shc.wisc.edu/solr/geodata-production/"
+SOLR_USERNAME = "solradmin"
+SOLR_PASSWORD = "Search4BadgerGeos!" 
+SOLR_URL_DEV = "https://localhost:8983/solr/geodata-core-development/"
+SOLR_URL_TEST = "https://geodata-test.sco.wisc.edu/solr/geodata-development/"
+SOLR_URL_PRODUCTION = "https://geodata-prod.sco.wisc.edu/solr/geodata-production/"
+SOLR_INSTANCE = ""
 
 class SolrInterface(object):
 
@@ -60,26 +60,28 @@ class SolrInterface(object):
 
     def _connect_to_solr(self):
         # establish the connection to Solr instance
-        return pysolr.Solr(self.solr_url, always_commit=True)
+        return pysolr.Solr(self.solr_url, auth=HTTPBasicAuth(SOLR_USERNAME, SOLR_PASSWORD), always_commit=True)
+
 
     def escape_query(self, raw_query):
         # Uncertain if this is really necessary
         return raw_query.replace("'", "\'")
 
     def delete_query(self, query, no_confirm=False):
+        global SOLR_INSTANCE
         # execute delete query
         s = self.solr.search(self.escape_query(query), **{"rows": "0"})
         if s.hits == 0:
-            print("No records found in [instance] instance. Nothing to delete.  Exiting...")
+            print("No records found in [" + SOLR_INSTANCE + "] instance. Nothing to delete.  Exiting...")
         else:
-            are_you_sure = input(
-            "Are you sure you want to delete {num_recs} records from [instance] instance? Y/N: ".format(num_recs=s.hits)
-            )
+            inMessage = "Are you sure you want to delete {num_recs} record(s) from [" + SOLR_INSTANCE + "] instance? Y/N: "
+            are_you_sure = input(inMessage.format(num_recs=s.hits))
             if are_you_sure.lower() == "y":
                 self.solr.delete(q=self.escape_query(query))
-                print("Done deleting {num_recs} records from [instance] instance...".format(num_recs=s.hits))
+                confirmMessage = "Done deleting {num_recs} record(s) from [" + SOLR_INSTANCE + "] instance..."
+                print(confirmMessage.format(num_recs=s.hits))
             else:
-                print("Okay, nothing deleted from [instance] instance. Exiting...")
+                print("Okay, nothing deleted from [" + SOLR_INSTANCE + "] instance. Exiting...")
 
     def json_to_dict(self, json_doc):
         # read data from one json file
@@ -114,7 +116,6 @@ class Update(object):
         else: 
             # if instance not specified, default to dev
             SOLR_URL = SOLR_URL_DEV
-
         # the following formating does not work.  needs attention.
         #if SOLR_USERNAME and SOLR_PASSWORD:
             #SOLR_URL = SOLR_URL.format(username=SOLR_USERNAME, password=SOLR_PASSWORD)    
@@ -126,23 +127,34 @@ class Update(object):
            
     def scan_dict_records(self, list_of_dicts):
         # perform QA checks on dictionary object before it is ingested
-        print("Performing QA scan...")
+
         status = True  # always set to true for now
-        """ 
-        stuff to test:
-            1. Do all required elements have data? (dc_identifier_s, layer_slug_s, dc_title_s,solr_geom, dct_provenance_s, dc_rights_s, geoblacklight_version)
-            2. Bad characters or encodings?
-            3. "NaN" in solr_geom?
-            3. More stuff as we get additional experience
-        """
-        # 1. scan required elements
-        #
-        # read through each item in list
-        # check the required elements to make sure they are not empty
-        # check to make sure no elements contain "Nan" (null???).  
-        # if any element fails, output message and dc_title_s and layer_slug_s, return false
-        # otherwise return true
-        
+        scanCatch = "\n"
+        d = list_of_dicts
+
+        # Check if required elements have valid data 
+        if(d["dc_identifier_s"] == ""):
+            scanCatch += "dc_identifier_s\n"
+        if(d["layer_slug_s"] == ""):
+            scanCatch += "layer_slug_s\n"
+        if(d["dc_title_s"] == ""):
+            scanCatch += "dc_title_s\n"
+        if("NaN" in d["solr_geom"]):
+            scanCatch += "solr_geom\n"
+        if(d["dct_provenance_s"] == ""):
+            scanCatch += "layer_slug_s\n"
+        if(d["dc_rights_s"] == ""):
+            scanCatch += "layer_slug_s\n"
+        if(d["geoblacklight_version"] == ""):
+            scanCatch += "geoblacklight_version\n"
+        if(d["solr_year_i"] == 9999):
+            scanCatch += "solr_year_i\n"
+
+        # If issues, print message and layer ids, set status to false
+        if (scanCatch != "\n"):
+            status = False
+            print("QA health check failed for dc_title_s: " + d["dc_title_s"] + "  layer_slug_s: " + d["layer_slug_s"] + "\nThe following fields are either missing data or have invalid entrys: " + scanCatch)
+ 
         return status
         
     def get_files_from_path(self, start_path, criteria="*"):
@@ -158,21 +170,29 @@ class Update(object):
         return files
 
     def add_json(self, path_to_json):
+        global SOLR_INSTANCE
         # cycle through json files, add them to a dictionary object
         files = self.get_files_from_path(path_to_json, criteria="*.json")
         #print(files)
         if files: 
             dicts = []
+            scanCheck = True
+            print("Performing QA scan...") 
             for i in files:
-                dicts.append(self.solr.json_to_dict(i))       
-            if self.scan_dict_records(dicts):
+                dictAppend = self.solr.json_to_dict(i)
+                dicts.append(dictAppend)
+                scanHold = self.scan_dict_records(dictAppend)     
+                if (scanHold == False):
+                    scanCheck = False  
+            if scanCheck:
                 print("QA health check passed.")
                 ingest_result = self.solr.add_dict_list_to_solr(dicts)
                 print("Ingest result: " + str(ingest_result))
                 if ingest_result:
-                    print("Added {n} records to Solr [instance] instance.".format(n=len(dicts)))
+                    ingestMessage = "Added {n} records to Solr [" + SOLR_INSTANCE + "] instance."
+                    print(ingestMessage.format(n=len(dicts)))
                 else:   
-                    print("Solr ingest on [instance] failed.  Exiting...")
+                    print("Solr ingest on [" + SOLR_INSTANCE + "] instance failed.  Exiting...")
             else:
                 print("QA health check failed.  Exiting...") 
         else:
@@ -231,8 +251,14 @@ def main():
     interface = Update(SOLR_USERNAME, SOLR_PASSWORD, COLLECTION=args.delete_collection, UUID=args.delete,INSTANCE=args.instance, RECURSIVE=args.recursive, PURGE=args.purge)
     #print(args)
 
+    inPath = args.add_json
+    if (inPath is not None and inPath[-1] != '\\'):
+            inPath += '\\'
+    global SOLR_INSTANCE
+    SOLR_INSTANCE = args.instance
+    print (SOLR_INSTANCE)
     if args.add_json:
-        interface.add_json(args.add_json)
+        interface.add_json(inPath)
     elif args.delete_collection:
         interface.delete_collection(args.delete_collection)        
     elif args.delete:
@@ -241,6 +267,8 @@ def main():
         interface.purge()
     else:
         sys.exit(parser.print_help())
+
+
 
 if __name__ == "__main__":
     sys.exit(main())
