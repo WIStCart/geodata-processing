@@ -1,0 +1,1804 @@
+{
+ "@context": "https://project-open-data.cio.gov/v1.1/schema/catalog.jsonld",
+ "@type": "dcat:Catalog",
+ "conformsTo": "https://project-open-data.cio.gov/v1.1/schema",
+ "describedBy": "https://project-open-data.cio.gov/v1.1/schema/catalog.json",
+ "dataset": [
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/22388e884bc64e729b61b512c3abebd3_0",
+   "title": "1990-2000 WI Election Data with 2017 Wards",
+   "description": "<div><div><a href=\"http://legis.wisconsin.gov/ltsb/gisdocs/ElectionData/SchemaDefinitions.pdf\" target=\"_blank\">Attribute Field Definitions</a><b><br /></b></div><div><br /></div></div><div><div><b>Ward Data Overview:</b></div><div>Fall 2017 municipal wards were collected in July 2017 by LTSB through the WISE-Decade system.\u00a0 Current statutes require each county clerk, or board of election commissioners, no later than January 15 and July 15 of each year, to transmit to the LTSB, in an electronic format (approved by LTSB), a report confirming the boundaries of each municipality, ward and supervisory district within the county as of the preceding \u201csnapshot\u201d date of January 1 or July 1 respectively. Population totals for 2011 wards are carried over to the 2017 dataset for existing wards. New wards created since 2011 due to annexations, detachments, and incorporation are allocated population from Census 2010 collection blocks. LTSB has topologically integrated the data, but there may still be errors.</div></div><div><div><br /></div><div><div><b>Election Data Overview:</b></div><div>Election data that is included in this file was collected by LTSB from the *Wisconsin Elections Commission (WEC) after each general election. A disaggregation process was performed on this election data based on the municipal ward layer that was available at the time of the election.\u00a0</div></div><div><br /></div><div><b><i>Disaggregation of Election Data:</i></b></div></div><div>Election data is first disaggregated from reporting units to wards, and then to census blocks. Next, the election data is aggregated back up to wards, municipalities, and counties. The disaggregation of election data to census blocks is done based on total population.\u00a0</div><div><div><br /></div><div>Detailed Methodology:</div><div><ul><li>Data is disaggregated first from reporting unit (i.e. multiple wards) to the ward level proportionate to the population of that ward.\u00a0</li><li>The data then is distributed down to the block level, again based on total population.\u00a0</li><li>When data is disaggregated to block or ward, we restrain vote totals not to exceed population 18 numbers, unless absolutely required.</li></ul></div></div><div><div>This methodology results in the following:\u00a0</div><div><ul><li>Election data totals reported to the WEC at the state, county, municipal and reporting unit level should match the disaggregated election data total at the same levels.\u00a0</li><li>Election data totals reported to the WEC at ward level may not match the ward totals in the disaggregated election data file.\u00a0</li><li>Some wards may have more election data allocated than voter age population. This will occur if a change to the geography results in more voters than the 2010 historical population limits.</li></ul></div></div><div><div><b><i>Other things of note\u2026</i></b></div><div>We use a static, official ward layer (in this case created in 2017) to disaggregate election data to blocks. Using this ward layer creates some challenges. New wards are created every year due to annexations and incorporations. When these new wards are reported with election data, an issue arises wherein election data is being reported for wards that do not exist in our official ward layer. For example, if Cityville has four wards in the official ward layer, the election data may be reported for five wards, including a new ward from an annexation.\u00a0</div><div><br /></div><div><b>There are two different scenarios and courses of action to these issues:\u00a0</b></div><div><ol><li>When a single new ward is present in the election data but there is no ward geometry present in the official ward layer, the votes attributed to this new ward are distributed to all the other wards in the municipality based on population percentage. Distributing based on population percentage means that the proportion of the population of the municipality will receive that same proportion of votes from the new ward. In the example of Cityville explained above, the fifth ward may have five votes reported, but since there is no corresponding fifth ward in the official layer, these five votes will be assigned to each of the other wards in Cityville according the percentage of population.</li><li>Another case is when a new ward is reported, but its votes are part of reporting unit. In this case, the votes for the new ward are assigned to the other wards in the reporting unit by population percentage; and not to wards in the municipality as a whole. For example, Cityville\u2019s ward 5 was given as a reporting unit together with wards 1, 4, and 5. In this case, the votes in ward five are assigned to wards 1 and 4 according to population percentage.\u00a0</li></ol></div><div><i>Outline Ward-by-Ward Election Results</i></div><div>The process of collecting election data and disaggregating to municipal wards occurs after a general election, so disaggregation has occurred with different ward layers and different population totals. We have outlined (to the best of our knowledge) what layer and population totals were used to produce these ward-by-ward election results.<br /></div><div><ol><li>Election data disaggregates from WEC Reporting Unit -&gt; Ward [Variant year outlined below]<br /></li><ul><li>Elections 1990 \u2013 2000: Wards 1991 (Census 1990 totals used for disaggregation)</li><li>Elections 2002 \u2013 2010: Wards 2001 (Census 2000 totals used for disaggregation)</li><li>Elections 2012: Wards 2011 (Census 2010 totals used for disaggregation)</li><li>Elections 2014 \u2013 2016: Wards Fall 2017 (Census 2010 totals used for disaggregation)</li></ul><li>Blocks 2011 -&gt; Centroid geometry and spatially joined with Wards [All Versions]<br /></li><ul><li>Each Block has an assignment to each of the ward versions outlined above</li><li>In the event that a ward exists now in which no block exists (occurred with spring 2017) due to annexations, a block centroid was created with a population 0, and encoded with the proper Census IDs.</li></ul><li>Wards [All Versions] disaggregate -&gt; Blocks 2011<br /></li><ul><li>This yields a block centroid layer that contains all elections from 1990 to 2016</li></ul><li>Blocks 2011 [with all election data] -&gt; Wards 2017 (then MCD 2017, and County 2017)\u00a0<br /></li><ul><li>All election data (including later elections such as 2016) is aggregated to the Wards 2017 assignment of the blocks</li></ul></ol></div><div><i>Notes:</i></div><div><ol><li>Population of municipal wards 1991, 2001 and 2011 used for disaggregation were determined by their respective Census.</li><li>Population and Election data will be contained within a county boundary. This means that even though MCD and ward boundaries vary greatly between versions of the wards, county boundaries have stayed the same, so data should total within a county the same between wards 2011 and wards 2017.</li><li>Election data may be different for the same legislative district, for the same election, due to changes in the wards from 2011 and 2017. This is due to boundary corrections in the data from 2011 to 2017, and annexations, where a block may have been reassigned.</li></ol></div></div><div><p>*WEC replaced the previous Government Accountability Board (GAB) in 2016, which replaced the previous State Elections Board in 2008.</p></div>",
+   "keyword": [
+    " Municipal Wards",
+    "Wisconsin",
+    "19902000",
+    "2017",
+    "2017 Wards",
+    "GIS",
+    "LTSB",
+    "Wards",
+    "Election Data"
+   ],
+   "issued": "2018-05-17T20:09:28.000Z",
+   "modified": "2019-04-02T19:20:55.866Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/22388e884bc64e729b61b512c3abebd3_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Election_Data/1990_2000_Election_Data_with_2017_Wards/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/22388e884bc64e729b61b512c3abebd3_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/22388e884bc64e729b61b512c3abebd3_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/22388e884bc64e729b61b512c3abebd3_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/22388e884bc64e729b61b512c3abebd3_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/22388e884bc64e729b61b512c3abebd3_0",
+   "webService": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Election_Data/1990_2000_Election_Data_with_2017_Wards/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/22388e884bc64e729b61b512c3abebd3_0/license",
+   "spatial": "-92.889337,42.49193,-86.763988,47.080705",
+   "theme": [
+    "geospatial"
+   ]
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/df42bb0d6e6041229f6fb0cb1cbd0ef3_0",
+   "title": "2002-2010 WI Election Data with 2017 Wards",
+   "description": "<div><div><a href=\"http://legis.wisconsin.gov/ltsb/gisdocs/ElectionData/SchemaDefinitions.pdf\" target=\"_blank\">Attribute Field Definitions</a><b><br /></b></div><div><br /></div></div><div><div><b>Ward Data Overview:</b></div><div>Fall 2017 municipal wards were collected in July 2017 by LTSB through the WISE-Decade system.\u00a0 Current statutes require each county clerk, or board of election commissioners, no later than January 15 and July 15 of each year, to transmit to the LTSB, in an electronic format (approved by LTSB), a report confirming the boundaries of each municipality, ward and supervisory district within the county as of the preceding \u201csnapshot\u201d date of January 1 or July 1 respectively. Population totals for 2011 wards are carried over to the 2017 dataset for existing wards. New wards created since 2011 due to annexations, detachments, and incorporation are allocated population from Census 2010 collection blocks. LTSB has topologically integrated the data, but there may still be errors.</div></div><div><div><br /></div><div><div><b>Election Data Overview:</b></div><div>Election data that is included in this file was collected by LTSB from the *Wisconsin Elections Commission (WEC) after each general election. A disaggregation process was performed on this election data based on the municipal ward layer that was available at the time of the election.\u00a0</div></div><div><br /></div><div><b><i>Disaggregation of Election Data:</i></b></div></div><div>Election data is first disaggregated from reporting units to wards, and then to census blocks. Next, the election data is aggregated back up to wards, municipalities, and counties. The disaggregation of election data to census blocks is done based on total population.\u00a0</div><div><div><br /></div><div>Detailed Methodology:</div><div><ul><li>Data is disaggregated first from reporting unit (i.e. multiple wards) to the ward level proportionate to the population of that ward.\u00a0</li><li>The data then is distributed down to the block level, again based on total population.\u00a0</li><li>When data is disaggregated to block or ward, we restrain vote totals not to exceed population 18 numbers, unless absolutely required.</li></ul></div></div><div><div>This methodology results in the following:\u00a0</div><div><ul><li>Election data totals reported to the WEC at the state, county, municipal and reporting unit level should match the disaggregated election data total at the same levels.\u00a0</li><li>Election data totals reported to the WEC at ward level may not match the ward totals in the disaggregated election data file.\u00a0</li><li>Some wards may have more election data allocated than voter age population. This will occur if a change to the geography results in more voters than the 2010 historical population limits.</li></ul></div></div><div><div><b><i>Other things of note\u2026</i></b></div><div>We use a static, official ward layer (in this case created in 2017) to disaggregate election data to blocks. Using this ward layer creates some challenges. New wards are created every year due to annexations and incorporations. When these new wards are reported with election data, an issue arises wherein election data is being reported for wards that do not exist in our official ward layer. For example, if Cityville has four wards in the official ward layer, the election data may be reported for five wards, including a new ward from an annexation.\u00a0</div><div><br /></div><div><b>There are two different scenarios and courses of action to these issues:\u00a0</b></div><div><ol><li>When a single new ward is present in the election data but there is no ward geometry present in the official ward layer, the votes attributed to this new ward are distributed to all the other wards in the municipality based on population percentage. Distributing based on population percentage means that the proportion of the population of the municipality will receive that same proportion of votes from the new ward. In the example of Cityville explained above, the fifth ward may have five votes reported, but since there is no corresponding fifth ward in the official layer, these five votes will be assigned to each of the other wards in Cityville according the percentage of population.</li><li>Another case is when a new ward is reported, but its votes are part of reporting unit. In this case, the votes for the new ward are assigned to the other wards in the reporting unit by population percentage; and not to wards in the municipality as a whole. For example, Cityville\u2019s ward 5 was given as a reporting unit together with wards 1, 4, and 5. In this case, the votes in ward five are assigned to wards 1 and 4 according to population percentage.\u00a0</li></ol></div><div><i>Outline Ward-by-Ward Election Results</i></div><div>The process of collecting election data and disaggregating to municipal wards occurs after a general election, so disaggregation has occurred with different ward layers and different population totals. We have outlined (to the best of our knowledge) what layer and population totals were used to produce these ward-by-ward election results.<br /></div><div><ol><li>Election data disaggregates from WEC Reporting Unit -&gt; Ward [Variant year outlined below]<br /></li><ul><li>Elections 1990 \u2013 2000: Wards 1991 (Census 1990 totals used for disaggregation)</li><li>Elections 2002 \u2013 2010: Wards 2001 (Census 2000 totals used for disaggregation)</li><li>Elections 2012: Wards 2011 (Census 2010 totals used for disaggregation)</li><li>Elections 2014 \u2013 2016: Wards Fall 2017 (Census 2010 totals used for disaggregation)</li></ul><li>Blocks 2011 -&gt; Centroid geometry and spatially joined with Wards [All Versions]<br /></li><ul><li>Each Block has an assignment to each of the ward versions outlined above</li><li>In the event that a ward exists now in which no block exists (occurred with spring 2017) due to annexations, a block centroid was created with a population 0, and encoded with the proper Census IDs.</li></ul><li>Wards [All Versions] disaggregate -&gt; Blocks 2011<br /></li><ul><li>This yields a block centroid layer that contains all elections from 1990 to 2016</li></ul><li>Blocks 2011 [with all election data] -&gt; Wards 2017 (then MCD 2017, and County 2017)\u00a0<br /></li><ul><li>All election data (including later elections such as 2016) is aggregated to the Wards 2017 assignment of the blocks</li></ul></ol></div><div><i>Notes:</i></div><div><ol><li>Population of municipal wards 1991, 2001 and 2011 used for disaggregation were determined by their respective Census.</li><li>Population and Election data will be contained within a county boundary. This means that even though MCD and ward boundaries vary greatly between versions of the wards, county boundaries have stayed the same, so data should total within a county the same between wards 2011 and wards 2017.</li><li>Election data may be different for the same legislative district, for the same election, due to changes in the wards from 2011 and 2017. This is due to boundary corrections in the data from 2011 to 2017, and annexations, where a block may have been reassigned.</li></ol></div></div><div><p>*WEC replaced the previous Government Accountability Board (GAB) in 2016, which replaced the previous State Elections Board in 2008.</p></div>",
+   "keyword": [
+    "20022010",
+    "2017",
+    "Election Data",
+    "LTSB",
+    "Municipal Wards",
+    "Wards",
+    "Wisconsin"
+   ],
+   "issued": "2018-05-17T19:42:19.000Z",
+   "modified": "2019-04-02T19:19:57.962Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/df42bb0d6e6041229f6fb0cb1cbd0ef3_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Election_Data/2002_2010_Election_Data_with_2017_Wards/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/df42bb0d6e6041229f6fb0cb1cbd0ef3_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/df42bb0d6e6041229f6fb0cb1cbd0ef3_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/df42bb0d6e6041229f6fb0cb1cbd0ef3_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/df42bb0d6e6041229f6fb0cb1cbd0ef3_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/df42bb0d6e6041229f6fb0cb1cbd0ef3_0",
+   "webService": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Election_Data/2002_2010_Election_Data_with_2017_Wards/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/df42bb0d6e6041229f6fb0cb1cbd0ef3_0/license",
+   "spatial": "-92.889337,42.49193,-86.763988,47.080705",
+   "theme": [
+    "geospatial"
+   ]
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/0792c5d275e2466e93f551498b3d646c_0",
+   "title": "WI Legislative Redistricting Wards, 2011",
+   "description": "These municipal wards were created by grouping Census 2010 population collection blocks into municipal wards. This project started with the release of Census 2010 geography and population totals to all 72 Wisconsin counties on March 21, 2011. Census Geography and population totals to be used for local redistricting were made available on the Wisconsin Shape Editor for Local Redistricting (WISE-LR) website and the WISE-LR web application. The 180 day statutory timeline for local redistricting to occur in Wisconsin ended on September 19, 2011.\u00a0<br /><br />Wisconsin Legislative and congressional redistricting plans were enacted in the fall of 2011. The 2011 Wisconsin Act 43 and Act 44 created new Assembly, Senate and Congressional lines for the state. These new districts were created using Census 2010 block geography. Some municipal wards were enacted that were created before Act 43 and 44, which created municipal wards in some communities to be split between Assembly, Senate and Congressional districts. The 2011 Wisconsin Act 39 allowed communities to divide affected wards along census blocks. Newly formed wards created under Wisconsin Act 39 would need to be named using alpha-numeric labels (e.g., Ward 1 divided by an Assembly district would become Ward 1A and Ward 1B, or the next sequential ward number would have to be used: Ward 1 and Ward 2). The process of dividing wards under Act 39 ended on April 10, 2012. This link provides more information on Act 39:\u00a0<a href=\"http://legis.wisconsin.gov/lrb/pubs/Lb/11Lb1.pdf\" target=\"_blank\">http://legis.wisconsin.gov/lrb/pubs/Lb/11Lb1.pdf</a><br /><br />On April 11, 2012, the United States Eastern District Federal Court ordered Assembly Districts 8 and 9 (both in the City of Milwaukee) to be changed to follow the court\u2019s description.<br /><br />On September 19, 2012, the Legislative Technology Services Bureau (LTSB) divided the few remaining municipal wards that were split by a 2011 Wisconsin Act 43 or 44 district line.",
+   "keyword": [
+    "Municipal Wards",
+    "Local Redistricting",
+    "Wisconsin",
+    "LTSB",
+    "2011",
+    "2012",
+    "Wards",
+    "Act 43",
+    "Act 44"
+   ],
+   "issued": "2016-10-03T20:26:10.000Z",
+   "modified": "2019-04-02T19:19:26.395Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/0792c5d275e2466e93f551498b3d646c_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/ArcGIS_Online/Municipal_Wards_Fall_2012/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/0792c5d275e2466e93f551498b3d646c_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/0792c5d275e2466e93f551498b3d646c_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/0792c5d275e2466e93f551498b3d646c_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/0792c5d275e2466e93f551498b3d646c_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/0792c5d275e2466e93f551498b3d646c_0",
+   "webService": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/ArcGIS_Online/Municipal_Wards_Fall_2012/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/0792c5d275e2466e93f551498b3d646c_0/license",
+   "spatial": "-88.116,42.852,-87.818,43.15",
+   "theme": [
+    "geospatial"
+   ]
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/697d7586da3e43fb9876cb97c1c7922f_0",
+   "title": "WI Municipal Wards (Fall 2018)",
+   "description": "<p>Wisconsin municipal ward data collected in July 2018. This data has been collected in regards to state statute\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/5.15(4)(br)1.\">5.15(4)(br)1</a>.</p><ol><li>County clerks will transmit municipal, municipal ward, and county supervisory districts in GIS format to LTSB by January 15th and July 15th per statute\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/5.15(4)(br)1.\">5.15(4)(br)1</a>:<br /></li><ul><li>\u00a0&quot;...no later than January 15 and July 15 of each year, the county clerk shall transmit to the Legislative Technology Services Bureau a report confirming the boundaries of each municipality, ward, and supervisory district in the county together with a map of the county, in an electronic format approved by the Legislative Technology Services Bureau. Each report shall be current to the nearest January 1 or July 1 preceding the date of the report\u201d.<br /></li></ul><li>Municipal clerks\u00a0need to notify the county clerk\u00a0within 5 days of any boundary change per statute\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/5.15(4)(b)\">5.15(4)(b)</a>:<br /></li><ul><li>\u00a0&quot;Within 5 days after adoption or enactment of an ordinance or resolution under this section or any amendment thereto, the municipal clerk shall transmit one copy of the ordinance or resolution or the amendment to the county clerk of each county in which the municipality is contained, accompanied by the list and map specified in par. (a). Each copy shall identify the name of the municipality and the county or counties in which it is located.&quot;</li></ul></ol>Municipal data collected in January will be used by LTSB to update municipal boundaries the U.S. Census Bureau\u2019s TIGER database via the Boundary Annexation Survey (BAS). Counties and municipalities are no longer required to submit boundary changes directly to the Census Bureau. LTSB will submit data to the Census Bureau for the state as a whole.<br /><br /><div>Section\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/13.96(1)(b)\">13.96(1)(b)</a>\u00a0of the Wisconsin Statutes requires LTSB to \u201cupon receipt of municipal boundary information at each reporting interval, reconcile and compile the information received to produce a statewide data base consisting of municipal boundary information for the entire state\u201d.<br /><br /></div><div>Section\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/13.96(1)(c)\">13.96(1)(c)</a>\u00a0states that LTSB shall \u201cParticipate, on behalf of this state, in geographic boundary information programs when offered by the U.S. bureau of the census\u201d.<br /><br /></div><div>LTSB will publish Municipal Ward, Municipal Boundaries and County Supervisory Districts to the LTSB Open Data Portal located at:\u00a0<a href=\"http://data.ltsb.opendata.arcgis.com/\">http://data.ltsb.opendata.arcgis.com/</a>.<br /><br /></div><div>This data has been collected with the WISE-Decade software platform. For more information on this system please visit:\u00a0<a href=\"http://legis.wisconsin.gov/ltsb/gis/wise-decade/\">http://legis.wisconsin.gov/ltsb/gis/wise-decade/</a>.<br /></div>",
+   "keyword": [
+    "2018",
+    "Data Collection",
+    "Data Collection 2018",
+    "LTSB",
+    "Municipal Wards",
+    "Statewide",
+    "Wards",
+    "Wisconsin",
+    "WISEDecade"
+   ],
+   "issued": "2018-08-06T20:40:18.000Z",
+   "modified": "2019-04-02T19:18:53.398Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/697d7586da3e43fb9876cb97c1c7922f_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Statewide/Municipal_Wards_Fall_2018/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/697d7586da3e43fb9876cb97c1c7922f_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/697d7586da3e43fb9876cb97c1c7922f_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/697d7586da3e43fb9876cb97c1c7922f_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/697d7586da3e43fb9876cb97c1c7922f_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/697d7586da3e43fb9876cb97c1c7922f_0",
+   "webService": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Statewide/Municipal_Wards_Fall_2018/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/697d7586da3e43fb9876cb97c1c7922f_0/license",
+   "spatial": "-92.889337,42.491914,-86.763988,47.080705",
+   "theme": [
+    "geospatial"
+   ]
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/62d5782482cd45f2898fe7e3d4272c10_0",
+   "title": "2012-2020 WI Election Data with 2017 Wards",
+   "description": "<div><div><a href=\"http://legis.wisconsin.gov/ltsb/gisdocs/ElectionData/SchemaDefinitions.pdf\" target=\"_blank\">Attribute Field Definitions</a><b><br /></b></div><div><br /></div></div><div><div><b>Ward Data Overview:</b></div><div>Fall 2017 municipal wards were collected in July 2017 by LTSB through the WISE-Decade system.\u00a0 Current statutes require each county clerk, or board of election commissioners, no later than January 15 and July 15 of each year, to transmit to the LTSB, in an electronic format (approved by LTSB), a report confirming the boundaries of each municipality, ward and supervisory district within the county as of the preceding \u201csnapshot\u201d date of January 1 or July 1 respectively. Population totals for 2011 wards are carried over to the 2017 dataset for existing wards. New wards created since 2011 due to annexations, detachments, and incorporation are allocated population from Census 2010 collection blocks. LTSB has topologically integrated the data, but there may still be errors.</div></div><div><div><br /></div><div><div><b>Election Data Overview:</b></div><div>Election data that is included in this file was collected by LTSB from the *Wisconsin Elections Commission (WEC) after each general election. A disaggregation process was performed on this election data based on the municipal ward layer that was available at the time of the election.\u00a0</div></div><div><br /></div><div><b><i>Disaggregation of Election Data:</i></b></div></div><div>Election data is first disaggregated from reporting units to wards, and then to census blocks. Next, the election data is aggregated back up to wards, municipalities, and counties. The disaggregation of election data to census blocks is done based on total population.\u00a0</div><div><div><br /></div><div>Detailed Methodology:</div><div><ul><li>Data is disaggregated first from reporting unit (i.e. multiple wards) to the ward level proportionate to the population of that ward.\u00a0</li><li>The data then is distributed down to the block level, again based on total population.\u00a0</li><li>When data is disaggregated to block or ward, we restrain vote totals not to exceed population 18 numbers, unless absolutely required.</li></ul></div></div><div><div>This methodology results in the following:\u00a0</div><div><ul><li>Election data totals reported to the WEC at the state, county, municipal and reporting unit level should match the disaggregated election data total at the same levels.\u00a0</li><li>Election data totals reported to the WEC at ward level may not match the ward totals in the disaggregated election data file.\u00a0</li><li>Some wards may have more election data allocated than voter age population. This will occur if a change to the geography results in more voters than the 2010 historical population limits.</li></ul></div></div><div><div><b><i>Other things of note\u2026</i></b></div><div>We use a static, official ward layer (in this case created in 2017) to disaggregate election data to blocks. Using this ward layer creates some challenges. New wards are created every year due to annexations and incorporations. When these new wards are reported with election data, an issue arises wherein election data is being reported for wards that do not exist in our official ward layer. For example, if Cityville has four wards in the official ward layer, the election data may be reported for five wards, including a new ward from an annexation.\u00a0</div><div><br /></div><div><b>There are two different scenarios and courses of action to these issues:\u00a0</b></div><div><ol><li>When a single new ward is present in the election data but there is no ward geometry present in the official ward layer, the votes attributed to this new ward are distributed to all the other wards in the municipality based on population percentage. Distributing based on population percentage means that the proportion of the population of the municipality will receive that same proportion of votes from the new ward. In the example of Cityville explained above, the fifth ward may have five votes reported, but since there is no corresponding fifth ward in the official layer, these five votes will be assigned to each of the other wards in Cityville according the percentage of population.</li><li>Another case is when a new ward is reported, but its votes are part of reporting unit. In this case, the votes for the new ward are assigned to the other wards in the reporting unit by population percentage; and not to wards in the municipality as a whole. For example, Cityville\u2019s ward 5 was given as a reporting unit together with wards 1, 4, and 5. In this case, the votes in ward five are assigned to wards 1 and 4 according to population percentage.\u00a0</li></ol></div><div><i>Outline Ward-by-Ward Election Results</i></div><div>The process of collecting election data and disaggregating to municipal wards occurs after a general election, so disaggregation has occurred with different ward layers and different population totals. We have outlined (to the best of our knowledge) what layer and population totals were used to produce these ward-by-ward election results.<br /></div><div><ol><li>Election data disaggregates from WEC Reporting Unit -&gt; Ward [Variant year outlined below]<br /></li><ul><li>Elections 1990 \u2013 2000: Wards 1991 (Census 1990 totals used for disaggregation)</li><li>Elections 2002 \u2013 2010: Wards 2001 (Census 2000 totals used for disaggregation)</li><li>Elections 2012: Wards 2011 (Census 2010 totals used for disaggregation)</li><li>Elections 2014 \u2013 2016: Wards Fall 2017 (Census 2010 totals used for disaggregation)</li></ul><li>Blocks 2011 -&gt; Centroid geometry and spatially joined with Wards [All Versions]<br /></li><ul><li>Each Block has an assignment to each of the ward versions outlined above</li><li>In the event that a ward exists now in which no block exists (occurred with spring 2017) due to annexations, a block centroid was created with a population 0, and encoded with the proper Census IDs.</li></ul><li>Wards [All Versions] disaggregate -&gt; Blocks 2011<br /></li><ul><li>This yields a block centroid layer that contains all elections from 1990 to 2016</li></ul><li>Blocks 2011 [with all election data] -&gt; Wards 2017 (then MCD 2017, and County 2017)\u00a0<br /></li><ul><li>All election data (including later elections such as 2016) is aggregated to the Wards 2017 assignment of the blocks</li></ul></ol></div><div><i>Notes:</i></div><div><ol><li>Population of municipal wards 1991, 2001 and 2011 used for disaggregation were determined by their respective Census.</li><li>Population and Election data will be contained within a county boundary. This means that even though MCD and ward boundaries vary greatly between versions of the wards, county boundaries have stayed the same, so data should total within a county the same between wards 2011 and wards 2017.</li><li>Election data may be different for the same legislative district, for the same election, due to changes in the wards from 2011 and 2017. This is due to boundary corrections in the data from 2011 to 2017, and annexations, where a block may have been reassigned.</li><li>On October 19, 2018 we corrected the attribute field names regarding the 2014 Wisconsin State Senate Race; they were previously labeled incorrectly as a 2014 US Senate Race.</li></ol></div></div><div><p>*WEC replaced the previous Government Accountability Board\n(GAB) in 2016, which replaced the previous State Elections Board in 2008.</p></div><div><br /></div>",
+   "keyword": [
+    " Municipal Wards",
+    "20122020",
+    "2017",
+    "Election Data",
+    "LTSB",
+    "Wisconsin"
+   ],
+   "issued": "2018-05-17T19:51:58.000Z",
+   "modified": "2019-04-04T15:06:35.059Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/62d5782482cd45f2898fe7e3d4272c10_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Election_Data/2012_2020_Election_Data_with_2017_Wards/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/62d5782482cd45f2898fe7e3d4272c10_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/62d5782482cd45f2898fe7e3d4272c10_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/62d5782482cd45f2898fe7e3d4272c10_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/62d5782482cd45f2898fe7e3d4272c10_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/62d5782482cd45f2898fe7e3d4272c10_0",
+   "webService": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Election_Data/2012_2020_Election_Data_with_2017_Wards/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/62d5782482cd45f2898fe7e3d4272c10_0/license",
+   "spatial": "-92.889337,42.49193,-86.763988,47.080705",
+   "theme": [
+    "geospatial"
+   ]
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/01869b4b585e44bbbac5d550b7bb6fb8_0",
+   "title": "2012-2020 WI Election Data with 2011 Wards",
+   "description": "<div><div><a href=\"http://legis.wisconsin.gov/ltsb/gisdocs/ElectionData/SchemaDefinitions.pdf\" target=\"_blank\">Attribute Field Definitions</a><b><br /></b></div><div><br /></div><div><b>Election Data</b></div><div><b><i>Overview:</i></b></div></div><div>Election data that is included in this file was collected by LTSB from the Government Accountability Board (GAB)/Wisconsin Elections Commission (WEC) after each general election. A disaggregation process was performed on this election data based on the municipal ward layer that was available at the time of the election. The ward data that is collected after each decennial census is made up of collections of whole and split census blocks. (Note: Split census blocks occur during local redistricting when municipalities include recently annexed property in their ward submissions to the legislature).</div><div><div><br /></div><div><b><i>Disaggregation of Election Data:</i></b></div></div><div>Election data is first disaggregated from reporting units to wards, and then to census blocks. Next, the election data is aggregated back up to wards, municipalities, and counties. The disaggregation of election data to census blocks is done based on total population.\u00a0</div><div><div><br /></div><div>Detailed Methodology:</div><div><ul><li>Data is disaggregated first from reporting unit (i.e. multiple wards) to the ward level proportionate to the population of that ward.\u00a0</li><li>The data then is distributed down to the block level, again based on total population.\u00a0</li><li>When data is disaggregated to block or ward, we restrain vote totals not to exceed population 18 numbers, unless absolutely required.</li></ul></div></div><div><div>This methodology results in the following:\u00a0</div><div><ul><li>Election data totals reported to the GAB/WEC at the state, county, municipal and reporting unit level should match the disaggregated election data total at the same levels.\u00a0</li><li>Election data totals reported to the GAB at ward level may not match the ward totals in the disaggregated election data file.\u00a0</li><li>Some wards may have more election data allocated than voter age population. This will occur if a change to the geography results in more voters than the 2010 historical population limits.</li></ul></div></div><div><div><b><i>Other things of note\u2026</i></b></div><div>We use a static, official ward layer (in this case created in 2011) to disaggregate election data to blocks. Using this ward layer creates some challenges. New wards are created every year due to annexations and incorporations. When these new wards are reported with election data, an issue arises wherein election data is being reported for wards that do not exist in our official ward layer. For example, if Cityville has four wards in the official ward layer, the election data may be reported for five wards, including a new ward from an annexation.\u00a0</div><div><br /></div><div><b>There are two different scenarios and courses of action to these issues:\u00a0</b></div><div><ol><li>When a single new ward is present in the election data but there is no ward geometry present in the official ward layer, the votes attributed to this new ward are distributed to all the other wards in the municipality based on population percentage. Distributing based on population percentage means that the proportion of the population of the municipality will receive that same proportion of votes from the new ward. In the example of Cityville explained above, the fifth ward may have five votes reported, but since there is no corresponding fifth ward in the official layer, these five votes will be assigned to each of the other wards in Cityville according the percentage of population.</li><li>Another case is when a new ward is reported, but its votes are part of reporting unit. In this case, the votes for the new ward are assigned to the other wards in the reporting unit by population percentage; and not to wards in the municipality as a whole. For example, Cityville\u2019s ward five was given as a reporting unit together with wards 1, 4, and 5. In this case, the votes in ward five are assigned to wards one and four according to population percentage.\u00a0</li></ol></div><div><i>Outline Ward-by-Ward Election Results</i></div><div>The process of collecting election data and disaggregating to municipal wards occurs after a general election, so disaggregation has occurred with different ward layers and different population totals. We have outlined (to the best of our knowledge) what layer and population totals were used to produce these ward-by-ward election results.<br /></div><div><ol><li>Election data disaggregates from GAB/WEC Reporting Unit -&gt; Ward [Variant year outlined below]<br /></li><ul><li>Elections 1990 \u2013 2000: Wards 1991 (Census 1990 totals used for disaggregation)</li><li>Elections 2002 \u2013 2010: Wards 2001 (Census 2000 totals used for disaggregation)</li><li>Elections 2012: Wards 2011 (Census 2010 totals used for disaggregation)</li><li>Elections 2014 \u2013 2016: Wards spring 2017 (Census 2010 totals used for disaggregation)</li></ul><li>Blocks 2011 -&gt; Centroid geometry and spatially joined with Wards [All Versions]<br /></li><ul><li>Each Block has an assignment to each of the ward versions outlined above</li><li>In the event that a ward exists now in which no block exists (Occurred with spring 2017) due to annexations, a block centroid was created with a population 0, and encoded with the proper Census IDs.</li></ul><li>Wards [All Versions] disaggregate -&gt; Blocks 2011<br /></li><ul><li>This yields a block centroid layer that contains all elections from 1990 to 2016</li></ul><li>Blocks 2011 [with all election data] -&gt; Wards 2011 (then MCD 2011, and County 2011)\u00a0<br /></li><ul><li>All election data (including later elections such as 2016) is aggregated to the Wards 2011 assignment of the blocks</li></ul></ol></div><div><i>Notes:</i></div><div><ol><li>Population of municipal wards 1991, 2001 and 2011 used for disaggregation were determined by their respective Census<br /></li><li>Population and Election data will be contained within a county boundary. This means that even though MCD and ward boundaries vary greatly between versions of the wards, county boundaries have stayed the same, so data should total within a county the same between wards 2011 and wards 2017<br /></li><li>Election data may be different for the same legislative district, for the same election, due to changes in the wards from 2011 and 2017. This is due to boundary corrections in the data from 2011 to 2017, and annexations, where a block may have been reassigned.</li></ol></div></div><div><br /></div><div><b>Ward Data</b></div><div><i>Overview:</i></div><div>These municipal wards were created by grouping Census 2010 population collection blocks into municipal wards. This project started with the release of Census 2010 geography and population totals to all 72 Wisconsin counties on March 21st, 2011, and were made available via LTSB's GIS website and the WISE-LR web application. The 180 day statutory timeline for local redistricting ended on September 19th, 2011.</div><div><br /></div><div>Wisconsin Legislative and Congressional redistricting plans were enacted in the fall of 2011 by Wisconsin Act 43 and Act 44. These new districts were created using Census 2010 block geography. Some municipal wards, created before the passing of Act 43 and 44, were required to be split between assembly, senate and congressional district boundaries. 2011 Wisconsin Act 39 allowed communities to divide wards, along census block boundaries, if they were divided by newly enacted boundaries. A number of wards created under Wisconsin Act 39 were named using alpha-numeric labels. An example would be where ward 1 divided by an assembly district would become ward 1A and ward 1B, and in other municipalities the next sequential ward number was used: ward 1 and ward 2. The process of dividing wards under Act 39 ended on April 10th, 2012.\u00a0<a href=\"http://legis.wisconsin.gov/lrb/pubs/Lb/11Lb1.pdf\" target=\"_blank\">This link provides more information on Act 39</a>.</div><div><div><br /></div><div>The United States Eastern District Federal Court on April 11th, 2012 ordered Assembly Districts 8 and 9 (both in the City of Milwaukee) be changed to follow the court\u2019s description. On September 19th, 2012 the Legislative Technology Services Bureau (LTSB) divided the few remaining municipal wards that were split by a 2011 Wisconsin Act 43 or 44 district line.</div></div>",
+   "keyword": [
+    "Election Data",
+    "Wisconsin",
+    "LTSB",
+    "20122020",
+    "2011 Wards",
+    "Wards"
+   ],
+   "issued": "2017-10-03T16:32:29.000Z",
+   "modified": "2019-04-02T19:17:27.780Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/01869b4b585e44bbbac5d550b7bb6fb8_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://services1.arcgis.com/FDsAtKBk8Hy4cAH0/arcgis/rest/services/Wards_2011_wED_2016_2012/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/01869b4b585e44bbbac5d550b7bb6fb8_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/01869b4b585e44bbbac5d550b7bb6fb8_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/01869b4b585e44bbbac5d550b7bb6fb8_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/01869b4b585e44bbbac5d550b7bb6fb8_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/01869b4b585e44bbbac5d550b7bb6fb8_0",
+   "webService": "https://services1.arcgis.com/FDsAtKBk8Hy4cAH0/arcgis/rest/services/Wards_2011_wED_2016_2012/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/01869b4b585e44bbbac5d550b7bb6fb8_0/license",
+   "spatial": "-92.8894330005758,42.49191199888712,-86.76398799951762,47.08077199914277",
+   "theme": [
+    "geospatial"
+   ]
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/d5cbc7b98ae74066933e32f984006d27_0",
+   "title": "Wisconsin Senate Districts 2002",
+   "description": "These are the 2002 Wisconsin Senate Districts as created by the Federal Court Redistricting Decision dated May 22, 2002. Districts are effective as of May 30, 2002 until the next redistricting cycle in 2010.",
+   "keyword": [
+    "Wisconsin",
+    "Senate",
+    "2002",
+    "Districts",
+    "LTSB",
+    "Legislative"
+   ],
+   "issued": "2016-04-25T16:05:38.000Z",
+   "modified": "2019-04-02T19:17:22.611Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/d5cbc7b98ae74066933e32f984006d27_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://services1.arcgis.com/FDsAtKBk8Hy4cAH0/arcgis/rest/services/Wisconsin_Senate_Districts_2002/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/d5cbc7b98ae74066933e32f984006d27_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/d5cbc7b98ae74066933e32f984006d27_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/d5cbc7b98ae74066933e32f984006d27_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/d5cbc7b98ae74066933e32f984006d27_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/d5cbc7b98ae74066933e32f984006d27_0",
+   "webService": "https://services1.arcgis.com/FDsAtKBk8Hy4cAH0/arcgis/rest/services/Wisconsin_Senate_Districts_2002/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/d5cbc7b98ae74066933e32f984006d27_0/license",
+   "spatial": "-92.889,42.492,-86.764,47.081",
+   "theme": [
+    "geospatial"
+   ]
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/a1e62ab9676d49ac8ba83dbb80443b77_0",
+   "title": "1990-2000 WI Election Data with 2011 Wards",
+   "description": "<div><div><a href=\"http://legis.wisconsin.gov/ltsb/gisdocs/ElectionData/SchemaDefinitions.pdf\" target=\"_blank\">Attribute Field Definitions</a><b><br /></b></div><div><br /></div><div><b>Election Data</b></div><div><b><i>Overview:</i></b></div></div><div>Election data that is included in this file was collected by LTSB from the Government Accountability Board (GAB)/Wisconsin Elections Commission (WEC) after each general election. A disaggregation process was performed on this election data based on the municipal ward layer that was available at the time of the election. The ward data that is collected after each decennial census is made up of collections of whole and split census blocks. (Note: Split census blocks occur during local redistricting when municipalities include recently annexed property in their ward submissions to the legislature).</div><div><div><br /></div><div><b><i>Disaggregation of Election Data:</i></b></div></div><div>Election data is first disaggregated from reporting units to wards, and then to census blocks. Next, the election data is aggregated back up to wards, municipalities, and counties. The disaggregation of election data to census blocks is done based on total population.\u00a0</div><div><div><br /></div><div><b>Detailed Methodology:</b></div><div><ul><li>Data is disaggregated first from reporting unit (i.e. multiple wards) to the ward level proportionate to the population of that ward.\u00a0</li><li>The data then is distributed down to the block level, again based on total population.\u00a0</li><li>When data is disaggregated to block or ward, we restrain vote totals not to exceed population 18 numbers, unless absolutely required.</li></ul></div></div><div><div><b>This methodology results in the following:\u00a0</b></div><div><ul><li>Election data totals reported to the GAB/WEC at the state, county, municipal and reporting unit level should match the disaggregated election data total at the same levels.\u00a0</li><li>Election data totals reported to the GAB at ward level may not match the ward totals in the disaggregated election data file.\u00a0</li><li>Some wards may have more election data allocated than voter age population. This will occur if a change to the geography results in more voters than the 2010 historical population limits.</li></ul></div></div><div><div><b><i>Other things of note\u2026</i></b></div><div>We use a static, official ward layer (in this case created in 2011) to disaggregate election data to blocks. Using this ward layer creates some challenges. New wards are created every year due to annexations and incorporations. When these new wards are reported with election data, an issue arises wherein election data is being reported for wards that do not exist in our official ward layer. For example, if Cityville has four wards in the official ward layer, the election data may be reported for five wards, including a new ward from an annexation.\u00a0</div><div><br /></div><div><b>There are two different scenarios and courses of action to these issues:\u00a0</b></div><div><ol><li>When a single new ward is present in the election data but there is no ward geometry present in the official ward layer, the votes attributed to this new ward are distributed to all the other wards in the municipality based on population percentage. Distributing based on population percentage means that the proportion of the population of the municipality will receive that same proportion of votes from the new ward. In the example of Cityville explained above, the fifth ward may have five votes reported, but since there is no corresponding fifth ward in the official layer, these five votes will be assigned to each of the other wards in Cityville according the percentage of population.</li><li>Another case is when a new ward is reported, but its votes are part of reporting unit. In this case, the votes for the new ward are assigned to the other wards in the reporting unit by population percentage; and not to wards in the municipality as a whole. For example, Cityville\u2019s ward five was given as a reporting unit together with wards 1, 4, and 5. In this case, the votes in ward five are assigned to wards one and four according to population percentage.\u00a0</li></ol></div><div><i>Outline Ward-by-Ward Election Results</i></div><div>The process of collecting election data and disaggregating to municipal wards occurs after a general election, so disaggregation has occurred with different ward layers and different population totals. We have outlined (to the best of our knowledge) what layer and population totals were used to produce these ward-by-ward election results.<br /></div><div><ol><li>Election data disaggregates from GAB/WEC Reporting Unit -&gt; Ward [Variant year outlined below]<br /></li><ul><li>Elections 1990 \u2013 2000: Wards 1991 (Census 1990 totals used for disaggregation)</li><li>Elections 2002 \u2013 2010: Wards 2001 (Census 2000 totals used for disaggregation)</li><li>Elections 2012: Wards 2011 (Census 2010 totals used for disaggregation)</li><li>Elections 2014 \u2013 2016: Wards spring 2017 (Census 2010 totals used for disaggregation)</li></ul><li>Blocks 2011 -&gt; Centroid geometry and spatially joined with Wards [All Versions]<br /></li><ul><li>Each Block has an assignment to each of the ward versions outlined above</li><li>In the event that a ward exists now in which no block exists (Occurred with spring 2017) due to annexations, a block centroid was created with a population 0, and encoded with the proper Census IDs.</li></ul><li>Wards [All Versions] disaggregate -&gt; Blocks 2011<br /></li><ul><li>This yields a block centroid layer that contains all elections from 1990 to 2016</li></ul><li>Blocks 2011 [with all election data] -&gt; Wards 2011 (then MCD 2011, and County 2011)\u00a0<br /></li><ul><li>All election data (including later elections such as 2016) is aggregated to the Wards 2011 assignment of the blocks</li></ul></ol></div><div><i>Notes:</i></div><div><ol><li>Population of municipal wards 1991, 2001 and 2011 used for disaggregation were determined by their respective Census<br /></li><li>Population and Election data will be contained within a county boundary. This means that even though MCD and ward boundaries vary greatly between versions of the wards, county boundaries have stayed the same, so data should total within a county the same between wards 2011 and wards 2017<br /></li><li>Election data may be different for the same legislative district, for the same election, due to changes in the wards from 2011 and 2017. This is due to boundary corrections in the data from 2011 to 2017, and annexations, where a block may have been reassigned.</li></ol></div></div><div><b><br /></b></div><div><b>Ward Data</b></div><div><i>Overview:</i></div><div>These municipal wards were created by grouping Census 2010 population collection blocks into municipal wards. This project started with the release of Census 2010 geography and population totals to all 72 Wisconsin counties on March 21st, 2011, and were made available via LTSB's GIS website and the WISE-LR web application. The 180 day statutory timeline for local redistricting ended on September 19th, 2011.</div><div><br /></div><div>Wisconsin Legislative and Congressional redistricting plans were enacted in the fall of 2011 by Wisconsin Act 43 and Act 44. These new districts were created using Census 2010 block geography. Some municipal wards, created before the passing of Act 43 and 44, were required to be split between assembly, senate and congressional district boundaries. 2011 Wisconsin Act 39 allowed communities to divide wards, along census block boundaries, if they were divided by newly enacted boundaries. A number of wards created under Wisconsin Act 39 were named using alpha-numeric labels. An example would be where ward 1 divided by an assembly district would become ward 1A and ward 1B, and in other municipalities the next sequential ward number was used: ward 1 and ward 2. The process of dividing wards under Act 39 ended on April 10th, 2012.\u00a0<a href=\"http://legis.wisconsin.gov/lrb/pubs/Lb/11Lb1.pdf\" target=\"_blank\">This link provides more information on Act 39</a>.</div><div><div><br /></div><div>The United States Eastern District Federal Court on April 11th, 2012 ordered Assembly Districts 8 and 9 (both in the City of Milwaukee) be changed to follow the court\u2019s description. On September 19th, 2012 the Legislative Technology Services Bureau (LTSB) divided the few remaining municipal wards that were split by a 2011 Wisconsin Act 43 or 44 district line.</div></div>",
+   "keyword": [
+    "Election Data",
+    "LTSB",
+    "Municipal Wards",
+    "Wards",
+    "Wisconsin",
+    "2011 Wards",
+    "19902000"
+   ],
+   "issued": "2017-10-03T16:16:45.000Z",
+   "modified": "2019-04-02T19:17:22.437Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/a1e62ab9676d49ac8ba83dbb80443b77_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://services1.arcgis.com/FDsAtKBk8Hy4cAH0/arcgis/rest/services/Wards_2011_wED_2000_1990/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/a1e62ab9676d49ac8ba83dbb80443b77_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/a1e62ab9676d49ac8ba83dbb80443b77_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/a1e62ab9676d49ac8ba83dbb80443b77_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/a1e62ab9676d49ac8ba83dbb80443b77_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/a1e62ab9676d49ac8ba83dbb80443b77_0",
+   "webService": "https://services1.arcgis.com/FDsAtKBk8Hy4cAH0/arcgis/rest/services/Wards_2011_wED_2000_1990/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/a1e62ab9676d49ac8ba83dbb80443b77_0/license",
+   "spatial": "-92.8894330005758,42.49191199888712,-86.76398799951762,47.08077199914277",
+   "theme": [
+    "geospatial"
+   ]
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/18a43e14c43a4d349e05d9073bc43b7b",
+   "title": "WI Municipal Wards (January 2019) *ACTIVE COLLECTION*",
+   "description": "<div>This is the <b>Municipal Ward Layer</b> that is generated by Wisconsin Land Information Office's participation in statewide data collection. This map is automatically updated when a county uploads data to the WISE-Decade software platform.\u00a0</div><div><div><br /></div><div><b>2019 Program Timeline</b></div><div><b>January 1, 2019</b><br /></div><div>The 2019 Boundary and Annexation Survey Program begins.</div><div>The WISE-Decade 2.0 software platform released.<br /></div><div><br /></div><div>*****First data collection of 2019 begins*****</div><div><b>January 2, 2019</b></div><div>Counties login to WISE-Decade, upload their current municipal ward layer, and document any annexations that occurred between January 1, 2018 and December 31, 2018.</div><div><br /></div><div>*****First data collection of 2018 ends*****<br /></div><div><b>January 18, 2019</b></div><div>County clerks must submit data to LTSB using the WISE-Decade software platform by this date.\u00a0</div><div><br /></div><div><b>February 1, 2019</b></div><div>LTSB will publish statewide municipal and ward boundaries to the Open Data Page:\u00a0<a href=\"http://data-ltsb.opendata.arcgis.com\" target=\"_blank\">http://data-ltsb.opendata.arcgis.com</a>.</div><div>REST feature services will also be made available at (MCD and Ward), and will be live updated as data is submitted.</div><div><br /></div><div><b>February 22</b><b>, 2019</b></div><div>Deadline for counties to submit annexation documentation in the WISE-Decade system. BAS boundary updates submitted by this date will be reflected in the American Community Survey (ACS) and Population Estimates Program (PEP) published data and in next year\u2019s BAS materials.</div><div><br /></div><div><b>March 1, 2019</b></div><div>Deadline for BAS submissions to the Census Bureau. LTSB will submit on behalf of the entire State of Wisconsin.</div><div><br /></div><div>*****Second data collection of 2019 begins*****<br /></div><div><b>July 1, 2019</b></div><div>Counties will login to the WISE-Decade 2.0 web portal and upload a current municipal ward layer.\u00a0</div><div><br /></div><div>*****Second data collection of 2019 ends*****<br /></div><div><b>July 19, 2019</b></div><div>County clerks must submit data to LTSB using the WISE-Decade software platform by this date.</div><div><br /></div><div><b>August 5, 2019</b></div><div>LTSB will publish statewide municipal and ward boundaries to the Open Data Page:\u00a0<a href=\"http://data-ltsb.opendata.arcgis.com\" target=\"_blank\">http://data-ltsb.opendata.arcgis.com</a>.</div><div>REST feature services will also be made available at (MCD and Ward), and will be live updated as data is submitted.\u00a0</div><div><br /></div><div>Questions about this data or on this project should be directed to:\u00a0<a href=\"mailto:support.wisedecade@legis.wisconsin.gov\" target=\"_blank\">support.wisedecade@legis.wisconsin.gov</a></div></div>",
+   "keyword": [
+    "Wisconsin",
+    "CBAS",
+    "BAS",
+    "LTSB",
+    "WISEDecade",
+    "Municipal Wards",
+    "Data Collection",
+    "Active Collection",
+    "2018",
+    "ActiveCollection",
+    "July",
+    "Fall"
+   ],
+   "issued": "2015-06-08T15:47:43.000Z",
+   "modified": "2019-04-02T19:17:11.235Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "format": "Web Page",
+     "mediaType": "text/html",
+     "accessURL": "https://www.arcgis.com/home/webmap/viewer.html?webmap=18a43e14c43a4d349e05d9073bc43b7b"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/18a43e14c43a4d349e05d9073bc43b7b",
+   "webService": "https://www.arcgis.com/home/webmap/viewer.html?webmap=18a43e14c43a4d349e05d9073bc43b7b",
+   "license": "https://hub.arcgis.com/api/v2/datasets/18a43e14c43a4d349e05d9073bc43b7b/license",
+   "spatial": "-93.9315,43.1193,-85.8181,46.3491"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/cfcd6577a5ce4d1684563c24cf922772",
+   "title": "WI Cities, Towns, Villages (January 2019) *ACTIVE COLLECTION*",
+   "description": "<div>This is the <b>Municipal Boundary Layer</b> that is generated by Wisconsin Land Information Office's participation in statewide data collection. This map is automatically updated when a county uploads data to the WISE-Decade software platform.\u00a0</div><div><br /></div><div><b>2019 Program Timeline</b></div><div><b>January 1, 2019</b><br /></div><div>The 2019 Boundary and Annexation Survey Program begins.</div><div>The WISE-Decade 2.0 software platform released.<br /></div><div><br /></div><div>*****First data collection of 2019 begins*****</div><div><b>January 2, 2019</b></div><div>Counties login to WISE-Decade, upload their current municipal ward layer, and document any annexations that occurred between January 1, 2018 and December 31, 2018.</div><div><br /></div><div>*****First data collection of 2018 ends*****<br /></div><div><b>January 18, 2019</b></div><div>County clerks must submit data to LTSB using the WISE-Decade software platform by this date.\u00a0</div><div><br /></div><div><b>February 1, 2019</b></div><div>LTSB will publish statewide municipal and ward boundaries to the Open Data Page:\u00a0<a href=\"http://data-ltsb.opendata.arcgis.com\" target=\"_blank\">http://data-ltsb.opendata.arcgis.com</a>.</div><div>REST feature services will also be made available at (MCD and Ward), and will be live updated as data is submitted.</div><div><br /></div><div><b>February 22</b><b>, 2019</b></div><div>Deadline for counties to submit annexation documentation in the WISE-Decade system. BAS boundary updates submitted by this date will be reflected in the American Community Survey (ACS) and Population Estimates Program (PEP) published data and in next year\u2019s BAS materials.</div><div><br /></div><div><b>March 1, 2019</b></div><div>Deadline for BAS submissions to the Census Bureau. LTSB will submit on behalf of the entire State of Wisconsin.</div><div><br /></div><div>*****Second data collection of 2019 begins*****<br /></div><div><b>July 1, 2019</b></div><div>Counties will login to the WISE-Decade 2.0 web portal and upload a current municipal ward layer.\u00a0</div><div><br /></div><div>*****Second data collection of 2019 ends*****<br /></div><div><b>July 19, 2019</b></div><div>County clerks must submit data to LTSB using the WISE-Decade software platform by this date.</div><div><br /></div><div><b>August 5, 2019</b></div><div>LTSB will publish statewide municipal and ward boundaries to the Open Data Page:\u00a0<a href=\"http://data-ltsb.opendata.arcgis.com\" target=\"_blank\">http://data-ltsb.opendata.arcgis.com</a>.</div><div>REST feature services will also be made available at (MCD and Ward), and will be live updated as data is submitted.\u00a0</div><div><br /></div><div>Questions about this data or on this project should be directed to:\u00a0<a href=\"mailto:support.wisedecade@legis.wisconsin.gov\" target=\"_blank\">support.wisedecade@legis.wisconsin.gov</a></div>",
+   "keyword": [
+    "Wisconsin",
+    "MCD",
+    "CBAS",
+    "BAS",
+    "LTSB",
+    "WISEDecade",
+    "Data Collection",
+    "Active Collection",
+    "Municipal Boundaries",
+    "2018",
+    "ActiveCollection",
+    "July",
+    "Fall"
+   ],
+   "issued": "2015-06-08T16:07:41.000Z",
+   "modified": "2019-04-02T19:17:11.129Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "format": "Web Page",
+     "mediaType": "text/html",
+     "accessURL": "https://www.arcgis.com/home/webmap/viewer.html?webmap=cfcd6577a5ce4d1684563c24cf922772"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/cfcd6577a5ce4d1684563c24cf922772",
+   "webService": "https://www.arcgis.com/home/webmap/viewer.html?webmap=cfcd6577a5ce4d1684563c24cf922772",
+   "license": "https://hub.arcgis.com/api/v2/datasets/cfcd6577a5ce4d1684563c24cf922772/license",
+   "spatial": "-93.9898,43.1444,-85.8764,46.3728"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/99cddbb661bd42d3b9e37fd6ef6251a5_0",
+   "title": "2012-2020 Election Data with 2018 Wards",
+   "description": "<div><div><a href=\"http://legis.wisconsin.gov/ltsb/gisdocs/ElectionData/SchemaDefinitions.pdf\" target=\"_blank\">Attribute Field Definitions</a><b><br /></b></div><div><br /></div></div><div><div><b>Ward Data Overview:</b></div><div>Fall 2018 municipal wards were collected in July 2018 by LTSB through the WISE-Decade system.\u00a0 Current statutes require each county clerk, or board of election commissioners, no later than January 15 and July 15 of each year, to transmit to the LTSB, in an electronic format (approved by LTSB), a report confirming the boundaries of each municipality, ward and supervisory district within the county as of the preceding \u201csnapshot\u201d date of January 1 or July 1 respectively. Population totals for 2011 wards are carried over to the 2018 dataset for existing wards. New wards created since 2011 due to annexations, detachments, and incorporation are allocated population from Census 2010 collection blocks. LTSB has topologically integrated the data, but there may still be errors.</div></div><div><div><br /></div><div><div><b>Election Data Overview:</b></div><div>The 2012-2018 Wisconsin election\u00a0data that is included in this file was collected by LTSB from the *Wisconsin Elections Commission (WEC) after each general election. A disaggregation process was performed on this election data based on the municipal ward layer that was available at the time of the election.\u00a0</div></div><div><br /></div><div><b><i>Disaggregation of Election Data:</i></b></div></div><div>Election data is first disaggregated from reporting units to wards, and then to census blocks. Next, the election data is aggregated back up to wards, municipalities, and counties. The disaggregation of election data to census blocks is done based on total population.\u00a0</div><div><div><br /></div><div>Detailed Methodology:</div><div><ul><li>Data is disaggregated first from reporting unit (i.e. multiple wards) to the ward level proportionate to the population of that ward.\u00a0</li><li>The data then is distributed down to the block level, again based on total population.\u00a0</li><li>When data is disaggregated to block or ward, we restrain vote totals not to exceed population 18 numbers, unless absolutely required.</li></ul></div></div><div><div>This methodology results in the following:\u00a0</div><div><ul><li>Election data totals reported to the WEC at the state, county, municipal and reporting unit level should match the disaggregated election data total at the same levels.\u00a0</li><li>Election data totals reported to the WEC at ward level may not match the ward totals in the disaggregated election data file.\u00a0</li><li>Some wards may have more election data allocated than voter age population. This will occur if a change to the geography results in more voters than the 2010 historical population limits.</li></ul></div></div><div><div><b><i>Other things of note\u2026</i></b></div><div>We use a static, official ward layer (in this case created in 2018) to disaggregate election data to blocks. Using this ward layer creates some challenges. New wards are created every year due to annexations and incorporations. When these new wards are reported with election data, an issue arises wherein election data is being reported for wards that do not exist in our official ward layer. For example, if Cityville has four wards in the official ward layer, the election data may be reported for five wards, including a new ward from an annexation.\u00a0</div><div><br /></div><div><b>There are two different scenarios and courses of action to these issues:\u00a0</b></div><div><ol><li>When a single new ward is present in the election data but there is no ward geometry present in the official ward layer, the votes attributed to this new ward are distributed to all the other wards in the municipality based on population percentage. Distributing based on population percentage means that the proportion of the population of the municipality will receive that same proportion of votes from the new ward. In the example of Cityville explained above, the fifth ward may have five votes reported, but since there is no corresponding fifth ward in the official layer, these five votes will be assigned to each of the other wards in Cityville according the percentage of population.</li><li>Another case is when a new ward is reported, but its votes are part of reporting unit. In this case, the votes for the new ward are assigned to the other wards in the reporting unit by population percentage; and not to wards in the municipality as a whole. For example, Cityville\u2019s ward 5 was given as a reporting unit together with wards 1, 4, and 5. In this case, the votes in ward five are assigned to wards 1 and 4 according to population percentage.\u00a0</li></ol></div><div><i>Outline Ward-by-Ward Election Results</i></div><div>The process of collecting election data and disaggregating to municipal wards occurs after a general election, so disaggregation has occurred with different ward layers and different population totals. We have outlined (to the best of our knowledge) what layer and population totals were used to produce these ward-by-ward election results.<br /></div><div><ol><li>Election data disaggregates from WEC Reporting Unit -&gt; Ward [Variant year outlined below]<br /></li><ul><li>Elections 1990 \u2013 2000: Wards 1991 (Census 1990 totals used for disaggregation)</li><li>Elections 2002 \u2013 2010: Wards 2001 (Census 2000 totals used for disaggregation)</li><li>Elections 2012: Wards 2011 (Census 2010 totals used for disaggregation)</li><li>Elections 2014 \u2013 2016: Wards Fall 2018 (Census 2010 totals used for disaggregation)</li></ul><li>Blocks 2011 -&gt; Centroid geometry and spatially joined with Wards [All Versions]<br /></li><ul><li>Each Block has an assignment to each of the ward versions outlined above</li><li>In the event that a ward exists now in which no block exists (occurred with spring 2018) due to annexations, a block centroid was created with a population 0, and encoded with the proper Census IDs.</li></ul><li>Wards [All Versions] disaggregate -&gt; Blocks 2011<br /></li><ul><li>This yields a block centroid layer that contains all elections from 1990 to 2016</li></ul><li>Blocks 2011 [with all election data] -&gt; Wards 2018 (then MCD 2018, and County 2018)\u00a0<br /></li><ul><li>All election data (including later elections such as 2016) is aggregated to the Wards 2018 assignment of the blocks</li></ul></ol></div><div><i>Notes:</i></div><div><ol><li>Population of municipal wards 1991, 2001 and 2011 used for disaggregation were determined by their respective Census.</li><li>Population and Election data will be contained within a county boundary. This means that even though MCD and ward boundaries vary greatly between versions of the wards, county boundaries have stayed the same, so data should total within a county the same between wards 2011 and wards 2018.</li><li>Election data may be different for the same legislative district, for the same election, due to changes in the wards from 2011 and 2018. This is due to boundary corrections in the data from 2011 to 2018, and annexations, where a block may have been reassigned.</li><li>The following changes have been made to this file:\u00a0</li><ul><li>Dodge County: T-Williamstown to V-Kekoskee (Merged Geometry/Population: T-Williamstown 1 with\u00a0 V-Kekoskee 1; Changed: T-Williamstown 2 and 3 To: V-Kekoskee 2 and 3)</li><li>Marathon County: V-Brokaw to V-Maine (Merged Geometry/Population V-Brokaw 1 into V-Maine 1)</li><li>Racine County: T-Yorkville to V-Yorkville (Changed T-Yorkville (89575) to V Yorkville (89550), Ward 1=1, 2=2 etc).</li></ul></ol></div></div><div><p>*WEC replaced the previous Government Accountability Board (GAB) in 2016, which replaced the previous State Elections Board in 2008.</p></div>",
+   "keyword": [
+    " Municipal Wards",
+    "20122020",
+    "2018",
+    "Election Data",
+    "LTSB",
+    "Wisconsin"
+   ],
+   "issued": "2018-12-28T19:53:24.000Z",
+   "modified": "2019-03-25T19:30:50.000Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/99cddbb661bd42d3b9e37fd6ef6251a5_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Election_Data/2012_2020_Election_Data_with_2018_Wards/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/99cddbb661bd42d3b9e37fd6ef6251a5_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/99cddbb661bd42d3b9e37fd6ef6251a5_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/99cddbb661bd42d3b9e37fd6ef6251a5_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/99cddbb661bd42d3b9e37fd6ef6251a5_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/99cddbb661bd42d3b9e37fd6ef6251a5_0",
+   "webService": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Election_Data/2012_2020_Election_Data_with_2018_Wards/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/99cddbb661bd42d3b9e37fd6ef6251a5_0/license",
+   "spatial": "-92.889337,42.491914,-86.763988,47.080705",
+   "theme": [
+    "geospatial"
+   ]
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/336c768bad3041de89a80011015e0a3e_0",
+   "title": "2002-2010 Election Data with 2018 Wards",
+   "description": "<div><div><a href=\"http://legis.wisconsin.gov/ltsb/gisdocs/ElectionData/SchemaDefinitions.pdf\" target=\"_blank\">Attribute Field Definitions</a><b><br /></b></div><div><br /></div></div><div><div><b>Ward Data Overview:</b></div><div>Fall 2018 municipal wards were collected in July 2018 by LTSB through the WISE-Decade system.\u00a0 Current statutes require each county clerk, or board of election commissioners, no later than January 15 and July 15 of each year, to transmit to the LTSB, in an electronic format (approved by LTSB), a report confirming the boundaries of each municipality, ward and supervisory district within the county as of the preceding \u201csnapshot\u201d date of January 1 or July 1 respectively. Population totals for 2011 wards are carried over to the 2018 dataset for existing wards. New wards created since 2011 due to annexations, detachments, and incorporation are allocated population from Census 2010 collection blocks. LTSB has topologically integrated the data, but there may still be errors.</div></div><div><div><br /></div><div><div><b>Election Data Overview:</b></div><div>The 2002-2010 Wisconsin election\u00a0data that is included in this file was collected by LTSB from the *Wisconsin Elections Commission (WEC) after each general election. A disaggregation process was performed on this election data based on the municipal ward layer that was available at the time of the election.\u00a0</div></div><div><br /></div><div><b><i>Disaggregation of Election Data:</i></b></div></div><div>Election data is first disaggregated from reporting units to wards, and then to census blocks. Next, the election data is aggregated back up to wards, municipalities, and counties. The disaggregation of election data to census blocks is done based on total population.\u00a0</div><div><div><br /></div><div>Detailed Methodology:</div><div><ul><li>Data is disaggregated first from reporting unit (i.e. multiple wards) to the ward level proportionate to the population of that ward.\u00a0</li><li>The data then is distributed down to the block level, again based on total population.\u00a0</li><li>When data is disaggregated to block or ward, we restrain vote totals not to exceed population 18 numbers, unless absolutely required.</li></ul></div></div><div><div>This methodology results in the following:\u00a0</div><div><ul><li>Election data totals reported to the WEC at the state, county, municipal and reporting unit level should match the disaggregated election data total at the same levels.\u00a0</li><li>Election data totals reported to the WEC at ward level may not match the ward totals in the disaggregated election data file.\u00a0</li><li>Some wards may have more election data allocated than voter age population. This will occur if a change to the geography results in more voters than the 2010 historical population limits.</li></ul></div></div><div><div><b><i>Other things of note\u2026</i></b></div><div>We use a static, official ward layer (in this case created in 2018) to disaggregate election data to blocks. Using this ward layer creates some challenges. New wards are created every year due to annexations and incorporations. When these new wards are reported with election data, an issue arises wherein election data is being reported for wards that do not exist in our official ward layer. For example, if Cityville has four wards in the official ward layer, the election data may be reported for five wards, including a new ward from an annexation.\u00a0</div><div><br /></div><div><b>There are two different scenarios and courses of action to these issues:\u00a0</b></div><div><ol><li>When a single new ward is present in the election data but there is no ward geometry present in the official ward layer, the votes attributed to this new ward are distributed to all the other wards in the municipality based on population percentage. Distributing based on population percentage means that the proportion of the population of the municipality will receive that same proportion of votes from the new ward. In the example of Cityville explained above, the fifth ward may have five votes reported, but since there is no corresponding fifth ward in the official layer, these five votes will be assigned to each of the other wards in Cityville according the percentage of population.</li><li>Another case is when a new ward is reported, but its votes are part of reporting unit. In this case, the votes for the new ward are assigned to the other wards in the reporting unit by population percentage; and not to wards in the municipality as a whole. For example, Cityville\u2019s ward 5 was given as a reporting unit together with wards 1, 4, and 5. In this case, the votes in ward five are assigned to wards 1 and 4 according to population percentage.\u00a0</li></ol></div><div><i>Outline Ward-by-Ward Election Results</i></div><div>The process of collecting election data and disaggregating to municipal wards occurs after a general election, so disaggregation has occurred with different ward layers and different population totals. We have outlined (to the best of our knowledge) what layer and population totals were used to produce these ward-by-ward election results.<br /></div><div><ol><li>Election data disaggregates from WEC Reporting Unit -&gt; Ward [Variant year outlined below]<br /></li><ul><li>Elections 1990 \u2013 2000: Wards 1991 (Census 1990 totals used for disaggregation)</li><li>Elections 2002 \u2013 2010: Wards 2001 (Census 2000 totals used for disaggregation)</li><li>Elections 2012: Wards 2011 (Census 2010 totals used for disaggregation)</li><li>Elections 2014 \u2013 2016: Wards Fall 2018 (Census 2010 totals used for disaggregation)</li></ul><li>Blocks 2011 -&gt; Centroid geometry and spatially joined with Wards [All Versions]<br /></li><ul><li>Each Block has an assignment to each of the ward versions outlined above</li><li>In the event that a ward exists now in which no block exists (occurred with spring 2018) due to annexations, a block centroid was created with a population 0, and encoded with the proper Census IDs.</li></ul><li>Wards [All Versions] disaggregate -&gt; Blocks 2011<br /></li><ul><li>This yields a block centroid layer that contains all elections from 1990 to 2016</li></ul><li>Blocks 2011 [with all election data] -&gt; Wards 2018 (then MCD 2018, and County 2018)\u00a0<br /></li><ul><li>All election data (including later elections such as 2016) is aggregated to the Wards 2018 assignment of the blocks</li></ul></ol></div><div><i>Notes:</i></div><div><ol><li>Population of municipal wards 1991, 2001 and 2011 used for disaggregation were determined by their respective Census.</li><li>Population and Election data will be contained within a county boundary. This means that even though MCD and ward boundaries vary greatly between versions of the wards, county boundaries have stayed the same, so data should total within a county the same between wards 2011 and wards 2018.</li><li>Election data may be different for the same legislative district, for the same election, due to changes in the wards from 2011 and 2018. This is due to boundary corrections in the data from 2011 to 2018, and annexations, where a block may have been reassigned.</li><li>The following changes have been made to this file:\u00a0</li><ul><li>Dodge County: T-Williamstown to V-Kekoskee (Merged Geometry/Population: T-Williamstown 1 with\u00a0 V-Kekoskee 1; Changed: T-Williamstown 2 and 3 To: V-Kekoskee 2 and 3)</li><li>Marathon County: V-Brokaw to V-Maine (Merged Geometry/Population V-Brokaw 1 into V-Maine 1)</li><li>Racine County: T-Yorkville to V-Yorkville (Changed T-Yorkville (89575) to V Yorkville (89550), Ward 1=1, 2=2 etc).</li></ul></ol></div></div><div><p>*WEC replaced the previous Government Accountability Board (GAB) in 2016, which replaced the previous State Elections Board in 2008.</p></div>",
+   "keyword": [
+    "20022010",
+    "2018",
+    "Election Data",
+    "LTSB",
+    "Municipal Wards",
+    "Wards",
+    "Wisconsin"
+   ],
+   "issued": "2018-12-28T19:48:32.000Z",
+   "modified": "2019-03-25T19:29:42.000Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/336c768bad3041de89a80011015e0a3e_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Election_Data/2002_2010_Election_Data_with_2018_Wards/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/336c768bad3041de89a80011015e0a3e_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/336c768bad3041de89a80011015e0a3e_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/336c768bad3041de89a80011015e0a3e_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/336c768bad3041de89a80011015e0a3e_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/336c768bad3041de89a80011015e0a3e_0",
+   "webService": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Election_Data/2002_2010_Election_Data_with_2018_Wards/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/336c768bad3041de89a80011015e0a3e_0/license",
+   "spatial": "-92.889337,42.491914,-86.763988,47.080705",
+   "theme": [
+    "geospatial"
+   ]
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/44c7cd59ac4b4390abdfd28815f8b1ad_0",
+   "title": "1990-2000 Election Data with 2018 Wards",
+   "description": "<div><div><a href=\"http://legis.wisconsin.gov/ltsb/gisdocs/ElectionData/SchemaDefinitions.pdf\" target=\"_blank\">Attribute Field Definitions</a><b><br /></b></div><div><br /></div></div><div><div><b>Ward Data Overview:</b></div><div>Fall 2018 municipal wards were collected in July 2018 by LTSB through the WISE-Decade system.\u00a0 Current statutes require each county clerk, or board of election commissioners, no later than January 15 and July 15 of each year, to transmit to the LTSB, in an electronic format (approved by LTSB), a report confirming the boundaries of each municipality, ward and supervisory district within the county as of the preceding \u201csnapshot\u201d date of January 1 or July 1 respectively. Population totals for 2011 wards are carried over to the 2018 dataset for existing wards. New wards created since 2011 due to annexations, detachments, and incorporation are allocated population from Census 2010 collection blocks. LTSB has topologically integrated the data, but there may still be errors.</div></div><div><div><br /></div><div><div><b>Election Data Overview:</b></div><div>The 1990-2000 Wisconsin election data that is included in this file was collected by LTSB from the *Wisconsin Elections Commission (WEC) after each general election. A disaggregation process was performed on this election data based on the municipal ward layer that was available at the time of the election.\u00a0</div></div><div><br /></div><div><b><i>Disaggregation of Election Data:</i></b></div></div><div>Election data is first disaggregated from reporting units to wards, and then to census blocks. Next, the election data is aggregated back up to wards, municipalities, and counties. The disaggregation of election data to census blocks is done based on total population.\u00a0</div><div><div><br /></div><div>Detailed Methodology:</div><div><ul><li>Data is disaggregated first from reporting unit (i.e. multiple wards) to the ward level proportionate to the population of that ward.\u00a0</li><li>The data then is distributed down to the block level, again based on total population.\u00a0</li><li>When data is disaggregated to block or ward, we restrain vote totals not to exceed population 18 numbers, unless absolutely required.</li></ul></div></div><div><div>This methodology results in the following:\u00a0</div><div><ul><li>Election data totals reported to the WEC at the state, county, municipal and reporting unit level should match the disaggregated election data total at the same levels.\u00a0</li><li>Election data totals reported to the WEC at ward level may not match the ward totals in the disaggregated election data file.\u00a0</li><li>Some wards may have more election data allocated than voter age population. This will occur if a change to the geography results in more voters than the 2010 historical population limits.</li></ul></div></div><div><div><b><i>Other things of note\u2026</i></b></div><div>We use a static, official ward layer (in this case created in 2018) to disaggregate election data to blocks. Using this ward layer creates some challenges. New wards are created every year due to annexations and incorporations. When these new wards are reported with election data, an issue arises wherein election data is being reported for wards that do not exist in our official ward layer. For example, if Cityville has four wards in the official ward layer, the election data may be reported for five wards, including a new ward from an annexation.\u00a0</div><div><br /></div><div><b>There are two different scenarios and courses of action to these issues:\u00a0</b></div><div><ol><li>When a single new ward is present in the election data but there is no ward geometry present in the official ward layer, the votes attributed to this new ward are distributed to all the other wards in the municipality based on population percentage. Distributing based on population percentage means that the proportion of the population of the municipality will receive that same proportion of votes from the new ward. In the example of Cityville explained above, the fifth ward may have five votes reported, but since there is no corresponding fifth ward in the official layer, these five votes will be assigned to each of the other wards in Cityville according the percentage of population.</li><li>Another case is when a new ward is reported, but its votes are part of reporting unit. In this case, the votes for the new ward are assigned to the other wards in the reporting unit by population percentage; and not to wards in the municipality as a whole. For example, Cityville\u2019s ward 5 was given as a reporting unit together with wards 1, 4, and 5. In this case, the votes in ward five are assigned to wards 1 and 4 according to population percentage.\u00a0</li></ol></div><div><i>Outline Ward-by-Ward Election Results</i></div><div>The process of collecting election data and disaggregating to municipal wards occurs after a general election, so disaggregation has occurred with different ward layers and different population totals. We have outlined (to the best of our knowledge) what layer and population totals were used to produce these ward-by-ward election results.<br /></div><div><ol><li>Election data disaggregates from WEC Reporting Unit -&gt; Ward [Variant year outlined below]<br /></li><ul><li>Elections 1990 \u2013 2000: Wards 1991 (Census 1990 totals used for disaggregation)</li><li>Elections 2002 \u2013 2010: Wards 2001 (Census 2000 totals used for disaggregation)</li><li>Elections 2012: Wards 2011 (Census 2010 totals used for disaggregation)</li><li>Elections 2014 \u2013 2016: Wards Fall 2018 (Census 2010 totals used for disaggregation)</li></ul><li>Blocks 2011 -&gt; Centroid geometry and spatially joined with Wards [All Versions]<br /></li><ul><li>Each Block has an assignment to each of the ward versions outlined above</li><li>In the event that a ward exists now in which no block exists (occurred with spring 2018) due to annexations, a block centroid was created with a population 0, and encoded with the proper Census IDs.</li></ul><li>Wards [All Versions] disaggregate -&gt; Blocks 2011<br /></li><ul><li>This yields a block centroid layer that contains all elections from 1990 to 2016</li></ul><li>Blocks 2011 [with all election data] -&gt; Wards 2018 (then MCD 2018, and County 2018)\u00a0<br /></li><ul><li>All election data (including later elections such as 2016) is aggregated to the Wards 2018 assignment of the blocks</li></ul></ol></div><div><i>Notes:</i></div><div><ol><li>Population of municipal wards 1991, 2001 and 2011 used for disaggregation were determined by their respective Census.</li><li>Population and Election data will be contained within a county boundary. This means that even though MCD and ward boundaries vary greatly between versions of the wards, county boundaries have stayed the same, so data should total within a county the same between wards 2011 and wards 2018.</li><li>Election data may be different for the same legislative district, for the same election, due to changes in the wards from 2011 and 2018. This is due to boundary corrections in the data from 2011 to 2018, and annexations, where a block may have been reassigned.</li><li>The following changes have been made to this file:\u00a0</li><ul><li>Dodge County: T-Williamstown to V-Kekoskee (Merged Geometry/Population: T-Williamstown 1 with\u00a0 V-Kekoskee 1; Changed: T-Williamstown 2 and 3 To: V-Kekoskee 2 and 3)</li><li>Marathon County: V-Brokaw to V-Maine (Merged Geometry/Population V-Brokaw 1 into V-Maine 1)</li><li>Racine County: T-Yorkville to V-Yorkville (Changed T-Yorkville (89575) to V Yorkville (89550), Ward 1=1, 2=2 etc).</li></ul></ol></div></div><div><p>*WEC replaced the previous Government Accountability Board (GAB) in 2016, which replaced the previous State Elections Board in 2008.</p></div>",
+   "keyword": [
+    " Municipal Wards",
+    "Wisconsin",
+    "19902000",
+    "2018",
+    "2018 Wards",
+    "GIS",
+    "LTSB",
+    "Wards",
+    "Election Data"
+   ],
+   "issued": "2018-12-28T19:40:31.000Z",
+   "modified": "2019-03-25T19:23:26.000Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/44c7cd59ac4b4390abdfd28815f8b1ad_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Election_Data/1990_2000_Election_Data_with_2018_Wards/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/44c7cd59ac4b4390abdfd28815f8b1ad_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/44c7cd59ac4b4390abdfd28815f8b1ad_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/44c7cd59ac4b4390abdfd28815f8b1ad_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/44c7cd59ac4b4390abdfd28815f8b1ad_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/44c7cd59ac4b4390abdfd28815f8b1ad_0",
+   "webService": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Election_Data/1990_2000_Election_Data_with_2018_Wards/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/44c7cd59ac4b4390abdfd28815f8b1ad_0/license",
+   "spatial": "-92.889337,42.491914,-86.763988,47.080705",
+   "theme": [
+    "geospatial"
+   ]
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/eb26ba98aef94b818c721a4c7068a4ae_0",
+   "title": "WI Municipal Wards (Spring 2019)",
+   "description": "<p>Wisconsin municipal ward data collected in January 2019. This data has been collected in regards to state statute\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/5.15(4)(br)1.\">5.15(4)(br)1</a>.</p><ol><li>County clerks will transmit municipal, municipal ward, and county supervisory districts in GIS format to LTSB by January 15th and July 15th per statute\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/5.15(4)(br)1.\">5.15(4)(br)1</a>:<br /></li><ul><li>\u00a0&quot;...no later than January 15 and July 15 of each year, the county clerk shall transmit to the Legislative Technology Services Bureau a report confirming the boundaries of each municipality, ward, and supervisory district in the county together with a map of the county, in an electronic format approved by the Legislative Technology Services Bureau. Each report shall be current to the nearest January 1 or July 1 preceding the date of the report\u201d.<br /></li></ul><li>Municipal clerks\u00a0need to notify the county clerk\u00a0within 5 days of any boundary change per statute\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/5.15(4)(b)\">5.15(4)(b)</a>:<br /></li><ul><li>\u00a0&quot;Within 5 days after adoption or enactment of an ordinance or resolution under this section or any amendment thereto, the municipal clerk shall transmit one copy of the ordinance or resolution or the amendment to the county clerk of each county in which the municipality is contained, accompanied by the list and map specified in par. (a). Each copy shall identify the name of the municipality and the county or counties in which it is located.&quot;</li></ul></ol>Municipal data collected in January will be used by LTSB to update municipal boundaries the U.S. Census Bureau\u2019s TIGER database via the Boundary Annexation Survey (BAS). Counties and municipalities are no longer required to submit boundary changes directly to the Census Bureau. LTSB will submit data to the Census Bureau for the state as a whole.<br /><br /><div>Section\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/13.96(1)(b)\">13.96(1)(b)</a>\u00a0of the Wisconsin Statutes requires LTSB to \u201cupon receipt of municipal boundary information at each reporting interval, reconcile and compile the information received to produce a statewide data base consisting of municipal boundary information for the entire state\u201d.<br /><br /></div><div>Section\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/13.96(1)(c)\">13.96(1)(c)</a>\u00a0states that LTSB shall \u201cParticipate, on behalf of this state, in geographic boundary information programs when offered by the U.S. bureau of the census\u201d.<br /><br /></div><div>LTSB will publish Municipal Ward, Municipal Boundaries and County Supervisory Districts to the LTSB Open Data Portal located at:\u00a0<a href=\"http://data.ltsb.opendata.arcgis.com/\">http://data.ltsb.opendata.arcgis.com/</a>.<br /><br /></div><div>This data has been collected with the WISE-Decade software platform. For more information on this system please visit:\u00a0<a href=\"http://legis.wisconsin.gov/ltsb/gis/wise-decade/\">http://legis.wisconsin.gov/ltsb/gis/wise-decade/</a>.</div>",
+   "keyword": [
+    "2019",
+    "CBAS",
+    "Municipal Wards",
+    "Data Collection",
+    "LTSB",
+    "Spring",
+    "Wards",
+    "Wisconsin",
+    "WISEDecade",
+    "Statewide"
+   ],
+   "issued": "2019-02-05T22:09:35.000Z",
+   "modified": "2019-03-19T17:52:48.000Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/eb26ba98aef94b818c721a4c7068a4ae_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Statewide/Municipal_Wards_Spring_2019/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/eb26ba98aef94b818c721a4c7068a4ae_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/eb26ba98aef94b818c721a4c7068a4ae_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/eb26ba98aef94b818c721a4c7068a4ae_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/eb26ba98aef94b818c721a4c7068a4ae_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/eb26ba98aef94b818c721a4c7068a4ae_0",
+   "webService": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Statewide/Municipal_Wards_Spring_2019/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/eb26ba98aef94b818c721a4c7068a4ae_0/license",
+   "spatial": "-92.964315,42.456895,-86.666104,47.083029",
+   "theme": [
+    "geospatial"
+   ]
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/f9536fdf4f2d4be183f1a05bb97957a8_0",
+   "title": "WI Cities, Towns, and Villages (Spring 2019)",
+   "description": "<p>Wisconsin municipal boundaries (cities, towns, and villages) collected in January 2019. This data has been collected in regards to state statute\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/5.15(4)(br)1.\">5.15(4)(br)1</a>.</p><ol><li>County clerks will transmit municipal, municipal ward, and county supervisory districts in GIS format to LTSB by January 15th and July 15th per statute\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/5.15(4)(br)1.\">5.15(4)(br)1</a>:<br /></li><ul><li>\u00a0&quot;...no later than January 15 and July 15 of each year, the county clerk shall transmit to the Legislative Technology Services Bureau a report confirming the boundaries of each municipality, ward, and supervisory district in the county together with a map of the county, in an electronic format approved by the Legislative Technology Services Bureau. Each report shall be current to the nearest January 1 or July 1 preceding the date of the report\u201d.<br /></li></ul><li>Municipal clerks\u00a0need to notify the county clerk\u00a0within 5 days of any boundary change per statute\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/5.15(4)(b)\">5.15(4)(b)</a>:<br /></li><ul><li>\u00a0&quot;Within 5 days after adoption or enactment of an ordinance or resolution under this section or any amendment thereto, the municipal clerk shall transmit one copy of the ordinance or resolution or the amendment to the county clerk of each county in which the municipality is contained, accompanied by the list and map specified in par. (a). Each copy shall identify the name of the municipality and the county or counties in which it is located.&quot;</li></ul></ol>Municipal data collected in January will be used by LTSB to update municipal boundaries the U.S. Census Bureau\u2019s TIGER database via the Boundary Annexation Survey (BAS). Counties and municipalities are no longer required to submit boundary changes directly to the Census Bureau. LTSB will submit data to the Census Bureau for the state as a whole.<br /><br /><div>Section\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/13.96(1)(b)\">13.96(1)(b)</a>\u00a0of the Wisconsin Statutes requires LTSB to \u201cupon receipt of municipal boundary information at each reporting interval, reconcile and compile the information received to produce a statewide data base consisting of municipal boundary information for the entire state\u201d.<br /><br /></div><div>Section\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/13.96(1)(c)\">13.96(1)(c)</a>\u00a0states that LTSB shall \u201cParticipate, on behalf of this state, in geographic boundary information programs when offered by the U.S. bureau of the census\u201d.<br /><br /></div><div>LTSB will publish Municipal Ward, Municipal Boundaries and County Supervisory Districts to the LTSB Open Data Portal located at:\u00a0<a href=\"http://data.ltsb.opendata.arcgis.com/\">http://data.ltsb.opendata.arcgis.com/</a>.<br /><br /></div><div>This data has been collected with the WISE-Decade software platform. For more information on this system please visit:\u00a0<a href=\"http://legis.wisconsin.gov/ltsb/gis/wise-decade/\">http://legis.wisconsin.gov/ltsb/gis/wise-decade/</a>.</div>",
+   "keyword": [
+    "2019",
+    "CBAS",
+    "Municipal Boundaries",
+    "Data Collection",
+    "LTSB",
+    "Spring",
+    "CTVs",
+    "Wisconsin",
+    "WISEDecade",
+    "Municipalities"
+   ],
+   "issued": "2019-02-06T21:40:10.000Z",
+   "modified": "2019-05-01T19:00:26.712Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/f9536fdf4f2d4be183f1a05bb97957a8_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Statewide/Municipal_Boundaries_Spring_2019/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/f9536fdf4f2d4be183f1a05bb97957a8_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/f9536fdf4f2d4be183f1a05bb97957a8_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/f9536fdf4f2d4be183f1a05bb97957a8_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/f9536fdf4f2d4be183f1a05bb97957a8_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/f9536fdf4f2d4be183f1a05bb97957a8_0",
+   "webService": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Statewide/Municipal_Boundaries_Spring_2019/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/f9536fdf4f2d4be183f1a05bb97957a8_0/license",
+   "spatial": "-92.964315,42.456895,-86.666104,47.083029",
+   "theme": [
+    "geospatial"
+   ]
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/4c400cc575aa45b498b7361e437bba74_0",
+   "title": "WI County Supervisory Districts (Spring 2019)",
+   "description": "<p>Wisconsin County Supervisory Districts collected in January 2019. This data has been collected in regards to state statute\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/5.15(4)(br)1.\">5.15(4)(br)1</a>.</p><ol><li>County clerks will transmit municipal, municipal ward, and county supervisory districts in GIS format to LTSB by January 15th and July 15th per statute\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/5.15(4)(br)1.\">5.15(4)(br)1</a>:<br /></li><ul><li>\u00a0&quot;...no later than January 15 and July 15 of each year, the county clerk shall transmit to the Legislative Technology Services Bureau a report confirming the boundaries of each municipality, ward, and supervisory district in the county together with a map of the county, in an electronic format approved by the Legislative Technology Services Bureau. Each report shall be current to the nearest January 1 or July 1 preceding the date of the report\u201d.<br /></li></ul><li>Municipal clerks\u00a0need to notify the county clerk\u00a0within 5 days of any boundary change per statute\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/5.15(4)(b)\">5.15(4)(b)</a>:<br /></li><ul><li>\u00a0&quot;Within 5 days after adoption or enactment of an ordinance or resolution under this section or any amendment thereto, the municipal clerk shall transmit one copy of the ordinance or resolution or the amendment to the county clerk of each county in which the municipality is contained, accompanied by the list and map specified in par. (a). Each copy shall identify the name of the municipality and the county or counties in which it is located.&quot;</li></ul></ol>Municipal data collected in January will be used by LTSB to update municipal boundaries the U.S. Census Bureau\u2019s TIGER database via the Boundary Annexation Survey (BAS). Counties and municipalities are no longer required to submit boundary changes directly to the Census Bureau. LTSB will submit data to the Census Bureau for the state as a whole.<br /><br /><div>Section\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/13.96(1)(b)\">13.96(1)(b)</a>\u00a0of the Wisconsin Statutes requires LTSB to \u201cupon receipt of municipal boundary information at each reporting interval, reconcile and compile the information received to produce a statewide data base consisting of municipal boundary information for the entire state\u201d.<br /><br /></div><div>Section\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/13.96(1)(c)\">13.96(1)(c)</a>\u00a0states that LTSB shall \u201cParticipate, on behalf of this state, in geographic boundary information programs when offered by the U.S. bureau of the census\u201d.<br /><br /></div><div>LTSB will publish Municipal Ward, Municipal Boundaries and County Supervisory Districts to the LTSB Open Data Portal located at:\u00a0<a href=\"http://data.ltsb.opendata.arcgis.com/\">http://data.ltsb.opendata.arcgis.com/</a>.<br /><br /></div><div>This data has been collected with the WISE-Decade software platform. For more information on this system please visit:\u00a0<a href=\"http://legis.wisconsin.gov/ltsb/gis/wise-decade/\">http://legis.wisconsin.gov/ltsb/gis/wise-decade/</a>.</div>",
+   "keyword": [
+    "2019",
+    "CBAS",
+    "County",
+    "Supervisory Data Collection",
+    "LTSB",
+    "Spring",
+    "Wisconsin",
+    "WISEDecade"
+   ],
+   "issued": "2019-02-06T22:36:40.000Z",
+   "modified": "2019-03-19T17:49:46.000Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/4c400cc575aa45b498b7361e437bba74_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Statewide/County_Supervisory_Districts_Spring_2019/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/4c400cc575aa45b498b7361e437bba74_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/4c400cc575aa45b498b7361e437bba74_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/4c400cc575aa45b498b7361e437bba74_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/4c400cc575aa45b498b7361e437bba74_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/4c400cc575aa45b498b7361e437bba74_0",
+   "webService": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Statewide/County_Supervisory_Districts_Spring_2019/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/4c400cc575aa45b498b7361e437bba74_0/license",
+   "spatial": "-92.964315,42.456895,-86.666104,47.083029",
+   "theme": [
+    "geospatial"
+   ]
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/a907d137f96b49289d83172db8cf96f0_0",
+   "title": "Wisconsin Assembly Districts 2012",
+   "description": "Wisconsin Act 43 Assembly Districts with Districts 8 and 9 from the Eastern District Federal Court decision Baldus Vs. Brennan dated April, 11th, 2012.",
+   "keyword": [
+    "Statewide",
+    "Legislative",
+    "Districts",
+    "Assembly",
+    "2012",
+    "2011",
+    "Wisconsin",
+    "LTSB"
+   ],
+   "issued": "2014-11-06T15:03:38.000Z",
+   "modified": "2018-11-29T19:51:06.000Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/a907d137f96b49289d83172db8cf96f0_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/ArcGIS_Online/Assembly_Districts_2012_BvB/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/a907d137f96b49289d83172db8cf96f0_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/a907d137f96b49289d83172db8cf96f0_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/a907d137f96b49289d83172db8cf96f0_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/a907d137f96b49289d83172db8cf96f0_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/a907d137f96b49289d83172db8cf96f0_0",
+   "webService": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/ArcGIS_Online/Assembly_Districts_2012_BvB/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/a907d137f96b49289d83172db8cf96f0_0/license",
+   "spatial": "-93.196,42.348,-86.758,46.895",
+   "theme": [
+    "geospatial"
+   ]
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/657bd028d3e2408fa2fac1af78b0760c_0",
+   "title": "Wisconsin Senate Districts 2011",
+   "description": "These are the Senate Districts created by 2011 Wisconsin Act 43. https://docs.legis.wisconsin.gov/2011/proposals/sb148.",
+   "keyword": [
+    "Wisconsin",
+    "Senate",
+    "Districts",
+    "Act 43",
+    "Statewide",
+    "Legislative"
+   ],
+   "issued": "2014-11-06T17:07:19.000Z",
+   "modified": "2018-11-29T19:50:38.000Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/657bd028d3e2408fa2fac1af78b0760c_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/ArcGIS_Online/Senate_Districts_2011/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/657bd028d3e2408fa2fac1af78b0760c_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/657bd028d3e2408fa2fac1af78b0760c_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/657bd028d3e2408fa2fac1af78b0760c_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/657bd028d3e2408fa2fac1af78b0760c_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/657bd028d3e2408fa2fac1af78b0760c_0",
+   "webService": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/ArcGIS_Online/Senate_Districts_2011/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/657bd028d3e2408fa2fac1af78b0760c_0/license",
+   "spatial": "-92.889,42.492,-86.764,47.081",
+   "theme": [
+    "geospatial"
+   ]
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/b52f3c49baa840adb070e7c56604de59_0",
+   "title": "Wisconsin Congressional Districts 2011",
+   "description": "These are the Congressional Districts created by 2011 Wisconsin Act 44.\u00a0<a href=\"https://docs.legis.wisconsin.gov/2011/proposals/sb149\" target=\"_blank\">https://docs.legis.wisconsin.gov/2011/proposals/sb149</a><div><br /></div>",
+   "keyword": [
+    "Wisconsin",
+    "Congressional",
+    "Districts",
+    "2011",
+    "Statewide",
+    "Legislative"
+   ],
+   "issued": "2016-10-03T19:42:02.000Z",
+   "modified": "2018-11-29T19:49:30.000Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/b52f3c49baa840adb070e7c56604de59_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/ArcGIS_Online/Congressional_Districts_2011/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/b52f3c49baa840adb070e7c56604de59_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/b52f3c49baa840adb070e7c56604de59_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/b52f3c49baa840adb070e7c56604de59_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/b52f3c49baa840adb070e7c56604de59_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/b52f3c49baa840adb070e7c56604de59_0",
+   "webService": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/ArcGIS_Online/Congressional_Districts_2011/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/b52f3c49baa840adb070e7c56604de59_0/license",
+   "spatial": "-93.086,42.364,-86.714,46.895",
+   "theme": [
+    "geospatial"
+   ]
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/0093f24fe10c46acb50f0f99f838de7b_0",
+   "title": "WI Cities, Towns, and Villages (Fall 2018)",
+   "description": "<p>Wisconsin Municipal Boundaries collected in July 2018. This data has been collected in regards to state statute\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/5.15(4)(br)1.\">5.15(4)(br)1</a>.</p><ol><li>County clerks will transmit municipal, municipal ward, and county supervisory districts in GIS format to LTSB by January 15th and July 15th per statute\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/5.15(4)(br)1.\">5.15(4)(br)1</a>:<br /></li><ul><li>\u00a0&quot;...no later than January 15 and July 15 of each year, the county clerk shall transmit to the Legislative Technology Services Bureau a report confirming the boundaries of each municipality, ward, and supervisory district in the county together with a map of the county, in an electronic format approved by the Legislative Technology Services Bureau. Each report shall be current to the nearest January 1 or July 1 preceding the date of the report\u201d.<br /></li></ul><li>Municipal clerks\u00a0need to notify the county clerk\u00a0within 5 days of any boundary change per statute\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/5.15(4)(b)\">5.15(4)(b)</a>:<br /></li><ul><li>\u00a0&quot;Within 5 days after adoption or enactment of an ordinance or resolution under this section or any amendment thereto, the municipal clerk shall transmit one copy of the ordinance or resolution or the amendment to the county clerk of each county in which the municipality is contained, accompanied by the list and map specified in par. (a). Each copy shall identify the name of the municipality and the county or counties in which it is located.&quot;</li></ul></ol>Municipal data collected in January will be used by LTSB to update municipal boundaries the U.S. Census Bureau\u2019s TIGER database via the Boundary Annexation Survey (BAS). Counties and municipalities are no longer required to submit boundary changes directly to the Census Bureau. LTSB will submit data to the Census Bureau for the state as a whole.<br /><br /><div>Section\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/13.96(1)(b)\">13.96(1)(b)</a>\u00a0of the Wisconsin Statutes requires LTSB to \u201cupon receipt of municipal boundary information at each reporting interval, reconcile and compile the information received to produce a statewide data base consisting of municipal boundary information for the entire state\u201d.<br /><br /></div><div>Section\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/13.96(1)(c)\">13.96(1)(c)</a>\u00a0states that LTSB shall \u201cParticipate, on behalf of this state, in geographic boundary information programs when offered by the U.S. bureau of the census\u201d.<br /><br /></div><div>LTSB will publish Municipal Ward, Municipal Boundaries and County Supervisory Districts to the LTSB Open Data Portal located at:\u00a0<a href=\"http://data.ltsb.opendata.arcgis.com/\">http://data.ltsb.opendata.arcgis.com/</a>.<br /><br /></div><div>This data has been collected with the WISE-Decade software platform. For more information on this system please visit:\u00a0<a href=\"http://legis.wisconsin.gov/ltsb/gis/wise-decade/\">http://legis.wisconsin.gov/ltsb/gis/wise-decade/</a>.</div>",
+   "keyword": [
+    "Data Collection",
+    "LTSB",
+    "Municipal Boundaries",
+    "Municipalities",
+    "Spring",
+    "Statewide",
+    "Wisconsin",
+    "WISEDecade",
+    "2018",
+    "Data Collection 2018"
+   ],
+   "issued": "2018-08-06T21:32:25.000Z",
+   "modified": "2019-04-26T02:02:45.417Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/0093f24fe10c46acb50f0f99f838de7b_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Statewide/Municipal_Boundaries_Fall_2018/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/0093f24fe10c46acb50f0f99f838de7b_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/0093f24fe10c46acb50f0f99f838de7b_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/0093f24fe10c46acb50f0f99f838de7b_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/0093f24fe10c46acb50f0f99f838de7b_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/0093f24fe10c46acb50f0f99f838de7b_0",
+   "webService": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Statewide/Municipal_Boundaries_Fall_2018/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/0093f24fe10c46acb50f0f99f838de7b_0/license",
+   "spatial": "-92.889337,42.491914,-86.763988,47.080705",
+   "theme": [
+    "geospatial"
+   ]
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/0707c52bc1e2478482280c6d07d4ed0a_0",
+   "title": "WI County Supervisory Districts (Fall 2018)",
+   "description": "<p>Wisconsin County Supervisory Districts collected in July 2018. This data has been collected in regards to state statute\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/5.15(4)(br)1.\">5.15(4)(br)1</a>.</p><ol><li>County clerks will transmit municipal, municipal ward, and county supervisory districts in GIS format to LTSB by January 15th and July 15th per statute\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/5.15(4)(br)1.\">5.15(4)(br)1</a>:<br /></li><ul><li>\u00a0&quot;...no later than January 15 and July 15 of each year, the county clerk shall transmit to the Legislative Technology Services Bureau a report confirming the boundaries of each municipality, ward, and supervisory district in the county together with a map of the county, in an electronic format approved by the Legislative Technology Services Bureau. Each report shall be current to the nearest January 1 or July 1 preceding the date of the report\u201d.<br /></li></ul><li>Municipal clerks\u00a0need to notify the county clerk\u00a0within 5 days of any boundary change per statute\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/5.15(4)(b)\">5.15(4)(b)</a>:<br /></li><ul><li>\u00a0&quot;Within 5 days after adoption or enactment of an ordinance or resolution under this section or any amendment thereto, the municipal clerk shall transmit one copy of the ordinance or resolution or the amendment to the county clerk of each county in which the municipality is contained, accompanied by the list and map specified in par. (a). Each copy shall identify the name of the municipality and the county or counties in which it is located.&quot;</li></ul></ol>Municipal data collected in January will be used by LTSB to update municipal boundaries the U.S. Census Bureau\u2019s TIGER database via the Boundary Annexation Survey (BAS). Counties and municipalities are no longer required to submit boundary changes directly to the Census Bureau. LTSB will submit data to the Census Bureau for the state as a whole.<br /><br /><div>Section\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/13.96(1)(b)\">13.96(1)(b)</a>\u00a0of the Wisconsin Statutes requires LTSB to \u201cupon receipt of municipal boundary information at each reporting interval, reconcile and compile the information received to produce a statewide data base consisting of municipal boundary information for the entire state\u201d.<br /><br /></div><div>Section\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/13.96(1)(c)\">13.96(1)(c)</a>\u00a0states that LTSB shall \u201cParticipate, on behalf of this state, in geographic boundary information programs when offered by the U.S. bureau of the census\u201d.<br /><br /></div><div>LTSB will publish Municipal Ward, Municipal Boundaries and County Supervisory Districts to the LTSB Open Data Portal located at:\u00a0<a href=\"http://data.ltsb.opendata.arcgis.com/\">http://data.ltsb.opendata.arcgis.com/</a>.<br /><br /></div><div>This data has been collected with the WISE-Decade software platform. For more information on this system please visit:\u00a0<a href=\"http://legis.wisconsin.gov/ltsb/gis/wise-decade/\">http://legis.wisconsin.gov/ltsb/gis/wise-decade/</a>.</div>",
+   "keyword": [
+    "2018",
+    "Data Collection",
+    "Fall",
+    "Statewide",
+    "Wisconsin",
+    "WISEDecade",
+    "LTSB",
+    "County",
+    "Supervisory Districts"
+   ],
+   "issued": "2018-08-07T21:00:03.000Z",
+   "modified": "2018-08-07T21:02:06.000Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/0707c52bc1e2478482280c6d07d4ed0a_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Statewide/County_Supervisory_Districts_Fall_2018/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/0707c52bc1e2478482280c6d07d4ed0a_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/0707c52bc1e2478482280c6d07d4ed0a_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/0707c52bc1e2478482280c6d07d4ed0a_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/0707c52bc1e2478482280c6d07d4ed0a_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/0707c52bc1e2478482280c6d07d4ed0a_0",
+   "webService": "https://mapservices.legis.wisconsin.gov/arcgis/rest/services/Statewide/County_Supervisory_Districts_Fall_2018/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/0707c52bc1e2478482280c6d07d4ed0a_0/license",
+   "spatial": "-92.889337,42.491914,-86.763988,47.080705",
+   "theme": [
+    "geospatial"
+   ]
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/d2741eb473004ed099dbd5c6c4730049_0",
+   "title": "WI County Supervisory Districts (Fall 2017)",
+   "description": "<p>Wisconsin County Supervisory Districts collected in July 2017.\u00a0This data has been collected in regards to state statute\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/5.15%284%29%28br%291.\">5.15(4)(br)1</a>.</p><p>Municipal clerks\u00a0need to notify the county clerk\u00a0within 5 days of any boundary change.\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/5.15%284%29%28b%29\">5.15(4)(b)</a>\u00a0Within 5 days after adoption or enactment of an ordinance or resolution under this section or any amendment thereto, the municipal clerk shall transmit one copy of the ordinance or resolution or the amendment to the county clerk of each county in which the municipality is contained, accompanied by the list and map specified in par. (a). Each copy shall identify the name of the municipality and the county or counties in which it is located.</p><p>County clerks will transmit municipal, municipal ward and county supervisory districts in GIS format to LTSB by January 15th and July 15th.</p><p>\u201dno later than January 15 and July 15 of each year, the county clerk shall transmit to the legislative technology services bureau a report confirming the boundaries of each municipality, ward, and supervisory district in the county together with a map of the county, in an electronic format approved by the legislative technology services bureau. Each report shall be current to the nearest January 1 or July 1 preceding the date of the report\u201d.</p><p>Municipal data collected in January will be used by LTSB to update municipal boundaries the U.S. Census Bureau\u2019s TIGER database via the Boundary Annexation Survey (BAS). Counties and municipalities are no longer required to submit boundary changes directly to the Census Bureau. LTSB will submit data to the Census Bureau for the state as a whole.</p><p>Section\u00a0<a href=\"http://docs.legis.wisconsin.gov/document/statutes/13.96%281%29%28b%29\">13.96(1)(b)</a>\u00a0of the Wisconsin Statutes requires LTSB to \u201cupon receipt of municipal boundary information at each reporting interval under s. 5.15 (4) (bg), reconcile and compile the information received to produce a statewide data base consisting of municipal boundary information for the entire state\u201d.</p><p><a href=\"http://docs.legis.wisconsin.gov/document/statutes/13.96%281%29%28c%29\">13.96(1)(c)</a>\u00a0LTSB shall \u201cParticipate, on behalf of this state, in geographic boundary information programs when offered by the U.S. bureau of the census\u201d.</p><p>LTSB will publish Municipal Ward, Municipal Boundaries and County Supervisory Districts to the LTSB Open Data Portal located at\u00a0<a href=\"http://data.ltsb.opendata.arcgis.com/\">http://data.ltsb.opendata.arcgis.com/</a>.</p><p>This data has been collected with the WISE-Decade software platform. For more information on this system please visit\u00a0<a href=\"http://legis.wisconsin.gov/ltsb/gis/wise-decade/\">http://legis.wisconsin.gov/ltsb/gis/wise-decade/</a>.</p>",
+   "keyword": [
+    "2017",
+    "Data Collection",
+    "WISEDecade",
+    "Wisconsin",
+    "LTSB",
+    "Fall",
+    "Statewide",
+    "Supervisory Districts",
+    "County"
+   ],
+   "issued": "2017-10-03T20:38:44.000Z",
+   "modified": "2017-10-03T20:39:19.525Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/d2741eb473004ed099dbd5c6c4730049_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://services1.arcgis.com/FDsAtKBk8Hy4cAH0/arcgis/rest/services/WI_County_Supervisory_Districts_(Fall_2017)/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/d2741eb473004ed099dbd5c6c4730049_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/d2741eb473004ed099dbd5c6c4730049_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/d2741eb473004ed099dbd5c6c4730049_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/d2741eb473004ed099dbd5c6c4730049_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/d2741eb473004ed099dbd5c6c4730049_0",
+   "webService": "https://services1.arcgis.com/FDsAtKBk8Hy4cAH0/arcgis/rest/services/WI_County_Supervisory_Districts_(Fall_2017)/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/d2741eb473004ed099dbd5c6c4730049_0/license",
+   "spatial": "-92.88933740096495,42.491929663585516,-86.7639884163359,47.08070456033571",
+   "theme": [
+    "geospatial"
+   ]
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/c23fbbb8a149414cba90895c82ea967a_0",
+   "title": "2002-2010 WI Election Data with 2011 Wards",
+   "description": "<div><div><a href=\"http://legis.wisconsin.gov/ltsb/gisdocs/ElectionData/SchemaDefinitions.pdf\" target=\"_blank\">Attribute Field Definitions</a></div><div><br /></div><div><b>Election Data</b></div><div><b><i>Overview:</i></b></div></div><div>Election data that is included in this file was collected by LTSB from the Government Accountability Board (GAB)/Wisconsin Elections Commission (WEC) after each general election. A disaggregation process was performed on this election data based on the municipal ward layer that was available at the time of the election. The ward data that is collected after each decennial census is made up of collections of whole and split census blocks. (Note: Split census blocks occur during local redistricting when municipalities include recently annexed property in their ward submissions to the legislature).</div><div><div><br /></div><div><b><i>Disaggregation of Election Data:</i></b></div></div><div>Election data is first disaggregated from reporting units to wards, and then to census blocks. Next, the election data is aggregated back up to wards, municipalities, and counties. The disaggregation of election data to census blocks is done based on total population.\u00a0</div><div><div><br /></div><div><b>Detailed Methodology:</b></div><div><ul><li>Data is disaggregated first from reporting unit (i.e. multiple wards) to the ward level proportionate to the population of that ward.\u00a0</li><li>The data then is distributed down to the block level, again based on total population.\u00a0</li><li>When data is disaggregated to block or ward, we restrain vote totals not to exceed population 18 numbers, unless absolutely required.</li></ul></div></div><div><div>This methodology results in the following:\u00a0</div><div><ul><li>Election data totals reported to the GAB/WEC at the state, county, municipal and reporting unit level should match the disaggregated election data total at the same levels.\u00a0</li><li>Election data totals reported to the GAB at ward level may not match the ward totals in the disaggregated election data file.\u00a0</li><li>Some wards may have more election data allocated than voter age population. This will occur if a change to the geography results in more voters than the 2010 historical population limits.</li></ul></div></div><div><div><b><i>Other things of note\u2026</i></b></div><div>We use a static, official ward layer (in this case created in 2011) to disaggregate election data to blocks. Using this ward layer creates some challenges. New wards are created every year due to annexations and incorporations. When these new wards are reported with election data, an issue arises wherein election data is being reported for wards that do not exist in our official ward layer. For example, if Cityville has four wards in the official ward layer, the election data may be reported for five wards, including a new ward from an annexation.\u00a0</div><div><br /></div><div><b>There are two different scenarios and courses of action to these issues:\u00a0</b></div><div><ol><li>When a single new ward is present in the election data but there is no ward geometry present in the official ward layer, the votes attributed to this new ward are distributed to all the other wards in the municipality based on population percentage. Distributing based on population percentage means that the proportion of the population of the municipality will receive that same proportion of votes from the new ward. In the example of Cityville explained above, the fifth ward may have five votes reported, but since there is no corresponding fifth ward in the official layer, these five votes will be assigned to each of the other wards in Cityville according the percentage of population.</li><li>Another case is when a new ward is reported, but its votes are part of reporting unit. In this case, the votes for the new ward are assigned to the other wards in the reporting unit by population percentage; and not to wards in the municipality as a whole. For example, Cityville\u2019s ward five was given as a reporting unit together with wards 1, 4, and 5. In this case, the votes in ward five are assigned to wards one and four according to population percentage.\u00a0</li></ol></div><div><i>Outline Ward-by-Ward Election Results</i></div><div>The process of collecting election data and disaggregating to municipal wards occurs after a general election, so disaggregation has occurred with different ward layers and different population totals. We have outlined (to the best of our knowledge) what layer and population totals were used to produce these ward-by-ward election results.<br /></div><div><ol><li>Election data disaggregates from GAB/WEC Reporting Unit -&gt; Ward [Variant year outlined below]<br /></li><ul><li>Elections 1990 \u2013 2000: Wards 1991 (Census 1990 totals used for disaggregation)</li><li>Elections 2002 \u2013 2010: Wards 2001 (Census 2000 totals used for disaggregation)</li><li>Elections 2012: Wards 2011 (Census 2010 totals used for disaggregation)</li><li>Elections 2014 \u2013 2016: Wards spring 2017 (Census 2010 totals used for disaggregation)</li></ul><li>Blocks 2011 -&gt; Centroid geometry and spatially joined with Wards [All Versions]<br /></li><ul><li>Each Block has an assignment to each of the ward versions outlined above</li><li>In the event that a ward exists now in which no block exists (Occurred with spring 2017) due to annexations, a block centroid was created with a population 0, and encoded with the proper Census IDs.</li></ul><li>Wards [All Versions] disaggregate -&gt; Blocks 2011<br /></li><ul><li>This yields a block centroid layer that contains all elections from 1990 to 2016</li></ul><li>Blocks 2011 [with all election data] -&gt; Wards 2011 (then MCD 2011, and County 2011)\u00a0<br /></li><ul><li>All election data (including later elections such as 2016) is aggregated to the Wards 2011 assignment of the blocks</li></ul></ol></div><div><i>Notes:</i></div><div><ol><li>Population of municipal wards 1991, 2001 and 2011 used for disaggregation were determined by their respective Census<br /></li><li>Population and Election data will be contained within a county boundary. This means that even though MCD and ward boundaries vary greatly between versions of the wards, county boundaries have stayed the same, so data should total within a county the same between wards 2011 and wards 2017<br /></li><li>Election data may be different for the same legislative district, for the same election, due to changes in the wards from 2011 and 2017. This is due to boundary corrections in the data from 2011 to 2017, and annexations, where a block may have been reassigned.</li></ol></div></div><div><b><br /></b></div><div><b>Ward Data</b><br /></div><div><i>Overview:</i></div><div>These municipal wards were created by grouping Census 2010 population collection blocks into municipal wards. This project started with the release of Census 2010 geography and population totals to all 72 Wisconsin counties on March 21st, 2011, and were made available via LTSB's GIS website and the WISE-LR web application. The 180 day statutory timeline for local redistricting ended on September 19th, 2011.</div><div><br /></div><div>Wisconsin Legislative and Congressional redistricting plans were enacted in the fall of 2011 by Wisconsin Act 43 and Act 44. These new districts were created using Census 2010 block geography. Some municipal wards, created before the passing of Act 43 and 44, were required to be split between assembly, senate and congressional district boundaries. 2011 Wisconsin Act 39 allowed communities to divide wards, along census block boundaries, if they were divided by newly enacted boundaries. A number of wards created under Wisconsin Act 39 were named using alpha-numeric labels. An example would be where ward 1 divided by an assembly district would become ward 1A and ward 1B, and in other municipalities the next sequential ward number was used: ward 1 and ward 2. The process of dividing wards under Act 39 ended on April 10th, 2012.\u00a0<a href=\"http://legis.wisconsin.gov/lrb/pubs/Lb/11Lb1.pdf\" target=\"_blank\">This link provides more information on Act 39</a>.</div><div><div><br /></div><div>The United States Eastern District Federal Court on April 11th, 2012 ordered Assembly Districts 8 and 9 (both in the City of Milwaukee) be changed to follow the court\u2019s description. On September 19th, 2012 the Legislative Technology Services Bureau (LTSB) divided the few remaining municipal wards that were split by a 2011 Wisconsin Act 43 or 44 district line.</div></div>",
+   "keyword": [
+    "Election Data",
+    "Wisconsin",
+    "20022010",
+    "2011 Wards",
+    "LTSB",
+    "Wards"
+   ],
+   "issued": "2017-10-03T16:35:17.000Z",
+   "modified": "2017-10-03T16:37:23.453Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/c23fbbb8a149414cba90895c82ea967a_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://services1.arcgis.com/FDsAtKBk8Hy4cAH0/arcgis/rest/services/Wards2011_wED_2010_2002/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/c23fbbb8a149414cba90895c82ea967a_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/c23fbbb8a149414cba90895c82ea967a_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/c23fbbb8a149414cba90895c82ea967a_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/c23fbbb8a149414cba90895c82ea967a_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/c23fbbb8a149414cba90895c82ea967a_0",
+   "webService": "https://services1.arcgis.com/FDsAtKBk8Hy4cAH0/arcgis/rest/services/Wards2011_wED_2010_2002/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/c23fbbb8a149414cba90895c82ea967a_0/license",
+   "spatial": "-92.8894330005758,42.49191199888712,-86.76398799951762,47.08077199914277",
+   "theme": [
+    "geospatial"
+   ]
+  },
+  {
+   "@type": "dcat:Dataset",
+   "identifier": "http://data-ltsb.opendata.arcgis.com/datasets/3dade8f11b98448f97d1a0ea43aba27c_0",
+   "title": "Wisconsin Assembly Districts 2002",
+   "description": "These are the 2002 Wisconsin Assembly Districts as created by the Federal Court Redistricting Decision dated May 22, 2002.\u00a0 Districts are effective as of May 30, 2002 until the next redistricting cycle in 2010.",
+   "keyword": [
+    "Wisconsin",
+    "Assembly",
+    "2002",
+    "Districts",
+    "LTSB",
+    "Legislative"
+   ],
+   "issued": "2016-04-25T15:57:53.000Z",
+   "modified": "2016-04-25T16:01:18.336Z",
+   "publisher": {
+    "name": "Wisconsin State Legislature"
+   },
+   "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Wisconsin Legislature",
+    "hasEmail": "mailto:gis@legis.wisconsin.gov"
+   },
+   "accessLevel": "public",
+   "distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "title": "ArcGIS Open Dataset",
+     "format": "Web page",
+     "mediaType": "text/html",
+     "accessURL": "http://data-ltsb.opendata.arcgis.com/datasets/3dade8f11b98448f97d1a0ea43aba27c_0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Esri Rest API",
+     "format": "Esri REST",
+     "mediaType": "application/json",
+     "accessURL": "https://services1.arcgis.com/FDsAtKBk8Hy4cAH0/arcgis/rest/services/Wisconsin_Assembly_Districts_2002/FeatureServer/0"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "GeoJSON",
+     "format": "GeoJSON",
+     "mediaType": "application/vnd.geo+json",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/3dade8f11b98448f97d1a0ea43aba27c_0.geojson"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "CSV",
+     "format": "CSV",
+     "mediaType": "text/csv",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/3dade8f11b98448f97d1a0ea43aba27c_0.csv"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "KML",
+     "format": "KML",
+     "mediaType": "application/vnd.google-earth.kml+xml",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/3dade8f11b98448f97d1a0ea43aba27c_0.kml"
+    },
+    {
+     "@type": "dcat:Distribution",
+     "title": "Shapefile",
+     "format": "ZIP",
+     "mediaType": "application/zip",
+     "downloadURL": "http://data-ltsb.opendata.arcgis.com/datasets/3dade8f11b98448f97d1a0ea43aba27c_0.zip"
+    }
+   ],
+   "landingPage": "http://data-ltsb.opendata.arcgis.com/datasets/3dade8f11b98448f97d1a0ea43aba27c_0",
+   "webService": "https://services1.arcgis.com/FDsAtKBk8Hy4cAH0/arcgis/rest/services/Wisconsin_Assembly_Districts_2002/FeatureServer/0",
+   "license": "https://hub.arcgis.com/api/v2/datasets/3dade8f11b98448f97d1a0ea43aba27c_0/license",
+   "spatial": "-92.88943494552599,42.49182130501705,-86.76411437121331,47.08087552769648",
+   "theme": [
+    "geospatial"
+   ]
+  }
+ ]
+}

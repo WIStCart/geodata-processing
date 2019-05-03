@@ -6,7 +6,6 @@ Author(s): Ben Segal
 Description: 
 This script is designed to run every day, and convert arcgis json records to GBL records.
 
-
 Dependencies: Python 3.x
 """
 import json
@@ -39,11 +38,13 @@ def strip_tags(html):
     return s.get_data()
 
 def json2gbl (jsonUrl, collection, siteName, partOf):
-    if (os.path.isdir('C:/PROJECTS/Directed_Studies/esriscanner/' + collection) == True):
-        shutil.rmtree('C:/PROJECTS/Directed_Studies/esriscanner/' + collection)
-    os.makedirs('C:/PROJECTS/Directed_Studies/esriscanner/' + collection)
+    if (os.path.isdir(collection) == True):
+        shutil.rmtree( collection)
+    os.makedirs(collection)
     s = urllib.request.urlopen(jsonUrl).read()
     d = json.loads(s.decode('utf-8'))
+    with open(collection + '.json', 'w') as fout:
+        json.dump(d, fout, indent=1)
     for x in d["dataset"]:
         # call html strip function
         description = strip_tags(x["description"])
@@ -93,7 +94,7 @@ def json2gbl (jsonUrl, collection, siteName, partOf):
             "dc_creator_sm": x["publisher"]["name"],
             "dc_type_s": "Dataset",
             "dc_subject_sm": x["keyword"],
-            "dct_spatial_sm": "", # no spatial field in data.json
+            "dct_spatial_sm": "", 
             "dct_issued_s": x["issued"],
             "dct_temporal_sm": "", 
             "solr_geom": envelope,
@@ -123,12 +124,12 @@ def json2gbl (jsonUrl, collection, siteName, partOf):
         outTitle = outTitle.replace('*', '')
         outTitle = outTitle.replace('/', '')
         if (scanCatch == "\n"):
-            with open('C:\\PROJECTS\\Directed_Studies\\esriscanner\\' + collection + "\\" + outTitle + ".json", 'w') as k:
+            with open(collection + "\\" + outTitle + ".json", 'w') as k:
                 json.dump(temp_obj, k, indent=1)
-    os.system("python update.py -aj C:\\PROJECTS\\Directed_Studies\\esriscanner\\" + collection + "\\ -i prod")
+    os.system("py ..\\solr\\update.py -aj " +  collection + "\\ -i prod")
 
 # loop through each collection in OpenData.yml and call json2gbl function
-with open("C:\\PROJECTS\\Directed_Studies\\esriscanner\\OpenData.yml") as stream:
+with open("OpenData.yml") as stream:
     theDict = yaml.safe_load(stream)
     for record in theDict["Sites"]:
         siteRecord = theDict["Sites"][record]
