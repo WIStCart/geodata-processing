@@ -126,7 +126,7 @@ def json2gbl (jsonUrl, collection, siteName, partOf):
         if (scanCatch == "\n"):
             with open(collection + "\\" + outTitle + ".json", 'w') as k:
                 json.dump(temp_obj, k, indent=1)
-    os.system("python ..\\solr\\update.py -aj " +  collection + "\\ -i prod")
+    os.system("py ..\\solr\\update.py -aj " +  collection + "\\ -i prod")
 
 # loop through each collection in OpenData.yml and call json2gbl function
 with open("OpenData.yml") as stream:
