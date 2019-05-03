@@ -1,8 +1,8 @@
 """
 Update.py
-
+ 
 Author(s): Jim Lacy, Ben Segal
-
+  
 Description: 
 This script is designed to interact with a Solr instance running the GeoBlacklight 1.0 Schema.  It can perform one of four operations: 
 1. Upload and and then ingest a directory of GBL-formatted json files. Optional: recurse into subfolders.
@@ -48,7 +48,7 @@ SOLR_USERNAME = "solradmin"
 SOLR_PASSWORD = "Search4BadgerGeos!" 
 SOLR_URL_DEV = "https://localhost:8983/solr/geodata-core-development/"
 SOLR_URL_TEST = "https://geodata-test.sco.wisc.edu/solr/geodata-development/"
-SOLR_URL_PRODUCTION = "https://geodata-prod.sco.wisc.edu/solr/geodata-production/"
+SOLR_URL_PRODUCTION = "https://geodata-prod.sco.wisc.edu/solr/geodata-development/"
 SOLR_INSTANCE = ""
 
 class SolrInterface(object):

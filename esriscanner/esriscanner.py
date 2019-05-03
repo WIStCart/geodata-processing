@@ -59,11 +59,11 @@ def json2gbl (jsonUrl, collection, siteName, partOf):
         mod = x["modified"]
         geomType = ""
         # grab raw metadata if available and get geom type
-        if("FeatureServer" in x["webService"] or "MapServer" in x["webService"]):
-            a = urllib.request.urlopen(x["webService"] + "?f=pjson").read()
-            b = json.loads(a.decode('utf-8'))
-            if("geometryType" in b):
-                geomType = b["geometryType"].replace('esriGeometry', '')
+        #if("FeatureServer" in x["webService"] or "MapServer" in x["webService"]):
+        #    a = urllib.request.urlopen(x["webService"] + "?f=pjson").read()
+        #    b = json.loads(a.decode('utf-8'))
+        #    if("geometryType" in b):
+        #        geomType = b["geometryType"].replace('esriGeometry', '')
         # create references from distribution 
         references = "{"
         for t in x["distribution"]:
@@ -126,7 +126,7 @@ def json2gbl (jsonUrl, collection, siteName, partOf):
         if (scanCatch == "\n"):
             with open(collection + "\\" + outTitle + ".json", 'w') as k:
                 json.dump(temp_obj, k, indent=1)
-    os.system("py ..\\solr\\update.py -aj " +  collection + "\\ -i prod")
+    os.system("python ..\\solr\\update.py -aj " +  collection + "\\ -i prod")
 
 # loop through each collection in OpenData.yml and call json2gbl function
 with open("OpenData.yml") as stream:
