@@ -1,0 +1,672 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20190312</CreaDate>
+    <CreaTime>13032300</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <itemProps>
+        <itemName Sync="TRUE">Iron_PLSS_2019</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">477419.698400</westBL>
+          <eastBL Sync="TRUE">525544.139400</eastBL>
+          <southBL Sync="TRUE">612043.845800</southBL>
+          <northBL Sync="TRUE">678601.631300</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\data\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Iron_DONE\Iron_PLSS_2019\Iron_PLSS_2019.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_WGS_1984</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+        <projcsn Sync="TRUE">Custom</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;Custom&amp;quot;,GEOGCS[&amp;quot;GCS_WGS_1984&amp;quot;,DATUM[&amp;quot;D_WGS_1984&amp;quot;,SPHEROID[&amp;quot;WGS_1984&amp;quot;,6378137.0,298.257223563]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],UNIT[&amp;quot;Meter&amp;quot;,1.0]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;10000&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+      <lineage>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190320" Time="100020" Name="" export="">CalculateField PLSS_2019 SECTION_TIER_RANGE ""T" + !CONTRIBUTOR_CORNER_ID![0:2] + "N R" + !CONTRIBUTOR_CORNER_ID![2:3]" PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190320" Time="100307" Name="" export="">CalculateField PLSS_2019 SECTION_TIER_RANGE ""T" + !CONTRIBUTOR_CORNER_ID![0:2] + "N R" + !CONTRIBUTOR_CORNER_ID![2:3] + "E"" PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190320" Time="100408" Name="" export="">CalculateField PLSS_2019 SECTION_TIER_RANGE ""T" + !CONTRIBUTOR_CORNER_ID![0:2] + "N R1W"" PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190320" Time="101001" Name="" export="">CalculateField PLSS_2019 SECTION_TIER_RANGE ""S36 " + !SECTION_TIER_RANGE! + " SE"" PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190320" Time="101106" Name="" export="">CalculateField PLSS_2019 SECTION_TIER_RANGE ""S36 " + !SECTION_TIER_RANGE! + " S"" PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190320" Time="101201" Name="" export="">CalculateField PLSS_2019 SECTION_TIER_RANGE ""S35 " + !SECTION_TIER_RANGE! + " SE"" PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190320" Time="101225" Name="" export="">CalculateField PLSS_2019 SECTION_TIER_RANGE ""S35 " + !SECTION_TIER_RANGE! + " S"" PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190320" Time="105558" Name="" export="">CalculateField PLSS_2019 URL1 getCr( !CONTRIBUTOR_CORNER_ID!, !SECTION_TIER_RANGE!) PYTHON_9.3 "cr = {'AA': ("SE", "36"), 'CA': ("S", "36"), 'EA': ("SE", "35"), 'GA': ("S", "35"), 'IA': ("SE", "34"), 'KA': ("S", "34"), 'MA': ("SE", "33"), 'OA': ("S", "33"), 'QA': ("SE", "32"), 'SA': ("S", "32"), 'UA': ("SE", "31"), 'WA': ("S", "31"), 'YA': ("SW", "31"), \n         'AC': ("E", "36"), 'EC': ("E", "35"), 'IC': ("E", "34"), 'MC': ("E", "33"), 'QC': ("E", "32"), 'UC': ("E", "31"), 'YC': ("W", "31"), \n         'AE': ("SE", "25"), 'CE': ("S", "25"), 'EE': ("SE", "26"), 'GE': ("S", "26"), 'IE': ("SE", "27"), 'KE': ("S", "27"), 'ME': ("SE", "28"), 'OE': ("S", "28"), 'QE': ("SE", "29"), 'SE': ("S", "29"), 'UE': ("SE", "30"), 'WE': ("S", "30"), 'YE': ("SW", "30"), \n         'AG': ("E", "3"), 'EG': ("E", "35"), 'IG': ("E", "34"), 'MG': ("E", "33"), 'QG': ("E", "32"), 'UG': ("E", "31"), 'YG': ("W", "31"), \n         'AI': ("SE", "24"), 'CI': ("S", "24"), 'EI': ("SE", "23"), 'GI': ("S", "23"), 'II': ("SE", "22"), 'KI': ("S", "22"), 'MI': ("SE", "21"), 'OI': ("S", "21"), 'QI': ("SE", "20"), 'SI': ("S", "20"), 'UI': ("SE", "19"), 'WI': ("S", "19"), 'YI': ("SW", "19"), \n         'AK': ("E", "24"), 'EK': ("E", "23"), 'IK': ("E", "22"), 'MK': ("E", "21"), 'QK': ("E", "20"), 'UK': ("E", "19"), 'YK': ("W", "19"), \n         'AM': ("SE", "13"), 'CM': ("S", "13"), 'EM': ("SE", "14"), 'GM': ("S", "14"), 'IM': ("SE", "15"), 'KM': ("S", "15"), 'MM': ("SE", "16"), 'OM': ("S", "16"), 'QM': ("SE", "17"), 'SM': ("S", "17"), 'UM': ("SE", "18"), 'WM': ("S", "18"), 'Y': ("SW", "18"), \n         'AO': ("E", "13"), 'EO': ("E", "14"), 'IO': ("E", "15"), 'MO': ("E", "16"), 'QO': ("E", "17"), 'UO': ("E", "18"), 'YO': ("W", "18"), \n         'AQ': ("SE", "12"), 'CQ': ("S", "12"), 'EQ': ("SE", "11"), 'GQ': ("S", "11"), 'IQ': ("SE", "10"), 'KQ': ("S", "10"), 'MQ': ("SE", "09"), 'OQ': ("S", "09"), 'QQ': ("SE", "08"), 'SQ': ("S", "08"), 'UQ': ("SE", "07"), 'WQ': ("S", "07"), 'YQ': ("SW", "07"), \n         'AS': ("E", "12"), 'ES': ("E", "11"), 'IS': ("E", "10"), 'MS': ("E", "09"), 'QS': ("E", "08"), 'US': ("E", "07"), 'YS': ("W", "07"), \n         'AU': ("SE", "01"), 'CU': ("S", "01"), 'EU': ("SE", "02"), 'GU': ("S", "02"), 'IU': ("SE", "03"), 'KU': ("S", "03"), 'MU': ("SE", "04"), 'OU': ("S", "04"), 'QU': ("SE", "05"), 'SU': ("S", "05"), 'UU': ("SE", "06"), 'WU': ("S", "06"), 'YU': ("SW", "06"), \n         'AW': ("E", "01"), 'EW': ("E", "02"), 'IW': ("E", "03"), 'MW': ("E", "04"), 'QW': ("E", "05"), 'UW': ("E", "06"), 'YW': ("W", "06"), \n         'AY': ("NE", "01"), 'CY': ("N", "01"), 'EY': ("NE", "02"), 'GY': ("N", "02"), 'IY': ("NE", "03"), 'KY': ("N", "03"), 'MY': ("NE", "04"), 'OY': ("N", "04"), 'QY': ("NE", "05"), 'SY': ("N", "05"), 'UY': ("NE", "06"), 'WY': ("N", "06"), 'YY': ("NW", "06")}\n\ndef getCr(cid, trs):\n        cid = cid[-2:]\n        if cid in cr.keys():\n            loc, sec = cr[cid]\n            return "S" + sec + " " + trs + " " + loc"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190320" Time="105713" Name="" export="">CalculateField PLSS_2019 SECTION_TIER_RANGE !URL1! PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190320" Time="105735" Name="" export="">CalculateField PLSS_2019 URL1 None PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20190320" Time="144315" Name="" export="">FeatureClassToFeatureClass R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Iron\Originals\IRON_COUNTY_OTHER.gdb\IRON_PLSS_2019 R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Iron\Iron_PLSS_2019\Iron_PLSS_2019.gdb Iron_PLSS_2019 # "CONTRIBUTOR_CORNER_ID "CONTRIBUTOR_CORNER_ID" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Iron\Originals\IRON_COUNTY_OTHER.gdb\IRON_PLSS_2019,CONTRIBUTOR_CORNER_ID,-1,-1;X "X" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Iron\Originals\IRON_COUNTY_OTHER.gdb\IRON_PLSS_2019,X,-1,-1;Y "Y" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Iron\Originals\IRON_COUNTY_OTHER.gdb\IRON_PLSS_2019,Y,-1,-1;HORIZ_UNITS "HORIZ_UNITS" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Iron\Originals\IRON_COUNTY_OTHER.gdb\IRON_PLSS_2019,HORIZ_UNITS,-1,-1;COORD_SYSTEM "COORD_SYSTEM" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Iron\Originals\IRON_COUNTY_OTHER.gdb\IRON_PLSS_2019,COORD_SYSTEM,-1,-1;HORIZ_DATUM "HORIZ_DATUM" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Iron\Originals\IRON_COUNTY_OTHER.gdb\IRON_PLSS_2019,HORIZ_DATUM,-1,-1;HORIZ_ACCURACY "HORIZ_ACCURACY" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Iron\Originals\IRON_COUNTY_OTHER.gdb\IRON_PLSS_2019,HORIZ_ACCURACY,-1,-1;CORNER_TYPE "CORNER_TYPE" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Iron\Originals\IRON_COUNTY_OTHER.gdb\IRON_PLSS_2019,CORNER_TYPE,-1,-1;COORD_DATE "COORD_DATE" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Iron\Originals\IRON_COUNTY_OTHER.gdb\IRON_PLSS_2019,COORD_DATE,-1,-1;URL1 "URL1" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Iron\Originals\IRON_COUNTY_OTHER.gdb\IRON_PLSS_2019,URL1,-1,-1;SECTION_TIER_RANGE "SECTION_TIER_RANGE" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Iron\Originals\IRON_COUNTY_OTHER.gdb\IRON_PLSS_2019,SECTION_TIER_RANGE,-1,-1" #</Process>
+      </lineage>
+    </DataProperties>
+    <SyncDate>20190501</SyncDate>
+    <SyncTime>11095100</SyncTime>
+    <ModDate>20190501</ModDate>
+    <ModTime>11095100</ModTime>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACqmpX66Zp0969vc3CwruMVtEZJG/3VHWrdeCeHvidqGm3Ul3qkniHVfLFwZIQlss
+KqHVVPHzAj0J75AxnIB7baazpl/e3NlaX9tPdWpAuIY5QzxE/wB5eo/Gr1fOWpXF9fa1qfifRbPW
+dGeC4nuJ7qaW2VBKLYFYwD98ZXGORiX35v8Agzx9rOkeMrv/AISKS/uk1OaCPE00Cpb5Qt5pAbCq
+EwflwCoycnFAHv1FeaeK/i1a6e9lb+HEi1WeWa3Z2DqI2hkLA7GLD58pjngE811vhHxRB4v0P+1L
+e1mtk86SHy5WUnKNgnKkjH+enJAN6iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKA
+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</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum>(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>310 Science Hall</delPoint>
+            <delPoint>550 N. Park Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpPosName>metadata technician</rpPosName>
+      </distorCont>
+      <distorFormat>
+        <formatName>ESRI Geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Iron_PLSS_2019.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http—download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.5</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Iron County GIS Office</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>715-561-5414</voiceNum>
+            <faxNum>715-561-2928</faxNum>
+          </cntPhone>
+          <cntAddress addressType="physical">
+            <delPoint>300 Taconite St, Suite 115</delPoint>
+            <city>Hurley</city>
+            <adminArea>WI</adminArea>
+            <postCode>54534</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <displayName>Iron County GIS Office</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">PLSS Iron County, WI 2019</resTitle>
+      <date>
+        <pubDate>2019-04-03T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Iron County GIS Office</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">715-561-5414</voiceNum>
+            <faxNum>715-561-2928</faxNum>
+          </cntPhone>
+          <cntAddress addressType="physical">
+            <delPoint>300 Taconite St, Suite 115</delPoint>
+            <city>Hurley</city>
+            <adminArea>WI</adminArea>
+            <postCode>54534</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Iron County GIS Office</displayName>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Neil Martinko</rpIndName>
+        <rpOrgName>Iron County GIS Office</rpOrgName>
+        <rpPosName>GIS Specialist</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">715-561-5803</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>300 Taconite Street, Suite 115</delPoint>
+            <city>Hurley</city>
+            <adminArea>WI</adminArea>
+            <postCode>54534</postCode>
+            <country>US</country>
+            <eMailAdd>gis-nemo@ironcountywi.org</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Neil Martinko</displayName>
+      </citRespParty>
+      <resEd>2019</resEd>
+    </idCitation>
+    <idAbs>This data represents public land survey system (PLSS) corners for Iron County, Wisconsin in 2019.[Corner ID is based on each Township in Iron County.First two numbers are T##N.Third number is R#E. R1W is identified as 0.The following code is the corner designation in the Township. The grid is based on sixteenths of the section, with the origin in the SE corner of the Township. First letter [A-Y] is the X coordinate westward. Second letter [A-Y] is the Y coordinate northward. Any corner with a Z is a meander or closing corner.Open the Thumbnail above for an example image.]</idAbs>
+    <idPurp>This data is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. 
+
+[Iron County Corners Points]</idPurp>
+    <idCredit>Iron County GIS Office</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <idPoC>
+      <rpOrgName>Iron County GIS Office</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">715-561-5414</voiceNum>
+          <faxNum>715-561-2928</faxNum>
+        </cntPhone>
+        <cntAddress addressType="physical">
+          <delPoint>300 Taconite St, Suite 115</delPoint>
+          <city>Hurley</city>
+          <adminArea>WI</adminArea>
+          <postCode>54534</postCode>
+          <country>US</country>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Iron County GIS Office</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>715-561-5414</voiceNum>
+            <faxNum>715-561-2928</faxNum>
+          </cntPhone>
+          <cntAddress addressType="physical">
+            <delPoint>300 Taconite St, Suite 115</delPoint>
+            <city>Hurley</city>
+            <adminArea>WI</adminArea>
+            <postCode>54534</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <displayName>Iron County GIS Office</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Iron County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Point</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Surveying—Public lands</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>PLSS</keyword>
+      <keyword>Iron County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-90.554207</westBL>
+          <eastBL>-89.92473</eastBL>
+          <southBL>45.981064</southBL>
+          <northBL>46.590368</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2019-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <envirDesc Sync="TRUE">Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-90.555735</westBL>
+          <eastBL Sync="TRUE">-89.927639</eastBL>
+          <northBL Sync="TRUE">46.580980</northBL>
+          <southBL Sync="TRUE">45.980644</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <resConst>
+      <Consts>
+        <useLimit>None.</useLimit>
+      </Consts>
+    </resConst>
+    <tpCat>
+      <TopicCatCd value="015" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Provided access to archived data at UW-Madison.</stepDesc>
+        <stepDateTm>2019-04-03T00:00:00</stepDateTm>
+        <stepProc>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+          <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+          <rpPosName>metadata technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>(608) 262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="001" />
+          </role>
+          <displayName>Arthur H. Robinson Map Library</displayName>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="9807" Sync="FALSE" />
+        <idCodeSpace Sync="FALSE">EPSG</idCodeSpace>
+        <idVersion>9.5.5</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Iron_PLSS_2019">
+      <enttyp>
+        <enttypl Sync="TRUE">Iron_PLSS_2019</enttypl>
+        <enttypd>PLSS Iron County, WI 2019</enttypd>
+        <enttypds>Iron County GIS Office</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">2066</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CONTRIBUTOR_CORNER_ID</attrlabl>
+        <attalias Sync="TRUE">CONTRIBUTOR_CORNER_ID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">X</attrlabl>
+        <attalias Sync="TRUE">X</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Y</attrlabl>
+        <attalias Sync="TRUE">Y</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">HORIZ_UNITS</attrlabl>
+        <attalias Sync="TRUE">HORIZ_UNITS</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">COORD_SYSTEM</attrlabl>
+        <attalias Sync="TRUE">COORD_SYSTEM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">HORIZ_DATUM</attrlabl>
+        <attalias Sync="TRUE">HORIZ_DATUM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">HORIZ_ACCURACY</attrlabl>
+        <attalias Sync="TRUE">HORIZ_ACCURACY</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CORNER_TYPE</attrlabl>
+        <attalias Sync="TRUE">CORNER_TYPE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">COORD_DATE</attrlabl>
+        <attalias Sync="TRUE">COORD_DATE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">URL1</attrlabl>
+        <attalias Sync="TRUE">URL1</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SECTION_TIER_RANGE</attrlabl>
+        <attalias Sync="TRUE">SECTION_TIER_RANGE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Iron_PLSS_2019">
+        <geoObjTyp>
+          <GeoObjTypCd value="004" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">2066</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Iron_PLSS_2019">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="1" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">2066</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20190501</mdDateSt>
+  <mdFileID>3A26C9CC-8410-4358-B18B-8A4964B1EC55</mdFileID>
+</metadata>
