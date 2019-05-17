@@ -8,7 +8,8 @@ This script is designed to interact with a Solr instance running the GeoBlacklig
 1. Upload and and then ingest a directory of GBL-formatted json files. Optional: recurse into subfolders.
 2. Delete a named "collection" from the Solr index
 3. Delete a single record from the Index using the unique ID (uuid)
-4. Purge the entire Solr index.  The nuclear option!
+>>>>>>4. Delete all records from a specified repository (a.k.a. dct_provenance_s, a.k.a. "Held by")
+5. Purge the entire Solr index.  The nuclear option!
 
 When processing json inputs, the script performs some basic QA steps before the ingest is run.
 
@@ -31,19 +32,8 @@ from requests.auth import HTTPBasicAuth
 # e.g., pip install pysolr
 import pysolr
 
-"""
- 
- to do (Ben?):
- 
- add comments throughout code
- connect to solr instance that use https
- connect to solr instance with username and password
- ++ better error catching throughout
- script does not work on json files with multiple records embedded
-    Modify this script, or modify other scripts that output combined json???
- 
-"""
- 
+# we should externalize the following so they can be shared across scripts as needed
+# remember to add external file to .gitignore
 SOLR_USERNAME = "solradmin"
 SOLR_PASSWORD = "Search4BadgerGeos!" 
 SOLR_URL_DEV = "http://localhost:8983/solr/geodata-core/"
@@ -72,16 +62,16 @@ class SolrInterface(object):
         # execute delete query
         s = self.solr.search(self.escape_query(query), **{"rows": "0"})
         if s.hits == 0:
-            print("No records found in [" + SOLR_INSTANCE + "] instance. Nothing to delete.  Exiting...")
+            print("No records found in " + SOLR_INSTANCE + " instance. Nothing to delete.  Exiting...")
         else:
-            inMessage = "Are you sure you want to delete {num_recs} record(s) from [" + SOLR_INSTANCE + "] instance? Y/N: "
+            inMessage = "Are you sure you want to delete {num_recs} record(s) from " + SOLR_INSTANCE + " instance? Y/N: "
             are_you_sure = input(inMessage.format(num_recs=s.hits))
             if are_you_sure.lower() == "y":
                 self.solr.delete(q=self.escape_query(query))
-                confirmMessage = "Done deleting {num_recs} record(s) from [" + SOLR_INSTANCE + "] instance..."
+                confirmMessage = "Done deleting {num_recs} record(s) from " + SOLR_INSTANCE + " instance..."
                 print(confirmMessage.format(num_recs=s.hits))
             else:
-                print("Okay, nothing deleted from [" + SOLR_INSTANCE + "] instance. Exiting...")
+                print("Okay, nothing deleted from " + SOLR_INSTANCE + " instance. Exiting...")
 
     def json_to_dict(self, json_doc):
         # read data from one json file
@@ -104,7 +94,7 @@ class SolrInterface(object):
     
 class Update(object):
 
-    def __init__(self, SOLR_USERNAME, SOLR_PASSWORD, COLLECTION, UUID, INSTANCE, TO_JSON=False, RECURSIVE=False, PURGE=False):
+    def __init__(self, SOLR_USERNAME, SOLR_PASSWORD, COLLECTION, PROVENANCE, UUID, INSTANCE, TO_JSON=False, RECURSIVE=False, PURGE=False):
         self.RECURSIVE = RECURSIVE
         self.PURGE = PURGE
         if INSTANCE=="prod":
@@ -116,14 +106,11 @@ class Update(object):
         else: 
             # if instance not specified, default to dev
             SOLR_URL = SOLR_URL_DEV
-        # the following formating does not work.  needs attention.
-        #if SOLR_USERNAME and SOLR_PASSWORD:
-            #SOLR_URL = SOLR_URL.format(username=SOLR_USERNAME, password=SOLR_PASSWORD)    
 
-        #print("Solr URL: " + SOLR_URL)
         self.solr = SolrInterface(url=SOLR_URL)
         self.uuid = UUID
         self.collection = COLLECTION
+        self.provenance = PROVENANCE
            
     def scan_dict_records(self, list_of_dicts):
         # perform QA checks on dictionary object before it is ingested
@@ -185,14 +172,14 @@ class Update(object):
                 if (scanHold == False):
                     scanCheck = False  
             if scanCheck:
-                print("QA health check passed.")
+                print("Health check passed.")
                 ingest_result = self.solr.add_dict_list_to_solr(dicts)
                 print("Ingest result: " + str(ingest_result))
                 if ingest_result:
-                    ingestMessage = "Added {n} records to Solr [" + SOLR_INSTANCE + "] instance."
+                    ingestMessage = "Added {n} records to Solr " + SOLR_INSTANCE + " instance."
                     print(ingestMessage.format(n=len(dicts)))
                 else:   
-                    print("Solr ingest on [" + SOLR_INSTANCE + "] instance failed.  Exiting...")
+                    print("Solr ingest on " + SOLR_INSTANCE + " instance failed.  Exiting...")
             else:
                 print("QA health check failed.  Exiting...") 
         else:
@@ -206,8 +193,13 @@ class Update(object):
         
     def delete_collection(self, collection):
         # setup query to delete an entire collection
-        print("Collection passed is: " + self.collection)
+        # print("Collection passed is: " + self.collection)
         self.solr.delete_query("dct_isPartOf_sm:" + '"' + self.collection + '"')
+        
+    def delete_provenance(self, provenance):
+        # setup query to delete all records from specified provenance
+        # print("Provenance passed is: " + self.provenance)
+        self.solr.delete_query("dct_provenance_s:" + '"' + self.provenance + '"')  
         
     def purge(self):
         # setup query to purge all records from Solr
@@ -229,7 +221,12 @@ def main():
     group.add_argument(
         "-dc",
         "--delete-collection",
-        help="Remove an entire collection from the Solr index.")               
+        help="Remove an entire collection from the Solr index.")  
+    group.add_argument(
+        "-dp",
+        "--delete-provenance",
+        help="Remove all records from Solr index that belong \
+        to the specified provenance.")         
     group.add_argument(
         "-d",
         "--delete",
@@ -248,7 +245,7 @@ def main():
         help="Identify which instance of Solr to use.")           
     
     args = parser.parse_args()
-    interface = Update(SOLR_USERNAME, SOLR_PASSWORD, COLLECTION=args.delete_collection, UUID=args.delete,INSTANCE=args.instance, RECURSIVE=args.recursive, PURGE=args.purge)
+    interface = Update(SOLR_USERNAME, SOLR_PASSWORD, COLLECTION=args.delete_collection, PROVENANCE=args.delete_provenance, UUID=args.delete,INSTANCE=args.instance, RECURSIVE=args.recursive, PURGE=args.purge)
     #print(args)
 
     inPath = args.add_json
@@ -256,19 +253,19 @@ def main():
             inPath += '\\'
     global SOLR_INSTANCE
     SOLR_INSTANCE = args.instance
-    print (SOLR_INSTANCE)
+    #print (SOLR_INSTANCE)
     if args.add_json:
         interface.add_json(inPath)
     elif args.delete_collection:
-        interface.delete_collection(args.delete_collection)        
+        interface.delete_collection(args.delete_collection)
+    elif args.delete_provenance:
+        interface.delete_provenance(args.delete_provenance)           
     elif args.delete:
         interface.delete(args.delete)
     elif args.purge:
         interface.purge()
     else:
         sys.exit(parser.print_help())
-
-
 
 if __name__ == "__main__":
     sys.exit(main())
