@@ -1,0 +1,675 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20180312</CreaDate>
+    <CreaTime>11242900</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\DefineProjection" Date="20180312" Time="112359" Name="" export="">DefineProjection D:\Parcels\Act20\2018\Zoning.shp PROJCS['NAD_1983_HARN_WISCRS_Pierce_County_Feet',GEOGCS['GCS_North_American_1983_HARN',DATUM['D_North_American_1983_HARN',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Lambert_Conformal_Conic'],PARAMETER['False_Easting',550000.0],PARAMETER['False_Northing',282260.222],PARAMETER['Central_Meridian',-92.22777777777777],PARAMETER['Standard_Parallel_1',44.63614887194444],PARAMETER['Scale_Factor',1.0000362977],PARAMETER['Latitude_Of_Origin',44.63614887194444],UNIT['Foot_US',0.3048006096012192]]</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\Project" Date="20180312" Time="112430" Name="" export="">Project D:\Parcels\Act20\2018\Zoning.shp D:\Parcels\Act20\2018\Zoning_Project1.shp PROJCS['NAD_1983_HARN_Wisconsin_TM',GEOGCS['GCS_North_American_1983_HARN',DATUM['D_North_American_1983_HARN',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Transverse_Mercator'],PARAMETER['False_Easting',520000.0],PARAMETER['False_Northing',-4480000.0],PARAMETER['Central_Meridian',-90.0],PARAMETER['Scale_Factor',0.9996],PARAMETER['Latitude_Of_Origin',0.0],UNIT['Meter',1.0]] # PROJCS['NAD_1983_HARN_WISCRS_Pierce_County_Feet',GEOGCS['GCS_North_American_1983_HARN',DATUM['D_North_American_1983_HARN',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Lambert_Conformal_Conic'],PARAMETER['False_Easting',550000.0],PARAMETER['False_Northing',282260.222],PARAMETER['Central_Meridian',-92.22777777777777],PARAMETER['Standard_Parallel_1',44.63614887194444],PARAMETER['Scale_Factor',1.0000362977],PARAMETER['Latitude_Of_Origin',44.63614887194444],UNIT['Foot_US',0.3048006096012192]] NO_PRESERVE_SHAPE # NO_VERTICAL</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20180312" Time="112539" Name="" export="">FeatureClassToFeatureClass D:\Parcels\Act20\2018\Zoning_Project1.shp D:\Parcels\Act20\2018\PIERCE_PARCELS.gdb GENERAL # "ZONINGFIPS "ZONINGFIPS" true true false 10 Text 0 0 ,First,#,D:\Parcels\Act20\2018\Zoning_Project1.shp,ZONINGFIPS,-1,-1;JURISDICTION "JURISDICTION" true true false 100 Text 0 0 ,First,#,D:\Parcels\Act20\2018\Zoning_Project1.shp,JURISDICTI,-1,-1;ZONINGCLASS "ZONINGCLASS" true true false 100 Text 0 0 ,First,#,D:\Parcels\Act20\2018\Zoning_Project1.shp,ZONINGCLAS,-1,-1;DESCRIPTION "DESCRIPTION" true true false 254 Text 0 0 ,First,#,D:\Parcels\Act20\2018\Zoning_Project1.shp,DESCRIPTIO,-1,-1;LINK "LINK" true true false 254 Text 0 0 ,First,#,D:\Parcels\Act20\2018\Zoning_Project1.shp,LINK,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20180312" Time="114646" Name="" export="">FeatureClassToFeatureClass D:\Parcels\Act20\2018\PIERCE_PARCELS.gdb\GENERAL D:\Parcels\Act20\2018\PIERCE_OTHER.gdb GENERAL # "ZONINGFIPS "ZONINGFIPS" true true false 10 Text 0 0 ,First,#,D:\Parcels\Act20\2018\PIERCE_PARCELS.gdb\GENERAL,ZONINGFIPS,-1,-1;JURISDICTION "JURISDICTION" true true false 100 Text 0 0 ,First,#,D:\Parcels\Act20\2018\PIERCE_PARCELS.gdb\GENERAL,JURISDICTION,-1,-1;ZONINGCLASS "ZONINGCLASS" true true false 100 Text 0 0 ,First,#,D:\Parcels\Act20\2018\PIERCE_PARCELS.gdb\GENERAL,ZONINGCLASS,-1,-1;DESCRIPTION "DESCRIPTION" true true false 254 Text 0 0 ,First,#,D:\Parcels\Act20\2018\PIERCE_PARCELS.gdb\GENERAL,DESCRIPTION,-1,-1;LINK "LINK" true true false 254 Text 0 0 ,First,#,D:\Parcels\Act20\2018\PIERCE_PARCELS.gdb\GENERAL,LINK,-1,-1;Shape_Length "Shape_Length" false true true 8 Double 0 0 ,First,#,D:\Parcels\Act20\2018\PIERCE_PARCELS.gdb\GENERAL,Shape_Length,-1,-1;Shape_Area "Shape_Area" false true true 8 Double 0 0 ,First,#,D:\Parcels\Act20\2018\PIERCE_PARCELS.gdb\GENERAL,Shape_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20180611" Time="161951" Name="" export="">FeatureClassToFeatureClass R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\GENERAL_2018 R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\Pierce_Zoning_2018.gdb Pierce_Zoning_2018 # "ZONINGFIPS "ZONINGFIPS" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\GENERAL_2018,ZONINGFIPS,-1,-1;JURISDICTION "JURISDICTION" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\GENERAL_2018,JURISDICTION,-1,-1;ZONINGCLASS "ZONINGCLASS" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\GENERAL_2018,ZONINGCLASS,-1,-1;DESCRIPTION "DESCRIPTION" true true false 254 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\GENERAL_2018,DESCRIPTION,-1,-1;LINK "LINK" true true false 254 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\GENERAL_2018,LINK,-1,-1;Shape_Length "Shape_Length" false true true 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\GENERAL_2018,Shape_Length,-1,-1;Shape_Area "Shape_Area" false true true 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\GENERAL_2018,Shape_Area,-1,-1" #</Process>
+      </lineage>
+      <itemProps>
+        <itemName Sync="TRUE">Pierce_Zoning_2018</itemName>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\Pierce_Zoning_2018.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <nativeExtBox>
+          <westBL Sync="TRUE">298027.010800</westBL>
+          <eastBL Sync="TRUE">351209.376800</eastBL>
+          <southBL Sync="TRUE">454017.525900</southBL>
+          <northBL Sync="TRUE">491345.316100</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Wisconsin_TM</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Wisconsin_TM&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,3071]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;10000&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;3071&lt;/WKID&gt;&lt;LatestWKID&gt;3071&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20180621</SyncDate>
+    <SyncTime>10564600</SyncTime>
+    <ModDate>20180621</ModDate>
+    <ModTime>10564600</ModTime>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+  </Esri>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpOrgName>UW-Madison</rpOrgName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum tddtty="">608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpPosName>Metadata technician</rpPosName>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>310 Science Hall</delPoint>
+            <delPoint>550 N. Park Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="001" />
+        </role>
+      </distorCont>
+      <distorOrdPrc>
+        <resFees units="">None</resFees>
+      </distorOrdPrc>
+      <distorFormat>
+        <formatName>ESRI Geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Pierce_Zoning_2018.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.3</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Pierce County Land Management and Zoning</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">715-273-6746</voiceNum>
+            <faxNum>715-273-6864</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>PO Box 647</delPoint>
+            <city>Ellsworth</city>
+            <adminArea>WI</adminArea>
+            <postCode>54011</postCode>
+            <country>US</country>
+            <delPoint>414 W. Main St. Room 10</delPoint>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Pierce County Land Management and Zoning</displayName>
+        <displayName>Pierce County Land Management and Zoning</displayName>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Zoning Pierce County, WI 2018</resTitle>
+      <date>
+        <pubDate>2018-06-21T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Pierce County Land Management and Zoning</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">715-273-6746</voiceNum>
+            <faxNum>715-273-6864</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>PO Box 647</delPoint>
+            <city>Ellsworth</city>
+            <adminArea>WI</adminArea>
+            <postCode>54011</postCode>
+            <country>US</country>
+            <delPoint>414 W. Main St. Room 10</delPoint>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Pierce County Land Management and Zoning</displayName>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Andy Pichotta</rpIndName>
+        <rpOrgName>Pierce County Land Management and Zoning</rpOrgName>
+        <rpPosName>Land Management Director</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">715-273-6747</voiceNum>
+            <faxNum>715-273-6864</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>PO Box 647</delPoint>
+            <city>Ellsworth</city>
+            <adminArea>WI</adminArea>
+            <postCode>54011</postCode>
+            <country>US</country>
+            <eMailAdd>apichott@co.pierce.wi.us</eMailAdd>
+            <delPoint>414 W. Main St. Room 10</delPoint>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Andy Pichotta</displayName>
+      </citRespParty>
+      <resEdDate>20180101</resEdDate>
+    </idCitation>
+    <idAbs>This polygon data layer represents zoning for Pierce County, Wisconsin in 2018. It is a feature class within the geodatabase "Pierce_Zoning_2018.gdb". [General County Zoning.]</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. [General County Zoning.]</idPurp>
+    <idCredit>Pierce County Land Management and Zoning</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Pierce County Land Management and Zoning</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">715-273-6746</voiceNum>
+            <faxNum>715-273-6864</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>PO Box 647</delPoint>
+            <city>Ellsworth</city>
+            <adminArea>WI</adminArea>
+            <postCode>54011</postCode>
+            <country>US</country>
+            <delPoint>414 W. Main St. Room 10</delPoint>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Pierce County Land Management and Zoning</displayName>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Pierce County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Polygon</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Zoning - Maps, City Planning, County Ordinances</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Zoning</keyword>
+      <keyword>Polygon</keyword>
+      <keyword>Pierce County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-92.809339</westBL>
+          <eastBL>-92.125327</eastBL>
+          <southBL>44.527054</southBL>
+          <northBL>44.875107</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2018-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idPoC>
+      <rpOrgName>Pierce County Land Management and Zoning</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">715-273-6746</voiceNum>
+          <faxNum>715-273-6864</faxNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>PO Box 647</delPoint>
+          <city>Ellsworth</city>
+          <adminArea>WI</adminArea>
+          <postCode>54011</postCode>
+          <country>US</country>
+          <delPoint>414 W. Main St. Room 10</delPoint>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="006" />
+      </role>
+      <displayName>Pierce County Land Management and Zoning</displayName>
+    </idPoC>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-92.809576</westBL>
+          <eastBL Sync="TRUE">-92.124647</eastBL>
+          <northBL Sync="TRUE">44.875533</northBL>
+          <southBL Sync="TRUE">44.525320</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements.</suppInfo>
+    <tpCat>
+      <TopicCatCd value="015" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+      <rpPosName>Metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform to UW-Madison's data distribution plan.</stepDesc>
+        <stepDateTm>2018-06-21T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum tddtty="">608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="009" />
+          </role>
+          <rpPosName>Metadata technician</rpPosName>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <idVersion Sync="FALSE">9.4.1</idVersion>
+        <identCode code="3071" Sync="TRUE" />
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Pierce_Zoning_2018">
+      <enttyp>
+        <enttypl Sync="TRUE">Pierce_Zoning_2018</enttypl>
+        <enttypd>Zoning Pierce County, WI 2018</enttypd>
+        <enttypds>Pierce County Land Management and Zoning</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">27447</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ZONINGFIPS</attrlabl>
+        <attalias Sync="TRUE">ZONINGFIPS</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">JURISDICTION</attrlabl>
+        <attalias Sync="TRUE">JURISDICTION</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ZONINGCLASS</attrlabl>
+        <attalias Sync="TRUE">ZONINGCLASS</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DESCRIPTION</attrlabl>
+        <attalias Sync="TRUE">DESCRIPTION</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">254</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LINK</attrlabl>
+        <attalias Sync="TRUE">LINK</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">254</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Length</attrlabl>
+        <attalias Sync="TRUE">Shape_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Length of feature in internal units.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Area</attrlabl>
+        <attalias Sync="TRUE">Shape_Area</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Area of feature in internal units squared.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Pierce_Zoning_2018">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">27447</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Pierce_Zoning_2018">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="4" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">27447</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20180621</mdDateSt>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gArKk8S6RFcGB7vEis6keU/BU4bnGOK1a8o10Xdtr19HFHG8ZnZ0Dxq3Uhjj+Lr1xUybWwHop1/S
+whY3iBR3Kn1x6U2PxJo8udl/EceuR/MexrhVvTYwwvLLCVKshMcQUocMMcD1AA+vWq9q39oo32hi
+IWbYyhsAjru9D65/XisVWlu0Ox6M+u6XHjzL6FAW25dtoz6ZNH9u6P8A9BWx/wDAhP8AGvO5rfTZ
+I1dog2Mo2ZAm1RjkcHHU/mKw7ZLaed0ucq23EYQHLtkADj2/pVxq3V7BY9mGp2DDIvrYjGeJV/xq
+Rbu2ZQy3EJB6EOK8q0q3H2G6L/ZGYSKkjuyuSvzZ5yRj6frxV67Z8F1lt/LVvuLGVHXHbPqR0NS6
+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</Data>
+    </Thumbnail>
+  </Binary>
+  <mdFileID>E4761E86-EBD3-46E5-A8D7-59C330594658</mdFileID>
+</metadata>

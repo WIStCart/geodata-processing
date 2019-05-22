@@ -1,0 +1,913 @@
+﻿<metadata>
+  <Esri>
+    <CreaDate>20170217</CreaDate>
+    <CreaTime>12190600</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <SyncDate>20170719</SyncDate>
+    <SyncTime>14535500</SyncTime>
+    <ModDate>20170719</ModDate>
+    <ModTime>14535500</ModTime>
+    <DataProperties>
+      <itemProps>
+        <itemName Sync="TRUE">Oneida_HydroPoly_YE2016</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">516499.371700</westBL>
+          <eastBL Sync="TRUE">594450.711300</eastBL>
+          <southBL Sync="TRUE">555036.739900</southBL>
+          <northBL Sync="TRUE">603203.584600</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2017_ALL_DATA_OPEN\Oneida\Oneida_HydroPoly_YE2016.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Wisconsin_TM</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Wisconsin_TM&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,3071]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;10000&lt;/XYScale&gt;&lt;ZOrigin&gt;0&lt;/ZOrigin&gt;&lt;ZScale&gt;1&lt;/ZScale&gt;&lt;MOrigin&gt;0&lt;/MOrigin&gt;&lt;MScale&gt;1&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;2&lt;/ZTolerance&gt;&lt;MTolerance&gt;2&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;3071&lt;/WKID&gt;&lt;LatestWKID&gt;3071&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+      <lineage>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" Date="20150813" Time="144154" Name="" export="">AddField "Database Connections\L@GIS@carla3.sde\GIS.L.Water\GIS.L.WaterBody" MonitoringReport TEXT # # 128 # NULLABLE NON_REQUIRED #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" Date="20150813" Time="144230" Name="" export="">AddField "Database Connections\L@GIS@carla3.sde\GIS.L.Water\GIS.L.WaterBody" WDNR_AIS_Inventory TEXT # # 128 # NULLABLE NON_REQUIRED #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150813" Time="144536" Name="" export="">CalculateField "Database Connections\L@GIS@carla3.sde\GIS.L.Water\GIS.L.WaterBody" WDNR_AIS_Inventory "http://dnr.wi.gov/lakes/invasives/AISByWaterbody.aspx?location=44" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150813" Time="144829" Name="" export="">CalculateField WaterBody WDNR_AIS_Inventory "http://dnr.wi.gov/lakes/invasives/AISByWaterbody.aspx?location=44" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150813" Time="150403" Name="" export="">CalculateField WaterBody MonitoringReport "http://www.oneidacountyais.com/uploads/1/9/4/6/19462139/" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150813" Time="150736" Name="" export="">CalculateField WaterBody MonitoringReport ""http://www.oneidacountyais.com/uploads/1/9/4/6/19462139/" &amp; LCase( [Name] ) &amp; ".pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150813" Time="151714" Name="" export="">CalculateField WaterBody MonitoringReport null VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150817" Time="154143" Name="" export="">CalculateField WaterBody MonitoringReport "http://www.oneidacountyais.com/lake-without-monitoring-reports.html" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150916" Time="154250" Name="" export="">CalculateField WaterBody MonitoringReport ""http://www.oneidacountyais.com/uploads/1/9/4/6/19462139/" &amp; "pier_lake.pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150916" Time="155037" Name="" export="">CalculateField WaterBody MonitoringReport ""http://www.oneidacountyais.com/uploads/1/9/4/6/19462139/" &amp; "bass_lake_en.pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150916" Time="155114" Name="" export="">CalculateField WaterBody MonitoringReport ""http://www.oneidacountyais.com/uploads/1/9/4/6/19462139/" &amp; "sunset_lake.pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150916" Time="155150" Name="" export="">CalculateField WaterBody MonitoringReport ""http://www.oneidacountyais.com/uploads/1/9/4/6/19462139/" &amp; "buckskin_lake.pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150929" Time="113932" Name="" export="">CalculateField WaterBody MonitoringReport ""http://www.oneidacountyais.com/uploads/1/9/4/6/19462139/" &amp; "booth_lake.pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150929" Time="114013" Name="" export="">CalculateField WaterBody MonitoringReport ""http://www.oneidacountyais.com/uploads/1/9/4/6/19462139/" &amp; "alva_lake.pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150929" Time="115222" Name="" export="">CalculateField WaterBody MonitoringReport ""http://www.oneidacountyais.com/uploads/1/9/4/6/19462139/" &amp; "neptune_lake.pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150929" Time="115333" Name="" export="">CalculateField WaterBody MonitoringReport ""http://www.oneidacountyais.com/uploads/1/9/4/6/19462139/" &amp; "sureshot_lake.pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150929" Time="115428" Name="" export="">CalculateField WaterBody MonitoringReport ""http://www.oneidacountyais.com/uploads/1/9/4/6/19462139/" &amp; "thompson_lake.pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150929" Time="115530" Name="" export="">CalculateField WaterBody MonitoringReport ""http://www.oneidacountyais.com/uploads/1/9/4/6/19462139/" &amp; "killarney_lake.pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150929" Time="115608" Name="" export="">CalculateField WaterBody MonitoringReport ""http://www.oneidacountyais.com/uploads/1/9/4/6/19462139/" &amp; "hancock_lake.pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150929" Time="115641" Name="" export="">CalculateField WaterBody MonitoringReport ""http://www.oneidacountyais.com/uploads/1/9/4/6/19462139/" &amp; "kathan_lake.pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150929" Time="115723" Name="" export="">CalculateField WaterBody MonitoringReport ""http://www.oneidacountyais.com/uploads/1/9/4/6/19462139/" &amp; "little_bearskin_lake.pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150929" Time="115755" Name="" export="">CalculateField WaterBody MonitoringReport ""http://www.oneidacountyais.com/uploads/1/9/4/6/19462139/" &amp; "manson_lake.pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151001" Time="115147" Name="" export="">CalculateField WaterBody MonitoringReport ""http://www.oneidacountyais.com/uploads/1/9/4/6/19462139/" &amp; "shepard_lake.pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151001" Time="115320" Name="" export="">CalculateField WaterBody MonitoringReport ""http://www.oneidacountyais.com/uploads/1/9/4/6/19462139/" &amp; "bolger_lake.pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151001" Time="115348" Name="" export="">CalculateField WaterBody MonitoringReport ""http://www.oneidacountyais.com/uploads/1/9/4/6/19462139/" &amp; "mars_lake.pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151001" Time="115439" Name="" export="">CalculateField WaterBody MonitoringReport ""http://www.oneidacountyais.com/uploads/1/9/4/6/19462139/" &amp; "buck_lake.pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151001" Time="115508" Name="" export="">CalculateField WaterBody MonitoringReport ""http://www.oneidacountyais.com/uploads/1/9/4/6/19462139/" &amp; "mildred_lake.pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151211" Time="114822" Name="" export="">CalculateField WaterBody Acres [SHAPE.STArea()]/43560 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160315" Time="160429" Name="" export="">CalculateField WaterBody Type "LAKE" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160923" Time="162149" Name="" export="">CalculateField WaterBody Acres round( !Acres! ,2) PYTHON_9.3 #</Process>
+        <Process ToolSource="d:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\Copy" Date="20170211" Time="023618" Name="" export="">Copy D:\GIS\Maintenance\ReconcilePostCompress\config\GIS_carla3_sa.sde\GIS.L.Water\GIS.L.WaterBody D:\GIS\Maintenance\ReconcilePostCompress\config\PUB_carla3_L.sde\Water\PUB.L.WaterBody FeatureClass</Process>
+        <Process ToolSource="d:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\Project" Date="20170217" Time="121911" Name="" export="">Project "Database Connections\L@PUB@carla3.sde\PUB.L.Water\PUB.L.WaterBody" D:\GIS\Gisdata\Geodatabase\ONEIDA_OTHER.gdb\ONEIDA_HYDRO_2016 PROJCS['NAD_1983_HARN_Wisconsin_TM',GEOGCS['GCS_North_American_1983_HARN',DATUM['D_North_American_1983_HARN',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Transverse_Mercator'],PARAMETER['False_Easting',520000.0],PARAMETER['False_Northing',-4480000.0],PARAMETER['Central_Meridian',-90.0],PARAMETER['Scale_Factor',0.9996],PARAMETER['Latitude_Of_Origin',0.0],UNIT['Meter',1.0]] # PROJCS['NAD_1983_HARN_WISCRS_Oneida_County_Feet',GEOGCS['GCS_North_American_1983_HARN',DATUM['D_North_American_1983_HARN',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Lambert_Conformal_Conic'],PARAMETER['False_Easting',230000.0],PARAMETER['False_Northing',188936.744],PARAMETER['Central_Meridian',-89.54444444444444],PARAMETER['Standard_Parallel_1',45.70422377027778],PARAMETER['Scale_Factor',1.0000686968],PARAMETER['Latitude_Of_Origin',45.70422377027778],UNIT['Foot_US',0.3048006096012192]] NO_PRESERVE_SHAPE #</Process>
+      </lineage>
+    </DataProperties>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <Binary>
+    <Enclosure>
+      <Descript>original metadata</Descript>
+      <Data SourceMetadata="yes" OriginalFileName="source_metadata.xml" SourceMetadataDigest="e4c83e0f1b6c3e745ca445772c88cf1d" EsriPropertyType="Base64" SourceMetadataSchema="fgdc">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxtZXRhZGF0YT4NCiAgPGlk
+aW5mbz4NCiAgICA8Y2l0YXRpb24+DQogICAgICA8Y2l0ZWluZm8+DQogICAgICAgIDxvcmlnaW4+
+R2VvbmV4PC9vcmlnaW4+DQogICAgICAgIDxwdWJkYXRlPjE5OTM8L3B1YmRhdGU+DQogICAgICAg
+IDxwdWJ0aW1lPlVua25vd248L3B1YnRpbWU+DQogICAgICAgIDxvdGhlcmNpdD5TaW5jZSBpdCdz
+IG9yaWdpbmFsIGNyZWF0aW9uIGluIGEgY292ZXJhZ2UgZm9ybWF0IHRoaXMgZmVhdHVyZSBjbGFz
+cyB3YXMgY29udmVydGVkIHRvIGFuIEFyY0dJUyBwZXJzb25hbCBnZW9kYXRhYmFzZSBieSBHRU8g
+QW5hbHl0aWNzLCBJbmMuIG91dCBvZiBNYWRpc29uLCBXaXNjb25zaW4gaW4gSmFudWFyeSAyMDA1
+LiBBdCB0aGlzIHRpbWUgdGhlIElzbGFuZHMgd2VyZSByZW1vdmVkIGFuZCBwdXQgaW50byB0aGVy
+ZSBvd24gZmVhdHVyZSBjbGFzcy4gIE1haW50ZW5hbmNlIG9mIHRoZSBkYXRhIGNvbnRpbnVlcyB0
+byBiZSBkb25lIGJ5IE9uZWlkYSBDb3VudHkuPC9vdGhlcmNpdD4NCiAgICAgIDwvY2l0ZWluZm8+
+DQogICAgPC9jaXRhdGlvbj4NCiAgICA8ZGVzY3JpcHQ+DQogICAgICA8YWJzdHJhY3Q+VGhpcyBw
+b2x5Z29uIGZlYXR1cmUgY2xhc3MgcmVwcmVzZW50cyBsYWtlcywgcml2ZXJzLCBzdHJlYW1zLCBk
+cmFpbmFnZXMgYW5kIG90aGVyIHN1cmZhY2Ugd2F0ZXIuPC9hYnN0cmFjdD4NCiAgICAgIDxwdXJw
+b3NlPlRvIG1hbmFnZSB0aGUgc3VyZmFjZSB3YXRlcnMgaW4gT25laWRhIENvdW50eTwvcHVycG9z
+ZT4NCiAgICA8L2Rlc2NyaXB0Pg0KICAgIDx0aW1lcGVyZD4NCiAgICAgIDx0aW1laW5mbz4NCiAg
+ICAgICAgPHNuZ2RhdGU+DQogICAgICAgICAgPGNhbGRhdGU+SmFudWFyeSAyMDA1PC9jYWxkYXRl
+Pg0KICAgICAgICAgIDx0aW1lPnVua25vd248L3RpbWU+DQogICAgICAgIDwvc25nZGF0ZT4NCiAg
+ICAgIDwvdGltZWluZm8+DQogICAgICA8Y3VycmVudD5wdWJsaWNhdGlvbiBkYXRlPC9jdXJyZW50
+Pg0KICAgIDwvdGltZXBlcmQ+DQogICAgPHN0YXR1cz4NCiAgICAgIDxwcm9ncmVzcz5Db21wbGV0
+ZTwvcHJvZ3Jlc3M+DQogICAgICA8dXBkYXRlPklycmVndWxhcjwvdXBkYXRlPg0KICAgIDwvc3Rh
+dHVzPg0KICAgIDxrZXl3b3Jkcz4NCiAgICAgIDx0aGVtZT4NCiAgICAgICAgPHRoZW1la2V5Pkxh
+a2VzLCBSaXZlcnMsIFN0cmVhbXMsPC90aGVtZWtleT4NCiAgICAgIDwvdGhlbWU+DQogICAgPC9r
+ZXl3b3Jkcz4NCiAgICA8YWNjY29uc3Q+R2VuZXJhbGx5IGF2YWlsYWJsZSBvbiByZXF1ZXN0Ljwv
+YWNjY29uc3Q+DQogICAgPHVzZWNvbnN0PkRhdGEgaXMgcHJvdmlkZWQgdG8gdGhlIHJlcXVlc3Rv
+ciBmb3IgdGhlcmUgaW50ZXJuYWwgYnVzaW5lc3MgdXNlIG9ubHkgYW5kIGlzIG5vdCBmb3IgcmVk
+aXN0cmlidXRpb24uPC91c2Vjb25zdD4NCiAgICA8cHRjb250YWM+DQogICAgICA8Y250aW5mbz4N
+CiAgICAgICAgPGNudG9yZ3A+DQogICAgICAgICAgPGNudG9yZz5PbmVpZGEgQ291bnR5IExhbmQg
+SW5mb3JtYXRpb24gT2ZmaWNlPC9jbnRvcmc+DQogICAgICAgIDwvY250b3JncD4NCiAgICAgICAg
+PGNudHBvcz5MYW5kIEluZm9ybWF0aW9uIERpcmVjdG9yPC9jbnRwb3M+DQogICAgICAgIDxjbnR2
+b2ljZT43MTUtMzY5LTYxNzk8L2NudHZvaWNlPg0KICAgICAgICA8Y250ZmF4PjcxNS0zNjktNjI3
+NzwvY250ZmF4Pg0KICAgICAgICA8Y250ZW1haWw+bGlvQGNvLm9uZWlkYS53aS51czwvY250ZW1h
+aWw+DQogICAgICAgIDxob3Vycz44OjAwIGEubS4gdG8gNDozMCBwLm0uPC9ob3Vycz4NCiAgICAg
+IDwvY250aW5mbz4NCiAgICA8L3B0Y29udGFjPg0KICA8L2lkaW5mbz4NCiAgPGRhdGFxdWFsPg0K
+ICAgIDxsaW5lYWdlPg0KICAgICAgPHByb2NzdGVwPg0KICAgICAgICA8cHJvY2Rlc2M+TWV0YWRh
+dGEgaW1wb3J0ZWQuPC9wcm9jZGVzYz4NCiAgICAgICAgPHNyY3VzZWQ+QzpcRE9DVU1FfjFcQUhJ
+TEdFfjFcTE9DQUxTfjFcVGVtcFx4bWwyNS50bXA8L3NyY3VzZWQ+DQogICAgICA8L3Byb2NzdGVw
+Pg0KICAgIDwvbGluZWFnZT4NCiAgPC9kYXRhcXVhbD4NCiAgPGVhaW5mbz4NCiAgICA8ZGV0YWls
+ZWQgTmFtZT0iR0lTLkwuV2F0ZXJCb2R5Ij4NCiAgICAgIDxlbnR0eXA+DQogICAgICAgIDxlbnR0
+eXBsIFN5bmM9IlRSVUUiPkdJUy5MLldhdGVyQm9keTwvZW50dHlwbD4NCiAgICAgICAgPGVudHR5
+cHQgU3luYz0iVFJVRSI+RmVhdHVyZSBDbGFzczwvZW50dHlwdD4NCiAgICAgICAgPGVudHR5cGMg
+U3luYz0iVFJVRSI+MTY0NTwvZW50dHlwYz4NCiAgICAgIDwvZW50dHlwPg0KICAgICAgPGF0dHI+
+DQogICAgICAgIDxhdHRybGFibD5TSEFQRTwvYXR0cmxhYmw+DQogICAgICAgIDxhdHRyZGVmPkZl
+YXR1cmUgZ2VvbWV0cnkuPC9hdHRyZGVmPg0KICAgICAgICA8YXR0cmRlZnM+RVNSSTwvYXR0cmRl
+ZnM+DQogICAgICAgIDxhdHRyZG9tdj4NCiAgICAgICAgICA8dWRvbT5Db29yZGluYXRlcyBkZWZp
+bmluZyB0aGUgZmVhdHVyZXMuPC91ZG9tPg0KICAgICAgICA8L2F0dHJkb212Pg0KICAgICAgICA8
+YXR0YWxpYXMgU3luYz0iVFJVRSI+T0JKRUNUSUQ8L2F0dGFsaWFzPg0KICAgICAgICA8YXR0cnR5
+cGUgU3luYz0iVFJVRSI+T0lEPC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdpZHRoIFN5bmM9IlRS
+VUUiPjQ8L2F0dHdpZHRoPg0KICAgICAgICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+MTA8L2F0cHJl
+Y2lzPg0KICAgICAgICA8YXR0c2NhbGUgU3luYz0iVFJVRSI+MDwvYXR0c2NhbGU+DQogICAgICA8
+L2F0dHI+DQogICAgICA8YXR0cj4NCiAgICAgICAgPGF0dHJsYWJsPk9CSkVDVElEPC9hdHRybGFi
+bD4NCiAgICAgICAgPGF0dHJkZWY+SW50ZXJuYWwgZmVhdHVyZSBudW1iZXIuPC9hdHRyZGVmPg0K
+ICAgICAgICA8YXR0cmRlZnM+RVNSSTwvYXR0cmRlZnM+DQogICAgICAgIDxhdHRyZG9tdj4NCiAg
+ICAgICAgICA8dWRvbT5TZXF1ZW50aWFsIHVuaXF1ZSB3aG9sZSBudW1iZXJzIHRoYXQgYXJlIGF1
+dG9tYXRpY2FsbHkgZ2VuZXJhdGVkLjwvdWRvbT4NCiAgICAgICAgPC9hdHRyZG9tdj4NCiAgICAg
+ICAgPGF0dGFsaWFzIFN5bmM9IlRSVUUiPlNIQVBFPC9hdHRhbGlhcz4NCiAgICAgICAgPGF0dHJ0
+eXBlIFN5bmM9IlRSVUUiPkdlb21ldHJ5PC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdpZHRoIFN5
+bmM9IlRSVUUiPjQ8L2F0dHdpZHRoPg0KICAgICAgICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+MDwv
+YXRwcmVjaXM+DQogICAgICAgIDxhdHRzY2FsZSBTeW5jPSJUUlVFIj4wPC9hdHRzY2FsZT4NCiAg
+ICAgIDwvYXR0cj4NCiAgICAgIDxhdHRyPg0KICAgICAgICA8YXR0cmxhYmw+U2hhcGU8L2F0dHJs
+YWJsPg0KICAgICAgICA8YXR0cmRlZj5GZWF0dXJlIGdlb21ldHJ5LjwvYXR0cmRlZj4NCiAgICAg
+ICAgPGF0dHJkZWZzPkVTUkk8L2F0dHJkZWZzPg0KICAgICAgICA8YXR0cmRvbXY+DQogICAgICAg
+ICAgPHVkb20+Q29vcmRpbmF0ZXMgZGVmaW5pbmcgdGhlIGZlYXR1cmVzLjwvdWRvbT4NCiAgICAg
+ICAgPC9hdHRyZG9tdj4NCiAgICAgICAgPGF0dGFsaWFzIFN5bmM9IlRSVUUiPk1VTklDSVBBTElU
+WTwvYXR0YWxpYXM+DQogICAgICAgIDxhdHRydHlwZSBTeW5jPSJUUlVFIj5TdHJpbmc8L2F0dHJ0
+eXBlPg0KICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MTY8L2F0dHdpZHRoPg0KICAgICAg
+ICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+MDwvYXRwcmVjaXM+DQogICAgICAgIDxhdHRzY2FsZSBT
+eW5jPSJUUlVFIj4wPC9hdHRzY2FsZT4NCiAgICAgIDwvYXR0cj4NCiAgICAgIDxhdHRyPg0KICAg
+ICAgICA8YXR0cmxhYmw+TVVOSUNJUEFMSVRZPC9hdHRybGFibD4NCiAgICAgICAgPGF0dGFsaWFz
+IFN5bmM9IlRSVUUiPk1XQkNvZGU8L2F0dGFsaWFzPg0KICAgICAgICA8YXR0cnR5cGUgU3luYz0i
+VFJVRSI+U3RyaW5nPC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdpZHRoIFN5bmM9IlRSVUUiPjc8
+L2F0dHdpZHRoPg0KICAgICAgICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+MDwvYXRwcmVjaXM+DQog
+ICAgICAgIDxhdHRzY2FsZSBTeW5jPSJUUlVFIj4wPC9hdHRzY2FsZT4NCiAgICAgIDwvYXR0cj4N
+CiAgICAgIDxhdHRyPg0KICAgICAgICA8YXR0cmxhYmw+TVdCQ29kZTwvYXR0cmxhYmw+DQogICAg
+ICAgIDxhdHRyZGVmPkNvZGVkIHZhbHVlIGZvciB0aGUgd2F0ZXJiZHkuPC9hdHRyZGVmPg0KICAg
+ICAgICA8YXR0cmRlZnM+V0ROUiBzdXJmYWNlIHdhdGVyIGludmVudG9yeTwvYXR0cmRlZnM+DQog
+ICAgICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5BY3JlczwvYXR0YWxpYXM+DQogICAgICAgIDxh
+dHRydHlwZSBTeW5jPSJUUlVFIj5Eb3VibGU8L2F0dHJ0eXBlPg0KICAgICAgICA8YXR0d2lkdGgg
+U3luYz0iVFJVRSI+ODwvYXR0d2lkdGg+DQogICAgICAgIDxhdHByZWNpcyBTeW5jPSJUUlVFIj4z
+ODwvYXRwcmVjaXM+DQogICAgICAgIDxhdHRzY2FsZSBTeW5jPSJUUlVFIj44PC9hdHRzY2FsZT4N
+CiAgICAgIDwvYXR0cj4NCiAgICAgIDxhdHRyPg0KICAgICAgICA8YXR0cmxhYmw+QWNyZXM8L2F0
+dHJsYWJsPg0KICAgICAgICA8YXR0YWxpYXMgU3luYz0iVFJVRSI+U0hBUEUuYXJlYTwvYXR0YWxp
+YXM+DQogICAgICAgIDxhdHRydHlwZSBTeW5jPSJUUlVFIj5Eb3VibGU8L2F0dHJ0eXBlPg0KICAg
+ICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MDwvYXR0d2lkdGg+DQogICAgICAgIDxhdHByZWNp
+cyBTeW5jPSJUUlVFIj4wPC9hdHByZWNpcz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUi
+PjA8L2F0dHNjYWxlPg0KICAgICAgPC9hdHRyPg0KICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRy
+bGFibD5OYW1lPC9hdHRybGFibD4NCiAgICAgICAgPGF0dGFsaWFzIFN5bmM9IlRSVUUiPlR5cGU8
+L2F0dGFsaWFzPg0KICAgICAgICA8YXR0cnR5cGUgU3luYz0iVFJVRSI+U3RyaW5nPC9hdHRydHlw
+ZT4NCiAgICAgICAgPGF0dHdpZHRoIFN5bmM9IlRSVUUiPjEyPC9hdHR3aWR0aD4NCiAgICAgICAg
+PGF0cHJlY2lzIFN5bmM9IlRSVUUiPjA8L2F0cHJlY2lzPg0KICAgICAgICA8YXR0c2NhbGUgU3lu
+Yz0iVFJVRSI+MDwvYXR0c2NhbGU+DQogICAgICA8L2F0dHI+DQogICAgICA8YXR0cj4NCiAgICAg
+ICAgPGF0dHJsYWJsIFN5bmM9IlRSVUUiPlNIQVBFLmFyZWE8L2F0dHJsYWJsPg0KICAgICAgICA8
+YXR0YWxpYXMgU3luYz0iVFJVRSI+U0hBUEUubGVuPC9hdHRhbGlhcz4NCiAgICAgICAgPGF0dHJ0
+eXBlIFN5bmM9IlRSVUUiPkRvdWJsZTwvYXR0cnR5cGU+DQogICAgICAgIDxhdHR3aWR0aCBTeW5j
+PSJUUlVFIj4wPC9hdHR3aWR0aD4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUiPjA8L2F0
+cHJlY2lzPg0KICAgICAgICA8YXR0c2NhbGUgU3luYz0iVFJVRSI+MDwvYXR0c2NhbGU+DQogICAg
+ICA8L2F0dHI+DQogICAgICA8YXR0cj4NCiAgICAgICAgPGF0dHJsYWJsIFN5bmM9IlRSVUUiPlNI
+QVBFLmxlbjwvYXR0cmxhYmw+DQogICAgICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5OYW1lPC9h
+dHRhbGlhcz4NCiAgICAgICAgPGF0dHJ0eXBlIFN5bmM9IlRSVUUiPlN0cmluZzwvYXR0cnR5cGU+
+DQogICAgICAgIDxhdHR3aWR0aCBTeW5jPSJUUlVFIj4zMDwvYXR0d2lkdGg+DQogICAgICAgIDxh
+dHByZWNpcyBTeW5jPSJUUlVFIj4wPC9hdHByZWNpcz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9
+IlRSVUUiPjA8L2F0dHNjYWxlPg0KICAgICAgPC9hdHRyPg0KICAgIDwvZGV0YWlsZWQ+DQogIDwv
+ZWFpbmZvPg0KICA8ZGlzdGluZm8+DQogICAgPHJlc2Rlc2M+UGVyc29uYWwgR2VvZGF0YWJhc2Us
+IGN1cnJlbnRseSBBcmNHSVMgOS4wPC9yZXNkZXNjPg0KICAgIDxkaXN0bGlhYj4NClRoZSBkYXRh
+IGhlcmVpbiwgaW5jbHVkaW5nIGJ1dCBub3QgbGltaXRlZCB0byBnZW9ncmFwaGljIGRhdGEsIHRh
+YnVsYXIgZGF0YSwgYW5hbHl0aWNhbCBkYXRhLCBlbGVjdHJvbmljIGRhdGEgc3RydWN0dXJlcyBv
+ciBmaWxlcywgYXJlIHByb3ZpZGVkICJhcyBpcyIgd2l0aG91dCB3YXJyYW50eSBvZiBhbnkga2lu
+ZCwgZWl0aGVyIGV4cHJlc3NlZCBvciBpbXBsaWVkLCBvciBzdGF0dXRvcnksIGluY2x1ZGluZywg
+YnV0IG5vdCBsaW1pdGVkIHRvLCB0aGUgaW1wbGllZCB3YXJyYW50aWVzIG9yIG1lcmNoYW50YWJp
+bGl0eSBhbmQgZml0bmVzcyBmb3IgYSBwYXJ0aWN1bGFyIHB1cnBvc2UuIFRoZSBlbnRpcmUgcmlz
+ayBhcyB0byB0aGUgcXVhbGl0eSBhbmQgcGVyZm9ybWFuY2Ugb2YgdGhlIGRhdGEgaXMgYXNzdW1l
+ZCBieSB0aGUgdXNlci4gTm8gZ3VhcmFudGVlIG9mIGFjY3VyYWN5IGlzIGdyYW50ZWQsIG5vciBp
+cyBhbnkgcmVzcG9uc2liaWxpdHkgZm9yIHJlbGlhbmNlIHRoZXJlb24gYXNzdW1lZC4gSW4gbm8g
+ZXZlbnQgc2hhbGwgT25laWRhIENvdW50eSBiZSBsaWFibGUgZm9yIGRpcmVjdCwgaW5kaXJlY3Qs
+IGluY2lkZW50YWwsIGNvbnNlcXVlbnRpYWwgb3Igc3BhZWNpYWwgZGFtYWdlcyBvZiBhbnkga2lu
+ZCwgaW5jbHVkaW5nLCBidXQgbm90IGxpbWl0ZWQgdG8sIGxvc3Mgb2YgYW50aWNpcGF0ZWQgcHJv
+Zml0cyBvciBiZW5lZml0cyBhcmlzaW5nIG91dCBvZiB0aGUgdXNlIG9mIG9yIHRoZSByZWxpYW5j
+ZSBvbiB0aGUgZGF0YS4gT25laWRhIENvdW50eSBkb2VzIG5vdCBhY2NlcHQgbGlhYmlsaXR5IGZv
+ciBhbnkgZGFtYWdlcyBvciBtaXNyZXByZXNlbnRhdGlvbiBjYXVzZWQgYnkgaW5hY2N1cmFjaWVz
+IGluIHRoZSBkYXRhIG9yIGFzIGEgcmVzdWx0IG9mIHRoZSBjaGFuZ2VzIHRvIHRoZSBkYXRhIGNh
+dXNlZCBieSBzeXN0ZW0gdHJhbnNmZXJzIG9yIG90aGVyIHRyYW5zZm9ybWF0aW9ucyBvciBjb252
+ZXJzaW9ucywgbm9yIGlzIHRoZXJlIHJlc3BvbnNpYmlsaXR5IGFzc3VtZWQgdG8gbWFpbnRhaW4g
+dGhlIGRhdGEgaW4gYW55IG1hbm5lciBvciBmb3JtLiANClRoaXMgZGF0YSBoYXMgYmVlbiBkZXZl
+bG9wZWQgZnJvbSB0aGUgYmVzdCBhdmFpbGFibGUgc291cmNlcy4gQWx0aG91Z2ggZWZmb3J0cyBo
+YXZlIGJlZW4gbWFkZSB0byBlbnN1cmUgdGhhdCB0aGUgZGF0YSBpcyBhY2N1cmF0ZSBhbmQgcmVs
+aWFibGUsIGVycm9ycyBhbmQgdmFyaWFibGUgY29uZGl0aW9ucyBvcmlnaW5hdGluZyBmcm9tIHBo
+eXNpY2FsIHNvdXJjZXMgdXNlZCB0byBkZXZlbG9wIHRoZSBkYXRhIG1heSBiZSByZWZsZWN0ZWQg
+aW4gdGhlIGRhdGEgc3VwcGxpZWQuIFVzZXJzIG11c3QgYmUgYXdhcmUgb2YgdGhlc2UgY29uZGl0
+aW9ucyBhbmQgYmVhciB0aGUgcmVzcG9uc2liaWxpdHkgZm9yIHRoZSBhcHByb3ByaWF0ZSB1c2Ug
+b2YgdGhlIGluZm9ybWF0aW9uIHdpdGggcmVzcGVjdCB0byBwb3NzaWJsZSBlcnJvcnMsIHNjYWxl
+LCByZXNvbHV0aW9uLCByZWN0aWZpY2F0aW9uLCBwb3NpdGlvbmFsIGFjY3VyYWN5LCBkZXZlbG9w
+bWVudCBtZXRob2RvbG9neSwgdGltZSBwZXJpb2QsIGVudmlyb25tZW50YWwgYW5kIGNsaW1hdGlj
+IGNvbmRpdGlvbnMgYW5kIG90aGVyIGNpcmN1bXN0YW5jZXMgc3BlY2lmaWMgdG8gdGhpcyBkYXRh
+LiBUaGVyIHVzZXIgaXMgcmVzcG9uc2libGUgZm9yIHVuZGVyc3RhbmRpbmcgdGhlIGFjY3VyYWN5
+IGxpbWl0YXRpb25zIG9mIHRoZSBkYXRhIHByb3ZpZGVkIGhlcmVpbi4gVGhlIGJ1cmRlbiBmb3Ig
+ZGV0ZXJtaW5pbmcgZml0bmVzcyBmb3IgdXNlIGxpZXMgZW50aXJlbHkgd2l0aCB0aGUgdXNlci4g
+VGhlIHVzZXIgc2hvdWxkIHJlZmVyIHRvIHRoZSBhY2NvbXBhbnlpbmcgbWV0YWRhdGEgbm90ZXMg
+Zm9yIGEgZGVzY3JpcHRpb24gb2YgdGhlIGRhdGEgYW5kIGRhdGEgZGV2ZWxvcG1lbnQgcHJvY2Vk
+dXJlcy4gDQoNCkFsdGhvdWdoIHRoaXMgZGF0YSBoYXMgYmVlbiBwcm9jZXNzZWQgc3VjY2Vzc2Z1
+bGx5IG9uIGNvbXB1dGVycyBhdCBPbmVpZGEgQ291bnR5LCBubyBnYXVyYW50ZWUsIGV4cHJlc3Nl
+ZCBvciBpbXBsaWVkLCBpcyBtYWRlIGJ5IE9uZWlkYSBDb3VudHkgcmVnYXJkaW5nIHRoZSB1c2Ug
+b2YgdGhpcyBkYXRhIG9uIGFueSBvdGhlciBzeXN0ZW0sIG5vciBkb2VzIHRoZSBhY3Qgb2YgZGlz
+dHJpYnV0aW9uIGNvbnN0aXR1dGUgb3IgaW1wbHkgYW55IHN1Y2ggd2FycmFudHkuIERpc3RyaWJ1
+dGlvbiBvZiB0aGlzIGRhdGEgaXMgaW50ZW5kZWQgZm9yIGluZm9ybWF0aW9uIHB1cnBvc2VzIGFu
+ZCBzaG91bGQgbm90IGJlIGNvbnNpZGVyZWQgYXV0aG9yaXRhdGl2ZSBmb3IgZW5naW5lZXJpbmcs
+IGxlZ2FsLCBzdXJ2ZXlpbmcsIGFuZCBvdGhlciBzaXRlLXNwZWNpZmljIHVzZXMuIA0KDQpGdXJ0
+aGVybW9yZSwgcmVkaXN0cmlidXRpb24gb2YgdGhpcyBkYXRhIGlzIHN0cmljdGx5IHByb2hpYml0
+ZWQgd2l0aG91dCB0aGUgd3JpdHRlbiBjb25zZW50IG9mIHRoZSBPbmVpZGEgQ291bnR5IExhbmQg
+SW5mb3JtYXRpb24gT2ZmaWNlLg0KPC9kaXN0bGlhYj4NCiAgICA8Y3VzdG9tPkNvbnRhY3QgdGhl
+IExhbmQgSW5mb3JtYXRpb24gRGlyZWN0b3IuPC9jdXN0b20+DQogIDwvZGlzdGluZm8+DQogIDxt
+ZXRhaW5mbz4NCiAgICA8bWV0Yz4NCiAgICAgIDxjbnRpbmZvPg0KICAgICAgICA8Y250b3JncD4N
+CiAgICAgICAgICA8Y250b3JnPk9uZWlkYSBDb3VudHkgTGFuZCBJbmZvcm1hdGlvbiBPZmZpY2U8
+L2NudG9yZz4NCiAgICAgICAgICA8Y250cGVyPk9uZWlkYSBDb3VudHkgTElPPC9jbnRwZXI+DQog
+ICAgICAgIDwvY250b3JncD4NCiAgICAgICAgPGNudHBvcz5HSVMgQW5hbHlzdDwvY250cG9zPg0K
+ICAgICAgICA8Y250YWRkcj4NCiAgICAgICAgICA8YWRkcnR5cGU+bWFpbGluZyBhZGRyZXNzPC9h
+ZGRydHlwZT4NCiAgICAgICAgICA8YWRkcmVzcz5QTyBCb3ggNDAwPC9hZGRyZXNzPg0KICAgICAg
+ICAgIDxjaXR5PlJoaW5lbGFuZGVyPC9jaXR5Pg0KICAgICAgICAgIDxzdGF0ZT5XSTwvc3RhdGU+
+DQogICAgICAgICAgPHBvc3RhbD41NDUwMTwvcG9zdGFsPg0KICAgICAgICA8L2NudGFkZHI+DQog
+ICAgICAgIDxjbnR2b2ljZT43MTUtMzY5LTYxNzk8L2NudHZvaWNlPg0KICAgICAgICA8Y250ZmF4
+PjcxNS0zNjktNjI3NzwvY250ZmF4Pg0KICAgICAgICA8Y250ZW1haWw+bGlvQGNvLm9uZWlkYS53
+aS51czwvY250ZW1haWw+DQogICAgICAgIDxob3Vycz44OjAwIGEubS4gdG8gNDozMCBwLm0uPC9o
+b3Vycz4NCiAgICAgIDwvY250aW5mbz4NCiAgICA8L21ldGM+DQogICAgPG1ldGV4dG5zPg0KICAg
+ICAgPG9ubGluaz5odHRwOi8vd3d3LmVzcmkuY29tL21ldGFkYXRhL2Vzcmlwcm9mODAuaHRtbDwv
+b25saW5rPg0KICAgICAgPG1ldHByb2Y+RVNSSSBNZXRhZGF0YSBQcm9maWxlPC9tZXRwcm9mPg0K
+ICAgIDwvbWV0ZXh0bnM+DQogIDwvbWV0YWluZm8+DQogIDxFc3JpPg0KICAgIDxNZXRhSUQ+ezE5
+MUNBQUZFLTg2RkMtNDM4My1CNkM5LUM1NjQ3QkY3MkU0Qn08L01ldGFJRD4NCiAgICA8Q3JlYURh
+dGU+MjAxMzA4MjM8L0NyZWFEYXRlPg0KICAgIDxDcmVhVGltZT4xMDMwNDUwMDwvQ3JlYVRpbWU+
+DQogICAgPFN5bmNPbmNlPkZBTFNFPC9TeW5jT25jZT4NCiAgICA8U3luY0RhdGU+MjAxNDEyMTA8
+L1N5bmNEYXRlPg0KICAgIDxTeW5jVGltZT4xMjI3MjQwMDwvU3luY1RpbWU+DQogICAgPE1vZERh
+dGU+MjAxNDEyMTA8L01vZERhdGU+DQogICAgPE1vZFRpbWU+MTIyNzI0MDA8L01vZFRpbWU+DQog
+IDwvRXNyaT4NCjwvbWV0YWRhdGE+</Data>
+    </Enclosure>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiq
+U9+1syiWHAaTGQ4+VMgbj+JHHp+NAF2isW2155pyhtHIyABGCSPlJbtgkEAY96VdYnLophUMXwVA
+Y8dc5+mPz/CpckgNmisZNZlaa2LW3lQSozmSRl24C5yGz09yB9Kmu9VeAFIbSeaXbkGOPchO7aVy
+O45z0p3QGnRWSNRvLfP22CJcIW+Vwv8AEAOpxjBzyRjaeDRLql1HvIsnOworRAbmGQSTkHGOnf19
+hTA1qKoXWqW1pbi5e4i8llDJzgt34PfjtjtU9tdwXFqJ0mVkxy+No44JwenINAFiisFNXvppDtS2
+SJ5MRSswZWTOM8N15H4keta88xhXexVEUgs78LgnHrwen+eiTuBPRWTfaq1pGE822W5w0jI7fcj+
+baxweeg47849RImqorRm7kgtlaLfh3GT3yCDgL169fw5OZXsBpUVnRatDPcyCFmkhjGHKQuxDHGB
+kD05x24Pes+11q+e+WK8iS2gRVMkrRsAWJOF5Py9B6/XmmB0NFIA3cg/QVFE0jTSMSGhODGQR6c0
+ATUUUUAFFV755o7N2t1ZpQVwFAJ6jPXjpmqdvqFzM0SIsUjnzS6tlMBW2jB5z+v19VfWwGpRWct5
+cSXslmstuJI0BYkH7x54XOSACOfX8QJ5brbeW8CYO8tvz1AAP9cUXAtUUUUwCmvGkqlZEV1PUMMi
+nVWazWaaR59zqSAqFzt2gDqvQ8565/pQBlWUcttdIYSkf2hzwVLB0AO09jnjn/eGc1MmmXds0k6X
+cm5mkkaOMZDE5wAGPGMn6n9JdSISOC2itWc7hsCodqgfw5HAyMj2Bz2pdQddO0t3i2RuWyu/5gGP
+1/yKnRaAZkcG+4LuHFuylpfO+do+pYggbRk56c4wR7PSO1jtbsKwuvmUKkpKIMNxGAB97I6Y5OPU
+1atIRLKESRxFNH59whj2gluAPbODkf7I9SSm+5spI7KO2S4TeGRnJB5LEljzzkZz7njPVRha77ju
+UDBdTQR3jyQzIx+RGy5jkLc7PUAg47kDuadroiuLOGSxitpUnmEkgYDe5xtBUEckZ7YPHfpVqBxe
+NDazSqzNI0sse7MkZGCqkYBAHTPfAx1qG9glfVEgsHVDCUyxbiDIbAVenQdx0PBpvRCMKLTZJITF
+axOkWDGbfYQSQcb2G7HO3tgghh2OdOR1EtvHtFwsqq1zFbuAoUjjODhskHgdemeRndj0qG3uTcW7
+SKxQqyGQ7XPPJ98k89eayNLhljimdZDBCuV2puKsx67eh4PyjHXHAHFZT5adpMa1FvbC9W6S1Fut
+xZMm23wSPs7DPLZ65BHJzyKnumuLmRrN54YIRAsqs6kkHlcEn379eO1WYtQVbb95cIq/I0btGRuX
+jIx3PX6ZHoapvCb29a6WeOPzAFjSRlkJ+YZ43YwDuBAPfpkCri4tc0eoFXUr6W7sbON4RbqZ1Vjj
+KtjB2L3zkewOOvatG3s472cNK63BtpQJHL53Oqk429AAWBx6j8azrxGt9VP2aPaJQY45EBIhxnc+
+08dScDI+7wDnldPS40m8lS0uBqKzSs80QUI6sVJDH0yQMnOORgDvPJKU7y2X5h0Nm71SK1lkjhj8
+6ZRukRCAwJHy5HcnH5Cqt4l5cWsi3wMUMhCmKKQEkYBI+77HPPTirdjbxzudRkjQzykFed3lgAgA
+HHB5Ofcmq2p3ELapp8LTMqrK3mkFgozG2AWHAPtnNXKLaeoixZ3gksY3upGWQp86MNrZOMjb1yCc
+cdc+4rJmt57nY9tNdLHNmK3eN/LCjkrwvO0YPXnpnpipraO2u7uG4ELi1P7qE+Z/FyS3Bye/PuTz
+UoiNtOzvJL9nt5R+8+2Pjk8BlPGACM89Pemrtaga8krRsAIZHGMkrjj8zmqx1SOQD7JG90e/ljCr
+0PLHAzyOM59qbd3+5YobRTPJOu4bGxiPu+fx49aitoI1v9k6bJFbfFGpO37oGfQkbfw547kbd7WA
+ntr+HVIX+zSSpjkPtAPUjoenIIwQKo3G6fxHFHC5Bjw0vyg4UAHGc8A5AwcHgnkVLqMMVpZS+WpW
+Nz84TIckcgL2HQ8cDkn1zhz3dzaENBOqzjKyuqqzFx8x3gYGOW57Y7HNROVrJjN7V3gSExSoAGIb
+zZEDqpzjvnkjI6Hr70+x0uCBorhGViEADIu0ONoGSMnnr0x1NYxvP7Qhma5lRlZFJjRSpwFY+ucZ
+BHfqD6VuadZQRQRTLiQlQY3KbdqkDgA/dz6VUZKeoF+iiirEFVo5HS7a3lbduBkjO3Hy5GQfoSPT
+gjrgmrNURKk2rxbM5jilVtykEHdH69uOvftQBPC7SQtM6ygOMiJ1AK8dKp299BqZUWEm6DdmWRCB
+xg8f3s5xz7Hmizb7HJcrdPO0pcvlmLqVZ22hAOeOmMdvTFQyWr2/heSKJijrGZAT8hU53Hp0oAtR
+XEMd1NCJl3yNmNmcMCQApXscgqcjn684D7eEWrTSzTbncbnJwFABJ4+gOPwrPu9TtobpIm/0WIFm
+SSRdilyGO7BA3YOc47sDRFqlhfaaiwTiUu6RyDnJ3OA3XGQcnkcce1AEsV7JC0929jc+XI2dwALB
+QAFAUfMe5xjjcetZl1uaSeWCSa3nZGnVZlYfKByQwyBwQAByAvvWzf6sllcJEU3DgyNnGwE4Ht69
++1V7lILSC4vood9xc/uwJXDdfz474GeB07UrgZ9z/aCrYtHMr3N3mAyRybCFzuyQQfu/MOmRmpmj
+ms5I7a5sDdCSXEXkytjaFyWIJwCCP161NdW8el7JjOC5UQQgny8fxMeOvIz2GK1orgyWyTNEULdV
+Jzt555/rS5V1A5GyUzzfYIzNGySeWoFzkw/LyC2BzjdjGTwM4A53LS3tLeUW8E8cr5cxMwyYixO4
+AgY6qTjjoagludN1y5ktLe4InKD94YyQV54Un9cen1pbW3fTp0d0edYYsSBY/nVh/EO5BB6DPOfT
+FTGPLshj72JrU25WWJp0UvM0gPKLj5sdd/RQeep4pmoSNbrbBGeO7uJTIPssRIbGPvHaTjBHb9Kh
+uRfTbbq2hLl5GQkIC+NzKVO44CgAeoznIp13GIntd0k6z/aGljPl78DHJYA9+fwyOBwKv0EaumwX
+EMTPNMWEnzrHs27CSWOfU5P046VWtLKK4iWC5t1dLZtqOshIYjGd3TJ459ec45FV7fXVihkkupHe
+Rn2oghZADj7ueeScZGeCcdqt6PMzoUih22oBIYnGGPJUDqRyTn1yOaemwFmHNrYSSSqeGkl2gDIB
+YsB9cVk6xJc3trZp5RjjuNrjy2ZnRsZydoPA9j1A9cieb+0dQkmFuyQxxS+UVkVgWXKknGfTp65q
+290tmLcLt+xgbXmyCF7DJzxzjn+VKSurAVbe1uIEjtY0MfmxyO77myhO3uOC3OR+PpzZnjt4JY/K
+hVrnGRK/zMqjqSxOcc9M8/nVZbyYyGSJQ4uZUZBHliseBgtgcA478c57YMmrQtOUMCGWUqyBfLDp
+jIB3ZIH4Z5x7UpqXI1DcaJyrX0UtvMVwrAPtHDjGR34/PPTnmsq/guNO0gKzZUSZYxsF28YHUcnJ
+GM9MAZzydbSkgh0+KKF1baPnIAB3d8jtVW8lvjauLhUgj8zbvjf53GeCvZSR6nily+5aQGLpcCaZ
+eGR3lNzIFM+yVmCAfMAy+pHAyT1OffoF1ZWnghEMm+XBJYbQAR1wefTj/CsCXTLiF7yaEAw70Jij
+PzhuOAxABPJ5PZvrnV0ULbuR9phYXA8wJhtwJ5C7j1wPXn2pU9rx2YM26KKK1EFZV7A1vfQXiMVU
+SDzSzZDZ+X6AAEnp6Vq1n6jdRGCe3WbbN5ZdApBZiD0xg98Z470AVLyXzdXt7dJWLt8j4Q7FZMOD
+78kd/Xpg1bWW7F3A80axIT5TLvyGO3O4egyMDuc9qowra6dqLR3UfziJGiKozjA3AkYHy9envUOp
+XtzqN/aWVlHcWzhnlE0sJABQHHBGCDn/APUalN2uwIteS1utZhtmMlxcHaUhJO2Mgg5XpzjJODnA
+7ZrQs7EvFYOkkST2uVmCKvBOCy98cjGAR1Nc1qdyG827uvs8V1Bt+0i2mJdXwU3DgbfTr6ZzgVes
+Ly0i1aG6sJ3kt7gEPG0hLE49G5LZ/wB4nnHvlzJT9R9Dcl+y3V2hmG+CZTEQyZRmVhgN26g4z1yf
+oYbuSUXe+1tUIiZYcNGcMWYZ5HQDaOcHqD25mhlhurGyt42BEqKzg8kKBk55yDnjPrnvUup3aWsT
+h2kXchdDEfn3AjgdfUcdOueM1uIqQWa6hIZbqBiwkYPnaQcE4Gc5wML0xznrk1XudUWziFvD9pTZ
+L8u51dmwzfISSSASuAeeD2xU1jLfRaTKrhftQV5iAhCqxYttJPfnp279RTNLMV5LcC4t0LXB8wTK
+Dtdl4yufRSoB788nFJ36AK+pyXZifT4Cigr5ssybTGhGTjI6YXmrd9am4voZPO8pBGw4JBbOOTgj
+IHTn+9TLm6sbGxNoQ3khfJQKpwx6EZxj6/jVbTLiW08mOdkEHlMEkkGCx4YAt243cUX6AX3t5bYm
+aw2hcHMDk7JM85Xn5TnPbnJz61l3uow3tnbz2/mW15K3kpvUJsk5GGY+nzfKDk545wRoz3i3NrcR
+KIi3m/Z13MpG71IbuOTt56cZzWTbBNAgOn3dtE9obpmheRs4Q5bPIOSOR1z/AFG7AaxtlTfbyCVw
+ZN8G3G5SRlmBJJ6knJ9cDtUKXrw6jF9piG0QiOS4VyQH+UkEDgcn68Z6U9XS71AywSs25DsZZOPl
+25UjB25P/oJ49Sa8tLd1E4t4Lqb5/KJQsHA4Oe55A/8ArZpgKGW41LyIroNA371gsvzE8gqCOccq
+fbAHIPEMeLS/3PZzGM7FtwijavLc4zndg5ORkc9s0Wdj586zx3bkrlnniIKyORggZyCBzzj0A6EV
+oyQySYQAp5JVopC24scEHP4Ej8aQFWO2tHxLJp72hXgYwu7J6HYeegOD7VZmla2gVLW3WRmyECkK
+u7k88/U1WSUx3cklxJE+2QRiUjaE+UlgBnj3Pv7UoMKzC8li2sAfIhVMyNx97HXJAx7Dr3AYE2nY
+8t18gQtGRHtwNwAGRkgkHrnjpup11A13btbq21A2HG8guuOm4HK5JHPp9ahtbKRLv7Qsz+WxZyhd
+jy2cjHQAHv1plvDBpt9HDFHIkcqlc8lXf734HG454B5pJt9AJZ9PaW3mgicWys+4PGSS3HJbpz+P
+YZ9KWxiLGSYECB3LxxkAlSScnPbJycdv0pJtLV5ri4imeOecKGbJxhegwCDjr37mnLaywmDZIzYf
+BC4RFXB4Cj8PU+9CQF2iiimAVR3q+rqYwSywsshIIH3lxz3/AIunvV6k+Xcem7Az64/zmgCFvslv
+L5jmGKR8gM2AW6Z/pVb7bJcPI1pFvSHq7LkSeoQ5x26+vFWZSglOxEe425VScHAPr260QXKzM8Z+
+WaM4dPT0PuD60ARx2ls5knjRGS5G58jIcEDHHTt3qC40KwuJIHECQtFMs2YkVSxXoCcZxUttKLaX
+7C4AEar5RHdTuwPbAXHvSTyyNeIttNGWTmWInJZc84HQH39/egAFnY3sfmCEhXYOSpZN+OhOMbh0
+61BcpaWU9vdoHCCR1YRklQdrZ46A5GO3JxTlu0hnkTyZkUdYyRwQVwV5xg7vpwenNWtPcyWEMhGD
+Iu8855PJ5/Gi/QB1vdQ3S4XIOMlHGDj+o9xxUGoQRrYgJmERHcjxqT5eB1wOo7EccE81S1AT6aFa
+0KqJJMIZMsIyx3MNoGcHHAz1OOKsxW9xdWQi1D5EK4kXIy/c56gD6H8ulAElrFBd6fC7ICXTf83z
+lSwOeo9yOn4VXKQRzXcM5t0jkjUSuX2g5DDhTkDgfjn853uIk+0pcXCRgDcjK2G8s8A/99bgMe3c
+1VaFp7n/AEi0V4pvndGT/Vk7VU7j/FhTkDpx04JAI4o9QtxbmEveWgU7Ed9kpBxgPu4O3n0P4jmC
+zQXsMguUEl6VKhy+SGUg4A3bSVO05UjB44NX7mD7PqFhMLpcJvjWKV/mkLEdCTzj6E8VFbaNam8S
+88z7RHFC8ADEPv8Am5Jx34Knue/NAFDV/wDiW3sV+u5ZsgyOsbFUU9QT3yQVGf7wxjjL7vVbKy1z
+7dI05RoxErxLuRiCdwJzzjg4Hv70zyoNUupHwY7szboncMAxTBMbjgcYH6dcVFYeH7PT1JvIVmur
+Zl2rGSA5cgKT0HX5eg4X0qeugG9/atq0MZtW80yEFFRDyCxB/k35Ul7qYghYxwzs20kHbtwAOvzd
+hxU0kwtihkjUqFA/dpny+CWJ9FwB/nFUJrvSNXtV3XeA5aIbZCrHPBBA/PB9qHe2gFeSf7NaJOSt
+9dtNvWBGQKrZwXHoAOTk9T15zU9hI6ZuksJXe5jV2cbQN/ccnIHIAOOcZ96iihg0e5iE1mZJVUBL
+iABQVAC/Mu7g8n1457GrYvxdzLGtrIs6ZBSVyijIHX14Ppx+WRPWwE1xMbezjuboKyxZdyrEY9OO
+hxnnJxxmmot5elLhgbYKQyQyANnry2Oh54weMU5IrWSIzzkThTncynZnrlF6d+CMk+pqzPKySQIp
+UGSTbkjPABJx78VQEq7io3gBu4ByKWiqT5vpFVCywRuHLj+NlIIA9sjn9KALtFFFABVTEq6ijOyG
+NkdVxkHOQQD68Bqt1manOxtLiMIBIgyMckA52sPXngj6/iATXFvHfxrLDMQeV3KcBwGGQSOcZHUH
+86Yts9o8V087yybVilLAHdk4yMAdzn8TxRZSyeRKoj2TkvtQnK5U7ev4A84+9UOpLNc2guLKXLRs
+rtE47DDYx1B4HB96AJg9wbu5kthHMn3TvYqVZf4fpznP168VZg8iUm4iRQ7fKzbQG47H6elPgkWW
+CORSCHUNkd8jrUZt4JnaUBgzfKxRiu7GRzjr3oAiZIzq/wA5LF7cqqYBGN3zZ+uR+Rpk4XTY2eB4
+o0OAsLdGbPbnjJI7Gs/TNOjtfEdzLFeeahhxtLAsGBwR9B6DAGRxwKs6vLDNpkrbSX3LHBIhOVd8
+BWyOmCw59qQFhLe5eVVu7jzV3eYFSLaAQRgE55AP54p1zHP5kDoQxWUscxg/Lg8A9uOM+/vVabV7
+GEWkj3Wy2ZmRXbd8zD5cE+nU8+mas35ja2kVCfOnjKIYhljwQD9BuzzwM0wMNLAvqVqLO3JsbSJX
+jV0bazb2OAT1IB47c9cZFa8k1leSxeXEs84YNtPysm1hksD0IOMA+lW7KSSWyheWIRSFRuQAgKe+
+M9qp6tDbmFTcWyTLJMqZ+6VDYU89eeh9vakAn251tL03iW7S2Y3lIm3cY3KcEEg+n0qhpd9PcK8E
+dzJKzMq+YQo28ZLqTndwR1HbJHNC6bLJdw38LExu5Se2bsOQwBOAcNjr/d46AVK1vfQ3M7WMuUjI
+VlmlJP3R+fDdSQflHqaXvXAff3EstoYbcMt00jQlDlQeN2MnrkADdn+LqM0zTLKB7aMTwtDcOXba
+j+UcghSwRSB0OM+nc55ksraGe6k1JI5PLKBLdcsGcLnLHJ/i4HPZAfor+ZbNA1mhCzj5Y522iIgd
+dv3icdh9aoCMWs9pehDFaSLKBEsj7izcZO4HoThunXAye1VdJvbaG9n3IrOzusJhjODgk4/EYwen
+XkDitK7in+a4Fw0ksWcJ5IMYzwSBgt0PPJPBx3FF1G1xArXcsUNqgDL5Mp+ds/Lk44AwOnX8OU0B
+auJmDxxQpGbpwSu/kRjHLHHbOB71Tg0+BC0USGaRM+bM8pUs7ct07nAJHHaoo9Nji2PcW7fvDu3x
+M7SIduDubqcgHn1PvmrdnJI9sUtLdI40LIDKwB3AkHKqPX3pgMuob67KQtLaQ4+fbzIXweDjjAHB
+784q0LCAndMv2h8Y3zYY/gOg/ACqYc28bR/bV3kgNOLdmwR/ebJA/HGM1Dpmo3k9kdlpM0ofBMp/
+h455xzjJwOmOvQkA1zKEuI4Ahwykhuwxjj/PpTbQERONoVRI4Ue24/8A1/wxVSO1dpJbi5RzO7LG
+wibA2Z4wcAkDcSfXn2FSzwytNbwRQoLVCHclscgjAH8/w60AXaKKKACqtzaG4mRi4CAFWXbyQQeh
++uD+A/G1RQBQn09riHfvEV4FwJUzgn3HcfyqW1t5IGJJXDZJUdBySMfgcfgKtUUAZem6U1ldyTlw
+qupUQofkQZBG0YGB1459q0IIjDEEJzgk5+pJ/OpKKAM6+sZ53ilgeNJoZC0chyMKcblIHUHH8vSq
+0em372VzBcywlp5DJlGbCndkY744A69q2qKTVwOYm8LSMyvE8Eb5JY4PzHLHORg5+b17Cr9jpN1C
+0K3FzG8cO4RiJNhUE/dHoAOMZNbFFJQS2Ayjoqm6lkFzKsUgwyKxywwQQSSc5yew7YxV2K2aLyAZ
+nkESlcv1bpjJ+lWKKqwGd/Z7tLGWEG1JTJnad33i306mrLWxa5MwI+ZdjqRkMvOPpyfx/KrFFAGf
+DpzW9j9nilKFpN7sucgE5IBOT+eazTEljdF5HmDbsJczNuCoAFw4yMfM2cjsQc4yK6Kqd9LCsT5w
+8gAXaGAOCR19BnGaAC2jlM/nnydjpwY2J3Zxg5+g69+OmKfBG1q6wK26Iglc/eB9z3znr1+ueKWm
+WoFsk0MqxzMWMqqoIyWLbSPUZxn6/hZN39luIobyaHdKP3bAbcnIGMEnuwxQBcIJ4Bx61jxWri8F
+lFNvtInaSdHznDbiFz1bk9+MDnNW31BkJlaH/RVco0gJJBGcnaB0yMZz+lRSr5syzTxHey4ijif5
+guc7iwxjtwDj60m0ldgaKKqAIihVUDAHAH4U2WYRwyuo8xowSUU85Azj69PzrKtLk21zMkiSPubG
+FDuUAHGSc8envuq7YOHjYgqjGQtJFzlCRnH5nOfepjUjLZhYZHqYlAEdvLIxJA2D5SR1wTjgepx7
+ZqKzvrq6YBLQIU2i483cnzYw2zgggYPOcHHXvUf73T76WOGFZi6eZFvkC4GfmQcdcnIPfPPSrn2q
+V0tl+z4mlCsyMeE7nnHOMH8cZxmrAuUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABVKW
+OA3bTvbR74l/1xx04zz1BA//AF1dqFbZFuZJw0m9woI3krx6DoOtAFaSwijmie3Igcuu7bxvVf4f
+yzx9frT7uUhGEagSlxCHyNwyM5H0znBx0J+toorIUYblOcg89aGRXxuUNg5GRnB9aAGbUgh2IPLj
+APzLgBPfms+OI3Fm6OfLntwYyQx2HgEcntwM49+a1CMgg559Dioxbx7JEILJIMMrHOeMd/YUmk1Z
+gUUTUhcPEwhePkiXGMZPHGc8DP14561ZhSGzQB2XzGx5kpXG9ueSfz4zxwPSp0hSN3cZ3PjcSc5x
+THto5Jd8m58HKqx+UHHp/jWdOjCm24obbZj6iUeS2uLaOWNd5M8scJB8sjk5xz0Xocjrjir1q8Pn
+nyAHBISPB4WMKpyPbkfiRVu4gW5hMTkhD94DHI9DntUdpYw2SBIt20KEAPYAk/zNaiLNFFFABRRR
+QAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB//2Q==</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum>608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorFormat>
+        <formatName>ESRI geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Oneida_HydroPoly_YE2016.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <onLineSrc>
+        <linkage>http://oneida.ncwrpc.info/</linkage>
+        <protocol>WWW:LINK-1.0-http--link</protocol>
+        <orFunct>
+          <OnFunctCd value="002" />
+        </orFunct>
+        <orName>Oneida County Online Mapping Records</orName>
+        <orDesc>Oneida Count Land Information Office</orDesc>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.3</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Hydro (Polygon) Oneida County, WI YE2016</resTitle>
+      <date>
+        <pubDate>2017-02-20T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Oneida County Land Information Office</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>1 Courthouse Square</delPoint>
+            <city>Rhinelander</city>
+            <adminArea>WI</adminArea>
+            <postCode>54501</postCode>
+            <country>US</country>
+            <delPoint>PO Box 400</delPoint>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">715-369-6179</voiceNum>
+            <faxNum>715-369-6277</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <citRespParty>
+        <rpOrgName>Oneida County Land Information Office</rpOrgName>
+        <rpIndName>Michael Romportl    </rpIndName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>1 Courthouse Square</delPoint>
+            <city>Rhinelander</city>
+            <adminArea>WI</adminArea>
+            <postCode>54501</postCode>
+            <eMailAdd>lio@co.oneida.wi.us </eMailAdd>
+            <country>US</country>
+            <delPoint>PO Box 400</delPoint>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">715-369-6179</voiceNum>
+            <faxNum>715-369-6277</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <rpPosName>Land Information Officer</rpPosName>
+      </citRespParty>
+      <resEdDate>20161231</resEdDate>
+      <otherCitDet>[Since it's original creation in a coverage format this feature class was converted to an ArcGIS personal geodatabase by GEO Analytics, Inc. out of Madison, Wisconsin in January 2005. At this time the Islands were removed and put into there own feature class. Maintenance of the data continues to be done by Oneida County.]</otherCitDet>
+    </idCitation>
+    <idAbs>This polygon data layer represents hydrography for Oneida County, Wisconsin at year-end 2016. It is a feature class within the geodatabase, Oneida_HydroPoly_YE2016.gdb.[This polygon feature class represents lakes, rivers, streams, drainages and other surface water.]</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.
+
+[To manage the surface waters in Oneida County]</idPurp>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <editorSource>external</editorSource>
+        <editorDigest>b92695e4d5571902d552c3fb6a04df4</editorDigest>
+        <rpOrgName>Oneida County Land Information Office</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>1 Courthouse Square</delPoint>
+            <city>Rhinelander</city>
+            <adminArea>WI</adminArea>
+            <postCode>54501</postCode>
+            <country>US</country>
+            <delPoint>PO Box 400</delPoint>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>715-369-6179</voiceNum>
+            <faxNum>715-369-6277</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Oneida County Land Information Office</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Oneida County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Polygon</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Hydrography</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Hydrography</keyword>
+      <keyword>Polygon</keyword>
+      <keyword>Oneida County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+        <useLimit>[The data herein, including but not limited to geographic data, tabular data, analytical data, electronic data structures or files, are provided "as is" without warranty of any kind, either expressed or implied, or statutory, including, but not limited to, the implied warranties or merchantability and fitness for a particular purpose. The entire risk as to the quality and performance of the data is assumed by the user. No guarantee of accuracy is granted, nor is any responsibility for reliance thereon assumed. In no event shall Oneida County be liable for direct, indirect, incidental, consequential or special damages of any kind, including, but not limited to, loss of anticipated profits or benefits arising out of the use of or the reliance on the data. Oneida County does not accept liability for any damages or misrepresentation caused by inaccuracies in the data or as a result of the changes to the data caused by system transfers or other transformations or conversions, nor is there responsibility assumed to maintain the data in any manner or form. This data has been developed from the best available sources. Although efforts have been made to ensure that the data is accurate and reliable, errors and variable conditions originating from physical sources used to develop the data may be reflected in the data supplied. Users must be aware of these conditions and bear the responsibility for the appropriate use of the information with respect to possible errors, scale, resolution, rectification, positional accuracy, development methodology, time period, environmental and climatic conditions and other circumstances specific to this data. Ther user is responsible for understanding the accuracy limitations of the data provided herein. The burden for determining fitness for use lies entirely with the user. The user should refer to the accompanying metadata notes for a description of the data and data development procedures. Although this data has been processed successfully on computers at Oneida County, no guarantee, expressed or implied, is made by Oneida County regarding the use of this data on any other system, nor does the act of distribution constitute or imply any such warranty. Distribution of this data is intended for information purposes and should not be considered authoritative for engineering, legal, surveying, and other site-specific uses. Furthermore, redistribution of this data is strictly prohibited without the written consent of the Oneida County Land Information Office.]</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-90.045995</westBL>
+          <eastBL>-89.043559</eastBL>
+          <southBL>45.466051</southBL>
+          <northBL>45.90106</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2017-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements. 
+
+For complete metadata documentation, please visit http://oneida.ncwrpc.info/ .
+
+This data was submitted to the UW geospatial archive in 2017. Content may be considered current as of December 31, 2016. It was published to the UW geospatial archive as part of the Wisconsin Department of Administration Land Information Program annual collection of public data for the year 2017.
+</suppInfo>
+    <idCredit>Oneida County Land Information Office</idCredit>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idPoC>
+      <editorSource>external</editorSource>
+      <editorDigest>b92695e4d5571902d552c3fb6a04df4</editorDigest>
+      <rpOrgName>Oneida County Land Information Office</rpOrgName>
+      <rpCntInfo>
+        <cntAddress addressType="physical">
+          <delPoint>1 Courthouse Square</delPoint>
+          <city>Rhinelander</city>
+          <adminArea>WI</adminArea>
+          <postCode>54501</postCode>
+          <country>US</country>
+          <delPoint>PO Box 400</delPoint>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">715-369-6179</voiceNum>
+          <faxNum>715-369-6277</faxNum>
+        </cntPhone>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Oneida County Land Information Office</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-90.045130</westBL>
+          <eastBL Sync="TRUE">-89.040260</eastBL>
+          <northBL Sync="TRUE">45.902400</northBL>
+          <southBL Sync="TRUE">45.464888</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <resConst>
+      <Consts>
+        <useLimit>[Data is provided to the requestor for their internal business use only and is not for redistribution.]</useLimit>
+      </Consts>
+    </resConst>
+    <tpCat>
+      <TopicCatCd value="012" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>310 Science Hall</delPoint>
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform with UW-Madison's data distribution plan.</stepDesc>
+        <stepDateTm>2017-07-06T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+          <rpPosName>Data Technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="009" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <eainfo>
+    <detailed Name="Oneida_HydroPoly_YE2016">
+      <enttyp>
+        <enttypl Sync="TRUE">Oneida_HydroPoly_YE2016</enttypl>
+        <enttypd>Hydro (Polygon) Oneida County, WI YE2016</enttypd>
+        <enttypds>Oneida County Land Information Office</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">1653</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">SHAPE</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">MWBCode</attrlabl>
+        <attalias Sync="TRUE">MWBCode</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">7</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Acres</attrlabl>
+        <attalias Sync="TRUE">Acres</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Name</attrlabl>
+        <attalias Sync="TRUE">Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Municipality</attrlabl>
+        <attalias Sync="TRUE">MUNICIPALITY</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">16</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">GlobalID</attrlabl>
+        <attalias Sync="TRUE">GlobalID</attalias>
+        <attrtype Sync="TRUE">GlobalID</attrtype>
+        <attwidth Sync="TRUE">38</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">MonitoringReport</attrlabl>
+        <attalias Sync="TRUE">MonitoringReport</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">128</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">WDNR_AIS_Inventory</attrlabl>
+        <attalias Sync="TRUE">WDNR_AIS_Inventory</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">128</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>TYPE</attrlabl>
+        <attalias Sync="TRUE">Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">12</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SHAPE_Length</attrlabl>
+        <attalias Sync="TRUE">SHAPE_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Length of feature in internal units.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SHAPE_Area</attrlabl>
+        <attalias Sync="TRUE">SHAPE_Area</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Area of feature in internal units squared.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="3071" Sync="TRUE" />
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+        <idVersion Sync="FALSE">9.1.1</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Oneida_HydroPoly_YE2016">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">1653</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Oneida_HydroPoly_YE2016">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="4" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">1653</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20170719</mdDateSt>
+  <mdFileID>ADB01179-DF16-441E-90AC-925B5B74A196</mdFileID>
+</metadata>

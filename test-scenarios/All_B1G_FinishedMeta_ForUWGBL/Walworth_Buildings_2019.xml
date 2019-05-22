@@ -1,0 +1,666 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20110428</CreaDate>
+    <CreaTime>08483900</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteFeatures" Date="20110426" Time="162330" Name="" export="">DeleteFeatures \\CSDATA\Mapping\WalworthCo\Projects\R11_0200_100_Planimetrics\Delivered.gdb\Structure\BuildingArea</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteFeatures" Date="20110426" Time="162407" Name="" export="">DeleteFeatures \\CSDATA\Mapping\WalworthCo\Projects\R11_0200_100_Planimetrics\Delivered.gdb\Structure\BuildingArea</Process>
+        <Process ToolSource="D:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20110502" Time="115448" Name="" export="">CopyFeatures "A:\Crispell Structures2011\Dale\Deliver.mdb\Structure\BuildingArea" "A:\Crispell Structures2011\Dale\BuildingArea.shp" # 0 0 0</Process>
+        <Process ToolSource="D:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20110505" Time="132405" Name="" export="">CopyFeatures "Z:\Development\Projects\2011 Crispell Structures\Crispell Structures2011\Dale\BuildingArea.shp" "Database Connections\Production@gissql.sde\production.LI.Structure\Production.LI.BuildingArea" # 0 0 0</Process>
+        <Process ToolSource="d:\program files\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20140430" Time="153120" Name="" export="">Append 'Buildings NEW' "Production.LI.BuildingArea OLD" NO_TEST "TAG "TAG" true true false 32 Text 0 0 ,First,#,E:\Topo2013.mdb\Structure\BuildingArea,TAG,-1,-1;BUILDINGTY "BUILDINGTY" true true false 4 Long 0 10 ,First,#;QC1 "QC1" true true false 4 Long 0 10 ,First,#,E:\Topo2013.mdb\Structure\BuildingArea,QC1,-1,-1;QC2 "QC2" true true false 4 Long 0 10 ,First,#,E:\Topo2013.mdb\Structure\BuildingArea,QC2,-1,-1;SHAPE_Leng "SHAPE_Leng" true true false 8 Double 8 38 ,First,#;Shape.area "Shape.area" false false true 0 Double 0 0 ,First,#;Shape.len "Shape.len" false false true 0 Double 0 0 ,First,#" #</Process>
+        <Process ToolSource="d:\program files\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20150409" Time="111051" Name="" export="">Append 'Buildings New' "Production.LI.BuildingArea SDE" NO_TEST "TAG "TAG" true true false 32 Text 0 0 ,First,#,A:\2014 Topo Data from SEWRPC\Walworth_2014_topo_Final_03_17_2015.mdb\Structure\BuildingArea,TAG,-1,-1;BUILDINGTY "BUILDINGTY" true true false 4 Long 0 10 ,First,#;QC1 "QC1" true true false 4 Long 0 10 ,First,#,A:\2014 Topo Data from SEWRPC\Walworth_2014_topo_Final_03_17_2015.mdb\Structure\BuildingArea,QC1,-1,-1;QC2 "QC2" true true false 4 Long 0 10 ,First,#,A:\2014 Topo Data from SEWRPC\Walworth_2014_topo_Final_03_17_2015.mdb\Structure\BuildingArea,QC2,-1,-1;SHAPE_Leng "SHAPE_Leng" true true false 8 Double 8 38 ,First,#;Shape.area "Shape.area" false false true 0 Double 0 0 ,First,#;Shape.len "Shape.len" false false true 0 Double 0 0 ,First,#" #</Process>
+        <Process ToolSource="d:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160429" Time="103620" Name="" export="">CalculateField Production.LI.BuildingArea TAG STRUCTURE VB #</Process>
+        <Process ToolSource="d:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160429" Time="103719" Name="" export="">CalculateField Production.LI.BuildingArea TAG "STRUCTURE" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20190327" Time="104117" Name="" export="">FeatureClassToFeatureClass R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Walworth\Originals\WALWORTH_OTHER.gdb\WALWORTH_BUILDINGS_2019 R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Walworth\Walworth_Buildings_2019\Walworth_Buildings_2019.gdb Walworth_Buildings_2019 # "TAG "TAG" true true false 32 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Walworth\Originals\WALWORTH_OTHER.gdb\WALWORTH_BUILDINGS_2019,TAG,-1,-1;BUILDINGTY "BUILDINGTY" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Walworth\Originals\WALWORTH_OTHER.gdb\WALWORTH_BUILDINGS_2019,BUILDINGTY,-1,-1;QC1 "QC1" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Walworth\Originals\WALWORTH_OTHER.gdb\WALWORTH_BUILDINGS_2019,QC1,-1,-1;QC2 "QC2" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Walworth\Originals\WALWORTH_OTHER.gdb\WALWORTH_BUILDINGS_2019,QC2,-1,-1;SHAPE_Leng "SHAPE_Leng" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Walworth\Originals\WALWORTH_OTHER.gdb\WALWORTH_BUILDINGS_2019,SHAPE_Leng,-1,-1;Shape_Length "Shape_Length" false true true 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Walworth\Originals\WALWORTH_OTHER.gdb\WALWORTH_BUILDINGS_2019,Shape_Length,-1,-1;Shape_Area "Shape_Area" false true true 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Walworth\Originals\WALWORTH_OTHER.gdb\WALWORTH_BUILDINGS_2019,Shape_Area,-1,-1" #</Process>
+      </lineage>
+      <itemProps>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2019_ALL_DATA_OPEN_V5\Walworth\Walworth_Buildings_2019\Walworth_Buildings_2019.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemName Sync="TRUE">Walworth_Buildings_2019</itemName>
+        <itemSize Sync="TRUE">0.000</itemSize>
+        <nativeExtBox>
+          <westBL Sync="TRUE">2327844.305600</westBL>
+          <eastBL Sync="TRUE">2457149.429900</eastBL>
+          <southBL Sync="TRUE">181788.563000</southBL>
+          <northBL Sync="TRUE">311757.457900</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1927</geogcsn>
+        <projcsn Sync="TRUE">NAD_1927_StatePlane_Wisconsin_South_FIPS_4803</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1927_StatePlane_Wisconsin_South_FIPS_4803&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1927&amp;quot;,DATUM[&amp;quot;D_North_American_1927&amp;quot;,SPHEROID[&amp;quot;Clarke_1866&amp;quot;,6378206.4,294.9786982]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Lambert_Conformal_Conic&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,2000000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Standard_Parallel_1&amp;quot;,42.73333333333333],PARAMETER[&amp;quot;Standard_Parallel_2&amp;quot;,44.06666666666667],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,42.0],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;EPSG&amp;quot;,32054]]&lt;/WKT&gt;&lt;XOrigin&gt;-118083400&lt;/XOrigin&gt;&lt;YOrigin&gt;-97411200&lt;/YOrigin&gt;&lt;XYScale&gt;40000&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.00020000000000000001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;32054&lt;/WKID&gt;&lt;LatestWKID&gt;32054&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20190422</SyncDate>
+    <SyncTime>12111800</SyncTime>
+    <ModDate>20190422</ModDate>
+    <ModTime>12111800</ModTime>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+    <rpPosName>Metadata Technician</rpPosName>
+    <rpCntInfo>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        <country>US</country>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum tddtty="">(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+    </rpCntInfo>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday: 9:00am - 5:00pm CST - USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      </distorCont>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Walworth_Buildings_2019.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <onLineSrc>
+        <linkage>https://open-walco.opendata.arcgis.com</linkage>
+        <protocol>WWW:LINK-1.0-http--link</protocol>
+        <orName>Walworth County Open Data</orName>
+        <orDesc>Access to Walworth County GIS data</orDesc>
+        <orFunct>
+          <OnFunctCd value="002" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.5</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Walworth County Land Information Division</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>1800 County Trunk NN </delPoint>
+            <city>Elkhorn</city>
+            <adminArea>WI</adminArea>
+            <postCode>53121</postCode>
+            <country>US</country>
+            <eMailAdd>landinfo@co.walworth.wi.us</eMailAdd>
+            <delPoint>PO Box 1001</delPoint>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">262-741-7811</voiceNum>
+            <faxNum>262-741-7841</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Walworth County Land Information Division</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Buildings Walworth County, WI 2019</resTitle>
+      <date>
+        <pubDate>2019-04-22T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Walworth County Land Information Division</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>1800 County Trunk NN </delPoint>
+            <city>Elkhorn</city>
+            <adminArea>WI</adminArea>
+            <postCode>53121</postCode>
+            <country>US</country>
+            <eMailAdd>landinfo@co.walworth.wi.us</eMailAdd>
+            <delPoint>PO Box 1001</delPoint>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">262-741-7811</voiceNum>
+            <faxNum>262-741-7841</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Dale Drayna</rpIndName>
+        <rpOrgName>Walworth County Land Information Division</rpOrgName>
+        <rpPosName>GIS Supervisor</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">262-741-7811</voiceNum>
+            <faxNum>262-741-7841</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>PO Box 1001</delPoint>
+            <delPoint>1800 County Trunk NN</delPoint>
+            <city>Elkhorn</city>
+            <adminArea>WI</adminArea>
+            <postCode>53121</postCode>
+            <country>US</country>
+            <eMailAdd>ddrayna@co.walworth.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Dale Drayna</displayName>
+      </citRespParty>
+      <resEd>2019</resEd>
+    </idCitation>
+    <idAbs>This data represents buildings for Walworth County, Wisconsin in 2019.</idAbs>
+    <idPurp>This data is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.</idPurp>
+    <idCredit>Walworth County Land Information Division</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Walworth County Land Information Division</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>1800 County Trunk NN </delPoint>
+            <city>Elkhorn</city>
+            <adminArea>WI</adminArea>
+            <postCode>53121</postCode>
+            <country>US</country>
+            <delPoint>PO Box 1001</delPoint>
+            <eMailAdd>landinfo@co.walworth.wi.us</eMailAdd>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">262-741-7811</voiceNum>
+            <faxNum>262-741-7841</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Walworth County Land Information Division</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Walworth County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Polygon</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Buildings</keyword>
+      <keyword>Structures</keyword>
+      <keyword>Walworth County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials. </useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-88.778458</westBL>
+          <eastBL>-88.304932</eastBL>
+          <southBL>42.492185</southBL>
+          <northBL>42.843671</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2019-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Buildings, Structures</keyword>
+    </themeKeys>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <suppInfo>For access to the most recent data for this county, please visit: https://open-walco.opendata.arcgis.com</suppInfo>
+    <idPoC>
+      <rpOrgName>Walworth County Land Information Division</rpOrgName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>1800 County Trunk NN </delPoint>
+          <city>Elkhorn</city>
+          <adminArea>WI</adminArea>
+          <postCode>53121</postCode>
+          <country>US</country>
+          <delPoint>PO Box 1001</delPoint>
+          <eMailAdd>landinfo@co.walworth.wi.us</eMailAdd>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">262-741-7811</voiceNum>
+          <faxNum>262-741-7841</faxNum>
+        </cntPhone>
+      </rpCntInfo>
+      <displayName>Walworth County Land Information Division</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-88.784538</westBL>
+          <eastBL Sync="TRUE">-88.295413</eastBL>
+          <northBL Sync="TRUE">42.848787</northBL>
+          <southBL Sync="TRUE">42.486024</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="017" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+      <rpPosName>Metadata Technician</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Provided access to archived data at UW-Madison.</stepDesc>
+        <stepDateTm>2019-04-22T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+          <rpPosName>Metadata Technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum tddtty="">608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday: 9:00am - 5:00pm CST - USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="001" />
+          </role>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="2289" Sync="FALSE" />
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+        <idVersion Sync="FALSE">9.6.1</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Walworth_Buildings_2019">
+      <enttyp>
+        <enttypl Sync="TRUE">Walworth_Buildings_2019</enttypl>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">86582</enttypc>
+        <enttypd>Buildings Walworth County, WI 2019</enttypd>
+        <enttypds>Walworth County Land Information Division</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>SHAPE</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TAG</attrlabl>
+        <attalias Sync="TRUE">TAG</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">32</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">BUILDINGTY</attrlabl>
+        <attalias Sync="TRUE">BUILDINGTY</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">QC1</attrlabl>
+        <attalias Sync="TRUE">QC1</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">QC2</attrlabl>
+        <attalias Sync="TRUE">QC2</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SHAPE_Leng</attrlabl>
+        <attalias Sync="TRUE">SHAPE_Leng</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Length</attrlabl>
+        <attalias Sync="TRUE">Shape_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Length of feature in internal units.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Area</attrlabl>
+        <attalias Sync="TRUE">Shape_Area</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Area of feature in internal units squared.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Walworth_Buildings_2019">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">86582</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Walworth_Buildings_2019">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="4" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">86582</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20190422</mdDateSt>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKK4/xVp+sS6atjYZaz2gymV1Lcc8k9AMZzn+goA7AkDqcUV5hZaLr4jRJLqaKa8LxMkg
+MnygA/N1AFdppdtd2nnx+XaqyAKoj3LvPHzHOe31+vFAG3RUcauq42qABwAf8+9Qh7gyp5QQwhm3
+seSw7befw5/AUAWqjSeGQApKjAjI2sDmjevmiIP823cR3xmsyILNrl1ueZVUD5WOBn5cEd+oPXg9
+qANQSxl9gkQv/dzzSSTwxMqySohbJAZgM461QW0P29ruN1Q3KKCC7ZOBxgAgY6/mT3qGeBLuaMI0
+StG+SkpDrLle3JI7c4B47igDVW4hYoFlQmTOzDD5sdcfSpOlQBUSNS4j27cM/rn6+pPvUFzqMNoi
+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</Data>
+    </Thumbnail>
+  </Binary>
+  <mdFileID>7021C44E-C4F6-45F0-B2BC-2DE72F4BC320</mdFileID>
+</metadata>

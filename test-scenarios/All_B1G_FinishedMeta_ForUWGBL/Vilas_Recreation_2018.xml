@@ -1,0 +1,797 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20190304</CreaDate>
+    <CreaTime>10050200</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <ArcGISstyle>FGDC CSDGM Metadata</ArcGISstyle>
+    <DataProperties>
+      <itemProps>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\Vilas_Recreation_2018.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemName Sync="TRUE">Vilas_Recreation_2018</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">302089.707651</westBL>
+          <eastBL Sync="TRUE">581576.829122</eastBL>
+          <southBL Sync="TRUE">99940.239787</southBL>
+          <northBL Sync="TRUE">236207.281065</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <lineage>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20110906" Time="093814" Name="" export="">CalculateField "Facility Site Points" FACILITYID ""FAC-" &amp; [OBJECTID]" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20110906" Time="133825" Name="" export="">CalculateField "Facility Site Points" OWNTYPE "Municipal" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20110906" Time="133913" Name="" export="">CalculateField "Facility Site Points" OWNER "Naperville Park District" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20141108" Time="074042" Name="" export="">CalculateField "Facility Site Points" FACILITYID ""FAC-" &amp; [OBJECTID]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20141109" Time="074626" Name="" export="">CalculateField "Facility Site Points" LASTEDITOR "Esri" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20141109" Time="074643" Name="" export="">CalculateField "Facility Site Points" LASTUPDATE "Now (  )" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20170206" Time="111031" Name="" export="">Append 'Points of Interest' "Facility Site Points" NO_TEST "facilityid "Facility Identifier" true true false 50 Text 0 0 ,First,#;name "Name of Facility" true true false 255 Text 0 0 ,First,#,Points of Interest,Name,-1,-1;owner "Owner Name" true true false 50 Text 0 0 ,First,#;owntype "Owner Type" true true false 50 Text 0 0 ,First,#,Points of Interest,Owner,-1,-1;subtypefield "Subtype Field" true true false 4 Long 0 10 ,First,#;featurecode "Feature Code" true true false 100 Text 0 0 ,First,#;fulladdr "Full Address" true true false 250 Text 0 0 ,First,#,Points of Interest,Address,-1,-1;municipality "Municipality Name" true true false 100 Text 0 0 ,First,#;state "State Name" true true false 2 Text 0 0 ,First,#;capturemeth "Capture Method" true true false 30 Text 0 0 ,First,#;locationtype "Location Type" true true false 30 Text 0 0 ,First,#;descript "Description" true true false 254 Text 0 0 ,First,#;facarea "Facility Area" true true false 8 Double 8 38 ,First,#;lastupdate "Last Update Date" true true false 8 Date 0 0 ,First,#,Points of Interest,EditDate,-1,-1;lasteditor "Last Editor" true true false 50 Text 0 0 ,First,#,Points of Interest,Editor,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20170206" Time="133808" Name="" export="">Append 'Points of Interest' "Facility Site Points" NO_TEST "facilityid "Facility Identifier" true true false 50 Text 0 0 ,First,#;name "Name of Facility" true true false 255 Text 0 0 ,First,#,Points of Interest,Name,-1,-1;owner "Owner Name" true true false 50 Text 0 0 ,First,#;owntype "Owner Type" true true false 50 Text 0 0 ,First,#,Points of Interest,Owner,-1,-1;subtypefield "Subtype Field" true true false 4 Long 0 10 ,First,#;featurecode "Feature Code" true true false 100 Text 0 0 ,First,#;fulladdr "Full Address" true true false 250 Text 0 0 ,First,#,Points of Interest,Address,-1,-1;municipality "Municipality Name" true true false 100 Text 0 0 ,First,#;state "State Name" true true false 2 Text 0 0 ,First,#;capturemeth "Capture Method" true true false 30 Text 0 0 ,First,#;locationtype "Location Type" true true false 30 Text 0 0 ,First,#;descript "Description" true true false 254 Text 0 0 ,First,#;facarea "Facility Area" true true false 8 Double 8 38 ,First,#;lastupdate "Last Update Date" true true false 8 Date 0 0 ,First,#,Points of Interest,EditDate,-1,-1;lasteditor "Last Editor" true true false 50 Text 0 0 ,First,#,Points of Interest,Editor,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20170207" Time="125900" Name="" export="">Append 'Points of Interest' "Facility Site Points" NO_TEST "facilityid "Facility Identifier" true true false 50 Text 0 0 ,First,#;name "Name of Facility" true true false 255 Text 0 0 ,First,#,Points of Interest,Name,-1,-1;owner "Owner Name" true true false 50 Text 0 0 ,First,#;owntype "Owner Type" true true false 50 Text 0 0 ,First,#,Points of Interest,Owner,-1,-1;subtypefield "Subtype Field" true true false 4 Long 0 10 ,First,#;featurecode "Feature Code" true true false 100 Text 0 0 ,First,#,Points of Interest,Type,-1,-1;fulladdr "Full Address" true true false 250 Text 0 0 ,First,#,Points of Interest,Address,-1,-1;municipality "Municipality Name" true true false 100 Text 0 0 ,First,#;state "State Name" true true false 2 Text 0 0 ,First,#;capturemeth "Capture Method" true true false 30 Text 0 0 ,First,#;locationtype "Location Type" true true false 30 Text 0 0 ,First,#;descript "Description" true true false 254 Text 0 0 ,First,#;facarea "Facility Area" true true false 8 Double 8 38 ,First,#;lastupdate "Last Update Date" true true false 8 Date 0 0 ,First,#,Points of Interest,EditDate,-1,-1;lasteditor "Last Editor" true true false 50 Text 0 0 ,First,#,Points of Interest,Editor,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20170207" Time="133542" Name="" export="">Append 'Transportation Points' "Facility Site Points" NO_TEST "facilityid "Facility Identifier" true true false 50 Text 0 0 ,First,#;name "Name of Facility" true true false 255 Text 0 0 ,First,#,Transportation Points,Name,-1,-1;owner "Owner Name" true true false 50 Text 0 0 ,First,#;owntype "Owner Type" true true false 50 Text 0 0 ,First,#,Transportation Points,Ownership,-1,-1;subtypefield "Subtype Field" true true false 4 Long 0 10 ,First,#;featurecode "Feature Code" true true false 100 Text 0 0 ,First,#,Transportation Points,Type,-1,-1;fulladdr "Full Address" true true false 250 Text 0 0 ,First,#,Transportation Points,Address,-1,-1;municipality "Municipality Name" true true false 100 Text 0 0 ,First,#,Transportation Points,Municipality,-1,-1;state "State Name" true true false 2 Text 0 0 ,First,#;capturemeth "Capture Method" true true false 30 Text 0 0 ,First,#;locationtype "Location Type" true true false 30 Text 0 0 ,First,#;descript "Description" true true false 254 Text 0 0 ,First,#,Transportation Points,Comment,-1,-1;facarea "Facility Area" true true false 8 Double 8 38 ,First,#;lastupdate "Last Update Date" true true false 8 Date 0 0 ,First,#,Transportation Points,EditDate,-1,-1;lasteditor "Last Editor" true true false 50 Text 0 0 ,First,#,Transportation Points,Editor,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20170310" Time="092016" Name="" export="">Append 'Recreation Trail Points' "Facility Site Points" NO_TEST "facilityid "Facility Identifier" true true false 50 Text 0 0 ,First,#;name "Name of Facility" true true false 255 Text 0 0 ,First,#,Recreation Trail Points,TrailName,-1,-1;owner "Owner Name" true true false 50 Text 0 0 ,First,#,Recreation Trail Points,Owner,-1,-1;owntype "Owner Type" true true false 50 Text 0 0 ,First,#;subtypefield "Subtype Field" true true false 4 Long 0 10 ,First,#;featurecode "Feature Code" true true false 100 Text 0 0 ,First,#;fulladdr "Full Address" true true false 250 Text 0 0 ,First,#;municipality "Municipality Name" true true false 100 Text 0 0 ,First,#;state "State Name" true true false 2 Text 0 0 ,First,#;capturemeth "Capture Method" true true false 30 Text 0 0 ,First,#;locationtype "Location Type" true true false 30 Text 0 0 ,First,#;descript "Description" true true false 254 Text 0 0 ,First,#;facarea "Facility Area" true true false 8 Double 8 38 ,First,#;lastupdate "Last Update Date" true true false 8 Date 0 0 ,First,#;lasteditor "Last Editor" true true false 50 Text 0 0 ,First,#" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20170310" Time="092951" Name="" export="">Append 'Recreation Trail Points' "Facility Site Points" NO_TEST "facilityid "Facility Identifier" true true false 50 Text 0 0 ,First,#;name "Name of Facility" true true false 255 Text 0 0 ,First,#,Recreation Trail Points,TrailName,-1,-1;owner "Owner Name" true true false 50 Text 0 0 ,First,#,Recreation Trail Points,Owner,-1,-1;owntype "Owner Type" true true false 50 Text 0 0 ,First,#;subtypefield "Subtype Field" true true false 4 Long 0 10 ,First,#;featurecode "Feature Code" true true false 100 Text 0 0 ,First,#;fulladdr "Full Address" true true false 250 Text 0 0 ,First,#;municipality "Municipality Name" true true false 100 Text 0 0 ,First,#;state "State Name" true true false 2 Text 0 0 ,First,#;capturemeth "Capture Method" true true false 30 Text 0 0 ,First,#;locationtype "Location Type" true true false 30 Text 0 0 ,First,#;descript "Description" true true false 254 Text 0 0 ,First,#;facarea "Facility Area" true true false 8 Double 8 38 ,First,#;lastupdate "Last Update Date" true true false 8 Date 0 0 ,First,#;lasteditor "Last Editor" true true false 50 Text 0 0 ,First,#" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190111" Time="160051" Name="" export="">CalculateField "Facility Site Points" facilityid [name] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190111" Time="160101" Name="" export="">CalculateField "Facility Site Points" name NULL VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190304" Time="110141" Name="" export="">CalculateField VILAS_RECREATION_2018 LINK "https://maps.vilascountywi.gov/webdocs/DataDictionary.htm" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20190304" Time="145203" Name="" export="">FeatureClassToFeatureClass P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018 P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\Vilas_Recreation_2018.gdb Vilas_Recreation_2018 # "facilityid "Facility Identifier" true true false 50 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018,facilityid,-1,-1;name "Name of Facility" true true false 255 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018,name,-1,-1;owner "Owner Name" true true false 50 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018,owner,-1,-1;owntype "Owner Type" true true false 50 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018,owntype,-1,-1;subtypefield "Subtype Field" true true false 4 Long 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018,subtypefield,-1,-1;featurecode "Feature Code" true true false 100 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018,featurecode,-1,-1;fulladdr "Full Address" true true false 250 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018,fulladdr,-1,-1;municipality "Municipality Name" true true false 100 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018,municipality,-1,-1;state "State Name" true true false 2 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018,state,-1,-1;capturemeth "Capture Method" true true false 30 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018,capturemeth,-1,-1;locationtype "Location Type" true true false 30 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018,locationtype,-1,-1;descript "Description" true true false 254 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018,descript,-1,-1;facarea "Facility Area" true true false 8 Double 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018,facarea,-1,-1;lastupdate "Last Update Date" true true false 8 Date 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018,lastupdate,-1,-1;lasteditor "Last Editor" true true false 50 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018,lasteditor,-1,-1;globalid "globalid" false false false 38 GlobalID 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018,globalid,-1,-1;created_user "created_user" true true false 255 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018,created_user,-1,-1;created_date "created_date" true true false 8 Date 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018,created_date,-1,-1;last_edited_user "last_edited_user" true true false 255 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018,last_edited_user,-1,-1;last_edited_date "last_edited_date" true true false 8 Date 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018,last_edited_date,-1,-1;LINK "LINK" true true false 100 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\Vilas\VILAS_OTHER.gdb\VILAS_RECREATION_2018,LINK,-1,-1" #</Process>
+      </lineage>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_WISCRS_Vilas_County_Feet</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_WISCRS_Vilas_County_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Lambert_Conformal_Conic&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,441000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,165147.666],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-89.48888888888889],PARAMETER[&amp;quot;Standard_Parallel_1&amp;quot;,46.07784409055556],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,1.0000730142],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,46.07784409055556],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;Esri&amp;quot;,103463]]&lt;/WKT&gt;&lt;XOrigin&gt;-17463800&lt;/XOrigin&gt;&lt;YOrigin&gt;-46132600&lt;/YOrigin&gt;&lt;XYScale&gt;2438.40487680975&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.00328083333333333&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;103463&lt;/WKID&gt;&lt;LatestWKID&gt;103463&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20190306</SyncDate>
+    <SyncTime>11411800</SyncTime>
+    <ModDate>20190306</ModDate>
+    <ModTime>11411800</ModTime>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKiu
+pkt7SaaSaKBEQsZZfuJgdW5HA+ooAlorBjub/R7UX/iDWNOFhDZoLiQQmIedu5fcWICkEADHX8q0
+3sEl1SDUPtFyGiieMRLKRE4YqdzL0JG3g9smgC3RRXDeLNX8UaXrkD7rWy8LAxmfUYyhlhO4FvME
+hChCAVyoJ+YY54oA7miqlxqdra3tlaSuwmvWZYAsbMGKruOSBgcDuRmrdABRRRQAUUUUAFFFZMWr
+XcNrZNqWlzQ3N1cmDyrbNwsQy213YAYUhQSccbgKANaiiigCpfalBp7WqzLMftMwgQxQs4ViCctg
+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
+UAFFFFABRRRQAUUUUAf/2Q==</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorFormat>
+        <formatName>ESRI Geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Vilas_Recreation_2018.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <onLineSrc>
+        <linkage>https://maps.vilascountywi.gov/data.html</linkage>
+        <protocol>WWW:LINK-1.0-http--link</protocol>
+        <orName>Vilas County Online Mapping</orName>
+        <orFunct>
+          <OnFunctCd value="002" />
+        </orFunct>
+        <orDesc>Online resource for Vilas County GIS data</orDesc>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.5</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Vilas County Land Information and Mapping Department</rpOrgName>
+        <displayName>Vilas County Land Information and Mapping Department</displayName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>330 Court St</delPoint>
+            <city>Eagle River</city>
+            <adminArea>WI</adminArea>
+            <postCode>54521-8362</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>715-479-3655 x5</voiceNum>
+            <faxNum>715-479-3605</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Vilas County Land Information and Mapping Department</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Recreation Vilas County, WI 2018</resTitle>
+      <date>
+        <pubDate>2019-03-06T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Vilas County Land Information and Mapping Department</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Vilas County Land Information and Mapping Department</displayName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>330 Court St</delPoint>
+            <city>Eagle River</city>
+            <adminArea>WI</adminArea>
+            <postCode>54521-8362</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>715-479-3655 x5</voiceNum>
+            <faxNum>715-479-3605</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Barb Gibson</rpIndName>
+        <rpOrgName>Vilas County Land Information and Mapping Department</rpOrgName>
+        <rpPosName>GIS Administrator/LIO</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>715-479-3655 x5</voiceNum>
+            <faxNum>715-479-3605</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>330 Court St</delPoint>
+            <city>Eagle River</city>
+            <adminArea>WI</adminArea>
+            <postCode>54521-8362</postCode>
+            <country>US</country>
+            <eMailAdd>bagibs@co.vilas.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Barb Gibson</displayName>
+      </citRespParty>
+      <resEd>2018</resEd>
+    </idCitation>
+    <idAbs>This data layer represents recreational facilities for Vilas County, Wisconsin in 2018.[Points that represent significant facility locations in a community. Examples include schools, government facilities, stadiums, casinos, and fire stations. In some cases, there may be multiple FacilitySitePoints for a single FacilitySite polygon. Additional information about each Facility can be organized in to separate tables and related to these locations using the FacilityID key. The feature classification and type schema for the facility sites grew out of work with the Department of Homeland Security's HSIP Program and has evolved to support a diverse set of facilities inventoried for a variety of uses by a local government.]</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. [Facility Site Points.]</idPurp>
+    <idCredit>Vilas County Land Information and Mapping Department</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Vilas County Land Information and Mapping Department</rpOrgName>
+        <displayName>Vilas County Land Information and Mapping Department</displayName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>330 Court St</delPoint>
+            <city>Eagle River</city>
+            <adminArea>WI</adminArea>
+            <postCode>54521-8362</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>715-479-3655 x5</voiceNum>
+            <faxNum>715-479-3605</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Vilas County Land Information and Mapping Department</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Vilas County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Point</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Recreation</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Recreation</keyword>
+      <keyword>Facilities</keyword>
+      <keyword>Vilas County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-90.045966</westBL>
+          <eastBL>-88.933567</eastBL>
+          <southBL>45.854089</southBL>
+          <northBL>46.300156</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2018-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements.
+
+For complete metadata documentation, please visit https://maps.vilascountywi.gov/data.html
+
+This data was submitted to the UW geospatial archive in 2019. Content may be considered current as of December 31, 2018. It was published to the UW geospatial archive as part of the Wisconsin Department of Administration Land Information Program annual collection of public data for the year 2019.</suppInfo>
+    <idPoC>
+      <rpOrgName>Vilas County Land Information and Mapping Department</rpOrgName>
+      <displayName>Vilas County Land Information and Mapping Department</displayName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>330 Court St</delPoint>
+          <city>Eagle River</city>
+          <adminArea>WI</adminArea>
+          <postCode>54521-8362</postCode>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">715-479-3655 x5</voiceNum>
+          <faxNum>715-479-3605</faxNum>
+        </cntPhone>
+      </rpCntInfo>
+      <displayName>Vilas County Land Information and Mapping Department</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-90.038122</westBL>
+          <eastBL Sync="TRUE">-88.933067</eastBL>
+          <northBL Sync="TRUE">46.272684</northBL>
+          <southBL Sync="TRUE">45.897707</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <resConst>
+      <Consts>
+        <useLimit>None.</useLimit>
+      </Consts>
+    </resConst>
+    <tpCat>
+      <TopicCatCd value="016" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <editorSource>external</editorSource>
+      <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <editorSave>True</editorSave>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Provided access to archived data at UW-Madison.</stepDesc>
+        <stepDateTm>2019-03-06T00:00:00</stepDateTm>
+        <stepProc>
+          <editorSource>external</editorSource>
+          <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+          <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+          <rpPosName>metadata technician</rpPosName>
+          <rpCntInfo>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+              <country>US</country>
+            </cntAddress>
+            <cntPhone>
+              <voiceNum tddtty="">(608) 262-1471</voiceNum>
+            </cntPhone>
+            <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+          </rpCntInfo>
+          <displayName>Arthur H. Robinson Map Library</displayName>
+          <editorSave>True</editorSave>
+          <displayName>Arthur H. Robinson Map Library</displayName>
+          <role>
+            <RoleCd value="001" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="7638" Sync="FALSE" />
+        <idCodeSpace Sync="FALSE">EPSG</idCodeSpace>
+        <idVersion Sync="FALSE">9.5.5</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Vilas_Recreation_2018">
+      <enttyp>
+        <enttypl Sync="TRUE">Vilas_Recreation_2018</enttypl>
+        <enttypd>Recreation Vilas County, WI 2018</enttypd>
+        <enttypds>Vilas County Land Information and Mapping Department</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">428</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">facilityid</attrlabl>
+        <attalias Sync="TRUE">Facility Identifier</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">name</attrlabl>
+        <attalias Sync="TRUE">Name of Facility</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">owner</attrlabl>
+        <attalias Sync="TRUE">Owner Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">owntype</attrlabl>
+        <attalias Sync="TRUE">Owner Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">subtypefield</attrlabl>
+        <attalias Sync="TRUE">Subtype Field</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">featurecode</attrlabl>
+        <attalias Sync="TRUE">Feature Code</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">fulladdr</attrlabl>
+        <attalias Sync="TRUE">Full Address</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">250</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">municipality</attrlabl>
+        <attalias Sync="TRUE">Municipality Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">state</attrlabl>
+        <attalias Sync="TRUE">State Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">capturemeth</attrlabl>
+        <attalias Sync="TRUE">Capture Method</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">locationtype</attrlabl>
+        <attalias Sync="TRUE">Location Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">descript</attrlabl>
+        <attalias Sync="TRUE">Description</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">254</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">facarea</attrlabl>
+        <attalias Sync="TRUE">Facility Area</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">lastupdate</attrlabl>
+        <attalias Sync="TRUE">Last Update Date</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">lasteditor</attrlabl>
+        <attalias Sync="TRUE">Last Editor</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">globalid</attrlabl>
+        <attalias Sync="TRUE">globalid</attalias>
+        <attrtype Sync="TRUE">GlobalID</attrtype>
+        <attwidth Sync="TRUE">38</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">created_user</attrlabl>
+        <attalias Sync="TRUE">created_user</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">created_date</attrlabl>
+        <attalias Sync="TRUE">created_date</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">last_edited_user</attrlabl>
+        <attalias Sync="TRUE">last_edited_user</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">last_edited_date</attrlabl>
+        <attalias Sync="TRUE">last_edited_date</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LINK</attrlabl>
+        <attalias Sync="TRUE">LINK</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Vilas_Recreation_2018">
+        <geoObjTyp>
+          <GeoObjTypCd value="004" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">428</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Vilas_Recreation_2018">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="1" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">428</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20190306</mdDateSt>
+  <mdFileID>20766FAE-91A5-42EB-A1CA-9F255276B782</mdFileID>
+  <mdContact>
+    <editorSource>external</editorSource>
+    <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        <country>US</country>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum tddtty="">(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+    </rpCntInfo>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+    <editorSave>True</editorSave>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+</metadata>

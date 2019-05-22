@@ -1,0 +1,739 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20110303</CreaDate>
+    <CreaTime>15023900</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <itemProps>
+        <itemName Sync="TRUE">GreenLake_Roads_2018</itemName>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\data\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\GreenLake\GreenLake_Roads_2018.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <nativeExtBox>
+          <westBL Sync="TRUE">488987.600895</westBL>
+          <eastBL Sync="TRUE">620540.955570</eastBL>
+          <southBL Sync="TRUE">195905.398422</southBL>
+          <northBL Sync="TRUE">355470.598320</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <projcsn Sync="TRUE">NAD_1983_HARN_WISCRS_GreenLake_County_Feet</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_WISCRS_GreenLake_County_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Lambert_Conformal_Conic&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,495000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,259746.132],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-89.24166666666667],PARAMETER[&amp;quot;Standard_Parallel_1&amp;quot;,43.80700011777778],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,1.0000344057],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,43.80700011777778],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;Esri&amp;quot;,103423]]&lt;/WKT&gt;&lt;XOrigin&gt;-119472300&lt;/XOrigin&gt;&lt;YOrigin&gt;-97856000&lt;/YOrigin&gt;&lt;XYScale&gt;3048.0060960121914&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.0032808333333333335&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;103423&lt;/WKID&gt;&lt;LatestWKID&gt;103423&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+      </coordRef>
+      <lineage>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20110322" Time="142216" Name="" export="">CopyFeatures K:\Geodatabase\Geodatabase.mdb\Address\Road K:\Geodatabase\FileGeodatabase.gdb\Address\Road # 0 0 0</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\RepairGeometry" Date="20110324" Time="113037" Name="" export="">RepairGeometry K:\Geodatabase\FileGeodatabase.gdb\Address\Road DELETE_NULL</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20110609" Time="134946" Name="" export="">CalculateField Road FullName g VB "Dim c, d, e, f , g\n\nc = [PreDir]\nd = [Street]\ne = [Type]\nf = [PostDir]\n\nIf (c = "") Or IsNull(c) Then\n  c = ""\nElse\n  c = c &amp; " "\nEnd If\n\nIf (d = "") Or IsNull(d) Then\n  d = ""\nElse\n  d = d &amp; " "\nEnd If\n\nIf (e = "") Or IsNull(e) Then\n  e = ""\nElse\n  e = e &amp; " "\nEnd If\n\nIf (f = "") Or IsNull(f) Then\n  f = ""\nElse\n  f = f &amp; " "\nEnd If\n\ng = RTrim(c &amp; d &amp; e &amp; f)\n"</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20110609" Time="135230" Name="" export="">CalculateField Road NumPre "" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20110609" Time="135248" Name="" export="">CalculateField Road Type "" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20110609" Time="135318" Name="" export="">CalculateField Road FromLeft "" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20110609" Time="135459" Name="" export="">CalculateField Road PreDir "" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20110609" Time="135645" Name="" export="">CalculateField Road PostDir "" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130213" Time="141557" Name="" export="">CalculateField RoadCenterline Snow [SnowPlow] VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130213" Time="142322" Name="" export="">CalculateField RoadCenterline SnowPlow [Snow] VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20140519" Time="084435" Name="" export="">CopyFeatures J:\Geodatabase\Geodatabase.gdb\Address\RoadCenterline "Database Servers\GEO_GLCGISDB.gds\ArcSDEGeodatabase (VERSION:dbo.DEFAULT)\ArcSDEGeodatabase.DBO.Address\ArcSDEGeodatabase.DBO.RoadCenterline" # 0 0 0</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150112" Time="110824" Name="" export="">CalculateField RoadCenterline SnowPlow "28" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150112" Time="125611" Name="" export="">CalculateField RoadCenterline SnowPlow "27" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150112" Time="130304" Name="" export="">CalculateField RoadCenterline SnowPlow "44" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150112" Time="130420" Name="" export="">CalculateField RoadCenterline SnowPlow "54" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150112" Time="131848" Name="" export="">CalculateField RoadCenterline SnowPlow "28/44" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161018" Time="121653" Name="" export="">CalculateField RoadCenterline FullName g VB "Dim c, d, e, f , g\n\nc = [PreDir]\nd = [Street]\ne = [Type]\nf = [PostDir]\n\nIf (c = "") Or (c = " ") Or IsNull(c) Then\n  c = ""\nElse\n  c = c &amp; " "\nEnd If\n\nIf (d = "") Or (d = " ") Or IsNull(d) Then\n  d = ""\nElse\n  d = d &amp; " "\nEnd If\n\nIf (e = "") Or (e = " ") Or IsNull(e) Then\n  e = ""\nElse\n  e = e &amp; " "\nEnd If\n\nIf (f = "") Or (f = " ") Or IsNull(f) Then\n  f = ""\nElse\n  f = f &amp; " "\nEnd If\n\ng = RTrim(c &amp; d &amp; e &amp; f)\n\n\n"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171106" Time="151845" Name="" export="">CalculateField RoadCenterline SnowPlow 50 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171106" Time="152035" Name="" export="">CalculateField RoadCenterline SnowPlow 53 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171106" Time="152901" Name="" export="">CalculateField RoadCenterline SnowPlow 28 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171106" Time="153138" Name="" export="">CalculateField RoadCenterline SnowPlow 52 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171106" Time="155337" Name="" export="">CalculateField RoadCenterline SnowPlow 30 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171106" Time="160044" Name="" export="">CalculateField RoadCenterline SnowPlow 44/50 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171106" Time="160119" Name="" export="">CalculateField RoadCenterline SnowPlow "44/50" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20180307" Time="085854" Name="" export="">FeatureClassToFeatureClass "Database Connections\Connection to turf.sde\ArcSDEGeodatabase.DBO.Address\ArcSDEGeodatabase.DBO.RoadCenterline" C:\Users\gstanuch\Desktop\GREEN_LAKE_OTHER.gdb GREEN_LAKE_ROADS_2018 # "FullName "FullName" true true false 50 Text 0 0 ,First,#,Database Connections\Connection to turf.sde\ArcSDEGeodatabase.DBO.Address\ArcSDEGeodatabase.DBO.RoadCenterline,FullName,-1,-1;NumPre "NumPre" true true false 1 Text 0 0 ,First,#,Database Connections\Connection to turf.sde\ArcSDEGeodatabase.DBO.Address\ArcSDEGeodatabase.DBO.RoadCenterline,NumPre,-1,-1;PreDir "PreDir" true true false 2 Text 0 0 ,First,#,Database Connections\Connection to turf.sde\ArcSDEGeodatabase.DBO.Address\ArcSDEGeodatabase.DBO.RoadCenterline,PreDir,-1,-1;Street "Street" true true false 50 Text 0 0 ,First,#,Database Connections\Connection to turf.sde\ArcSDEGeodatabase.DBO.Address\ArcSDEGeodatabase.DBO.RoadCenterline,Street,-1,-1;Type "Type" true true false 4 Text 0 0 ,First,#,Database Connections\Connection to turf.sde\ArcSDEGeodatabase.DBO.Address\ArcSDEGeodatabase.DBO.RoadCenterline,Type,-1,-1;PostDir "PostDir" true true false 2 Text 0 0 ,First,#,Database Connections\Connection to turf.sde\ArcSDEGeodatabase.DBO.Address\ArcSDEGeodatabase.DBO.RoadCenterline,PostDir,-1,-1;FromLeft "FromLeft" true true false 2 Short 0 5 ,First,#,Database Connections\Connection to turf.sde\ArcSDEGeodatabase.DBO.Address\ArcSDEGeodatabase.DBO.RoadCenterline,FromLeft,-1,-1;ToLeft "ToLeft" true true false 2 Short 0 5 ,First,#,Database Connections\Connection to turf.sde\ArcSDEGeodatabase.DBO.Address\ArcSDEGeodatabase.DBO.RoadCenterline,ToLeft,-1,-1;FromRight "FromRight" true true false 2 Short 0 5 ,First,#,Database Connections\Connection to turf.sde\ArcSDEGeodatabase.DBO.Address\ArcSDEGeodatabase.DBO.RoadCenterline,FromRight,-1,-1;ToRight "ToRight" true true false 2 Short 0 5 ,First,#,Database Connections\Connection to turf.sde\ArcSDEGeodatabase.DBO.Address\ArcSDEGeodatabase.DBO.RoadCenterline,ToRight,-1,-1;Class "Class" true true false 3 Text 0 0 ,First,#,Database Connections\Connection to turf.sde\ArcSDEGeodatabase.DBO.Address\ArcSDEGeodatabase.DBO.RoadCenterline,Class,-1,-1;County "County" true true false 20 Text 0 0 ,First,#,Database Connections\Connection to turf.sde\ArcSDEGeodatabase.DBO.Address\ArcSDEGeodatabase.DBO.RoadCenterline,County,-1,-1;CVTLeft "CVTLeft" true true false 3 Text 0 0 ,First,#,Database Connections\Connection to turf.sde\ArcSDEGeodatabase.DBO.Address\ArcSDEGeodatabase.DBO.RoadCenterline,CVTLeft,-1,-1;CVTRight "CVTRight" true true false 3 Text 0 0 ,First,#,Database Connections\Connection to turf.sde\ArcSDEGeodatabase.DBO.Address\ArcSDEGeodatabase.DBO.RoadCenterline,CVTRight,-1,-1;SnowPlow "SnowPlow" true true false 5 Text 0 0 ,First,#,Database Connections\Connection to turf.sde\ArcSDEGeodatabase.DBO.Address\ArcSDEGeodatabase.DBO.RoadCenterline,SnowPlow,-1,-1;Weight "Weight" true true false 1 Text 0 0 ,First,#,Database Connections\Connection to turf.sde\ArcSDEGeodatabase.DBO.Address\ArcSDEGeodatabase.DBO.RoadCenterline,Weight,-1,-1;SHAPE_len "SHAPE_len" false false true 0 Double 0 0 ,First,#,Database Connections\Connection to turf.sde\ArcSDEGeodatabase.DBO.Address\ArcSDEGeodatabase.DBO.RoadCenterline,SHAPE.len,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20180309" Time="105653" Name="" export="">FeatureClassToFeatureClass R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\GreenLake\GREEN_LAKE_OTHER.gdb\GREEN_LAKE_ROADS_2018 R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\GreenLake\GreenLake_Roads_2018.gdb GreenLake_Roads_2018 # "FullName "FullName" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\GreenLake\GREEN_LAKE_OTHER.gdb\GREEN_LAKE_ROADS_2018,FullName,-1,-1;NumPre "NumPre" true true false 1 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\GreenLake\GREEN_LAKE_OTHER.gdb\GREEN_LAKE_ROADS_2018,NumPre,-1,-1;PreDir "PreDir" true true false 2 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\GreenLake\GREEN_LAKE_OTHER.gdb\GREEN_LAKE_ROADS_2018,PreDir,-1,-1;Street "Street" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\GreenLake\GREEN_LAKE_OTHER.gdb\GREEN_LAKE_ROADS_2018,Street,-1,-1;Type "Type" true true false 4 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\GreenLake\GREEN_LAKE_OTHER.gdb\GREEN_LAKE_ROADS_2018,Type,-1,-1;PostDir "PostDir" true true false 2 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\GreenLake\GREEN_LAKE_OTHER.gdb\GREEN_LAKE_ROADS_2018,PostDir,-1,-1;FromLeft "FromLeft" true true false 2 Short 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\GreenLake\GREEN_LAKE_OTHER.gdb\GREEN_LAKE_ROADS_2018,FromLeft,-1,-1;ToLeft "ToLeft" true true false 2 Short 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\GreenLake\GREEN_LAKE_OTHER.gdb\GREEN_LAKE_ROADS_2018,ToLeft,-1,-1;FromRight "FromRight" true true false 2 Short 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\GreenLake\GREEN_LAKE_OTHER.gdb\GREEN_LAKE_ROADS_2018,FromRight,-1,-1;ToRight "ToRight" true true false 2 Short 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\GreenLake\GREEN_LAKE_OTHER.gdb\GREEN_LAKE_ROADS_2018,ToRight,-1,-1;Class "Class" true true false 3 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\GreenLake\GREEN_LAKE_OTHER.gdb\GREEN_LAKE_ROADS_2018,Class,-1,-1;County "County" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\GreenLake\GREEN_LAKE_OTHER.gdb\GREEN_LAKE_ROADS_2018,County,-1,-1;CVTLeft "CVTLeft" true true false 3 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\GreenLake\GREEN_LAKE_OTHER.gdb\GREEN_LAKE_ROADS_2018,CVTLeft,-1,-1;CVTRight "CVTRight" true true false 3 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\GreenLake\GREEN_LAKE_OTHER.gdb\GREEN_LAKE_ROADS_2018,CVTRight,-1,-1;SnowPlow "SnowPlow" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\GreenLake\GREEN_LAKE_OTHER.gdb\GREEN_LAKE_ROADS_2018,SnowPlow,-1,-1;Weight "Weight" true true false 1 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\GreenLake\GREEN_LAKE_OTHER.gdb\GREEN_LAKE_ROADS_2018,Weight,-1,-1;Shape_Length "Shape_Length" false true true 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\GreenLake\GREEN_LAKE_OTHER.gdb\GREEN_LAKE_ROADS_2018,Shape_Length,-1,-1" #</Process>
+      </lineage>
+    </DataProperties>
+    <SyncDate>20190501</SyncDate>
+    <SyncTime>11072500</SyncTime>
+    <ModDate>20190501</ModDate>
+    <ModTime>11072500</ModTime>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <editorSource>external</editorSource>
+    <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        <country>US</country>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum>(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+    </rpCntInfo>
+    <editorSave>True</editorSave>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distFormat>
+      <formatVer>10.3</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <editorSource>external</editorSource>
+        <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+        <rpPosName>metadata technician</rpPosName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>(608) 262-1471</voiceNum>
+          </cntPhone>
+          <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Arthur H. Robinson Map Library</displayName>
+        <role>
+          <RoleCd value="001" />
+        </role>
+      </distorCont>
+    </distributor>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Green Lake County Land Use Planning and Zoning Department</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="postal">
+            <delPoint>571 County Road A</delPoint>
+            <city>Green Lake</city>
+            <adminArea>WI</adminArea>
+            <postCode>54941-3188</postCode>
+            <country>US</country>
+            <delPoint>PO Box 3188</delPoint>
+            <eMailAdd>gstanuch@co.green-lake.wi.us</eMailAdd>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>920-294-4174</voiceNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Green Lake County Land Use Planning and Zoning Department</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Green Lake County Land Use Planning and Zoning Department</displayName>
+      </distorCont>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage> https://gisdata.wisc.edu/public/GreenLake_Roads_2018.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Roads Green Lake County, WI 2018</resTitle>
+      <presForm>
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+        <PresFormCd value="005" Sync="TRUE" />
+      </presForm>
+      <resAltTitle>GreenLake_Roads_2018</resAltTitle>
+      <date>
+        <pubDate>2018-04-06T00:00:00</pubDate>
+      </date>
+      <citRespParty>
+        <rpOrgName>Green Lake County Land Use Planning and Zoning Department</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="postal">
+            <delPoint>571 County Road A</delPoint>
+            <city>Green Lake</city>
+            <adminArea>WI</adminArea>
+            <postCode>54941-3188</postCode>
+            <country>US</country>
+            <delPoint>PO Box 3188</delPoint>
+            <eMailAdd>gstanuch@co.green-lake.wi.us</eMailAdd>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>920-294-4174</voiceNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Green Lake County Land Use Planning and Zoning Department</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Gerald Stanuch</rpIndName>
+        <rpOrgName>Green Lake County Land Use Planning and Zoning Department</rpOrgName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>571 County Road A</delPoint>
+            <city>Green Lake</city>
+            <adminArea>WI</adminArea>
+            <postCode>54941-3188</postCode>
+            <eMailAdd>gstanuch@co.green-lake.wi.us</eMailAdd>
+            <delPoint>PO Box 3188</delPoint>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>920-294-4174</voiceNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <resEdDate>20180101</resEdDate>
+    </idCitation>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.</idPurp>
+    <idAbs>This line data layer represents roads for Green Lake County, Wisconsin in 2018. It is a feature class within the geodatabase GreenLake_Roads_2018.gdb.</idAbs>
+    <idCredit>Green Lake RPL</idCredit>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Wisconsin</keyword>
+      <keyword>Green Lake County</keyword>
+    </placeKeys>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <dataExt>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2018-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <idPoC>
+      <rpOrgName>Green Lake County Land Use Planning and Zoning Department</rpOrgName>
+      <rpCntInfo>
+        <cntAddress addressType="postal">
+          <delPoint>571 County Road A</delPoint>
+          <city>Green Lake</city>
+          <adminArea>WI</adminArea>
+          <postCode>54941-3188</postCode>
+          <country>US</country>
+          <delPoint>PO Box 3188</delPoint>
+          <eMailAdd>gstanuch@co.green-lake.wi.us</eMailAdd>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">920-294-4174</voiceNum>
+        </cntPhone>
+      </rpCntInfo>
+      <displayName>Green Lake County Land Use Planning and Zoning Department</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+      <displayName>Green Lake County Land Use Planning and Zoning Department</displayName>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Green Lake County Land Use Planning and Zoning Department</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="postal">
+            <delPoint>571 County Road A</delPoint>
+            <city>Green Lake</city>
+            <adminArea>WI</adminArea>
+            <postCode>54941-3188</postCode>
+            <country>US</country>
+            <delPoint>PO Box 3188</delPoint>
+            <eMailAdd>gstanuch@co.green-lake.wi.us</eMailAdd>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>920-294-4174</voiceNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Green Lake County Land Use Planning and Zoning Department</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Green Lake County Land Use Planning and Zoning Department</displayName>
+      </maintCont>
+    </resMaint>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <searchKeys>
+      <keyword>Roads</keyword>
+      <keyword>Green Lake</keyword>
+      <keyword>Wisconsin</keyword>
+      <keyword>Line</keyword>
+    </searchKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Line</keyword>
+    </themeKeys>
+    <envirDesc Sync="TRUE">Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataLang>
+      <languageCode value="eng" Sync="TRUE" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <spatRpType>
+      <SpatRepTypCd value="001" Sync="TRUE" />
+    </spatRpType>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-89.264541</westBL>
+          <eastBL Sync="TRUE">-88.764052</eastBL>
+          <northBL Sync="TRUE">44.069582</northBL>
+          <southBL Sync="TRUE">43.630885</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Roads, Streets, Transportation</keyword>
+    </themeKeys>
+    <tpCat>
+      <TopicCatCd value="018" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <editorSource>external</editorSource>
+      <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum>(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+    </maintCont>
+  </mdMaint>
+  <mdConst>
+    <Consts>
+      <useLimit>None</useLimit>
+    </Consts>
+  </mdConst>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform to UW-Madison's data distribution plan. </stepDesc>
+        <stepDateTm>2018-03-13T00:00:00</stepDateTm>
+        <stepProc>
+          <editorSource>external</editorSource>
+          <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+          <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+          <rpPosName>metadata technician</rpPosName>
+          <rpCntInfo>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+              <country>US</country>
+            </cntAddress>
+            <cntPhone>
+              <voiceNum>(608) 262-1471</voiceNum>
+            </cntPhone>
+            <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+          </rpCntInfo>
+          <editorSave>True</editorSave>
+          <displayName>Arthur H. Robinson Map Library</displayName>
+          <role>
+            <RoleCd value="001" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="7609" Sync="FALSE" />
+        <idCodeSpace Sync="FALSE">EPSG</idCodeSpace>
+        <idVersion Sync="TRUE">9.2.0</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="GreenLake_Roads_2018">
+      <enttyp>
+        <enttypl Sync="TRUE">GreenLake_Roads_2018</enttypl>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">2613</enttypc>
+        <enttypd>Roads Green Lake County, WI 2018</enttypd>
+        <enttypds>Green Lake County Land Use Planning and Zoning Department</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FullName</attrlabl>
+        <attalias Sync="TRUE">FullName</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">NumPre</attrlabl>
+        <attalias Sync="TRUE">NumPre</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">1</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PreDir</attrlabl>
+        <attalias Sync="TRUE">PreDir</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Street</attrlabl>
+        <attalias Sync="TRUE">Street</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Type</attrlabl>
+        <attalias Sync="TRUE">Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PostDir</attrlabl>
+        <attalias Sync="TRUE">PostDir</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FromLeft</attrlabl>
+        <attalias Sync="TRUE">FromLeft</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ToLeft</attrlabl>
+        <attalias Sync="TRUE">ToLeft</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FromRight</attrlabl>
+        <attalias Sync="TRUE">FromRight</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ToRight</attrlabl>
+        <attalias Sync="TRUE">ToRight</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Class</attrlabl>
+        <attalias Sync="TRUE">Class</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">3</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">County</attrlabl>
+        <attalias Sync="TRUE">County</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CVTLeft</attrlabl>
+        <attalias Sync="TRUE">CVTLeft</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">3</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CVTRight</attrlabl>
+        <attalias Sync="TRUE">CVTRight</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">3</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SnowPlow</attrlabl>
+        <attalias Sync="TRUE">SnowPlow</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Weight</attrlabl>
+        <attalias Sync="TRUE">Weight</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">1</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Length</attrlabl>
+        <attalias Sync="TRUE">Shape_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Length of feature in internal units.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="GreenLake_Roads_2018">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">2613</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="GreenLake_Roads_2018">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="3" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">2613</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20190501</mdDateSt>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiigAooooAKKKKAI5po7ePzJW2pkAsegz6+lEU8czOIyx2HaSVIGc4OCeD0PSqd
+7egSG0jRmfjzd1s8ihCDzxwckY61maVaapHALM3zweSvWSJWaQkkl+/XI7k5zmtVTTjduwrmydRt
+1neHE5dACwFvIeCSByFwehpyXsUkixqk4LHALQOB0zySMDp3qjDDqMF8wlvYJGkiAV2tyN21mOOG
+xnDD64PpUkNze/aVjnaAjzvKYIhHPl78gk/h0ocI9P6/ADSooorIYUUUUAFFFFABRRRQAUUUUAFF
+FFABRRRQAUUUUAFFFFABRUc88dtEZZSVQdWCk49zjoPfoKSe4jtwpkLfM21QqFiTgnoAewNOzAlq
+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</Data>
+    </Thumbnail>
+  </Binary>
+  <mdFileID>E2646191-F40C-43B4-9C76-58FBC6E72D72</mdFileID>
+</metadata>

@@ -1,0 +1,896 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20110826</CreaDate>
+    <CreaTime>12012700</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process Name="Create Feature Class" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CreateFeatureclass" Date="20070606" Time="085632" export="">CreateFeatureclass C:\Data\NEW_SDE_IMPORT_DATA.mdb\Transportation Roads_temp # GIS_Layer SAME_AS_TEMPLATE SAME_AS_TEMPLATE "PROJCS['NAD_1927_StatePlane_Wisconsin_South_FIPS_4803',GEOGCS['GCS_North_American_1927',DATUM['D_North_American_1927',SPHEROID['Clarke_1866',6378206.4,294.9786982]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Lambert_Conformal_Conic'],PARAMETER['False_Easting',2000000.0],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',-90.0],PARAMETER['Standard_Parallel_1',42.73333333333333],PARAMETER['Standard_Parallel_2',44.06666666666667],PARAMETER['Latitude_Of_Origin',42.0],UNIT['Foot_US',0.3048006096012192]];2400000 420000 9999.99999999999;0 1;0 1" # 0 0 0 C:\Data\NEW_SDE_IMPORT_DATA.mdb\Transportation\Roads_temp</Process>
+        <Process Name="Append" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20070606" Time="085639" export="">Append GIS_Layer C:\Data\NEW_SDE_IMPORT_DATA.mdb\Transportation\Roads_temp TEST C:\Data\NEW_SDE_IMPORT_DATA.mdb\Transportation\Roads_temp</Process>
+        <Process Name="FeatureClassToFeatureClass_1" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20070606" Time="085639" export="">FeatureClassToFeatureClass "Database Connections\Connection to Hectare_rplmichael.sde\WashCOGIS.GIS.Transportation\WashCoGIS.GIS.RoadCenterLine" C:\Data\NEW_SDE_IMPORT_DATA.mdb\Transportation Roads_temp # "ROADCENTERLINEID ROADCENTERLINEID VISIBLE;FULLSTREETNAME FULLSTREETNAME VISIBLE;PREFIXTYPE PREFIXTYPE VISIBLE;PREFIXDIRECTION PREFIXDIRECTION VISIBLE;STREETNAME STREETNAME VISIBLE;SUFFIXTYPE SUFFIXTYPE VISIBLE;SUFFIXDIRECTION SUFFIXDIRECTION VISIBLE;LEFTFROM LEFTFROM VISIBLE;LEFTTO LEFTTO VISIBLE;RIGHTFROM RIGHTFROM VISIBLE;RIGHTTO RIGHTTO VISIBLE;LEFTCITY LEFTCITY VISIBLE;RIGHTCITY RIGHTCITY VISIBLE;LEFTZIP LEFTZIP VISIBLE;RIGHTZIP RIGHTZIP VISIBLE;LEFTESN LEFTESN VISIBLE;RIGHTESN RIGHTESN VISIBLE;ALTNAME1 ALTNAME1 VISIBLE;ALTNAME2 ALTNAME2 VISIBLE;ALTNAME3 ALTNAME3 VISIBLE;MAINTAINEDBYOTHERS MAINTAINEDBYOTHERS VISIBLE;ROADTYPE ROADTYPE VISIBLE;ADDRESSMETHOD ADDRESSMETHOD VISIBLE;DIRECTION DIRECTION VISIBLE;SOURCE SOURCE VISIBLE;BASEMAP BASEMAP VISIBLE;PASERID PASERID VISIBLE;SPEEDLIMIT SPEEDLIMIT VISIBLE;DRIVETIME DRIVETIME VISIBLE;CREATEDON CREATEDON VISIBLE;MODIFIEDON MODIFIEDON VISIBLE;ERROR ERROR VISIBLE;SHAPE.len SHAPE.len VISIBLE" SAME_AS_TEMPLATE SAME_AS_TEMPLATE # 0 C:\Data\NEW_SDE_IMPORT_DATA.mdb\Transportation\Roads_temp</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20121102" Time="160543" Name="" export="">CalculateField WashCoGIS.GIS.RoadCenterline LEFTESN ""00" &amp; [LEFTESN]" VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20121102" Time="160606" Name="" export="">CalculateField WashCoGIS.GIS.RoadCenterline RIGHTESN ""00" &amp; [RIGHTESN]" VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20121213" Time="085708" Name="" export="">CalculateField WashCoGIS.GIS.RoadCenterline SUFFIXTYPE "RD" VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130415" Time="114627" Name="" export="">CalculateField WashCoGIS.GIS.RoadCenterline LEFTCITY "City of West Bend" VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130415" Time="114720" Name="" export="">CalculateField WashCoGIS.GIS.RoadCenterline LEFTCITY "Town of Trenton" VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130415" Time="114753" Name="" export="">CalculateField WashCoGIS.GIS.RoadCenterline LEFTCITY "Town of Barton" VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130415" Time="114828" Name="" export="">CalculateField WashCoGIS.GIS.RoadCenterline RIGHTCITY "Town of Barton" VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130415" Time="114902" Name="" export="">CalculateField WashCoGIS.GIS.RoadCenterline LEFTCITY "Town of West Bend" VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130415" Time="114919" Name="" export="">CalculateField WashCoGIS.GIS.RoadCenterline RIGHTCITY "Town of West Bend" VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130415" Time="114934" Name="" export="">CalculateField WashCoGIS.GIS.RoadCenterline RIGHTCITY "Town of Trenton" VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130415" Time="115110" Name="" export="">CalculateField WashCoGIS.GIS.RoadCenterline RIGHTCITY "City of West Bend" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130927" Time="103810" Name="" export="">CalculateField "Road Edits\Road_Centerlines" FULLSTREETNAME "MAPLEDALE RD" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130927" Time="103818" Name="" export="">CalculateField "Road Edits\Road_Centerlines" STREETNAME "MAPLEDALE" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20141111" Time="121848" Name="" export="">CalculateField WashCoGIS.GIS.RoadCenterline BASEMAP F VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20141111" Time="121858" Name="" export="">CalculateField WashCoGIS.GIS.RoadCenterline BASEMAP 9 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20141111" Time="125727" Name="" export="">CalculateField WashCoGIS.GIS.RoadCenterline BASEMAP 8 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20141111" Time="135326" Name="" export="">CalculateField WashCoGIS.GIS.RoadCenterline ALTNAME2 "Right ( [ALTNAME3], 3)" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20141111" Time="135410" Name="" export="">CalculateField WashCoGIS.GIS.RoadCenterline ALTNAME2 "Right ( [ALTNAME3], 2)" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20141111" Time="135808" Name="" export="">CalculateField WashCoGIS.GIS.RoadCenterline ALTNAME1 [FULLSTREETNAME] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20141111" Time="140143" Name="" export="">CalculateField WashCoGIS.GIS.RoadCenterline ALTNAME2 "Right ( [ALTNAME3],2)" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20141111" Time="145353" Name="" export="">CalculateField WashCoGIS.GIS.RoadCenterline ALTNAME2 "Right ( [FULLSTREETNAME], 2)" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150505" Time="095010" Name="" export="">CalculateField "Road Edits\Road_Centerlines" ROADTYPE "I" VB #</Process>
+      </lineage>
+      <itemProps>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\Operation_Unrestrict_Data\Washington\Washington_Roads_2015\Washington_Roads_2015.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemName Sync="TRUE">Washington_Roads_2015</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">2420539.543000</westBL>
+          <eastBL Sync="TRUE">2521161.700100</eastBL>
+          <southBL Sync="TRUE">439147.775000</southBL>
+          <northBL Sync="TRUE">568242.005000</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1927</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+        <projcsn Sync="TRUE">NAD_1927_StatePlane_Wisconsin_South_FIPS_4803</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1927_StatePlane_Wisconsin_South_FIPS_4803&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1927&amp;quot;,DATUM[&amp;quot;D_North_American_1927&amp;quot;,SPHEROID[&amp;quot;Clarke_1866&amp;quot;,6378206.4,294.9786982]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Lambert_Conformal_Conic&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,2000000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Standard_Parallel_1&amp;quot;,42.73333333333333],PARAMETER[&amp;quot;Standard_Parallel_2&amp;quot;,44.06666666666667],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,42.0],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;EPSG&amp;quot;,32054]]&lt;/WKT&gt;&lt;XOrigin&gt;-118083399.9999001&lt;/XOrigin&gt;&lt;YOrigin&gt;-97411199.999900088&lt;/YOrigin&gt;&lt;XYScale&gt;39999.999999999964&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.00020000000000000017&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;32054&lt;/WKID&gt;&lt;LatestWKID&gt;32054&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20190206</SyncDate>
+    <SyncTime>11170700</SyncTime>
+    <ModDate>20190206</ModDate>
+    <ModTime>11170700</ModTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <ArcGISstyle>FGDC CSDGM Metadata</ArcGISstyle>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACkLKAxLABepJ6UtcQseq2MWoaar2/lxF3WSWZy0qeTjYBjnAKnrxjoe2tOnz31E3
+Y6z+1NPGc39rx1/fL/jS/wBp2GcfbrbP/XVf8azDb311cX/7q3XO+L/XMcbo4+fu9sfrSibU7jV7
+SZI7ZI0juEeIyk78Oig52cYI/Wq9nH+mFzR/tTT8Z+3W2M4/1y/41Z82PaW3rgLuJz29fpWAZbi4
+0+WERQHZehX23LKVPng4yFyOoqRbFn1OfzdPtJj5MYzPO0hAy/GWQnHtSdNf1YLmy88abctnc2xd
+ozk88cfQ/lUKahbupYGUKMgkwuBnOMcjk54x1zXm2ieO5NQubbSbnRdRF1BfuJRAXYxhllI3MAMk
+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
+/9k=</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+    <rpPosName>Metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum>(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park St</delPoint>
+        <city>Madison</city>
+        <adminArea>Wisconsin</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday – Friday: 9:00am – 4:00pm</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+        <rpPosName>Metadata technician</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>(608) 262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park St</delPoint>
+            <city>Madison</city>
+            <adminArea>Wisconsin</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday – Friday: 9:00am – 4:00pm</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Washington_Roads_2015.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.5</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Washington County Geographic Information System Division</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>262-335-4445</voiceNum>
+            <faxNum>262-335-6865</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>432 E. Washington Street</delPoint>
+            <delPoint>PO Box 2003</delPoint>
+            <city>West Bend</city>
+            <adminArea>WI</adminArea>
+            <postCode>53095-2003</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Washington County Geographic Information System Division</displayName>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Roads Washington County, WI 2015</resTitle>
+      <date>
+        <pubDate>2015-01-01T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Washington County Geographic Information System Division</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>262-365-6569</voiceNum>
+            <faxNum>262-335-6865</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>432 E. Washington Street</delPoint>
+            <delPoint>PO Box 2003</delPoint>
+            <city>West Bend</city>
+            <adminArea>WI</adminArea>
+            <postCode>53095-2003</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Washington County Geographic Information System Division</displayName>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Eric Damkot</rpIndName>
+        <rpOrgName>Washington County Geographic Information System Division</rpOrgName>
+        <rpPosName>GIS Manager</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>262-335-4445</voiceNum>
+            <faxNum>262-335-6865</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>432 E. Washington Street</delPoint>
+            <delPoint>P.O. Box 2003</delPoint>
+            <city>West Bend</city>
+            <adminArea>WI</adminArea>
+            <postCode>53095-2003</postCode>
+            <country>US</country>
+            <eMailAdd>eric.damkot@co.washington.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Eric Damkot</displayName>
+      </citRespParty>
+      <resEdDate>20150101</resEdDate>
+      <otherCitDet>This metadata was updated to reflect that the data is no longer restricted and has been opened for public use.</otherCitDet>
+    </idCitation>
+    <idAbs>This data layer represents roads for Washington County, Wisconsin in 2015. It is a feature class within the geodatabase "Washington_Roads_2015.gdb". [The transportation dataset includes road centerlines, address points, and related features. The data was derived from many sources. Road Centerline data was first acquired by screen digitizing roads using 1995 orthophotography. Major improvement projects were completed when new orthophotography was acquired in 2000 and again in 2005. Washington County actively maintains road centerline data for all areas except the City of West Bend. Address point data was first acquired from a variety of sources in 2006. Washington County actively maintains situs address points for all areas except the City of West Bend. The City of West Bend maintains address points and road centerlines for their municipality in a format nearly identical to that used by Washington County. The countywide dataset is obtained when combing the City and County data.]</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. [The primary purpose of the road centerline data is cartographic mapping and address geocoding.  Routing applications are planned.  The primary purpose of the situs address points is for use within the Washington County Sheriff Department dispatch center and other address geocoding applications.]</idPurp>
+    <idCredit>Washington County Geographic Information System Division</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <idPoC>
+      <rpOrgName>Washington County Geographic Information System Division</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">262-335-4445</voiceNum>
+          <faxNum>262-335-6865</faxNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>432 E. Washington Street</delPoint>
+          <delPoint>PO Box 2003</delPoint>
+          <city>West Bend</city>
+          <adminArea>WI</adminArea>
+          <postCode>53095-2003</postCode>
+          <country>US</country>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Washington County Geographic Information System Division</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>262-335-4445</voiceNum>
+            <faxNum>262-335-6865</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>432 E. Washington Street</delPoint>
+            <delPoint>PO Box 2003</delPoint>
+            <city>West Bend</city>
+            <adminArea>WI</adminArea>
+            <postCode>53095-2003</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Washington County Geographic Information System Division</displayName>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Washington County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Line</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Roads, Streets, Transportation</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Roads</keyword>
+      <keyword>Streets</keyword>
+      <keyword>Transportation</keyword>
+      <keyword>Washington County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-88.422329</westBL>
+          <eastBL>-88.035387</eastBL>
+          <southBL>43.188383</southBL>
+          <northBL>43.547713</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2015-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <resConst>
+      <Consts>
+        <useLimit>[This data is for informational use only and is not intended to be a substitute for a land or engineering survey.]</useLimit>
+      </Consts>
+    </resConst>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements.</suppInfo>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-88.422905</westBL>
+          <eastBL Sync="TRUE">-88.034270</eastBL>
+          <northBL Sync="TRUE">43.548134</northBL>
+          <southBL Sync="TRUE">43.188157</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="018" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+      <rpPosName>Metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum>(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform with UW-Madison's data distribution plan.</stepDesc>
+        <stepDateTm>2019-02-06T00:00:00</stepDateTm>
+        <stepProc>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+          <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+          <rpPosName>Metadata technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>(608) 262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park St</delPoint>
+              <city>Madison</city>
+              <adminArea>Wisconsin</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday – Friday: 9:00am – 4:00pm</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="001" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <idVersion Sync="FALSE">9.5.4</idVersion>
+        <identCode code="2289" Sync="FALSE" />
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Washington_Roads_2015">
+      <enttyp>
+        <enttypl Sync="TRUE">Washington_Roads_2015</enttypl>
+        <enttypd>Roads Washington County, WI 2015</enttypd>
+        <enttypds>Washington County Geographic Information System Division</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">9256</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">SHAPE</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ERROR</attrlabl>
+        <attalias Sync="TRUE">Error</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ALTNAME2</attrlabl>
+        <attalias Sync="TRUE">Alt Name 2</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>CREATEDON</attrlabl>
+        <attalias Sync="TRUE">Created on</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PREFIXTYPE</attrlabl>
+        <attalias Sync="TRUE">Prefix Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ADDRESSMETHOD</attrlabl>
+        <attalias Sync="TRUE">Address Method</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>SUFFIXTYPE</attrlabl>
+        <attalias Sync="TRUE">Suffix Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>FULLSTREETNAME</attrlabl>
+        <attalias Sync="TRUE">Full Street Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ROADCENTERLineID</attrlabl>
+        <attalias Sync="TRUE">RoadCenterLine ID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LEFTFROM</attrlabl>
+        <attalias Sync="TRUE">Left From</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LEFTTO</attrlabl>
+        <attalias Sync="TRUE">Left To</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RIGHTFROM</attrlabl>
+        <attalias Sync="TRUE">Right From</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RIGHTTO</attrlabl>
+        <attalias Sync="TRUE">Right To</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LEFTCITY</attrlabl>
+        <attalias Sync="TRUE">Left Municipality</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">40</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RIGHTCITY</attrlabl>
+        <attalias Sync="TRUE">Right Municipality</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">40</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LEFTZIP</attrlabl>
+        <attalias Sync="TRUE">Left ZIP Code</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">11</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RIGHTZIP</attrlabl>
+        <attalias Sync="TRUE">Right ZIP Code</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">11</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LEFTESN</attrlabl>
+        <attalias Sync="TRUE">Left ESN</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RIGHTESN</attrlabl>
+        <attalias Sync="TRUE">Right ESN</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>SOURCE</attrlabl>
+        <attalias Sync="TRUE">Source</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>PREFIXDIRECTION</attrlabl>
+        <attalias Sync="TRUE">Prefix Direction</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>STREETNAME</attrlabl>
+        <attalias Sync="TRUE">Street Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ROADTYPE</attrlabl>
+        <attalias Sync="TRUE">Road Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>MODIFIEDON</attrlabl>
+        <attalias Sync="TRUE">Modified on</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DIRECTION</attrlabl>
+        <attalias Sync="TRUE">Direction</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>MAINTAINEDBYOTHERS</attrlabl>
+        <attalias Sync="TRUE">Maintained by Others</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">BASEMAP</attrlabl>
+        <attalias Sync="TRUE">Basemap</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PASERID</attrlabl>
+        <attalias Sync="TRUE">PASER ID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SPEEDLIMIT</attrlabl>
+        <attalias Sync="TRUE">Speed Limit</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DRIVETIME</attrlabl>
+        <attalias Sync="TRUE">Drive Time</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ALTNAME3</attrlabl>
+        <attalias Sync="TRUE">Alt Name 3</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>SUFFIXDIRECTION</attrlabl>
+        <attalias Sync="TRUE">Suffix Direction</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ALTNAME1</attrlabl>
+        <attalias Sync="TRUE">Alt Name 1</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Length</attrlabl>
+        <attalias Sync="TRUE">SHAPE_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Length of feature in internal units.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Washington_Roads_2015">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">9256</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Washington_Roads_2015">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="3" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">9256</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20190206</mdDateSt>
+  <mdFileID>BBCE43AC-6CF5-48A2-92CC-53B61C576B9B</mdFileID>
+</metadata>

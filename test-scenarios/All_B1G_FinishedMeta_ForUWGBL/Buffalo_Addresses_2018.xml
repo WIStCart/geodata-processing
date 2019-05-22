@@ -1,0 +1,999 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <SyncOnce>FALSE</SyncOnce>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <DataProperties>
+      <lineage>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171023" Time="152906" Name="" export="">CalculateField "Site Addresses\Addresses - Site Address Points" ADDRNUMBER [ADDRNUM] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180126" Time="133700" Name="" export="">CalculateField "Site Addresses\Addresses - Site Address Points" ADDPTKEY [OBJECTID] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180126" Time="142535" Name="" export="">CalculateField "Site Addresses\Addresses - Site Address Points" POINTTYPE "Building" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="075451" Name="" export="">CalculateField "Addresses - Site Address Points selection selection" POINTTYPE "Unknown" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="133853" Name="" export="">CalculateField "Addresses - Site Address Points selection selection" POINTTYPE "Unknown" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="150003" Name="" export="">CalculateField "Addresses - Site Address Points selection selection" POINTTYPE "Unknown" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="150034" Name="" export="">CalculateField "Addresses - Site Address Points selection selection" POINTTYPE "Parcel" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="151852" Name="" export="">CalculateField "Addresses - Site Address Points selection selection" ADDRCLASS "Primary Residencel" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180202" Time="072655" Name="" export="">CalculateField "Addresses - Site Address Points selection selection" ADDRCLASS "Primary Residencel" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180202" Time="081935" Name="" export="">CalculateField "Site Addresses\Addresses - Site Address Points" FULLADD_ALLCAP [FULLADDR] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180202" Time="082333" Name="" export="">CalculateField "Site Addresses\Addresses - Site Address Points" FULLADD_ALLCAP !FULLADD_ALLCAP!.title() PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180202" Time="084032" Name="" export="">CalculateField "Site Addresses\Addresses - Site Address Points" FULLADD_ALLCAP UCase( [FULLADD_ALLCAP]  ) VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180202" Time="134203" Name="" export="">CalculateField "Site Address Points" CAD_RDS_ALL_CAP UCase( [CAD_ROADS] ) VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180202" Time="135442" Name="" export="">CalculateField "Site Address Points" FULL_CAD "[SITEADDID]+" "+ [CAD_RDS_ALL_CAP]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180212" Time="170928" Name="" export="">CalculateField "Site Address Points" ALT_FULLROADNAME [FULLNAME] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180213" Time="082327" Name="" export="">CalculateField "Site Address Points" PSAP "Buffalo County Communications Center" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180213" Time="082434" Name="" export="">CalculateField "Site Address Points" PSAP 7399 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180221" Time="113612" Name="" export="">CalculateField "Site Address Points" COMP_ADDRESS "[FULLADDR]+", "+ [MSAG]+", WI"+ [ZIPCODE]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180221" Time="113653" Name="" export="">CalculateField "Site Address Points" COMP_ADDRESS "[FULLADDR]+", "+ [MSAG]+", WI "+ [ZIPCODE]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180221" Time="121420" Name="" export="">CalculateField "Site Address Points" FULLADDR "[ADDRNUM]+" "+ [FULLNAME]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20180416" Time="162021" Name="" export="">FeatureClassToFeatureClass R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018 R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\Buffalo_Addresses_2018.gdb Buffalo_Addresses_2018 # "SITEADDID "Site Address ID" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,SITEADDID,-1,-1;ADDPTKEY "Address Point ID" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,ADDPTKEY,-1,-1;PREADDRNUM "Address Number Prefix" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,PREADDRNUM,-1,-1;ADDRNUMSUF "Address Number Suffix" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,ADDRNUMSUF,-1,-1;ADDRNUM "Full Address Number" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,ADDRNUM,-1,-1;ADDRRANGE "Address Range" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,ADDRRANGE,-1,-1;UNITTYPE "Address Unit Type" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,UNITTYPE,-1,-1;UNITID "Address Unit Number" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,UNITID,-1,-1;ALTUNITTYPE "Alternate Address Unit Type" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,ALTUNITTYPE,-1,-1;ALTUNITID "Alternate Address Unit Number" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,ALTUNITID,-1,-1;FULLNAME "Full Road Name" true true false 125 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,FULLNAME,-1,-1;FULLADDR "Full Address" true true false 250 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,FULLADDR,-1,-1;PLACENAME "Place Name" true true false 250 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,PLACENAME,-1,-1;MUNICIPALITY "Municipality Name" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,MUNICIPALITY,-1,-1;ESN "Emergency Service Number" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,ESN,-1,-1;PSAP "Public Safety Answering Point" true true false 4 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,PSAP,-1,-1;MSAG "MSAG Community" true true false 35 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,MSAG,-1,-1;USNGCOORD "USNG Coordinate" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,USNGCOORD,-1,-1;ADDRCLASS "Description" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,ADDRCLASS,-1,-1;POINTTYPE "Location" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,POINTTYPE,-1,-1;CAPTUREMETH "Capture Method" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,CAPTUREMETH,-1,-1;STATUS "Status" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,STATUS,-1,-1;LASTUPDATE "Last Update Date" true true false 8 Date 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,LASTUPDATE,-1,-1;LASTEDITOR "Last Editor" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,LASTEDITOR,-1,-1;ROADPREDIR "Road Prefix Direction" true true false 2 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,ROADPREDIR,-1,-1;ROADNAME "Road Name" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,ROADNAME,-1,-1;ROADPOSTDIR "Post Direction" true true false 2 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,ROADPOSTDIR,-1,-1;ROADTYPE "Road Type" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,ROADTYPE,-1,-1;ZIPCODE "Zip Code" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,ZIPCODE,-1,-1;SUPERDIST "Supervisor District" true true false 150 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,SUPERDIST,-1,-1;SCHOOLDIST "School District" true true false 150 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,SCHOOLDIST,-1,-1;XCOORD "XCoord" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,XCOORD,-1,-1;YCOORD "YCoord" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,YCOORD,-1,-1;SOURCE "Source" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,SOURCE,-1,-1;ENTRYDATE "Creation Date" true true false 8 Date 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,ENTRYDATE,-1,-1;COMMENTS "Comments" true true false 250 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,COMMENTS,-1,-1;CAD_ROADS "CAD ROADS" true true false 60 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,CAD_ROADS,-1,-1;created_user "created_user" true true false 255 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,created_user,-1,-1;created_date "created_date" true true false 8 Date 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,created_date,-1,-1;last_edited_user "last_edited_user" true true false 255 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,last_edited_user,-1,-1;last_edited_date "last_edited_date" true true false 8 Date 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,last_edited_date,-1,-1;ADDRNUMBER "ADDRNUMBER" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,ADDRNUMBER,-1,-1;ALT_FULLADD "Alternative Full Address" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,ALT_FULLADD,-1,-1;ALT_FULLROADNAME "alternative Full Raod Name" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,ALT_FULLROADNAME,-1,-1;ALT_ROADNAME "ALT_ROADNAME" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,ALT_ROADNAME,-1,-1;COMP_ADDRESS "COMP_ADDRESS" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2018,COMP_ADDRESS,-1,-1" #</Process>
+      </lineage>
+      <itemProps>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2018_ALL_DATA_OPEN_V4\Buffalo\Buffalo_Addresses_2018.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemName Sync="TRUE">Buffalo_Addresses_2018</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">514686.162243</westBL>
+          <eastBL Sync="TRUE">645221.075057</eastBL>
+          <southBL Sync="TRUE">212714.940337</southBL>
+          <northBL Sync="TRUE">406599.946923</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_WISCRS_Buffalo_County_Feet</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_WISCRS_Buffalo_County_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,574999.999],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.016],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-91.79722222222222],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,1.0000382778],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,43.48138888888889],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;ESRI&amp;quot;,103405]]&lt;/WKT&gt;&lt;XOrigin&gt;-17874300&lt;/XOrigin&gt;&lt;YOrigin&gt;-48618200&lt;/YOrigin&gt;&lt;XYScale&gt;3048.00609601219&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.00328083333333333&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;103405&lt;/WKID&gt;&lt;LatestWKID&gt;103405&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <CreaDate>20180329</CreaDate>
+    <CreaTime>18574900</CreaTime>
+    <SyncDate>20180508</SyncDate>
+    <SyncTime>15170600</SyncTime>
+    <ModDate>20180508</ModDate>
+    <ModTime>15170600</ModTime>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>UW-Madison</rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum>608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>UW-Madison</rpOrgName>
+        <rpPosName>metadata technician</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Buffalo_Addresses_2018.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.3</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Buffalo County Land Information Department</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>(608) 685-6285</voiceNum>
+            <faxNum>(608) 685-6284</faxNum>
+          </cntPhone>
+          <cntAddress>
+            <delPoint>407 South Second Street</delPoint>
+            <city>Alma</city>
+            <adminArea>WI</adminArea>
+            <postCode>54610-0494</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Buffalo County Land Information Department</displayName>
+        <displayName>Buffalo County Land Information Department</displayName>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Addresses Buffalo County, WI 2018</resTitle>
+      <date>
+        <pubDate>2018-05-08T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+      </presForm>
+      <presForm>
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <resEdDate>20180101</resEdDate>
+      <citRespParty>
+        <rpOrgName>Buffalo County Land Information Department</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>(608) 685-6285</voiceNum>
+            <faxNum>(608) 685-6284</faxNum>
+          </cntPhone>
+          <cntAddress>
+            <delPoint>407 South Second Street</delPoint>
+            <city>Alma</city>
+            <adminArea>WI</adminArea>
+            <postCode>54610-0494</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Buffalo County Land Information Department</displayName>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Jason Poser</rpIndName>
+        <rpOrgName>Buffalo County Land Information Department</rpOrgName>
+        <rpPosName>GIS/Land Information Technician</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-685-6285</voiceNum>
+            <faxNum>608-685-6284</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>407 South Second St</delPoint>
+            <city>Alma</city>
+            <adminArea>WI</adminArea>
+            <postCode>54610</postCode>
+            <country>US</country>
+            <eMailAdd>jason.poser@co.buffalo.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Jason Poser</displayName>
+      </citRespParty>
+    </idCitation>
+    <idAbs>This point data layer represents addresses for Buffalo County, Wisconsin in 2018. It is a feature class within the geodatabase, Buffalo_Addresses_2018.gdb.[Site address points represent the location of site or service delivery addresses assigned by local governments.</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.
+
+[Site Address Points]</idPurp>
+    <idCredit>Buffalo Land Information Department
+
+[Buffalo County Zoning Department, Buffalo County Sheriff’s Department, Buffalo County GIS Department, Buffalo County Treasurer]</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <idPoC>
+      <rpIndName>Jason Poser</rpIndName>
+      <rpOrgName>Buffalo County Land Information Department</rpOrgName>
+      <rpPosName>GIS/Land Information Technician</rpPosName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>608-685-6285</voiceNum>
+          <faxNum>608-685-6284</faxNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>407 South Second St</delPoint>
+          <city>Alma</city>
+          <adminArea>WI</adminArea>
+          <postCode>54610</postCode>
+          <country>US</country>
+          <eMailAdd>Jason.Poser@co.buffalo.wi.us</eMailAdd>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="007" />
+      </role>
+    </idPoC>
+    <idPoC>
+      <rpOrgName>Buffalo County Land Information Department</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>(608) 685-6285</voiceNum>
+          <faxNum>(608) 685-6284</faxNum>
+        </cntPhone>
+        <cntAddress>
+          <delPoint>407 South Second Street</delPoint>
+          <city>Alma</city>
+          <adminArea>WI</adminArea>
+          <postCode>54610-0494</postCode>
+          <country>US</country>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Buffalo County Land Information Department</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>(608) 685-6285</voiceNum>
+            <faxNum>(608) 685-6284</faxNum>
+          </cntPhone>
+          <cntAddress>
+            <delPoint>407 South Second Street</delPoint>
+            <city>Alma</city>
+            <adminArea>WI</adminArea>
+            <postCode>54610-0494</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Buffalo County Land Information Department</displayName>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Buffalo County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Point</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Wisconsin</keyword>
+      <keyword>Point</keyword>
+      <keyword>Street addresses</keyword>
+      <keyword>Buffalo County</keyword>
+      <keyword>location</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-92.028751</westBL>
+          <eastBL>-91.527663</eastBL>
+          <southBL>44.064591</southBL>
+          <northBL>44.596714</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2018-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Street Addresses</keyword>
+    </themeKeys>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements. </suppInfo>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-92.028751</westBL>
+          <eastBL Sync="TRUE">-91.527663</eastBL>
+          <northBL Sync="TRUE">44.596714</northBL>
+          <southBL Sync="TRUE">44.064592</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="013" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>UW-Madison</rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>310 Science Hall</delPoint>
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform with UW-Madison's data distribution plan.</stepDesc>
+        <stepDateTm>2018-01-01T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+          <rpPosName>Data Technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="009" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="7592" Sync="FALSE" />
+        <idCodeSpace Sync="FALSE">EPSG</idCodeSpace>
+        <idVersion Sync="TRUE">10.3.1</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Buffalo_Addresses_2018">
+      <enttyp>
+        <enttypl Sync="TRUE">Buffalo_Addresses_2018</enttypl>
+        <enttypd>Addresses Buffalo County, WI 2018</enttypd>
+        <enttypds>Buffalo County Land Information Department</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">7606</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl>PREADDRNUM</attrlabl>
+        <attalias Sync="TRUE">Address Number Prefix</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>SOURCE</attrlabl>
+        <attalias Sync="TRUE">Source</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>XCOORD</attrlabl>
+        <attalias Sync="TRUE">XCoord</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>YCOORD</attrlabl>
+        <attalias Sync="TRUE">YCoord</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>POINTTYPE</attrlabl>
+        <attalias Sync="TRUE">Location</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ESN</attrlabl>
+        <attalias Sync="TRUE">Emergency Service Number</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>LASTUPDATE</attrlabl>
+        <attalias Sync="TRUE">Last Update Date</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>LASTEDITOR</attrlabl>
+        <attalias Sync="TRUE">Last Editor</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>COMMENTS</attrlabl>
+        <attalias Sync="TRUE">Comments</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">250</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ALTUNITID</attrlabl>
+        <attalias Sync="TRUE">Alternate Address Unit Number</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ROADPREDIR</attrlabl>
+        <attalias Sync="TRUE">Road Prefix Direction</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>SUPERDIST</attrlabl>
+        <attalias Sync="TRUE">Supervisor District</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">150</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>MUNICIPALITY</attrlabl>
+        <attalias Sync="TRUE">Municipality Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ZIPCODE</attrlabl>
+        <attalias Sync="TRUE">Zip Code</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>FULLADDR</attrlabl>
+        <attalias Sync="TRUE">Full Address</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">250</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PSAP</attrlabl>
+        <attalias Sync="TRUE">Public Safety Answering Point</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ADDRRANGE</attrlabl>
+        <attalias Sync="TRUE">Address Range</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">USNGCOORD</attrlabl>
+        <attalias Sync="TRUE">USNG Coordinate</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ADDRCLASS</attrlabl>
+        <attalias Sync="TRUE">Description</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>CAD_ROADS</attrlabl>
+        <attalias Sync="TRUE">CAD ROADS</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">60</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>PLACENAME</attrlabl>
+        <attalias Sync="TRUE">Place Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">250</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ROADTYPE</attrlabl>
+        <attalias Sync="TRUE">Road Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ROADPOSTDIR</attrlabl>
+        <attalias Sync="TRUE">Post Direction</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ALTUNITTYPE</attrlabl>
+        <attalias Sync="TRUE">Alternate Address Unit Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ADDRNUMSUF</attrlabl>
+        <attalias Sync="TRUE">Address Number Suffix</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ADDRNUM</attrlabl>
+        <attalias Sync="TRUE">Full Address Number</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>SCHOOLDIST</attrlabl>
+        <attalias Sync="TRUE">School District</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">150</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>FULLNAME</attrlabl>
+        <attalias Sync="TRUE">Full Road Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">125</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>UNITID</attrlabl>
+        <attalias Sync="TRUE">Address Unit Number</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ENTRYDATE</attrlabl>
+        <attalias Sync="TRUE">Creation Date</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ROADNAME</attrlabl>
+        <attalias Sync="TRUE">Road Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>MSAG</attrlabl>
+        <attalias Sync="TRUE">MSAG Community</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">35</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>STATUS</attrlabl>
+        <attalias Sync="TRUE">Status</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>CAPTUREMETH</attrlabl>
+        <attalias Sync="TRUE">Capture Method</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>SITEADDID</attrlabl>
+        <attalias Sync="TRUE">Site Address ID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>UNITTYPE</attrlabl>
+        <attalias Sync="TRUE">Address Unit Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ADDPTKEY</attrlabl>
+        <attalias Sync="TRUE">Address Point ID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">created_user</attrlabl>
+        <attalias Sync="TRUE">created_user</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">created_date</attrlabl>
+        <attalias Sync="TRUE">created_date</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">last_edited_user</attrlabl>
+        <attalias Sync="TRUE">last_edited_user</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">last_edited_date</attrlabl>
+        <attalias Sync="TRUE">last_edited_date</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDRNUMBER</attrlabl>
+        <attalias Sync="TRUE">ADDRNUMBER</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ALT_FULLADD</attrlabl>
+        <attalias Sync="TRUE">Alternative Full Address</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ALT_FULLROADNAME</attrlabl>
+        <attalias Sync="TRUE">alternative Full Raod Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ALT_ROADNAME</attrlabl>
+        <attalias Sync="TRUE">ALT_ROADNAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">COMP_ADDRESS</attrlabl>
+        <attalias Sync="TRUE">COMP_ADDRESS</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Buffalo_Addresses_2018">
+        <geoObjTyp>
+          <GeoObjTypCd value="004" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">7606</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Buffalo_Addresses_2018">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="1" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">7606</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20180508</mdDateSt>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACqGta1p/h7SbjVNUuUt7SBdzux6+gA7k9AB1q/XmfxyultvAtt5kU0kT6lbhwkoj
+XAJbDk9jj8Dg9uQDX0v4r+DtUtmm/tZbMoYg8d6hhZPMAK5zxjnBbOB1zjBNrSviHoWuCVtJ+3X0
+cV0tq8lvaSMqkqWD9PufKefceoNeEy+D/Edx4ZsNbsLPTobLVQlpdWuj3JMlzCWVhhXYhnyHBAPG
+3pgE1aufF1mZtR1KxtrzSNSsb61kj0uCWSNltrdRG4f5SjNsYgrjKqpJzgggHtet/EXQfD+k6dqW
+oi+jt79Q0X+hvlQSPvjHyn5s4PJAOM1LZePtCv8AxKdAt2vGvgxX5rORU4DEncRjHynk9e2a8su/
+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
+KKKKAP/Z</Data>
+    </Thumbnail>
+  </Binary>
+  <mdFileID>5089546B-2D08-4B77-9BC4-061C7938BE40</mdFileID>
+</metadata>

@@ -1,0 +1,895 @@
+﻿<metadata>
+  <eainfo>
+    <detailed Name="Washburn_Buildings_2017">
+      <enttyp>
+        <enttypl Sync="TRUE">Washburn_Buildings_2017</enttypl>
+        <enttypd>Buildings Washburn County, WI 2017</enttypd>
+        <enttypds>Washburn County Land Records Department</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">14531</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ADDR_ID</attrlabl>
+        <attrdef>Unique address id</attrdef>
+        <attrdefs>Washburn County</attrdefs>
+        <attalias Sync="TRUE">ADDR_ID</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ALPHA_ADDR</attrlabl>
+        <attrdef>Alphabetical character in front of address number</attrdef>
+        <attrdefs>Washburn County</attrdefs>
+        <attalias Sync="TRUE">ALPHA_ADDR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>PD</attrlabl>
+        <attrdef>Street Address Prefix Direction</attrdef>
+        <attrdefs>Washburn County</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>N,E,W,S</edomv>
+            <edomvd>Compass direction</edomvd>
+          </edom>
+        </attrdomv>
+        <attalias Sync="TRUE">PD</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">1</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>SN</attrlabl>
+        <attrdef>Street name</attrdef>
+        <attrdefs>Washburn County</attrdefs>
+        <attrdomv>
+          <udom>Variable street root name</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">SN</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">35</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ST</attrlabl>
+        <attrdef>Street type</attrdef>
+        <attrdefs>Washburn County</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>ST, AV, RD, WAY, etc.</edomv>
+            <edomvd>STREET TYPE CONVENTIONS</edomvd>
+          </edom>
+        </attrdomv>
+        <attalias Sync="TRUE">ST</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">6</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>EDIT_BY</attrlabl>
+        <attrdef>Last person to edit record</attrdef>
+        <attrdefs>Washburn County</attrdefs>
+        <attalias Sync="TRUE">EDIT_BY</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ESN</attrlabl>
+        <attrdef>Emergency service number</attrdef>
+        <attrdefs>Washburn County</attrdefs>
+        <attalias Sync="TRUE">ESN</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ZIP</attrlabl>
+        <attrdef>Numeric 5 digit zip code</attrdef>
+        <attrdefs>Washburn County</attrdefs>
+        <attalias Sync="TRUE">ZIP</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ADDR_NUMB</attrlabl>
+        <attrdef>Digital portion of address value</attrdef>
+        <attrdefs>Washburn County</attrdefs>
+        <attalias Sync="TRUE">ADDR_NUMB</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ROAD_NAME</attrlabl>
+        <attrdef>Street name portion of address</attrdef>
+        <attrdefs>Washburn County</attrdefs>
+        <attalias Sync="TRUE">ROAD_NAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">40</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PROP_ID</attrlabl>
+        <attalias Sync="TRUE">PROP_ID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>MCD</attrlabl>
+        <attrdef>Municipality</attrdef>
+        <attrdefs>Washburn County</attrdefs>
+        <attalias Sync="TRUE">MCD</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ADDR_FULL</attrlabl>
+        <attrdef>Complete alpha-numeric address, street root, and street type</attrdef>
+        <attrdefs>Washburn County</attrdefs>
+        <attalias Sync="TRUE">ADDR_FULL</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>MODIFIER</attrlabl>
+        <attrdef>Special address modifier - Apt, Suite, etc</attrdef>
+        <attrdefs>Washburn County</attrdefs>
+        <attalias Sync="TRUE">MODIFIER</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ARC_ID</attrlabl>
+        <attrdef>Road centerline Arc_ID value nearest to site access point</attrdef>
+        <attrdefs>Washburn County</attrdefs>
+        <attalias Sync="TRUE">ARC_ID</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>SHAPE</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>MAPNUM</attrlabl>
+        <attrdef>Unique parcel number assigned by Washburn County</attrdef>
+        <attrdefs>Washburn County</attrdefs>
+        <attalias Sync="TRUE">MAPNUM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>COUNTY</attrlabl>
+        <attrdef>Washburn County</attrdef>
+        <attrdefs>Washburn County</attrdefs>
+        <attalias Sync="TRUE">COUNTY</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>STATE</attrlabl>
+        <attrdef>Wisconsin</attrdef>
+        <attrdefs>Washburn County</attrdefs>
+        <attalias Sync="TRUE">STATE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>GEN_COM</attrlabl>
+        <attrdef>Address record info that may benefit Dispatch Center</attrdef>
+        <attrdefs>Washburn County</attrdefs>
+        <attalias Sync="TRUE">GEN_COM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDR_PER_PCL</attrlabl>
+        <attalias Sync="TRUE">ADDR_PER_PCL</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef>Number of address per parcel</attrdef>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DETAIL_COM</attrlabl>
+        <attalias Sync="TRUE">DETAIL_COM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef>Addition info for problem resolution</attrdef>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FIX_COM</attrlabl>
+        <attalias Sync="TRUE">FIX_COM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef>Additional info for problem resolution</attrdef>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">EDITDATE</attrlabl>
+        <attalias Sync="TRUE">EDITDATE</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef>Last date record was edited</attrdef>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">GPSBY</attrlabl>
+        <attalias Sync="TRUE">GPSBY</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef>GPS date for new addresses</attrdef>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">GPSDATE</attrlabl>
+        <attalias Sync="TRUE">GPSDATE</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef>Date of GPS Fieldwork</attrdef>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ALPHA_NUMB</attrlabl>
+        <attalias Sync="TRUE">ALPHA_NUMB</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <Esri>
+    <MetaID>{F4171526-1556-4907-B384-D2AD40AF0CD7}</MetaID>
+    <CreaDate>20070203</CreaDate>
+    <CreaTime>20352800</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <SyncDate>20170911</SyncDate>
+    <SyncTime>15062900</SyncTime>
+    <ModDate>20170911</ModDate>
+    <ModTime>15062900</ModTime>
+    <DataProperties>
+      <lineage>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\MetadataImporter" Date="20091105" Time="132005" Name="" export="">MetadataImporter "U:\GIS\GIS Files\Addressing\WASHBURN.mdb\ADDRESSING_1\buildings_1" "U:\GIS\GIS Files\Addressing\WASHBURN.mdb\ADDRESSING\buildings" "U:\GIS\GIS Files\Addressing\WASHBURN.mdb\ADDRESSING\buildings"</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddXY" Date="20130718" Time="155849" Name="" export="">AddXY "U:\GIS\GIS Files\Addressing\WASHBURN.mdb\ADDRESSING\buildings" "U:\GIS\GIS Files\Addressing\WASHBURN.mdb\ADDRESSING\buildings"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20140509" Time="131505" Name="" export="">CopyFeatures "U:\GIS\GIS Files\Backup9_3_1data\WASHBURN.mdb\ADDRESSING\buildings" "U:\GIS\GIS Files\Addressing\WASHBURN.gdb\ADDRESSING\buildings" # 0 0 0</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20141105" Time="140958" Name="" export="">CalculateField buildings ALPHA_NUMB "[ALPHA_ADDR] &amp; [ADDR_NUMB]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20141105" Time="141015" Name="" export="">CalculateField buildings ALPHA_NUMB LTrim( [ALPHA_NUMB] ) VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20141117" Time="104152" Name="" export="">CalculateField buildings GEN_COM UCase( [GEN_COM] ) VB #</Process>
+      </lineage>
+      <itemProps>
+        <itemName Sync="TRUE">Washburn_Buildings_2017</itemName>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2017_ALL_DATA_OPEN\Washburn\Washburn_Buildings_2017.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <nativeExtBox>
+          <westBL Sync="TRUE">700278.044741</westBL>
+          <eastBL Sync="TRUE">830220.830131</eastBL>
+          <southBL Sync="TRUE">500283.107744</southBL>
+          <northBL Sync="TRUE">689591.447959</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_NAD_1983_HARN_Adj_WI_Washburn</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Adj_WI_Washburn_Feet</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Adj_WI_Washburn_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_NAD_1983_HARN_Adj_WI_Washburn&amp;quot;,DATUM[&amp;quot;D_NAD_1983_HARN_Adj_WI_WB&amp;quot;,SPHEROID[&amp;quot;GRS_1980_Adj_WI_WB&amp;quot;,6378474.591,298.273008677695]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Lambert_Conformal_Conic&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,768000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-91.78333333333333],PARAMETER[&amp;quot;Standard_Parallel_1&amp;quot;,45.77222222222222],PARAMETER[&amp;quot;Standard_Parallel_2&amp;quot;,46.15],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,44.26666666666667],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;ESRI&amp;quot;,103969]]&lt;/WKT&gt;&lt;XOrigin&gt;-118555000&lt;/XOrigin&gt;&lt;YOrigin&gt;-98434000&lt;/YOrigin&gt;&lt;XYScale&gt;3048.0060960121928&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.0050000000000000001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;103969&lt;/WKID&gt;&lt;LatestWKID&gt;103969&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACs/W9c03w5pUup6tdJbWkWA0jAnknAAA5J+laFeFfGDXNZ1zW7zwjp/h9tVsLOKC
+e48gP50crn5SNpPZsYKnqTjAoA9D8J/E/wAM+M9UudO0m5l+0Qgsqzx7POUHBZOckdODg89OuItS
++LHhXR9b1DStRuLm1uLGMyOZbdlWTBAwmeWJzxgYOCc4rz60XXLDxV4SsrPwlaaJqNjZzmcCRfJk
+DKF3D+KUoAHIVmbkjOcmvErj+0/EPicWvn3Wr3cs3kRFyxeT5jwN3Kgkk84xk570AfY+o+M9B02O
+cSX8Ut3DGJGsYWDXJG3dxFnd93npwASelVtH+IXhfW/D8+t22qwpZ267rnzjteDJIG9eoyRx69s1
+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
+AMAYAoooAKKKKACiiigAooooAKKKKAP/2Q==</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <editorSource>external</editorSource>
+    <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        <country>US</country>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum>(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+    </rpCntInfo>
+    <editorSave>True</editorSave>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdDateSt Sync="TRUE">20170911</mdDateSt>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <editorSource>external</editorSource>
+        <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+        <rpPosName>metadata technician</rpPosName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>(608) 262-1471</voiceNum>
+          </cntPhone>
+          <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Arthur H. Robinson Map Library</displayName>
+        <role>
+          <RoleCd value="001" />
+        </role>
+      </distorCont>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Washburn_Buildings_2017.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+      <formatVer>10.3</formatVer>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Washburn County Land Records Department</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Washburn County</displayName>
+        <rpCntInfo>
+          <cntAddress addressType="postal">
+            <delPoint>10 W. Fourth Ave</delPoint>
+            <city>Shell Lake</city>
+            <adminArea>WI</adminArea>
+            <postCode>54871</postCode>
+            <country>US</country>
+            <delPoint>PO Box 639</delPoint>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>715-468-4660   </voiceNum>
+            <faxNum>715-468-4715</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Washburn County Land Records Department</displayName>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Buildings Washburn County, WI 2017</resTitle>
+      <date>
+        <pubDate>2017-03-10T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Washburn County Land Records Department</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Washburn County</displayName>
+        <rpCntInfo>
+          <cntAddress addressType="postal">
+            <delPoint>10 W. Fourth Ave</delPoint>
+            <city>Shell Lake</city>
+            <adminArea>WI</adminArea>
+            <postCode>54871</postCode>
+            <country>US</country>
+            <delPoint>PO Box 639</delPoint>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>715-468-4660   </voiceNum>
+            <faxNum>715-468-4715</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Nathan Nelson</rpIndName>
+        <rpOrgName>Land Information, Washburn County, Wisconsin</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>715-468-4654</voiceNum>
+            <faxNum>715-468-4640</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>PO Box 649, 10 Fourth Av</delPoint>
+            <city>Shell Lake</city>
+            <adminArea>WI</adminArea>
+            <postCode>54871</postCode>
+            <country>US</country>
+            <eMailAdd>NNelson@co.washburn.wi.us</eMailAdd>
+          </cntAddress>
+          <cntHours>8:00 am to 4:30 pm</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Nathan Nelson</displayName>
+      </citRespParty>
+    </idCitation>
+    <idAbs>This point data layer represents buildings for Washburn County, Wisconsin in 2017. It is a feature class within the geodatabase, Washburn_Buildings_2017.gdb. [This data set consists of digital map files containing addressing or building information obtained primarily by conducting lab work using aerial imagery. Features contained in the data set include all building or primary structure points countywide and associated attributes. Building points sometimes are referred to as primary structures, however these data typically represent the main building(s) that have been addressed on each parcel. The Washburn County Land Information Office plans to maintain this digital data in ESRI's ArcGIS 9.x geodatabase environment using ArcMap tools. Some of the data was developed using field data collection techniques and field data collection will be used extensively to maintain the data. There are attributes in the data documenting the source for each record. Site access points are always present as a related feature class, however not all site access points are accompanied by a building point.]</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. [There are numerous reasons for developing the building feature class. 1) Existing address documentation; 2) Enhance methodology to issue new addresses; 3)  Provide locational information for emergency services within Washburn County; 4) Publish hard copy map products like platbooks and emergency services atlases 5)  Help maintain accurate parcel addresses in the property tax database; 6)  Help improve the accuracy of the telephone company's ANI/ALI database 7)  Many other uses in other County Departments]</idPurp>
+    <idCredit>Washburn County Land Records Department</idCredit>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <editorSource>external</editorSource>
+        <editorDigest>f967cd5d6399960af01e54c237af2e98</editorDigest>
+        <rpOrgName>Washburn CountyLand Records Department</rpOrgName>
+        <displayName>Washburn County</displayName>
+        <rpCntInfo>
+          <cntAddress addressType="postal">
+            <delPoint>10 W. Fourth Ave</delPoint>
+            <city>Shell Lake</city>
+            <adminArea>WI</adminArea>
+            <postCode>54871</postCode>
+            <country>US</country>
+            <delPoint>PO Box 639</delPoint>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>715-468-4660   </voiceNum>
+            <faxNum>715-468-4715</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Washburn CountyLand Records Department</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <graphOver>
+      <bgFileName>Washburn.mdb\site_access</bgFileName>
+      <bgFileDesc>Site access points representing addresses</bgFileDesc>
+      <bgFileType>mdb</bgFileType>
+    </graphOver>
+    <placeKeys>
+      <keyword>Washburn County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Point</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Buildings</keyword>
+      <keyword>Wisconsin</keyword>
+      <keyword>Point</keyword>
+      <keyword>Washburn County</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials. Contact Nathan Nelson at Washburn County for information regarding distribution liability.]</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-92.05069</westBL>
+          <eastBL>-91.53846</eastBL>
+          <southBL>45.63797</southBL>
+          <northBL>46.161108</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2017-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements. 
+
+This data was submitted to the UW geospatial archive in 2017. Content may be considered current as of December 31, 2016. It was published to the UW geospatial archive as part of the Wisconsin Department of Administration Land Information Program annual collection of public data for the year 2017.</suppInfo>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idPoC>
+      <rpOrgName>Washburn County Land Records Department</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>715-468-4654</voiceNum>
+          <faxNum>715-468-4640</faxNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>PO Box 649</delPoint>
+          <city>Shell Lake</city>
+          <adminArea>WI</adminArea>
+          <postCode>54871</postCode>
+          <country>US</country>
+          <delPoint>10 Fourth Av</delPoint>
+        </cntAddress>
+        <cntHours>8:00 am to 4:30 pm</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="006" />
+      </role>
+      <displayName>Nathan Nelson</displayName>
+      <displayName>Nathan Nelson</displayName>
+    </idPoC>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Buildings</keyword>
+    </themeKeys>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-92.050548</westBL>
+          <eastBL Sync="TRUE">-91.537824</eastBL>
+          <northBL Sync="TRUE">46.157601</northBL>
+          <southBL Sync="TRUE">45.638186</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <resConst>
+      <Consts>
+        <useLimit>[This information was prepared by using a myriad of data resources and is NOT to be used exclusively to describe all actual buildings. All distributed digital data is transferred to the user with Washburn County's Disclaimer of Warranty. Contact either the Washburn County Land Information Department or Washburn County GIS Specialist, Nathan Nelson, for additional access constraints pertaining to the data set.]</useLimit>
+      </Consts>
+    </resConst>
+    <tpCat>
+      <TopicCatCd value="017" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <editorSource>external</editorSource>
+      <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum>(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform to UW-Madison's data distribution plan. </stepDesc>
+        <stepDateTm>2017-09-11T00:00:00</stepDateTm>
+        <stepProc>
+          <editorSource>external</editorSource>
+          <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+          <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+          <rpPosName>metadata technician</rpPosName>
+          <rpCntInfo>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+              <country>US</country>
+            </cntAddress>
+            <cntPhone>
+              <voiceNum>(608) 262-1471</voiceNum>
+            </cntPhone>
+            <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+          </rpCntInfo>
+          <editorSave>True</editorSave>
+          <displayName>Arthur H. Robinson Map Library</displayName>
+          <role>
+            <RoleCd value="001" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+    <report type="DQQuanAttAcc">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="7640" Sync="FALSE" />
+        <idCodeSpace Sync="FALSE">EPSG</idCodeSpace>
+        <idVersion Sync="TRUE">10.3.1</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Washburn_Buildings_2017">
+        <geoObjTyp>
+          <GeoObjTypCd value="004" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">14531</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Washburn_Buildings_2017">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="1" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">14531</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdFileID>7106457A-3BE1-4288-9121-BF3B87AB7301</mdFileID>
+</metadata>

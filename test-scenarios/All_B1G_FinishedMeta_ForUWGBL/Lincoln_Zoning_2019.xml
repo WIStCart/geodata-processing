@@ -1,0 +1,733 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20190323</CreaDate>
+    <CreaTime>07152100</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <ArcGISstyle>FGDC CSDGM Metadata</ArcGISstyle>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20181130" Time="093436" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20181130" Time="094149" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181130" Time="094150" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20181130" Time="142522" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20181130" Time="143257" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181130" Time="143259" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20181203" Time="154049" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20181203" Time="154844" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181203" Time="154845" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20181204" Time="124614" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20181204" Time="125352" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181204" Time="125353" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20181211" Time="083934" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20181211" Time="084742" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181211" Time="084743" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20181214" Time="083815" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20181214" Time="084529" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181214" Time="084531" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20190102" Time="143151" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20190102" Time="143857" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190102" Time="143859" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20190108" Time="154627" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20190108" Time="155352" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190108" Time="155354" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20190110" Time="094807" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20190110" Time="095632" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190110" Time="095634" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20190110" Time="140456" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20190110" Time="141311" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190110" Time="141313" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20190116" Time="100838" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20190116" Time="101657" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190116" Time="101659" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20190116" Time="155740" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20190116" Time="160621" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190116" Time="160623" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20190123" Time="102544" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20190123" Time="103345" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190123" Time="103347" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20190124" Time="153947" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20190124" Time="154815" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190124" Time="154817" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20190129" Time="161407" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20190129" Time="162252" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190129" Time="162253" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20190201" Time="085739" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20190201" Time="090506" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190201" Time="090508" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20190201" Time="112413" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20190201" Time="113336" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190201" Time="113337" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20190201" Time="134114" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20190201" Time="134928" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190201" Time="134929" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20190205" Time="143548" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20190205" Time="144434" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190205" Time="144436" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20190206" Time="153821" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20190206" Time="154727" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190206" Time="154730" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20190215" Time="090407" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20190215" Time="091256" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190215" Time="091258" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20190215" Time="160716" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20190215" Time="161435" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190215" Time="161436" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20190225" Time="103348" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20190225" Time="104541" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190225" Time="104544" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20190305" Time="131616" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20190305" Time="132441" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190305" Time="132443" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20190308" Time="090152" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20190308" Time="091103" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190308" Time="091105" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteRows" Date="20190308" Time="144002" Name="" export="">DeleteRows P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20190308" Time="144835" Name="" export="">Append P:/Data/Geodatabase/ParcelTopology.gdb/TopologyCheck/ZoningTemp002 P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning NO_TEST "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\ParcelTopology.gdb\FinalProducts\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190308" Time="144837" Name="" export="">CalculateField P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning ZONING findLabel( !ZONING!) PYTHON "def findLabel(zoning):\n  if zoning=='A':\n    return 'Agriculture'\n  elif zoning=='CMU':\n    return 'Crossroads Mixed Use'\n  elif zoning=='F':\n    return 'Forestry'\n  elif zoning=='GB':\n    return 'General Business'\n  elif zoning=='GI':\n    return 'General Industrial'\n  elif zoning=='MH':\n    return 'Mobile Home Park'\n  elif zoning=='NCZ':\n    return 'No County Zoning'\n  elif zoning=='NZ-H2O':\n    return 'No Zoning - Water'\n  elif zoning=='NZ-ROW':\n    return 'No Zoning - Right-of-Way'\n  elif zoning=='PB':\n    return 'Planned Business'\n  elif zoning=='PI':\n    return 'Planned Industrial'\n  elif zoning=='RE':\n    return 'Recreational'\n  elif zoning=='RL-2':\n    return 'Rural Lands - 2 per 40'\n  elif zoning=='RL-4':\n    return 'Rural Lands - 4 per 40'\n  elif zoning=='RR-1':\n    return 'Rural Residential 30,000'\n  elif zoning=='RR-2':\n    return 'Rural Residential 40,000'\n  elif zoning=='RR-3':\n    return 'Rural Residential 50,000'\n  elif zoning=='RR-4':\n    return 'Rural Residential 100,000'\n  elif zoning=='RR-5':\n    return 'Rural Residential 200,000'\n  elif zoning=='SR':\n    return 'Suburban Residential'\n  else:\n    return zoning"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Copy" Date="20190323" Time="071522" Name="" export="">Copy P:/Data/Geodatabase/ParcelTopology.gdb/FinalProducts/Zoning P:\Data\Geodatabase\PublicationWeb.gdb\Zoning FeatureClass</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20190328" Time="092038" Name="" export="">FeatureClassToFeatureClass P:\Data\Geodatabase\Publication.gdb\Zoning P:\Data\WLIP_State_Benchmark\StateV5\Final\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb LINCOLN_GENERAL_2019 # "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\Publication.gdb\Zoning,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,P:\Data\Geodatabase\Publication.gdb\Zoning,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,P:\Data\Geodatabase\Publication.gdb\Zoning,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,P:\Data\Geodatabase\Publication.gdb\Zoning,LINK,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\Publication.gdb\Zoning,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,P:\Data\Geodatabase\Publication.gdb\Zoning,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20190329" Time="141431" Name="" export="">FeatureClassToFeatureClass R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_GENERAL_2019 R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Lincoln_Zoning_2019\Lincoln_Zoning_2019.gdb Lincoln_Zoning_2019 # "ZONING "ZONING" true true false 255 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_GENERAL_2019,ZONING,-1,-1;LABEL "LABEL" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_GENERAL_2019,LABEL,-1,-1;MUNICIPALITY "MUNICIPALITY" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_GENERAL_2019,MUNICIPALITY,-1,-1;LINK "LINK" true true false 255 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_GENERAL_2019,LINK,-1,-1;Shape_Length "Shape_Length" false true true 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_GENERAL_2019,Shape_Length,-1,-1;Shape_Area "Shape_Area" false true true 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_GENERAL_2019,Shape_Area,-1,-1" #</Process>
+      </lineage>
+      <itemProps>
+        <itemName Sync="TRUE">Lincoln_Zoning_2019</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">516350.157000</westBL>
+          <eastBL Sync="TRUE">565150.597500</eastBL>
+          <southBL Sync="TRUE">516284.736200</southBL>
+          <northBL Sync="TRUE">564806.363100</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Lincoln_Zoning_2019\Lincoln_Zoning_2019.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Wisconsin_TM</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Wisconsin_TM&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,3071]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;10000&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;3071&lt;/WKID&gt;&lt;LatestWKID&gt;3071&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20190409</SyncDate>
+    <SyncTime>16404900</SyncTime>
+    <ModDate>20190409</ModDate>
+    <ModTime>16404900</ModTime>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooARmCqWY4AGSai+1Rf9NP8Av23+FPl/1L9fun7vX8Krx/6tOnQdOlcuJxDo2styoq5L9qi/
+6af9+2/wo+1Rf9NP+/bf4UyiuX6/LsVyFU+INMVdxuG29M+U+P5VZj1C3k+6JumcmBx/MVyM9p/Z
+0Uk1o0hQRs88RdsEbVYMAOBgknkc4xWtpd1Dej5oY1d8kSxZG/8A4EAOcHmtpYuSV0ieU2/tcX/T
+T/v03+FUR4k0gyCNb1GdsYVVYk56YAHNSJG8LERzF++yRs4Hsev55rnNU055IY7swQK8ixoQJiN5
+BG0nCZyBnv29qmnjXJ2aG4nUPqlpHA8ztKkafeLQuMfpVNvFWiJjdfouemUb/CuCeW4WJLC71CS3
+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</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum>608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday: 9:00am - 5:00pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+        <rpPosName>metadata technician</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>310 Science Hall</delPoint>
+            <delPoint>550 N. Park Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday: 9:00am - 5:00pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorFormat>
+        <formatName>ESRI Geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Lincoln County Land Information and Conservation</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">715-539-1049</voiceNum>
+            <faxNum>715-539-8093</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>801 N. Sales Street Suite 105</delPoint>
+            <city>Merrill</city>
+            <adminArea>WI</adminArea>
+            <postCode>54452</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </distorCont>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Lincoln_Zoning_2019.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <onLineSrc>
+        <linkage>http://maps.co.lincoln.wi.us/webapps/GISPortal/index.html</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>Lincoln County Land Services</orName>
+        <orDesc>Information from originator</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.5</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Zoning Lincoln County, WI 2019</resTitle>
+      <date>
+        <pubDate>2019-04-09T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Lincoln County Land Information and Conservation</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>715-539-1049</voiceNum>
+            <faxNum>715-539-8093</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>801 N. Sales Street Suite 105</delPoint>
+            <city>Merrill</city>
+            <adminArea>WI</adminArea>
+            <postCode>54452</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Lincoln County Land Information and Conservation</displayName>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Norm Bushor</rpIndName>
+        <rpOrgName>Lincoln County Land Information and Conservation</rpOrgName>
+        <rpPosName>Land Information Program Manager</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>715-539-1049</voiceNum>
+            <faxNum>715-539-8093</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>801 N. Sales Street Suite 105</delPoint>
+            <city>Merrill</city>
+            <adminArea>WI</adminArea>
+            <postCode>54452</postCode>
+            <country>US</country>
+            <eMailAdd>nbushor@co.lincoln.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Norm Bushor</displayName>
+      </citRespParty>
+      <resEd>2019</resEd>
+    </idCitation>
+    <idAbs>This data represents zoning for Lincoln County, Wisconsin in 2019.[This publication level, polygon feature class provides a graphical representation adn attributation of Zoning in Lincoln County, Wisconsin. Polygons are derived from the tax parcels in the production world that are attributed with the appropriate county Zoning.]</idAbs>
+    <idPurp>This data is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.
+
+[The purpose of the publication level, polygon feature class is to delineate Zoning in Lincoln County, Wisconsin.]</idPurp>
+    <idCredit>Lincoln County Land Information and Conservation
+
+[This feature class was created and is maintained by the Lincoln County, Wisconsin Land Services Department.]</idCredit>
+    <idPoC>
+      <rpOrgName>Lincoln County Land Information and Conservation</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">715-539-1049</voiceNum>
+          <faxNum>715-539-8093</faxNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>801 N. Sales Street Suite 105</delPoint>
+          <city>Merrill</city>
+          <adminArea>WI</adminArea>
+          <postCode>54452</postCode>
+          <country>US</country>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Lincoln County Land Information and Conservation</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>715-539-1049</voiceNum>
+            <faxNum>715-539-8093</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>801 N. Sales Street Suite 105</delPoint>
+            <city>Merrill</city>
+            <adminArea>WI</adminArea>
+            <postCode>54452</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <displayName>Lincoln County Land Information and Conservation</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Lincoln County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Polygon</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Zoning – Maps, City Planning, County Ordinances</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Zoning</keyword>
+      <keyword>Wisconsin</keyword>
+      <keyword>Lincoln County</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-90.048086</westBL>
+          <eastBL>-89.423327</eastBL>
+          <southBL>45.1192</southBL>
+          <northBL>45.556088</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2019-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements.
+
+For access to the most current data for this county, please visit: http://maps.co.lincoln.wi.us/webapps/gisportal/data.html</suppInfo>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-90.046764</westBL>
+          <eastBL Sync="TRUE">-89.421519</eastBL>
+          <northBL Sync="TRUE">45.556796</northBL>
+          <southBL Sync="TRUE">45.118591</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <resConst>
+      <Consts>
+        <useLimit>None.[This information was created using a variety of different sources and is not guaranteed to accurately describe all zoning with respect to shape, size, area or location. All distributed data is subject to the Lincoln County Disclaimer of Warranty. Contact the Lincoln County Land Services Department with any questions or concerns.]</useLimit>
+      </Consts>
+    </resConst>
+    <tpCat>
+      <TopicCatCd value="015" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>310 Science Hall</delPoint>
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday: 9:00am - 5:00pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Provided access to archived data at UW-Madison.</stepDesc>
+        <stepDateTm>2019-04-09T00:00:00</stepDateTm>
+        <stepProc>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+          <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+          <rpPosName>metadata technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>310 Science Hall</delPoint>
+              <delPoint>550 N. Park Street</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday: 9:00am - 5:00pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="001" />
+          </role>
+          <displayName>Arthur H. Robinson Map Library</displayName>
+          <displayName>Arthur H. Robinson Map Library</displayName>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <eainfo>
+    <detailed Name="Lincoln_Zoning_2019">
+      <enttyp>
+        <enttypl Sync="TRUE">Lincoln_Zoning_2019</enttypl>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">4063</enttypc>
+        <enttypd>Zoning Lincoln County, WI 2019</enttypd>
+        <enttypds>Lincoln County Land Information and Conservation</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">ESRI</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ZONING</attrlabl>
+        <attalias Sync="TRUE">ZONING</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SHAPE</attrlabl>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Feature geometry.</attrdef>
+        <attrdefs Sync="TRUE">ESRI</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LABEL</attrlabl>
+        <attalias Sync="TRUE">LABEL</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">MUNICIPALITY</attrlabl>
+        <attalias Sync="TRUE">MUNICIPALITY</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LINK</attrlabl>
+        <attalias Sync="TRUE">LINK</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Length</attrlabl>
+        <attalias Sync="TRUE">Shape_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Length of feature in internal units.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Area</attrlabl>
+        <attalias Sync="TRUE">Shape_Area</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Area of feature in internal units squared.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="3071" Sync="TRUE" />
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+        <idVersion Sync="FALSE">9.5.5</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Lincoln_Zoning_2019">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">4063</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Lincoln_Zoning_2019">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="4" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">4063</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20190409</mdDateSt>
+  <mdFileID>6D635831-49BB-4053-8BB8-D90F06C4A7AE</mdFileID>
+</metadata>

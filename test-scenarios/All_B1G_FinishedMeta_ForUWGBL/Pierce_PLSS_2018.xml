@@ -1,0 +1,988 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20180313</CreaDate>
+    <CreaTime>09221400</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <itemProps>
+        <itemName Sync="TRUE">Pierce_PLSS_2018</itemName>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\Pierce_PLSS_2018.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemSize Sync="TRUE">0.000</itemSize>
+        <nativeExtBox>
+          <westBL Sync="TRUE">298120.895700</westBL>
+          <eastBL Sync="TRUE">351209.376800</eastBL>
+          <southBL Sync="TRUE">454017.525900</southBL>
+          <northBL Sync="TRUE">491344.474100</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Wisconsin_TM</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Wisconsin_TM&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,3071]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;10000&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;3071&lt;/WKID&gt;&lt;LatestWKID&gt;3071&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+      <lineage>
+        <Process ToolSource="c:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151005" Time="102212" Name="" export="">CalculateField Corners_prowest LINK ""http://www.co.pierce.wi.us/link/CornerScans/" + [ROMPORTL] +".pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="115147" Name="" export="">CalculateField "Land Surveying Data\Corners" NOTES2 "Coordinates Are Approximate" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="115204" Name="" export="">CalculateField "Land Surveying Data\Corners" NOTES2 "Survey Grade" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="115313" Name="" export="">CalculateField "Land Surveying Data\Corners" TYPE "County Monument" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="115425" Name="" export="">CalculateField "Land Surveying Data\Corners" TYPE "Meander Corner" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="115502" Name="" export="">CalculateField "Land Surveying Data\Corners" NOTES2 "" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="115516" Name="" export="">CalculateField "Land Surveying Data\Corners" TYPE "Corner not set" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="115544" Name="" export="">CalculateField "Land Surveying Data\Corners" TYPE "Witness Corner" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="115652" Name="" export="">CalculateField "Land Surveying Data\Corners" TYPE "Witness Corner to Meander Corner" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="115716" Name="" export="">CalculateField "Land Surveying Data\Corners" TYPE "Witness Corner Meander Corner" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="115753" Name="" export="">CalculateField "Land Surveying Data\Corners" TYPE2 [TYPE] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="115820" Name="" export="">CalculateField "Land Surveying Data\Corners" TYPE2 "Witness Corner to Meander Corner" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="115858" Name="" export="">CalculateField "Land Surveying Data\Corners" TYPE2 [TYPE] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="115956" Name="" export="">CalculateField "Land Surveying Data\Corners" NOTES2 " " VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="120129" Name="" export="">CalculateField "Land Surveying Data\Corners" CORNER "NC" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="120145" Name="" export="">CalculateField "Land Surveying Data\Corners" NOTES2 "Corner not set" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="120202" Name="" export="">CalculateField "Land Surveying Data\Corners" TYPE2 "Corner not set" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151104" Time="120213" Name="" export="">CalculateField "Land Surveying Data\Corners" NOTES2 "" VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151105" Time="095647" Name="" export="">CalculateField Corners_Final NORTHING [Y_COORD] VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151105" Time="095832" Name="" export="">CalculateField Corners_Final NORTHING ""N" + [NORTHING]" VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151105" Time="095857" Name="" export="">CalculateField Corners_Final EASTING [X_COORD] VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151105" Time="095929" Name="" export="">CalculateField Corners_Final EASTING ""E" + [EASTING]" VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151105" Time="101753" Name="" export="">CalculateField Corners_Final NORTHING [Y_COORD] VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151105" Time="101809" Name="" export="">CalculateField Corners_Final NORTHING ""N" + [NORTHING]" VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151105" Time="101825" Name="" export="">CalculateField Corners_Final EASTING [X_COORD] VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151105" Time="101855" Name="" export="">CalculateField Corners_Final EASTING ""E" + [EASTING]" VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151105" Time="102442" Name="" export="">CalculateField Corners_Final DATUM "WCCS-NAD 1983(1991" VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151105" Time="102615" Name="" export="">CalculateField Corners_Final DATUM "WCCS-NAD 1983(1991)" VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151105" Time="102855" Name="" export="">CalculateField Corners_Final DATUM "Coordinates Are Approximate" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160722" Time="110457" Name="" export="">CalculateField Corners_Louie_romportl_Final ROMPORTL [ROMPORTL2] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="131338" Name="" export="">CalculateField Corners_Final NOTES2 "Martell Centers" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="131631" Name="" export="">CalculateField Corners_Final NORTHING [Y_COORD] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="131715" Name="" export="">CalculateField Corners_Final EASTING [X_COORD] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="131810" Name="" export="">CalculateField Corners_Final EASTING [X_COORD] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="132332" Name="" export="">CalculateField Corners_Final EASTING [X_COORD] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="133139" Name="" export="">CalculateField Corners_Final EASTING [X_COORD] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="133805" Name="" export="">CalculateField Corners_Final EASTING "[X_COORD]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="133812" Name="" export="">CalculateField Corners_Final EASTING [X_COORD] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="135444" Name="" export="">CalculateField Corners_Final NORTHING [Y_COORD] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="135457" Name="" export="">CalculateField Corners_Final NORTHING [Y_COORD] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="135507" Name="" export="">CalculateField Corners_Final EASTING [X_COORD] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="140145" Name="" export="">CalculateField Corners_Final NORTHING ""N" + [NORTHING]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="140209" Name="" export="">CalculateField Corners_Final EASTING ""E" + [EASTING]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="140644" Name="" export="">CalculateField Corners_Final NORTH_EAST "[NORTHING] + " " + [EASTING]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="140700" Name="" export="">CalculateField Corners_Final NORTH_EAST "[NORTHING] + "  " + [EASTING]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="140938" Name="" export="">CalculateField Corners_Final NOTES "Centers" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="140952" Name="" export="">CalculateField Corners_Final CORNER "C" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="141050" Name="" export="">CalculateField Corners_Final Source "COUNTY" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="143326" Name="" export="">CalculateField Corners_Final NOTES2 "Survey Grade" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="143341" Name="" export="">CalculateField Corners_Final TYPE2 "County Monument" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="143354" Name="" export="">CalculateField Corners_Final DATUM "WCCS-NAD 1983(1991)" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="155941" Name="" export="">CalculateField Corners_Final ROMPORTL ""2" + [TWN] + [RNG] + [SEC2] +"2020"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="160004" Name="" export="">CalculateField Corners_Final CORN_NUM "2020" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="160012" Name="" export="">CalculateField Corners_Final ROMPORTL2 [ROMPORTL] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="160148" Name="" export="">CalculateField Corners_Final LINK ""http://www.co.pierce.wi.us/link/CornerScans/" + [ROMPORTL] +".pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161213" Time="160320" Name="" export="">CalculateField Corners_Final LAYER_1 "MON-CORNER-COUNTY" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170119" Time="123905" Name="" export="">CalculateField Corners_Final CORN_NUM Right( [ROMPORTL],4 ) VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\Project" Date="20180215" Time="143205" Name="" export="">Project Corners_Final D:\Corners\2018\Corners_Final_Pierce.shp PROJCS['NAD_1983_HARN_WISCRS_Pierce_County_Feet',GEOGCS['GCS_North_American_1983_HARN',DATUM['D_North_American_1983_HARN',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Lambert_Conformal_Conic'],PARAMETER['False_Easting',550000.0],PARAMETER['False_Northing',282260.222],PARAMETER['Central_Meridian',-92.22777777777777],PARAMETER['Standard_Parallel_1',44.63614887194444],PARAMETER['Scale_Factor',1.0000362977],PARAMETER['Latitude_Of_Origin',44.63614887194444],UNIT['Foot_US',0.3048006096012192]] 'NAD_1983_To_WGS_1984_5 + NAD_1983_HARN_To_WGS_1984_3' PROJCS['NAD_1983_StatePlane_Wisconsin_Central_FIPS_4802_Feet',GEOGCS['GCS_North_American_1983',DATUM['D_North_American_1983',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Lambert_Conformal_Conic'],PARAMETER['False_Easting',1968500.0],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',-90.0],PARAMETER['Standard_Parallel_1',44.25],PARAMETER['Standard_Parallel_2',45.5],PARAMETER['Latitude_Of_Origin',43.83333333333334],UNIT['Foot_US',0.3048006096012192]] NO_PRESERVE_SHAPE # NO_VERTICAL</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="145849" Name="" export="">CalculateField Corners_Final_Pierce NO [YC] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="150030" Name="" export="">CalculateField Corners_Final_Pierce EA [NO] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="150249" Name="" export="">CalculateField Corners_Final_Pierce NO [NO] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="150652" Name="" export="">CalculateField Corners_Final_Pierce XC_2 [X_COORD] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="150711" Name="" export="">CalculateField Corners_Final_Pierce XC_2 [XC] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="150740" Name="" export="">CalculateField Corners_Final_Pierce XC_2 [XC] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="150906" Name="" export="">CalculateField Corners_Final_Pierce NO ""N" + [NO]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="151155" Name="" export="">CalculateField Corners_Final_Pierce XC_2 [NO] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="151221" Name="" export="">CalculateField Corners_Final_Pierce XC_2 [NO] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="151324" Name="" export="">CalculateField Corners_Final_Pierce XC_2 [NO] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="151421" Name="" export="">CalculateField Corners_Final_Pierce XC_2 [XC] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="151523" Name="" export="">CalculateField Corners_Final_Pierce NO [XC_2] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="151650" Name="" export="">CalculateField Corners_Final_Pierce NO_2 [YC] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="151748" Name="" export="">CalculateField Corners_Final_Pierce NO_2 [NO] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="151811" Name="" export="">CalculateField Corners_Final_Pierce NO_2 [YC] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="151823" Name="" export="">CalculateField Corners_Final_Pierce NO_2 [NO] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="152326" Name="" export="">CalculateField Corners_Final_Pierce NO_2 [NO] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="152355" Name="" export="">CalculateField Corners_Final_Pierce NO_2 [NO] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="152447" Name="" export="">CalculateField Corners_Final_Pierce YC_2 [NO_2] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="152507" Name="" export="">CalculateField Corners_Final_Pierce YC_2 [NO_2] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="152706" Name="" export="">CalculateField Corners_Final_Pierce NO "N" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="152736" Name="" export="">CalculateField Corners_Final_Pierce NO [YC] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="152813" Name="" export="">CalculateField Corners_Final_Pierce NO_2 ""N" + [NO]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="152840" Name="" export="">CalculateField Corners_Final_Pierce NO_2 "N" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="152857" Name="" export="">CalculateField Corners_Final_Pierce NO "[NO_2] + [NO]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="152922" Name="" export="">CalculateField Corners_Final_Pierce NO [YC] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="154310" Name="" export="">CalculateField Corners_Final_Pierce NO3 "[NO_2] + [NO]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="154641" Name="" export="">CalculateField Corners_Final_Pierce NO_2 [YC] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="154737" Name="" export="">CalculateField Corners_Final_Pierce NO_2 [YC] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="154817" Name="" export="">CalculateField Corners_Final_Pierce NO [NO_2] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="154826" Name="" export="">CalculateField Corners_Final_Pierce NO [NO_2] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="154921" Name="" export="">CalculateField Corners_Final_Pierce NO [YC] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="155143" Name="" export="">CalculateField Corners_Final_Pierce NO [YC] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="155427" Name="" export="">CalculateField Corners_Final_Pierce test [YC] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="155512" Name="" export="">CalculateField Corners_Final_Pierce test [YC] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180215" Time="155643" Name="" export="">CalculateField Corners_Final_Pierce test ""N" + [test]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180216" Time="124645" Name="" export="">CalculateField Corners_Final_Pierce NO updateValue( !YC! ) PYTHON_9.3 "def updateValue(value):\n  if value &lt;&gt; '':\n    newValue = str(value)\n    splitBefore = newValue.split('.')[0]\n    splitAfter = newValue.split('.')[1]\n    return splitBefore + '.' + splitAfter[:3]\n  else: return ''\n\n"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180216" Time="124732" Name="" export="">CalculateField Corners_Final_Pierce NO updateValue( !YC! ) PYTHON_9.3 "def updateValue(value):\n  if value &lt;&gt; '':\n    newValue = str(value)\n    splitBefore = newValue.split('.')[0]\n    splitAfter = newValue.split('.')[1]\n    return splitBefore + '.' + splitAfter[:2]\n  else: return ''\n\n"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180216" Time="124754" Name="" export="">CalculateField Corners_Final_Pierce NO updateValue( !YC! ) PYTHON_9.3 "def updateValue(value):\n  if value &lt;&gt; '':\n    newValue = str(value)\n    splitBefore = newValue.split('.')[0]\n    splitAfter = newValue.split('.')[1]\n    return splitBefore + '.' + splitAfter[:3]\n  else: return ''\n\n"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180216" Time="130051" Name="" export="">CalculateField Corners_Final_Pierce NO '{0:.3f}'.format( !YC! ) PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180216" Time="130106" Name="" export="">CalculateField Corners_Final_Pierce NO '{0:.2f}'.format( !YC! ) PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180216" Time="130234" Name="" export="">CalculateField Corners_Final_Pierce SO '{0:.2f}'.format( !XC! ) PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180216" Time="130244" Name="" export="">CalculateField Corners_Final_Pierce SO '{0:.2f}'.format( !XC! ) PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180216" Time="130349" Name="" export="">CalculateField Corners_Final_Pierce NO ""N" + [NO]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180216" Time="130409" Name="" export="">CalculateField Corners_Final_Pierce SO ""E" + [SO]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180216" Time="133109" Name="" export="">CalculateField Corners_Final_Pierce NORTHING [NO] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180216" Time="133126" Name="" export="">CalculateField Corners_Final_Pierce EASTING [SO] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180216" Time="133334" Name="" export="">CalculateField Corners_Final_Pierce CORNER "C" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180216" Time="133356" Name="" export="">CalculateField Corners_Final_Pierce NOTES "ADDED 2/2018" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180216" Time="134406" Name="" export="">CalculateField Corners_Final_Pierce NORTH_EAST "[NORTHING] + " " + [EASTING]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180216" Time="141005" Name="" export="">CalculateField Corners_Final_Pierce CORN_NUM "2020" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180220" Time="102219" Name="" export="">CalculateField Corners_Final_Pierce ROMPORTL "[ROMPORTL] + [CORN_NUM]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180220" Time="102232" Name="" export="">CalculateField Corners_Final_Pierce ROMPORTL2 [ROMPORTL] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180220" Time="103627" Name="" export="">CalculateField Corners_Final_Pierce Source "COUNTY" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180220" Time="103656" Name="" export="">CalculateField Corners_Final_Pierce DATUM "WCCS-NAD 1983(1991)" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180220" Time="103723" Name="" export="">CalculateField Corners_Final_Pierce NOTES2 "Survey Grade" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180220" Time="103746" Name="" export="">CalculateField Corners_Final_Pierce TYPE2 "County Monument" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180220" Time="103816" Name="" export="">CalculateField Corners_Final_Pierce LINK "http://www.co.pierce.wi.us/link/CornerScans/" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180220" Time="104147" Name="" export="">CalculateField Corners_Final_Pierce Subtype 1 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180220" Time="104235" Name="" export="">CalculateField Corners_Final_Pierce Layer "corners_correct" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180220" Time="104447" Name="" export="">CalculateField Corners_Final_Pierce LINK "[LINK] + [ROMPORTL] +".pdf"" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\Project" Date="20180313" Time="092216" Name="" export="">Project D:\Corners\2018\Corners_Final_Pierce.shp D:\Parcels\Act20\2018\PIERCE_OTHER.gdb\PIERCE_PLSS_2018 PROJCS['NAD_1983_HARN_Wisconsin_TM',GEOGCS['GCS_North_American_1983_HARN',DATUM['D_North_American_1983_HARN',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Transverse_Mercator'],PARAMETER['False_Easting',520000.0],PARAMETER['False_Northing',-4480000.0],PARAMETER['Central_Meridian',-90.0],PARAMETER['Scale_Factor',0.9996],PARAMETER['Latitude_Of_Origin',0.0],UNIT['Meter',1.0]] # PROJCS['NAD_1983_HARN_WISCRS_Pierce_County_Feet',GEOGCS['GCS_North_American_1983_HARN',DATUM['D_North_American_1983_HARN',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Lambert_Conformal_Conic'],PARAMETER['False_Easting',550000.0],PARAMETER['False_Northing',282260.222],PARAMETER['Central_Meridian',-92.22777777777777],PARAMETER['Standard_Parallel_1',44.63614887194444],PARAMETER['Scale_Factor',1.0000362977],PARAMETER['Latitude_Of_Origin',44.63614887194444],UNIT['Foot_US',0.3048006096012192]] NO_PRESERVE_SHAPE # NO_VERTICAL</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20180611" Time="162128" Name="" export="">FeatureClassToFeatureClass R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018 R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\Pierce_PLSS_2018.gdb Pierce_PLSS_2018 # "OBJECTID "OBJECTID" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,OBJECTID,-1,-1;Layer "Layer" true true false 254 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,Layer,-1,-1;X_COORD "X_COORD" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,X_COORD,-1,-1;Y_COORD "Y_COORD" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,Y_COORD,-1,-1;NORTHING "NORTHING" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,NORTHING,-1,-1;EASTING "EASTING" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,EASTING,-1,-1;NORTH_EAST "NORTH_EAST" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,NORTH_EAST,-1,-1;NOTES "NOTES" true true false 25 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,NOTES,-1,-1;CORNER "CORNER" true true false 25 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,CORNER,-1,-1;LAYER_1 "LAYER_1" true true false 254 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,LAYER_1,-1,-1;Subtype "Subtype" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,Subtype,-1,-1;Source "Source" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,Source,-1,-1;TWN "TWN" true true false 2 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,TWN,-1,-1;RNG "RNG" true true false 2 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,RNG,-1,-1;SEC "SEC" true true false 2 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,SEC,-1,-1;SEC2 "SEC2" true true false 25 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,SEC2,-1,-1;CORN_NUM "CORN_NUM" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,CORN_NUM,-1,-1;ROMPORTL "ROMPORTL" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,ROMPORTL,-1,-1;ROMPORTL2 "ROMPORTL2" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,ROMPORTL2,-1,-1;LINK "LINK" true true false 75 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,LINK,-1,-1;NOTES2 "NOTES2" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,NOTES2,-1,-1;TYPE2 "TYPE2" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,TYPE2,-1,-1;DATUM "DATUM" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Pierce\PIERCE_OTHER.gdb\PIERCE_PLSS_2018,DATUM,-1,-1" #</Process>
+      </lineage>
+      <copyHistory>
+        <copy source="D:\Corners\2017\Corners_Final" dest="\\LM-MXL6050MNC\D$\Corners\2018\Corners_Final" date="20180215" time="13091300" />
+      </copyHistory>
+    </DataProperties>
+    <SyncDate>20180621</SyncDate>
+    <SyncTime>10491700</SyncTime>
+    <ModDate>20180621</ModDate>
+    <ModTime>10491700</ModTime>
+    <ArcGISstyle>FGDC CSDGM Metadata</ArcGISstyle>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+  </Esri>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpOrgName>UW-Madison</rpOrgName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum tddtty="">608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpPosName>Metadata technician</rpPosName>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>310 Science Hall</delPoint>
+            <delPoint>550 N. Park Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="001" />
+        </role>
+      </distorCont>
+      <distorOrdPrc>
+        <resFees units="">None</resFees>
+      </distorOrdPrc>
+      <distorFormat>
+        <formatName>ESRI Geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Pierce_PLSS_2018.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.3</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Pierce County Land Management and Zoning</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">715-273-6746</voiceNum>
+            <faxNum>715-273-6864</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>PO Box 647</delPoint>
+            <city>Ellsworth</city>
+            <adminArea>WI</adminArea>
+            <postCode>54011</postCode>
+            <country>US</country>
+            <delPoint>414 W. Main St. Room 10</delPoint>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Pierce County Land Management and Zoning</displayName>
+        <displayName>Pierce County Land Management and Zoning</displayName>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">PLSS Pierce County, WI 2018</resTitle>
+      <date>
+        <pubDate>2018-06-21T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Pierce County Land Management and Zoning</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">715-273-6746</voiceNum>
+            <faxNum>715-273-6864</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>PO Box 647</delPoint>
+            <city>Ellsworth</city>
+            <adminArea>WI</adminArea>
+            <postCode>54011</postCode>
+            <country>US</country>
+            <delPoint>414 W. Main St. Room 10</delPoint>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Pierce County Land Management and Zoning</displayName>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Andy Pichotta</rpIndName>
+        <rpOrgName>Pierce County Land Management and Zoning</rpOrgName>
+        <rpPosName>Land Management Director</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">715-273-6747</voiceNum>
+            <faxNum>715-273-6864</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>PO Box 647</delPoint>
+            <city>Ellsworth</city>
+            <adminArea>WI</adminArea>
+            <postCode>54011</postCode>
+            <country>US</country>
+            <eMailAdd>apichott@co.pierce.wi.us</eMailAdd>
+            <delPoint>414 W. Main St. Room 10</delPoint>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Andy Pichotta</displayName>
+      </citRespParty>
+      <resEdDate>20180101</resEdDate>
+    </idCitation>
+    <idAbs>This point data layer represents public land survey system (PLSS) corners for Pierce County, Wisconsin in 2018. It is a feature class within the geodatabase "Pierce_PLSS_2018.gdb".</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. [PLSS Corners with Tiesheet links.]</idPurp>
+    <idCredit>Pierce County Land Management and Zoning</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Pierce County Land Management and Zoning</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">715-273-6746</voiceNum>
+            <faxNum>715-273-6864</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>PO Box 647</delPoint>
+            <city>Ellsworth</city>
+            <adminArea>WI</adminArea>
+            <postCode>54011</postCode>
+            <country>US</country>
+            <delPoint>414 W. Main St. Room 10</delPoint>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Pierce County Land Management and Zoning</displayName>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Pierce County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Point</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Surveying - Public Lands</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>PLSS</keyword>
+      <keyword>Public Land Survey System</keyword>
+      <keyword>Point</keyword>
+      <keyword>Pierce County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-92.809339</westBL>
+          <eastBL>-92.125327</eastBL>
+          <southBL>44.527054</southBL>
+          <northBL>44.875107</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2018-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements.</suppInfo>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idPoC>
+      <rpOrgName>Pierce County Land Management and Zoning</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">715-273-6746</voiceNum>
+          <faxNum>715-273-6864</faxNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>PO Box 647</delPoint>
+          <city>Ellsworth</city>
+          <adminArea>WI</adminArea>
+          <postCode>54011</postCode>
+          <country>US</country>
+          <delPoint>414 W. Main St. Room 10</delPoint>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="006" />
+      </role>
+      <displayName>Pierce County Land Management and Zoning</displayName>
+    </idPoC>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-92.808388</westBL>
+          <eastBL Sync="TRUE">-92.124647</eastBL>
+          <northBL Sync="TRUE">44.875526</northBL>
+          <southBL Sync="TRUE">44.525349</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <themeKeys>
+      <keyword>PLSS: Public Land Survey System</keyword>
+    </themeKeys>
+    <tpCat>
+      <TopicCatCd value="015" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+      <rpPosName>Metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform to UW-Madison's data distribution plan.</stepDesc>
+        <stepDateTm>2018-06-21T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum tddtty="">608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="009" />
+          </role>
+          <rpPosName>Metadata technician</rpPosName>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <idVersion Sync="FALSE">9.4.1</idVersion>
+        <identCode code="3071" Sync="TRUE" />
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Pierce_PLSS_2018">
+      <enttyp>
+        <enttypl Sync="TRUE">Pierce_PLSS_2018</enttypl>
+        <enttypd>PLSS Pierce County, WI 2018</enttypd>
+        <enttypds>Pierce County Land Management and Zoning</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">2061</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID_1</attrlabl>
+        <attalias Sync="TRUE">OBJECTID_1</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Layer</attrlabl>
+        <attalias Sync="TRUE">Layer</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">254</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">X_COORD</attrlabl>
+        <attalias Sync="TRUE">X_COORD</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Y_COORD</attrlabl>
+        <attalias Sync="TRUE">Y_COORD</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">NORTHING</attrlabl>
+        <attalias Sync="TRUE">NORTHING</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">EASTING</attrlabl>
+        <attalias Sync="TRUE">EASTING</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">NORTH_EAST</attrlabl>
+        <attalias Sync="TRUE">NORTH_EAST</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">NOTES</attrlabl>
+        <attalias Sync="TRUE">NOTES</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CORNER</attrlabl>
+        <attalias Sync="TRUE">CORNER</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LAYER_1</attrlabl>
+        <attalias Sync="TRUE">LAYER_1</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">254</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Subtype</attrlabl>
+        <attalias Sync="TRUE">Subtype</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Source</attrlabl>
+        <attalias Sync="TRUE">Source</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TWN</attrlabl>
+        <attalias Sync="TRUE">TWN</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RNG</attrlabl>
+        <attalias Sync="TRUE">RNG</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SEC</attrlabl>
+        <attalias Sync="TRUE">SEC</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SEC2</attrlabl>
+        <attalias Sync="TRUE">SEC2</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CORN_NUM</attrlabl>
+        <attalias Sync="TRUE">CORN_NUM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ROMPORTL</attrlabl>
+        <attalias Sync="TRUE">ROMPORTL</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ROMPORTL2</attrlabl>
+        <attalias Sync="TRUE">ROMPORTL2</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LINK</attrlabl>
+        <attalias Sync="TRUE">LINK</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">75</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">NOTES2</attrlabl>
+        <attalias Sync="TRUE">NOTES2</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TYPE2</attrlabl>
+        <attalias Sync="TRUE">TYPE2</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DATUM</attrlabl>
+        <attalias Sync="TRUE">DATUM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Pierce_PLSS_2018">
+        <geoObjTyp>
+          <GeoObjTypCd value="004" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">2061</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Pierce_PLSS_2018">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="1" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">2061</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20180621</mdDateSt>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gArl08c2Zt5p5dJ1yGOEz7zJp0gwIgpJwOzBvl9cHpXUV5Vd2N/FoHirdeRtby3l41xbtpQc3YIj
+XKhJdxCcgtkHJ5AxQB2UnjbS41kZrfVf3azMQNNnyRGyq2Bt55cY/GnTeNdFtvO+0NeQ+V5xYPYz
+ciJlViPl5GXXBHXPsaxZrLWJPEsQt7rTxeQ2d0tpdnTJDFCjSxhYy3mY3gLgjr/XMlg1Q+GL9pIo
+Es5dQkeSJra8855ftihXCq5fYVGfl4zjtmgDrW8b6CoYm4uRt3Z/0ObjbKIT/D/fIH69KU+N/DSy
+rEdXgDs5jUYblhKISOn/AD0IH69OaxTdeIJPHCwrBYfborMs6me5EP2drkAEDb5Zk8tT77v9kVgQ
+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
+FFACFQeoB4xzS0UUAFFFFAH/2Q==</Data>
+    </Thumbnail>
+  </Binary>
+  <mdFileID>415CF196-E0C5-4B70-9DCD-0A8E9E7C9EAF</mdFileID>
+</metadata>

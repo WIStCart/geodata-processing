@@ -1,0 +1,940 @@
+﻿<metadata>
+  <Esri>
+    <SyncDate>20180510</SyncDate>
+    <SyncTime>12322900</SyncTime>
+    <ModDate>20180510</ModDate>
+    <ModTime>12322900</ModTime>
+    <CreaDate>20180319</CreaDate>
+    <CreaTime>13505400</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process Name="DeleteField_1" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteField" Date="20060508" Time="202746" export="">DeleteField "C:\Data\Wisconsin\Iowa County\Deliverables\Vector\ADDRESSES.shp" Loc_name;Status;Score;Side;Ref_ID;ARC_STREET;ARC_ZONE;I608987397;N2;HIGH;N4;N5;MINERAL_PO;WIAPT_B;EDGE__ROBE;N9;IOWA;IOWA_1 "C:\Data\Wisconsin\Iowa County\Deliverables\Vector\ADDRESSES.shp"</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20060531" Time="151559" Name="" export="">CopyFeatures "C:\Data\Wisconsin\Iowa County\Deliverables\Vector\ADDRESSES.shp" "C:\Data\Wisconsin\Iowa County\Deliverables\Vector\Vector.mdb\BBSI_Vector\ADDRESSES" # 0 0 0</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddSpatialIndex" Date="20150803" Time="125104" Name="" export="">AddSpatialIndex "C:\Users\swood\AppData\Roaming\ESRI\Desktop10.2\ArcCatalog\Connection to ntsrv54.sde\ArcGis.SWOOD.ADDRESSES" 0 0 0</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20180321" Time="152528" Name="" export="">FeatureClassToFeatureClass R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017 R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\Iowa_Addresses_2017.gdb Iowa_Addresses_2017 # "HOUSE "HOUSE" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017,HOUSE,-1,-1;ADDRESS "ADDRESS" true true false 60 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017,ADDRESS,-1,-1;ZONE_ "ZONE_" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017,ZONE_,-1,-1;COMMUNITY "COMMUNITY" true true false 25 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017,COMMUNITY,-1,-1;COUNTY "COUNTY" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017,COUNTY,-1,-1;ADD_ "ADD_" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017,ADD_,-1,-1;POINT_X "POINT_X" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017,POINT_X,-1,-1;POINT_Y "POINT_Y" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017,POINT_Y,-1,-1;VER_HOUSE "VER_HOUSE" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017,VER_HOUSE,-1,-1;VER_DIR "VER_DIR" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017,VER_DIR,-1,-1;VER_STREET "VER_STREET" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017,VER_STREET,-1,-1;VER_SUF "VER_SUF" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017,VER_SUF,-1,-1;STR_NAME "STR_NAME" true true false 75 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017,STR_NAME,-1,-1;STR_TYPE "STR_TYPE" true true false 8 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017,STR_TYPE,-1,-1;BLDG_TYPE "BLDG_TYPE" true true false 15 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017,BLDG_TYPE,-1,-1;BLDG_NUM "BLDG_NUM" true true false 15 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017,BLDG_NUM,-1,-1;UNIT_TYPE "UNIT_TYPE" true true false 15 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017,UNIT_TYPE,-1,-1;UNIT_NUM "UNIT_NUM" true true false 15 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017,UNIT_NUM,-1,-1;CITY "CITY" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017,CITY,-1,-1;STATE "STATE" true true false 2 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017,STATE,-1,-1;ZIP_CODE "ZIP_CODE" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\IOWA_OTHER.gdb\IOWA_ADDRESSES_2017,ZIP_CODE,-1,-1" #</Process>
+      </lineage>
+      <itemProps>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2018_ALL_DATA_OPEN_V4\Iowa\Iowa_Addresses_2017.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemName Sync="TRUE">Iowa_Addresses_2017</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">485041.527100</westBL>
+          <eastBL Sync="TRUE">533194.007400</eastBL>
+          <southBL Sync="TRUE">260105.296800</southBL>
+          <northBL Sync="TRUE">302379.030500</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Wisconsin_TM</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Wisconsin_TM&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,3071]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;10000&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;3071&lt;/WKID&gt;&lt;LatestWKID&gt;3071&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsK
+CwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQU
+FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9U6KK
+KACo7i4itYJJppEhhjUu8kjBVVQMkknoAKkrK8V+GdL8aeGdV0DW7CPVNH1O1ktLyyk+7PE6lXQ8
+jGQSM5GPUUAXbDUbTVbVLmyuoby2kGUmt5A6MPYg4NWK/Kjwz+wQdQTV9HsGsvB2seLNGur/AMNe
+HdR0/WLeexWC7Rc3bpeyRKwin2YZmbMiNg4YN7uv7N/xB1aL4Tax4n8H3ms+J/DFr4f06a+svH8t
+nMyR73u5bpEiEbiCQLtEZLyCQ5ckZoA+lP2gP2hvB/7M/gi38WeNp7qDSJ9Qh01Ws7czP5sgYg7Q
+R8oVHY45wpwCcCtT4O/Grwb8e/BcHirwNrK63ossjQ+cIpIWSRfvIySKrKRnuPpkV+Wfxd+E9p8a
+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
+ACiiigAooooAKKKKACiiigD/2Q==</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum>(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+        <rpPosName>metadata technician</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>(608) 262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorFormat>
+        <formatName>ESRI GeoDatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Iowa_Addresses_2017.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.3</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <editorSource>external</editorSource>
+        <editorDigest>a783ca20376519d08ab8bb969d110152</editorDigest>
+        <rpOrgName>Iowa County Planning and Development Department</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>222 N. Iowa St.</delPoint>
+            <city>Dodgeville</city>
+            <adminArea>WI</adminArea>
+            <postCode>53533</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>608 935-0398</voiceNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Iowa County Planning and Development Department</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Addresses Iowa County, WI 2017</resTitle>
+      <date>
+        <pubDate>2018-05-10T00:00:00</pubDate>
+      </date>
+      <citRespParty>
+        <rpOrgName>Iowa County Planning and Development Department</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>222 N. Iowa St.</delPoint>
+            <city>Dodgeville</city>
+            <adminArea>WI</adminArea>
+            <postCode>53533</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>608 935-0398</voiceNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <resEdDate>20161231</resEdDate>
+      <citRespParty>
+        <rpIndName>Scott Godfrey</rpIndName>
+        <rpOrgName>Iowa County Planning and Development Department</rpOrgName>
+        <rpPosName>Metadata contact</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608 935-0398</voiceNum>
+          </cntPhone>
+          <cntAddress>
+            <delPoint>222 N. Iowa St.</delPoint>
+            <city>Dodgeville</city>
+            <adminArea>WI</adminArea>
+            <postCode>53533</postCode>
+            <eMailAdd>scott.godfrey@iowacounty.org</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Scott Godfrey</displayName>
+      </citRespParty>
+    </idCitation>
+    <idAbs>This point data layer represents addresses for Iowa County, Wisconsin in 2017. It is a feature class within the geodatabase, Iowa_Addresses_2017.gdb.[This point based shapefile represent the address point layer for Iowa County, WIS]</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. [This data set was produced to be used with Bullberry Systems, Inc, R3GIS emergency routing software, but can be used in any mapping software that is built on an ESRI platform utilizing shapefiles.]</idPurp>
+    <idCredit>Iowa County Planning and Development Department</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <editorSource>external</editorSource>
+        <editorDigest>a783ca20376519d08ab8bb969d110152</editorDigest>
+        <rpOrgName>Iowa County Planning and Development Department</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>222 N. Iowa St.</delPoint>
+            <city>Dodgeville</city>
+            <adminArea>WI</adminArea>
+            <postCode>53533</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>608 935-0398</voiceNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Iowa County Planning and Development Department</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Iowa County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Point</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Street Addresses</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Street Addresses</keyword>
+      <keyword>Point</keyword>
+      <keyword>Wisconsin</keyword>
+      <keyword>Iowa County</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-90.429999</westBL>
+          <eastBL>-89.836673</eastBL>
+          <southBL>42.812936</southBL>
+          <northBL>43.193833</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2017-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements. 
+
+This data was submitted to the UW geospatial archive in 2018. Content may be considered current as of December 31, 2017. It was published to the UW geospatial archive as part of the Wisconsin Department of Administration Land Information Program annual collection of public data for the year 2018.</suppInfo>
+    <resConst>
+      <Consts>
+        <useLimit>[To inquire about use constraints pertaining to this data, contact the Iowa County GIS Coordinator]</useLimit>
+      </Consts>
+    </resConst>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idPoC>
+      <editorSource>external</editorSource>
+      <editorDigest>a783ca20376519d08ab8bb969d110152</editorDigest>
+      <rpOrgName>Iowa County Planning and Development Department</rpOrgName>
+      <rpCntInfo>
+        <cntAddress addressType="physical">
+          <delPoint>222 N. Iowa St.</delPoint>
+          <city>Dodgeville</city>
+          <adminArea>WI</adminArea>
+          <postCode>53533</postCode>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">608 935-0398</voiceNum>
+        </cntPhone>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Iowa County Planning and Development Department</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-90.430246</westBL>
+          <eastBL Sync="TRUE">-89.837615</eastBL>
+          <northBL Sync="TRUE">43.194185</northBL>
+          <southBL Sync="TRUE">42.812708</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="013" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform to UW-Madison's data distribution plan.</stepDesc>
+        <stepDateTm>2018-05-10T00:00:00</stepDateTm>
+        <stepProc>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+          <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+          <rpPosName>metadata technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>(608) 262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="001" />
+          </role>
+          <displayName>Arthur H. Robinson Map Library</displayName>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="7610" Sync="FALSE" />
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+        <idVersion Sync="TRUE">8.6.2</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Iowa_Addresses_2017">
+      <enttyp>
+        <enttypl Sync="TRUE">Iowa_Addresses_2017</enttypl>
+        <enttypd>Addresses Iowa County, WI 2017</enttypd>
+        <enttypds>Iowa County Planning and Development Department</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">20638</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl>POINT_Y</attrlabl>
+        <attrdef>Y value for point</attrdef>
+        <attrdefs>BBSI</attrdefs>
+        <attalias Sync="TRUE">POINT_Y</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>HOUSE</attrlabl>
+        <attrdef>House Number</attrdef>
+        <attrdefs>Verizon Database</attrdefs>
+        <attalias Sync="TRUE">HOUSE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>COMMUNITY</attrlabl>
+        <attrdef>Community Name</attrdef>
+        <attrdefs>Verizon Database</attrdefs>
+        <attalias Sync="TRUE">COMMUNITY</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ADD_</attrlabl>
+        <attalias Sync="TRUE">ADD_</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>VER_DIR</attrlabl>
+        <attrdef>Verizon Pre Direction</attrdef>
+        <attrdefs>Verizon Database</attrdefs>
+        <attalias Sync="TRUE">VER_DIR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>VER_STREET</attrlabl>
+        <attrdef>Verizon Street Name</attrdef>
+        <attrdefs>Verizon Database</attrdefs>
+        <attalias Sync="TRUE">VER_STREET</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ZONE_</attrlabl>
+        <attalias Sync="TRUE">ZONE_</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ADDRESS</attrlabl>
+        <attrdef>Complete Address</attrdef>
+        <attrdefs>Verizon Database</attrdefs>
+        <attalias Sync="TRUE">ADDRESS</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">60</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>VER_HOUSE</attrlabl>
+        <attrdef>Verizon House Number</attrdef>
+        <attrdefs>Verizon Database</attrdefs>
+        <attalias Sync="TRUE">VER_HOUSE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>POINT_X</attrlabl>
+        <attrdef>X value for point location</attrdef>
+        <attrdefs>BBSI</attrdefs>
+        <attalias Sync="TRUE">POINT_X</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>VER_SUF</attrlabl>
+        <attrdef>Verizon Suffix Direction</attrdef>
+        <attrdefs>Verizon Database</attrdefs>
+        <attalias Sync="TRUE">VER_SUF</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>COUNTY</attrlabl>
+        <attrdef>County Name</attrdef>
+        <attalias Sync="TRUE">COUNTY</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STR_NAME</attrlabl>
+        <attalias Sync="TRUE">STR_NAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">75</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STR_TYPE</attrlabl>
+        <attalias Sync="TRUE">STR_TYPE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">BLDG_TYPE</attrlabl>
+        <attalias Sync="TRUE">BLDG_TYPE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">15</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">BLDG_NUM</attrlabl>
+        <attalias Sync="TRUE">BLDG_NUM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">15</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">UNIT_TYPE</attrlabl>
+        <attalias Sync="TRUE">UNIT_TYPE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">15</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">UNIT_NUM</attrlabl>
+        <attalias Sync="TRUE">UNIT_NUM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">15</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CITY</attrlabl>
+        <attalias Sync="TRUE">CITY</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STATE</attrlabl>
+        <attalias Sync="TRUE">STATE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ZIP_CODE</attrlabl>
+        <attalias Sync="TRUE">ZIP_CODE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Iowa_Addresses_2017">
+        <geoObjTyp>
+          <GeoObjTypCd value="004" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">20638</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Iowa_Addresses_2017">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="1" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">20638</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20180510</mdDateSt>
+  <mdFileID>9865DA4A-4C90-4E8B-88E9-F35AA69560BC</mdFileID>
+</metadata>

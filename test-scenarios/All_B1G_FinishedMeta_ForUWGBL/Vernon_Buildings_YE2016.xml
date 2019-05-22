@@ -1,0 +1,1008 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20170810</CreaDate>
+    <CreaTime>12263300</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process Name="Create Feature Class" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CreateFeatureclass" Date="20060508" Time="093303" export="">CreateFeatureclass "Database Connections\sdeload@vernon_db.sde\vernon.SDELOAD.FD1" Site_access # Site_access_Layer SAME_AS_TEMPLATE SAME_AS_TEMPLATE "PROJCS['NAD_1983_HARN_Adj_WI_Vernon_Feet',GEOGCS['GCS_NAD_1983_HARN_Adj_WI_Vernon',DATUM['D_NAD_1983_HARN_Adj_WI_VR',SPHEROID['GRS_1980_Adj_WI_VR',6378408.941,298.269938723784]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Lambert_Conformal_Conic'],PARAMETER['False_Easting',730000.0],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',-90.78333333333333],PARAMETER['Standard_Parallel_1',43.46666666666667],PARAMETER['Standard_Parallel_2',43.68333333333333],PARAMETER['Latitude_Of_Origin',43.14722222222222],UNIT['Foot_US',0.3048006096012192]];-345952.216 -916971.136 1000;0 100000;0 100000" # 0 0 0 "Database Connections\sdeload@vernon_db.sde\vernon.SDELOAD.FD1\vernon.SDELOAD.Site_access"</Process>
+        <Process Name="Append" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20060508" Time="093307" export="">Append Site_access_Layer "Database Connections\sdeload@vernon_db.sde\vernon.SDELOAD.FD1\vernon.SDELOAD.Site_access" TEST "Database Connections\sdeload@vernon_db.sde\vernon.SDELOAD.FD1\vernon.SDELOAD.Site_access"</Process>
+        <Process Name="FeatureClassToFeatureClass_1" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20060508" Time="093308" export="">FeatureClassToFeatureClass C:\adc\Vernon\Pilot\Vernon.mdb\addressing\Site_access "Database Connections\sdeload@vernon_db.sde\vernon.SDELOAD.FD1" Site_access # "XLOC XLOC VISIBLE;YLOC YLOC VISIBLE;HOUSENUM HOUSENUM VISIBLE;NUMSUFFIX NUMSUFFIX VISIBLE;DIRECTION DIRECTION VISIBLE;STREETNAME STREETNAME VISIBLE;STREET_SUF STREET_SUF VISIBLE;POSTDIRECT POSTDIRECT VISIBLE;APTNUM APTNUM VISIBLE;CITY CITY VISIBLE;STATE STATE VISIBLE;ZIP ZIP VISIBLE;N13 N13 VISIBLE;ADDRESS ADDRESS VISIBLE;Entity Entity VISIBLE;Handle Handle VISIBLE;Layer Layer VISIBLE;Color Color VISIBLE;Linetype Linetype VISIBLE;Text_ Text_ VISIBLE;STATION STATION VISIBLE;DATE_ DATE_ VISIBLE;TIME_ TIME_ VISIBLE;ZONE_ ZONE_ VISIBLE;NS NS VISIBLE;EASTING EASTING VISIBLE;NORTHING NORTHING VISIBLE;ALTITUDE ALTITUDE VISIBLE;READINGS READINGS VISIBLE;UTC UTC VISIBLE;PED_SYMBOL PED_SYMBOL VISIBLE;PED_NAME PED_NAME VISIBLE;PED_SIZE PED_SIZE VISIBLE;PED_USE PED_USE VISIBLE;PED_CONDITION PED_CONDITION VISIBLE;H_SYMBOL H_SYMBOL VISIBLE;ORIENTATION ORIENTATION VISIBLE;PWR_SYMBOL PWR_SYMBOL VISIBLE;PWR_NAME PWR_NAME VISIBLE;PWR_2ND_NAME PWR_2ND_NAME VISIBLE;PWR_USE PWR_USE VISIBLE;PWR_ATTACHMENTS PWR_ATTACHMENTS VISIBLE;PWR_CONDITION PWR_CONDITION VISIBLE;Distance Distance VISIBLE;Home_Station Home_Station VISIBLE;H_Business H_Business VISIBLE;H_Orientation H_Orientation VISIBLE;Ped_In_Cables Ped_In_Cables VISIBLE;Ped_Out_Cables Ped_Out_Cables VISIBLE;T_Symbol T_Symbol VISIBLE;T_Phone T_Phone VISIBLE;T_Address T_Address VISIBLE;T_Business T_Business VISIBLE;T_Orientation T_Orientation VISIBLE;H_ADDRESS H_ADDRESS VISIBLE;H_PHONE H_PHONE VISIBLE;Road_ID Road_ID VISIBLE;Segment_ID Segment_ID VISIBLE;SiteId SiteId VISIBLE" SAME_AS_TEMPLATE SAME_AS_TEMPLATE # 0 "Database Connections\sdeload@vernon_db.sde\vernon.SDELOAD.FD1\vernon.SDELOAD.Site_access"</Process>
+        <Process Name="DeleteField_2" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteField" Date="20060604" Time="161529" export="">DeleteField "Database Connections\sdeload@vernon_db.sde\vernon.SDELOAD.FD1\vernon.SDELOAD.Site_access" HOUSENUM;vernon.SDELOAD.Site_access.ENTITY;HANDLE;LAYER;COLOR;LINETYPE;TEXT_;STATION;DATE_;TIME_;ZONE_;NS;EASTING;NORTHING;ALTITUDE;READINGS;UTC;PED_SYMBOL;PED_NAME;PED_SIZE;PED_USE;PED_CONDITION;H_SYMBOL;ORIENTATION;PWR_SYMBOL;PWR_NAME;PWR_2ND_NAME;PWR_USE;PWR_ATTACHMENTS;PWR_CONDITION;DISTANCE;HOME_STATION;H_BUSINESS;H_ORIENTATION;PED_IN_CABLES;PED_OUT_CABLES;T_SYMBOL;T_PHONE;T_ADDRESS;T_BUSINESS;T_ORIENTATION;H_ADDRESS;H_PHONE;SITEID;SDE_SITE_ID "Database Connections\sdeload@vernon_db.sde\vernon.SDELOAD.FD1\vernon.SDELOAD.Site_access"</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20070116" Time="152518" Name="" export="">CopyFeatures C:\adc\Vernon\Addressing_GDB\VENON_COUNTY_ADDRESSING.mdb\ADDRESSING\Structure C:\adc\Vernon\Addressing_GDB\9.2\Vernon_Addressing.mdb\Addressing\Structure # 0 0 0</Process>
+      </lineage>
+      <itemProps>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2017_ALL_DATA_OPEN\Vernon\Vernon_Buildings_YE2016.shp</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemName Sync="TRUE">Vernon_Buildings_YE2016</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">610362.629885</westBL>
+          <eastBL Sync="TRUE">855435.310671</eastBL>
+          <southBL Sync="TRUE">99979.993353</southBL>
+          <northBL Sync="TRUE">212777.423598</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <itemSize Sync="TRUE">0.307</itemSize>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_WISCRS_Vernon_County_Feet</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_WISCRS_Vernon_County_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Lambert_Conformal_Conic&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,730000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,155944.768],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.78333333333333],PARAMETER[&amp;quot;Standard_Parallel_1&amp;quot;,43.57503293972223],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,1.0000408158],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,43.57503293972223],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;ESRI&amp;quot;,103462]]&lt;/WKT&gt;&lt;XOrigin&gt;-119313300&lt;/XOrigin&gt;&lt;YOrigin&gt;-97858200&lt;/YOrigin&gt;&lt;XYScale&gt;37516459.705543704&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.0032808333333333331&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;103462&lt;/WKID&gt;&lt;LatestWKID&gt;103462&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+      <copyHistory>
+        <copy source="P:\COUNTIES\2017_ALL_DATA_OPEN\Vernon\Originals\Upload_4_7_2017_120338_PM\VERNON_STRUCTPTS_2016" dest="\\robbie\archive project\COUNTIES\2017_ALL_DATA_OPEN\Vernon\VERNON_STRUCTPTS_2016" date="20170810" time="12263300" />
+      </copyHistory>
+    </DataProperties>
+    <SyncDate>20170824</SyncDate>
+    <SyncTime>13415000</SyncTime>
+    <ModDate>20170824</ModDate>
+    <ModTime>13415000</ModTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <ArcGISstyle>ISO 19139 Metadata Implementation Specification</ArcGISstyle>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum>608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <delPoint>310 Science Hall</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday 9:00am - 5:00pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="007" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+        <rpPosName>metadata technician</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday 9:00am - 5:00pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorFormat>
+        <formatName>Shapefile</formatName>
+        <formatVer>1.0</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Vernon_Buildings_YE2016.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <transSize Sync="TRUE">0.307</transSize>
+    </distTranOps>
+    <distFormat>
+      <formatVer>1.0</formatVer>
+      <formatName Sync="TRUE">Shapefile</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <editorSource>external</editorSource>
+        <editorDigest>69f58a483b82901242f1983d1fce2ff</editorDigest>
+        <rpOrgName>Vernon County Land Information Office</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>Rm 310 Courthouse Annex</delPoint>
+            <city>Viroqua</city>
+            <adminArea>WI</adminArea>
+            <postCode> 54665</postCode>
+            <country>US</country>
+            <delPoint>LWCD, 220 Airport Rd</delPoint>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>608-637-5314  </voiceNum>
+            <faxNum>608-637-8322</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Vernon County Land Information Office</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Buildings Vernon County, WI YE2016</resTitle>
+      <date>
+        <pubDate>2017-04-07T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <resEdDate>20161231</resEdDate>
+      <citRespParty>
+        <rpOrgName>Vernon County Land Information Office</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>Rm 310 Courthouse Annex</delPoint>
+            <city>Viroqua</city>
+            <adminArea>WI</adminArea>
+            <postCode> 54665</postCode>
+            <country>US</country>
+            <delPoint>LWCD, 220 Airport Rd</delPoint>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>608-637-5314  </voiceNum>
+            <faxNum>608-637-8322</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Doug Avoles   </rpIndName>
+        <rpOrgName>Vernon County Land Information Office</rpOrgName>
+        <role>
+          <RoleCd value="001" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>Rm 310 Courthouse Annex</delPoint>
+            <city>Viroqua</city>
+            <adminArea>WI</adminArea>
+            <postCode> 54665</postCode>
+            <country>US</country>
+            <delPoint>LWCD, 220 Airport Rd</delPoint>
+            <eMailAdd>davoles@vernoncounty.org </eMailAdd>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>608-637-5314  </voiceNum>
+            <faxNum>608-637-8322</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+    </idCitation>
+    <idAbs>This point data layer represents buildings for Vernon County, Wisconsin at year-end 2016.[This data set consists of digital map files containing building point information obtained predominantly by conducting lab work using aerial imagery. Features contained in the data set include all known primary building points countywide and associated attributes and annotation. Building points sometimes are referred to as addresses, however these data typically represent the location of the primary addressed structure on each parcel and correspond to a site access point and driveway to the property. In the case of no buildings there may be a site access point but no corresponding building point. In the case of many primary addressed structures there will be a corresponding site access point for each structure even though they may all access the property from the same location.]</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. [This data set was created as a foundational element for Vernon County.  The building feature class provides a digital representation of all primary buildings or structures within Vernon County and is to be used in conjunction with developed digital road centerline, site access points, and driveway feature classes.  The building feature class is intended to be used to enhance addressing information within the County.]</idPurp>
+    <idCredit>Vernon County Land Information Office</idCredit>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <editorSource>external</editorSource>
+        <editorDigest>69f58a483b82901242f1983d1fce2ff</editorDigest>
+        <rpOrgName>Vernon County Land Information Office</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>Rm 310 Courthouse Annex</delPoint>
+            <city>Viroqua</city>
+            <adminArea>WI</adminArea>
+            <postCode> 54665</postCode>
+            <country>US</country>
+            <delPoint>LWCD, 220 Airport Rd</delPoint>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>608-637-5314  </voiceNum>
+            <faxNum>608-637-8322</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Vernon County Land Information Office</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Vernon County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Point</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Buildings</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Buildings</keyword>
+      <keyword>Vernon County</keyword>
+      <keyword>Wisconsin</keyword>
+      <keyword>Point</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <resConst>
+      <Consts>
+        <useLimit>[This information was prepared by using a myriad of data resources and is NOT to be used exclusively to describe all actual site access locations. All distributed digital data is transferred to the user with Vernon County's Disclaimer of Warranty. Contact either the Vernon County Land Water Conservation Department or Vernon County GIS Specialist / Project Manager, Danielle Oftedahl, at Vernon County for any additional access constraints pertaining to the data set.]</useLimit>
+      </Consts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-91.230716</westBL>
+          <eastBL>-90.309544</eastBL>
+          <southBL>43.422194</southBL>
+          <northBL>43.730501</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2017-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements. 
+
+This data was submitted to the UW geospatial archive in 2017. Content may be considered current as of December 31, 2016. It was published to the UW geospatial archive as part of the Wisconsin Department of Administration Land Information Program annual collection of public data for the year 2017.</suppInfo>
+    <idPoC>
+      <editorSource>external</editorSource>
+      <editorDigest>69f58a483b82901242f1983d1fce2ff</editorDigest>
+      <rpOrgName>Vernon County Land Information Office</rpOrgName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>Rm 310 Courthouse Annex</delPoint>
+          <city>Viroqua</city>
+          <adminArea>WI</adminArea>
+          <postCode> 54665</postCode>
+          <country>US</country>
+          <delPoint>LWCD, 220 Airport Rd</delPoint>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum>608-637-5314  </voiceNum>
+          <faxNum>608-637-8322</faxNum>
+        </cntPhone>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Vernon County Land Information Office</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-91.235916</westBL>
+          <eastBL Sync="TRUE">-90.308818</eastBL>
+          <northBL Sync="TRUE">43.730938</northBL>
+          <southBL Sync="TRUE">43.420527</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="017" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <delPoint>310 Science Hall</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday 9:00am - 5:00pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="007" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <idCodeSpace Sync="FALSE">EPSG</idCodeSpace>
+        <identCode code="7637" Sync="FALSE" />
+        <idVersion Sync="TRUE">10.3.1</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Vernon_Buildings_YE2016">
+      <enttyp>
+        <enttypl Sync="TRUE">Vernon_Buildings_YE2016</enttypl>
+        <enttypd>Buildings Vernon County, WI YE2016</enttypd>
+        <enttypds>Vernon County Land Information Office</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">11497</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl>ESL</attrlabl>
+        <attrdef>Whether Address Appears in ESL</attrdef>
+        <attrdefs>ADC</attrdefs>
+        <attalias Sync="TRUE">ESL</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>STREETTYPE</attrlabl>
+        <attrdef>Street Type</attrdef>
+        <attrdefs>ADC</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>LOOP</edomv>
+            <edomvd>LOOP</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>END</edomv>
+            <edomvd>END</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>RD</edomv>
+            <edomvd>ROAD</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>LN</edomv>
+            <edomvd>LANE</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>AVE</edomv>
+            <edomvd>AVENUE</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>TRL</edomv>
+            <edomvd>TRAIL</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>PL</edomv>
+            <edomvd>PLACE</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>CT</edomv>
+            <edomvd>COURT</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>BLVD</edomv>
+            <edomvd>BOULEVARD</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>HTS</edomv>
+            <edomvd>HEIGHTS</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>JCT</edomv>
+            <edomvd>JUNCTION</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>DR</edomv>
+            <edomvd>DRIVE</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>PKY</edomv>
+            <edomvd>PARKWAY</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>CIR</edomv>
+            <edomvd>CIRCLE</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>WAY</edomv>
+            <edomvd>WAY</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>ST</edomv>
+            <edomvd>STREET</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+        </attrdomv>
+        <attalias Sync="TRUE">STREETTYPE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">14</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>APT</attrlabl>
+        <attrdef>Apartment Number or Suite</attrdef>
+        <attrdefs>ADC</attrdefs>
+        <attalias Sync="TRUE">APT</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">43</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ADDR_ID</attrlabl>
+        <attrdef>Unique ID of Point</attrdef>
+        <attrdefs>ADC</attrdefs>
+        <attalias Sync="TRUE">ADDR_ID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>TAXROLL</attrlabl>
+        <attrdef>Whether Address Appears in Tax Roll</attrdef>
+        <attrdefs>ADC</attrdefs>
+        <attalias Sync="TRUE">TAXROLL</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ADDRESS</attrlabl>
+        <attrdef>Full Address of point</attrdef>
+        <attrdefs>ADC</attrdefs>
+        <attalias Sync="TRUE">ADDRESS</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">44</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ROAD_ID</attrlabl>
+        <attrdef>Unique ID for Address Road</attrdef>
+        <attrdefs>ADC</attrdefs>
+        <attalias Sync="TRUE">ROAD_ID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">15</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>DISPATCH</attrlabl>
+        <attrdef>Site_access address appears Dispatch spreadsheet</attrdef>
+        <attrdefs>ADC</attrdefs>
+        <attalias Sync="TRUE">DISPATCH</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>GISAGENTID</attrlabl>
+        <attrdef>User of Created/Modified Point</attrdef>
+        <attrdefs>ADC</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">GISAGENTID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ADDNUM</attrlabl>
+        <attrdef>Address Number for Point</attrdef>
+        <attrdefs>ADC</attrdefs>
+        <attalias Sync="TRUE">ADDNUM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>NUMSUFFIX</attrlabl>
+        <attrdef>Alpha character that may appear at the end of address number</attrdef>
+        <attrdefs>ADC</attrdefs>
+        <attalias Sync="TRUE">NUMSUFFIX</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">11</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>SHAPE</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>SOURCE</attrlabl>
+        <attrdef>Source of Point</attrdef>
+        <attrdefs>ADC</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>VT - XML</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>4</edomv>
+            <edomvd>VT - CAD</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>ADC</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>LANGE / VT - XML</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>5</edomv>
+            <edomvd>VT - CAD / LANGE</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>6</edomv>
+            <edomvd>GPS</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>LANGE MAPS</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+        </attrdomv>
+        <attalias Sync="TRUE">SOURCE</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">5</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>POSTDIRECT</attrlabl>
+        <attrdef>Post Direction of Street</attrdef>
+        <attrdefs>ADC</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>E</edomv>
+            <edomvd>EAST</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>N</edomv>
+            <edomvd>NORTH</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>W</edomv>
+            <edomvd>WEST</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>S</edomv>
+            <edomvd>SOUTH</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+        </attrdomv>
+        <attalias Sync="TRUE">POSTDIRECT</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">15</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>FID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">FID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ESL_NUM</attrlabl>
+        <attalias Sync="TRUE">ESL_NUM</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">5</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>GISDATE</attrlabl>
+        <attrdef>Date Point was Created/Modified</attrdef>
+        <attrdefs>ADC</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">GISDATE</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>STREETNAME</attrlabl>
+        <attrdef>Street Name</attrdef>
+        <attrdefs>ADC</attrdefs>
+        <attalias Sync="TRUE">STREETNAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">31</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>PLACED</attrlabl>
+        <attrdef>Point has been Located in Lab or Field</attrdef>
+        <attrdefs>ADC</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>NO</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>YES</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+        </attrdomv>
+        <attalias Sync="TRUE">PLACED</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">5</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>SEGMENT_ID</attrlabl>
+        <attrdef>Unique ID for Address Road Segment</attrdef>
+        <attrdefs>ADC</attrdefs>
+        <attalias Sync="TRUE">SEGMENT_ID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>DIRECTION</attrlabl>
+        <attrdef>Street Direction</attrdef>
+        <attrdefs>ADC</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>E</edomv>
+            <edomvd>EAST</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>W</edomv>
+            <edomvd>WEST</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>N</edomv>
+            <edomvd>NORTH</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+          <edom>
+            <edomv>S</edomv>
+            <edomvd>SOUTH</edomvd>
+            <edomvds>ADC</edomvds>
+          </edom>
+        </attrdomv>
+        <attalias Sync="TRUE">DIRECTION</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Vernon_Buildings_YE2016">
+        <geoObjTyp>
+          <GeoObjTypCd value="004" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">11497</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Vernon_Buildings_YE2016">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="1" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">11497</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20170824</mdDateSt>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoorjfih4wH
+gvwVdXyCQ3dxm2tSg+5KynDH0AwT+AHegDsqK+R7K9+JlxaRTL4h1mN7hLgpBPeSxu0cMaO7ru4+
+63BBzkH8d+b42atNfWjx6jPbCCEIvkW4uI5Q8QJ81WKnzEcfeHX5sAD7wB9M0V81aJ4x+Jet6bHo
+mhy6hPqkjt9qnu0TFvt2kbJMADOSGVgSMDHU1d8O/FXx7bvJpN7bWl5dW16ftV3OpZIosFnUvFlA
+F2t83OOmDg4APoiivEZPjLLqsE7WV+LO2gEs8l/FpzzLBGw2QRyqTxJvbJKkr8o6gnHH6t8UviZq
+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
+glAQQAuOOgAB5hpGl+DNJ8Oadr0Vst5e3Fvc2c9rqD+cI7hYziRYo1YspfauSQAGXuc1j61Dd/8A
+CNi6i0Gyt1014H+0W+iNtudwYmSSSRQAMkDZtIzgDgV7fF8KGih1Qf2pZs80zTacH0qJ49PZpNzB
+UbOQQEBHHQnvWvr/AIEuPFOjWdprGu3Lz27yOzW6+TDcZOYxJECQQpCHr/CfXNAHzdo/ifXNG13T
+9X0i+0yK8v0EMkQhWOGLaAqhiwEanZt+6cjJzgsc27i8t/FXjK+vNW+0wSyQRRzro1smWbCtOzbW
+Ksow+SSScrxxgenyfBLVjoZsF1yzkM0GyUT25ZY5XbfLJGRggkpEAePlDZHam6h8BGFtfWOi6xBa
+2N0YZSs1sXkEkauMB92QhYg9z+XIB4Vqlvc6Rr1v9rVr63VEkgWUuvnWwyAp53INoIIzxg1reLot
+M1TU7zWvDuj3UGnIqtcW9xb+UlqS+0AMHO7cyuMYGBkAcfL7HcfAi31Pwr4es2lttK1G0hZb+e3i
+MjTlucE5GcN6/QYAxV6++A2jahb6ksuo3CzzztNbSxRqnkggnYyj5XXexPQHGBmgDx3SH8N3Nze3
+moW/2G2lihZIbax3u8yDayQN5vyHeVkPcgY4H3vqLwibhvB2jvdXcl3O9nEzTyR7GfKg5I7HmvFd
+R+A/izVNSN3NrukxM0McLG3haIbQNpXCqM4AHJ5bvjFe7aNZSabodhYTSJJJbW0cLOgIViqgZAJJ
+xx3JoAvUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUA
+FFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAU
+UUUAFFFFABRRRQAUUUUAf//Z</Data>
+    </Thumbnail>
+  </Binary>
+  <mdFileID>2AACBAEE-DE20-4CE0-84F3-729F2A56610E</mdFileID>
+</metadata>

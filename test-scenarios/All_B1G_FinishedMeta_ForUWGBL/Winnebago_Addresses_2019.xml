@@ -1,0 +1,862 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20190305</CreaDate>
+    <CreaTime>13572800</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <ArcGISstyle>FGDC CSDGM Metadata</ArcGISstyle>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <itemProps>
+        <itemName Sync="TRUE">Winnebago_Addresses_2019</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">701344.802348</westBL>
+          <eastBL Sync="TRUE">828106.833518</eastBL>
+          <southBL Sync="TRUE">427976.865127</southBL>
+          <northBL Sync="TRUE">555745.044629</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <relatedItems>
+          <item>
+            <itemType Sync="TRUE">Relationship</itemType>
+          </item>
+          <item>
+            <itemType Sync="TRUE">Relationship</itemType>
+          </item>
+          <item>
+            <itemName Sync="TRUE">LocalGovernment.GISADMIN.SiteAddressHasTaxParcel</itemName>
+            <itemType Sync="TRUE">Relationship</itemType>
+          </item>
+          <item>
+            <itemName Sync="TRUE">LocalGovernment.GISADMIN.MasterStreetsToSiteAddresses</itemName>
+            <itemType Sync="TRUE">Relationship</itemType>
+          </item>
+        </relatedItems>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Winnebago_Addresses_2019\Winnebago_Addresses_2019.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_WISCRS_Winnebago_County_Feet</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_WISCRS_Winnebago_County_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,802999.999],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.016],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-88.5],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,1.0000286569],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,42.71944444444445],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;Esri&amp;quot;,103470]]&lt;/WKT&gt;&lt;XOrigin&gt;-17463800&lt;/XOrigin&gt;&lt;YOrigin&gt;-46132600&lt;/YOrigin&gt;&lt;XYScale&gt;2438.4048768097441&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.013123333333333384&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;103470&lt;/WKID&gt;&lt;LatestWKID&gt;103470&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+      <lineage>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170717" Time="144433" Name="" export="">CalculateField "Site Address Points" STATUS "Pending" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20190327" Time="121543" Name="" export="">FeatureClassToFeatureClass R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019 R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Winnebago_Addresses_2019\Winnebago_Addresses_2019.gdb Winnebago_Addresses_2019 # "SITEADDID "Site Address ID" true true false 25 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,SITEADDID,-1,-1;ADDPTKEY "Address Point ID" true true false 25 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,ADDPTKEY,-1,-1;PREADDRNUM "Address Number Prefix" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,PREADDRNUM,-1,-1;ADDRNUM "Address Number" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,ADDRNUM,-1,-1;ADDRNUMSUF "Address Number Suffix" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,ADDRNUMSUF,-1,-1;ADDRRANGE "Address Range" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,ADDRRANGE,-1,-1;UNITTYPE "Address Unit Type" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,UNITTYPE,-1,-1;UNITID "Address Unit Number" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,UNITID,-1,-1;ALTUNITTYPE "Alternate Address Unit Type" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,ALTUNITTYPE,-1,-1;ALTUNITID "Alternate Address Unit Number" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,ALTUNITID,-1,-1;FULLNAME "Full Road Name" true true false 125 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,FULLNAME,-1,-1;FULLADDR "Full Address" true true false 250 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,FULLADDR,-1,-1;PLACENAME "Place Name" true true false 250 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,PLACENAME,-1,-1;MUNICIPALITY "Municipality Name" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,MUNICIPALITY,-1,-1;ESN "Emergency Service Number" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,ESN,-1,-1;PSAP "Public Safety Answering Point" true true false 4 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,PSAP,-1,-1;MSAG "MSAG Community" true true false 35 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,MSAG,-1,-1;USNGCOORD "USNG Coordinate" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,USNGCOORD,-1,-1;ADDRCLASS "Description" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,ADDRCLASS,-1,-1;POINTTYPE "Location" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,POINTTYPE,-1,-1;CAPTUREMETH "Capture Method" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,CAPTUREMETH,-1,-1;STATUS "Status" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,STATUS,-1,-1;MSAGNAME "MSAGNAME" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,MSAGNAME,-1,-1;PSTLCSZ "Postal CSZ" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,PSTLCSZ,-1,-1;NOTES "Comments or Notes" true true false 75 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,NOTES,-1,-1;CONAME "County Name" true true false 25 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Winnebago\Originals\WINNEBAGO_OTHER.gdb\WINNEBAGO_ADDRESSES_2019,CONAME,-1,-1" #</Process>
+      </lineage>
+    </DataProperties>
+    <SyncDate>20190424</SyncDate>
+    <SyncTime>12424600</SyncTime>
+    <ModDate>20190424</ModDate>
+    <ModTime>12424600</ModTime>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+    <rpPosName>Metadata Technician</rpPosName>
+    <rpCntInfo>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        <country>US</country>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum tddtty="">(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+    </rpCntInfo>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      </distorCont>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Winnebago_Addresses_2019.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.5</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Winnebago County GIS Department</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>112 Otter Ave</delPoint>
+            <city>Oshkosh</city>
+            <adminArea>WI</adminArea>
+            <postCode>54901</postCode>
+            <country>US</country>
+            <delPoint>PO Box 2808</delPoint>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">920-232-3334</voiceNum>
+            <faxNum>920-303-3035</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Winnebago County GIS</displayName>
+        <displayName>Winnebago County GIS</displayName>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Addresses Winnebago County, WI 2019</resTitle>
+      <date>
+        <pubDate>2019-04-24T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Winnebago County GIS Department</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>112 Otter Ave</delPoint>
+            <city>Oshkosh</city>
+            <adminArea>WI</adminArea>
+            <postCode>54903</postCode>
+            <country>US</country>
+            <delPoint>PO Box 2808</delPoint>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">920-232-3334</voiceNum>
+            <faxNum>920-303-3035</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Dave Levine</rpIndName>
+        <rpOrgName>Winnebago County GIS Department</rpOrgName>
+        <rpPosName>Geographic Information Specialist I</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">920-232-3334</voiceNum>
+            <faxNum>920-232-3347</faxNum>
+          </cntPhone>
+          <cntAddress addressType="physical">
+            <delPoint>112 Otter Ave</delPoint>
+            <city>Oshkosh</city>
+            <adminArea>WI</adminArea>
+            <postCode>54901</postCode>
+            <country>US</country>
+            <eMailAdd>dlevine@co.winnebago.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Jerry Bougie</displayName>
+      </citRespParty>
+      <resEd>2019</resEd>
+    </idCitation>
+    <idAbs>This data represents addresses for Winnebago County, Wisconsin in 2019. [An Address point layer for Winnebago County, Wisconsin. This was derived from taking a copy of the parcel number tag locations from all of the tax parcels in the county and generating first a point file which continued to have the parcel numbers as their tag and in turn became the link to the address database. Once the point file was generated, the points had to be moved to the center of the driveway location on the parcel of land. Using the tax parcel layer, 1994 and 1997 digital orthophotography and the existing building footprint layer as the background layers, the address point (tax parcel number) was moved to the driveway centerline location. This was done for every township in the county and for the City of Omro and the Village of Winneconne. The cities of Neenah, Menasha and Oshkosh had done theirs on their own. Once all of the points were moved, then an INFORMIX database was generated to include the parcel number as the address point tag (link to the graphics) followed by the address number 1; address number 2; the apartment number if any; street name; city, state and zip code; last updated date; comment line; the owner name. If there were building footprints but no parcel address information downloaded from the tax parcel mapping system the needed information was taken from the current phone book or field checked. The address point file was saved to a file called gm_cop.]</idAbs>
+    <idPurp>This data is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. [This information is intended to be used primarily for the tax parcel address location layer. It is also used for the uniform addressing system which has been implemented by the Winnebago County Planning Department. The Planning Department assigns all new addresses and is continually adding new addresses to this point file. The G.I.S, Planning and Zoning, and Sheriff's (911) Departments all use the address point file for doing address searches.]</idPurp>
+    <idCredit>Winnebago County GIS Department</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Winnebago County GIS Department</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>112 Otter Ave</delPoint>
+            <city>Oshkosh</city>
+            <adminArea>WI</adminArea>
+            <postCode>54901</postCode>
+            <country>US</country>
+            <delPoint>PO Box 2808</delPoint>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">920-232-3334</voiceNum>
+            <faxNum>920-303-3035</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Winnebago County GIS</displayName>
+        <displayName>Winnebago County GIS</displayName>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Winnebago County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Point</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Street Addresses</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Addresses</keyword>
+      <keyword>Street Addresses</keyword>
+      <keyword>Location</keyword>
+      <keyword>Winnebago County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-88.893044</westBL>
+          <eastBL>-88.403672</eastBL>
+          <southBL>43.889967</southBL>
+          <northBL>44.249511</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2019-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements. 
+</suppInfo>
+    <idPoC>
+      <rpOrgName>Winnebago County GIS Department</rpOrgName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>112 Otter Ave</delPoint>
+          <city>Oshkosh</city>
+          <adminArea>WI</adminArea>
+          <postCode>54901</postCode>
+          <country>US</country>
+          <delPoint>PO Box 2808</delPoint>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">920-232-3334</voiceNum>
+          <faxNum>920-303-3035</faxNum>
+        </cntPhone>
+      </rpCntInfo>
+      <displayName>Winnebago County GIS</displayName>
+    </idPoC>
+    <resConst>
+      <Consts>
+        <useLimit>[This data was created for use by the Winnebago County Geographic Information System project. Any other use/application of this information is the responsibility of the user and such use/application is at their own risk. Winnebago County disclaims all liability regarding fitness of the information for any use other than Winnebago County business.]</useLimit>
+      </Consts>
+    </resConst>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-88.887889</westBL>
+          <eastBL Sync="TRUE">-88.404198</eastBL>
+          <northBL Sync="TRUE">44.244047</northBL>
+          <southBL Sync="TRUE">43.892920</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="013" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+      <rpPosName>Metadata Technician</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Provided access to archived data at UW-Madison.</stepDesc>
+        <stepDateTm>2019-04-24T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+          <rpPosName>Metadata Technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum tddtty="">608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="001" />
+          </role>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="7594" Sync="FALSE" />
+        <idCodeSpace Sync="FALSE">EPSG</idCodeSpace>
+        <idVersion Sync="FALSE">9.6.1</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Winnebago_Addresses_2019">
+      <enttyp>
+        <enttypl Sync="TRUE">Winnebago_Addresses_2019</enttypl>
+        <enttypd>Addresses Winnebago County, WI 2019</enttypd>
+        <enttypds>Winnebago County GIS Department</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">71119</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl>MSAGname</attrlabl>
+        <attalias Sync="TRUE">MSAGNAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>CAPTUREMETH</attrlabl>
+        <attalias Sync="TRUE">Capture Method</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>STATUS</attrlabl>
+        <attalias Sync="TRUE">Status</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>POINTTYPE</attrlabl>
+        <attalias Sync="TRUE">Location</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>MSAG</attrlabl>
+        <attalias Sync="TRUE">MSAG Community</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">35</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>CONAME</attrlabl>
+        <attalias Sync="TRUE">County Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>PSTLCSZ</attrlabl>
+        <attalias Sync="TRUE">Postal CSZ</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ADDRNUM</attrlabl>
+        <attalias Sync="TRUE">Address Number</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ADDRRANGE</attrlabl>
+        <attalias Sync="TRUE">Address Range</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ESN</attrlabl>
+        <attalias Sync="TRUE">Emergency Service Number</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>MUNICIPALITY</attrlabl>
+        <attalias Sync="TRUE">Municipality Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>FULLNAME</attrlabl>
+        <attalias Sync="TRUE">Full Road Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">125</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>FULLADDR</attrlabl>
+        <attalias Sync="TRUE">Full Address</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">250</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>SITEADDID</attrlabl>
+        <attalias Sync="TRUE">Site Address ID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ADDRCLASS</attrlabl>
+        <attalias Sync="TRUE">Description</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>PLACENAME</attrlabl>
+        <attalias Sync="TRUE">Place Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">250</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ALTUNITTYPE</attrlabl>
+        <attalias Sync="TRUE">Alternate Address Unit Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>UNITID</attrlabl>
+        <attalias Sync="TRUE">Address Unit Number</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ADDRNUMSUF</attrlabl>
+        <attalias Sync="TRUE">Address Number Suffix</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>PSAP</attrlabl>
+        <attalias Sync="TRUE">Public Safety Answering Point</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ALTUNITID</attrlabl>
+        <attalias Sync="TRUE">Alternate Address Unit Number</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>PREADDRNUM</attrlabl>
+        <attalias Sync="TRUE">Address Number Prefix</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>UNITTYPE</attrlabl>
+        <attalias Sync="TRUE">Address Unit Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>USNGCOORD</attrlabl>
+        <attalias Sync="TRUE">USNG Coordinate</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">NOTES</attrlabl>
+        <attalias Sync="TRUE">Comments or Notes</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">75</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ADDPTKEY</attrlabl>
+        <attalias Sync="TRUE">Address Point ID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Winnebago_Addresses_2019">
+        <geoObjTyp>
+          <GeoObjTypCd value="004" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">71119</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Winnebago_Addresses_2019">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="1" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">71119</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20190424</mdDateSt>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAa7iONnYMQoJO1ST+AHJrz+L40+D5Llrcy6gkoj3hXspAT8hcADGckDj1zXdX8Qn065hbO
+JImU4Tf1BH3e/wBO9fM/hq61bU9e8K6VYiKWDSrhZXkudNW1ZYVJCtI2/wCfCEnHv1PWgD3rw14/
+8OeLbtrXRr1p5kh891MLrsXdtIORwc9vQg9Kva94ksvDotjeQ3sn2hnVPstq82NqFjnaDjgcf4Ak
+fNnh6bXvAPjybSNI1PRZdQ1e4FiZQkrQwsSjKwyoBzvwMbsfkT7do3iTWPCfhVn+ISrE9pcJbDUY
+D5qXCscLIQoyoHQlgM8dzigBq/GLwrLqf2G3GqXMgYIWh0+VgGyARjG7IJwRjtU2j/FrwtrGqLpy
+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
+iiigAooooAKKKKACiiigD//Z</Data>
+    </Thumbnail>
+  </Binary>
+  <mdFileID>10DBAA62-DD46-4D44-B627-D78D0FBA0794</mdFileID>
+</metadata>

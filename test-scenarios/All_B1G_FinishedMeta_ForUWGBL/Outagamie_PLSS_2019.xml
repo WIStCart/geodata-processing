@@ -1,0 +1,852 @@
+﻿<metadata>
+  <Esri>
+    <MetaID>{702F1679-86FC-444E-B89C-CC1E0CFA5ED3}</MetaID>
+    <CreaDate>20070829</CreaDate>
+    <CreaTime>08253300</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <SyncDate>20190415</SyncDate>
+    <SyncTime>11494500</SyncTime>
+    <ModDate>20190415</ModDate>
+    <ModTime>11494500</ModTime>
+    <DataProperties>
+      <lineage>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20090825" Time="055722" Name="" export="">CopyFeatures "Database Connections\GIS Connection to Vector.sde\vector.GIS.PLSS\vector.GIS.PLSS_Monument" F:\GIS\CoordinateSystemChange.gdb\PLSS\vector_GIS_PLSS_Monument # 0 0 0</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20090825" Time="060439" Name="" export="">CopyFeatures F:\GIS\CoordinateSystemChange.gdb\PLSS\PLSS_Monument "Database Connections\GIS Connection to Vector.sde\Vector.GIS.PLSS\Vector.GIS.PLSS_Monument" # 0 0 0</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20190321" Time="114204" Name="" export="">FeatureClassToFeatureClass "Database Connections\Connection to OCGISSQL.sde\InternalGIS1.GIS.PLSS\InternalGIS1.GIS.PLSS_Monument" Z:\GIS_Warehouse\Departments\DLS\Act20Submission\Submission032019\OUTAGAMIE_OTHER.gdb OUTAGAMIE_PLSS_2019 # "MONUMENTTYPE "MONUMENTTYPE" true true false 4 Long 0 10 ,First,#,Database Connections\Connection to OCGISSQL.sde\InternalGIS1.GIS.PLSS\InternalGIS1.GIS.PLSS_Monument,MONUMENTTYPE,-1,-1;MONID "MONID_1" true true false 12 Text 0 0 ,First,#,Database Connections\Connection to OCGISSQL.sde\InternalGIS1.GIS.PLSS\InternalGIS1.GIS.PLSS_Monument,MONID,-1,-1;EASTING "EASTING" true true false 8 Double 8 38 ,First,#,Database Connections\Connection to OCGISSQL.sde\InternalGIS1.GIS.PLSS\InternalGIS1.GIS.PLSS_Monument,EASTING,-1,-1;NORTHING "NORTHING" true true false 8 Double 8 38 ,First,#,Database Connections\Connection to OCGISSQL.sde\InternalGIS1.GIS.PLSS\InternalGIS1.GIS.PLSS_Monument,NORTHING,-1,-1;GlobalID "GlobalID" false false true 38 GlobalID 0 0 ,First,#,Database Connections\Connection to OCGISSQL.sde\InternalGIS1.GIS.PLSS\InternalGIS1.GIS.PLSS_Monument,GlobalID,-1,-1;created_user "created_user" false true false 255 Text 0 0 ,First,#,Database Connections\Connection to OCGISSQL.sde\InternalGIS1.GIS.PLSS\InternalGIS1.GIS.PLSS_Monument,created_user,-1,-1;created_date "created_date" false true false 8 Date 0 0 ,First,#,Database Connections\Connection to OCGISSQL.sde\InternalGIS1.GIS.PLSS\InternalGIS1.GIS.PLSS_Monument,created_date,-1,-1;last_edited_user "last_edited_user" false true false 255 Text 0 0 ,First,#,Database Connections\Connection to OCGISSQL.sde\InternalGIS1.GIS.PLSS\InternalGIS1.GIS.PLSS_Monument,last_edited_user,-1,-1;last_edited_date "last_edited_date" false true false 8 Date 0 0 ,First,#,Database Connections\Connection to OCGISSQL.sde\InternalGIS1.GIS.PLSS\InternalGIS1.GIS.PLSS_Monument,last_edited_date,-1,-1;REVISED_DATE "REVISEDDATE" true true false 8 Date 0 0 ,First,#,Database Connections\Connection to OCGISSQL.sde\InternalGIS1.GIS.PLSS\InternalGIS1.GIS.PLSS_Monument,REVISED_DATE,-1,-1;GPS2 "GPS2" true true false 3 Text 0 0 ,First,#,Database Connections\Connection to OCGISSQL.sde\InternalGIS1.GIS.PLSS\InternalGIS1.GIS.PLSS_Monument,GPS2,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190321" Time="114513" Name="" export="">CalculateField OUTAGAMIE_PLSS_2019 LINK "http://wc.outagamie.org/OCWC/document.aspx?type=tie&amp;DocName=[MONID]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190321" Time="114551" Name="" export="">CalculateField OUTAGAMIE_PLSS_2019 LINK ""http://wc.outagamie.org/OCWC/document.aspx?type=tie&amp;DocName=" &amp; [MONID]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190321" Time="114846" Name="" export="">CalculateField OUTAGAMIE_PLSS_2019 ACCURACY "SURVEY GRADE" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20190325" Time="105901" Name="" export="">FeatureClassToFeatureClass R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Outagamie\Originals\OUTAGAMIE_OTHER.gdb\OUTAGAMIE_PLSS_2019 R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Outagamie\Outagamie_PLSS_2019\Outagamie_PLSS_2019.gdb Outagamie_PLSS_2019 # "MONUMENTTYPE "MONUMENTTYPE" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Outagamie\Originals\OUTAGAMIE_OTHER.gdb\OUTAGAMIE_PLSS_2019,MONUMENTTYPE,-1,-1;MONID "MONID_1" true true false 12 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Outagamie\Originals\OUTAGAMIE_OTHER.gdb\OUTAGAMIE_PLSS_2019,MONID,-1,-1;EASTING "EASTING" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Outagamie\Originals\OUTAGAMIE_OTHER.gdb\OUTAGAMIE_PLSS_2019,EASTING,-1,-1;NORTHING "NORTHING" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Outagamie\Originals\OUTAGAMIE_OTHER.gdb\OUTAGAMIE_PLSS_2019,NORTHING,-1,-1;LINK "LINK" true true false 250 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Outagamie\Originals\OUTAGAMIE_OTHER.gdb\OUTAGAMIE_PLSS_2019,LINK,-1,-1;ACCURACY "ACCURACY" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Outagamie\Originals\OUTAGAMIE_OTHER.gdb\OUTAGAMIE_PLSS_2019,ACCURACY,-1,-1" #</Process>
+      </lineage>
+      <itemProps>
+        <itemName Sync="TRUE">Outagamie_PLSS_2019</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">740162.419659</westBL>
+          <eastBL Sync="TRUE">883964.105808</eastBL>
+          <southBL Sync="TRUE">555143.050070</southBL>
+          <northBL Sync="TRUE">682182.689691</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2019_ALL_DATA_OPEN_V5\Outagamie\Outagamie_PLSS_2019\Outagamie_PLSS_2019.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_WISCRS_Outagamie_County_Feet</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_WISCRS_Outagamie_County_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,802999.999],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.016],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-88.5],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,1.0000286569],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,42.71944444444445],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;Esri&amp;quot;,103444]]&lt;/WKT&gt;&lt;XOrigin&gt;-17646100&lt;/XOrigin&gt;&lt;YOrigin&gt;-48340000&lt;/YOrigin&gt;&lt;XYScale&gt;3048.0060960121914&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.0032808333333333335&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;103444&lt;/WKID&gt;&lt;LatestWKID&gt;103444&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+  </Esri>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum tddtty="">608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpPosName>Metadata Technician</rpPosName>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Outagamie_PLSS_2019.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <onLineSrc>
+        <linkage>http://data-ocgis.opendata.arcgis.com/</linkage>
+        <protocol>WWW:LINK-1.0-http--link</protocol>
+        <orFunct>
+          <OnFunctCd value="002" />
+        </orFunct>
+        <orName>Outagamie County Open Data</orName>
+        <orDesc>Provides access to Outagamie County GIS data</orDesc>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.5</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>310 Science Hall</delPoint>
+            <delPoint>550 N. Park Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+        <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      </distorCont>
+    </distributor>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Outagamie County Zoning Department</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>320 S. Walnut St.</delPoint>
+            <city>Appleton</city>
+            <adminArea>WI</adminArea>
+            <postCode>54911</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>920-832-5255</voiceNum>
+            <faxNum>920-832-4770</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Outagamie Land Information Office</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">PLSS Outagamie County, WI 2019</resTitle>
+      <date>
+        <pubDate date="unknown">2019-04-15T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Outagamie County Zoning Department</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>320 S. Walnut St.</delPoint>
+            <city>Appleton</city>
+            <adminArea>WI</adminArea>
+            <postCode>54911</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">920-832-5255</voiceNum>
+            <faxNum>920-832-4770</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Brad Bastian  </rpIndName>
+        <rpOrgName>Outagamie County Zoning Department</rpOrgName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>320 S. Walnut St.</delPoint>
+            <city>Appleton</city>
+            <adminArea>WI</adminArea>
+            <postCode>54911</postCode>
+            <eMailAdd>brad.bastian@outagamie.org</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">920-832-2175</voiceNum>
+            <faxNum>920-832-4770</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <rpPosName>GIS Coordinator/Land Information Manager</rpPosName>
+      </citRespParty>
+      <resEd>2019</resEd>
+    </idCitation>
+    <idAbs>This data represents public land survey system (PLSS) corners for Outagamie County, Wisconsin in 2019. [Outagamie County related Public Land Survey System information. This is a feature class representing the section corners within Outagamie County. These points were established previously and eventually all were reset by Outagamie County.]</idAbs>
+    <idPurp>This data is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. [This data was created to assist governmental agencies and other in making resource management decisions through the use of a Geographic Information System (GIS).]</idPurp>
+    <idCredit>Outagamie County Zoning Department. [Outagamie County GIS.]</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Outagamie County Zoning Department</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>320 S. Walnut St.</delPoint>
+            <city>Appleton</city>
+            <adminArea>WI</adminArea>
+            <postCode>54911</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">920-832-5255</voiceNum>
+            <faxNum>920-832-4770</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Outagamie Land Information Office</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Outagamie County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Point</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Surveying - Public Lands</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Public Land Survey System</keyword>
+      <keyword>PLSS</keyword>
+      <keyword>PLSS Corners</keyword>
+      <keyword>Outagamie County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-88.740953</westBL>
+          <eastBL>-88.189444</eastBL>
+          <southBL>44.242171</southBL>
+          <northBL>44.59069</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2019-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements. 
+
+For access to the most current data for this county, please visit: http://data-ocgis.opendata.arcgis.com/</suppInfo>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idPoC>
+      <rpOrgName>Outagamie County Zoning Department</rpOrgName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>320 S. Walnut St.</delPoint>
+          <city>Appleton</city>
+          <adminArea>WI</adminArea>
+          <postCode>54911</postCode>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">920-832-5255</voiceNum>
+          <faxNum>920-832-4770</faxNum>
+        </cntPhone>
+      </rpCntInfo>
+      <displayName>Outagamie Land Information Office</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-88.741195</westBL>
+          <eastBL Sync="TRUE">-88.189230</eastBL>
+          <northBL Sync="TRUE">44.590852</northBL>
+          <southBL Sync="TRUE">44.241978</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <resConst>
+      <Consts>
+        <useLimit>[DISCLAIMER: This data was developed or obtained as part of the Outagamie County Geographic Information System. Outagamie County does not guarantee this information to be correct, current or complete. The data is intended for use as a general reference and is not intended or suitable for site-specific or financial decisions. Any use to the contrary of the above stated uses is the responsibility of the user and such use is at the user's own risk. In no event shall Outagamie County become liable to users of this data or any loss arising from the use of this data. THIS DATA CANNOT BE CONSTRUED TO BE A LEGAL DOCUMENT. To assist Outagamie County in the maintenance of this data, users are encouraged to provide information to the County concerning errors or omissions. To report an error, please contact the Outagamie County Planning Department at 920-832-5255 or www.outagamie.org The County shall remain the exclusive owner of all rights, title, and interest in all specifically copyrighted information. Please e-mail the County webmaster for permission requests. This data is not to be distributed or sold without written permission from the Planning Department.]</useLimit>
+      </Consts>
+    </resConst>
+    <themeKeys>
+      <keyword>PLSS: Public Land Survey System</keyword>
+    </themeKeys>
+    <tpCat>
+      <TopicCatCd value="015" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>310 Science Hall</delPoint>
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpPosName>Metadata Technician</rpPosName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Provided access to archived data at UW-Madison.</stepDesc>
+        <stepDateTm>2019-04-15T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum tddtty="">608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>310 Science Hall</delPoint>
+              <delPoint>550 N. Park Street</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="001" />
+          </role>
+          <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+          <rpPosName>Metadata Technician</rpPosName>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="7594" Sync="FALSE" />
+        <idCodeSpace Sync="FALSE">EPSG</idCodeSpace>
+        <idVersion Sync="FALSE">9.6.1</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Outagamie_PLSS_2019">
+      <enttyp>
+        <enttypl Sync="TRUE">Outagamie_PLSS_2019</enttypl>
+        <enttypd>PLSS Outagamie County, WI 2019</enttypd>
+        <enttypds>Outagamie County Zoning Department</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">4112</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">MONUMENTTYPE</attrlabl>
+        <attalias Sync="TRUE">MONUMENTTYPE</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">MONID</attrlabl>
+        <attalias Sync="TRUE">MONID_1</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">12</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">EASTING</attrlabl>
+        <attalias Sync="TRUE">EASTING</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">NORTHING</attrlabl>
+        <attalias Sync="TRUE">NORTHING</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LINK</attrlabl>
+        <attalias Sync="TRUE">LINK</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">250</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ACCURACY</attrlabl>
+        <attalias Sync="TRUE">ACCURACY</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <subtype>
+        <stname Sync="TRUE">Section Corner</stname>
+        <stcode Sync="TRUE">1</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">MONUMENTTYPE</stfldnm>
+          <stflddv Sync="TRUE">1</stflddv>
+        </stfield>
+      </subtype>
+      <subtype>
+        <stname Sync="TRUE">Quarter Corner</stname>
+        <stcode Sync="TRUE">2</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">MONUMENTTYPE</stfldnm>
+          <stflddv Sync="TRUE">1</stflddv>
+        </stfield>
+      </subtype>
+      <subtype>
+        <stname Sync="TRUE">Center of Section</stname>
+        <stcode Sync="TRUE">3</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">MONUMENTTYPE</stfldnm>
+          <stflddv Sync="TRUE">1</stflddv>
+        </stfield>
+      </subtype>
+      <subtype>
+        <stname Sync="TRUE">1/16 Corner</stname>
+        <stcode Sync="TRUE">4</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">MONUMENTTYPE</stfldnm>
+          <stflddv Sync="TRUE">1</stflddv>
+        </stfield>
+      </subtype>
+      <subtype>
+        <stname Sync="TRUE">Witness Corner</stname>
+        <stcode Sync="TRUE">5</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">MONUMENTTYPE</stfldnm>
+          <stflddv Sync="TRUE">1</stflddv>
+        </stfield>
+      </subtype>
+      <subtype>
+        <stname Sync="TRUE">Calculated Position</stname>
+        <stcode Sync="TRUE">6</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">MONUMENTTYPE</stfldnm>
+          <stflddv Sync="TRUE">1</stflddv>
+        </stfield>
+      </subtype>
+      <subtype>
+        <stname Sync="TRUE">Govt Lot Corner</stname>
+        <stcode Sync="TRUE">7</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">MONUMENTTYPE</stfldnm>
+          <stflddv Sync="TRUE">1</stflddv>
+        </stfield>
+      </subtype>
+      <subtype>
+        <stname Sync="TRUE">Private Claim Corner</stname>
+        <stcode Sync="TRUE">9</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">MONUMENTTYPE</stfldnm>
+          <stflddv Sync="TRUE">1</stflddv>
+        </stfield>
+      </subtype>
+      <subtype>
+        <stname Sync="TRUE">Meander Monument</stname>
+        <stcode Sync="TRUE">11</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">MONUMENTTYPE</stfldnm>
+          <stflddv Sync="TRUE">1</stflddv>
+        </stfield>
+      </subtype>
+      <subtype>
+        <stname Sync="TRUE">Neighboring County Monument</stname>
+        <stcode Sync="TRUE">12</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">MONUMENTTYPE</stfldnm>
+          <stflddv Sync="TRUE">1</stflddv>
+        </stfield>
+      </subtype>
+      <subtype>
+        <stname Sync="TRUE">Plat Monument</stname>
+        <stcode Sync="TRUE">14</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">MONUMENTTYPE</stfldnm>
+          <stflddv Sync="TRUE">1</stflddv>
+        </stfield>
+      </subtype>
+      <subtype>
+        <stname Sync="TRUE">Other</stname>
+        <stcode Sync="TRUE">15</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">MONUMENTTYPE</stfldnm>
+          <stflddv Sync="TRUE">1</stflddv>
+        </stfield>
+      </subtype>
+      <subtype>
+        <stname Sync="TRUE">GL Monument on GL Line</stname>
+        <stcode Sync="TRUE">8</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">MONUMENTTYPE</stfldnm>
+          <stflddv Sync="TRUE">1</stflddv>
+        </stfield>
+      </subtype>
+      <subtype>
+        <stname Sync="TRUE">PC Monument on PC Line</stname>
+        <stcode Sync="TRUE">10</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">MONUMENTTYPE</stfldnm>
+          <stflddv Sync="TRUE">1</stflddv>
+        </stfield>
+      </subtype>
+      <subtype>
+        <stname Sync="TRUE">Reservation Corner</stname>
+        <stcode Sync="TRUE">16</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">MONUMENTTYPE</stfldnm>
+          <stflddv Sync="TRUE">1</stflddv>
+        </stfield>
+      </subtype>
+      <subtype>
+        <stname Sync="TRUE">Res Mon on Res  Line</stname>
+        <stcode Sync="TRUE">13</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">MONUMENTTYPE</stfldnm>
+          <stflddv Sync="TRUE">1</stflddv>
+        </stfield>
+      </subtype>
+      <subtype>
+        <stname Sync="TRUE">Closing Corner</stname>
+        <stcode Sync="TRUE">17</stcode>
+      </subtype>
+      <subtype>
+        <stname Sync="TRUE">Non Accessible Corner</stname>
+        <stcode Sync="TRUE">18</stcode>
+      </subtype>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Outagamie_PLSS_2019">
+        <geoObjTyp>
+          <GeoObjTypCd value="004" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">4112</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Outagamie_PLSS_2019">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="1" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">4112</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20190415</mdDateSt>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gApGO1ScE4GcClpkozE4H909s0Ac4fGWGI/4RvxFwpbP2HjiPfj73U/dH+1xTG8a7Yg//CMeJD8z
+DaLDngKc/e6Hdge6t6Vw1vavDo0jnSJoFG85FlNlR9jPPM2Dx8v1p97p0UYniMM7Rh50VEsXJ/49
+ohgfvu4wBnPINBCn7uq1/wCB/X9aHdSeMPLQt/wjniFsMy4WxyeGVc/e6HdkewJ7Ui+Md139n/4R
+vxCPmK+YbH5P9Zsznd0/i/3ea5DUbKWSS+UaQ7FZrl8mzmIcGSAcYm5JxnsMLwOtSGzdriSQ6RJu
+kOWP2Sblvt3/AF1/4Fj074oQ3KyasdZJ4yhg0+W9uNF1uCGItvMlnggBd27r93tn1otPHGmX0LS2
+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</Data>
+    </Thumbnail>
+  </Binary>
+  <mdFileID>D0DEC5B9-FA18-4661-9652-1ADAC741615C</mdFileID>
+</metadata>

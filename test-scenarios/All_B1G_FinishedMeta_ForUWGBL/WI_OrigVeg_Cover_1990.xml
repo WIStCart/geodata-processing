@@ -1,0 +1,1429 @@
+﻿<metadata>
+  <idinfo>
+    <ptcontac>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Wisconsin DNR Enterprise Data Management Section</cntorg>
+        </cntorgp>
+        <cntpos>GIS Data Specialist </cntpos>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>P.O. Box 7921</address>
+          <city>Madison</city>
+          <state>WI</state>
+          <postal>53707-7921 </postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>(608) 264-8916</cntvoice>
+        <cntfax>(608) 266-0870</cntfax>
+        <cntemail>John.Laedlein@dnr.state.wi.us </cntemail>
+        <hours>Normal business hours, or as available</hours>
+      </cntinfo>
+    </ptcontac>
+    <keywords>
+      <place>
+        <placekt>None</placekt>
+        <placekey>Wisconsin</placekey>
+      </place>
+      <theme>
+        <themekey>Polygon</themekey>
+        <themekey>Vegetation</themekey>
+      </theme>
+    </keywords>
+    <native Sync="TRUE">Microsoft Windows NT Version 4.0 (Build 1381) Service Pack 6; ESRI ArcCatalog 8.3.0.800</native>
+    <descript>
+      <langdata Sync="TRUE">en</langdata>
+      <abstract>This is a polygon shapefile derived from a 1:500,000-scale map showing the original, pre-settlement vegetation cover in Wisconsin. The original vegetation cover data was digitized from a 1976 map created from land survey notes written in the mid-1800s when Wisconsin was first surveyed. Linework representing lakes and other hydrographic areas in other data sets were subsequently merged with the original vegetation cover data set to more closely match the source map.</abstract>
+      <purpose>This digital version of the original vegetation cover map can be used to identify regional changes in land cover since the time when the state was first surveyed. This data is not intended for landscape-scale analysis.</purpose>
+    </descript>
+    <citation>
+      <citeinfo>
+        <origin>University of Wisconsin at Madison</origin>
+        <pubdate>1990</pubdate>
+        <title>Original Vegetation Cover Wisconsin, 1800s</title>
+        <ftname Sync="TRUE">ovgppoly</ftname>
+        <geoform Sync="TRUE">vector digital data</geoform>
+        <onlink>http://www.dnr.state.wi.us/maps/gis/geolibrary.html</onlink>
+        <pubtime>Unknown</pubtime>
+        <pubinfo>
+          <pubplace>Madison, WI</pubplace>
+          <publish>Wisconsin Dept. of Natural Resources (DNR)</publish>
+        </pubinfo>
+        <onlink>ftp://gomapout.dnr.state.wi.us/geodata/orig_veg_cov.zip</onlink>
+        <onlink>http://maps.dnr.state.wi.us/webview/</onlink>
+      </citeinfo>
+    </citation>
+    <timeperd>
+      <current>publication date</current>
+      <timeinfo>
+        <sngdate>
+          <caldate>1990</caldate>
+        </sngdate>
+      </timeinfo>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc Sync="TRUE">-92.963754</westbc>
+        <eastbc Sync="TRUE">-86.707114</eastbc>
+        <northbc Sync="TRUE">47.083463</northbc>
+        <southbc Sync="TRUE">42.459887</southbc>
+      </bounding>
+      <lboundng>
+        <leftbc Sync="TRUE">294875.661023</leftbc>
+        <rightbc Sync="TRUE">770165.186727</rightbc>
+        <bottombc Sync="TRUE">225325.164925</bottombc>
+        <topbc Sync="TRUE">734439.519620</topbc>
+      </lboundng>
+    </spdom>
+    <accconst>None</accconst>
+    <useconst>None</useconst>
+    <natvform Sync="TRUE">Shapefile</natvform>
+  </idinfo>
+  <dataqual>
+    <lineage>
+      <procstep>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>Wisconsin DNR</cntorg>
+            </cntorgp>
+            <cntpos>GIS Data Specialist </cntpos>
+            <cntaddr>
+              <addrtype>mailing address</addrtype>
+              <address>P.O. Box 7921</address>
+              <city>Madison</city>
+              <state>WI</state>
+              <postal>53707-7921 </postal>
+              <country>USA</country>
+            </cntaddr>
+            <cntvoice>(608) 264-8914</cntvoice>
+            <cntfax>(608) 266-0870</cntfax>
+            <cntemail>John.Laedlein@dnr.state.wi.us</cntemail>
+            <hours>Normal business hours or as available</hours>
+          </cntinfo>
+        </proccont>
+        <procdesc>Digitizing was carried out by students at the UW-Madison under the direction of Professor Steve Ventura of the UW-Madison Institute for Environmental Studies and Earth Science.  
+
+Because the digitized data set did not identify hydrographic features, this information was added by the DNR Geographic Services Section from the 1:250,000-scale Land Use and Land Cover data layer.  Portions of the Wisconsin state boundary were also added to the digitized data set using the 1:100,000-scale state boundary coverage.  GEO Services projected the data from the Lambert Conformal Conic Projection to WTM and carried out limited quality control review and edits to assure topological integrity of the data. </procdesc>
+        <procdate>1990</procdate>
+      </procstep>
+      <srcinfo>
+        <srcscale>500000</srcscale>
+        <typesrc>Unknown</typesrc>
+        <srccite>
+          <citeinfo>
+            <origin>Robert W. Finley</origin>
+            <pubdate>1976</pubdate>
+            <title>Original Vegetation Cover of Wisconsin; Compiled from U.S. General Land Office Notes</title>
+            <geoform>map</geoform>
+          </citeinfo>
+        </srccite>
+      </srcinfo>
+      <procstep>
+        <procdesc Sync="TRUE">Dataset copied.</procdesc>
+        <srcused Sync="TRUE">K:\dvgislib\wi_tile\landcov\ovgpw95c\ovgppoly</srcused>
+        <date Sync="TRUE">20060710</date>
+        <time Sync="TRUE">13435200</time>
+      </procstep>
+    </lineage>
+    <logic>The source ArcInfo coverages had polygon topology with no dangling arcs. No errors were reported upon conversion to shapefiles.</logic>
+    <complete>All 72 counties of Wisconsin are represented.  Islands in Lake Michigan and Lake Superior belonging to Wisconsin counties are also represented.</complete>
+  </dataqual>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Wisconsin DNR Enterprise Data Management Section</cntorg>
+        </cntorgp>
+        <cntpos>GIS Data Specialist</cntpos>
+        <cntvoice>(608) 264-8916</cntvoice>
+        <cnttdd>none</cnttdd>
+        <cntfax>(608) 266-0870</cntfax>
+        <cntemail>John.Laedlein@dnr.state.wi.us</cntemail>
+        <hours>Normal business hours or as available</hours>
+      </cntinfo>
+    </distrib>
+    <distliab>Refer to &lt;http://www.dnr.state.wi.us/org/legal/WebSiteLegalInformation.html&gt;</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>ESRI shapefile</formname>
+          <transize Sync="TRUE">11.155</transize>
+          <dssize Sync="TRUE">11.155</dssize>
+          <filedec>Compressed file created using WinZip</filedec>
+        </digtinfo>
+        <digtopt>
+          <offoptn>
+            <offmedia>CD-ROM</offmedia>
+            <recfmt>Compatibility_Information ISO 9660 format allows the CDROM to be read by most computer operating systems.</recfmt>
+          </offoptn>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>ftp://gomapout.dnr.state.wi.us/geodata/orig_veg_cover/orig_veg_cover.zip</networkr>
+              </networka>
+            </computer>
+            <accinstr>Download from DNR ftp site.</accinstr>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <ordering>Refer to the DNR/EDM website for information about data access options: http://www.dnr.state.wi.us/maps/gis/geolibrary.html</ordering>
+    </stdorder>
+    <resdesc Sync="TRUE">Downloadable Data</resdesc>
+  </distinfo>
+  <metainfo>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Wisconsin DNR Enterprise Data Management Section</cntorg>
+        </cntorgp>
+        <cntpos>GIS Data Specialist</cntpos>
+        <cntvoice>(608) 264-8916</cntvoice>
+        <cnttdd>none</cnttdd>
+        <cntfax>(608) 266-0870</cntfax>
+        <cntemail>Sara.Brenner@dnr.state.wi.us</cntemail>
+        <hours>Normal business hours or as available</hours>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>P.O. Box 7921</address>
+          <city>Madison</city>
+          <state>WI</state>
+          <postal>53707-7921</postal>
+          <country>USA</country>
+        </cntaddr>
+      </cntinfo>
+    </metc>
+    <metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+    <metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+    <metd Sync="TRUE">20060710</metd>
+    <langmeta Sync="TRUE">en</langmeta>
+    <mettc Sync="TRUE">local time</mettc>
+  </metainfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <planci>
+          <plance Sync="TRUE">coordinate pair</plance>
+          <plandu Sync="TRUE">meters</plandu>
+          <coordrep>
+            <absres Sync="TRUE">0.001024</absres>
+            <ordres Sync="TRUE">0.001024</ordres>
+          </coordrep>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn Sync="TRUE">D_North_American_1983_HARN</horizdn>
+        <ellips Sync="TRUE">Geodetic Reference System 80</ellips>
+        <semiaxis Sync="TRUE">6378137.000000</semiaxis>
+        <denflat Sync="TRUE">298.257222</denflat>
+      </geodetic>
+      <cordsysn>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Transverse_Mercator</projcsn>
+      </cordsysn>
+    </horizsys>
+  </spref>
+  <Esri>
+    <ModDate>20180515</ModDate>
+    <ModTime>12094100</ModTime>
+    <CreaDate>20060710</CreaDate>
+    <CreaTime>13435200</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <SyncDate>20180515</SyncDate>
+    <SyncTime>12094100</SyncTime>
+    <PublishStatus>Published</PublishStatus>
+    <MetaID>{6C11D38A-76C1-4330-9678-A07CDA2F4A5D}</MetaID>
+    <DataProperties>
+      <itemProps>
+        <itemName Sync="TRUE">WI_OrigVeg_Cover_1990</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">294875.661023</westBL>
+          <eastBL Sync="TRUE">770165.186727</eastBL>
+          <southBL Sync="TRUE">225325.164925</southBL>
+          <northBL Sync="TRUE">734439.519620</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <itemSize Sync="TRUE">10.120</itemSize>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\data\ARCHIVE_PROJECT\STATEWIDE_DATA\WIDNR\2018_updates_links\WI_OrigVeg_Cover_1990\orig_veg_cover\WI_OrigVeg_Cover_1990.shp</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Transverse_Mercator</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Transverse_Mercator&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;450445547.3910538&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <scaleRange>
+      <minScale>5000000</minScale>
+      <maxScale>50000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <spdoinfo>
+    <direct Sync="TRUE">Vector</direct>
+    <ptvctinf>
+      <esriterm Name="WI_OrigVeg_Cover_1990">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="4" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">11134</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <eainfo>
+    <detailed Name="WI_OrigVeg_Cover_1990">
+      <enttyp>
+        <enttypl Sync="FALSE">WI_OrigVeg_Cover_1990</enttypl>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">11134</enttypc>
+        <enttypds>Wisconsin DNR</enttypds>
+        <enttypd>Original Vegetation Cover WI, 2017</enttypd>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">FID</attrlabl>
+        <attalias Sync="TRUE">FID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">ESRI</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape</attrlabl>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Feature geometry.</attrdef>
+        <attrdefs Sync="TRUE">ESRI</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">AREA</attrlabl>
+        <attalias Sync="TRUE">AREA</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">19</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PERIMETER</attrlabl>
+        <attalias Sync="TRUE">PERIMETER</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">19</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">OVGPW95C_</attrlabl>
+        <attalias Sync="TRUE">OVGPW95C_</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">11</attwidth>
+        <atprecis Sync="TRUE">11</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">OVGPW95C_I</attrlabl>
+        <attalias Sync="TRUE">OVGPW95C_I</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">11</attwidth>
+        <atprecis Sync="TRUE">11</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">VEG_TYPE</attrlabl>
+        <attalias Sync="TRUE">VEG_TYPE</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <attrdef>The two-digit code for original vegetation cover type.  For each category, types of vegetation are listed in the order in which they predominate. </attrdef>
+        <attrdefs>"Original Vegetation Cover of Wisconsin" map by Robert W. Finley, 1976. </attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>White spruce, balsam fir, tamarack, white cedar, white birch, aspen</edomvd>
+            <edomvds>"Original Vegetation Cover of Wisconsin" map by Robert W. Finley, 1976.</edomvds>
+          </edom>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>Beech, hemlock, sugar maple, yellow birch, white pine, red pine</edomvd>
+            <edomvds>"Original Vegetation Cover of Wisconsin" map by Robert W. Finley, 1976.</edomvds>
+          </edom>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>Hemlock, sugar maple, yellow birch, white pine, red pine</edomvd>
+            <edomvds>"Original Vegetation Cover of Wisconsin" map by Robert W. Finley, 1976.</edomvds>
+          </edom>
+          <edom>
+            <edomv>4</edomv>
+            <edomvd>Sugar maple, yellow birch, white pine, red pine</edomvd>
+            <edomvds>"Original Vegetation Cover of Wisconsin" map by Robert W. Finley, 1976.</edomvds>
+          </edom>
+          <edom>
+            <edomv>5</edomv>
+            <edomvd>White pine, red pine</edomvd>
+            <edomvds>"Original Vegetation Cover of Wisconsin" map by Robert W. Finley, 1976.</edomvds>
+          </edom>
+          <edom>
+            <edomv>6</edomv>
+            <edomvd>Jack pine, scrub (hill's), oak forest and barrens</edomvd>
+            <edomvds>"Original Vegetation Cover of Wisconsin" map by Robert W. Finley, 1976.</edomvds>
+          </edom>
+          <edom>
+            <edomv>7</edomv>
+            <edomvd>Aspen, white birch, pine</edomvd>
+            <edomvds>"Original Vegetation Cover of Wisconsin" map by Robert W. Finley, 1976.</edomvds>
+          </edom>
+          <edom>
+            <edomv>8</edomv>
+            <edomvd>Beech, sugar maple, basswood, red oak, white oak, black oak</edomvd>
+            <edomvds>"Original Vegetation Cover of Wisconsin" map by Robert W. Finley, 1976.</edomvds>
+          </edom>
+          <edom>
+            <edomv>9</edomv>
+            <edomvd>Sugar maple, basswood, red oak, white oak, black oak</edomvd>
+            <edomvds>"Original Vegetation Cover of Wisconsin" map by Robert W. Finley, 1976.</edomvds>
+          </edom>
+          <edom>
+            <edomv>10</edomv>
+            <edomvd>Oak -- white oak, black oak, bur oak</edomvd>
+            <edomvds>"Original Vegetation Cover of Wisconsin" map by Robert W. Finley, 1976.</edomvds>
+          </edom>
+          <edom>
+            <edomv>11</edomv>
+            <edomvd>Oak openings -- bur oak, white oak, black oak</edomvd>
+            <edomvds>"Original Vegetation Cover of Wisconsin" map by Robert W. Finley, 1976.</edomvds>
+          </edom>
+          <edom>
+            <edomv>12</edomv>
+            <edomvd>Prairie</edomvd>
+            <edomvds>"Original Vegetation Cover of Wisconsin" map by Robert W. Finley, 1976.</edomvds>
+          </edom>
+          <edom>
+            <edomv>13</edomv>
+            <edomvd>Brush</edomvd>
+            <edomvds>"Original Vegetation Cover of Wisconsin" map by Robert W. Finley, 1976.</edomvds>
+          </edom>
+          <edom>
+            <edomv>14</edomv>
+            <edomvd>Swamp conifers -- white cedar, black spruce, tamarack, hemlock</edomvd>
+            <edomvds>"Original Vegetation Cover of Wisconsin" map by Robert W. Finley, 1976.</edomvds>
+          </edom>
+          <edom>
+            <edomv>15</edomv>
+            <edomvd>Lowland hardwoods -- willow, soft maple, box elder, ash, elm, cottonwood, river birch</edomvd>
+            <edomvds>"Original Vegetation Cover of Wisconsin" map by Robert W. Finley, 1976.</edomvds>
+          </edom>
+          <edom>
+            <edomv>16</edomv>
+            <edomvd>Marsh and sedge meadow, wet prairie, lowland shrubs</edomvd>
+            <edomvds>"Original Vegetation Cover of Wisconsin" map by Robert W. Finley, 1976.</edomvds>
+          </edom>
+          <edom>
+            <edomv>99</edomv>
+            <edomvd>Area with vegetation cover type not interpreted on the source map</edomvd>
+            <edomvds>"Original Vegetation Cover of Wisconsin" map by Robert W. Finley, 1976.</edomvds>
+          </edom>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>Hydrographic area from the USGS 1:250,000-scale Land Use and Land Cover data layer </edomvd>
+            <edomvds>US Geological Survey</edomvds>
+          </edom>
+        </attrdomv>
+        <atprecis Sync="TRUE">2</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LUC_LEVEL2</attrlabl>
+        <attalias Sync="TRUE">LUC_LEVEL2</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <attrdefs>US Geological Survey</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>51</edomv>
+            <edomvd>Streams and canals</edomvd>
+            <edomvds>US Geological Survey</edomvds>
+          </edom>
+          <edom>
+            <edomv>52</edomv>
+            <edomvd>Lakes</edomvd>
+            <edomvds>US Geological Survey</edomvds>
+          </edom>
+          <edom>
+            <edomv>53</edomv>
+            <edomvd>Reservoirs</edomvd>
+            <edomvds>US Geological Survey</edomvds>
+          </edom>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>Not a hydrographic area extracted from the USGS 1:250,000-scale Land Use and Land Cover database</edomvd>
+            <edomvds>Wisconsin DNR</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdef>This item contains the 2-digit Level 2 Land Use and Land Cover (LULC) classification code identifying hydrographic areas extracted by the Wisconsin DNR from the LULC coverage.  Inclusion of these codes in the Original Vegetation Cover data layer enables users to select water bodies from this layer by LULC class as appropriate for a particular application.</attrdef>
+        <atprecis Sync="TRUE">2</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+  </eainfo>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiioIb22uJ5YYZ0eSI7XVTnB7j6jv6UAT0VRvdXsbCCaaeYbIfv7AW2knABx0Oa5
+K78Z3d+s8VhZKls0ZIuJmxhc4JPYenek5JAdrJdwRTrC8qrIwyFPf/OKdDNHOheMllyVzgjkHB61
+w+maXdXl0qbZfLjLYnLj5VJIypA9ckLjAruYUMcKISpIHO1doz7DnFCd9QH0UUUwCiiigAooooAK
+KKKACiiigAooooAKKKKACiiigAooooAKKKKAK9+dunXJzjETnOcdjXncevWQjTdaCWWNn8tgNyEZ
+9C3B9TyTnrXfa3n+wdR2nDfZZcH0O015PDazRW63G4ZfrESW3YO7p6fLjqeRWNaKla40XjfavrEM
+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
+KKKACiiigAooooAKKKKAP//Z</Data>
+    </Thumbnail>
+    <Enclosure>
+      <Descript>original metadata</Descript>
+      <Data SourceMetadata="yes" OriginalFileName="source_metadata.xml" SourceMetadataDigest="db3d5401f1326778710ecd8f1c11acf7" EsriPropertyType="Base64" SourceMetadataSchema="fgdc">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxtZXRhZGF0YT4NCiAgPGlk
+aW5mbz4NCiAgICA8cHRjb250YWM+DQogICAgICA8Y250aW5mbz4NCiAgICAgICAgPGNudG9yZ3A+
+DQogICAgICAgICAgPGNudG9yZz5XaXNjb25zaW4gRE5SIEVudGVycHJpc2UgRGF0YSBNYW5hZ2Vt
+ZW50IFNlY3Rpb248L2NudG9yZz4NCiAgICAgICAgPC9jbnRvcmdwPg0KICAgICAgICA8Y250cG9z
+PkdJUyBEYXRhIFNwZWNpYWxpc3QgPC9jbnRwb3M+DQogICAgICAgIDxjbnRhZGRyPg0KICAgICAg
+ICAgIDxhZGRydHlwZT5tYWlsaW5nIGFkZHJlc3M8L2FkZHJ0eXBlPg0KICAgICAgICAgIDxhZGRy
+ZXNzPlAuTy4gQm94IDc5MjE8L2FkZHJlc3M+DQogICAgICAgICAgPGNpdHk+TWFkaXNvbjwvY2l0
+eT4NCiAgICAgICAgICA8c3RhdGU+V0k8L3N0YXRlPg0KICAgICAgICAgIDxwb3N0YWw+NTM3MDct
+NzkyMSA8L3Bvc3RhbD4NCiAgICAgICAgICA8Y291bnRyeT5VU0E8L2NvdW50cnk+DQogICAgICAg
+IDwvY250YWRkcj4NCiAgICAgICAgPGNudHZvaWNlPig2MDgpIDI2NC04OTE2PC9jbnR2b2ljZT4N
+CiAgICAgICAgPGNudGZheD4oNjA4KSAyNjYtMDg3MDwvY250ZmF4Pg0KICAgICAgICA8Y250ZW1h
+aWw+Sm9obi5MYWVkbGVpbkBkbnIuc3RhdGUud2kudXMgPC9jbnRlbWFpbD4NCiAgICAgICAgPGhv
+dXJzPk5vcm1hbCBidXNpbmVzcyBob3Vycywgb3IgYXMgYXZhaWxhYmxlPC9ob3Vycz4NCiAgICAg
+IDwvY250aW5mbz4NCiAgICA8L3B0Y29udGFjPg0KICAgIDxrZXl3b3Jkcz4NCiAgICAgIDxwbGFj
+ZT4NCiAgICAgICAgPHBsYWNla3Q+Tm9uZTwvcGxhY2VrdD4NCiAgICAgICAgPHBsYWNla2V5Pldp
+c2NvbnNpbjwvcGxhY2VrZXk+DQogICAgICA8L3BsYWNlPg0KICAgICAgPHRoZW1lPg0KICAgICAg
+ICA8dGhlbWVrdD5Ob25lPC90aGVtZWt0Pg0KICAgICAgICA8dGhlbWVrZXk+dmVnZXRhdGlvbjwv
+dGhlbWVrZXk+DQogICAgICAgIDx0aGVtZWtleT5sYW5kIGNvdmVyPC90aGVtZWtleT4NCiAgICAg
+ICAgPHRoZW1la2V5PmVudmlyb25tZW50PC90aGVtZWtleT4NCiAgICAgIDwvdGhlbWU+DQogICAg
+PC9rZXl3b3Jkcz4NCiAgICA8ZGVzY3JpcHQ+DQogICAgICA8YWJzdHJhY3Q+VGhpcyBpcyBhIHBv
+bHlnb24gc2hhcGVmaWxlIGRlcml2ZWQgZnJvbSBhIDE6NTAwLDAwMC1zY2FsZSBtYXAgc2hvd2lu
+ZyB0aGUgb3JpZ2luYWwsIHByZS1zZXR0bGVtZW50IHZlZ2V0YXRpb24gY292ZXIgaW4gV2lzY29u
+c2luLiAgVGhlIG9yaWdpbmFsIHZlZ2V0YXRpb24gY292ZXIgZGF0YSB3YXMgZGlnaXRpemVkIGZy
+b20gYSAxOTc2IG1hcCBjcmVhdGVkIGZyb20gbGFuZCBzdXJ2ZXkgbm90ZXMgd3JpdHRlbiBpbiB0
+aGUgbWlkLTE4MDBzIHdoZW4gV2lzY29uc2luIHdhcyBmaXJzdCBzdXJ2ZXllZC4gIExpbmV3b3Jr
+IHJlcHJlc2VudGluZyBsYWtlcyBhbmQgb3RoZXIgaHlkcm9ncmFwaGljIGFyZWFzIGluIG90aGVy
+IGRhdGEgc2V0cyB3ZXJlIHN1YnNlcXVlbnRseSBtZXJnZWQgd2l0aCB0aGUgb3JpZ2luYWwgdmVn
+ZXRhdGlvbiBjb3ZlciBkYXRhIHNldCB0byBtb3JlIGNsb3NlbHkgbWF0Y2ggdGhlIHNvdXJjZSBt
+YXAuIDwvYWJzdHJhY3Q+DQogICAgICA8cHVycG9zZT5UaGlzIGRpZ2l0YWwgdmVyc2lvbiBvZiB0
+aGUgb3JpZ2luYWwgdmVnZXRhdGlvbiBjb3ZlciBtYXAgY2FuIGJlIHVzZWQgdG8gaWRlbnRpZnkg
+cmVnaW9uYWwgY2hhbmdlcyBpbiBsYW5kIGNvdmVyIHNpbmNlIHRoZSB0aW1lIHdoZW4gdGhlIHN0
+YXRlIHdhcyBmaXJzdCBzdXJ2ZXllZC4gICBUaGlzIGRhdGEgaXMgbm90IGludGVuZGVkIGZvciBs
+YW5kc2NhcGUtc2NhbGUgYW5hbHlzaXMuIDwvcHVycG9zZT4NCiAgICA8L2Rlc2NyaXB0Pg0KICAg
+IDxjaXRhdGlvbj4NCiAgICAgIDxjaXRlaW5mbz4NCiAgICAgICAgPG9yaWdpbj5Vbml2ZXJzaXR5
+IG9mIFdpc2NvbnNpbiBhdCBNYWRpc29uPC9vcmlnaW4+DQogICAgICAgIDxwdWJkYXRlPjE5OTA8
+L3B1YmRhdGU+DQogICAgICAgIDx0aXRsZT5PcmlnaW5hbCBWZWdldGF0aW9uIENvdmVyIG9mIFdp
+c2NvbnNpbjwvdGl0bGU+DQogICAgICAgIDxvbmxpbms+aHR0cDovL3d3dy5kbnIuc3RhdGUud2ku
+dXMvbWFwcy9naXMvZ2VvbGlicmFyeS5odG1sPC9vbmxpbms+DQogICAgICAgIDxwdWJ0aW1lPlVu
+a25vd248L3B1YnRpbWU+DQogICAgICAgIDxwdWJpbmZvPg0KICAgICAgICAgIDxwdWJwbGFjZT5N
+YWRpc29uLCBXSTwvcHVicGxhY2U+DQogICAgICAgICAgPHB1Ymxpc2g+V2lzY29uc2luIERlcHQu
+IG9mIE5hdHVyYWwgUmVzb3VyY2VzIChETlIpPC9wdWJsaXNoPg0KICAgICAgICA8L3B1YmluZm8+
+DQogICAgICAgIDxvbmxpbms+ZnRwOi8vZ29tYXBvdXQuZG5yLnN0YXRlLndpLnVzL2dlb2RhdGEv
+b3JpZ192ZWdfY292LnppcDwvb25saW5rPg0KICAgICAgICA8b25saW5rPmh0dHA6Ly9tYXBzLmRu
+ci5zdGF0ZS53aS51cy93ZWJ2aWV3Lzwvb25saW5rPg0KICAgICAgPC9jaXRlaW5mbz4NCiAgICA8
+L2NpdGF0aW9uPg0KICAgIDx0aW1lcGVyZD4NCiAgICAgIDxjdXJyZW50PnB1YmxpY2F0aW9uIGRh
+dGU8L2N1cnJlbnQ+DQogICAgICA8dGltZWluZm8+DQogICAgICAgIDxzbmdkYXRlPg0KICAgICAg
+ICAgIDxjYWxkYXRlPjE5OTA8L2NhbGRhdGU+DQogICAgICAgIDwvc25nZGF0ZT4NCiAgICAgIDwv
+dGltZWluZm8+DQogICAgPC90aW1lcGVyZD4NCiAgICA8c3RhdHVzPg0KICAgICAgPHByb2dyZXNz
+PkNvbXBsZXRlPC9wcm9ncmVzcz4NCiAgICAgIDx1cGRhdGU+Tm9uZSBwbGFubmVkPC91cGRhdGU+
+DQogICAgPC9zdGF0dXM+DQogICAgPGFjY2NvbnN0Pk5vbmU8L2FjY2NvbnN0Pg0KICAgIDx1c2Vj
+b25zdD5Ob25lPC91c2Vjb25zdD4NCiAgPC9pZGluZm8+DQogIDxkYXRhcXVhbD4NCiAgICA8bGlu
+ZWFnZT4NCiAgICAgIDxwcm9jc3RlcD4NCiAgICAgICAgPHByb2Njb250Pg0KICAgICAgICAgIDxj
+bnRpbmZvPg0KICAgICAgICAgICAgPGNudG9yZ3A+DQogICAgICAgICAgICAgIDxjbnRvcmc+V2lz
+Y29uc2luIEROUjwvY250b3JnPg0KICAgICAgICAgICAgPC9jbnRvcmdwPg0KICAgICAgICAgICAg
+PGNudHBvcz5HSVMgRGF0YSBTcGVjaWFsaXN0IDwvY250cG9zPg0KICAgICAgICAgICAgPGNudGFk
+ZHI+DQogICAgICAgICAgICAgIDxhZGRydHlwZT5tYWlsaW5nIGFkZHJlc3M8L2FkZHJ0eXBlPg0K
+ICAgICAgICAgICAgICA8YWRkcmVzcz5QLk8uIEJveCA3OTIxPC9hZGRyZXNzPg0KICAgICAgICAg
+ICAgICA8Y2l0eT5NYWRpc29uPC9jaXR5Pg0KICAgICAgICAgICAgICA8c3RhdGU+V0k8L3N0YXRl
+Pg0KICAgICAgICAgICAgICA8cG9zdGFsPjUzNzA3LTc5MjEgPC9wb3N0YWw+DQogICAgICAgICAg
+ICAgIDxjb3VudHJ5PlVTQTwvY291bnRyeT4NCiAgICAgICAgICAgIDwvY250YWRkcj4NCiAgICAg
+ICAgICAgIDxjbnR2b2ljZT4oNjA4KSAyNjQtODkxNDwvY250dm9pY2U+DQogICAgICAgICAgICA8
+Y250ZmF4Pig2MDgpIDI2Ni0wODcwPC9jbnRmYXg+DQogICAgICAgICAgICA8Y250ZW1haWw+Sm9o
+bi5MYWVkbGVpbkBkbnIuc3RhdGUud2kudXM8L2NudGVtYWlsPg0KICAgICAgICAgICAgPGhvdXJz
+Pk5vcm1hbCBidXNpbmVzcyBob3VycyBvciBhcyBhdmFpbGFibGU8L2hvdXJzPg0KICAgICAgICAg
+IDwvY250aW5mbz4NCiAgICAgICAgPC9wcm9jY29udD4NCiAgICAgICAgPHByb2NkZXNjPkRpZ2l0
+aXppbmcgd2FzIGNhcnJpZWQgb3V0IGJ5IHN0dWRlbnRzIGF0IHRoZSBVVy1NYWRpc29uIHVuZGVy
+IHRoZSBkaXJlY3Rpb24gb2YgUHJvZmVzc29yIFN0ZXZlIFZlbnR1cmEgb2YgdGhlIFVXLU1hZGlz
+b24gSW5zdGl0dXRlIGZvciBFbnZpcm9ubWVudGFsIFN0dWRpZXMgYW5kIEVhcnRoIFNjaWVuY2Uu
+ICANCg0KQmVjYXVzZSB0aGUgZGlnaXRpemVkIGRhdGEgc2V0IGRpZCBub3QgaWRlbnRpZnkgaHlk
+cm9ncmFwaGljIGZlYXR1cmVzLCB0aGlzIGluZm9ybWF0aW9uIHdhcyBhZGRlZCBieSB0aGUgRE5S
+IEdlb2dyYXBoaWMgU2VydmljZXMgU2VjdGlvbiBmcm9tIHRoZSAxOjI1MCwwMDAtc2NhbGUgTGFu
+ZCBVc2UgYW5kIExhbmQgQ292ZXIgZGF0YSBsYXllci4gIFBvcnRpb25zIG9mIHRoZSBXaXNjb25z
+aW4gc3RhdGUgYm91bmRhcnkgd2VyZSBhbHNvIGFkZGVkIHRvIHRoZSBkaWdpdGl6ZWQgZGF0YSBz
+ZXQgdXNpbmcgdGhlIDE6MTAwLDAwMC1zY2FsZSBzdGF0ZSBib3VuZGFyeSBjb3ZlcmFnZS4gIEdF
+TyBTZXJ2aWNlcyBwcm9qZWN0ZWQgdGhlIGRhdGEgZnJvbSB0aGUgTGFtYmVydCBDb25mb3JtYWwg
+Q29uaWMgUHJvamVjdGlvbiB0byBXVE0gYW5kIGNhcnJpZWQgb3V0IGxpbWl0ZWQgcXVhbGl0eSBj
+b250cm9sIHJldmlldyBhbmQgZWRpdHMgdG8gYXNzdXJlIHRvcG9sb2dpY2FsIGludGVncml0eSBv
+ZiB0aGUgZGF0YS4gPC9wcm9jZGVzYz4NCiAgICAgICAgPHByb2NkYXRlPjE5OTA8L3Byb2NkYXRl
+Pg0KICAgICAgPC9wcm9jc3RlcD4NCiAgICAgIDxzcmNpbmZvPg0KICAgICAgICA8c3Jjc2NhbGU+
+NTAwMDAwPC9zcmNzY2FsZT4NCiAgICAgICAgPHR5cGVzcmM+VW5rbm93bjwvdHlwZXNyYz4NCiAg
+ICAgICAgPHNyY2NpdGU+DQogICAgICAgICAgPGNpdGVpbmZvPg0KICAgICAgICAgICAgPG9yaWdp
+bj5Sb2JlcnQgVy4gRmlubGV5PC9vcmlnaW4+DQogICAgICAgICAgICA8cHViZGF0ZT4xOTc2PC9w
+dWJkYXRlPg0KICAgICAgICAgICAgPHRpdGxlPk9yaWdpbmFsIFZlZ2V0YXRpb24gQ292ZXIgb2Yg
+V2lzY29uc2luOyBDb21waWxlZCBmcm9tIFUuUy4gR2VuZXJhbCBMYW5kIE9mZmljZSBOb3Rlczwv
+dGl0bGU+DQogICAgICAgICAgICA8Z2VvZm9ybT5tYXA8L2dlb2Zvcm0+DQogICAgICAgICAgPC9j
+aXRlaW5mbz4NCiAgICAgICAgPC9zcmNjaXRlPg0KICAgICAgPC9zcmNpbmZvPg0KICAgIDwvbGlu
+ZWFnZT4NCiAgICA8bG9naWM+VGhlIHNvdXJjZSBBcmNJbmZvIGNvdmVyYWdlcyBoYWQgcG9seWdv
+biB0b3BvbG9neSB3aXRoIG5vIGRhbmdsaW5nIGFyY3MuIE5vIGVycm9ycyB3ZXJlIHJlcG9ydGVk
+IHVwb24gY29udmVyc2lvbiB0byBzaGFwZWZpbGVzLjwvbG9naWM+DQogICAgPGNvbXBsZXRlPkFs
+bCA3MiBjb3VudGllcyBvZiBXaXNjb25zaW4gYXJlIHJlcHJlc2VudGVkLiAgSXNsYW5kcyBpbiBM
+YWtlIE1pY2hpZ2FuIGFuZCBMYWtlIFN1cGVyaW9yIGJlbG9uZ2luZyB0byBXaXNjb25zaW4gY291
+bnRpZXMgYXJlIGFsc28gcmVwcmVzZW50ZWQuPC9jb21wbGV0ZT4NCiAgPC9kYXRhcXVhbD4NCiAg
+PGRpc3RpbmZvPg0KICAgIDxkaXN0cmliPg0KICAgICAgPGNudGluZm8+DQogICAgICAgIDxjbnRv
+cmdwPg0KICAgICAgICAgIDxjbnRvcmc+V2lzY29uc2luIEROUiBFbnRlcnByaXNlIERhdGEgTWFu
+YWdlbWVudCBTZWN0aW9uPC9jbnRvcmc+DQogICAgICAgIDwvY250b3JncD4NCiAgICAgICAgPGNu
+dHBvcz5HSVMgRGF0YSBTcGVjaWFsaXN0PC9jbnRwb3M+DQogICAgICAgIDxjbnR2b2ljZT4oNjA4
+KSAyNjQtODkxNjwvY250dm9pY2U+DQogICAgICAgIDxjbnR0ZGQ+bm9uZTwvY250dGRkPg0KICAg
+ICAgICA8Y250ZmF4Pig2MDgpIDI2Ni0wODcwPC9jbnRmYXg+DQogICAgICAgIDxjbnRlbWFpbD5K
+b2huLkxhZWRsZWluQGRuci5zdGF0ZS53aS51czwvY250ZW1haWw+DQogICAgICAgIDxob3Vycz5O
+b3JtYWwgYnVzaW5lc3MgaG91cnMgb3IgYXMgYXZhaWxhYmxlPC9ob3Vycz4NCiAgICAgIDwvY250
+aW5mbz4NCiAgICA8L2Rpc3RyaWI+DQogICAgPGRpc3RsaWFiPlJlZmVyIHRvICZsdDtodHRwOi8v
+d3d3LmRuci5zdGF0ZS53aS51cy9vcmcvbGVnYWwvV2ViU2l0ZUxlZ2FsSW5mb3JtYXRpb24uaHRt
+bCZndDs8L2Rpc3RsaWFiPg0KICAgIDxzdGRvcmRlcj4NCiAgICAgIDxkaWdmb3JtPg0KICAgICAg
+ICA8ZGlndGluZm8+DQogICAgICAgICAgPGZvcm1uYW1lPkVTUkkgc2hhcGVmaWxlPC9mb3JtbmFt
+ZT4NCiAgICAgICAgICA8ZmlsZWRlYz5Db21wcmVzc2VkIGZpbGUgY3JlYXRlZCB1c2luZyBXaW5a
+aXA8L2ZpbGVkZWM+DQogICAgICAgIDwvZGlndGluZm8+DQogICAgICAgIDxkaWd0b3B0Pg0KICAg
+ICAgICAgIDxvZmZvcHRuPg0KICAgICAgICAgICAgPG9mZm1lZGlhPkNELVJPTTwvb2ZmbWVkaWE+
+DQogICAgICAgICAgICA8cmVjZm10PkNvbXBhdGliaWxpdHlfSW5mb3JtYXRpb24gSVNPIDk2NjAg
+Zm9ybWF0IGFsbG93cyB0aGUgQ0RST00gdG8gYmUgcmVhZCBieSBtb3N0IGNvbXB1dGVyIG9wZXJh
+dGluZyBzeXN0ZW1zLjwvcmVjZm10Pg0KICAgICAgICAgIDwvb2Zmb3B0bj4NCiAgICAgICAgICA8
+b25saW5vcHQ+DQogICAgICAgICAgICA8Y29tcHV0ZXI+DQogICAgICAgICAgICAgIDxuZXR3b3Jr
+YT4NCiAgICAgICAgICAgICAgICA8bmV0d29ya3I+ZnRwOi8vZ29tYXBvdXQuZG5yLnN0YXRlLndp
+LnVzL2dlb2RhdGEvb3JpZ192ZWdfY292ZXIvb3JpZ192ZWdfY292ZXIuemlwPC9uZXR3b3Jrcj4N
+CiAgICAgICAgICAgICAgPC9uZXR3b3JrYT4NCiAgICAgICAgICAgIDwvY29tcHV0ZXI+DQogICAg
+ICAgICAgICA8YWNjaW5zdHI+RG93bmxvYWQgZnJvbSBETlIgZnRwIHNpdGUuPC9hY2NpbnN0cj4N
+CiAgICAgICAgICA8L29ubGlub3B0Pg0KICAgICAgICA8L2RpZ3RvcHQ+DQogICAgICA8L2RpZ2Zv
+cm0+DQogICAgICA8b3JkZXJpbmc+UmVmZXIgdG8gdGhlIEROUi9FRE0gd2Vic2l0ZSBmb3IgaW5m
+b3JtYXRpb24gYWJvdXQgZGF0YSBhY2Nlc3Mgb3B0aW9uczogaHR0cDovL3d3dy5kbnIuc3RhdGUu
+d2kudXMvbWFwcy9naXMvZ2VvbGlicmFyeS5odG1sPC9vcmRlcmluZz4NCiAgICA8L3N0ZG9yZGVy
+Pg0KICA8L2Rpc3RpbmZvPg0KICA8bWV0YWluZm8+DQogICAgPG1ldGM+DQogICAgICA8Y250aW5m
+bz4NCiAgICAgICAgPGNudG9yZ3A+DQogICAgICAgICAgPGNudG9yZz5XaXNjb25zaW4gRE5SIEVu
+dGVycHJpc2UgRGF0YSBNYW5hZ2VtZW50IFNlY3Rpb248L2NudG9yZz4NCiAgICAgICAgPC9jbnRv
+cmdwPg0KICAgICAgICA8Y250cG9zPkdJUyBEYXRhIFNwZWNpYWxpc3Q8L2NudHBvcz4NCiAgICAg
+ICAgPGNudHZvaWNlPig2MDgpIDI2NC04OTE2PC9jbnR2b2ljZT4NCiAgICAgICAgPGNudHRkZD5u
+b25lPC9jbnR0ZGQ+DQogICAgICAgIDxjbnRmYXg+KDYwOCkgMjY2LTA4NzA8L2NudGZheD4NCiAg
+ICAgICAgPGNudGVtYWlsPlNhcmEuQnJlbm5lckBkbnIuc3RhdGUud2kudXM8L2NudGVtYWlsPg0K
+ICAgICAgICA8aG91cnM+Tm9ybWFsIGJ1c2luZXNzIGhvdXJzIG9yIGFzIGF2YWlsYWJsZTwvaG91
+cnM+DQogICAgICAgIDxjbnRhZGRyPg0KICAgICAgICAgIDxhZGRydHlwZT5tYWlsaW5nIGFkZHJl
+c3M8L2FkZHJ0eXBlPg0KICAgICAgICAgIDxhZGRyZXNzPlAuTy4gQm94IDc5MjE8L2FkZHJlc3M+
+DQogICAgICAgICAgPGNpdHk+TWFkaXNvbjwvY2l0eT4NCiAgICAgICAgICA8c3RhdGU+V0k8L3N0
+YXRlPg0KICAgICAgICAgIDxwb3N0YWw+NTM3MDctNzkyMTwvcG9zdGFsPg0KICAgICAgICAgIDxj
+b3VudHJ5PlVTQTwvY291bnRyeT4NCiAgICAgICAgPC9jbnRhZGRyPg0KICAgICAgPC9jbnRpbmZv
+Pg0KICAgIDwvbWV0Yz4NCiAgPC9tZXRhaW5mbz4NCiAgPEVzcmk+DQogICAgPE1vZERhdGU+MjAx
+NzAyMjA8L01vZERhdGU+DQogICAgPE1vZFRpbWU+MTM0MjU1MDA8L01vZFRpbWU+DQogICAgPENy
+ZWFEYXRlPjIwMDYwNzEwPC9DcmVhRGF0ZT4NCiAgICA8Q3JlYVRpbWU+MTM0MzUyMDA8L0NyZWFU
+aW1lPg0KICAgIDxTeW5jT25jZT5GQUxTRTwvU3luY09uY2U+DQogICAgPFN5bmNEYXRlPjIwMTcw
+MjIwPC9TeW5jRGF0ZT4NCiAgICA8U3luY1RpbWU+MTM0MjU1MDA8L1N5bmNUaW1lPg0KICAgIDxQ
+dWJsaXNoU3RhdHVzPlB1Ymxpc2hlZDwvUHVibGlzaFN0YXR1cz4NCiAgICA8TWV0YUlEPns2QzEx
+RDM4QS03NkMxLTQzMzAtOTY3OC1BMDdDREEyRjRBNUR9PC9NZXRhSUQ+DQogIDwvRXNyaT4NCiAg
+PGVhaW5mbz4NCiAgICA8ZGV0YWlsZWQgTmFtZT0ib3JpZ192ZWdfY292ZXJfMjAxNyI+DQogICAg
+ICA8ZW50dHlwPg0KICAgICAgICA8ZW50dHlwbCBTeW5jPSJUUlVFIj5vcmlnX3ZlZ19jb3Zlcl8y
+MDE3PC9lbnR0eXBsPg0KICAgICAgICA8ZW50dHlwdCBTeW5jPSJUUlVFIj5GZWF0dXJlIENsYXNz
+PC9lbnR0eXB0Pg0KICAgICAgICA8ZW50dHlwYyBTeW5jPSJUUlVFIj4xMTEzNDwvZW50dHlwYz4N
+CiAgICAgICAgPGVudHR5cGQ+U2hhcGVmaWxlIGF0dHJpYnV0ZSB0YWJsZTwvZW50dHlwZD4NCiAg
+ICAgICAgPGVudHR5cGRzPldpc2NvbnNpbiBETlI8L2VudHR5cGRzPg0KICAgICAgPC9lbnR0eXA+
+DQogICAgICA8YXR0cj4NCiAgICAgICAgPGF0dHJsYWJsIFN5bmM9IlRSVUUiPkZJRDwvYXR0cmxh
+Ymw+DQogICAgICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5GSUQ8L2F0dGFsaWFzPg0KICAgICAg
+ICA8YXR0cnR5cGUgU3luYz0iVFJVRSI+T0lEPC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdpZHRo
+IFN5bmM9IlRSVUUiPjQ8L2F0dHdpZHRoPg0KICAgICAgICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+
+MDwvYXRwcmVjaXM+DQogICAgICAgIDxhdHRzY2FsZSBTeW5jPSJUUlVFIj4wPC9hdHRzY2FsZT4N
+CiAgICAgICAgPGF0dHJkZWYgU3luYz0iVFJVRSI+SW50ZXJuYWwgZmVhdHVyZSBudW1iZXIuPC9h
+dHRyZGVmPg0KICAgICAgICA8YXR0cmRlZnMgU3luYz0iVFJVRSI+RVNSSTwvYXR0cmRlZnM+DQog
+ICAgICAgIDxhdHRyZG9tdj4NCiAgICAgICAgICA8dWRvbSBTeW5jPSJUUlVFIj5TZXF1ZW50aWFs
+IHVuaXF1ZSB3aG9sZSBudW1iZXJzIHRoYXQgYXJlIGF1dG9tYXRpY2FsbHkgZ2VuZXJhdGVkLjwv
+dWRvbT4NCiAgICAgICAgPC9hdHRyZG9tdj4NCiAgICAgIDwvYXR0cj4NCiAgICAgIDxhdHRyPg0K
+ICAgICAgICA8YXR0cmxhYmwgU3luYz0iVFJVRSI+U2hhcGU8L2F0dHJsYWJsPg0KICAgICAgICA8
+YXR0YWxpYXMgU3luYz0iVFJVRSI+U2hhcGU8L2F0dGFsaWFzPg0KICAgICAgICA8YXR0cnR5cGUg
+U3luYz0iVFJVRSI+R2VvbWV0cnk8L2F0dHJ0eXBlPg0KICAgICAgICA8YXR0d2lkdGggU3luYz0i
+VFJVRSI+MDwvYXR0d2lkdGg+DQogICAgICAgIDxhdHByZWNpcyBTeW5jPSJUUlVFIj4wPC9hdHBy
+ZWNpcz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjA8L2F0dHNjYWxlPg0KICAgICAg
+ICA8YXR0cmRlZiBTeW5jPSJUUlVFIj5GZWF0dXJlIGdlb21ldHJ5LjwvYXR0cmRlZj4NCiAgICAg
+ICAgPGF0dHJkZWZzIFN5bmM9IlRSVUUiPkVTUkk8L2F0dHJkZWZzPg0KICAgICAgICA8YXR0cmRv
+bXY+DQogICAgICAgICAgPHVkb20gU3luYz0iVFJVRSI+Q29vcmRpbmF0ZXMgZGVmaW5pbmcgdGhl
+IGZlYXR1cmVzLjwvdWRvbT4NCiAgICAgICAgPC9hdHRyZG9tdj4NCiAgICAgIDwvYXR0cj4NCiAg
+ICAgIDxhdHRyPg0KICAgICAgICA8YXR0cmxhYmwgU3luYz0iVFJVRSI+QVJFQTwvYXR0cmxhYmw+
+DQogICAgICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5BUkVBPC9hdHRhbGlhcz4NCiAgICAgICAg
+PGF0dHJ0eXBlIFN5bmM9IlRSVUUiPkRvdWJsZTwvYXR0cnR5cGU+DQogICAgICAgIDxhdHR3aWR0
+aCBTeW5jPSJUUlVFIj4yMDwvYXR0d2lkdGg+DQogICAgICAgIDxhdHByZWNpcyBTeW5jPSJUUlVF
+Ij4xOTwvYXRwcmVjaXM+DQogICAgICAgIDxhdHRzY2FsZSBTeW5jPSJUUlVFIj41PC9hdHRzY2Fs
+ZT4NCiAgICAgIDwvYXR0cj4NCiAgICAgIDxhdHRyPg0KICAgICAgICA8YXR0cmxhYmwgU3luYz0i
+VFJVRSI+UEVSSU1FVEVSPC9hdHRybGFibD4NCiAgICAgICAgPGF0dGFsaWFzIFN5bmM9IlRSVUUi
+PlBFUklNRVRFUjwvYXR0YWxpYXM+DQogICAgICAgIDxhdHRydHlwZSBTeW5jPSJUUlVFIj5Eb3Vi
+bGU8L2F0dHJ0eXBlPg0KICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MjA8L2F0dHdpZHRo
+Pg0KICAgICAgICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+MTk8L2F0cHJlY2lzPg0KICAgICAgICA8
+YXR0c2NhbGUgU3luYz0iVFJVRSI+NTwvYXR0c2NhbGU+DQogICAgICA8L2F0dHI+DQogICAgICA8
+YXR0cj4NCiAgICAgICAgPGF0dHJsYWJsIFN5bmM9IlRSVUUiPk9WR1BXOTVDXzwvYXR0cmxhYmw+
+DQogICAgICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5PVkdQVzk1Q188L2F0dGFsaWFzPg0KICAg
+ICAgICA8YXR0cnR5cGUgU3luYz0iVFJVRSI+RG91YmxlPC9hdHRydHlwZT4NCiAgICAgICAgPGF0
+dHdpZHRoIFN5bmM9IlRSVUUiPjExPC9hdHR3aWR0aD4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9
+IlRSVUUiPjExPC9hdHByZWNpcz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjA8L2F0
+dHNjYWxlPg0KICAgICAgPC9hdHRyPg0KICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRybGFibCBT
+eW5jPSJUUlVFIj5PVkdQVzk1Q19JPC9hdHRybGFibD4NCiAgICAgICAgPGF0dGFsaWFzIFN5bmM9
+IlRSVUUiPk9WR1BXOTVDX0k8L2F0dGFsaWFzPg0KICAgICAgICA8YXR0cnR5cGUgU3luYz0iVFJV
+RSI+RG91YmxlPC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdpZHRoIFN5bmM9IlRSVUUiPjExPC9h
+dHR3aWR0aD4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUiPjExPC9hdHByZWNpcz4NCiAg
+ICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjA8L2F0dHNjYWxlPg0KICAgICAgPC9hdHRyPg0K
+ICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRybGFibCBTeW5jPSJUUlVFIj5WRUdfVFlQRTwvYXR0
+cmxhYmw+DQogICAgICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5WRUdfVFlQRTwvYXR0YWxpYXM+
+DQogICAgICAgIDxhdHRydHlwZSBTeW5jPSJUUlVFIj5TbWFsbEludGVnZXI8L2F0dHJ0eXBlPg0K
+ICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MjwvYXR0d2lkdGg+DQogICAgICAgIDxhdHRy
+ZGVmPlRoZSB0d28tZGlnaXQgY29kZSBmb3Igb3JpZ2luYWwgdmVnZXRhdGlvbiBjb3ZlciB0eXBl
+LiAgRm9yIGVhY2ggY2F0ZWdvcnksIHR5cGVzIG9mIHZlZ2V0YXRpb24gYXJlIGxpc3RlZCBpbiB0
+aGUgb3JkZXIgaW4gd2hpY2ggdGhleSBwcmVkb21pbmF0ZS4gPC9hdHRyZGVmPg0KICAgICAgICA8
+YXR0cmRlZnM+Ik9yaWdpbmFsIFZlZ2V0YXRpb24gQ292ZXIgb2YgV2lzY29uc2luIiBtYXAgYnkg
+Um9iZXJ0IFcuIEZpbmxleSwgMTk3Ni4gPC9hdHRyZGVmcz4NCiAgICAgICAgPGF0dHJkb212Pg0K
+ICAgICAgICAgIDxlZG9tPg0KICAgICAgICAgICAgPGVkb212PjE8L2Vkb212Pg0KICAgICAgICAg
+ICAgPGVkb212ZD5XaGl0ZSBzcHJ1Y2UsIGJhbHNhbSBmaXIsIHRhbWFyYWNrLCB3aGl0ZSBjZWRh
+ciwgd2hpdGUgYmlyY2gsIGFzcGVuPC9lZG9tdmQ+DQogICAgICAgICAgICA8ZWRvbXZkcz4iT3Jp
+Z2luYWwgVmVnZXRhdGlvbiBDb3ZlciBvZiBXaXNjb25zaW4iIG1hcCBieSBSb2JlcnQgVy4gRmlu
+bGV5LCAxOTc2LjwvZWRvbXZkcz4NCiAgICAgICAgICA8L2Vkb20+DQogICAgICAgICAgPGVkb20+
+DQogICAgICAgICAgICA8ZWRvbXY+MjwvZWRvbXY+DQogICAgICAgICAgICA8ZWRvbXZkPkJlZWNo
+LCBoZW1sb2NrLCBzdWdhciBtYXBsZSwgeWVsbG93IGJpcmNoLCB3aGl0ZSBwaW5lLCByZWQgcGlu
+ZTwvZWRvbXZkPg0KICAgICAgICAgICAgPGVkb212ZHM+Ik9yaWdpbmFsIFZlZ2V0YXRpb24gQ292
+ZXIgb2YgV2lzY29uc2luIiBtYXAgYnkgUm9iZXJ0IFcuIEZpbmxleSwgMTk3Ni48L2Vkb212ZHM+
+DQogICAgICAgICAgPC9lZG9tPg0KICAgICAgICAgIDxlZG9tPg0KICAgICAgICAgICAgPGVkb212
+PjM8L2Vkb212Pg0KICAgICAgICAgICAgPGVkb212ZD5IZW1sb2NrLCBzdWdhciBtYXBsZSwgeWVs
+bG93IGJpcmNoLCB3aGl0ZSBwaW5lLCByZWQgcGluZTwvZWRvbXZkPg0KICAgICAgICAgICAgPGVk
+b212ZHM+Ik9yaWdpbmFsIFZlZ2V0YXRpb24gQ292ZXIgb2YgV2lzY29uc2luIiBtYXAgYnkgUm9i
+ZXJ0IFcuIEZpbmxleSwgMTk3Ni48L2Vkb212ZHM+DQogICAgICAgICAgPC9lZG9tPg0KICAgICAg
+ICAgIDxlZG9tPg0KICAgICAgICAgICAgPGVkb212PjQ8L2Vkb212Pg0KICAgICAgICAgICAgPGVk
+b212ZD5TdWdhciBtYXBsZSwgeWVsbG93IGJpcmNoLCB3aGl0ZSBwaW5lLCByZWQgcGluZTwvZWRv
+bXZkPg0KICAgICAgICAgICAgPGVkb212ZHM+Ik9yaWdpbmFsIFZlZ2V0YXRpb24gQ292ZXIgb2Yg
+V2lzY29uc2luIiBtYXAgYnkgUm9iZXJ0IFcuIEZpbmxleSwgMTk3Ni48L2Vkb212ZHM+DQogICAg
+ICAgICAgPC9lZG9tPg0KICAgICAgICAgIDxlZG9tPg0KICAgICAgICAgICAgPGVkb212PjU8L2Vk
+b212Pg0KICAgICAgICAgICAgPGVkb212ZD5XaGl0ZSBwaW5lLCByZWQgcGluZTwvZWRvbXZkPg0K
+ICAgICAgICAgICAgPGVkb212ZHM+Ik9yaWdpbmFsIFZlZ2V0YXRpb24gQ292ZXIgb2YgV2lzY29u
+c2luIiBtYXAgYnkgUm9iZXJ0IFcuIEZpbmxleSwgMTk3Ni48L2Vkb212ZHM+DQogICAgICAgICAg
+PC9lZG9tPg0KICAgICAgICAgIDxlZG9tPg0KICAgICAgICAgICAgPGVkb212PjY8L2Vkb212Pg0K
+ICAgICAgICAgICAgPGVkb212ZD5KYWNrIHBpbmUsIHNjcnViIChoaWxsJ3MpLCBvYWsgZm9yZXN0
+IGFuZCBiYXJyZW5zPC9lZG9tdmQ+DQogICAgICAgICAgICA8ZWRvbXZkcz4iT3JpZ2luYWwgVmVn
+ZXRhdGlvbiBDb3ZlciBvZiBXaXNjb25zaW4iIG1hcCBieSBSb2JlcnQgVy4gRmlubGV5LCAxOTc2
+LjwvZWRvbXZkcz4NCiAgICAgICAgICA8L2Vkb20+DQogICAgICAgICAgPGVkb20+DQogICAgICAg
+ICAgICA8ZWRvbXY+NzwvZWRvbXY+DQogICAgICAgICAgICA8ZWRvbXZkPkFzcGVuLCB3aGl0ZSBi
+aXJjaCwgcGluZTwvZWRvbXZkPg0KICAgICAgICAgICAgPGVkb212ZHM+Ik9yaWdpbmFsIFZlZ2V0
+YXRpb24gQ292ZXIgb2YgV2lzY29uc2luIiBtYXAgYnkgUm9iZXJ0IFcuIEZpbmxleSwgMTk3Ni48
+L2Vkb212ZHM+DQogICAgICAgICAgPC9lZG9tPg0KICAgICAgICAgIDxlZG9tPg0KICAgICAgICAg
+ICAgPGVkb212Pjg8L2Vkb212Pg0KICAgICAgICAgICAgPGVkb212ZD5CZWVjaCwgc3VnYXIgbWFw
+bGUsIGJhc3N3b29kLCByZWQgb2FrLCB3aGl0ZSBvYWssIGJsYWNrIG9hazwvZWRvbXZkPg0KICAg
+ICAgICAgICAgPGVkb212ZHM+Ik9yaWdpbmFsIFZlZ2V0YXRpb24gQ292ZXIgb2YgV2lzY29uc2lu
+IiBtYXAgYnkgUm9iZXJ0IFcuIEZpbmxleSwgMTk3Ni48L2Vkb212ZHM+DQogICAgICAgICAgPC9l
+ZG9tPg0KICAgICAgICAgIDxlZG9tPg0KICAgICAgICAgICAgPGVkb212Pjk8L2Vkb212Pg0KICAg
+ICAgICAgICAgPGVkb212ZD5TdWdhciBtYXBsZSwgYmFzc3dvb2QsIHJlZCBvYWssIHdoaXRlIG9h
+aywgYmxhY2sgb2FrPC9lZG9tdmQ+DQogICAgICAgICAgICA8ZWRvbXZkcz4iT3JpZ2luYWwgVmVn
+ZXRhdGlvbiBDb3ZlciBvZiBXaXNjb25zaW4iIG1hcCBieSBSb2JlcnQgVy4gRmlubGV5LCAxOTc2
+LjwvZWRvbXZkcz4NCiAgICAgICAgICA8L2Vkb20+DQogICAgICAgICAgPGVkb20+DQogICAgICAg
+ICAgICA8ZWRvbXY+MTA8L2Vkb212Pg0KICAgICAgICAgICAgPGVkb212ZD5PYWsgLS0gd2hpdGUg
+b2FrLCBibGFjayBvYWssIGJ1ciBvYWs8L2Vkb212ZD4NCiAgICAgICAgICAgIDxlZG9tdmRzPiJP
+cmlnaW5hbCBWZWdldGF0aW9uIENvdmVyIG9mIFdpc2NvbnNpbiIgbWFwIGJ5IFJvYmVydCBXLiBG
+aW5sZXksIDE5NzYuPC9lZG9tdmRzPg0KICAgICAgICAgIDwvZWRvbT4NCiAgICAgICAgICA8ZWRv
+bT4NCiAgICAgICAgICAgIDxlZG9tdj4xMTwvZWRvbXY+DQogICAgICAgICAgICA8ZWRvbXZkPk9h
+ayBvcGVuaW5ncyAtLSBidXIgb2FrLCB3aGl0ZSBvYWssIGJsYWNrIG9hazwvZWRvbXZkPg0KICAg
+ICAgICAgICAgPGVkb212ZHM+Ik9yaWdpbmFsIFZlZ2V0YXRpb24gQ292ZXIgb2YgV2lzY29uc2lu
+IiBtYXAgYnkgUm9iZXJ0IFcuIEZpbmxleSwgMTk3Ni48L2Vkb212ZHM+DQogICAgICAgICAgPC9l
+ZG9tPg0KICAgICAgICAgIDxlZG9tPg0KICAgICAgICAgICAgPGVkb212PjEyPC9lZG9tdj4NCiAg
+ICAgICAgICAgIDxlZG9tdmQ+UHJhaXJpZTwvZWRvbXZkPg0KICAgICAgICAgICAgPGVkb212ZHM+
+Ik9yaWdpbmFsIFZlZ2V0YXRpb24gQ292ZXIgb2YgV2lzY29uc2luIiBtYXAgYnkgUm9iZXJ0IFcu
+IEZpbmxleSwgMTk3Ni48L2Vkb212ZHM+DQogICAgICAgICAgPC9lZG9tPg0KICAgICAgICAgIDxl
+ZG9tPg0KICAgICAgICAgICAgPGVkb212PjEzPC9lZG9tdj4NCiAgICAgICAgICAgIDxlZG9tdmQ+
+QnJ1c2g8L2Vkb212ZD4NCiAgICAgICAgICAgIDxlZG9tdmRzPiJPcmlnaW5hbCBWZWdldGF0aW9u
+IENvdmVyIG9mIFdpc2NvbnNpbiIgbWFwIGJ5IFJvYmVydCBXLiBGaW5sZXksIDE5NzYuPC9lZG9t
+dmRzPg0KICAgICAgICAgIDwvZWRvbT4NCiAgICAgICAgICA8ZWRvbT4NCiAgICAgICAgICAgIDxl
+ZG9tdj4xNDwvZWRvbXY+DQogICAgICAgICAgICA8ZWRvbXZkPlN3YW1wIGNvbmlmZXJzIC0tIHdo
+aXRlIGNlZGFyLCBibGFjayBzcHJ1Y2UsIHRhbWFyYWNrLCBoZW1sb2NrPC9lZG9tdmQ+DQogICAg
+ICAgICAgICA8ZWRvbXZkcz4iT3JpZ2luYWwgVmVnZXRhdGlvbiBDb3ZlciBvZiBXaXNjb25zaW4i
+IG1hcCBieSBSb2JlcnQgVy4gRmlubGV5LCAxOTc2LjwvZWRvbXZkcz4NCiAgICAgICAgICA8L2Vk
+b20+DQogICAgICAgICAgPGVkb20+DQogICAgICAgICAgICA8ZWRvbXY+MTU8L2Vkb212Pg0KICAg
+ICAgICAgICAgPGVkb212ZD5Mb3dsYW5kIGhhcmR3b29kcyAtLSB3aWxsb3csIHNvZnQgbWFwbGUs
+IGJveCBlbGRlciwgYXNoLCBlbG0sIGNvdHRvbndvb2QsIHJpdmVyIGJpcmNoPC9lZG9tdmQ+DQog
+ICAgICAgICAgICA8ZWRvbXZkcz4iT3JpZ2luYWwgVmVnZXRhdGlvbiBDb3ZlciBvZiBXaXNjb25z
+aW4iIG1hcCBieSBSb2JlcnQgVy4gRmlubGV5LCAxOTc2LjwvZWRvbXZkcz4NCiAgICAgICAgICA8
+L2Vkb20+DQogICAgICAgICAgPGVkb20+DQogICAgICAgICAgICA8ZWRvbXY+MTY8L2Vkb212Pg0K
+ICAgICAgICAgICAgPGVkb212ZD5NYXJzaCBhbmQgc2VkZ2UgbWVhZG93LCB3ZXQgcHJhaXJpZSwg
+bG93bGFuZCBzaHJ1YnM8L2Vkb212ZD4NCiAgICAgICAgICAgIDxlZG9tdmRzPiJPcmlnaW5hbCBW
+ZWdldGF0aW9uIENvdmVyIG9mIFdpc2NvbnNpbiIgbWFwIGJ5IFJvYmVydCBXLiBGaW5sZXksIDE5
+NzYuPC9lZG9tdmRzPg0KICAgICAgICAgIDwvZWRvbT4NCiAgICAgICAgICA8ZWRvbT4NCiAgICAg
+ICAgICAgIDxlZG9tdj45OTwvZWRvbXY+DQogICAgICAgICAgICA8ZWRvbXZkPkFyZWEgd2l0aCB2
+ZWdldGF0aW9uIGNvdmVyIHR5cGUgbm90IGludGVycHJldGVkIG9uIHRoZSBzb3VyY2UgbWFwPC9l
+ZG9tdmQ+DQogICAgICAgICAgICA8ZWRvbXZkcz4iT3JpZ2luYWwgVmVnZXRhdGlvbiBDb3ZlciBv
+ZiBXaXNjb25zaW4iIG1hcCBieSBSb2JlcnQgVy4gRmlubGV5LCAxOTc2LjwvZWRvbXZkcz4NCiAg
+ICAgICAgICA8L2Vkb20+DQogICAgICAgICAgPGVkb20+DQogICAgICAgICAgICA8ZWRvbXY+MDwv
+ZWRvbXY+DQogICAgICAgICAgICA8ZWRvbXZkPkh5ZHJvZ3JhcGhpYyBhcmVhIGZyb20gdGhlIFVT
+R1MgMToyNTAsMDAwLXNjYWxlIExhbmQgVXNlIGFuZCBMYW5kIENvdmVyIGRhdGEgbGF5ZXIgPC9l
+ZG9tdmQ+DQogICAgICAgICAgICA8ZWRvbXZkcz5VUyBHZW9sb2dpY2FsIFN1cnZleTwvZWRvbXZk
+cz4NCiAgICAgICAgICA8L2Vkb20+DQogICAgICAgIDwvYXR0cmRvbXY+DQogICAgICAgIDxhdHBy
+ZWNpcyBTeW5jPSJUUlVFIj4yPC9hdHByZWNpcz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRS
+VUUiPjA8L2F0dHNjYWxlPg0KICAgICAgPC9hdHRyPg0KICAgICAgPGF0dHI+DQogICAgICAgIDxh
+dHRybGFibCBTeW5jPSJUUlVFIj5MVUNfTEVWRUwyPC9hdHRybGFibD4NCiAgICAgICAgPGF0dGFs
+aWFzIFN5bmM9IlRSVUUiPkxVQ19MRVZFTDI8L2F0dGFsaWFzPg0KICAgICAgICA8YXR0cnR5cGUg
+U3luYz0iVFJVRSI+U21hbGxJbnRlZ2VyPC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdpZHRoIFN5
+bmM9IlRSVUUiPjI8L2F0dHdpZHRoPg0KICAgICAgICA8YXR0cmRlZnM+VVMgR2VvbG9naWNhbCBT
+dXJ2ZXk8L2F0dHJkZWZzPg0KICAgICAgICA8YXR0cmRvbXY+DQogICAgICAgICAgPGVkb20+DQog
+ICAgICAgICAgICA8ZWRvbXY+NTE8L2Vkb212Pg0KICAgICAgICAgICAgPGVkb212ZD5TdHJlYW1z
+IGFuZCBjYW5hbHM8L2Vkb212ZD4NCiAgICAgICAgICAgIDxlZG9tdmRzPlVTIEdlb2xvZ2ljYWwg
+U3VydmV5PC9lZG9tdmRzPg0KICAgICAgICAgIDwvZWRvbT4NCiAgICAgICAgICA8ZWRvbT4NCiAg
+ICAgICAgICAgIDxlZG9tdj41MjwvZWRvbXY+DQogICAgICAgICAgICA8ZWRvbXZkPkxha2VzPC9l
+ZG9tdmQ+DQogICAgICAgICAgICA8ZWRvbXZkcz5VUyBHZW9sb2dpY2FsIFN1cnZleTwvZWRvbXZk
+cz4NCiAgICAgICAgICA8L2Vkb20+DQogICAgICAgICAgPGVkb20+DQogICAgICAgICAgICA8ZWRv
+bXY+NTM8L2Vkb212Pg0KICAgICAgICAgICAgPGVkb212ZD5SZXNlcnZvaXJzPC9lZG9tdmQ+DQog
+ICAgICAgICAgICA8ZWRvbXZkcz5VUyBHZW9sb2dpY2FsIFN1cnZleTwvZWRvbXZkcz4NCiAgICAg
+ICAgICA8L2Vkb20+DQogICAgICAgICAgPGVkb20+DQogICAgICAgICAgICA8ZWRvbXY+MDwvZWRv
+bXY+DQogICAgICAgICAgICA8ZWRvbXZkPk5vdCBhIGh5ZHJvZ3JhcGhpYyBhcmVhIGV4dHJhY3Rl
+ZCBmcm9tIHRoZSBVU0dTIDE6MjUwLDAwMC1zY2FsZSBMYW5kIFVzZSBhbmQgTGFuZCBDb3ZlciBk
+YXRhYmFzZTwvZWRvbXZkPg0KICAgICAgICAgICAgPGVkb212ZHM+V2lzY29uc2luIEROUjwvZWRv
+bXZkcz4NCiAgICAgICAgICA8L2Vkb20+DQogICAgICAgIDwvYXR0cmRvbXY+DQogICAgICAgIDxh
+dHRyZGVmPlRoaXMgaXRlbSBjb250YWlucyB0aGUgMi1kaWdpdCBMZXZlbCAyIExhbmQgVXNlIGFu
+ZCBMYW5kIENvdmVyIChMVUxDKSBjbGFzc2lmaWNhdGlvbiBjb2RlIGlkZW50aWZ5aW5nIGh5ZHJv
+Z3JhcGhpYyBhcmVhcyBleHRyYWN0ZWQgYnkgdGhlIFdpc2NvbnNpbiBETlIgZnJvbSB0aGUgTFVM
+QyBjb3ZlcmFnZS4gIEluY2x1c2lvbiBvZiB0aGVzZSBjb2RlcyBpbiB0aGUgT3JpZ2luYWwgVmVn
+ZXRhdGlvbiBDb3ZlciBkYXRhIGxheWVyIGVuYWJsZXMgdXNlcnMgdG8gc2VsZWN0IHdhdGVyIGJv
+ZGllcyBmcm9tIHRoaXMgbGF5ZXIgYnkgTFVMQyBjbGFzcyBhcyBhcHByb3ByaWF0ZSBmb3IgYSBw
+YXJ0aWN1bGFyIGFwcGxpY2F0aW9uLjwvYXR0cmRlZj4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9
+IlRSVUUiPjI8L2F0cHJlY2lzPg0KICAgICAgICA8YXR0c2NhbGUgU3luYz0iVFJVRSI+MDwvYXR0
+c2NhbGU+DQogICAgICA8L2F0dHI+DQogICAgPC9kZXRhaWxlZD4NCiAgPC9lYWluZm8+DQogIDxC
+aW5hcnk+DQogICAgPFRodW1ibmFpbD4NCiAgICAgIDxEYXRhIEVzcmlQcm9wZXJ0eVR5cGU9IlBp
+Y3R1cmVYIj4vOWovNEFBUVNrWkpSZ0FCQVFFQUFRQUJBQUQvMndCREFBZ0dCZ2NHQlFnSEJ3Y0pD
+UWdLREJRTkRBc0xEQmtTRXc4VUhSb2ZIaDBhDQpIQndnSkM0bklDSXNJeHdjS0RjcExEQXhORFEw
+SHljNVBUZ3lQQzR6TkRMLzJ3QkRBUWtKQ1F3TERCZ05EUmd5SVJ3aE1qSXlNakl5DQpNakl5TWpJ
+eU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qTC93QUFS
+Q0FDRkFNZ0RBU0lBDQpBaEVCQXhFQi84UUFId0FBQVFVQkFRRUJBUUVBQUFBQUFBQUFBQUVDQXdR
+RkJnY0lDUW9MLzhRQXRSQUFBZ0VEQXdJRUF3VUZCQVFBDQpBQUY5QVFJREFBUVJCUkloTVVFR0Ux
+RmhCeUp4RkRLQmthRUlJMEt4d1JWUzBmQWtNMkp5Z2drS0ZoY1lHUm9sSmljb0tTbzBOVFkzDQpP
+RGs2UTBSRlJrZElTVXBUVkZWV1YxaFpXbU5rWldabmFHbHFjM1IxZG5kNGVYcURoSVdHaDRpSmlw
+S1RsSldXbDVpWm1xS2pwS1dtDQpwNmlwcXJLenRMVzJ0N2k1dXNMRHhNWEd4OGpKeXRMVDFOWFcx
+OWpaMnVIaTQrVGw1dWZvNmVyeDh2UDA5ZmIzK1BuNi84UUFId0VBDQpBd0VCQVFFQkFRRUJBUUFB
+QUFBQUFBRUNBd1FGQmdjSUNRb0wvOFFBdFJFQUFnRUNCQVFEQkFjRkJBUUFBUUozQUFFQ0F4RUVC
+U0V4DQpCaEpCVVFkaGNSTWlNb0VJRkVLUm9iSEJDU016VXZBVlluTFJDaFlrTk9FbDhSY1lHUm9t
+SnlncEtqVTJOemc1T2tORVJVWkhTRWxLDQpVMVJWVmxkWVdWcGpaR1ZtWjJocGFuTjBkWFozZUhs
+NmdvT0VoWWFIaUltS2twT1VsWmFYbUptYW9xT2twYWFucUttcXNyTzB0YmEzDQp1TG02d3NQRXhj
+Ykh5TW5LMHRQVTFkYlgyTm5hNHVQazVlYm42T25xOHZQMDlmYjMrUG42LzlvQURBTUJBQUlSQXhF
+QVB3RDMraWlpDQpnQW9vb29BS0tLS0FDaWlvSWIyMnVKNVlZWjBlU0k3WFZUbkI3ajZqdjZVQVQw
+VlJ2ZFhzYkNDYWFlWWJJZnY3QVcya25BQngwT2E1DQpLNzhaM2QrczhWaFpLbHMwWkl1Sm14aGM0
+SlBZZW5lazVKQWRySmR3UlRyQzhxckl3eUZQZi9PS2RETkhPaGVNbGx5VnpnamtIQjYxDQp3K21h
+WGRYbDBxYlpmTGpMWW5MajVWSkl5cEE5Y2tMakFydVlVTWNLSVNwSUhPMWRvejdEbkZDZDlRSDBV
+VVV3Q2lpaWdBb29vb0FLDQpLS0tBQ2lpaWdBb29vb0FLS0tLQUNpaWlnQW9vb29BS0tLS0FLOStk
+dW5YSnpqRVRuT2NkalhuY2V2V1FqVGRhQ1dXTm44dGdOeUVaDQo5QzNCOVR5VG5yWGZhM24rd2RS
+Mm5EZlpaY0gwTzAxNVBEYXpSVzYzRzRaZnJFU1czWU83cDZmTGpxZVJXTmFLbGE0MFhqZmF2ckVN
+DQpnamo4Nkxianl4Z0tpakdDUndEMjQ5dW1LaWdqa3YwVkUzT3lNaStXSWoweVRuQUdUaklQSCsx
+OWFmY2FyRE5IREJhWEZ4YitTZ2pMDQpTZE51QnV3QU9PUzNVa25HT000b3Q5VmtzTCtNeXhCWTVY
+RFBHdTRPRC9lNjV5Y1p3ZjY4NDJhV2lzTTBvZFd1TFhWcldTMW1NTUFoDQpTUHltVmRtTWJteU1x
+QUJrOGs1eUR6MXgxK242L0hkM0lna2pNZTlpc1VoT0JManFRTzNjZFQwK2xjSzNpdThOczVhSGFK
+V1hNd1JmDQp1bkpZQWdjSGtlNDU3ODFseGFpOE55dDRHeHNiTWV4ZURoZzJPNUhQZnVCajNGd2RT
+K290RDJlaXZPTFB4NXFzV0V1TGVDNVlINWg5DQp4c0FaUHQrbjlNOUJhZU90S3VDcXpDVzNaanR5
+VjNMbjA0NTcrbGRGMEk2ZWlvYlc3dDcyRVRXMHlTeG51cHpVMU1Bb29vb0FLS0tLDQpBQ2lpaWdB
+b29vb0FLS0tLQUNpaWlnQW9vb29BS2d2THBiTzFlZGhuYU9CbkdUMnFlc0h4TmFOY1d5eU1aUkRG
+OHgyU2JGSFlsOGM0DQo2Y2pvTTFNMjFHNkE1Qy84V1hHcVc4aU82eExnbG9XQlFiY3FBTTV5eHpu
+OE1uakZWcFlKL3dDeVROZHlSTkZPNE1aOHpKWE9UbkhjDQo4RWRPNUFITlJKQmFwY3lXOHU0U0l4
+WkdDNWJPTVlidHczSk9PZTJPeVNXRTFuZUJJeEVrY3lBRGFXS3lqSUJCeGs5Y0RBNHlPM0dlDQph
+VXJzb1M4dHJLeTh2N0c2eXpFbU5vMStkbU80WVpjY0RJSFluR2V0UzZmcGQ4c2x4cURSTUVnT0ZL
+a0hyZ0FoVGpJMi9UdDJ6VHRIDQpzRkU4czEzdEtRc25sSEl4NTJjQlQzNmNrRG9CN1ZyMjJ0VzFr
+RkVFWGxxQ0lwUk93SlRHU0ZHVHlPbzdkalVUbkpMbGpxQmo1ajArDQoxdmlpUW93WUxpY0ZtT09j
+cVJqY01oZTNmbmprNVV1SjVta2pFZms3dHBiWmdBWkFHUjJHQi9PdWoxR3hld2tGNUJMSTVqZDVm
+TGtBDQpZS3BKNFg1ZmJQMHhqM3lzSzRsdUpON1gwK1drSmJJQWJHTWUrR3hqbkJQMEZWQ1MzUU15
+R2VjM0xzWlpGY1kzTmtrNEE0elVwYjkyDQpXQkE2TnljREl5QUFNYzQ0N1ZJOEsyOTdjeHpUQU9G
+S3B0WEljNTZZR2V2UDZldE1jdjUyR1VINWVCdHhsY1k2anAwN2o4TVZ2ZTRpDQovcDJxRzBNVXF2
+SkF5c0Zra2lJQlpTZVQwNTc0NTY5dUsycmZ4VnE3WEN4SmRvekttVDV5THRZWUJCK1VBNTZqcmdj
+SFBXdWJqV0xEDQp4c0Y4eDFZS2QvOEFFU1IweDgzVEhyeVBRNWtGb0kyZ0V0c0F2SVpjTXBrNUhK
+empBNUk0SEJIMHFiMjJBOUc4UGVKRHJNa3FTUnhwDQp0VU1yS2NaejJ3ZS9GZEJYamd0U0VGOURL
+eGllYjVvc2xBUURoYzhiY2tuUDU4VjZWNFd1WnJ2UUlKYmlReVNiblVzU0NUaGlPMzVWDQpwQ1Z4
+R3pSUlJWZ0ZGRkZBQlJSUlFBVVVVVUFGRkZGQUJSUlJRQVZtNjVkU1d1bHVZbVJaWkNJa1oraWxq
+ak9NSE9QVEhOYVZZUGl3DQpCdE1oak12bGlXWVI1eG5rcTJNZStlbkk1eHpVeWRrMkI1K0xWSWJ5
+T0tLNGlTTkp2TCswK1dDT0RnSGR6eGpxZW5yMTR2NmplVzZTDQpSMlQzQkxLZDRsZ2tPRkpZTVFO
+M1E0SFhPYzU1NU9INnJEYXdwWkxZYkpOaS93Q2tvU2NzVngxSUpBUEJ5QjA1NjFuQ0w3SnNsbmlK
+DQpqa0kvZEZXUU4xM0U5eUIwNmo5VFhJbXBXa3lpdVo1OGVUR3pTUkJ2TU1VWWNlYjF5M0k5L1Rv
+S3NRV2FUL2VqL2U1ZWN1alpSZU9tDQpQWGNNRDhCem5tYSttc1pvNHBMUDVDMFpMeEdXU1RQUFRK
+R0QwSi8vQUZVdWt2WjIrbnRQWnRIL0FHaERQdmpZay9NdTNrQUhBNHovDQpBSjRxbTN5M1NzQjBr
+OStKSlhtU2Rwb284cGNSdE1xN1VVWkpDalBWaHlldUJ4MXFqR2JHK2VON1NHS0lrTkpHZ0pLczVB
+K1RBQUdlDQpNSDJKOWFidVcxdG83Mi9zM2tOeHVqa0t2R3l2dTR5QU9PQU9vQTU2bXJzWTFTSFpO
+YlNxMWpieGtmTEdpa3JqQjI1NEJVQU5qQXowDQpQVEZjdGxGYURNRFVOQkszRGhkUmdNakhMUlNN
+RU9NWko0UHpEa2dldWVLbHU5RWxqc0k1SGRmSVRZZytRdEprbkpBRzBBa0ZzY2RoDQpqazlPaDFO
+bzNTUHlaSVl4TGJqbWVOVkFCeTNQeTV5ZlFkTWRLejV0UWcvNFI0M2R6Wkk3UTNMUjIzbDRISVBH
+L0JQUExIdUQxNzFjDQphazJrRmtZaldjZHE4RTZSdkdsd3JFSTYrWmxjTG5uQVBxQU9lbkpJTlJU
+UXlmWnBtSG1TR0hIbXlzQXlzY2tZQnhuUHpkajJPUjZXDQpOTTFXOHRsZ3RYTFc2cmtlWXFobndT
+MmNCdU1aeU1kT0Q2WXFuY3lwZWhua3V3SWZtL2RiQUNDb0dNNDY1NkE1T1BYclc2NXIyWWg4DQp5
+VHllSFVTT0ZCRUpESWN2aG0ycnl4QlBIQUhBN25pdXY4RjZqcUY5Sk5CSUxlT3pzNHhFRWpVNUw1
+NjVKSlBRNTlTZS9XdU5RQy91DQpQTlpJa0NaZHRpTXdBd05xN1FEakhUSEk1K3RkWDRTMHk1VzZ0
+dFRnZmJZdkFVWmR3NmduMDY4anY2OStwMHB1enNKblZYdXFXdGpiDQpUVFN5cCs1TzFsM0FIY1FD
+QitURDg2cjZMNTF6RTJwVCthalhJREpBN0VpSmZ4OWZvT01WemV0RWVJZkZObnA4WlAyV01zclNx
+QVFlDQpBV3dlNTRLK3g5ZVJYYnh4ckZFa2FEQ29Bb0hzSzJXb2gxRkZGTUFvb29vQUtLS0tBQ2lp
+aWdBb29vb0FLeC9FT2tmMnRhUnFTekNGDQppL2xBNDNuR092WWpKeFd4UlNhdXJBY1paWEdnUldi
+ZVlxVzhnVkxlZE1sZm1YSkFJOVFRZVQrUEZaWGkyN2xTYUtDSmxrZ2hoVi9sDQpRRUl4ejdkTWJh
+N3JWTkxnMVMxTVVtRWZJS1NoUVNwRmNIcjJrM2VqTkQ4dm54elpWbmpUQUpHNytIcm5IT09lbmJG
+Y24xZmtuelh1DQpWY3k3ZXllYS9qUmxRWmNiNDQzVXg4SEhKejArWDM3ODFhdjJ0Ylc1Y0piR0dX
+VlNySWltTW9Nc0YrWHVTbyttVGoycWlzYWZhcEZNDQpnTzVzSE9ja2pBM0hJNXlSazV4K3BBZnNF
+NlJSeDI1ODB5RmZOYVE3aGdkd0JnRGtIam5JTk42dlVDeTE1UEk4ZHFaMGtRb29qbFp5DQpNcGpC
+VmM0R2NxT1RqbFJnNXJRdDlWbmdDZ1NDYU10SkpLSkd5eWtnS0IxRzduSjI1NXo5S3pwTG13WFZ0
+MTE1c2NHeFkxU01sbXlGDQpDa25QWGtkTWNqbjY1NzI3eHhQNUxTQkl3Q1cyRmR3ejhweWZvUFhu
+cDBxZVJTMGFDNWV1OWVTK1h6TG0zdHBDc2lTU0VLZHhYY01vDQpwYlBHTURqSFR2em1YV0x1R1RV
+SXhZck5id2c1UG1Fc1hiajVzRTV3TWZUajhLejQ3Wjd3ckRFbTZSaHZrTFNaSGZ0anFDV3oxL0RG
+DQphVmxJYloxR1pEc2FORWVQZ0JpZU54UGNET092QzlDTW1tMUdPd0dGTmJaZ2psSkIzYmgyTGQ4
+WndjNSt2dGpQU21GREFxNUtoTnU4DQpEUExBOGNmanp6NmNWdGFsUGFpOG5EU1NOREt3U2FZeERj
+Y3N6NTI1Qjdqbmo2Y2M1Y1l0R1NNZk1XYmh3ZUZBeDZqcjA5TzlheGsyDQp0Ukd0cHRySFBiQ1U3
+M1NVTGJJN25oM1p0cC9KU1QxR0FBYTZEWHIrMG1OcHBOb1M5bEcrMmNJckRjUjBBYkdHN2srK0s1
+NjBpanU0DQo0VGJJWUhqd3ZtaVZzTXc1eUc3RWtFNDlBZWU5T3M4MitveDdMaDVrWjJEc2h4dUI0
+WWdrOHNBUUFBT3ZmSFhQbXNtdW96cmZCbWwvDQpaYlNhOWtWeExPeFZkNHdRZ0o2ZE9DY25wWFVW
+RGF3L1o3T0dIak1hS3ZIc0ttcnFTc3JFaFJSUlRBS0tLS0FDaWlpZ0Fvb29vQUtLDQpLS0FDaWlp
+Z0FxbHFtbVE2dFptM21MTGhnNk9wNVZoMFA4eCtOWGFLQVBOdFkwdlVZZFFrbmRCQzZPc2h1Z1Rp
+UThENU9NYnVNNFBQDQoxNHhVZ3pETEdMWnBtbmVCcG84WEdRakhQVWc4Y2NjOG5PQ09hOVB1TGVL
+N3Q1TGVkQThVaWxXVStsZVV6UlQ2YzEwa056S1ZkcElsDQpBNExiU0Z6ZzhFWVBHT2V2UVZ6enAy
+VmtOTW11TFJMSHpiZG9uaW1oVVNiZ2NsWkNCdEdSOHUwbm9UZ2pCNzhsdWtTUi9aN2k2bXQvDQp0
+Vnc1ampSblhmaGNFazlld1VIbnB0TkxZUzNNbW9GcnhEY3Jjdmp5OTVqM3VSOHBHT2h6My9IclZ5
+NXpwZXJwSmFoYlR5NE40RW9IDQpJVUVGY1lKenh5YzR5U2NuSU5ZdHY0WHVNZmV6b1k3anlGRUlq
+blZaVUpPMHg1SzdNKzV6a0hHY2VsWmd0SHRkUGl1UmMrV3NnVmt5DQpjUzd1Y2phQ0IwQjVZakl4
+OUE2MVdXVFZSQ2tnQkREYUpRVlhJeHpnOWVSZ2JnZXZjam12cjBrazE3aHQwVGc4b01iY3RuSlVq
+bmJ3DQpNZjhBMTZjRlo4cUFiZGl3TThLZVkxd3lBTEpJTWpjZS9MQnVSMC9BWUZhbWk2ZGIzZHls
+b3FOSkQ1Myt1MmtaUlJrako1WEl4eGdIDQozN0hJaWpCanQ5OGtrQzdUc1lLQ3hPN2dMNi9wem1y
+dW02aWROM1N0bVVuYTZEa0ZUNW5JUHB3R3o2Zy9nS21ueTJpOVFMbXJXcldkDQo3RWlSeVNxWDh0
+SVhseXJkZW1lbTNDZ0hyMXJVMHpUcm00bWhpUkZ0VWdiYXJLaEJSc0F2d1J0WW5aL0NjQTg4OStl
+YWE5bDFZUVBkDQpQTEtXR3dSN2dHYmNUdTRJK3VmVEhXdlJyWU5IcUVaTzRxNk1QdWtZUHlrWjlU
+Z1kvQ3NsOFVZUzZnYUVVU3d3cEVtZGlLRlhKendLDQpmUlJYb0VoUlJSUUFVVVVVQUZGRkZBQlJS
+UlFBVVVVVUFGRkZGQUJSUlJRQVY1ejRnbFNDN3VvRnQ0blZkeTdmS1hlTWtrOC9lUERxDQpSeUJn
+VjZOWEJlTUxtMmkxZEJGYWdTaGRzc3lrS2N0akdmb09jL1QwNHpxeHVob3RlSG9MbTQweXdrak9J
+cmJ6ZmtrSlhlNTZISFBBDQpKSXlQL3dCZExVZEZTTmJXYVdXSzN2UWp0Y3lCajkzUExMMXkzemQr
+VHoxTlhiUlpMYzJDMkM3MzhqeTVXRXFpRU1lU1Y0K1k3ajI0DQo2Q3NyVmRPMUY1N243UkNza2tq
+ZWJFc01vYnl5M0dPUUIyeDYrbWNrMTUwYjg5NzJLNkdhdHMwdHhIZkdVUktqQUV4eUxuT01CZ1NT
+DQpjN3UzYkhVR29vVnVFdU13aEhrakJWWkNvVmdSMUJCNUpJNlo5OGM5THBnRWwxSTl4YlMrV3pC
+cnN0Z3RHZ1B6WkNqNWM4azg5T2dxDQpPYVgreGJacmNXKzVKVkErYy93a2NNTTlPNTdaNTZZNTZi
+MzBFWnp6VFJTeCtaSXhWVjhwbURENW8vN3VPK094NzlqMHJWc0lMYTdlDQpTQ0Z2czh5UTVXVU1C
+a2pBeURqa2s3dVBiSUlPVFdHWFh6Q2lNUDM1MlA4QUpnRk1nNUdNOVNPM29SakhGWEJCOWkxTUxK
+R1l5OFczDQpjMGZ6QTdSbkNzZVRuanA5QU1ZRnlXbm1JMEl0V1pwbHVXalczbUVZek5IaGxiNWwv
+d0JZQnorUFhnWnpYYStIb3JnU1hVazdtU05TDQpzVUxISU9BT2VDVDFPT2VwNzF4bHJkbHBJV3Q5
+NFMzUlpKRmNoV2RnckVuSGZPUmtaenppdTM4TFRKTm9FSlRibFdkVzJnam5jYzlmDQpyU3BSWFBl
+dzJiTkZGRmRSSVVVVVVBRkZGRkFCUlJSUUFVVVVVQUZGRkZBQlJSUlFBVVVVVUFGY1g0a3NqRjRp
+UzY4MUVTZUhJRFl4DQp2akl4a0VFSE81UVB4UGF1MHFucU9sMm1xd0NLN2lEaFRsV0hCWDZIL09h
+bWNlYU5nT01qMW1XWXhrM0Z4dVNGNUl5a09TZlFFTndSDQprZmU5aGdpbzN2a3ZybGxaOWlPdzNN
+V1UrYjArWUFqQTZkY1l5T3BxN3ErZ1QyclJSUlNYRnpGSWhqODU0VE5KR09PUGw0eHdPbzdIDQo4
+YWR4YVRYc0U2dFlYd2xqUW0zbWUza0FBM1lFZTBEa2JUam5KSFBOY1RwY3IyS3VReWFkQkVWdExl
+ZTZ5N3FUSEo5eHd4eHViYWR2DQpQVEhvS29YVmdrOFVoZzNNckhmSEZ2eUFTY0VZR01jWTVJT2R5
+MXJSVzE1SEc4QnNyOVFRdnlwQ3dWU0czSEJBK2JzQm5wVkhXTFc2DQpOM0cwVmdoSkRiakZHQ0ZB
+N2RPRHdQcVByVGlwM0FvNlRwa3IzSTMyKzRzM2wvdlhLL054emtkeHo2OWVsVTU5eHZaWnBka2J4
+T3haDQpOMzNpRDBHT21Qd0hGZExwU1N4R1UzOW1KM1lEWWlwc1ZjSEpKTzMyQjR6bnNDYXlwckxV
+THVTU1dMVEhIbUg1RlJEbFJram9Ua2NBDQovd0RqdnJ6cEZ5Y25kQVZWdTJTNldlSGZNUG1hSTNJ
+QkF5V3ljYnNGdnFUK2xkNzRSMUtDNml1TGVKZktWVzN4UllBK1VnRWtZQTQzDQpFOWgvT3VCVFJ0
+VzhtV050UHYxS25jbUxRL2VIdjI0ejY5dnJYYmVEWXJ6N1JjeTMxcE5DNnd4eHhOSkNZOHJsc2ow
+UDhQb2VsYVJqDQphVnhIWFVVVVZzSUtLS0tBQ2lpaWdBb29vb0FLS0tLQUNpaWlnQW9vb29BS0tL
+S0FDaWlpZ0Fvb29vQUtLS0tBQ2lpaWdBb29vb0FLDQpLS0tBQ2lpaWdBb29vb0FLS0tLQVAvL1o8
+L0RhdGE+DQogICAgPC9UaHVtYm5haWw+DQogIDwvQmluYXJ5Pg0KPC9tZXRhZGF0YT4=</Data>
+    </Enclosure>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpOrgName>Wisconsin DNR Enterprise Data Management Section</rpOrgName>
+    <rpPosName>GIS Data Specialist</rpPosName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum>(608) 264-8916</voiceNum>
+        <voiceNum tddtty="True">none</voiceNum>
+        <faxNum>(608) 266-0870</faxNum>
+      </cntPhone>
+      <cntAddress addressType="postal">
+        <delPoint>P.O. Box 7921</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53707-7921</postCode>
+        <country>US</country>
+        <eMailAdd>Sara.Brenner@dnr.state.wi.us</eMailAdd>
+      </cntAddress>
+      <cntHours>Normal business hours or as available</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="007" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Wisconsin DNR Enterprise Data Management Section</rpOrgName>
+        <rpPosName>GIS Data Specialist</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>(608) 264-8916</voiceNum>
+            <voiceNum tddtty="True">none</voiceNum>
+            <faxNum>(608) 266-0870</faxNum>
+          </cntPhone>
+          <cntAddress>
+            <eMailAdd>John.Laedlein@dnr.state.wi.us</eMailAdd>
+          </cntAddress>
+          <cntHours>Normal business hours or as available</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorOrdPrc>
+        <ordInstr>Refer to the DNR/EDM website for information about data access options: http://www.dnr.state.wi.us/maps/gis/geolibrary.html</ordInstr>
+      </distorOrdPrc>
+      <distorFormat>
+        <formatName>ESRI shapefile</formatName>
+        <fileDecmTech>Compressed file created using WinZip</fileDecmTech>
+        <formatVer>1.0</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <transSize Sync="TRUE">10.120</transSize>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/WI_OrigVeg_Cover_1990.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <onLineSrc>
+        <linkage>https://data-wi-dnr.opendata.arcgis.com/datasets/original-vegetation-polygons</linkage>
+        <protocol>WWW:LINK-1.0-http--link</protocol>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+        <orName>WIDNR Open Data</orName>
+      </onLineSrc>
+      <onLineSrc>
+        <linkage>https://dnrmaps.wi.gov/arcgis/rest/services/DW_Map_Dynamic/EN_Forest_Land_Cover_WTM_Ext/MapServer/1</linkage>
+        <protocol>ESRI:ArcGIS</protocol>
+        <orName>REST Services</orName>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatName Sync="TRUE">Shapefile</formatName>
+      <formatVer>1.0</formatVer>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+        <rpPosName>metadata technician</rpPosName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">(608) 262-1471</voiceNum>
+          </cntPhone>
+          <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+        </rpCntInfo>
+        <displayName>Arthur H. Robinson Map Library</displayName>
+        <role>
+          <RoleCd value="001" />
+        </role>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle>Original Vegetation Cover Wisconsin, 1800s</resTitle>
+      <date>
+        <pubDate time="unknown">2011-01-20T00:00:00</pubDate>
+        <createDate>1990-01-01T00:00:00</createDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" Sync="TRUE" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Wisconsin Department of Natural Resources</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">(608) 264-8914</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="">
+            <delPoint>101 S. Webster St.</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53707</postCode>
+            <country>US</country>
+            <eMailAdd>DNRGEOData@wisconsin.gov</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <displayName>Wisconsin Department of Natural Resources</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </citRespParty>
+      <citRespParty>
+        <rpOrgName>Wisconsin DNR Enterprise Data Management Section</rpOrgName>
+        <rpPosName>GIS Data Specialist</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">(608) 264-8916</voiceNum>
+            <faxNum>(608) 266-0870</faxNum>
+          </cntPhone>
+          <cntAddress addressType="postal">
+            <delPoint>P.O. Box 7921</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53707-7921</postCode>
+            <country>US</country>
+            <eMailAdd>John.Laedlein@dnr.state.wi.us</eMailAdd>
+          </cntAddress>
+          <cntHours>Normal business hours or as available</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Wisconsin DNR Enterprise Data Management Section</displayName>
+      </citRespParty>
+    </idCitation>
+    <idAbs>This is a polygon shapefile derived from a 1:500,000-scale map showing the original, pre-settlement vegetation cover in Wisconsin. The original vegetation cover data was digitized from a 1976 map created from land survey notes written in the mid-1800s when Wisconsin was first surveyed. Linework representing lakes and other hydrographic areas in other data sets were subsequently merged with the original vegetation cover data set to more closely match the source map.</idAbs>
+    <idPurp>This digital version of the original vegetation cover map can be used to identify regional changes in land cover since the time when the state was first surveyed. This data is not intended for landscape-scale analysis.</idPurp>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <idPoC>
+      <rpOrgName>Wisconsin DNR Enterprise Data Management Section</rpOrgName>
+      <rpPosName>GIS Data Specialist</rpPosName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">(608) 264-8916</voiceNum>
+          <faxNum>(608) 266-0870</faxNum>
+        </cntPhone>
+        <cntAddress addressType="postal">
+          <delPoint>P.O. Box 7921</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53707-7921</postCode>
+          <country>US</country>
+          <eMailAdd>John.Laedlein@dnr.state.wi.us</eMailAdd>
+        </cntAddress>
+        <cntHours>Normal business hours, or as available</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="007" />
+      </role>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="011" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Wisconsin DNR Enterprise Data Management Section</rpOrgName>
+        <rpPosName>GIS Data Specialist</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>(608) 264-8916</voiceNum>
+            <voiceNum tddtty="True">none</voiceNum>
+            <faxNum>(608) 266-0870</faxNum>
+          </cntPhone>
+          <cntAddress addressType="postal">
+            <delPoint>P.O. Box 7921</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53707-7921</postCode>
+            <country>US</country>
+            <eMailAdd>Sara.Brenner@dnr.state.wi.us</eMailAdd>
+          </cntAddress>
+          <cntHours>Normal business hours or as available</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Wisconsin DNR Enterprise Data Management Section</displayName>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <searchKeys>
+      <keyword>land cover</keyword>
+      <keyword>vegetation</keyword>
+      <keyword>Wisconsin</keyword>
+      <keyword>environment</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Refer to &lt;http://www.dnr.state.wi.us/org/legal/WebSiteLegalInformation.html&gt;</useLimit>
+      </LegConsts>
+    </resConst>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <exDesc>publication date</exDesc>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>1990-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <envirDesc Sync="TRUE">Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <spatRpType>
+      <SpatRepTypCd value="001" Sync="TRUE" />
+    </spatRpType>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-92.963754</westBL>
+          <eastBL Sync="TRUE">-86.707114</eastBL>
+          <northBL Sync="TRUE">47.083467</northBL>
+          <southBL Sync="TRUE">42.459887</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <idCredit>WDNR</idCredit>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Polygon</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Vegetation</keyword>
+    </themeKeys>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements. </suppInfo>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <tpCat>
+      <TopicCatCd value="007" />
+    </tpCat>
+  </dataIdInfo>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQTopConsis" dimension="">
+      <evalMethDesc>The source ArcInfo coverages had polygon topology with no dangling arcs. No errors were reported upon conversion to shapefiles.</evalMethDesc>
+    </report>
+    <report type="DQConcConsis" dimension="">
+      <measDesc>The source ArcInfo coverages had polygon topology with no dangling arcs. No errors were reported upon conversion to shapefiles.</measDesc>
+    </report>
+    <report type="DQCompOm" dimension="">
+      <measDesc>All 72 counties of Wisconsin are represented. Islands in Lake Michigan and Lake Superior belonging to Wisconsin counties are also represented.</measDesc>
+    </report>
+    <dataLineage>
+      <dataSource type="">
+        <srcScale>
+          <rfDenom>500000</rfDenom>
+        </srcScale>
+        <srcCitatn>
+          <resTitle>Original Vegetation Cover of Wisconsin; Compiled from U.S. General Land Office Notes</resTitle>
+          <date>
+            <pubDate>1976-01-01</pubDate>
+          </date>
+          <citRespParty>
+            <rpOrgName>Robert W. Finley</rpOrgName>
+            <role>
+              <RoleCd value="006" />
+            </role>
+          </citRespParty>
+          <presForm>
+            <PresFormCd value="006" />
+          </presForm>
+          <presForm>
+            <fgdcGeoform>map</fgdcGeoform>
+          </presForm>
+        </srcCitatn>
+      </dataSource>
+      <prcStep>
+        <stepDesc>Changed name of file from 'orig_veg_cover.shp' to 'WI_OrigVeg_Cover_1990.shp'.</stepDesc>
+      </prcStep>
+      <prcStep>
+        <stepDesc>Digitizing was carried out by students at the UW-Madison under the direction of Professor Steve Ventura of the UW-Madison Institute for Environmental Studies and Earth Science. Because the digitized data set did not identify hydrographic features, this information was added by the DNR Geographic Services Section from the 1:250,000-scale Land Use and Land Cover data layer. Portions of the Wisconsin state boundary were also added to the digitized data set using the 1:100,000-scale state boundary coverage. GEO Services projected the data from the Lambert Conformal Conic Projection to WTM and carried out limited quality control review and edits to assure topological integrity of the data.</stepDesc>
+        <stepDateTm>1990-01-01T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>Wisconsin DNR</rpOrgName>
+          <rpPosName>GIS Data Specialist</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>(608) 264-8914</voiceNum>
+              <faxNum>(608) 266-0870</faxNum>
+            </cntPhone>
+            <cntAddress addressType="postal">
+              <delPoint>P.O. Box 7921</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53707-7921</postCode>
+              <country>US</country>
+              <eMailAdd>John.Laedlein@dnr.state.wi.us</eMailAdd>
+            </cntAddress>
+            <cntHours>Normal business hours or as available</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="009" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="3071" Sync="FALSE" />
+        <idCodeSpace>EPSG</idCodeSpace>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="WI_OrigVeg_Cover_1990">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">11134</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <mdDateSt Sync="TRUE">20180515</mdDateSt>
+  <mdFileID>9321C137-6FEA-423E-8F56-9506F2EA19C6</mdFileID>
+  <mdContact>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        <country>US</country>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum tddtty="">(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+    </rpCntInfo>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+    <role>
+      <RoleCd value="001" />
+    </role>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+  </mdContact>
+</metadata>

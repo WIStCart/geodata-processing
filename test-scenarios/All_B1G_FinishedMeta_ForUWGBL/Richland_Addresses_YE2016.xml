@@ -1,0 +1,884 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20170309</CreaDate>
+    <CreaTime>15224300</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20090505" Time="160502" Name="" export="">CalculateField "Database Servers\NEWKIRK-PC_SQLEXPRESS.gds\RichlandCo_GIS (VERSION:dbo.DEFAULT)\RichlandCo_GIS.DBO.Spillman\RichlandCo_GIS.DBO.Address_Points" prefix "" VB # "Database Servers\NEWKIRK-PC_SQLEXPRESS.gds\RichlandCo_GIS (VERSION:dbo.DEFAULT)\RichlandCo_GIS.DBO.Spillman\RichlandCo_GIS.DBO.Address_Points"</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20090505" Time="160906" Name="" export="">CalculateField "Database Servers\NEWKIRK-PC_SQLEXPRESS.gds\RichlandCo_GIS (VERSION:dbo.DEFAULT)\RichlandCo_GIS.DBO.Spillman\RichlandCo_GIS.DBO.Address_Points" locatn [newstrex] VB # "Database Servers\NEWKIRK-PC_SQLEXPRESS.gds\RichlandCo_GIS (VERSION:dbo.DEFAULT)\RichlandCo_GIS.DBO.Spillman\RichlandCo_GIS.DBO.Address_Points"</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20090505" Time="161006" Name="" export="">CalculateField "Database Servers\NEWKIRK-PC_SQLEXPRESS.gds\RichlandCo_GIS (VERSION:dbo.DEFAULT)\RichlandCo_GIS.DBO.Spillman\RichlandCo_GIS.DBO.Address_Points" Suffix [locatn] VB # "Database Servers\NEWKIRK-PC_SQLEXPRESS.gds\RichlandCo_GIS (VERSION:dbo.DEFAULT)\RichlandCo_GIS.DBO.Spillman\RichlandCo_GIS.DBO.Address_Points"</Process>
+        <Process Name="Calculate Field (7)" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20090611" Time="100742" export="">CalculateField "Database Servers\NEWKIRK-PC_SQLEXPRESS.gds\RichlandCo_GIS (VERSION:dbo.DEFAULT)\RichlandCo_GIS.DBO.Spillman\RichlandCo_GIS.DBO.Address_Points" siteid [numb] VB # "Database Servers\NEWKIRK-PC_SQLEXPRESS.gds\RichlandCo_GIS (VERSION:dbo.DEFAULT)\RichlandCo_GIS.DBO.Spillman\RichlandCo_GIS.DBO.Address_Points"</Process>
+        <Process Name="Calculate Field (2)" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20090611" Time="100756" export="">CalculateField "Database Servers\NEWKIRK-PC_SQLEXPRESS.gds\RichlandCo_GIS (VERSION:dbo.DEFAULT)\RichlandCo_GIS.DBO.Spillman\RichlandCo_GIS.DBO.Address_Points" Suffix [locatn] VB # "Database Servers\NEWKIRK-PC_SQLEXPRESS.gds\RichlandCo_GIS (VERSION:dbo.DEFAULT)\RichlandCo_GIS.DBO.Spillman\RichlandCo_GIS.DBO.Address_Points"</Process>
+        <Process Name="Calculate Field (3)" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20090611" Time="100810" export="">CalculateField "Database Servers\NEWKIRK-PC_SQLEXPRESS.gds\RichlandCo_GIS (VERSION:dbo.DEFAULT)\RichlandCo_GIS.DBO.Spillman\RichlandCo_GIS.DBO.Address_Points" newstrex [locatn] VB # "Database Servers\NEWKIRK-PC_SQLEXPRESS.gds\RichlandCo_GIS (VERSION:dbo.DEFAULT)\RichlandCo_GIS.DBO.Spillman\RichlandCo_GIS.DBO.Address_Points"</Process>
+        <Process Name="Calculate Field (4)" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20090611" Time="100826" export="">CalculateField "Database Servers\NEWKIRK-PC_SQLEXPRESS.gds\RichlandCo_GIS (VERSION:dbo.DEFAULT)\RichlandCo_GIS.DBO.Spillman\RichlandCo_GIS.DBO.Address_Points" alistr trim(ucase([prefix]+ [numb]+ " " + [street])) VB # "Database Servers\NEWKIRK-PC_SQLEXPRESS.gds\RichlandCo_GIS (VERSION:dbo.DEFAULT)\RichlandCo_GIS.DBO.Spillman\RichlandCo_GIS.DBO.Address_Points"</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20111229" Time="100854" Name="" export="">FeatureClassToFeatureClass L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points "Database Servers\RC-SHERIFF-SRV_RCLANDINFO.gds\RichlandCo_GIS (VERSION:dbo.DEFAULT)\RichlandCo_GIS.DBO.Spillman" Address_New # "prefix "prefix" true true false 5 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,prefix,-1,-1;street "street" true true false 30 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,street,-1,-1;numb "numb" true true false 7 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,numb,-1,-1;citycd "citycd" true true false 3 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,citycd,-1,-1;X "X" true true false 8 Double 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,X,-1,-1;Y "Y" true true false 8 Double 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,Y,-1,-1;locatn "locatn" true true false 20 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,locatn,-1,-1;Suffix "Suffix" true true false 8 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,Suffix,-1,-1;begnumb "begnumb" true true false 7 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,begnumb,-1,-1;endnumb "endnumb" true true false 7 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,endnumb,-1,-1;hyperlink "hyperlink" true true false 255 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,hyperlink,-1,-1;at_id "at_id" true true false 4 Long 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,at_id,-1,-1;siteid "siteid" true true false 7 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,siteid,-1,-1;newstrex "newstrex" true true false 10 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,newstrex,-1,-1;alistr "alistr" true true false 35 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,alistr,-1,-1;newcitst "newcitst" true true false 30 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,newcitst,-1,-1;pictnumb "pictnumb" true true false 255 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,pictnumb,-1,-1;pictype "pictype" true true false 1 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,pictype,-1,-1;type "type" true true false 3 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,type,-1,-1;struc_drive "struc_drive" true true false 2 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,struc_drive,-1,-1;twn "twn" true true false 32 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,twn,-1,-1;PostOffice "PostOffice" true true false 32 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,PostOffice,-1,-1;BASENAME "basename" true true false 19 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,BASENAME,-1,-1;PARNO "PARNO" true true false 16 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,PARNO,-1,-1;alias1 "alias1" true true false 30 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,alias1,-1,-1;alias2 "alias2" true true false 30 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,alias2,-1,-1;alias3 "alias3" true true false 30 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,alias3,-1,-1;Crit_Infr "Crit_Infr" true true false 5 Text 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,Crit_Infr,-1,-1;GlobalID "GlobalID" false false true 38 GlobalID 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,GlobalID,-1,-1;Date_Updated "Date_Updated" true true false 8 Date 0 0 ,First,#,L:\Address_Restore\RichlandCo_AddressPoints.gdb\Address_Points,Date_Updated,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20130826" Time="143024" Name="" export="">CopyFeatures "Database Servers\RC-SHERIFF-SRV_RCLANDINFO.gds\RichlandCo_GIS (VERSION:dbo.DEFAULT)\RichlandCo_GIS.DBO.Spillman\RichlandCo_GIS.DBO.Address_Points" C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp # 0 0 0</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.0\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20130828" Time="153950" Name="" export="">FeatureClassToFeatureClass C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp "Database Servers\RC-SHERIFF-SRV_RCLANDINFO.gds\RichlandCo_GIS (VERSION:dbo.DEFAULT)\RichlandCo_GIS.DBO.Spillman" Address_Points2 # "prefix "prefix" true true false 5 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,prefix,-1,-1;street "street" true true false 30 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,street,-1,-1;numb "numb" true true false 7 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,numb,-1,-1;citycd "citycd" true true false 3 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,citycd,-1,-1;X "X" true true false 19 Double 8 18 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,X,-1,-1;Y "Y" true true false 19 Double 8 18 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,Y,-1,-1;locatn "locatn" true true false 20 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,locatn,-1,-1;Suffix "Suffix" true true false 8 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,Suffix,-1,-1;begnumb "begnumb" true true false 7 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,begnumb,-1,-1;endnumb "endnumb" true true false 7 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,endnumb,-1,-1;hyperlink "hyperlink" true true false 254 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,hyperlink,-1,-1;at_id "at_id" true true false 10 Double 0 10 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,at_id,-1,-1;siteid "siteid" true true false 7 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,siteid,-1,-1;newstrex "newstrex" true true false 10 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,newstrex,-1,-1;alistr "alistr" true true false 35 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,alistr,-1,-1;newcitst "newcitst" true true false 30 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,newcitst,-1,-1;pictnumb "pictnumb" true true false 254 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,pictnumb,-1,-1;pictype "pictype" true true false 1 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,pictype,-1,-1;type "type" true true false 3 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,type,-1,-1;struc_driv "struc_driv" true true false 2 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,struc_driv,-1,-1;twn "twn" true true false 32 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,twn,-1,-1;PostOffice "PostOffice" true true false 32 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,PostOffice,-1,-1;BASENAME "BASENAME" true true false 19 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,BASENAME,-1,-1;PARNO "PARNO" true true false 16 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,PARNO,-1,-1;alias1 "alias1" true true false 30 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,alias1,-1,-1;alias2 "alias2" true true false 30 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,alias2,-1,-1;alias3 "alias3" true true false 30 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,alias3,-1,-1;Crit_Infr "Crit_Infr" true true false 5 Text 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,Crit_Infr,-1,-1;Date_Updat "Date_Updat" true true false 8 Date 0 0 ,First,#,C:\GISDATA\Archive\08-26-13\RichlandCo_GIS_DBO_Address_Points.shp,Date_Updat,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170131" Time="162434" Name="" export="">CalculateField Address_Points struc_driv "D" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20170309" Time="151820" Name="" export="">FeatureClassToFeatureClass "Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points" L:\StatewideParcelData\V3SubmissionShapeFiles RICHLAND_ADDRESS_POINTS.shp # "prefix "prefix" true true false 5 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,prefix,-1,-1;street "street" true true false 30 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,street,-1,-1;numb "numb" true true false 7 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,numb,-1,-1;citycd "citycd" true true false 3 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,citycd,-1,-1;X "X" true true false 8 Double 8 19 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,X,-1,-1;Y "Y" true true false 8 Double 8 19 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,Y,-1,-1;locatn "locatn" true true false 20 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,locatn,-1,-1;Suffix "Suffix" true true false 8 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,Suffix,-1,-1;begnumb "begnumb" true true false 7 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,begnumb,-1,-1;endnumb "endnumb" true true false 7 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,endnumb,-1,-1;hyperlink "hyperlink" true true false 254 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,hyperlink,-1,-1;at_id "at_id" true true false 8 Double 0 10 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,at_id,-1,-1;siteid "siteid" true true false 7 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,siteid,-1,-1;newstrex "newstrex" true true false 10 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,newstrex,-1,-1;alistr "alistr" true true false 35 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,alistr,-1,-1;newcitst "newcitst" true true false 30 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,newcitst,-1,-1;pictnumb "pictnumb" true true false 254 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,pictnumb,-1,-1;pictype "pictype" true true false 1 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,pictype,-1,-1;type "type" true true false 3 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,type,-1,-1;struc_driv "struc_driv" true true false 2 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,struc_driv,-1,-1;twn "twn" true true false 32 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,twn,-1,-1;PostOffice "PostOffice" true true false 32 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,PostOffice,-1,-1;BASENAME "BASENAME" true true false 19 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,BASENAME,-1,-1;PARNO "PARNO" true true false 16 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,PARNO,-1,-1;alias1 "alias1" true true false 30 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,alias1,-1,-1;alias2 "alias2" true true false 30 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,alias2,-1,-1;alias3 "alias3" true true false 30 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,alias3,-1,-1;Crit_Infr "Crit_Infr" true true false 5 Text 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,Crit_Infr,-1,-1;Date_Updat "Date_Updat" true true false 36 Date 0 0 ,First,#,Database Servers\RICHLAND-GIS_SQLEXPRESS.gds\RICHLAND_GIS_SQLEXPRESS (VERSION:dbo.DEFAULT)\RICHLAND_GIS_SQLEXPRESS.DBO.Spillman\RICHLAND_GIS_SQLEXPRESS.DBO.Address_Points,Date_Updat,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\Project" Date="20170309" Time="152246" Name="" export="">Project L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS.shp L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp PROJCS['NAD_1983_Wisconsin_TM',GEOGCS['GCS_North_American_1983',DATUM['D_North_American_1983',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Transverse_Mercator'],PARAMETER['False_Easting',520000.0],PARAMETER['False_Northing',-4480000.0],PARAMETER['Central_Meridian',-90.0],PARAMETER['Scale_Factor',0.9996],PARAMETER['Latitude_Of_Origin',0.0],UNIT['Meter',1.0]] # GEOGCS['GCS_North_American_1983',DATUM['D_North_American_1983',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]] NO_PRESERVE_SHAPE #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20170309" Time="152734" Name="" export="">FeatureClassToFeatureClass L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp L:\StatewideParcelData\RICHLAND_OTHER_LAYERS.gdb RICHLAND_ADDRESS # "prefix "prefix" true true false 5 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,prefix,-1,-1;street "street" true true false 30 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,street,-1,-1;numb "numb" true true false 7 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,numb,-1,-1;citycd "citycd" true true false 3 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,citycd,-1,-1;X "X" true true false 19 Double 8 18 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,X,-1,-1;Y "Y" true true false 19 Double 8 18 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,Y,-1,-1;locatn "locatn" true true false 20 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,locatn,-1,-1;Suffix "Suffix" true true false 8 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,Suffix,-1,-1;begnumb "begnumb" true true false 7 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,begnumb,-1,-1;endnumb "endnumb" true true false 7 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,endnumb,-1,-1;hyperlink "hyperlink" true true false 254 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,hyperlink,-1,-1;at_id "at_id" true true false 10 Long 0 10 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,at_id,-1,-1;siteid "siteid" true true false 7 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,siteid,-1,-1;newstrex "newstrex" true true false 10 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,newstrex,-1,-1;alistr "alistr" true true false 35 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,alistr,-1,-1;newcitst "newcitst" true true false 30 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,newcitst,-1,-1;pictnumb "pictnumb" true true false 254 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,pictnumb,-1,-1;pictype "pictype" true true false 1 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,pictype,-1,-1;type "type" true true false 3 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,type,-1,-1;struc_driv "struc_driv" true true false 2 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,struc_driv,-1,-1;twn "twn" true true false 32 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,twn,-1,-1;PostOffice "PostOffice" true true false 32 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,PostOffice,-1,-1;BASENAME "BASENAME" true true false 19 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,BASENAME,-1,-1;PARNO "PARNO" true true false 16 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,PARNO,-1,-1;alias1 "alias1" true true false 30 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,alias1,-1,-1;alias2 "alias2" true true false 30 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,alias2,-1,-1;alias3 "alias3" true true false 30 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,alias3,-1,-1;Crit_Infr "Crit_Infr" true true false 5 Text 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,Crit_Infr,-1,-1;Date_Updat "Date_Updat" true true false 8 Date 0 0 ,First,#,L:\StatewideParcelData\V3SubmissionShapeFiles\RICHLAND_ADDRESS_POINTS_Proj.shp,Date_Updat,-1,-1" #</Process>
+      </lineage>
+      <itemProps>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2017_ALL_DATA_OPEN\Richland\Richland_Addresses_YE2016.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemName Sync="TRUE">Richland_Addresses_YE2016</itemName>
+        <itemSize Sync="TRUE">0.000</itemSize>
+        <nativeExtBox>
+          <westBL Sync="TRUE">465764.601700</westBL>
+          <eastBL Sync="TRUE">504655.857300</eastBL>
+          <southBL Sync="TRUE">300054.971000</southBL>
+          <northBL Sync="TRUE">342443.871200</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_Wisconsin_TM&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983&amp;quot;,DATUM[&amp;quot;D_North_American_1983&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,3070]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;10000&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;3070&lt;/WKID&gt;&lt;LatestWKID&gt;3070&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_Wisconsin_TM</projcsn>
+      </coordRef>
+    </DataProperties>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncDate>20170807</SyncDate>
+    <SyncTime>13233400</SyncTime>
+    <ModDate>20170807</ModDate>
+    <ModTime>13233400</ModTime>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKzNa1200GOzkvFnKXV0lqjQxGQK752lsdBnAz6kVp15z8WMpFoM1rc6umqJe5tItPwVYg
+ZdpA2EIVQSMkd+2SADq08U2HkwS3EN9aJKk8hNzaugiWE/MznGEGORnGRVSf4h+ErfQRrba7aNYs
+zIro+Szqu4oF67sdsZ5HqKwp7/xv4l8HeRpulQWMl7Yxhb67vBv+clWYLGOG2bXHIA3Y5xivMPFe
+p2/grxHpSx6Gi+ILRoJL3Nys0N1GN0akKw3GVlPLhQVPY5zQB7ZB8QvCc1gL1tbtbeEyyQj7UTC2
+9AC67XAORkdu9XrnxTodpFpUsupQiPVZFismU7hMzDIxjt056cj1rwOex1PT9Y1y4kdnjttdeRdG
+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
+UAFFFFAH/9k=</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum tddtty="">608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdDateSt Sync="TRUE">20170807</mdDateSt>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorFormat>
+        <formatName>ESRI Geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Richland_Addresses_YE2016.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+      <formatVer>10.3</formatVer>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Richland County Land Information Office</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-647-2447</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>181 Seminary Street, Rm 309</delPoint>
+            <city>Richland Center</city>
+            <adminArea>WI</adminArea>
+            <postCode>53581</postCode>
+            <country>US</country>
+            <eMailAdd>mike.bindl@co.richland.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Richland County Land Information Office</displayName>
+        <editorSave>False</editorSave>
+        <displayName>Richland County Land Information Office</displayName>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Addresses Richland County, WI YE2016</resTitle>
+      <date>
+        <pubDate>2017-03-30T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+        <PresFormCd value="005" Sync="TRUE" />
+      </presForm>
+      <resEdDate>20161231</resEdDate>
+      <citRespParty>
+        <rpOrgName>Richland County Land Information Office</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-647-2447</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>181 Seminary Street, Rm 309</delPoint>
+            <city>Richland Center</city>
+            <adminArea>WI</adminArea>
+            <postCode>53581</postCode>
+            <country>US</country>
+            <eMailAdd>mike.bindl@co.richland.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Richland County Land Information Office</displayName>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Mike Bindl</rpIndName>
+        <rpOrgName>Richland County Land Information Office</rpOrgName>
+        <rpPosName>Zoning Administrator</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-647-2447</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>181 Seminary Street</delPoint>
+            <delPoint>Rm 309</delPoint>
+            <city>Richland Center</city>
+            <adminArea>WI</adminArea>
+            <postCode>53581</postCode>
+            <country>US</country>
+            <eMailAdd>mike.bindl@co.richland.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Mike Bindl</displayName>
+      </citRespParty>
+    </idCitation>
+    <idAbs>This point data layer represents addresses for Richland County, Wisconsin at year-end 2016. It is a feature class within the geodatabase 'Richland_Addresses_YE2016.gdb'.</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.</idPurp>
+    <idCredit>Richland County Land Information Office</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <idPoC>
+      <rpOrgName>Richland County Land Information Office</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">608-647-2447</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="physical">
+          <delPoint>181 Seminary Street, Rm 309</delPoint>
+          <city>Richland Center</city>
+          <adminArea>WI</adminArea>
+          <postCode>53581</postCode>
+          <country>US</country>
+          <eMailAdd>mike.bindl@co.richland.wi.us</eMailAdd>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Richland County Land Information Office</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-647-2447</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>181 Seminary Street, Rm 309</delPoint>
+            <city>Richland Center</city>
+            <adminArea>WI</adminArea>
+            <postCode>53581</postCode>
+            <country>US</country>
+            <eMailAdd>mike.bindl@co.richland.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Richland County Land Information Office</displayName>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNIS</resTitle>
+      </thesaName>
+      <keyword>Richland County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Point</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Street Addresses</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Street addresses</keyword>
+      <keyword>Wisconsin</keyword>
+      <keyword>Point</keyword>
+      <keyword>Richland County</keyword>
+      <keyword>location</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-90.671322</westBL>
+          <eastBL>-90.189604</eastBL>
+          <southBL>43.173094</southBL>
+          <northBL>43.55475</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2017-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-90.671449</westBL>
+          <eastBL Sync="TRUE">-90.188783</eastBL>
+          <northBL Sync="TRUE">43.554791</northBL>
+          <southBL Sync="TRUE">43.171311</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <suppInfo>This data was submitted to the UW geospatial archive in 2017. Content may be considered current as of December 31, 2016. It was published to the UW geospatial archive as part of the Wisconsin Department of Administration Land Information Program annual collection of public data for the year 2017.</suppInfo>
+    <tpCat>
+      <TopicCatCd value="013" />
+    </tpCat>
+  </dataIdInfo>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform to UW-Madison's data distribution plan. </stepDesc>
+        <stepDateTm>2017-08-03T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+          <rpPosName>Data Technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="009" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Richland_Addresses_YE2016">
+        <geoObjTyp>
+          <GeoObjTypCd value="004" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">9114</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <eainfo>
+    <detailed Name="Richland_Addresses_YE2016">
+      <enttyp>
+        <enttypl Sync="TRUE">Richland_Addresses_YE2016</enttypl>
+        <enttypd>Addresses Richland County, WI YE2016</enttypd>
+        <enttypds>Richland County Land Information Office</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">9114</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PostOffice</attrlabl>
+        <attalias Sync="TRUE">PostOffice</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">32</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>twn</attrlabl>
+        <attalias Sync="TRUE">twn</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">32</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>struc_driv</attrlabl>
+        <attalias Sync="TRUE">struc_driv</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>newcitst</attrlabl>
+        <attalias Sync="TRUE">newcitst</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Date_Updat</attrlabl>
+        <attalias Sync="TRUE">Date_Updat</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Crit_Infr</attrlabl>
+        <attalias Sync="TRUE">Crit_Infr</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>alias3</attrlabl>
+        <attalias Sync="TRUE">alias3</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>alias2</attrlabl>
+        <attalias Sync="TRUE">alias2</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>PARNO</attrlabl>
+        <attalias Sync="TRUE">PARNO</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">16</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>X</attrlabl>
+        <attalias Sync="TRUE">X</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>at_id</attrlabl>
+        <attalias Sync="TRUE">at_id</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>begnumb</attrlabl>
+        <attalias Sync="TRUE">begnumb</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">7</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Suffix</attrlabl>
+        <attalias Sync="TRUE">Suffix</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>locatn</attrlabl>
+        <attalias Sync="TRUE">locatn</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>type</attrlabl>
+        <attalias Sync="TRUE">type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">3</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>pictnumb</attrlabl>
+        <attalias Sync="TRUE">pictnumb</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">254</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>alistr</attrlabl>
+        <attalias Sync="TRUE">alistr</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">35</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>alias1</attrlabl>
+        <attalias Sync="TRUE">alias1</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>siteid</attrlabl>
+        <attalias Sync="TRUE">siteid</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">7</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>hyperlink</attrlabl>
+        <attalias Sync="TRUE">hyperlink</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">254</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>endnumb</attrlabl>
+        <attalias Sync="TRUE">endnumb</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">7</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>numb</attrlabl>
+        <attalias Sync="TRUE">numb</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">7</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>street</attrlabl>
+        <attalias Sync="TRUE">street</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>prefix</attrlabl>
+        <attalias Sync="TRUE">prefix</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>pictype</attrlabl>
+        <attalias Sync="TRUE">pictype</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">1</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>BASENAME</attrlabl>
+        <attalias Sync="TRUE">BASENAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>citycd</attrlabl>
+        <attalias Sync="TRUE">citycd</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">3</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Y</attrlabl>
+        <attalias Sync="TRUE">Y</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>newstrex</attrlabl>
+        <attalias Sync="TRUE">newstrex</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="3071" Sync="FALSE" />
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+        <idVersion Sync="FALSE">9.1.1</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Richland_Addresses_YE2016">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="1" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">9114</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdFileID>7654F90F-2B9F-471F-A9A5-EB962157378C</mdFileID>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>310 Science Hall</delPoint>
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+    </maintCont>
+  </mdMaint>
+</metadata>

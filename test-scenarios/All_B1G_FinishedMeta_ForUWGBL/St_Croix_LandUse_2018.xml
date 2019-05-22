@@ -1,0 +1,714 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <SyncOnce>FALSE</SyncOnce>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <DataProperties>
+      <lineage>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20171227" Time="112254" Name="" export="">Append 'Future Land Use' StCroixLGM.DBO.FutureLandUse NO_TEST "LANDUSECODE "Land Use Code" true true false 10 Text 0 0 ,First,#,Future Land Use,MCDCODE,-1,-1;LANDUSEDESC "Land Use Description" true true false 100 Text 0 0 ,First,#,Future Land Use,LUFMLP,-1,-1;LASTUPDATE "Last Update Date" true true false 8 Date 0 0 ,First,#;LASTEDITOR "Last Editor" true true false 50 Text 0 0 ,First,#;SHAPE.STArea() "SHAPE.STArea()" false false true 0 Double 0 0 ,First,#;SHAPE.STLength() "SHAPE.STLength()" false false true 0 Double 0 0 ,First,#" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20171227" Time="112631" Name="" export="">Append 'Future Land Use' StCroixLGM.DBO.FutureLandUse NO_TEST "LANDUSECODE "Land Use Code" true true false 10 Text 0 0 ,First,#,Future Land Use,MCDCODE,-1,-1;LANDUSEDESC "Land Use Description" true true false 100 Text 0 0 ,First,#,Future Land Use,LUFMLP,-1,-1;LASTUPDATE "Last Update Date" true true false 8 Date 0 0 ,First,#;LASTEDITOR "Last Editor" true true false 50 Text 0 0 ,First,#;SHAPE.STArea() "SHAPE.STArea()" false false true 0 Double 0 0 ,First,#;SHAPE.STLength() "SHAPE.STLength()" false false true 0 Double 0 0 ,First,#" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171229" Time="112653" Name="" export="">CalculateField StCroixLGM.DBO.FutureLandUse LANDUSECODE [LANDUSEDESC] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171229" Time="112900" Name="" export="">CalculateField StCroixLGM.DBO.FutureLandUse LANDUSEDESC "Wetland" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171229" Time="112932" Name="" export="">CalculateField StCroixLGM.DBO.FutureLandUse LANDUSEDESC "Water" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171229" Time="113014" Name="" export="">CalculateField StCroixLGM.DBO.FutureLandUse LANDUSEDESC "Utilities" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171229" Time="113143" Name="" export="">CalculateField StCroixLGM.DBO.FutureLandUse LANDUSEDESC "Residential" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171229" Time="113501" Name="" export="">CalculateField StCroixLGM.DBO.FutureLandUse LANDUSEDESC "Agriculture" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171229" Time="113604" Name="" export="">CalculateField StCroixLGM.DBO.FutureLandUse LANDUSEDESC "Commercial" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171229" Time="113650" Name="" export="">CalculateField StCroixLGM.DBO.FutureLandUse LANDUSEDESC "Future Open Space" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171229" Time="113730" Name="" export="">CalculateField StCroixLGM.DBO.FutureLandUse LANDUSEDESC "Industrial" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171229" Time="113753" Name="" export="">CalculateField StCroixLGM.DBO.FutureLandUse LANDUSEDESC "Future Industrial" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171229" Time="113929" Name="" export="">CalculateField StCroixLGM.DBO.FutureLandUse LANDUSEDESC "Institutional" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171229" Time="114213" Name="" export="">CalculateField StCroixLGM.DBO.FutureLandUse LANDUSEDESC "Mixed - Rural Agriculture" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171229" Time="114352" Name="" export="">CalculateField StCroixLGM.DBO.FutureLandUse LANDUSEDESC "Mixed - Rural Residential" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171229" Time="114537" Name="" export="">CalculateField StCroixLGM.DBO.FutureLandUse LANDUSEDESC "Recreation Open Space" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\AssignDomainToField" Date="20180116" Time="155853" Name="" export="">AssignDomainToField "Database Connections\LGM.sde\StCroixLGM.DBO.LandUsePlanning\StCroixLGM.DBO.FutureLandUse" LANDUSEDESC FLUDesc #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20180712" Time="123534" Name="" export="">CopyFeatures R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\St_Croix\Originals\ST_CROIX_OTHER.gdb\ST_CROIX_LANDUSE_2018 R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\St_Croix\St_Croix_LANDUSE_2018.gdb\ST_CROIX_LANDUSE_2018 # 0 0 0</Process>
+      </lineage>
+      <itemProps>
+        <itemName Sync="TRUE">ST_CROIX_LANDUSE_2018</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">499798.215289</westBL>
+          <eastBL Sync="TRUE">672008.491275</eastBL>
+          <southBL Sync="TRUE">299886.322879</southBL>
+          <northBL Sync="TRUE">428199.499979</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2018_ALL_DATA_OPEN_V4\St_Croix\St_Croix_LANDUSE_2018.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_WISCRS_St_Croix_County_Feet</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_WISCRS_St_Croix_County_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,542999.997],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.034],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-92.63333333333334],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,1.0000381803],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,44.03611111111111],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;ESRI&amp;quot;,103459]]&lt;/WKT&gt;&lt;XOrigin&gt;-17906300&lt;/XOrigin&gt;&lt;YOrigin&gt;-48820400&lt;/YOrigin&gt;&lt;XYScale&gt;3048.00609601219&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.00328083333333333&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;103459&lt;/WKID&gt;&lt;LatestWKID&gt;103459&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20180801</SyncDate>
+    <SyncTime>10252700</SyncTime>
+    <ModDate>20180801</ModDate>
+    <ModTime>10252700</ModTime>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+    <CreaDate>20180326</CreaDate>
+    <CreaTime>16270800</CreaTime>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+  </Esri>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum tddtty="">608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorFormat>
+        <formatName>ESRI Geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/St_Croix_LandUse_2018.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <onLineSrc>
+        <linkage>http://sccgis-scccdd.opendata.arcgis.com/</linkage>
+        <protocol>WWW:LINK-1.0-http--link</protocol>
+        <orName>St. Croix County Open Data Portal</orName>
+        <orFunct>
+          <OnFunctCd value="002" />
+        </orFunct>
+        <orDesc>Access to St. Croix GIS data</orDesc>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.3</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>St. Croix County Land Use, Planning and Development</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>1101 Carmichael Road</delPoint>
+            <city>Hudson</city>
+            <adminArea>WI</adminArea>
+            <postCode>54016</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">(715) 386-4678 </voiceNum>
+            <faxNum>(715) 386-4686</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>St. Croix County Planning and Land Information</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Land Use St. Croix County, WI 2018</resTitle>
+      <date>
+        <pubDate>2018-08-01T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>St. Croix County Land Use, Planning and Development</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>1101 Carmichael Road</delPoint>
+            <city>Hudson</city>
+            <adminArea>WI</adminArea>
+            <postCode>54016</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">(715) 386-4678 </voiceNum>
+            <faxNum>(715) 386-4686</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Brett Budrow</rpIndName>
+        <rpOrgName>St. Croix County Community Development Department</rpOrgName>
+        <rpPosName>RLS, Planning &amp; Land Information Administrator</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">(715) 386-4678</voiceNum>
+            <faxNum>715-386-4686</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>1101 Carmichael Road, Ste 1200</delPoint>
+            <city>Hudson</city>
+            <adminArea>WI</adminArea>
+            <postCode>54016</postCode>
+            <country>US</country>
+            <eMailAdd>brett.budrow@sccwi.gov</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Brett Budrow</displayName>
+      </citRespParty>
+      <resEdDate>20180101</resEdDate>
+    </idCitation>
+    <idAbs>This data layer represents land use for St. Croix County, Wisconsin in 2018. It is a feature class within the geodatabase, "St_Croix_LandUse_2018.gdb". [The proposed land use classification identified during community planning activities and sometimes defined at the parcel level, but typically proposed land use units are larger than the parcel.]</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. [Future Land Use Layer for planning purposes.]</idPurp>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>St. Croix County Land Use, Planning and Development</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>1101 Carmichael Road</delPoint>
+            <city>Hudson</city>
+            <adminArea>WI</adminArea>
+            <postCode>54016</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">(715) 386-4678 </voiceNum>
+            <faxNum>(715) 386-4686</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>St. Croix County Planning and Land Information</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>St. Croix County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Polygon</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Land Use, Planning</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Land Use</keyword>
+      <keyword>Classification</keyword>
+      <keyword>St. Croix County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-92.800854</westBL>
+          <eastBL>-92.133078</eastBL>
+          <southBL>44.857746</southBL>
+          <northBL>45.210151</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2018-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements. 
+
+For complete metadata documentation, please visit http://sccgis-scccdd.opendata.arcgis.com/</suppInfo>
+    <idCredit>St. Croix County Land Use, Planning and Development</idCredit>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idPoC>
+      <rpOrgName>St. Croix County Land Use, Planning and Development</rpOrgName>
+      <rpCntInfo>
+        <cntAddress addressType="physical">
+          <delPoint>1101 Carmichael Road</delPoint>
+          <city>Hudson</city>
+          <adminArea>WI</adminArea>
+          <postCode>54016</postCode>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">(715) 386-4678 </voiceNum>
+          <faxNum>(715) 386-4686</faxNum>
+        </cntPhone>
+      </rpCntInfo>
+      <displayName>St. Croix County Planning and Land Information</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-92.800948</westBL>
+          <eastBL Sync="TRUE">-92.132813</eastBL>
+          <northBL Sync="TRUE">45.210565</northBL>
+          <southBL Sync="TRUE">44.857573</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="015" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>310 Science Hall</delPoint>
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform with UW-Madison's data distribution plan.</stepDesc>
+        <stepDateTm>2018-08-01T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+          <rpPosName>Metadata Technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum tddtty="">608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="009" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="7634" Sync="FALSE" />
+        <idCodeSpace Sync="FALSE">EPSG</idCodeSpace>
+        <idVersion Sync="FALSE">9.4.1</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="ST_CROIX_LANDUSE_2018">
+      <enttyp>
+        <enttypl Sync="TRUE">ST_CROIX_LANDUSE_2018</enttypl>
+        <enttypd>Land Use St. Croix County, WI 2018</enttypd>
+        <enttypds>St. Croix County Land Use, Planning and Development</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">15083</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl>last_edited_date</attrlabl>
+        <attalias Sync="TRUE">last_edited_date</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>created_date</attrlabl>
+        <attalias Sync="TRUE">created_date</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LANDUSECODE</attrlabl>
+        <attalias Sync="TRUE">Land Use Code</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LANDUSEDESC</attrlabl>
+        <attalias Sync="TRUE">Land Use Description</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>last_edited_user</attrlabl>
+        <attalias Sync="TRUE">last_edited_user</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">SHAPE</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LASTUPDATE</attrlabl>
+        <attalias Sync="TRUE">Last Update Date</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LASTEDITOR</attrlabl>
+        <attalias Sync="TRUE">Last Editor</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>created_user</attrlabl>
+        <attalias Sync="TRUE">created_user</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SHAPE_Length</attrlabl>
+        <attalias Sync="TRUE">SHAPE_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Length of feature in internal units.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SHAPE_Area</attrlabl>
+        <attalias Sync="TRUE">SHAPE_Area</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Area of feature in internal units squared.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="ST_CROIX_LANDUSE_2018">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">15083</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="ST_CROIX_LANDUSE_2018">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="4" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">15083</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20180801</mdDateSt>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAqteahaaeiPdzrEHbau7uas1xvjC1e81C3RmDQRxhvL4ySSc/yHSplLlVwOgOv6WrMpuhuXqNjf
+4VF/wk+i7Q329ACSOVbsAT29x+dcHvltrmW4aEPF5RRN0bAYCcAEEDliB79utUpbOWK2t5PKcQmT
+O0rkMxUcYJzzt/CslVb3HY9PTXdNckLc5I5+43+FWft0Bxy/JIH7tuv5exrzlXuWnWAvsuYdsjRr
+jBAwu3cPvDJHc/pXRX13MsjTQsu+GMyzLtYBdvJ4z14x75/Gsp4iaaSSHY35tWs4A5lkdAgDMTE/
+AJIHb1BpRqdoY4pPMbZLjY3lthsjI7Vz9xJPd6dNIqM0kp4jAKsQNuFODgde+cVJrVr9nWyNm0v2
+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
+KKKKACiiigAooooA/9k=</Data>
+    </Thumbnail>
+  </Binary>
+  <mdFileID>BF3CEDFB-F452-47BE-A464-20ACFDFE5ECA</mdFileID>
+</metadata>

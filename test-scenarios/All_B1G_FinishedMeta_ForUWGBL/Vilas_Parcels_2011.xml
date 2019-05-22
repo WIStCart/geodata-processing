@@ -1,0 +1,587 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150513</CreaDate>
+    <CreaTime>15022400</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\DefineProjection" Date="20110324" Time="102112" Name="" export="">DefineProjection parcels PROJCS['NAD_1983_Lambert_Conformal_Conic',GEOGCS['GCS_North_American_1983',DATUM['D_North_American_1983',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Lambert_Conformal_Conic'],PARAMETER['False_Easting',440999.999888],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',-89.48888888888889],PARAMETER['Standard_Parallel_1',45.93055555555555],PARAMETER['Standard_Parallel_2',46.225],PARAMETER['Latitude_Of_Origin',45.625],UNIT['Foot_US',0.3048006096012192]]</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20110324" Time="102551" Name="" export="">CalculateField parcels GISPIN ""221-"+ [DXF_TEXT]" VB #</Process>
+        <Process Name="Feature Class to Feature Class parcels" ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20110324" Time="150454" export="">FeatureClassToFeatureClass K:\Vildata\PVWEB\Shapefiles\parcels.shp "Database Connections\GIS@sde@db_user2.sde" parcels # "DXF_TEXT "DXF_TEXT" true true false 40 Text 0 0 ,First,#,K:\Vildata\PVWEB\DXFS\Final.gdb\parcels,DXF_TEXT,-1,-1;GISPIN "GISPIN" true true false 15 Text 0 0 ,First,#,K:\Vildata\PVWEB\DXFS\Final.gdb\parcels,GISPIN,-1,-1;Shape_Length "Shape_Length" false true true 8 Double 0 0 ,First,#,K:\Vildata\PVWEB\DXFS\Final.gdb\parcels,Shape_Length,-1,-1;Shape_Area "Shape_Area" false true true 8 Double 0 0 ,First,#,K:\Vildata\PVWEB\DXFS\Final.gdb\parcels,Shape_Area,-1,-1" #</Process>
+        <Process Name="Analyze parcels" ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\Analyze" Date="20110324" Time="150455" export="">Analyze "Database Connections\GIS@sde@db_user2.sde\sde.GIS.parcels" BUSINESS;FEATURE;RASTER;ADDS;DELETES</Process>
+        <Process Name="Register As Versioned parcels" ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\RegisterAsVersioned" Date="20110324" Time="150456" export="">RegisterAsVersioned "Database Connections\GIS@sde@db_user2.sde\sde.GIS.parcels" NO_EDITS_TO_BASE</Process>
+        <Process Name="Viewer Privileges parcels" ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\ChangePrivileges" Date="20110324" Time="150456" export="">ChangePrivileges 'Database Connections\GIS@sde@db_user2.sde\sde.GIS.parcels' GIS_VIEWER GRANT #</Process>
+        <Process Name="Editor Privileges parcels" ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\ChangePrivileges" Date="20110324" Time="150456" export="">ChangePrivileges 'Database Connections\GIS@sde@db_user2.sde\sde.GIS.parcels' GIS_EDITOR GRANT GRANT</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20110505" Time="091011" Name="" export="">CopyFeatures "Database Connections\bagibs@mrslate.sde\sde.GIS.parcels" C:\Edittile\UWMad\VCData_552011\sde_GIS_parcels.shp # 0 0 0</Process>
+      </lineage>
+      <itemProps>
+        <itemName Sync="TRUE">Vilas_Parcels_2011</itemName>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\data\ARCHIVE_PROJECT\Operation_Unrestrict\Vilas_INPROCESS_JM\Vilas_Parcels_2011.shp</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <nativeExtBox>
+          <westBL Sync="TRUE">298946.906303</westBL>
+          <eastBL Sync="TRUE">583366.624864</eastBL>
+          <southBL Sync="TRUE">84645.883195</southBL>
+          <northBL Sync="TRUE">246444.221671</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <itemSize Sync="TRUE">28.614</itemSize>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn>
+        <projcsn Sync="TRUE">NAD_1983_Lambert_Conformal_Conic</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_Lambert_Conformal_Conic&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983&amp;quot;,DATUM[&amp;quot;D_North_American_1983&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Lambert_Conformal_Conic&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,440999.999888],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-89.48888888888889],PARAMETER[&amp;quot;Standard_Parallel_1&amp;quot;,45.93055555555555],PARAMETER[&amp;quot;Standard_Parallel_2&amp;quot;,46.225],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,45.625],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192]]&lt;/WKT&gt;&lt;XOrigin&gt;-118843300&lt;/XOrigin&gt;&lt;YOrigin&gt;-98931400&lt;/YOrigin&gt;&lt;XYScale&gt;37755175.051289186&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.0032808333333333331&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20180227</SyncDate>
+    <SyncTime>14364900</SyncTime>
+    <ModDate>20180227</ModDate>
+    <ModTime>14364900</ModTime>
+    <MetaID>{31F9693E-572E-4E7B-8EB2-2041A962FE8D}</MetaID>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooqKa5gttnnzRxbzhd7AZPoM0AS0UAggEHINFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRR
+QAUUUUAFFFFABRRRQAUUUUAFcl4+RX0y0DBiBPk4TdgYOT1rrawvEl1b2aW811brcRfMoiZQRu4I
+PPToR+NTNtRbQI8+tb+9sNk1rdNEm0YRHYrIQcAkE9wCfT0xXQ2/jS+t5YobiNbncOW2bCWyeMjI
+6e1cjapC8EQkmBiMwXyxgu2Bz05C8kZ9/arSX8iSSWUd3MtmW3+VI+PmyD9e2eg5rO7QzvovGul+
+Ysd15tu5UMSULKAQCOR9R2reiuoJ2KxyqzLyVz8w+o6ivHY4ZpY5rq3jRo4diyOWyF3fLjB98f8A
+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
+iiigAooooAKKKKACiiigAooooAKKKKAP/9k=</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum>608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="007" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorFormat>
+        <formatName>ESRI geodatabase</formatName>
+        <formatVer>9.3.1</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Vilas_Parcels_2011.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <onLineSrc>
+        <linkage>http://vcgis.co.vilas.wi.us/vcom/Download.html</linkage>
+        <protocol>WWW:LINK-1.0-http--link</protocol>
+        <orName>Vilas County</orName>
+        <orFunct>
+          <OnFunctCd value="002" />
+        </orFunct>
+      </onLineSrc>
+      <transSize Sync="TRUE">28.614</transSize>
+    </distTranOps>
+    <distFormat>
+      <formatVer>1.0</formatVer>
+      <formatName Sync="TRUE">Shapefile</formatName>
+    </distFormat>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Parcels Vilas County, WI 2011</resTitle>
+      <date>
+        <pubDate>2018-02-27T00:00:00</pubDate>
+      </date>
+      <citRespParty>
+        <rpOrgName>Vilas County Land Information and Mapping Department</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </citRespParty>
+      <citRespParty>
+        <rpOrgName>Vilas County Land Information and Mapping Department</rpOrgName>
+        <rpCntInfo>
+          <cntAddress>
+            <delPoint>Vilas County (Wis.)</delPoint>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="010" />
+        </role>
+      </citRespParty>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <resEdDate>20110101</resEdDate>
+      <otherCitDet>This metadata was updated to reflect that the data is no longer restricted and has been opened for public use. </otherCitDet>
+    </idCitation>
+    <idAbs>This Polygon data layer represents tax parcels for Vilas County, Wisconsin in 2011.</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.</idPurp>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <idPoC>
+      <rpIndName>Barb Gibson</rpIndName>
+      <rpOrgName>Vilas County Land Information and Mapping Department</rpOrgName>
+      <rpPosName>GIS Coordinator/LIO</rpPosName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">715-479-3655</voiceNum>
+          <faxNum>715-479-3605</faxNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>330 Court St</delPoint>
+          <city>Eagle River</city>
+          <adminArea>WI</adminArea>
+          <postCode>54521-8362</postCode>
+          <country>US</country>
+          <eMailAdd>bagibs@co.vilas.wi.us</eMailAdd>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="007" />
+      </role>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Vilas County Land Information and Mapping Department</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Vilas County Land Information and Mapping Department</displayName>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNIS</resTitle>
+      </thesaName>
+      <keyword>Vilas County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Polygon</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>RML</resTitle>
+      </thesaName>
+      <keyword>Land ownership</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Real property</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Real property</keyword>
+      <keyword>Land ownership</keyword>
+      <keyword>Vilas County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2011-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-90.059872</westBL>
+          <eastBL>-88.925704</eastBL>
+          <southBL>45.84182</southBL>
+          <northBL>46.300752</northBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <idCredit>Vilas County Land Information and Mapping Department</idCredit>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <suppInfo>This metadata was updated to reflect that the data is no longer restricted and has been opened for public use. </suppInfo>
+    <envirDesc Sync="TRUE">Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-90.050877</westBL>
+          <eastBL Sync="TRUE">-88.925660</eastBL>
+          <northBL Sync="TRUE">46.300804</northBL>
+          <southBL Sync="TRUE">45.855753</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="015" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQConcConsis" dimension="">
+      <measDesc>Unknown</measDesc>
+    </report>
+    <report type="DQCompOm" dimension="">
+      <measDesc>Unknown</measDesc>
+    </report>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Changed name of file from 'PARCELS' to Vilas_Parcels_2016.</stepDesc>
+        <stepDateTm>2016-11-02T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+          <rpPosName>Data Technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="009" />
+          </role>
+        </stepProc>
+      </prcStep>
+      <prcStep>
+        <stepDesc>Open data for public use.</stepDesc>
+        <stepDateTm>2018-02-27T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>310 Science Hall</delPoint>
+              <delPoint>550 N. Park Street</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="007" />
+          </role>
+          <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="1102009" Sync="FALSE" />
+        <idCodeSpace Sync="FALSE">EPSG</idCodeSpace>
+        <idVersion Sync="TRUE">9.2.0</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Vilas_Parcels_2011">
+      <enttyp>
+        <enttypl Sync="TRUE">Vilas_Parcels_2011</enttypl>
+        <enttypd>Parcels Vilas County, WI 2011</enttypd>
+        <enttypds>Vilas County Land Information and Mapping Department</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">53242</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">FID</attrlabl>
+        <attalias Sync="TRUE">FID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape_area</attrlabl>
+        <attrdef>Area of feature in internal units squared.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape_area</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DXF_TEXT</attrlabl>
+        <attalias Sync="TRUE">DXF_TEXT</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">40</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">GISPIN</attrlabl>
+        <attalias Sync="TRUE">GISPIN</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">15</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_len</attrlabl>
+        <attalias Sync="TRUE">Shape_len</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Vilas_Parcels_2011">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">53242</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Vilas_Parcels_2011">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="4" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">53242</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20180227</mdDateSt>
+  <mdFileID>441747FA-C40D-42A8-B046-669C8F679514</mdFileID>
+</metadata>

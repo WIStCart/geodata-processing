@@ -1,0 +1,640 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20170309</CreaDate>
+    <CreaTime>08482300</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <ArcGISstyle>FGDC CSDGM Metadata</ArcGISstyle>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <itemProps>
+        <itemName Sync="TRUE">ADAMS_LANDUSE_2015</itemName>
+        <itemSize Sync="TRUE">0.000</itemSize>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2017_ALL_DATA_OPEN\Adams\Adams_LandUse_2015.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <nativeExtBox>
+          <westBL Sync="TRUE">517697.911100</westBL>
+          <eastBL Sync="TRUE">552351.125100</eastBL>
+          <southBL Sync="TRUE">352022.623700</southBL>
+          <northBL Sync="TRUE">419585.438300</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <lineage>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\Dissolve" Date="20131205" Time="142115" Name="" export="">Dissolve X:\RPC_LU\adams_clip.shp X:\RPC_LU\adams_Dis.shp LU_2010 # MULTI_PART DISSOLVE_LINES</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Analysis Tools.tbx\Union" Date="20131205" Time="142847" Name="" export="">Union "X:\RPC_LU\adams_Dis.shp #;X:\RPC_LU\adams.shp #" X:\RPC_LU\adams_Union.shp ALL # GAPS</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20131205" Time="143430" Name="" export="">FeatureClassToFeatureClass X:\RPC_LU\adams_Union.shp X:\RPC_LU\LU_All.gdb Adams_LU # "FID_adams_ "FID_adams_" true true false 9 Long 0 9 ,First,#,X:\RPC_LU\adams_Union.shp,FID_adams_,-1,-1;LU_2010 "LU_2010" true true false 50 Text 0 0 ,First,#,X:\RPC_LU\adams_Union.shp,LU_2010,-1,-1;FID_adams "FID_adams" true true false 9 Long 0 9 ,First,#,X:\RPC_LU\adams_Union.shp,FID_adams,-1,-1;AREA "AREA" true true false 15 Double 3 14 ,First,#,X:\RPC_LU\adams_Union.shp,AREA,-1,-1;PERIMETER "PERIMETER" true true false 15 Double 3 14 ,First,#,X:\RPC_LU\adams_Union.shp,PERIMETER,-1,-1;C_T_V "C_T_V" true true false 1 Text 0 0 ,First,#,X:\RPC_LU\adams_Union.shp,C_T_V,-1,-1;MCD_NAME "MCD_NAME" true true false 23 Text 0 0 ,First,#,X:\RPC_LU\adams_Union.shp,MCD_NAME,-1,-1;COUNTY "COUNTY" true true false 20 Text 0 0 ,First,#,X:\RPC_LU\adams_Union.shp,COUNTY,-1,-1;MCD_CODE "MCD_CODE" true true false 5 Text 0 0 ,First,#,X:\RPC_LU\adams_Union.shp,MCD_CODE,-1,-1;MCD_IDA "MCD_IDA" true true false 8 Text 0 0 ,First,#,X:\RPC_LU\adams_Union.shp,MCD_IDA,-1,-1;HINDI "HINDI" true true false 5 Text 0 0 ,First,#,X:\RPC_LU\adams_Union.shp,HINDI,-1,-1;MCD_PL_CD "MCD_PL_CD" true true false 4 Text 0 0 ,First,#,X:\RPC_LU\adams_Union.shp,MCD_PL_CD,-1,-1;SQMI "SQMI" true true false 19 Double 0 0 ,First,#,X:\RPC_LU\adams_Union.shp,SQMI,-1,-1;TYPE "TYPE" true true false 4 Short 0 4 ,First,#,X:\RPC_LU\adams_Union.shp,TYPE,-1,-1" #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\DefineProjection" Date="20131205" Time="143658" Name="" export="">DefineProjection X:\RPC_LU\LU_All.gdb\Adams_LU PROJCS['NAD_1983_Wisconsin_TM',GEOGCS['GCS_North_American_1983',DATUM['D_North_American_1983',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Transverse_Mercator'],PARAMETER['False_Easting',520000.0],PARAMETER['False_Northing',-4480000.0],PARAMETER['Central_Meridian',-90.0],PARAMETER['Scale_Factor',0.9996],PARAMETER['Latitude_Of_Origin',0.0],UNIT['Meter',1.0]]</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Analysis Tools.tbx\Clip" Date="20131206" Time="124434" Name="" export="">Clip X:\RPC_LU\LU_All.gdb\Adams_LU X:\RPC_LU\adams.shp X:\RPC_LU\LU_All.gdb\Adams_LU_Clip #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20131218" Time="082232" Name="" export="">CalculateField Adams_LU County "Adams County" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20131218" Time="104846" Name="" export="">FeatureClassToFeatureClass X:\RPC_LU\LU_All.gdb\Adams_LU X:\Adams\Adams.mdb\Landuse Landuse # "LU_2010 "LU_2010" true true false 50 Text 0 0 ,First,#,X:\RPC_LU\LU_All.gdb\Adams_LU,LU_2010,-1,-1;Shape_Length "Shape_Length" false true true 8 Double 0 0 ,First,#,X:\RPC_LU\LU_All.gdb\Adams_LU,Shape_Length,-1,-1;Shape_Area "Shape_Area" false true true 8 Double 0 0 ,First,#,X:\RPC_LU\LU_All.gdb\Adams_LU,Shape_Area,-1,-1;Acres "Acres" true true false 8 Double 0 0 ,First,#,X:\RPC_LU\LU_All.gdb\Adams_LU,Acres,-1,-1;County "County" true true false 50 Text 0 0 ,First,#,X:\RPC_LU\LU_All.gdb\Adams_LU,County,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150310" Time="114504" Name="" export="">CalculateField Landuse LU_2013 [LU_2010] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151016" Time="110635" Name="" export="">CalculateField Landuse LU_2015 [LU_2013] VB #</Process>
+      </lineage>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn>
+        <projcsn Sync="TRUE">NAD_1983_Wisconsin_TM</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_Wisconsin_TM&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983&amp;quot;,DATUM[&amp;quot;D_North_American_1983&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,3070]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;10000&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;3070&lt;/WKID&gt;&lt;LatestWKID&gt;3070&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20170405</SyncDate>
+    <SyncTime>14405300</SyncTime>
+    <ModDate>20170405</ModDate>
+    <ModTime>14405300</ModTime>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiigAooooAjnnjtbeW4mbbFEhd2xnAAyTxWVb+K9EumCw3oZiCceW4OB9R71Z1b
+zJLSS3RcLKpVnK7hzxjGDnI4rys3fkXTR3ABSJyocg5xnDDOOTxxnp6YrOU9bLcZ6lHr+lynEd1v
+O0PhUY4GQOeOOSKkXV7F2KiVsgZOYmGBjOenpXm1trltHDCWlbbHbGNkKHcxDgheuMEd+nXjOKrW
+uuFRcJJEkrXEi+WmwHy1yeQeucHHQ5H5HPnqa6BZHpf/AAkmkbA/2xdpJH3G6/lUy63prSLGt3GZ
+GOFTnJP0rjhaRXl/d2gijuLgIY4yNvlKBg5HBOeuc+uBUep6BZ20LSBJYJfNwHPllR8oOO3PpUrE
+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</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum tddtty="">608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+    <rpPosName>metadata technician</rpPosName>
+  </mdContact>
+  <mdDateSt Sync="TRUE">20170405</mdDateSt>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorFormat>
+        <formatName>ESRI geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Adams_LandUse_2015.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+      <formatVer>10.3</formatVer>
+    </distFormat>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Land Use Adams County, WI 2015</resTitle>
+      <date>
+        <pubDate>2015-03-15T00:00:00</pubDate>
+      </date>
+      <resEd>3rd</resEd>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Adams County Register of Deeds/Land Records</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="postal">
+            <delPoint>PO Box 219</delPoint>
+            <city>Friendship </city>
+            <adminArea>WI</adminArea>
+            <postCode> 53934</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">608-338-4206</voiceNum>
+            <faxNum>608-339-4514</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <citRespParty>
+        <editorSource>external</editorSource>
+        <editorDigest>2c510468b30b93c699ba6d88e1dff36b</editorDigest>
+        <rpIndName>Jodi Helgeson</rpIndName>
+        <rpOrgName>Adams County Register of Deeds</rpOrgName>
+        <rpPosName>Register of Deeds</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-339-4206</voiceNum>
+            <faxNum>608-338-4206</faxNum>
+          </cntPhone>
+          <cntAddress addressType="postal">
+            <delPoint>PO Box 219</delPoint>
+            <city>Friendship</city>
+            <adminArea>WI</adminArea>
+            <postCode>53934</postCode>
+            <country>US</country>
+            <eMailAdd>jhelgeson@co.adams.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <displayName>Jodi Helgeson</displayName>
+        <editorSave>True</editorSave>
+        <displayName>Jodi Helgeson</displayName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+      </citRespParty>
+    </idCitation>
+    <idAbs>This polygon data layer represents land use for Adams County, Wisconsin in 2015. It is a feature class within the geodatabase, Adams_LandUse_2015.gdb.[(NCWRPC NOTES)This layer has landuse attributes for 2010, 2013 and 2015. We took the Lu2010 layer and added the lu2013 for certain town plans and updated certain towns. We added the lu2015 and used NAIP 2015 spring flight and updated county wide.]</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. 
+
+[Used to show generalized landuse in the county]</idPurp>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <editorSource>external</editorSource>
+        <editorDigest>49ccde16746138045814814eb5bcf61f</editorDigest>
+        <rpOrgName>Adams County Register of Deeds/Land Records</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="postal">
+            <delPoint>PO Box 219</delPoint>
+            <city>Friendship </city>
+            <adminArea>WI</adminArea>
+            <postCode> 53934</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">608-338-4206</voiceNum>
+            <faxNum>608-339-4514</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Adams County Register of Deeds/Land Records</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Adams County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Polygon</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Planning</keyword>
+      <keyword>Land use</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Land use</keyword>
+      <keyword>Adams County</keyword>
+      <keyword>Wisconsin</keyword>
+      <keyword>Planning</keyword>
+      <keyword>Polygon</keyword>
+      <keyword>planningCadastre</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-90.028905</westBL>
+          <eastBL>-89.594542</eastBL>
+          <southBL>43.640507</southBL>
+          <northBL>44.249555</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2015-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements. </suppInfo>
+    <idCredit>Adams County Register of Deeds/Land Records</idCredit>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idPoC>
+      <editorSource>external</editorSource>
+      <editorDigest>49ccde16746138045814814eb5bcf61f</editorDigest>
+      <rpOrgName>Adams County Register of Deeds/Land Records</rpOrgName>
+      <rpCntInfo>
+        <cntAddress addressType="postal">
+          <delPoint>PO Box 219</delPoint>
+          <city>Friendship </city>
+          <adminArea>WI</adminArea>
+          <postCode> 53934</postCode>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">608-338-4206</voiceNum>
+          <faxNum>608-339-4514</faxNum>
+        </cntPhone>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Adams County Register of Deeds/Land Records</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-90.028835</westBL>
+          <eastBL Sync="TRUE">-89.594792</eastBL>
+          <northBL Sync="TRUE">44.249505</northBL>
+          <southBL Sync="TRUE">43.640493</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="015" />
+    </tpCat>
+  </dataIdInfo>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQConcConsis" dimension="">
+      <measDesc>Unknown</measDesc>
+    </report>
+    <report type="DQCompOm" dimension="">
+      <measDesc>Unknown</measDesc>
+    </report>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform with UW-Madison's data distribution plan.</stepDesc>
+        <stepDateTm>2017-03-27T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+          <rpPosName>Data Technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="009" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="ADAMS_LANDUSE_2015">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">16021</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <eainfo>
+    <detailed Name="ADAMS_LANDUSE_2015">
+      <enttyp>
+        <enttypl Sync="TRUE">ADAMS_LANDUSE_2015</enttypl>
+        <enttypd>Land Use Adams County, WI 2015</enttypd>
+        <enttypds>North Central Wisconsin Regional Planning Commission</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">16021</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID_1</attrlabl>
+        <attalias Sync="TRUE">OBJECTID_1</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LU_2010</attrlabl>
+        <attalias Sync="TRUE">LU_2010</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Length</attrlabl>
+        <attrdef>Length of feature in internal units.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">County</attrlabl>
+        <attalias Sync="TRUE">County</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Leng</attrlabl>
+        <attalias Sync="TRUE">Shape_Leng</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LU_2013</attrlabl>
+        <attalias Sync="TRUE">LU_2013</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LU_2015</attrlabl>
+        <attalias Sync="TRUE">LU_2015</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Area</attrlabl>
+        <attrdef>Area of feature in internal units squared.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape_Area</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ACRES</attrlabl>
+        <attrdef>Length of feature in internal units.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Acres</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="3071" Sync="FALSE" />
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+        <idVersion Sync="TRUE">8.6.2</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="ADAMS_LANDUSE_2015">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="4" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">16021</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdFileID>11E65A2C-BE87-4EC0-BD1D-8BF1CFD4295E</mdFileID>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>310 Science Hall</delPoint>
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <rpPosName>metadata technician</rpPosName>
+      <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+    </maintCont>
+  </mdMaint>
+</metadata>

@@ -1,0 +1,930 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20120803</CreaDate>
+    <CreaTime>08533000</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process Name="DefineProjection_11" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\DefineProjection" Date="20050912" Time="112224" export="">DefineProjection N:\Addressing\ROADS\ctyrdcl.shp PROJCS['NAD_1983_HARN_Adj_WI_Barron_Feet',GEOGCS['GCS_NAD_1983_HARN_Adj_WI_Barron',DATUM['D_NAD_1983_HARN_Adj_WI_BA',SPHEROID['GRS_1980_Adj_WI_BA',6378472.931,298.272931052052]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Transverse_Mercator'],PARAMETER['False_Easting',305609.625],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',-91.85],PARAMETER['Scale_Factor',0.999996],PARAMETER['Latitude_Of_Origin',45.13333333333333],UNIT['Foot_US',0.3048006096012192]] N:\Addressing\ROADS\ctyrdcl.shp</Process>
+        <Process Name="AddField_1" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" Date="20050920" Time="121434" export="">AddField C:\BBSI\BarronCountyGISData\roads.shp PRE_DIR3 TEXT # # 10 # NON_NULLABLE NON_REQUIRED # C:\BBSI\BarronCountyGISData\roads.shp</Process>
+        <Process Name="AddField_2" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" Date="20050920" Time="121503" export="">AddField C:\BBSI\BarronCountyGISData\roads.shp PRE_TYPE3 TEXT # # 15 # NON_NULLABLE NON_REQUIRED # C:\BBSI\BarronCountyGISData\roads.shp</Process>
+        <Process Name="AddField_3" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" Date="20050920" Time="121523" export="">AddField C:\BBSI\BarronCountyGISData\roads.shp STR_NAME3 TEXT # # 25 # NON_NULLABLE NON_REQUIRED # C:\BBSI\BarronCountyGISData\roads.shp</Process>
+        <Process Name="AddField_4" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" Date="20050920" Time="121542" export="">AddField C:\BBSI\BarronCountyGISData\roads.shp STR_TYPE3 TEXT # # 15 # NON_NULLABLE NON_REQUIRED # C:\BBSI\BarronCountyGISData\roads.shp</Process>
+        <Process Name="AddField_5" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" Date="20050920" Time="121601" export="">AddField C:\BBSI\BarronCountyGISData\roads.shp SUF_DIR3 TEXT # # 10 # NON_NULLABLE NON_REQUIRED # C:\BBSI\BarronCountyGISData\roads.shp</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20120130" Time="122435" Name="" export="">CopyFeatures C:\BBSI\BarronGISData\Vector\roads.shp C:\BBSI\BarronGISData\Vector\Dispatch.gdb\DispatchData\roads # 0 0 0</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120719" Time="111259" Name="" export="">CalculateField Road_Segments ZORDER 0 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120719" Time="114419" Name="" export="">CalculateField Road_Segments RD_CLASS 1 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120719" Time="115544" Name="" export="">CalculateField Road_Segments RD_CLASS 2 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120719" Time="120357" Name="" export="">CalculateField Road_Segments RD_CLASS 2 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120719" Time="120518" Name="" export="">CalculateField Road_Segments RD_CLASS 2 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120719" Time="121033" Name="" export="">CalculateField Road_Segments RD_CLASS 3 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120719" Time="121253" Name="" export="">CalculateField Road_Segments RD_CLASS 3 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120719" Time="122038" Name="" export="">CalculateField Road_Segments RD_CLASS 3 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120719" Time="122737" Name="" export="">CalculateField Road_Segments RD_CLASS 4 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120719" Time="131357" Name="" export="">CalculateField Road_Segments RD_CLASS 6 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120719" Time="131553" Name="" export="">CalculateField Road_Segments RD_CLASS 10 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120719" Time="141849" Name="" export="">CalculateField Road_Segments RD_CLASS 5 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120719" Time="142129" Name="" export="">CalculateField Road_Segments RD_CLASS 99 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120719" Time="142458" Name="" export="">CalculateField Road_Segments RD_CLASS 99 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120719" Time="143210" Name="" export="">CalculateField Road_Segments RD_CLASS 5 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120719" Time="143316" Name="" export="">CalculateField Road_Segments SPEEDLIMIT 15 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120719" Time="144807" Name="" export="">CalculateField Road_Segments LABEL [STRN2] VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120719" Time="144904" Name="" export="">CalculateField Road_Segments LABEL 25 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120719" Time="144937" Name="" export="">CalculateField Road_Segments LABEL 48 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120719" Time="145149" Name="" export="">CalculateField Road_Segments LABEL [SHIELD] VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120808" Time="123356" Name="" export="">CalculateField roads STRN2 " " VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120808" Time="123402" Name="" export="">CalculateField roads STRT2 " " VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120808" Time="123410" Name="" export="">CalculateField roads STRN3 " " VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120808" Time="123415" Name="" export="">CalculateField roads STRT3 " " VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120808" Time="123424" Name="" export="">CalculateField roads PRED2 " " VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120808" Time="123432" Name="" export="">CalculateField roads SUFD2 " " VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120808" Time="123509" Name="" export="">CalculateField roads FULLNAME "[STR_NAME] + " " + [STR_TYPE]" VB #</Process>
+      </lineage>
+      <itemProps>
+        <itemName Sync="TRUE">Barron_Roads_2012</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">224303.000269</westBL>
+          <eastBL Sync="TRUE">385136.053930</eastBL>
+          <southBL Sync="TRUE">26939.630108</southBL>
+          <northBL Sync="TRUE">184914.908645</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <itemSize Sync="TRUE">1.141</itemSize>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\Operation_Unrestrict_Data\Barron\Barron_Roads_2012\Barron_Roads_2012.shp</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_WISCRS_Barron_County_Feet</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_WISCRS_Barron_County_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,305609.625],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.01],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-91.85],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,1.0000486665],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,45.13333333333333],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;Esri&amp;quot;,103402]]&lt;/WKT&gt;&lt;XOrigin&gt;-18143800&lt;/XOrigin&gt;&lt;YOrigin&gt;-49220900&lt;/YOrigin&gt;&lt;XYScale&gt;137234784.90010422&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.0032808333333333331&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;103402&lt;/WKID&gt;&lt;LatestWKID&gt;103402&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20181004</SyncDate>
+    <SyncTime>15412700</SyncTime>
+    <ModDate>20181004</ModDate>
+    <ModTime>15412700</ModTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <ArcGISstyle>North American Profile of ISO19115 2003</ArcGISstyle>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKZNKlvBJNISEjUsxAJwAMngcmn1iS2lmmkXl09vDvjkmlLmMZysjNnP4f/r6VcYp7ga80
+8cBjEhIMjhEAUnJ5Pb2BOfapKwLySLVr21jiVmjIzm4gzGQyPyAcNu+XqOMZ9TU2m2umTpLA0NjL
+cQSv5qrGpKZdsZHJXIHGap00o3e4rmrLOkI+beTxwiFz37AE9jVG117Tr2GGa1llminTzInjgkId
+fUHb096yZ0sopYbZLAfavtMhbFmW2xkyYbheQMjHvgUy0li0m0VbGSSKNZJmdZbRtgjUtySFB4O0
+ZJPWtFRjbrf+vULm8dVtRKIj54c4wv2eTPOf9n/ZP5Uwa1YlC+6bYGZNxt5AMrncPu9tp/I1n2DX
+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</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum tddtty="">(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park St</delPoint>
+        <city>Madison</city>
+        <adminArea>Wisconsin</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+        <rpPosName>metadata technician</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">(608) 262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park St</delPoint>
+            <city>Madison</city>
+            <adminArea>Wisconsin</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday – Friday: 9:00am – 4:00pm</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Barron_Roads_2012.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <transSize Sync="TRUE">1.141</transSize>
+    </distTranOps>
+    <distFormat>
+      <formatVer>1.0</formatVer>
+      <formatName Sync="TRUE">Shapefile</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Barron County Land Information/Surveyor/Real Property Lister</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">715-537-6824</voiceNum>
+            <faxNum>715-537-6277</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>330 E La Salle Ave Rm 2401</delPoint>
+            <city>Barron</city>
+            <adminArea>WI</adminArea>
+            <postCode>54812</postCode>
+            <country>US</country>
+            <eMailAdd>mark.netterlund@co.barron.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Barron County Land Information/Surveyor/Real Property Lister</displayName>
+        <displayName>Barron County Land Information/Surveyor/Real Property Lister</displayName>
+        <displayName>Barron County Land Information/Surveyor/Real Property Lister</displayName>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Roads Barron County, WI 2012</resTitle>
+      <date>
+        <pubDate>2012-01-01T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Barron County Land Information/Surveyor/Real Property Lister</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">715-537-6824</voiceNum>
+            <faxNum>715-537-6277</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>330 E La Salle Ave Rm 2401</delPoint>
+            <city>Barron</city>
+            <adminArea>WI</adminArea>
+            <postCode>54812</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Barron County Land Information/Surveyor/Real Property Lister</displayName>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Mark Netterlund</rpIndName>
+        <rpOrgName>Barron County Land Information/Surveyor/Real Property Lister</rpOrgName>
+        <rpPosName>County Surveyor/Land Information Officer</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">715-537-6824</voiceNum>
+            <faxNum>715-537-6277</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>330 East La Salle Avenue, Room 2401</delPoint>
+            <city>Barron</city>
+            <adminArea>WI</adminArea>
+            <postCode>54812</postCode>
+            <country>US</country>
+            <eMailAdd>mark.netterlund@co.barron.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Mark Netterlund</displayName>
+      </citRespParty>
+      <resEdDate>20120101</resEdDate>
+      <otherCitDet>This metadata was updated to reflect that the data is no longer restricted and has been opened for public use.</otherCitDet>
+    </idCitation>
+    <idAbs>This data layer represents roads for Barron County, Wisconsin in 2012.</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.</idPurp>
+    <idCredit>Barron County Land Information/Surveyor/Real Property Lister</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <idPoC>
+      <rpOrgName>Barron County Land Information/Surveyor/Real Property Lister</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">715-537-6824</voiceNum>
+          <faxNum>715-537-6277</faxNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>330 E La Salle Ave Rm 2401</delPoint>
+          <city>Barron</city>
+          <adminArea>WI</adminArea>
+          <postCode>54812</postCode>
+          <country>US</country>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Barron County Land Information/Surveyor/Real Property Lister</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">715-537-6824</voiceNum>
+            <faxNum>715-537-6277</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>330 E La Salle Ave Rm 2401</delPoint>
+            <city>Barron</city>
+            <adminArea>WI</adminArea>
+            <postCode>54812</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Barron County Land Information/Surveyor/Real Property Lister</displayName>
+        <displayName>Barron County Land Information/Surveyor/Real Property Lister</displayName>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Barron County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Line</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Roads, Streets, Transportation</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Roads</keyword>
+      <keyword>Streets</keyword>
+      <keyword>Barron County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-92.172937</westBL>
+          <eastBL>-91.528664</eastBL>
+          <southBL>45.197177</southBL>
+          <northBL>45.649698</northBL>
+          <exTypeCode>0</exTypeCode>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2012-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-92.167853</westBL>
+          <eastBL Sync="TRUE">-91.539107</eastBL>
+          <northBL Sync="TRUE">45.640439</northBL>
+          <southBL Sync="TRUE">45.206779</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="018" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park St</delPoint>
+          <city>Madison</city>
+          <adminArea>Wisconsin</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform to UW-Madison's data distribution plan. </stepDesc>
+        <stepDateTm>2018-10-04T00:00:00</stepDateTm>
+        <stepProc>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+          <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+          <rpPosName>metadata technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum tddtty="">(608) 262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park St</delPoint>
+              <city>Madison</city>
+              <adminArea>Wisconsin</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday – Friday: 9:00am – 4:00pm</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="009" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <idCodeSpace Sync="FALSE">EPSG</idCodeSpace>
+        <identCode code="7589" Sync="FALSE" />
+        <idVersion Sync="FALSE">9.4.1</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+    <detailed Name="Barron_Roads_2012">
+      <enttyp>
+        <enttypl Sync="TRUE">Barron_Roads_2012</enttypl>
+        <enttypd>Roads Barron County, WI 2012</enttypd>
+        <enttypds>Barron County GIS</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">6670</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">FID</attrlabl>
+        <attalias Sync="TRUE">FID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape</attrlabl>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Feature geometry.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">9</attwidth>
+        <atprecis Sync="TRUE">9</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LENGTH</attrlabl>
+        <attalias Sync="TRUE">LENGTH</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ROAD_TYPE</attrlabl>
+        <attalias Sync="TRUE">ROAD_TYPE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">16</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRE_DIR</attrlabl>
+        <attalias Sync="TRUE">PRE_DIR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRE_TYPE</attrlabl>
+        <attalias Sync="TRUE">PRE_TYPE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">15</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STR_NAME</attrlabl>
+        <attalias Sync="TRUE">STR_NAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STR_TYPE</attrlabl>
+        <attalias Sync="TRUE">STR_TYPE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">15</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SUF_DIR</attrlabl>
+        <attalias Sync="TRUE">SUF_DIR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FULLNAME</attrlabl>
+        <attalias Sync="TRUE">FULLNAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ONEWAY</attrlabl>
+        <attalias Sync="TRUE">ONEWAY</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LFROM</attrlabl>
+        <attalias Sync="TRUE">LFROM</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LTO</attrlabl>
+        <attalias Sync="TRUE">LTO</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RFROM</attrlabl>
+        <attalias Sync="TRUE">RFROM</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RTO</attrlabl>
+        <attalias Sync="TRUE">RTO</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">COMMUNITY</attrlabl>
+        <attalias Sync="TRUE">COMMUNITY</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STATE</attrlabl>
+        <attalias Sync="TRUE">STATE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRED2</attrlabl>
+        <attalias Sync="TRUE">PRED2</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRET2</attrlabl>
+        <attalias Sync="TRUE">PRET2</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STRN2</attrlabl>
+        <attalias Sync="TRUE">STRN2</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STRT2</attrlabl>
+        <attalias Sync="TRUE">STRT2</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SUFD2</attrlabl>
+        <attalias Sync="TRUE">SUFD2</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRED3</attrlabl>
+        <attalias Sync="TRUE">PRED3</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRET3</attrlabl>
+        <attalias Sync="TRUE">PRET3</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STRN3</attrlabl>
+        <attalias Sync="TRUE">STRN3</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STRT3</attrlabl>
+        <attalias Sync="TRUE">STRT3</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SUFD3</attrlabl>
+        <attalias Sync="TRUE">SUFD3</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">OCNOTES</attrlabl>
+        <attalias Sync="TRUE">OCNOTES</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">75</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ETS</attrlabl>
+        <attalias Sync="TRUE">ETS</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SYMBOL</attrlabl>
+        <attalias Sync="TRUE">SYMBOL</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SHIELD</attrlabl>
+        <attalias Sync="TRUE">SHIELD</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Leng</attrlabl>
+        <attalias Sync="TRUE">Shape_Leng</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RD_CLASS</attrlabl>
+        <attalias Sync="TRUE">RD_CLASS</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">4</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LABEL</attrlabl>
+        <attalias Sync="TRUE">LABEL</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">75</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRINCIPAL</attrlabl>
+        <attalias Sync="TRUE">PRINCIPAL</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">4</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ZORDER</attrlabl>
+        <attalias Sync="TRUE">ZORDER</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">4</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Barron_Roads_2012">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">6670</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Barron_Roads_2012">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="3" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">6670</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20181004</mdDateSt>
+  <mdFileID>41FE994D-03C5-4EDA-9BF2-E12FEB9A60AF</mdFileID>
+</metadata>

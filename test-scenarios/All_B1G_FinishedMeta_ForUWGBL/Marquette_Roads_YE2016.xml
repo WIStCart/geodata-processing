@@ -1,0 +1,750 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20170314</CreaDate>
+    <CreaTime>09413600</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process Name="Append_1" ToolSource="C:\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20060608" Time="132412" export="">Append C:\TwnBuffaloParcelProject\ParcGDB\10TwnBuffaloParc.mdb\TwnBuffalo_Parcel\Boundary C:\TwnBuffaloParcelProject\ParcGDB\TwnBuffaloParc.mdb\TwnBuffalo_Parcel\Boundary TEST C:\TwnBuffaloParcelProject\ParcGDB\TwnBuffaloParc.mdb\TwnBuffalo_Parcel\Boundary</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130531" Time="112021" Name="" export="">CalculateField Roads Labels [RoadName] VB #</Process>
+      </lineage>
+      <itemProps>
+        <itemName Sync="TRUE">Marquette_Roads_YE2016</itemName>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2017_ALL_DATA_OPEN\Marquette\Marquette_Roads_YE2016.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemSize Sync="TRUE">0.000</itemSize>
+        <nativeExtBox>
+          <westBL Sync="TRUE">551476.167400</westBL>
+          <eastBL Sync="TRUE">587231.656700</eastBL>
+          <southBL Sync="TRUE">351957.221900</southBL>
+          <northBL Sync="TRUE">390315.569500</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_NAD_1983_2011</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_2011_Wisconsin_TM</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_2011_Wisconsin_TM&amp;quot;,GEOGCS[&amp;quot;GCS_NAD_1983_2011&amp;quot;,DATUM[&amp;quot;D_NAD_1983_2011&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,6610]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;10000&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;102973&lt;/WKID&gt;&lt;LatestWKID&gt;6610&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20170719</SyncDate>
+    <SyncTime>13001200</SyncTime>
+    <ModDate>20170719</ModDate>
+    <ModTime>13001200</ModTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKjmnitojLPKkUYxl3YKBk4HJ96kpskaSqFcZAYN+IOR+opq19QFZgqlmIAAySe1RQXdtc
+s6wXEUrRnDiNwxU5I5x05BH4Guf1RtWsbC6SNLQWrxv5cZZ5GX92zEDgcfLwOcZwOMYbPpdy2u2e
+oCSVGNvI0kVqfJbOUIypJDnLHIJ9Mc5zsqStqxXN1tU09HlRr62DxBmkXzVygGckjPGMH8qt1xr+
+GodX024kMs7xu90xt5YkxLIxZAxBXIOMjsee2KllmsbvR3aRrCLUov3bPsT55GTAK8jhtykE9O4y
+DinRj9l+oXOmlvbSAoJbqGMuMpvkA3fT1ph1C3HP77HZhA+D9DjBrM+06ZZvDFZ+XKIEeUx2aq0j
+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</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <editorSource>external</editorSource>
+    <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        <country>US</country>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum>(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+    </rpCntInfo>
+    <editorSave>True</editorSave>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorFormat>
+        <formatName>ESRI Geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Marquette_Roads_YE2016.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.3</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <editorSource>external</editorSource>
+        <editorDigest>868e2cce3d69a10a7fe280dbdef8a972</editorDigest>
+        <rpOrgName>Marquette County  </rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>77 W. Park St.</delPoint>
+            <city>Montello</city>
+            <adminArea>WI</adminArea>
+            <postCode>53949</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>608-297-9136 ext.247</voiceNum>
+            <faxNum>608-297-7606</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Marquette County  </displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Roads Marquette County, WI YE2016</resTitle>
+      <date>
+        <pubDate>2017-04-21T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Marquette County  </rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>77 W. Park St.</delPoint>
+            <city>Montello</city>
+            <adminArea>WI</adminArea>
+            <postCode>53949</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">608-297-9136 ext.247</voiceNum>
+            <faxNum>608-297-7606</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Tom Onofrey </rpIndName>
+        <rpOrgName>Marquette County  </rpOrgName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>77 W. Park St.</delPoint>
+            <city>Montello</city>
+            <adminArea>WI</adminArea>
+            <postCode>53949</postCode>
+            <eMailAdd>tonofrey@co.marquette.wi.us</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">608-297-3038 </voiceNum>
+            <faxNum>608-297-7606</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <resEdDate>20161231</resEdDate>
+    </idCitation>
+    <idAbs>This line data layer represents roads for Marquette County, Wisconsin at year-end 2016. It is a feature class within the geodatabase 'Marquette_Roads_YE2016.gdb'.</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.</idPurp>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <editorSource>external</editorSource>
+        <editorDigest>868e2cce3d69a10a7fe280dbdef8a972</editorDigest>
+        <rpOrgName>Marquette County  </rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>77 W. Park St.</delPoint>
+            <city>Montello</city>
+            <adminArea>WI</adminArea>
+            <postCode>53949</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>608-297-9136 ext.247</voiceNum>
+            <faxNum>608-297-7606</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Marquette County  </displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Marquette County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Line</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Roads</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Roads</keyword>
+      <keyword>Streets</keyword>
+      <keyword>Marquette County</keyword>
+      <keyword>Line</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-89.601467</westBL>
+          <eastBL>-89.167465</eastBL>
+          <southBL>43.64104</southBL>
+          <northBL>43.985773</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2017-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <suppInfo>This data was submitted to the UW geospatial archive in 2017. Content may be considered current as of December 31, 2016. It was published to the UW geospatial archive as part of the Wisconsin Department of Administration Land Information Program annual collection of public data for the year 2017.</suppInfo>
+    <idCredit>Marquette County  </idCredit>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idPoC>
+      <editorSource>external</editorSource>
+      <editorDigest>868e2cce3d69a10a7fe280dbdef8a972</editorDigest>
+      <rpOrgName>Marquette County  </rpOrgName>
+      <rpCntInfo>
+        <cntAddress addressType="physical">
+          <delPoint>77 W. Park St.</delPoint>
+          <city>Montello</city>
+          <adminArea>WI</adminArea>
+          <postCode>53949</postCode>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum>608-297-9136 ext.247</voiceNum>
+          <faxNum>608-297-7606</faxNum>
+        </cntPhone>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Marquette County  </displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-89.609755</westBL>
+          <eastBL Sync="TRUE">-89.161671</eastBL>
+          <northBL Sync="TRUE">43.985305</northBL>
+          <southBL Sync="TRUE">43.637569</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="018" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <editorSource>external</editorSource>
+      <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum>(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform to UW-Madison's data distribution plan. </stepDesc>
+        <stepDateTm>2017-07-13T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="005" />
+          </role>
+          <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="3071" Sync="FALSE" />
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+        <idVersion Sync="FALSE">9.1.1</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Marquette_Roads_YE2016">
+      <enttyp>
+        <enttypl Sync="TRUE">Marquette_Roads_YE2016</enttypl>
+        <enttypd>Roads Marquette County, WI YE2016</enttypd>
+        <enttypds>Marquette County</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">1167</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID_1</attrlabl>
+        <attalias Sync="TRUE">OBJECTID_1</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RoadName</attrlabl>
+        <attalias Sync="TRUE">RoadName</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">35</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RoadAdmin</attrlabl>
+        <attalias Sync="TRUE">RoadAdmin</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">12</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">GISDate</attrlabl>
+        <attalias Sync="TRUE">GISDate</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">GISAgentID</attrlabl>
+        <attalias Sync="TRUE">GISAgentID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">F_GUID</attrlabl>
+        <attalias Sync="TRUE">F_GUID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">fz_left</attrlabl>
+        <attalias Sync="TRUE">fz_left</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">fz_right</attrlabl>
+        <attalias Sync="TRUE">fz_right</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ez_left</attrlabl>
+        <attalias Sync="TRUE">ez_left</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ez_right</attrlabl>
+        <attalias Sync="TRUE">ez_right</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">lz_left</attrlabl>
+        <attalias Sync="TRUE">lz_left</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">lz_right</attrlabl>
+        <attalias Sync="TRUE">lz_right</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Labels</attrlabl>
+        <attalias Sync="TRUE">Labels</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">35</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SHAPE_STLe</attrlabl>
+        <attalias Sync="TRUE">SHAPE_STLe</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Leng</attrlabl>
+        <attalias Sync="TRUE">Shape_Leng</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Le_1</attrlabl>
+        <attalias Sync="TRUE">Shape_Le_1</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Length</attrlabl>
+        <attalias Sync="TRUE">Shape_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Length of feature in internal units.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Marquette_Roads_YE2016">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">1167</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Marquette_Roads_YE2016">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="3" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">1167</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20170719</mdDateSt>
+  <mdFileID>52CC361B-6BC7-461A-8F8B-28AC25068120</mdFileID>
+</metadata>

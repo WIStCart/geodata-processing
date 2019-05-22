@@ -1,0 +1,930 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <SyncOnce>FALSE</SyncOnce>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <DataProperties>
+      <itemProps>
+        <itemName Sync="TRUE">Buffalo_Roads_YE2016</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">502449.879629</westBL>
+          <eastBL Sync="TRUE">645212.592462</eastBL>
+          <southBL Sync="TRUE">210386.727146</southBL>
+          <northBL Sync="TRUE">406931.200526</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2017_ALL_DATA_OPEN\Buffalo\Buffalo_Roads_YE2016.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_WISCRS_Buffalo_County_Feet</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_WISCRS_Buffalo_County_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,574999.999],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.016],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-91.79722222222222],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,1.0000382778],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,43.48138888888889],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;ESRI&amp;quot;,103405]]&lt;/WKT&gt;&lt;XOrigin&gt;-17874300&lt;/XOrigin&gt;&lt;YOrigin&gt;-48618200&lt;/YOrigin&gt;&lt;XYScale&gt;3048.00609601219&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.00328083333333333&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;103405&lt;/WKID&gt;&lt;LatestWKID&gt;103405&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+      <lineage>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150112" Time="172025" Name="" export="">CalculateField RoadCenterline CAD_ROADS [FULLNAME] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150112" Time="172324" Name="" export="">CalculateField RoadCenterline CAD_ROADS Replace( [CAD_ROADS],"Cty TK","County RD" ) VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160722" Time="123352" Name="" export="">CalculateField RoadCenterline ROADPREDIR !FROMLEFT![:1] PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160722" Time="123712" Name="" export="">CalculateField "RoadCenterline selection" ROADPREDIR !TORIGHT![:1] PYTHON_9.3 #</Process>
+      </lineage>
+    </DataProperties>
+    <SyncDate>20170517</SyncDate>
+    <SyncTime>11370200</SyncTime>
+    <ModDate>20170517</ModDate>
+    <ModTime>11370200</ModTime>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiigCB7yBJ/IZ/3mASApIGSAMnoCSRgHrz6GorrVLKzR2mnA2SLGyqpZtxwQNoB
+JJyPzrPa0SfU9QjfTorgtIj+ZK42gbFGO5DArngdCDmodNeWKKabV7UyuxFoZ0QSKyA7QP7xyxbO
+V6nsK3VONr+grm8kySBCBIN+cbo2HT1yOPxqs2q2atjzHPy78rExAXAOSQMDhgfxrOS8tFkfTpXv
+lXcDCmyYs6bQPvY3feDd+3pVW8trXT/D0Ud7BA8zN5nkIgDHON6qvfapI9gB0xkEaSvZ31C500br
+LGsiHKMAyn1BqOO7gmSN45VZZGKrj+8M5HsRg5B9Kw4lvdMjkhglGyzsY5Ghcs8bN8+VViMj7o7n
+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
+gAooooAKKKKACiiigAooooA//9k=</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>UW-Madison</rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum tddtty="">608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>UW-Madison</rpOrgName>
+        <rpPosName>metadata technician</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Buffalo_Roads_YE2016.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.3</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Buffalo County Land Information Department</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>(608) 685-6285</voiceNum>
+            <faxNum>(608) 685-6284</faxNum>
+          </cntPhone>
+          <cntAddress>
+            <delPoint>407 South Second Street</delPoint>
+            <city>Alma</city>
+            <adminArea>WI</adminArea>
+            <postCode>54610-0494</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Buffalo County Land Information Department</displayName>
+        <displayName>Buffalo County Land Information Department</displayName>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Roads Buffalo County, WI YE2016</resTitle>
+      <date>
+        <pubDate>2017-04-07T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+      </presForm>
+      <presForm>
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Buffalo County Land Information Department</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">(608) 685-6285</voiceNum>
+            <faxNum>(608) 685-6284</faxNum>
+          </cntPhone>
+          <cntAddress addressType="">
+            <delPoint>407 South Second Street</delPoint>
+            <city>Alma</city>
+            <adminArea>WI</adminArea>
+            <postCode>54610-0494</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Buffalo County Land Information Department</displayName>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Jason Poser</rpIndName>
+        <rpOrgName>Buffalo County Land Information Department</rpOrgName>
+        <rpPosName>GIS/Land Information Technician</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-685-6285</voiceNum>
+            <faxNum>608-685-6284</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>407 South Second St</delPoint>
+            <city>Alma</city>
+            <adminArea>WI</adminArea>
+            <postCode>54610</postCode>
+            <country>US</country>
+            <eMailAdd>Jason.Poser@co.buffalo.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Jason Poser</displayName>
+      </citRespParty>
+      <resEdDate>20161231</resEdDate>
+    </idCitation>
+    <idAbs>This line data layer represents roads for Buffalo County, Wisconsin at year-end 2016. It is a feature class within the geodatabase, Buffalo_Roads_YE2016.gdb.[Road segments representing centerlines of all roadways and private access within Buffalo County. Typically, this information is compiled from orthoimagery or other aerial photography sources. This representation of the road centerlines support address geocoding and mapping. It also serves as a source for public works and other agencies that are responsible for the active management of the road network.]</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.
+
+[Roads are classified as federal, state, county, town, city, village, or private/ private named roads. These classifications are used primarily for the display of road network. Address ranges have been developed to aid in the geocoding process for enhanced 911 efforts. However, gaps, overlaps and missing address ranges indicated that this feature should only be used as secondary source of geocoding, behind SiteAddressPoints.]</idPurp>
+    <idCredit>Buffalo Land Information Department
+
+[Buffalo County GIS Department, Buffalo County Zoning Department, Buffalo County Sheriff’s Department, Wisconsin Department of Transportation]</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <idPoC>
+      <rpIndName>Jason Poser</rpIndName>
+      <rpOrgName>Buffalo County Land Information Department</rpOrgName>
+      <rpPosName>GIS/Land Information Technician</rpPosName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">608-685-6285</voiceNum>
+          <faxNum>608-685-6284</faxNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>407 South Second St</delPoint>
+          <city>Alma</city>
+          <adminArea>WI</adminArea>
+          <postCode>54610</postCode>
+          <country>US</country>
+          <eMailAdd>Jason.Poser@co.buffalo.wi.us</eMailAdd>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="007" />
+      </role>
+    </idPoC>
+    <idPoC>
+      <rpOrgName>Buffalo County Land Information Department</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">(608) 685-6285</voiceNum>
+          <faxNum>(608) 685-6284</faxNum>
+        </cntPhone>
+        <cntAddress addressType="">
+          <delPoint>407 South Second Street</delPoint>
+          <city>Alma</city>
+          <adminArea>WI</adminArea>
+          <postCode>54610-0494</postCode>
+          <country>US</country>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Buffalo County Land Information Department</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">(608) 685-6285</voiceNum>
+            <faxNum>(608) 685-6284</faxNum>
+          </cntPhone>
+          <cntAddress addressType="">
+            <delPoint>407 South Second Street</delPoint>
+            <city>Alma</city>
+            <adminArea>WI</adminArea>
+            <postCode>54610-0494</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Buffalo County Land Information Department</displayName>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Buffalo County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Line</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Wisconsin</keyword>
+      <keyword>Line</keyword>
+      <keyword>Roads</keyword>
+      <keyword>Buffalo County</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-92.028751</westBL>
+          <eastBL>-91.527663</eastBL>
+          <southBL>44.064591</southBL>
+          <northBL>44.596714</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2017-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Roads, Streets, Transportation</keyword>
+    </themeKeys>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <suppInfo>This data was submitted to the UW geospatial archive in 2017. Content may be considered current as of December 31, 2016. It was published to the UW geospatial archive as part of the Wisconsin Department of Administration Land Information Program annual collection of public data for the year 2017.
+
+Augmented original metadata with UW-Madison specific elements.</suppInfo>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-92.075727</westBL>
+          <eastBL Sync="TRUE">-91.527691</eastBL>
+          <northBL Sync="TRUE">44.597623</northBL>
+          <southBL Sync="TRUE">44.058185</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <resConst>
+      <Consts>
+        <useLimit>[Buffalo County makes no warranty or representation, either expressed or implied, with respect to the data which have been requested, or the quality, accuracy, performance, merchantability, or fitness for a particular purpose. Therefore, the data sets are transferred to you "AS IS" without any support whatsoever, technical or otherwise, and in no event will Buffalo County, its elected or appointed officials or employees or any third person(s) who have been involved in the creation, production, or delivery of the data set(s), be liable for direct, indirect, special, incidental, or consequential damages resulting from any defect in the data or its documentation. In particular, Buffalo County shall have no liability for any data stored or used, including costs of recovering such data. This disclaimer shall apply not only to the current transfer of data by Buffalo County to User but also to any future transfer of data. User agrees to indemnify and hold county harmless from any liability incurred in connection with the users use of the data.]</useLimit>
+      </Consts>
+    </resConst>
+    <tpCat>
+      <TopicCatCd value="018" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>UW-Madison</rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>310 Science Hall</delPoint>
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform with UW-Madison's data distribution plan.</stepDesc>
+        <stepDateTm>2017-05-11T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+          <rpPosName>Data Technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="009" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="7592" Sync="FALSE" />
+        <idCodeSpace Sync="FALSE">EPSG</idCodeSpace>
+        <idVersion Sync="TRUE">10.3.1</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Buffalo_Roads_YE2016">
+      <enttyp>
+        <enttypl Sync="TRUE">Buffalo_Roads_YE2016</enttypl>
+        <enttypd>Roads Buffalo County, WI YE2016</enttypd>
+        <enttypds>Buffalo County Land Information Department</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">2554</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CENTERLINEID</attrlabl>
+        <attalias Sync="TRUE">Centerline ID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FROMLEFT</attrlabl>
+        <attalias Sync="TRUE">Left From Address (Odd)</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TOLEFT</attrlabl>
+        <attalias Sync="TRUE">Left To Address (Odd)</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FROMRIGHT</attrlabl>
+        <attalias Sync="TRUE">Right From Address (Even)</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TORIGHT</attrlabl>
+        <attalias Sync="TRUE">Right To Address (Even)</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ROADPREDIR</attrlabl>
+        <attalias Sync="TRUE">Road Prefix Direction</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ROADNAME</attrlabl>
+        <attalias Sync="TRUE">Road Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ROADPOSTDIR</attrlabl>
+        <attalias Sync="TRUE">Post Direction</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ROADTYPE</attrlabl>
+        <attalias Sync="TRUE">Road Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FULLNAME</attrlabl>
+        <attalias Sync="TRUE">Full Road Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">125</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FEDROUTE</attrlabl>
+        <attalias Sync="TRUE">Federal Route</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FEDRTETYPE</attrlabl>
+        <attalias Sync="TRUE">Federal Route Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">AFEDRTE</attrlabl>
+        <attalias Sync="TRUE">Alternate Federal Route</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">AFEDRTETYPE</attrlabl>
+        <attalias Sync="TRUE">Alternate Federal Route Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STROUTE</attrlabl>
+        <attalias Sync="TRUE">State Route</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STRTETYPE</attrlabl>
+        <attalias Sync="TRUE">State Route Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ASTRTE</attrlabl>
+        <attalias Sync="TRUE">Alternate State Route</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ASTRTETYPE</attrlabl>
+        <attalias Sync="TRUE">Alternate State Route Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CTYROUTE</attrlabl>
+        <attalias Sync="TRUE">County Route</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ACTYRTE</attrlabl>
+        <attalias Sync="TRUE">Alternnate County Route</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ROADLABLE</attrlabl>
+        <attalias Sync="TRUE">Road symbology label</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ROADCLASS</attrlabl>
+        <attalias Sync="TRUE">Road Class</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ONEWAYDIR</attrlabl>
+        <attalias Sync="TRUE">One Way Indicator</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ROADLEVEL</attrlabl>
+        <attalias Sync="TRUE">Above or Below Grade</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">INWATER</attrlabl>
+        <attalias Sync="TRUE">In Water</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CFCCCODE</attrlabl>
+        <attalias Sync="TRUE">Census MTCC Code</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">OWNEDBY</attrlabl>
+        <attalias Sync="TRUE">Owned By</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">MAINTBY</attrlabl>
+        <attalias Sync="TRUE">Maintained By</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">MUNILEFT</attrlabl>
+        <attalias Sync="TRUE">Municipality on Left</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">MUNIRIGHT</attrlabl>
+        <attalias Sync="TRUE">Municipality on Right</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ZIPLEFT</attrlabl>
+        <attalias Sync="TRUE">Zip on Left</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ZIPRIGHT</attrlabl>
+        <attalias Sync="TRUE">Zip on Right</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">MSAGLEFT</attrlabl>
+        <attalias Sync="TRUE">MSAG on Left</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">35</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">MSAGRIGHT</attrlabl>
+        <attalias Sync="TRUE">MSAG on Right</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">35</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ESNLEFT</attrlabl>
+        <attalias Sync="TRUE">ESN on Left</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ESNRIGHT</attrlabl>
+        <attalias Sync="TRUE">ESN on Right</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LASTUPDATE</attrlabl>
+        <attalias Sync="TRUE">Last Update Date</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LASTEDITOR</attrlabl>
+        <attalias Sync="TRUE">Last Editor</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">COMMENTS</attrlabl>
+        <attalias Sync="TRUE">Comments</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">250</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CAD_ROADS</attrlabl>
+        <attalias Sync="TRUE">CAD_ROADS</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">60</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Length</attrlabl>
+        <attalias Sync="TRUE">Shape_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Length of feature in internal units.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Buffalo_Roads_YE2016">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">2554</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Buffalo_Roads_YE2016">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="3" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">2554</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20170517</mdDateSt>
+  <mdFileID>95845C7C-37F5-4650-AB4E-C68E37BCA291</mdFileID>
+</metadata>

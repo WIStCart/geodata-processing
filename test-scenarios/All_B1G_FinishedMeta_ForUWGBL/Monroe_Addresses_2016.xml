@@ -1,0 +1,889 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20160511</CreaDate>
+    <CreaTime>09570700</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process Name="DeleteFeatures_2" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteFeatures" Date="20070726" Time="103120" export="">DeleteFeatures "Database Connections\GIS_sdeload.sde\monroe_gis.SDELOAD.EM_Rural_Addresses" "Database Connections\GIS_sdeload.sde\monroe_gis.SDELOAD.EM_Rural_Addresses"</Process>
+        <Process Name="Append_3" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20070726" Time="103515" export="">Append 'M:\GIS EM\ArcView Shapefiles\address.shp' "Database Connections\GIS_sdeload.sde\monroe_gis.SDELOAD.EM_Rural_Addresses" TEST # "Database Connections\GIS_sdeload.sde\monroe_gis.SDELOAD.EM_Rural_Addresses"</Process>
+        <Process Name="FeatureClassToFeatureClass_1" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20070928" Time="135426" export="">FeatureClassToFeatureClass "C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses" C:\MonroeAddr\For_Carrie.mdb\LIO_MonroeCo_Parcel Rural_Addresses # "ADDRESS ADDRESS true false false 23 Text 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,ADDRESS,-1,-1;MI MI true false false 14 Text 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,MI,-1,-1;OTHER OTHER true false false 9 Text 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,OTHER,-1,-1;ESN ESN true false false 4 Long 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,ESN,-1,-1;TOWN TOWN true false false 12 Text 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,TOWN,-1,-1;PLACE PLACE true false false 35 Text 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,PLACE,-1,-1;PO PO true false false 20 Text 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,PO,-1,-1;STATE STATE true false false 2 Text 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,STATE,-1,-1;ZIP ZIP true false false 5 Text 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,ZIP,-1,-1;REMARKS REMARKS true false false 50 Text 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,REMARKS,-1,-1;R_NUMBER R_NUMBER true false false 4 Long 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,R_NUMBER,-1,-1;R_ROAD R_ROAD true false false 20 Text 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,R_ROAD,-1,-1;OLDADDRESS OLDADDRESS true false false 24 Text 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,OLDADDRESS,-1,-1;DATE_CODE DATE_CODE true false false 8 Double 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,DATE_CODE,-1,-1;DATE_ DATE_ true false false 9 Text 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,DATE_,-1,-1;GPS GPS true false false 10 Text 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,GPS,-1,-1;SECTION_ SECTION_ true false false 2 Short 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,SECTION_,-1,-1;IMAGE_ IMAGE_ true false false 25 Text 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,IMAGE_,-1,-1;FIRST_NAME FIRST_NAME true false false 25 Text 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,FIRST_NAME,-1,-1;LAST_NAME LAST_NAME true false false 30 Text 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,LAST_NAME,-1,-1;LON LON true false false 8 Double 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,LON,-1,-1;LAT LAT true false false 8 Double 0 0 ,First,#,C:\MonroeAddr\BaseData\For_ Carrie_updated.mdb\EM_Rural_Addresses,LAT,-1,-1" # C:\MonroeAddr\For_Carrie.mdb\LIO_MonroeCo_Parcel\Rural_Addresses</Process>
+        <Process Name="Merge_1" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\Merge" Date="20080304" Time="092501" export="">Merge Rural_Addresses;UrbanAddr C:\MonroeAddr\MonroeUrban.mdb\Urban\AllAddresses "Full_Addr Full_Addr true true false 25 Text 0 0 ,First,#,Rural_Addresses,Full_Addr,-1,-1,UrbanAddr,Full_Addr,-1,-1;ESN ESN true true false 4 Long 0 0 ,First,#,Rural_Addresses,ESN,-1,-1,UrbanAddr,ESN,-1,-1;MCD MCD true true false 25 Text 0 0 ,First,#,Rural_Addresses,MCD,-1,-1,UrbanAddr,MCD,-1,-1;PLACE PLACE true true false 35 Text 0 0 ,First,#,Rural_Addresses,PLACE,-1,-1;PO PO true true false 20 Text 0 0 ,First,#,Rural_Addresses,PO,-1,-1;STATE STATE true true false 2 Text 0 0 ,First,#,Rural_Addresses,STATE,-1,-1;ZIP ZIP true true false 5 Text 0 0 ,First,#,Rural_Addresses,ZIP,-1,-1;REMARKS REMARKS true true false 50 Text 0 0 ,First,#,Rural_Addresses,REMARKS,-1,-1;AddrNum AddrNum true true false 4 Long 0 0 ,First,#,Rural_Addresses,AddrNum,-1,-1,UrbanAddr,AddrNum,-1,-1;Road_Name Road_Name true true false 20 Text 0 0 ,First,#,Rural_Addresses,Road_Name,-1,-1,UrbanAddr,Road_Name,-1,-1;DATE_ DATE_ true true false 9 Text 0 0 ,First,#,Rural_Addresses,DATE,-1,-1;SECTION_ SECTION_ true true false 2 Short 0 0 ,First,#,Rural_Addresses,SECTION,-1,-1;FIRST_NAME FIRST_NAME true true false 25 Text 0 0 ,First,#,Rural_Addresses,FIRST_NAME,-1,-1;LAST_NAME LAST_NAME true true false 30 Text 0 0 ,First,#,Rural_Addresses,LAST_NAME,-1,-1;LON LON true true false 8 Double 0 0 ,First,#,Rural_Addresses,LON,-1,-1;LAT LAT true true false 8 Double 0 0 ,First,#,Rural_Addresses,LAT,-1,-1;old_esn old_esn true true false 2 Short 0 0 ,First,#,Rural_Addresses,old_esn,-1,-1;ID ID true true false 8 Double 0 0 ,First,#,Rural_Addresses,ID,-1,-1,UrbanAddr,ID,-1,-1;TxParID TxParID true true false 36 Text 0 0 ,First,#,UrbanAddr,TxParID,-1,-1;address address true true false 254 Text 0 0 ,First,#,UrbanAddr,address,-1,-1;zipcode zipcode true true false 254 Text 0 0 ,First,#,UrbanAddr,zipcode,-1,-1;parcelid parcelid true true false 254 Text 0 0 ,First,#,UrbanAddr,parcelid,-1,-1;ADCComments ADCComments true true false 50 Text 0 0 ,First,#,UrbanAddr,ADCComments,-1,-1;SEGMENT_ID SEGMENT_ID true true false 8 Double 0 0 ,First,#,UrbanAddr,SEGMENT_ID,-1,-1;MODIFIER MODIFIER true true false 15 Text 0 0 ,First,#,UrbanAddr,MODIFIER,-1,-1;SOURCE SOURCE true true false 15 Text 0 0 ,First,#,UrbanAddr,SOURCE,-1,-1;Comment2 Comment2 true true false 30 Text 0 0 ,First,#,UrbanAddr,Comment2,-1,-1"</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20080310" Time="143339" Name="" export="">CopyFeatures C:\MonroeAddr\MonroeUrban.mdb\Urban\AllAddresses C:\MonroeAddr\deliverable\AllAddresses.shp # 0 0 0</Process>
+        <Process Name="FeatureClassToFeatureClass_1" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20080312" Time="071227" export="">FeatureClassToFeatureClass "M:\Shared GIS Data\AddressingData\AllAddresses.shp" "Database Connections\GIS_sdeload.sde" EM_AllAddresses # "AddrNum AddrNum true false false 9 Long 0 9 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,AddrNum,-1,-1;Road_Name Road_Name true false false 20 Text 0 0 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,Road_Name,-1,-1;Full_Addr Full_Addr true false false 25 Text 0 0 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,Full_Addr,-1,-1;Modifier Modifier true false false 15 Text 0 0 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,Modifier,-1,-1;ESN ESN true false false 9 Long 0 9 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,ESN,-1,-1;MCD MCD true false false 25 Text 0 0 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,MCD,-1,-1;Section Section true false false 4 Short 0 4 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,Section,-1,-1;LON LON true false false 19 Double 0 0 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,LON,-1,-1;LAT LAT true false false 19 Double 0 0 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,LAT,-1,-1;Zipcode Zipcode true false false 254 Text 0 0 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,Zipcode,-1,-1;State State true false false 2 Text 0 0 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,State,-1,-1;Date_ Date_ true false false 9 Text 0 0 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,Date_,-1,-1;First_Name First_Name true false false 25 Text 0 0 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,First_Name,-1,-1;Last_Name Last_Name true false false 30 Text 0 0 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,Last_Name,-1,-1;old_esn old_esn true false false 4 Short 0 4 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,old_esn,-1,-1;PO PO true false false 20 Text 0 0 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,PO,-1,-1;Place Place true false false 35 Text 0 0 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,Place,-1,-1;Remarks Remarks true false false 50 Text 0 0 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,Remarks,-1,-1;ADCComment ADCComment true false false 50 Text 0 0 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,ADCComment,-1,-1;Comment2 Comment2 true false false 30 Text 0 0 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,Comment2,-1,-1;ID ID true false false 19 Double 0 0 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,ID,-1,-1;Segment_ID Segment_ID true false false 19 Double 0 0 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,Segment_ID,-1,-1;Source Source true false false 15 Text 0 0 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,Source,-1,-1;TxParID TxParID true false false 36 Text 0 0 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,TxParID,-1,-1;parcelid parcelid true false false 254 Text 0 0 ,First,#,M:\Shared GIS Data\AddressingData\AllAddresses.shp,parcelid,-1,-1" # "Database Connections\GIS_sdeload.sde\monroe_gis.SDELOAD.EM_AllAddresses"</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\ChangePrivileges" Date="20110926" Time="145433" Name="" export="">ChangePrivileges 'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_Airfields';'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_Airfields';'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_Airports';'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_AllAddresses';'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_AllRoads';'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_Campgrounds';'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_Cemeteries';'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_Clinics';'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_Critical_Facilities';'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_EMS';'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_ESZ';'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_Fire_Departments';'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_First_Responders';'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_FortMcCoy';'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_Hospitals';'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_InterstateMileMarkers';'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_Law_Enforcement';'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_Mobile_Home_Parks';'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_Railroads';'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_Towers';'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_Water_Points';'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_Zipcodes' khehn GRANT GRANT</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\ChangePrivileges" Date="20120403" Time="074255" Name="" export="">ChangePrivileges 'Database Connections\GIS_sdeload.sde\monroe_gis.SDELOAD.EM_AllAddresses' rrader GRANT #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\ChangePrivileges" Date="20120405" Time="124459" Name="" export="">ChangePrivileges 'Database Connections\GIS_sdeload.sde\monroe_gis.SDELOAD.EM_AllAddresses' rrader GRANT #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\ChangePrivileges" Date="20120405" Time="124614" Name="" export="">ChangePrivileges 'Database Connections\GIS_sdeload.sde\monroe_gis.SDELOAD.EM_AllAddresses' rrader GRANT #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\ChangePrivileges" Date="20120409" Time="142653" Name="" export="">ChangePrivileges 'Database Connections\GIS_sdeload.sde\monroe_gis.SDELOAD.EM_AllAddresses' rrader GRANT #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\ChangePrivileges" Date="20120410" Time="155345" Name="" export="">ChangePrivileges 'Database Connections\GIS_sdeload.sde\monroe_gis.SDELOAD.EM_AllAddresses' rrader GRANT #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\ChangePrivileges" Date="20121018" Time="095414" Name="" export="">ChangePrivileges 'Database Connections\GIS_sdeload.sde\monroe_gis.SDELOAD.EM_AllAddresses' khehn GRANT GRANT</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\ChangePrivileges" Date="20130823" Time="085128" Name="" export="">ChangePrivileges 'Database Connections\Connection to DEFAULT.sde\monroe_gis.SDELOAD.EM_AllAddresses' jerickson GRANT GRANT</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\ChangePrivileges" Date="20150414" Time="140207" Name="" export="">ChangePrivileges 'Database Connections\default.sde\monroe_gis.SDELOAD.EM_AllAddresses' cengelke GRANT GRANT</Process>
+      </lineage>
+      <itemProps>
+        <itemName Sync="TRUE">Monroe_Addresses_2016</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">583944.845011</westBL>
+          <eastBL Sync="TRUE">758056.266145</eastBL>
+          <southBL Sync="TRUE">299303.086843</southBL>
+          <northBL Sync="TRUE">458575.753534</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\Operation_Unrestrict_Data\Monroe\Monroe_Addresses_2016\Monroe_Addresses_2016.shp</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemSize Sync="TRUE">0.531</itemSize>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_WISCRS_Monroe_County_Feet</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_WISCRS_Monroe_County_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Lambert_Conformal_Conic&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,671000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,400012.278],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.64166666666668],PARAMETER[&amp;quot;Standard_Parallel_1&amp;quot;,44.00007392861111],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,1.0000434122],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,44.00007392861111],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;Esri&amp;quot;,103441]]&lt;/WKT&gt;&lt;XOrigin&gt;-119235600&lt;/XOrigin&gt;&lt;YOrigin&gt;-97801600&lt;/YOrigin&gt;&lt;XYScale&gt;37559230.495823376&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.0032808333333333331&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;103441&lt;/WKID&gt;&lt;LatestWKID&gt;103441&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20181203</SyncDate>
+    <SyncTime>12321500</SyncTime>
+    <ModDate>20181203</ModDate>
+    <ModTime>12321500</ModTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKCQOpxVbUb6LTNMur+dZGitoXmdY13MQoJOB3PFeO+L/ij4d8XeDlstIhvLvVpri3ENk6
+PGBMWGA7D5WxzxkgkDggUAeqzeKNAtra4uZ9a0+OG2m+zzSNcIBHL/cY54b2qna+OvDV5PqscGrQ
+uNKQSXkmD5cakcHfjaenYmvnnwFr0HhuTVNA8cmSHR5VlNzZXNqzuLk7Arg7CQSAcHcOeRjjPQeA
+bvS7rRfH8WnnULy4bT5LeCfy2CyW8UWyHOAMSEHp1wp98gHsL/ELwutzpluupiWTU2ZLQQwvIJCH
+2HkKcDdxk1p6B4i0rxPp7X2kXQuIFkaJztZGV16gqwBB+teEaXpfi3w7ofg9oNR0OK5imeXThcSO
+XlW5RSYnVVPG8sNxYDJHI4rp9Fn+IcnxEvdPvZLSxuBpLXCpaxBrKacnYskhxuBz1xk5T+7xQB6j
+rHiDTdCk09NRuPKbULpbS3+UndI2cDjoOOvTkVat9Qs7u5ube2uoZZ7Vgk8aOC0TEZAYDpxWNoXh
+u906UyarrtzrJ2RMq3cMeIplBDSR4Hy5BHHbnkk1dtNAtrHxFqOtQyzia/jjWaHf+6ygIDgY+8Rg
+E+woA1a5ufx74bt7Bb59RX7M2of2b5gjbHn5wR06DH3unvXSV4J8XfB+p6LpetanoFxLd6XqMm/V
+7Sdll+zMGDq8eeV5Yk46bvToAevxeLtGe7W1luHtZnvJLKJbqJovNkQZbZuA3DB4PQ9qd4m8VaZ4
+Tsra61NpQtzcJbRLEm9mds4wPwNfN8VuPE3gCSTxD8Qkt5tPjMsGlXVrh0OB5e0/eKkED5QQMj0q
+zP8AEfSPGdnBJ4s8HzX40+2EN1f214weNW43rHwoYvt5JPX6CgD6J0HxPpXiLRrHVLK42w3uVhSb
+5HLjO5MHqw2t0z909q2K+P8Aw5ILPRdI1HRLO5uvEdhem5C2tnNLmDOAsjE7VyQ+NinjqQc17jpv
+jy0/tLU9Z0weIdW0ue3S4a2jsWkWJxJ5TGN2I4AUkoB2Jz1FAHp9FcboPi/wxH4KbxPFfTxaZc3D
+SStdSNK8MsjgFCMttwxHyjgA5HBzXXTTxW0Ek88qRQxqWeR2CqoHUknoKAJKK4bQ7t/Fnia41vSv
+EmoRWNhcvY3OlSRR+W7ICCR3AJIOTzwRwOnc0AFFFFABRRRQAUUUUAFFFFAHm/iDxH/wlPiq38K+
+HvE7aZPbzyxan5aqkpGwkCMuPmOQwyvI69BmuKvPC+r+DJPsD6taalbjXItWito42n1Gdt2AXG0g
+52nngbv4hnFeieKvhjYeLfE0Ot3eq6lay29sIYBZSCMxuGJ8wNgnPIH4V5v4m0f4jeHfEFvf39yd
+d0yGQSJfxWUMs9skZLBsMo2vtL4ySMt1zigCWXwvrd58BNF022guvtzagbq8SMFZxEXkJYoxUsQC
+px34x615ZrF/ruo+HNAuruKytLC0L2kEkXySMUWJHaQKdx4CDOM4yPSumOgWnifU/EeqW/i0alcw
+aY96ZZLZIzdgIVkXb1jZQAM4Ocg8ZBrjms9TaHSdb1Oxv59GGIo5rdREdsYBbawXAIJPzEHJBOSQ
+aAOn1FfCF74tH9g3uo29mLuxithaJKDFGeJyN3IYNsI9zwD1Hq/hTxP4B8K+KIfC+lPf3F7cXD2r
+Xl3GzGJ8giLewB2s+SABjcST1zXmV1b/AA1i8MSXGk6j4jm1SKVJTbzTGBgQ/dxGYwV3MQfUnnnF
+dbBN8ONN0qLU7HxDr96dJuYJ7XS5rhwWmCs0aqhQYDZbJHv68gHvlFVtPnnudNtZ7q3FvcSxK8kI
+ff5bEAlc98HjNWaACvlrxdaPqPxR8T6b9gv7i5uQ7JbpeJarGRtxIQSwddgDHkcEkgY4+pa8Um+H
+eqeJvEGpeIPEOuNpy3cFxHLpcKosghXMaZJdkxhUbJ79weQAeVeM5Jb67K3N1qOpTaVII51uIo3T
+y8ZAWeHOAdp4OOuRzmsrSdI/tDU7C3gs4r5HnS6ltLaKQuqEFmiL4z9xOOT19c1tTWOv6ZodxPo9
+vcQaXczzRXelyqG3JFgCRkLHfwzZZQADGSMYGKWh+Mb7wpoGqWWjastnNOxVW/s8LNNHxsbzMkqc
+M556Z4JyNoAzQ/FGtaFq5n0c39pqEYmhitxGJ0VWbf5IjZQVwdxJ59gOc+w/AjxAW0htNng1l5bi
+aWUSNbf6FDg5Kow+6SSSR0z6d9z4W6ZZ3Hh2z1Tw/r2oPbTX0tzfreW8ZluJCgVlZsZHzAPkE9cf
+TH1LwleeHPih4XFnq8z6Xd6pcXUVpIuBbsybpAJSctu5wn1685AN7wTrN54tttTaC0s4LNNaYyWl
+1pzR7YOvHZpiwDknOCee1dvrmkrrmjz6a87Qxz7Q7LGj5UMCVIcFSCAQcjvTdY1/TtCNiL+Zo2vr
+pLS3VULF5XPA46fWrl7eW+n2U95dyrFbwRtJI7fwqoyT+QNAFPSvD2kaHLeS6Xp1vaPeSebcGFNv
+mN7/AK8Djk+prTrmtH+IHhTXr1LPTNctLi6kd0SEMQ7FRk4B6jHOehwcdDXS0AFFFFABRRRQAUUU
+UAFFFFABXGfE/S5dW8HvDBpt5qNwkyvDb20gUGTBCtICRuRSQSPUDtmuzqjq+r2OhaZLqWpTeTaQ
+7fMk2FgoJABIAJxkjmgD5n8SeD7y4u5INB8LX+kahpWnBtYcXoEUiBcfIcnduVT0OOoIJBJ1tc8G
+6fpXwns9ei1u60qwvdHgSawUmYXl0T5iZ3HABJJ4A24J9QdzW9dm8Q/2n4R1Hxk8V1A9w9pcWACx
+38bRGSOOVwAoIBwVBww4PODVrwnqHhvxv8I4LPxPbQQW9iyWMd0IfKRJnG1PLOT843LuOAuTnGKA
+Oc0t7jRfBniK7s9HvdNs9x07W9MScSeQzIB9qhDDPG77ucEEHOBkY0+mavb6Pp/i+SKXVNDvreC2
+lu7tI5bq0USGN1UEHIKhkBwchxnB4Gx4c8U6np/ibUJr62juNQ+yW+i39jM6qby888xqcDdvIhDZ
+bGM57EZ3L7xZp+m/CvQrTwp4jlsiNUitXnnRA9orF3IlVRtwB+DYPJ5oA9n0yW0n0mzlsFCWbwo0
+ChCgEZUbRtIGOMcVbrF8Kanaar4dtJbTWItX8pBDLexgDzZFADEgdCeuPetqgAr55/4RK18SQ+Lt
+F0rSNOfxDaau6lxcvGI7QtuXaTlTymCuOMnjNe93up2Wn6ZNqV3dRRWUMZkeZm+UKO+e9fNeg+Lb
+KLxXrL6vfy6Ppa376pcfYmLSX0hkXyog4VWMeMsMdQSeOoAMuHTjZNrPiHUNB8PW9pZS/wBnSaNe
+OwkjyACybOS2WzvOT3HQVzXiG+tZFsWtdJ03T4ZLH/U2s/nM2WIVpCckSYAPODj0ziul8X2Gg3kW
+va5p2s2c1zFqbSCKeBoZJEnDNjDg78FflxjAyT1GOG83TLG+sbi2je9WIh7i3vIwqOwOdvyNkqRx
+1B/OgD1L4f8Ahr4i2NgmpeGbVoYJmDRyXF2gjmjKMFPl9wCzN9SOuKg8T+IPEkHjKGx8batcImiZ
+njm06OCOcllwCh3A4Y49Tg8gVsaR428VeKJNMn8G2aWUOmYt00O1JaMlgcSTMdo8rAI6nDL2LZrn
+/HnhW8vPiTeSX8up6hYq8bX97awee1puUnyvlwPlGAMgcY4oA7Lwnd+J5/A/jbxdrF7cW2oRxeVa
+lju8p4I8FgjZUE5A3DnJbpUOuSeIdW0vwTqVt40g1E32qWvlrLbwqLaYoQc7SN2DvBXHJ464zwMm
+j+JPDq6nosGsTW2ktbfbUjMqosscxSIGWNiCrFWHDDII46Zo0nTZLDSfC+tHSl0CJ75CviOS4adW
+ZS/WDPAyB2H3Tzg8AHbeBof7F+JWj6del57/APtTVTNc/ZpEV3aNBlcgDHyc8MBnryMfQtfN/wAO
+B4hg+J2lWsmsrPpNzcXl4lxbMojvi0YLMQOeSEyrD5SCOCK+kKACiiigAooooAKKKKACiiigArj/
+AIoW+pXPw+1RNMO2RYzJMfPEX7pQWfkqwIIGCpxkE8+vYVzPxC1CXSvAGtXkMRlKWxDKr7W2N8rE
+Ha3IUkjIxxzQB474dTQr2HTfDsOnWmoeGNMshqupXcsDm5Fw6lvLDR8bz8gCgnIQjJxiqGs+INEf
+wp4u8Mhfs2nPcJfaG81m8YVty+ZEqleCpDD8XrkNDsNQvtHaKxsL/V9DtY3u763Qm2jgufL27y+T
+vKgBgOO/AGc0fEt1fm30+XUI75nmthKLiW9MyTy7iPORhlfuqFK9QQcnPQA734PavpU2sa7rGsaJ
+JfalZxTao2ogBhGwyWUD7oJHKknqDjFYejXVh4k8T6jd2MiW9xea5Z3dvbX8qdTJIXJzgMoLjgfN
+g9+a5G61d7LxVfXPh1/s8UskkUS26nbJExI2lGzkEYyvT0HStvwz4Uafxja6fqNtd3ujtNF9rn06
+1LqC23jdt+6GYKSO2SOooA96+Cr6k3h7VhqOZj/acrJeIT5M/QMYgQMICp6ADnjoa9B1OO9l0u6j
+06WGK9aJhA86F0V8cbgOo/zz0rC8N+AdE8Japd3ujC6t0uYljNoZ2aBMfxKp/iPcknvjGTnqKAOZ
+h0HTr7SZPC+o+HYV0u2iiI2oq28rnJby1DFl2sO+Dz361w/jz4Y+CdE+G13LHpjQ/wBngzpNFKFm
+kY/KFaRg3BLDjGBgV69Xlnxr11bHSbHSRqU0S37OlzZWaqbi4hKkcEghVB6569PWgD5q160nh1Iy
+f2M2mwTqDDCNzowUAFkc53AkE5BI59Kg1SfT52jNjpkliyArMrXBlVmzxgEAr9CTXQJrl+niXSNO
+stQa1sLG/EmnpfOkiWm9gdz4GOOpHbnoaXxnNpH9maXaadr0eqzQy3Elw0VtLGoaRwcgyfe4AHTt
+1NAC6HqGoamlvBHrGuvexRNGn2USFbOFRkH5CSykgZAAxgHNaul3d/p3hLVrpfEXiS21eW8SGZEV
+xEmDGMzHlgxBIXoTsI9a5AXF3oF2q6Vql9GZoVacQb7dwDklGHfjnPIwa73UNW0rS9AC+GvGetJc
+PI+oCPULXbDduG3ZVscsChGTkFxxigCKfVhH8QZ7zSNf1SS7ntAHmvrTbJLN0jikRU5BxGcn25BA
+xL4W8beO9KjPh+2ht5LPQY53vobyINGsasSxdgN2QScbTk8AA857ea41bwx4a0z4haG9nqls9qj6
+jLfTSfaZWc4kVS3yqm8KQqgHIOOCQeQ1XSdP1Pwxd+JfGq3Gl+IdevfM08QRPIfIUJuIh3D5cEgF
+jnkduoBufDfV7DR/Emg2Vz4c0r+1LjMMd3pt9+9CyIH3Sxk8jaR1ORg4GcA/Q1eKaLP4gk8X+EtJ
+u4tOjENzdD7XBaIZWgtoljA3F3KhjlSThu3GMV7XQAUUUUAFFFFABRRRQAUUUUAFcb8UrBNR8BXc
+MrlYlmgkcC3kn3KsqkjYhBIP+cdR2VcT8WtU1LRfh1qGoaTcTW93C8RWWIZKjeM5+U8Y9cfXsQD5
+w8L6r4l8LWuvR2um7rGS2a31SCXMb7TkB9pO5WHmAZAwMjI5rD1Oz8QRaPpg1AzyWFyoksi05aNR
+jGAM4U4AzkA/KO1aWrahqjXUuq2VxqU91qdq51P7RZjCGQkMo4xtIThhj7vbbXN38Qjv5YoI7gRM
+wEIuF/eMvRT04z6D6c0AQ2ltcXl3DbWsbS3E0ixxRp95nY4AA9Sa97+B3h7Xr+1i1GfxNfQabp9x
+si063u8ruBYuksRBAByD6859CPG7vTpzqFvJDND9puIIZbaK3BLySEBdirGDtfcDwcdBjqK9I8N6
+tqvwq8XynVBfCK5ZZNQtJVJMsbqp8+PA2ko+8HnuB2JAB3HjbxlqPhzxjY6DpM99fyxSyateJLdJ
+Czx8kW6FlwyBdx2jJ4AByOOZ1T4geMbuCyvfCEXiOdTNJezxXNpHOnlyM3lpmMFggCPgHHBzngUe
+LPipaeI7nVILPwY1/JFBNb6dqgjYywbkALbSmVIOTnIxj6mtP4dGXwv4n0yDxBpVxpI1vSY7O1d5
+8BpIich+AUdgVIGcgnHU/KAd74L1bxBrWl2dxf61o8lybrfdW8EDBo42i3CAgsCsik85BOBz3z5V
+8c5NTOoWFrqUVjcLbf6Q9/FZMjRRPK6rHlm2uCMHaOcoT6mqMmia9c+LbCXQ4zBrmmyzaZJNEmf3
+qFvKll3hmAaJj8zZyI+COyeM/D2vXnhzVLnXJNYbWNO8u4uVvZWlspUJ2ebbbBsDHjKt0UtjpgAH
+AaXfrZWK6jb6WDPp915i34YLksQVVo8MD91unA3fTOnY6Zo83gy4k1rU9TiltI2axhii32rSyRl1
+BkAOxiVAKnB464zjNOkXFvqK6tPbySacGW9zMibriHzUQso5U5Z8beRwQc4r1G08OaVd+D9Xsoo7
+HS9S0XV7y5bT5cXDzosTeWNsgBPUBcgg4zgk4oA4Xwouv6/qWm2GmXN9axrOv2VlV5Io2ZQkmX2k
+rhckdQOelaOkr4Yhg8Q6Vd2Wt6nqcLXVvpQi3AFV+cEoPuFGQMcZ+904qj4M8X+MdB0DUbfRpLub
+TjBIZNsZZbPhS0qseFI3dM98nBxXReHNbi066h1O103VNc0PRZ3urg3oijkWa4cKkq5yXJUKwQYO
+4k5oApSarqWsTaV4e8V67qM2oHWYrSW2aUxwJbKVyzbQCXLtgMQfuH0rX1zQda1/VH8MjVl/sq31
+JoLOTXr0TPJcxKcoGQblV0cEgjqoGc8Hl/FF9pXi/wATafY+FLJNJs3EFhHb3aBd0hdyXPUAqZME
+53HdxnmujM2mePbbQPC+o3GoQeJ41ey+1ybpbcNCzAErvGWZeC/OPfqABnw31l7Hx34d0a7MUDaV
+9ogE9tFJMt15z4wSP9ojD8r0/H6crwz4Q6ZcaV42uraDSbG0NpbPY6kPPZpjIjApMqvyEk9F4yCT
+j5RXudABRRRQAUUUUAFFFFABRRRQAVl+ItJn1zRJ9Pt9Sn06SXA+0QKrMBnkYYdCOK1KzdevNQ0/
+Q7q80uwW/vIV3palyhlAPzAEA/NjOBjk4oA8Mk8JX9l441fTPECtreu6pp9wuhanNKRG+InRkdc4
+DBTjHYn3BGB40srPQ/DyaT/a13rOsaWbQ3tvLGZIrIBAGWOYLlRuwuNwGCeNwro/E+p6JpXjbTV/
+sibT7F9Fleyb7UbcmdpDLsZgd0R8xWQ4wQWIPy07T/Cw8WWw0OCOGLS7cJqevSTXPnXTXrB8xeZk
+YIXj5gADnOecgHKaJ8K/FEvh608Y+GdSikvGj85LdA0c6dVIUt1Iww6844JrR8U+Kj4h8CaZbeIt
+Vnt9dtb02F9p8EAW4khJGSwPJOUU4GFJIGMgGuftfF2tJE2oQ3l7bT20dvZ6hqWmyiXzIjxGro2A
+ZAAw3qwBwO/zHpL34iazptjpNzPDHfytM11FraW0ZkvreMhhAcKfLYELv5yoUdeMgEtppniDwPKb
+HWr3xRb6LLdJLbDQ4Ny3DHkAlm3xMx6p3J6cVa8XR2Xizw5reu2fiLUL/UdP1BLr+ybqEI9nEG2m
+MRNnGNxJYZB2gMMjjT0rU9V8c+Frd38a6G+s+a1/Jpt3bQyRxlSBEq55TBAyeTl+/OeW8cr4vlvd
+K8Z6pNZaLdzoBapYMDLsVGZ3LoCxXaB3cAP2HFAGxe3UvjS5u72DxV4j0tzFcXbafdWPlRiFUcFN
+4wh4AGWOMHrkVY/4R/WG8EeH7iTxfqDaBc6YXuLT5BJ8sIKRRxBT5ozwVJ5HU9657xD448Safrz+
+H4PHIvLWSRYXvtkZjSJtqMHynDrjJIJyGJyDmtHxPqtlNoth4W0XSr2CHRbhY9N1uZlVDeRy7XBk
+wyhG3A5yBu2g4AyADntZsdY0nU9OTXbrUraS409Jri2s4Um+x2qS5VWiAVVChC3sccda0dK0PTdY
+h+IOqX0lvrc9rZfaINYlciM703J+6CjEmFOTzgjGO5iuo/G2meP9Q0ayvp9R1u+toEu8xRypJGY8
+SK5dVyF3jBHGBz7Y0tho2m2/i211m5ltHtNttaaVbMyLPcomzznGT8oPzDced5x6EA1PFOv28Hhm
+xbQH8uxvNGGl3j2iGG3+1KyyycMnOQW5GCdx56it3Wtd0nw5410y60rUnkM/h9VtWsImcm5Mflxt
+JEx+fcqqFXIwdpI6k5uqa34ItYfB9xYSzXn9kvarqNmgLW7qVkaRljJUFwwYkgBTv5zkip9XmeS+
+v/EiWMsXiq7aG80ABQfKssAb5UBaJFEeRlj/AA5IXqQDmYYbjT9VtdP8TaTcXEGlWR+0xQeXKyRS
+Oz72dW/cuHdfmLZxweOG1JLvVngXw/FY3Mmm2UMt/Cuqb7W4t41QvIBNGQJU+bGccjoFyCMy304z
++FrCCx0y+tY9bljtjef2lH5Es5wv7xUjLhd4LBGPHzY6V22p+KQLG4uLaO5uNdmhXSYL+7tWni1C
+JCUlFtDyNzOuGVuCOeCcUAXtE1bxC/j7wx4s1q4sLGLXbcWiRWUMsqzxfeRWJB2vlgc56Kc4wQfd
+a+avhrdTjVtBtdZudRt7KO7M1jZm0kcNOWdNsbgZjRR95SSOCc88fStABRRRQAUUUUAFFFFABRRR
+QAVieLLfWZtCd9Bvo7S/gkWdfNA8uVVOTG5I4Vhxkf41t1j+KvNbwtqMMEFzPJcQm3VbZAzgyfJu
+AJAwN2T7A0AfPGnXV/qOp6zO9h4djsdPuQdbdmR42iab5hBuBKqwH8IyW5ByQBv+FLbTbXTvF9nq
+ekz6ZFqlg2rwvFclCbQSN5abIlITGM5UNwx4xxXMv4F8U+GbfXNBsptPvnhhjuL20kjwrRkBlmjZ
+wu4qUcZB4zxyWxasLPVrJdK8P+IvEg07TtQtHLMJIHRNNCh9qy45Z2BXCk9M4INAGp4Ijt7n4bap
+c6FFpia1qsjrqs9xdbItOh3yFJCucrjHy477T2rmtHXVtG8U38vhiW1vYvDzJcva2tyXiuIhEI5p
+l4AYsAMgHILnGcZFS+itDq3/AAiPgHVI9S07WpTHJFPa7XUh/k3yYBZVILqR0BOR2re+HMb+HvH+
+o6Tp13YGKK2uYYdVe0EskkiRqWEO1vnIYhgvJK8e1AHpGt+Jvhvr3h2WaYaMb1hKsNvqEYilSYfM
+Q4wWQFkBJIweOucHjtS03xb4qXQfCp/suy1vTNJmuRLBOF3Iz+SAPLXagZNp4ODntkVRtPiF4edP
+GF7q8Kf8JFNZSW8F00GI7ogPGn7k5MTkMAwJI2g++c/RrmPQh4R11/EmqmDymTU1to5GS1ihkysT
+HBOGkIBBOBu4+UrQBS8SaP4rhtpdC1HS7B47G3Ekr2FlG7WokdioZwC2CyhiRk4PUZOblrHF4L8S
+N4E8Ta1e3Xh8QNPdxWMLxiOUqsgY4G9wNi89Bnt81ZNvffbZptQjs9ZsYP8ASJb7ULKSUTSq4eRI
+zKRtaPCpy43HPcCul8NTa1beONF13XvENnNazXLabNJJPHPJEhVysMhKAgFgRuHHPagCHRfCOqMb
+zVfA140FjeXMdvFrF5fIs4jxvfgfdXcEyOXO3GBkioF8S6vq11430izTRrddReM319cyJDFGwHlP
+sO0E73Pyk9Mknkk1N8VLrw4dX1nRdL8M3cd7HMoadLgpGbiRgxkMR6nHyq3AIc+1X7XUvCBh0Lwr
+d/De9u9WtoE/dblE4kbLNvwwYrklsPgYboBQBzy2VlrPiie013T9YubGztzZxLbW0UMtlLnAVyD+
+92qN27cc9SME1OmtXZiiVPEmsatY2xaOx06YPa3EshXbbSR7cmVdw3YyCuCcc/MniC0v9Y1fTdb1
+nwPNYwQn+z7mOzty32xl2oERNw2naxCsCc7cjO3Aqabq+pX+ralf2F3LaHTdAEsNtpcwQQxIyjy8
+yKSCquWJ+Y5DYJzwAbnhy10rX7bSxdavpeleLtDnW2t11KEKtyq8iOSJsYZWYqCMsSucZwRY0uWb
+w7brBNG91faRq/2fT9IjvCsQkjYvPO0gIABWbAL4ABAYNg1yn2z+zfDdzps11o8tnq6reOGg+0zW
+jNHuAaTCBZHxwozjbxgdeVTW9amgvrU3s93b3KRzXiDc3mhNhG84yduByeBg+vIB6/Y2GreH/izp
+kmuvqdzf6vOl0kMU32e3jdyQwcqSHaNFI2jgjAzjg/QdeN+Ffs/iHxfpHiaz8QDxJJGJI5bFysJ0
+1XPEixkjG1cISF+bgjmvZKACiiigAooooAKKKKACiiigArB8Z3eq2XhHUZ9EhaTUBERERJHH5frI
+TJ8uFGTg9cfjW9XJfEy2t73wBqVpdDUWjmCIE0+LzJnbeuFAxjBIAJPHNAHguoeJJte8d2lwmnXO
+naveXDafJf3k7TQbXXytqxsgGNrFscct2HFU18Davor3i38yC4tWInsTd28c8tkyFN6SsW4AyCuM
+Dgj27nwZ8MLrWfBdzF4livIILS4mez0qO2SF/NH/AC0ZiB5hP3Rztx36Y5jVfBOrYv5xp1wZLS0t
+IpU1PTA7yOU2R+SYA3TGCCSOBu3HgAHNw+IorT+x9U0e8ksJrS+eQWskpkitU+ZlVFA3MpUsGOeS
+ecZzWrp/jCGPXljW1ju9HvNROsW9j5P2q4jlEuNgIcGNmCE4ycArndmsJfh54knN2Etbia4ttNhv
+JIoY2dwJCoSMjghtvOMH7pq5YaD4p8MCPU9Ot76KSRDaxXcFq6tEz7XywMW7BQ4+Xnr82OCAegXN
+le67rOpeJfEbaVo+lz27A21s9vNdRkOFCg4yZZBHKoYEEc4PG2s7wfczeLbVvBF/4ikg0q/MssCf
+ZQZZSrLIEEzDDnadxz8wK4+q32k+JvCLpqVv4ab7ZMqJq0bWaTafOfMZVkVVywY/KxChcZ6c7aju
+NO8d6Jp8fifSfDdha2c+nMiwWSOWt2nkBcohxIj4wOCQB0OMCgDO8JRaKb7U/D2pa/NoQhkkj0+S
+aaZJ1lyQDIobyQNrMjA4J6cVe/4SLwVrngbXNO1bS4l1iztvPTVoIsteuriNJdx+cF2K5DdQxPHa
+W0lvtLt/D9ovwnvbq80f94J28wPJMpHmsdqncpZlIySAfbisfTPA/ifxHqEl5P4fvLPypIje2axC
+2+1W8spYqnC8qOMHOAo5GAKAKGgWmratPJ4yhu7ZJ9Kms4Y1vwmG2KF3uzlQFAj5I3NntxmuzmsN
+W8Yax5WtnSIYLqc3J1+O9jdre32xyfZUZCMlSRgvnjcQMZzo+LdPk8Qa5/bCeDL6O5cy6fYJ9lVn
+uyECiWbeCsKoc7SwJYem3Igt/hMtlpmsav4n06ys7dyzPBYRPczRpsI3RHOFbe2T8pGB/CBQBxV+
+I596y609j4Ie/nispJFN+6NEoAMfGULAjA3D16AVW1u78KYSx8Kya0jvcR2d3qt7dmOGWHnIyM4D
+EBuVPCn5eK6e48OX+vWFjptxo17ZRiVLLTNQawlCwRq2GWWJGAjlZ+Wk24PPPpW1r4a+K9L1e3t9
+H064v10oWjuzAtFdShWYyAOQNqgCPaM8AdM0AV9C0XUtG8MbrrVprbw1qJcNf6ZCt7bqdoRxMjLv
+HAYbhwCeMDkmmXOlz6zHbXFml8bC2/s+eeC2Atp1Uu0D+fG/7jcAgZiCMBieA1dJonw7vruxtdbv
+7TWLTUJdRcXy2RNvNBlwoEKD5PKJZ2Zuw6dDnPi+D/i291Q2DWMVjYrcs0d/dXQunEKAbInXcFdC
+QCBs6jnAoAf8H9Cn8O+Ir+XUNXOj3VpfQ2U0DyRyQ3fmBiIeD/rM4IIJx6V9HV4T4a+DuvaD4+s7
+gpo0umWREovHt8tMS4Yr5e47XGWCt0AA6kDHu1ABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABgZzj
+miiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP//Z</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpOrgName>UW-Madison</rpOrgName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum tddtty="">608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpPosName>Metadata technician</rpPosName>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+        <rpPosName>metadata technician</rpPosName>
+      </distorCont>
+      <distorFormat>
+        <formatName>ESRI Geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Monroe_Addresses_2018.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <transSize Sync="TRUE">0.531</transSize>
+    </distTranOps>
+    <distFormat>
+      <formatVer>1.0</formatVer>
+      <formatName Sync="TRUE">Shapefile</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Monroe County Land Information Office</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-269-8623</voiceNum>
+            <faxNum>608-269-8958</faxNum>
+          </cntPhone>
+          <cntAddress addressType="physical">
+            <delPoint>14345 County Highway B</delPoint>
+            <city>Sparta</city>
+            <adminArea>WI</adminArea>
+            <postCode>54656</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Monroe County Land Information Office</displayName>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Addresses Monroe County, WI 2016</resTitle>
+      <date>
+        <pubDate>2016-01-01T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <resEdDate>20160101</resEdDate>
+      <citRespParty>
+        <rpOrgName>Monroe County Land Information Office</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-269-8623</voiceNum>
+            <faxNum>608-269-8958</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>14345 County Highway B</delPoint>
+            <city>Sparta</city>
+            <adminArea>WI</adminArea>
+            <postCode>54656</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Monroe County Land Information Office</displayName>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Jeremiah Erickson</rpIndName>
+        <rpOrgName>Monroe County Land Information Office</rpOrgName>
+        <rpPosName>GIS Specialist/LIO</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-269-8698</voiceNum>
+            <faxNum>608-269-8958</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>14345 County Highway B</delPoint>
+            <city>Sparta</city>
+            <adminArea>WI</adminArea>
+            <postCode>54656</postCode>
+            <country>US</country>
+            <eMailAdd>jeremiah.erickson@co.monroe.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Jeremiah D. Erickson</displayName>
+      </citRespParty>
+      <otherCitDet>This metadata was updated to reflect that the data is no longer restricted and has been opened for public use.</otherCitDet>
+    </idCitation>
+    <idAbs>This data layer represents addresses for Monroe County, Wisconsin in 2016.</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. </idPurp>
+    <idCredit>Monroe County Land Information Office
+</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <idPoC>
+      <rpOrgName>Monroe County Land Information Office</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">608-269-8623</voiceNum>
+          <faxNum>608-269-8958</faxNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>14345 County Highway B</delPoint>
+          <city>Sparta</city>
+          <adminArea>WI</adminArea>
+          <postCode>54656</postCode>
+          <country>US</country>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Monroe County Land Information Office</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-269-8623</voiceNum>
+            <faxNum>608-269-8958</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>14345 County Highway B</delPoint>
+            <city>Sparta</city>
+            <adminArea>WI</adminArea>
+            <postCode>54656</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Monroe County Land Information Office</displayName>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Monroe County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Point</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Street Addresses</keyword>
+      <keyword>Location</keyword>
+      <keyword>Monroe County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-90.973374</westBL>
+          <eastBL>-90.309955</eastBL>
+          <southBL>43.72334</southBL>
+          <northBL>44.160714</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2016-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements. </suppInfo>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Street Addresses</keyword>
+    </themeKeys>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-90.973374</westBL>
+          <eastBL Sync="TRUE">-90.309955</eastBL>
+          <northBL Sync="TRUE">44.160714</northBL>
+          <southBL Sync="TRUE">43.723340</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <resConst>
+      <Consts>
+        <useLimit>None.</useLimit>
+      </Consts>
+    </resConst>
+    <tpCat>
+      <TopicCatCd value="013" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpOrgName>UW-Madison</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <delPoint>310 Science Hall</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpPosName>Metadata technician</rpPosName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform to UW-Madison's data distribution plan.</stepDesc>
+        <stepDateTm>2018-12-03T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+          <rpPosName>Metadata technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum tddtty="">608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="001" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <idVersion Sync="FALSE">9.5</idVersion>
+        <identCode code="7621" Sync="FALSE" />
+        <idCodeSpace Sync="FALSE">EPSG</idCodeSpace>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Monroe_Addresses_2016">
+      <enttyp>
+        <enttypl Sync="TRUE">Monroe_Addresses_2016</enttypl>
+        <enttypd>Addresses Monroe County, WI 2016</enttypd>
+        <enttypds>Monroe County Land Information Office</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">19882</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">FID</attrlabl>
+        <attalias Sync="TRUE">FID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MCD</attrlabl>
+        <attalias Sync="TRUE">MCD</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Date_</attrlabl>
+        <attalias Sync="TRUE">Date_</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">9</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>old_esn</attrlabl>
+        <attalias Sync="TRUE">old_esn</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">5</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ID</attrlabl>
+        <attalias Sync="TRUE">ID</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">8</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Last_Name</attrlabl>
+        <attalias Sync="TRUE">Last_Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Segment_ID</attrlabl>
+        <attalias Sync="TRUE">Segment_ID</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">8</attscale>
+      </attr>
+      <attr>
+        <attrlabl>First_Name</attrlabl>
+        <attalias Sync="TRUE">First_Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>State</attrlabl>
+        <attalias Sync="TRUE">State</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>TxParID</attrlabl>
+        <attalias Sync="TRUE">TxParID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">36</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Source</attrlabl>
+        <attalias Sync="TRUE">Source</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">15</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Modifier</attrlabl>
+        <attalias Sync="TRUE">Modifier</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">15</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>LAT</attrlabl>
+        <attalias Sync="TRUE">LAT</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">8</attscale>
+      </attr>
+      <attr>
+        <attrlabl>LON</attrlabl>
+        <attalias Sync="TRUE">LON</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">8</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Full_Addr</attrlabl>
+        <attalias Sync="TRUE">Full_Addr</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Zipcode</attrlabl>
+        <attalias Sync="TRUE">Zipcode</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">254</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Road_Name</attrlabl>
+        <attalias Sync="TRUE">Road_Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>AddrNum</attrlabl>
+        <attalias Sync="TRUE">AddrNum</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Place</attrlabl>
+        <attalias Sync="TRUE">Place</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">35</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Remarks</attrlabl>
+        <attalias Sync="TRUE">Remarks</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADCComment</attrlabl>
+        <attalias Sync="TRUE">ADCComment</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Comment2</attrlabl>
+        <attalias Sync="TRUE">Comment2</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ESN</attrlabl>
+        <attalias Sync="TRUE">ESN</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>PO</attrlabl>
+        <attalias Sync="TRUE">PO</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>parcelid</attrlabl>
+        <attalias Sync="TRUE">parcelid</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">254</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Section</attrlabl>
+        <attalias Sync="TRUE">Section</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">5</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">GlobalID</attrlabl>
+        <attalias Sync="TRUE">GlobalID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">38</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Monroe_Addresses_2016">
+        <geoObjTyp>
+          <GeoObjTypCd value="004" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">19882</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Monroe_Addresses_2016">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="1" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">19882</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20181203</mdDateSt>
+  <mdFileID>F6C67DF3-2B00-473F-ABE9-C2DC1479F793</mdFileID>
+</metadata>

@@ -1,0 +1,667 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20170405</CreaDate>
+    <CreaTime>11171100</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process Name="Create Feature Class" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CreateFeatureclass" Date="20051025" Time="111742" export="">CreateFeatureclass "U:\ARCGIS\edit folder\FIREDEPT EDITS\FIRE_DEPT_DATA.mdb" COS_FIREHALL_DISTRICT_BOUNDRYS # COS_FIREHALL_DISTS_Layer SAME_AS_TEMPLATE SAME_AS_TEMPLATE "PROJCS['dc-4',GEOGCS['douglas cnty geographic coord system',DATUM['&lt;custom&gt;',SPHEROID['douglas county',6378414.93,298.27021878]],PRIMEM['greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Transverse_Mercator'],PARAMETER['False_Easting',194000.0],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',-91.91666667],PARAMETER['Scale_Factor',0.999994968],PARAMETER['Latitude_Of_Origin',45.88333333],UNIT['Foot_US',0.3048006096012192]];17328.7596522351 159918.880133196 7812.49999272404;0 100000;0 100000" # 0 0 0 "U:\ARCGIS\edit folder\FIREDEPT EDITS\FIRE_DEPT_DATA.mdb\COS_FIREHALL_DISTRICT_BOUNDRYS"</Process>
+        <Process Name="Append" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20051025" Time="111743" export="">Append COS_FIREHALL_DISTS_Layer "U:\ARCGIS\edit folder\FIREDEPT EDITS\FIRE_DEPT_DATA.mdb\COS_FIREHALL_DISTRICT_BOUNDRYS" TEST "U:\ARCGIS\edit folder\FIREDEPT EDITS\FIRE_DEPT_DATA.mdb\COS_FIREHALL_DISTRICT_BOUNDRYS"</Process>
+        <Process Name="FeatureClassToFeatureClass_1" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20051025" Time="111743" export="">FeatureClassToFeatureClass C:\COS_FIREHALL_DISTS.shp "U:\ARCGIS\edit folder\FIREDEPT EDITS\FIRE_DEPT_DATA.mdb" COS_FIREHALL_DISTRICT_BOUNDRYS # "Id Id VISIBLE;FIRE_DIST FIRE_DIST VISIBLE;NOTES NOTES VISIBLE" SAME_AS_TEMPLATE SAME_AS_TEMPLATE # 0 "U:\ARCGIS\edit folder\FIREDEPT EDITS\FIRE_DEPT_DATA.mdb\COS_FIREHALL_DISTRICT_BOUNDRYS"</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20080710" Time="081805" Name="" export="">FeatureClassToFeatureClass U:\ARCGIS\ARCGISGEODATABASE\FIRE_DEPT_DATA.mdb\COS_FIREHALL_DISTRICT_BOUNDRYS "Database Connections\Direct Connect SDE COSDC.sde" E911_COS_Fire_Districts # "Id 'Id' true true false 4 Long 0 0 ,First,#,U:\ARCGIS\ARCGISGEODATABASE\FIRE_DEPT_DATA.mdb\COS_FIREHALL_DISTRICT_BOUNDRYS,Id,-1,-1;FIRE_DIST 'FIRE_DIST' true true false 50 Text 0 0 ,First,#,U:\ARCGIS\ARCGISGEODATABASE\FIRE_DEPT_DATA.mdb\COS_FIREHALL_DISTRICT_BOUNDRYS,FIRE_DIST,-1,-1;NOTES 'NOTES' true true false 254 Text 0 0 ,First,#,U:\ARCGIS\ARCGISGEODATABASE\FIRE_DEPT_DATA.mdb\COS_FIREHALL_DISTRICT_BOUNDRYS,NOTES,-1,-1;Shape_Length 'Shape_Length' false true true 8 Double 0 0 ,First,#,U:\ARCGIS\ARCGISGEODATABASE\FIRE_DEPT_DATA.mdb\COS_FIREHALL_DISTRICT_BOUNDRYS,Shape_Length,-1,-1;Shape_Area 'Shape_Area' false true true 8 Double 0 0 ,First,#,U:\ARCGIS\ARCGISGEODATABASE\FIRE_DEPT_DATA.mdb\COS_FIREHALL_DISTRICT_BOUNDRYS,Shape_Area,-1,-1" # "Database Connections\Direct Connect SDE COSDC.sde\sde.SDE.E911_COS_Fire_Districts"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Analysis Tools.tbx\Clip" Date="20161005" Time="084122" Name="" export="">Clip REC\TRANS_DC_COMBINED_TRAILS Admin\COSDC.DBO.ADMIN_DC_MUNICIPALITIES_CLIPPED C:\Users\fisknessj.CITYOFSUPERIOR\AppData\Local\Temp\arcD614\zipfolder5\TRANS_DC_COMBINED_TRAILS.shp #</Process>
+      </lineage>
+      <itemProps>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2017_ALL_DATA_OPEN\Douglas\Douglas_Trails_2014.shp</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemName Sync="TRUE">Douglas_Trails_2014</itemName>
+        <itemSize Sync="TRUE">0.975</itemSize>
+        <nativeExtBox>
+          <westBL Sync="TRUE">98510.570768</westBL>
+          <eastBL Sync="TRUE">286365.642342</eastBL>
+          <southBL Sync="TRUE">99923.623451</southBL>
+          <northBL Sync="TRUE">314376.640739</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">douglas cnty geographic coord system</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+        <projcsn Sync="TRUE">dc-4</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;dc-4&amp;quot;,GEOGCS[&amp;quot;douglas cnty geographic coord system&amp;quot;,DATUM[&amp;quot;&amp;lt;custom&amp;gt;&amp;quot;,SPHEROID[&amp;quot;douglas county&amp;quot;,6378414.93,298.27021878]],PRIMEM[&amp;quot;greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,194000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-91.91666667],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.999994968],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,45.88333333],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192]]&lt;/WKT&gt;&lt;XOrigin&gt;-18255300&lt;/XOrigin&gt;&lt;YOrigin&gt;-49493900&lt;/YOrigin&gt;&lt;XYScale&gt;137236248.56384292&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.0032808333333333331&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+      <copyHistory>
+        <copy source="R:\ARCHIVE_PROJECT\COUNTIES\2017_ALL_DATA_OPEN\Douglas\Originals\DOUGLASCOUNTY_OTHER\DOUGLASCOUNTY_TRAILS_2014" dest="\\robbie\data\ARCHIVE_PROJECT\COUNTIES\2017_ALL_DATA_OPEN\Douglas\DOUGLASCOUNTY_TRAILS_2014" date="20170405" time="11171100" />
+      </copyHistory>
+    </DataProperties>
+    <SyncDate>20170511</SyncDate>
+    <SyncTime>10322400</SyncTime>
+    <ModDate>20170511</ModDate>
+    <ModTime>10322400</ModTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <ArcGISstyle>ISO 19139 Metadata Implementation Specification</ArcGISstyle>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsK
+CwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQU
+FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9U6KK
+KACiiigAooooAKKKgvr630yzuLy8uIrS0t42lmuJ3CRxooyzMx4AABJJ4AFNXeiAnoqveX0NiIfO
+cqZpVhjVVLMzHoAACemST0ABJwASHXSTSW7rbyrDPj5JHTeoPuuRkfiPrRYCaiqOl6oNQjdHQQXk
+JC3Fvu3GNiM8HjKnqGxyPQ5AvUNOLswCiiikAUUUUAFQSXkEd5DavIq3EyM8cZ6sqlQxH03L+dT1
+h6hcCDxfo4IZvMtbqMBIyxB3QHJIHC8YJPGSvqKuEeZ29fyEblFY2seJF028trGG3muNQun8uBGi
+kSFm2s53TBCq4VGPrxgDJFbC52jcAGxyAcik4yik2txi0UUVIBRRRQAUUUUAFFFFABRRRQAUUUUA
+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</Data>
+    </Thumbnail>
+  </Binary>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdContact>
+    <editorSource>external</editorSource>
+    <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        <country>US</country>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum>(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+    </rpCntInfo>
+    <editorSave>True</editorSave>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <distInfo>
+    <distFormat>
+      <formatVer>1.0</formatVer>
+      <formatName Sync="TRUE">Shapefile</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <editorSource>external</editorSource>
+        <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+        <rpPosName>metadata technician</rpPosName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>(608) 262-1471</voiceNum>
+          </cntPhone>
+          <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Arthur H. Robinson Map Library</displayName>
+        <role>
+          <RoleCd value="001" />
+        </role>
+      </distorCont>
+    </distributor>
+    <distributor>
+      <distorCont>
+        <editorSource>external</editorSource>
+        <editorDigest>15827598441ac4b0e9e9d4707a7618a6</editorDigest>
+        <rpOrgName>Douglas County Land Records Department/City of Superior GIS</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>1316 N 14th St</delPoint>
+            <city>Superior</city>
+            <adminArea>WI</adminArea>
+            <postCode>54880</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>(715) 395-7423</voiceNum>
+            <faxNum>(715) 395-7346</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Douglas County Land Records Department/City of Superior GIS</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </distorCont>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Douglas_Trails_2014.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <onLineSrc>
+        <linkage>http://www.ci.superior.wi.us/474/Geospatial-Data-GIS</linkage>
+        <protocol>WWW:LINK-1.0-http--link</protocol>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <transSize Sync="TRUE">0.975</transSize>
+    </distTranOps>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Trails Douglas County, WI 2014</resTitle>
+      <presForm>
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+        <PresFormCd value="005" Sync="TRUE" />
+      </presForm>
+      <date>
+        <pubDate>2017-03-02T00:00:00</pubDate>
+      </date>
+      <citRespParty>
+        <rpOrgName>Douglas County Land Records Department/City of Superior GIS</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>1316 N 14th St</delPoint>
+            <city>Superior</city>
+            <adminArea>WI</adminArea>
+            <postCode>54880</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>(715) 395-7423</voiceNum>
+            <faxNum>(715) 395-7346</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Zach DeVoe </rpIndName>
+        <rpOrgName>Douglas County Land Records Department/City of Superior GIS</rpOrgName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>1316 N 14th St</delPoint>
+            <city>Superior</city>
+            <adminArea>WI</adminArea>
+            <postCode>54880</postCode>
+            <eMailAdd>zach.devoe@douglascountywi.org </eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>(715) 395-7423</voiceNum>
+            <faxNum>(715) 395-7346</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <resEdDate>20140101</resEdDate>
+    </idCitation>
+    <dataExt>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2014-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.
+
+[GIS Mapping]</idPurp>
+    <idAbs>This line data layer represents trails for Douglas County, Wisconsin in 2014.</idAbs>
+    <searchKeys>
+      <keyword>Trails</keyword>
+      <keyword>Line</keyword>
+      <keyword>Douglas County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <idCredit>Douglas County Land Records Department/City of Superior GIS
+
+[City of Superior License Agreement]</idCredit>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Line</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Trails</keyword>
+      <keyword>Recreation</keyword>
+    </themeKeys>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Douglas County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <suppInfo>For complete metadata documentation, please visit http://www.ci.superior.wi.us/474/Geospatial-Data-GIS
+
+Augmented original metadata with UW-Madison specific elements. </suppInfo>
+    <idPoC>
+      <editorSource>external</editorSource>
+      <editorDigest>15827598441ac4b0e9e9d4707a7618a6</editorDigest>
+      <rpOrgName>Douglas County Land Records Department/City of Superior GIS</rpOrgName>
+      <rpCntInfo>
+        <cntAddress addressType="physical">
+          <delPoint>1316 N 14th St</delPoint>
+          <city>Superior</city>
+          <adminArea>WI</adminArea>
+          <postCode>54880</postCode>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">(715) 395-7423</voiceNum>
+          <faxNum>(715) 395-7346</faxNum>
+        </cntPhone>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Douglas County Land Records Department/City of Superior GIS</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <editorSource>external</editorSource>
+        <editorDigest>15827598441ac4b0e9e9d4707a7618a6</editorDigest>
+        <rpOrgName>Douglas County Land Records Department/City of Superior GIS</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>1316 N 14th St</delPoint>
+            <city>Superior</city>
+            <adminArea>WI</adminArea>
+            <postCode>54880</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>(715) 395-7423</voiceNum>
+            <faxNum>(715) 395-7346</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Douglas County Land Records Department/City of Superior GIS</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataLang>
+      <languageCode value="eng" Sync="TRUE" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <spatRpType>
+      <SpatRepTypCd value="001" Sync="TRUE" />
+    </spatRpType>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-92.297523</westBL>
+          <eastBL Sync="TRUE">-91.548269</eastBL>
+          <northBL Sync="TRUE">46.745340</northBL>
+          <southBL Sync="TRUE">46.156713</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="016" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <editorSource>external</editorSource>
+      <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum>(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="7602" Sync="FALSE" />
+        <idCodeSpace>EPSG</idCodeSpace>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Douglas_Trails_2014">
+      <enttyp>
+        <enttypl Sync="TRUE">Douglas_Trails_2014</enttypl>
+        <enttypd>Trails Douglas County, WI 2014</enttypd>
+        <enttypds>Douglas County Land Records Department/City of Superior GIS</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">1743</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">FID</attrlabl>
+        <attalias Sync="TRUE">FID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape</attrlabl>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Feature geometry.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TRAIL_TYPE</attrlabl>
+        <attalias Sync="TRUE">TRAIL_TYPE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">254</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TRAIL_NAME</attrlabl>
+        <attalias Sync="TRUE">TRAIL_NAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">254</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DESC_</attrlabl>
+        <attalias Sync="TRUE">DESC_</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">254</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LAYER</attrlabl>
+        <attalias Sync="TRUE">LAYER</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">254</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">NOTES</attrlabl>
+        <attalias Sync="TRUE">NOTES</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">254</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SHAPE_len</attrlabl>
+        <attalias Sync="TRUE">SHAPE_len</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdLang>
+    <languageCode value="eng" Sync="TRUE" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdHrLv>
+    <ScopeCd value="005" Sync="TRUE" />
+  </mdHrLv>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Douglas_Trails_2014">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">1743</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Douglas_Trails_2014">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="3" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">1743</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20170511</mdDateSt>
+  <mdFileID>C9A6614D-8395-4DBE-8DAE-D3B9BAA9FA55</mdFileID>
+</metadata>

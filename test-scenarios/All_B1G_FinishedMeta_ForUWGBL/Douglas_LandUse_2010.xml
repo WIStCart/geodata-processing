@@ -1,0 +1,687 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20170405</CreaDate>
+    <CreaTime>11170300</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <SyncDate>20170511</SyncDate>
+    <SyncTime>10083600</SyncTime>
+    <ModDate>20170511</ModDate>
+    <ModTime>10083600</ModTime>
+    <DataProperties>
+      <lineage>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20080115" Time="103351" Name="" export="">CopyFeatures C:\CICEET\shapefiles\Powerlines.shp C:\CICEET\geodatabase\Douglass_County.mdb\Powerlines # 0 0 0</Process>
+        <Process Name="Buffer_1" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Analysis Tools.tbx\Buffer" Date="20080624" Time="091715" export="">Buffer "Power Lines" C:\CICEET\geodatabase\Douglass_County.mdb\Powerlines_Buffer "60 Feet" FULL ROUND NONE #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20080624" Time="123333" Name="" export="">CopyFeatures "C:\Brian File\Powerlines_Buffer.shp" C:\CICEET\geodatabase\Douglas2.mdb\Powerlines_Buffer # 0 0 0</Process>
+        <Process Name="Dissolve_2" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\Dissolve" Date="20080626" Time="111253" export="">Dissolve Powerlines C:\temp\Powerlines_Dissolve.shp Notes # MULTI_PART</Process>
+        <Process Name="Union_4" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Analysis Tools.tbx\Union" Date="20080626" Time="111546" export="">Union "Powerlines_Dissolve #;Base_OL_Transitional_Harvest_BLD_GAS #" C:\temp\Powerlines_Dissolve_Union.shp ALL # GAPS</Process>
+        <Process Name="Union_6" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Analysis Tools.tbx\Union" Date="20080626" Time="122940" export="">Union "Base_OL_Transitional_Harvest_BLD_GAS_PWR #;road80_Dissolve #" C:\temp\Base_OL_TR_HV_BLD_GAS_PWR_RD80.shp ALL # GAPS</Process>
+        <Process Name="Union_1" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Analysis Tools.tbx\Union" Date="20080626" Time="130834" export="">Union "Base_OL_TR_HV_BLD_GAS_PWR_RD80 #;Road25_Dissolve #" C:\temp\Base_OL_TR_HV_BLD_GAS_PWR_RD80_RD25.shp ALL # GAPS</Process>
+        <Process Name="Union_5" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Analysis Tools.tbx\Union" Date="20080626" Time="133501" export="">Union "Base_OL_TR_HV_BLD_GAS_PWR_RD80_RD25 #;Road15_Dissolve1 #" C:\temp\Base_OL_TR_HV_BLD_GAS_PWR_RD80_RD25_RD15.shp ALL # GAPS</Process>
+        <Process Name="Union_2" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Analysis Tools.tbx\Union" Date="20080626" Time="140059" export="">Union "Base_OL_TR_HV_BLD_GAS_PWR_RD80_RD25_RD15 #;Driveways_Buffer_Dissolve #" C:\temp\Base_OL_TR_HV_BLD_GAS_PWR_RD80_RD25_RD15_DW.shp ALL # GAPS</Process>
+        <Process Name="Union_2" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Analysis Tools.tbx\Union" Date="20080626" Time="142124" export="">Union "Base_OL_TR_HV_BLD_GAS_PWR_RD80_RD25_RD15_DW #;TrailsLogRDS_Dissolve #" C:\temp\Base_OL_TR_HV_BLD_GAS_PWR_RD90_RD25_RD15_DW_TR.shp ALL # GAPS</Process>
+        <Process Name="Dissolve_8" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Chads Tools.tbx\Dissolve" Date="20080729" Time="130238" export="">Dissolve "New Group Layer\DouglasCo_ExistingLU" C:\temp\DouglasCompPlan\LandUse\FinalLandUse\Consolidation.gdb\RawLandUseDissolve LandUse # MULTI_PART</Process>
+        <Process Name="Merge_3" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Chads Tools.tbx\Merge" Date="20080729" Time="134802" export="">Merge CitySuperiorDouglas;TownAmniconDouglas;TownBarnesBayfield;TownBennettDouglas;TownBlaineBurnett;TownBruleDouglas;TownCloverlandDouglas;TownDairylandDouglas;TownFrog_creekWashburn;TownGordonDouglas;TownHawthorneDouglas;TownHighlandDouglas;TownHughesBayfield;TownLakesideDouglas;TownMapleDouglas;TownMinongWashburn;TownOaklandDouglas;TownOrientaBayfield;TownOuluBayfield;TownParklandDouglas;TownSolon_springsDouglas;TownSummitDouglas;TownSuperiorDouglas;TownWascottDouglas;VillageLake_nebagamonDouglas;VillageOliverDouglas;VillagePoplarDouglas;VillageSolon_springsDouglas;VillageSuperiorDouglas C:\temp\DouglasCompPlan\LandUse\FinalLandUse\temp2\CitySuperiorDouglas_Merge.shp "LandUse LandUse true false false 30 Text 0 0 ,First,#,CitySuperiorDouglas,LandUse,-1,-1,TownAmniconDouglas,LandUse,-1,-1,TownBarnesBayfield,LandUse,-1,-1,TownBennettDouglas,LandUse,-1,-1,TownBlaineBurnett,LandUse,-1,-1,TownBruleDouglas,LandUse,-1,-1,TownCloverlandDouglas,LandUse,-1,-1,TownDairylandDouglas,LandUse,-1,-1,TownFrog_creekWashburn,LandUse,-1,-1,TownGordonDouglas,LandUse,-1,-1,TownHawthorneDouglas,LandUse,-1,-1,TownHighlandDouglas,LandUse,-1,-1,TownHughesBayfield,LandUse,-1,-1,TownLakesideDouglas,LandUse,-1,-1,TownMapleDouglas,LandUse,-1,-1,TownMinongWashburn,LandUse,-1,-1,TownOaklandDouglas,LandUse,-1,-1,TownOrientaBayfield,LandUse,-1,-1,TownOuluBayfield,LandUse,-1,-1,TownParklandDouglas,LandUse,-1,-1,TownSolon_springsDouglas,LandUse,-1,-1,TownSummitDouglas,LandUse,-1,-1,TownSuperiorDouglas,LandUse,-1,-1,TownWascottDouglas,LandUse,-1,-1,VillageLake_nebagamonDouglas,LandUse,-1,-1,VillageOliverDouglas,LandUse,-1,-1,VillagePoplarDouglas,LandUse,-1,-1,VillageSolon_springsDouglas,LandUse,-1,-1,VillageSuperiorDouglas,LandUse,-1,-1"</Process>
+        <Process Name="SpatialJoin_4" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Chads Tools.tbx\SpatialJoin" Date="20080729" Time="135034" export="">SpatialJoin CitySuperiorDouglas_Merge MCDs C:\temp\DouglasCompPlan\LandUse\FinalLandUse\temp2\CitySuperiorDouglas_Merge_Sp.shp JOIN_ONE_TO_ONE KEEP_ALL "LandUse LandUse true false false 30 Text 0 0 ,First,#,C:\temp\DouglasCompPlan\LandUse\FinalLandUse\temp2\CitySuperiorDouglas_Merge.shp,LandUse,-1,-1;MCD_ID MCD_ID true true false 8 Text 0 0 ,First,#,I:\gis\BaseData\Governmental Boundaries\Governmental Boundaries.gdb\MCDs,MCD_ID,-1,-1;HINDI HINDI true true false 5 Text 0 0 ,First,#,I:\gis\BaseData\Governmental Boundaries\Governmental Boundaries.gdb\MCDs,HINDI,-1,-1;MCD_PL_CD MCD_PL_CD true true false 4 Text 0 0 ,First,#,I:\gis\BaseData\Governmental Boundaries\Governmental Boundaries.gdb\MCDs,MCD_PL_CD,-1,-1;Shape_Leng Shape_Length false true true 8 Double 0 0 ,First,#,I:\gis\BaseData\Governmental Boundaries\Governmental Boundaries.gdb\MCDs,Shape_Length,-1,-1;Shape_Area Shape_Area false true true 8 Double 0 0 ,First,#,I:\gis\BaseData\Governmental Boundaries\Governmental Boundaries.gdb\MCDs,Shape_Area,-1,-1;CVT CVT true true false 10 Text 0 0 ,First,#,I:\gis\BaseData\Governmental Boundaries\Governmental Boundaries.gdb\MCDs,CVT,-1,-1;Jurisdicti Jurisdicti true true false 25 Text 0 0 ,First,#,I:\gis\BaseData\Governmental Boundaries\Governmental Boundaries.gdb\MCDs,Jurisdiction,-1,-1;County County true true false 25 Text 0 0 ,First,#,I:\gis\BaseData\Governmental Boundaries\Governmental Boundaries.gdb\MCDs,County,-1,-1;Acreage Acreage true true false 4 Float 0 0 ,First,#,I:\gis\BaseData\Governmental Boundaries\Governmental Boundaries.gdb\MCDs,Acreage,-1,-1;UniqueIden UniqueIden true true false 100 Text 0 0 ,First,#,I:\gis\BaseData\Governmental Boundaries\Governmental Boundaries.gdb\MCDs,UniqueIdentifier,-1,-1;CountyCode CountyCode true true false 5 Text 0 0 ,First,#,I:\gis\BaseData\Governmental Boundaries\Governmental Boundaries.gdb\MCDs,CountyCode,-1,-1;CommunityC CommunityC true true false 10 Text 0 0 ,First,#,I:\gis\BaseData\Governmental Boundaries\Governmental Boundaries.gdb\MCDs,CommunityCode,-1,-1;UID UID true true false 50 Text 0 0 ,First,#,I:\gis\BaseData\Governmental Boundaries\Governmental Boundaries.gdb\MCDs,UID,-1,-1" IS_WITHIN "0 Feet"</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Analysis Tools.tbx\Clip" Date="20080908" Time="110944" Name="" export="">Clip "Existing Land Use\Existing Land Use" MCDs "G:\counties\Douglas\Comp Plan\ExistingLandUse\TownOfAmnicon.shp" #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\Merge" Date="20081110" Time="085024" Name="" export="">Merge TownOfAmnicon;TownOfBennett;TownOfBrule;TownOfDairyland;TGordon;THawthorne;TLakeside;TMaple;TParkland;TownOfOakland;TSolonSprings;TSummit;TSuperior;TownOfWascott "G:\counties\Douglas\Comp Plan\ExistingLandUse\LandUse.gdb\TownExistingLandUseFinal" "LandUse 'LandUse' true true false 30 Text 0 0 ,First,#,TownOfAmnicon,LandUse,-1,-1,TownOfBennett,LandUse,-1,-1,TownOfBrule,LandUse,-1,-1,TownOfDairyland,LandUse,-1,-1,TGordon,LandUse,-1,-1,THawthorne,LandUse,-1,-1,TLakeside,LandUse,-1,-1,TMaple,LandUse,-1,-1,TParkland,LandUse,-1,-1,TownOfOakland,LandUse,-1,-1,TSolonSprings,LandUse,-1,-1,TSummit,LandUse,-1,-1,TSuperior,LandUse,-1,-1,TownOfWascott,LandUse,-1,-1;CVT 'CVT' true true false 10 Text 0 0 ,First,#,TownOfAmnicon,CVT,-1,-1,TownOfBennett,CVT,-1,-1,TownOfBrule,CVT,-1,-1,TownOfDairyland,CVT,-1,-1,TGordon,CVT,-1,-1,THawthorne,CVT,-1,-1,TLakeside,CVT,-1,-1,TMaple,CVT,-1,-1,TParkland,CVT,-1,-1,TownOfOakland,CVT,-1,-1,TSolonSprings,CVT,-1,-1,TSummit,CVT,-1,-1,TSuperior,CVT,-1,-1,TownOfWascott,CVT,-1,-1;Jurisdicti 'Jurisdicti' true true false 25 Text 0 0 ,First,#,TownOfAmnicon,Jurisdicti,-1,-1,TownOfBennett,Jurisdicti,-1,-1,TownOfBrule,Jurisdicti,-1,-1,TownOfDairyland,Jurisdicti,-1,-1,TGordon,Jurisdicti,-1,-1,THawthorne,Jurisdicti,-1,-1,TLakeside,Jurisdicti,-1,-1,TMaple,Jurisdicti,-1,-1,TParkland,Jurisdicti,-1,-1,TownOfOakland,Jurisdicti,-1,-1,TSolonSprings,Jurisdicti,-1,-1,TSummit,Jurisdicti,-1,-1,TSuperior,Jurisdicti,-1,-1,TownOfWascott,Jurisdicti,-1,-1;County 'County' true true false 25 Text 0 0 ,First,#,TownOfAmnicon,County,-1,-1,TownOfBennett,County,-1,-1,TownOfBrule,County,-1,-1,TownOfDairyland,County,-1,-1,TGordon,County,-1,-1,THawthorne,County,-1,-1,TLakeside,County,-1,-1,TMaple,County,-1,-1,TParkland,County,-1,-1,TownOfOakland,County,-1,-1,TSolonSprings,County,-1,-1,TSummit,County,-1,-1,TSuperior,County,-1,-1,TownOfWascott,County,-1,-1;Acreage 'Acreage' true true false 13 Float 0 0 ,First,#,TownOfAmnicon,Acreage,-1,-1,TownOfBennett,Acreage,-1,-1,TownOfBrule,Acreage,-1,-1,TownOfDairyland,Acreage,-1,-1,TGordon,Acreage,-1,-1,THawthorne,Acreage,-1,-1,TLakeside,Acreage,-1,-1,TMaple,Acreage,-1,-1,TParkland,Acreage,-1,-1,TownOfOakland,Acreage,-1,-1,TSolonSprings,Acreage,-1,-1,TSummit,Acreage,-1,-1,TSuperior,Acreage,-1,-1,TownOfWascott,Acreage,-1,-1;UniqueIden 'UniqueIden' true true false 100 Text 0 0 ,First,#,TownOfAmnicon,UniqueIden,-1,-1,TownOfBennett,UniqueIden,-1,-1,TownOfBrule,UniqueIden,-1,-1,TownOfDairyland,UniqueIden,-1,-1,TGordon,UniqueIden,-1,-1,THawthorne,UniqueIden,-1,-1,TLakeside,UniqueIden,-1,-1,TMaple,UniqueIden,-1,-1,TParkland,UniqueIden,-1,-1,TownOfOakland,UniqueIden,-1,-1,TSolonSprings,UniqueIden,-1,-1,TSummit,UniqueIden,-1,-1,TSuperior,UniqueIden,-1,-1,TownOfWascott,UniqueIden,-1,-1;CountyCode 'CountyCode' true true false 5 Text 0 0 ,First,#,TownOfAmnicon,CountyCode,-1,-1,TownOfBennett,CountyCode,-1,-1,TownOfBrule,CountyCode,-1,-1,TownOfDairyland,CountyCode,-1,-1,TGordon,CountyCode,-1,-1,THawthorne,CountyCode,-1,-1,TLakeside,CountyCode,-1,-1,TMaple,CountyCode,-1,-1,TParkland,CountyCode,-1,-1,TownOfOakland,CountyCode,-1,-1,TSolonSprings,CountyCode,-1,-1,TSummit,CountyCode,-1,-1,TSuperior,CountyCode,-1,-1,TownOfWascott,CountyCode,-1,-1;CommunityC 'CommunityC' true true false 10 Text 0 0 ,First,#,TownOfAmnicon,CommunityC,-1,-1,TownOfBennett,CommunityC,-1,-1,TownOfBrule,CommunityC,-1,-1,TownOfDairyland,CommunityC,-1,-1,TGordon,CommunityC,-1,-1,THawthorne,CommunityC,-1,-1,TLakeside,CommunityC,-1,-1,TMaple,CommunityC,-1,-1,TParkland,CommunityC,-1,-1,TownOfOakland,CommunityC,-1,-1,TSolonSprings,CommunityC,-1,-1,TSummit,CommunityC,-1,-1,TSuperior,CommunityC,-1,-1,TownOfWascott,CommunityC,-1,-1;UID 'UID' true true false 50 Text 0 0 ,First,#,TownOfAmnicon,UID,-1,-1,TownOfBennett,UID,-1,-1,TownOfBrule,UID,-1,-1,TownOfDairyland,UID,-1,-1,TGordon,UID,-1,-1,THawthorne,UID,-1,-1,TLakeside,UID,-1,-1,TMaple,UID,-1,-1,TParkland,UID,-1,-1,TownOfOakland,UID,-1,-1,TSolonSprings,UID,-1,-1,TSummit,UID,-1,-1,TSuperior,UID,-1,-1,TownOfWascott,UID,-1,-1"</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20110929" Time="144107" Name="" export="">CopyFeatures G:\Landuse\DougLU.gdb\TownExistingLandUseFinal "Database Connections\GIS2011 - Global.sde\Entities.DBO.NWRPC_DATA\Entities.DBO.TownExistingLandUseFinal" # 0 0 0</Process>
+      </lineage>
+      <itemProps>
+        <itemName Sync="TRUE">Douglas_LandUse_2010</itemName>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2017_ALL_DATA_OPEN\Douglas\Douglas_LandUse_2010.shp</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemSize Sync="TRUE">63.964</itemSize>
+        <nativeExtBox>
+          <westBL Sync="TRUE">342935.357400</westBL>
+          <eastBL Sync="TRUE">401517.468100</eastBL>
+          <southBL Sync="TRUE">632666.577700</southBL>
+          <northBL Sync="TRUE">699417.808900</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Transverse_Mercator</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Transverse_Mercator&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;450445547.3910538&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+      </coordRef>
+      <copyHistory>
+        <copy source="R:\ARCHIVE_PROJECT\COUNTIES\2017_ALL_DATA_OPEN\Douglas\Originals\DOUGLASCOUNTY_OTHER\DOUGLASCOUNTY_LANDUSE_2010" dest="\\robbie\data\ARCHIVE_PROJECT\COUNTIES\2017_ALL_DATA_OPEN\Douglas\DOUGLASCOUNTY_LANDUSE_2010" date="20170405" time="11170300" />
+      </copyHistory>
+    </DataProperties>
+    <ArcGISstyle>ISO 19139 Metadata Implementation Specification</ArcGISstyle>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooqKe4htk3zypGvqxxmgCWiueu/F1jCAIFaZiMjgqC
+OOnHuM+lOn1mESQ+dOfJdmRivARgcKGxk8nPfHFYzrxh5jSNS41OytSBNcIuW2Dv83px39qsRSpP
+EskbbkYZBrzSyuLa0S2lvQ/m285i2qFwIyx5xnn58/dHbntXoemFG02B4gRE670z/dPI/QinCo5S
+asDRbooorUQUUUUAFFFFABRRRQAUUUUAFFFFAEMd1DJNNCrjzIWCup7ZAI/DBFF3cpZ2klxJnagz
+gd/QVjz6HY3l9qM1xHuecqjEEj5Qi4HHXkZ/L0pJYU02JpDe3b7F3DzZmcfKc8gdscHtjrzXK8XB
+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</Data>
+    </Thumbnail>
+  </Binary>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdContact>
+    <editorSource>external</editorSource>
+    <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        <country>US</country>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum>(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+    </rpCntInfo>
+    <editorSave>True</editorSave>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <distInfo>
+    <distFormat>
+      <formatVer>1.0</formatVer>
+      <formatName Sync="TRUE">Shapefile</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <editorSource>external</editorSource>
+        <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+        <rpPosName>metadata technician</rpPosName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>(608) 262-1471</voiceNum>
+          </cntPhone>
+          <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Arthur H. Robinson Map Library</displayName>
+        <role>
+          <RoleCd value="001" />
+        </role>
+      </distorCont>
+    </distributor>
+    <distributor>
+      <distorCont>
+        <editorSource>external</editorSource>
+        <editorDigest>15827598441ac4b0e9e9d4707a7618a6</editorDigest>
+        <rpOrgName>Douglas County Land Records Department/City of Superior GIS</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>1316 N 14th St</delPoint>
+            <city>Superior</city>
+            <adminArea>WI</adminArea>
+            <postCode>54880</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>(715) 395-7423</voiceNum>
+            <faxNum>(715) 395-7346</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Douglas County Land Records Department/City of Superior GIS</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </distorCont>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Douglas_LandUse_2010.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <onLineSrc>
+        <linkage>http://www.ci.superior.wi.us/474/Geospatial-Data-GIS</linkage>
+        <protocol>WWW:LINK-1.0-http--link</protocol>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <transSize Sync="TRUE">63.964</transSize>
+    </distTranOps>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Land Use Douglas County, WI 2010</resTitle>
+      <presForm>
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+        <PresFormCd value="005" Sync="TRUE" />
+      </presForm>
+      <date>
+        <pubDate>2017-03-02T00:00:00</pubDate>
+      </date>
+      <citRespParty>
+        <rpOrgName>Douglas County Land Records Department/City of Superior GIS</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>1316 N 14th St</delPoint>
+            <city>Superior</city>
+            <adminArea>WI</adminArea>
+            <postCode>54880</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>(715) 395-7423</voiceNum>
+            <faxNum>(715) 395-7346</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Zach DeVoe </rpIndName>
+        <rpOrgName>Douglas County Land Records Department/City of Superior GIS</rpOrgName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>1316 N 14th St</delPoint>
+            <city>Superior</city>
+            <adminArea>WI</adminArea>
+            <postCode>54880</postCode>
+            <eMailAdd>zach.devoe@douglascountywi.org </eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>(715) 395-7423</voiceNum>
+            <faxNum>(715) 395-7346</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <resEdDate>20100101</resEdDate>
+    </idCitation>
+    <dataExt>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2010-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.
+</idPurp>
+    <idAbs>This polygon data layer represents land use for Douglas County, Wisconsin in 2010.</idAbs>
+    <searchKeys>
+      <keyword>Polygon</keyword>
+      <keyword>Land Use</keyword>
+      <keyword>Douglas County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <idCredit>Douglas County Land Records Department/City of Superior GIS
+
+</idCredit>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Polygon</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Land Use</keyword>
+      <keyword>Planning</keyword>
+    </themeKeys>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Douglas County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <suppInfo>For complete metadata documentation, please visit http://www.ci.superior.wi.us/474/Geospatial-Data-GIS
+
+Augmented original metadata with UW-Madison specific elements. </suppInfo>
+    <idPoC>
+      <editorSource>external</editorSource>
+      <editorDigest>15827598441ac4b0e9e9d4707a7618a6</editorDigest>
+      <rpOrgName>Douglas County Land Records Department/City of Superior GIS</rpOrgName>
+      <rpCntInfo>
+        <cntAddress addressType="physical">
+          <delPoint>1316 N 14th St</delPoint>
+          <city>Superior</city>
+          <adminArea>WI</adminArea>
+          <postCode>54880</postCode>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">(715) 395-7423</voiceNum>
+          <faxNum>(715) 395-7346</faxNum>
+        </cntPhone>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Douglas County Land Records Department/City of Superior GIS</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <editorSource>external</editorSource>
+        <editorDigest>15827598441ac4b0e9e9d4707a7618a6</editorDigest>
+        <rpOrgName>Douglas County Land Records Department/City of Superior GIS</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>1316 N 14th St</delPoint>
+            <city>Superior</city>
+            <adminArea>WI</adminArea>
+            <postCode>54880</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>(715) 395-7423</voiceNum>
+            <faxNum>(715) 395-7346</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Douglas County Land Records Department/City of Superior GIS</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataLang>
+      <languageCode value="eng" Sync="TRUE" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <spatRpType>
+      <SpatRepTypCd value="001" Sync="TRUE" />
+    </spatRpType>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-92.318039</westBL>
+          <eastBL Sync="TRUE">-91.534504</eastBL>
+          <northBL Sync="TRUE">46.757793</northBL>
+          <southBL Sync="TRUE">46.144578</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="015" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <editorSource>external</editorSource>
+      <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum>(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="3071" Sync="FALSE" />
+        <idCodeSpace>EPSG</idCodeSpace>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Douglas_LandUse_2010">
+      <enttyp>
+        <enttypl Sync="TRUE">Douglas_LandUse_2010</enttypl>
+        <enttypd>Land Use Douglas County, WI 2010</enttypd>
+        <enttypds>Douglas County Land Records Department/City of Superior GIS</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">54257</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">FID</attrlabl>
+        <attalias Sync="TRUE">FID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape</attrlabl>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Feature geometry.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LandUse</attrlabl>
+        <attalias Sync="TRUE">LandUse</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CVT</attrlabl>
+        <attalias Sync="TRUE">CVT</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Jurisdicti</attrlabl>
+        <attalias Sync="TRUE">Jurisdicti</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">County</attrlabl>
+        <attalias Sync="TRUE">County</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Acreage</attrlabl>
+        <attalias Sync="TRUE">Acreage</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">8</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">UniqueIden</attrlabl>
+        <attalias Sync="TRUE">UniqueIden</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CountyCode</attrlabl>
+        <attalias Sync="TRUE">CountyCode</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CommunityC</attrlabl>
+        <attalias Sync="TRUE">CommunityC</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">UID</attrlabl>
+        <attalias Sync="TRUE">UID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Note</attrlabl>
+        <attalias Sync="TRUE">Note</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_area</attrlabl>
+        <attalias Sync="TRUE">Shape_area</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Area of feature in internal units squared.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_len</attrlabl>
+        <attalias Sync="TRUE">Shape_len</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdLang>
+    <languageCode value="eng" Sync="TRUE" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdHrLv>
+    <ScopeCd value="005" Sync="TRUE" />
+  </mdHrLv>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Douglas_LandUse_2010">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">54257</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Douglas_LandUse_2010">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="4" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">54257</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20170511</mdDateSt>
+  <mdFileID>F71521B5-9A9F-4A7D-A61C-8DCEF7D78B2A</mdFileID>
+</metadata>

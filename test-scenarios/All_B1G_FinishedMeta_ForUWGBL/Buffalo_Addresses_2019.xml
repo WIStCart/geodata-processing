@@ -1,0 +1,756 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <SyncOnce>FALSE</SyncOnce>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <DataProperties>
+      <lineage>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171023" Time="152906" Name="" export="">CalculateField "Site Addresses\Addresses - Site Address Points" ADDRNUMBER [ADDRNUM] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180126" Time="133700" Name="" export="">CalculateField "Site Addresses\Addresses - Site Address Points" ADDPTKEY [OBJECTID] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180126" Time="142535" Name="" export="">CalculateField "Site Addresses\Addresses - Site Address Points" POINTTYPE "Building" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="075451" Name="" export="">CalculateField "Addresses - Site Address Points selection selection" POINTTYPE "Unknown" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="133853" Name="" export="">CalculateField "Addresses - Site Address Points selection selection" POINTTYPE "Unknown" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="150003" Name="" export="">CalculateField "Addresses - Site Address Points selection selection" POINTTYPE "Unknown" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="150034" Name="" export="">CalculateField "Addresses - Site Address Points selection selection" POINTTYPE "Parcel" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="151852" Name="" export="">CalculateField "Addresses - Site Address Points selection selection" ADDRCLASS "Primary Residencel" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180202" Time="072655" Name="" export="">CalculateField "Addresses - Site Address Points selection selection" ADDRCLASS "Primary Residencel" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180202" Time="081935" Name="" export="">CalculateField "Site Addresses\Addresses - Site Address Points" FULLADD_ALLCAP [FULLADDR] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180202" Time="082333" Name="" export="">CalculateField "Site Addresses\Addresses - Site Address Points" FULLADD_ALLCAP !FULLADD_ALLCAP!.title() PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180202" Time="084032" Name="" export="">CalculateField "Site Addresses\Addresses - Site Address Points" FULLADD_ALLCAP UCase( [FULLADD_ALLCAP]  ) VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180202" Time="134203" Name="" export="">CalculateField "Site Address Points" CAD_RDS_ALL_CAP UCase( [CAD_ROADS] ) VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180202" Time="135442" Name="" export="">CalculateField "Site Address Points" FULL_CAD "[SITEADDID]+" "+ [CAD_RDS_ALL_CAP]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180212" Time="170928" Name="" export="">CalculateField "Site Address Points" ALT_FULLROADNAME [FULLNAME] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180213" Time="082327" Name="" export="">CalculateField "Site Address Points" PSAP "Buffalo County Communications Center" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180213" Time="082434" Name="" export="">CalculateField "Site Address Points" PSAP 7399 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180221" Time="113612" Name="" export="">CalculateField "Site Address Points" COMP_ADDRESS "[FULLADDR]+", "+ [MSAG]+", WI"+ [ZIPCODE]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180221" Time="113653" Name="" export="">CalculateField "Site Address Points" COMP_ADDRESS "[FULLADDR]+", "+ [MSAG]+", WI "+ [ZIPCODE]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180221" Time="121420" Name="" export="">CalculateField "Site Address Points" FULLADDR "[ADDRNUM]+" "+ [FULLNAME]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180617" Time="103125" Name="" export="">CalculateField "Site Address Points" Copy_of_OID [OBJECTID] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="083902" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "VILLAGE OF COCHRANE" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="083941" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "VILLAGE OF NELSON" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="084042" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "TOWN OF WAUMANDEE" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="084118" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "TOWN OF NELSON" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="084211" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "TOWN OF NAPLES" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="084251" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "TOWN OF MONTANA" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="084325" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "TOWN OF MONDOVI" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="084502" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "TOWN OF MODENA" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="084539" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "TOWN OF MILTON" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="084617" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "TOWN OF MAXVILLE" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="084705" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "TOWN OF LINCOLN" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="084803" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "TOWN OF GLENCOE" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="084859" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "TOWN OF GILMANTON" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="084943" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "TOWN OF DOVER" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="085021" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "TOWN OF CROSS" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="085100" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "TOWN OF CANTON" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="085138" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "TOWN OF BUFFALO" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="085219" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "TOWN OF BELVIDERE" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="085258" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "TOWN OF ALMA" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="085404" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "CITY OF FOUNTAIN CITY" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="085459" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "CITY OF MONDOVI" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="085541" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "CITY OF FOUNTAIN CITY" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="085615" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "CITY OF BUFFALO CITY" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="085647" Name="" export="">CalculateField "Site Address Points" MUNICIPALITY "CITY OF ALMA" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="090225" Name="" export="">CalculateField "Site Address Points" ROADTYPE UCase( [ROADTYPE] ) VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="090337" Name="" export="">CalculateField "Site Address Points" ROADTYPE UCase( [ROADTYPE] ) VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="090633" Name="" export="">CalculateField "Site Address Points" ROADTYPE UCase( [ROADTYPE] ) VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="090757" Name="" export="">CalculateField "Site Address Points" ROADTYPE "LN" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="090848" Name="" export="">CalculateField "Site Address Points" ROADTYPE null VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="090946" Name="" export="">CalculateField "Site Address Points" ROADTYPE "AVE" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="091101" Name="" export="">CalculateField "Site Address Points" ROADTYPE "PKY" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="092314" Name="" export="">CalculateField "Site Address Points" ROADTYPE "US HWY" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="092326" Name="" export="">CalculateField "Site Address Points" ROADNAME 10 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="092445" Name="" export="">CalculateField "Site Address Points" ROADNAME 35 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="092502" Name="" export="">CalculateField "Site Address Points" ROADTYPE "STATE RD" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="092524" Name="" export="">CalculateField "Site Address Points" ROADTYPE "STATE RD" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="092533" Name="" export="">CalculateField "Site Address Points" ROADNAME 37 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="092929" Name="" export="">CalculateField "Site Address Points" ROADTYPE "STATE RD" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="093216" Name="" export="">CalculateField "Site Address Points" ROADTYPE "COUNTY RD" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="093326" Name="" export="">CalculateField "Site Address Points" ROADTYPE "COUNTY RD" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="093428" Name="" export="">CalculateField "Site Address Points" ROADTYPE "COUNTY RD" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="093909" Name="" export="">CalculateField "Site Address Points" ROADNAME !ROADNAME![2:] PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="094021" Name="" export="">CalculateField "Site Address Points" ROADNAME !ROADNAME![2:] PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="094223" Name="" export="">CalculateField "Site Address Points" ROADNAME !ROADNAME![2:] PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="094431" Name="" export="">CalculateField "Site Address Points" ROADNAME !ROADNAME![2:] PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="094530" Name="" export="">CalculateField "Site Address Points" ROADNAME !ROADNAME![2:] PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="100454" Name="" export="">CalculateField "Site Address Points" ROADNAME "[ROADTYPE]+" "+ [ROADNAME]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20181017" Time="100521" Name="" export="">CalculateField "Site Address Points" ROADTYPE null VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddGlobalIDs" Date="20181017" Time="111551" Name="" export="">AddGlobalIDs 'Site Address Points'</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190123" Time="082149" Name="" export="">CalculateField "Site Address Points" GUID ID() PYTHON_9.3 "def ID():\n  import uuid\n  return '{' + str(uuid.uuid4()) + '}'"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190127" Time="135758" Name="" export="">CalculateField "Site Address Points" COM_Address "[FULLADDR]+" "+ [MUNICIPALITY]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190223" Time="203705" Name="" export="">CalculateField "Master Site Address where town verfied or status is pending" GUID ID() PYTHON_9.3 "def ID():\n  import uuid\n  return '{' + str(uuid.uuid4()) + '}'"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20190401" Time="123541" Name="" export="">FeatureClassToFeatureClass R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Buffalo\Originals\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2019 R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Buffalo\Buffalo_Addresses_2019\Buffalo_Addresses_2019.gdb Buffalo_Addresses_2019 # "SITEADDID "Site Address ID" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Buffalo\Originals\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2019,SITEADDID,-1,-1;PREADDRNUM "Address Number Prefix" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Buffalo\Originals\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2019,PREADDRNUM,-1,-1;ADDRNUMSUF "Address Number Suffix" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Buffalo\Originals\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2019,ADDRNUMSUF,-1,-1;ADDRNUM "Full Address Number" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Buffalo\Originals\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2019,ADDRNUM,-1,-1;FULLNAME "Full Road Name" true true false 125 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Buffalo\Originals\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2019,FULLNAME,-1,-1;FULLADDR "Full Address" true true false 250 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Buffalo\Originals\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2019,FULLADDR,-1,-1;MUNICIPALITY "Municipality Name" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Buffalo\Originals\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2019,MUNICIPALITY,-1,-1;STATUS "Status" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Buffalo\Originals\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2019,STATUS,-1,-1;ZIPCODE "Zip Code" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Buffalo\Originals\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2019,ZIPCODE,-1,-1;XCOORD "XCoord" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Buffalo\Originals\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2019,XCOORD,-1,-1;YCOORD "YCoord" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Buffalo\Originals\BUFFALO_OTHER.gdb\BUFFALO_ADDRESSES_2019,YCOORD,-1,-1" #</Process>
+      </lineage>
+      <itemProps>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2019_ALL_DATA_OPEN_V5\Buffalo\Buffalo_Addresses_2019\Buffalo_Addresses_2019.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemName Sync="TRUE">Buffalo_Addresses_2019</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">514686.162243</westBL>
+          <eastBL Sync="TRUE">645221.075057</eastBL>
+          <southBL Sync="TRUE">212714.940337</southBL>
+          <northBL Sync="TRUE">406599.946923</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_WISCRS_Buffalo_County_Feet</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_WISCRS_Buffalo_County_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,574999.999],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.016],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-91.79722222222222],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,1.0000382778],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,43.48138888888889],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;Esri&amp;quot;,103405]]&lt;/WKT&gt;&lt;XOrigin&gt;-17874300&lt;/XOrigin&gt;&lt;YOrigin&gt;-48618200&lt;/YOrigin&gt;&lt;XYScale&gt;3048.00609601219&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.00328083333333333&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;103405&lt;/WKID&gt;&lt;LatestWKID&gt;103405&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <CreaDate>20190331</CreaDate>
+    <CreaTime>22413600</CreaTime>
+    <ArcGISstyle>FGDC CSDGM Metadata</ArcGISstyle>
+    <SyncDate>20190401</SyncDate>
+    <SyncTime>14035600</SyncTime>
+    <ModDate>20190401</ModDate>
+    <ModTime>14035600</ModTime>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACqGta1p/h7SbjVNUuUt7SBdzux6+gA7k9AB1q/XmfxyultvAtt5kU0kT6lbhwkoj
+XAJbDk9jj8Dg9uQDX0v4r+DtUtmm/tZbMoYg8d6hhZPMAK5zxjnBbOB1zjBNrSviHoWuCVtJ+3X0
+cV0tq8lvaSMqkqWD9PufKefceoNeET+EfEMvhiw1yztdNt7HVvLs7q10i6Je5iLKwADsQ0m4MCAc
+jGMYBq3c+LrMzajqVjbXmkalY31rJHpcEskbLbW6iNw/ylGbYxBXGVVSTnBBAPa9b+Iug+H9J07U
+tRF9Hb36hov9DfKgkffGPlPzZweSAcZqWy8faFf+JToFu1418GK/NZyKnAYk7iMY+U8nr2zXll34
+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
+BRRRQB//2Q==</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>UW-Madison</rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum>608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>UW-Madison</rpOrgName>
+        <rpPosName>metadata technician</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Buffalo_Addresses_2019.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.5</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Buffalo County Land Information Department</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>(608) 685-6285</voiceNum>
+            <faxNum>(608) 685-6284</faxNum>
+          </cntPhone>
+          <cntAddress>
+            <delPoint>407 South Second Street</delPoint>
+            <city>Alma</city>
+            <adminArea>WI</adminArea>
+            <postCode>54610-0494</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Buffalo County Land Information Department</displayName>
+        <displayName>Buffalo County Land Information Department</displayName>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Addresses Buffalo County, WI 2019</resTitle>
+      <date>
+        <pubDate>2019-04-01T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Buffalo County Land Information Department</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>(608) 685-6285</voiceNum>
+            <faxNum>(608) 685-6284</faxNum>
+          </cntPhone>
+          <cntAddress>
+            <delPoint>407 South Second Street</delPoint>
+            <city>Alma</city>
+            <adminArea>WI</adminArea>
+            <postCode>54610-0494</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Buffalo County Land Information Department</displayName>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Jason Poser</rpIndName>
+        <rpOrgName>Buffalo County Land Information Department</rpOrgName>
+        <rpPosName>GIS/Land Information Technician</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-685-6285</voiceNum>
+            <faxNum>608-685-6284</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>407 South Second St</delPoint>
+            <city>Alma</city>
+            <adminArea>WI</adminArea>
+            <postCode>54610</postCode>
+            <country>US</country>
+            <eMailAdd>jason.poser@co.buffalo.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Jason Poser</displayName>
+      </citRespParty>
+      <resEd>2019</resEd>
+    </idCitation>
+    <idAbs>This data represents addresses for Buffalo County, Wisconsin in 2019.[Site address points represent the location of site or service delivery addresses assigned by local governments.</idAbs>
+    <idPurp>This data is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.
+
+[Site Address Points]</idPurp>
+    <idCredit>Buffalo Land Information Department</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <idPoC>
+      <rpOrgName>Buffalo County Land Information Department</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">(608) 685-6285</voiceNum>
+          <faxNum>(608) 685-6284</faxNum>
+        </cntPhone>
+        <cntAddress addressType="">
+          <delPoint>407 South Second Street</delPoint>
+          <city>Alma</city>
+          <adminArea>WI</adminArea>
+          <postCode>54610-0494</postCode>
+          <country>US</country>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Buffalo County Land Information Department</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>(608) 685-6285</voiceNum>
+            <faxNum>(608) 685-6284</faxNum>
+          </cntPhone>
+          <cntAddress>
+            <delPoint>407 South Second Street</delPoint>
+            <city>Alma</city>
+            <adminArea>WI</adminArea>
+            <postCode>54610-0494</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Buffalo County Land Information Department</displayName>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Buffalo County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Point</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Wisconsin</keyword>
+      <keyword>Street addresses</keyword>
+      <keyword>Buffalo County</keyword>
+      <keyword>location</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-92.028751</westBL>
+          <eastBL>-91.527663</eastBL>
+          <southBL>44.064591</southBL>
+          <northBL>44.596714</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2019-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Street Addresses</keyword>
+    </themeKeys>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements. </suppInfo>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-92.028751</westBL>
+          <eastBL Sync="TRUE">-91.527663</eastBL>
+          <northBL Sync="TRUE">44.596714</northBL>
+          <southBL Sync="TRUE">44.064592</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <resConst>
+      <Consts>
+        <useLimit>None.</useLimit>
+      </Consts>
+    </resConst>
+    <tpCat>
+      <TopicCatCd value="013" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>UW-Madison</rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>310 Science Hall</delPoint>
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Provided access to archived data at UW-Madison.</stepDesc>
+        <stepDateTm>2019-04-01T00:00:00</stepDateTm>
+        <stepProc>
+          <editorSource>external</editorSource>
+          <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+          <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+          <rpPosName>metadata technician</rpPosName>
+          <rpCntInfo>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+              <country>US</country>
+            </cntAddress>
+            <cntPhone>
+              <voiceNum tddtty="">(608) 262-1471</voiceNum>
+            </cntPhone>
+            <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+          </rpCntInfo>
+          <displayName>Arthur H. Robinson Map Library</displayName>
+          <editorSave>True</editorSave>
+          <displayName>Arthur H. Robinson Map Library</displayName>
+          <role>
+            <RoleCd value="001" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="7592" Sync="FALSE" />
+        <idCodeSpace Sync="TRUE">Esri</idCodeSpace>
+        <idVersion Sync="FALSE">9.5.5</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Buffalo_Addresses_2019">
+      <enttyp>
+        <enttypl Sync="TRUE">Buffalo_Addresses_2019</enttypl>
+        <enttypd>Addresses Buffalo County, WI 2019</enttypd>
+        <enttypds>Buffalo County Land Information Department</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">7672</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl>PREADDRNUM</attrlabl>
+        <attalias Sync="TRUE">Address Number Prefix</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>XCOORD</attrlabl>
+        <attalias Sync="TRUE">XCoord</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>YCOORD</attrlabl>
+        <attalias Sync="TRUE">YCoord</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>MUNICIPALITY</attrlabl>
+        <attalias Sync="TRUE">Municipality Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ZIPCODE</attrlabl>
+        <attalias Sync="TRUE">Zip Code</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>FULLADDR</attrlabl>
+        <attalias Sync="TRUE">Full Address</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">250</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ADDRNUMSUF</attrlabl>
+        <attalias Sync="TRUE">Address Number Suffix</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ADDRNUM</attrlabl>
+        <attalias Sync="TRUE">Full Address Number</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>FULLNAME</attrlabl>
+        <attalias Sync="TRUE">Full Road Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">125</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>STATUS</attrlabl>
+        <attalias Sync="TRUE">Status</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>SITEADDID</attrlabl>
+        <attalias Sync="TRUE">Site Address ID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Buffalo_Addresses_2019">
+        <geoObjTyp>
+          <GeoObjTypCd value="004" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">7672</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Buffalo_Addresses_2019">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="1" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">7672</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20190401</mdDateSt>
+  <mdFileID>D7967C7B-D75D-4141-A142-EB99501272F1</mdFileID>
+</metadata>

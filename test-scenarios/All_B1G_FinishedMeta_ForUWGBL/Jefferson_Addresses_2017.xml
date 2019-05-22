@@ -1,0 +1,800 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <MetaID>{A5D5600E-A2C1-406B-AFC8-E933E3A72A98}</MetaID>
+    <CreaDate>20061020</CreaDate>
+    <CreaTime>15202000</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process Name="Create Feature Class" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CreateFeatureclass" Date="20061020" Time="152020" export="">CreateFeatureclass T:\ctl\roads\AddressPoints.mdb\AddPts address2 # point_Layer SAME_AS_TEMPLATE SAME_AS_TEMPLATE "PROJCS['NAD_1983_StatePlane_Wisconsin_South_FIPS_4803_Feet',GEOGCS['GCS_North_American_1983',DATUM['D_North_American_1983',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Lambert_Conformal_Conic'],PARAMETER['False_Easting',1968500.0],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',-90.0],PARAMETER['Standard_Parallel_1',42.73333333333333],PARAMETER['Standard_Parallel_2',44.06666666666667],PARAMETER['Latitude_Of_Origin',42.0],UNIT['Foot_US',0.3048006096012192]];2021155.67886485 99675.9237443781 3906.24999636202;0 100000;0 100000" # 0 0 0 T:\ctl\roads\AddressPoints.mdb\AddPts\address2</Process>
+        <Process Name="Append" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20061020" Time="152028" export="">Append point_Layer T:\ctl\roads\AddressPoints.mdb\AddPts\address2 TEST T:\ctl\roads\AddressPoints.mdb\AddPts\address2</Process>
+        <Process Name="FeatureClassToFeatureClass_2" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20061020" Time="152029" export="">FeatureClassToFeatureClass T:\ctl\roads\ctyrdcl\point T:\ctl\roads\AddressPoints.mdb\AddPts address2 # "AREA AREA HIDDEN;PERIMETER PERIMETER HIDDEN;CTYRDCL# CTYRDCL_ HIDDEN;CTYRDCL-ID CTYRDCL_ID HIDDEN;PIN_LN PIN_LN VISIBLE;$POLYGONID POLYGONID HIDDEN;$SCALE SCALE HIDDEN;$ANGLE ANGLE HIDDEN" SAME_AS_TEMPLATE SAME_AS_TEMPLATE # 0 T:\ctl\roads\AddressPoints.mdb\AddPts\address2</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20101123" Time="160522" Name="" export="">FeatureClassToFeatureClass T:\ctl\roads\AddressPoints.mdb\AddPts\GISAddpts "Database Connections\VECTOR.sde\vector.SDE.Addressing and Places" AddressPoints # "PIN_LN 'PIN_LN' true true false 20 Text 0 0 ,First,#,T:\ctl\roads\AddressPoints.mdb\AddPts\GISAddpts,PIN_LN,-1,-1" # "Database Connections\VECTOR.sde\vector.SDE.Addressing and Places\vector.SDE.AddressPoints"</Process>
+        <Process Name="Copy Features" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20170330" Time="143157" export="">CopyFeatures "Database Connections\Vector.sde\vector.SDE.Addressing and Places\vector.SDE.AddressPoints" T:\adm\parcels\GDB_StateParcel2017\V3_GISTemplates\JEFFERSON_OTHER_LAYERS.gdb\JEFFERSON_ADDRESS_2017 # 0 0 0</Process>
+      </lineage>
+      <itemProps>
+        <itemName Sync="TRUE">Jefferson_Addresses_2017</itemName>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+        <nativeExtBox>
+          <westBL Sync="TRUE">2232412.120852</westBL>
+          <eastBL Sync="TRUE">2359485.499907</eastBL>
+          <southBL Sync="TRUE">309626.968674</southBL>
+          <northBL Sync="TRUE">439327.312620</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2017_ALL_DATA_OPEN\Jefferson\Jefferson_Addresses_2017.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn>
+        <projcsn Sync="TRUE">NAD_1983_StatePlane_Wisconsin_South_FIPS_4803_Feet</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_StatePlane_Wisconsin_South_FIPS_4803_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983&amp;quot;,DATUM[&amp;quot;D_North_American_1983&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Lambert_Conformal_Conic&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,1968500.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Standard_Parallel_1&amp;quot;,42.73333333333333],PARAMETER[&amp;quot;Standard_Parallel_2&amp;quot;,44.06666666666667],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,42.0],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;EPSG&amp;quot;,2289]],VERTCS[&amp;quot;NAVD_1988&amp;quot;,VDATUM[&amp;quot;North_American_Vertical_Datum_1988&amp;quot;],PARAMETER[&amp;quot;Vertical_Shift&amp;quot;,0.0],PARAMETER[&amp;quot;Direction&amp;quot;,1.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,5703]]&lt;/WKT&gt;&lt;XOrigin&gt;-118121299.99998207&lt;/XOrigin&gt;&lt;YOrigin&gt;-97418299.99994947&lt;/YOrigin&gt;&lt;XYScale&gt;3048.0060960121914&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;102754&lt;/WKID&gt;&lt;LatestWKID&gt;2289&lt;/LatestWKID&gt;&lt;VCSWKID&gt;5703&lt;/VCSWKID&gt;&lt;LatestVCSWKID&gt;5703&lt;/LatestVCSWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20170706</SyncDate>
+    <SyncTime>11572700</SyncTime>
+    <ModDate>20170706</ModDate>
+    <ModTime>11572700</ModTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <idinfo>
+    <native Sync="TRUE">Microsoft Windows Vista Version 6.0 (Build 6002) Service Pack 2; ESRI ArcCatalog 9.3.1.3000</native>
+    <descript>
+      <langdata Sync="TRUE">en</langdata>
+      <abstract>Address Points </abstract>
+      <purpose>The address point file was developed to identify specific address location throughout Jefferson County. The database is used by the Sheriff Department Communications Center dispatchers to provide map locations of emergency 911calls.</purpose>
+    </descript>
+    <citation>
+      <citeinfo>
+        <origin>Land Information Office</origin>
+        <pubdate>Unpublished Material</pubdate>
+        <title Sync="TRUE">vector.SDE.AddressPoints</title>
+        <ftname Sync="TRUE">vector.SDE.AddressPoints</ftname>
+        <geoform Sync="TRUE">vector digital data</geoform>
+        <onlink Sync="TRUE">Server=jeffngis; Service=5151; Database=vector; User=sde; Version=sde.DEFAULT</onlink>
+      </citeinfo>
+    </citation>
+    <timeperd>
+      <current>publication date</current>
+      <timeinfo>
+        <sngdate>
+          <caldate>REQUIRED: The year (and optionally month, or month and day) for which the data set corresponds to the ground.</caldate>
+        </sngdate>
+      </timeinfo>
+    </timeperd>
+    <status>
+      <progress>REQUIRED: The state of the data set.</progress>
+      <update>REQUIRED: The frequency with which changes and additions are made to the data set after the initial data set is completed.</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc Sync="TRUE">-89.015240</westbc>
+        <eastbc Sync="TRUE">-88.533661</eastbc>
+        <northbc Sync="TRUE">43.201088</northbc>
+        <southbc Sync="TRUE">42.840146</southbc>
+      </bounding>
+      <lboundng>
+        <leftbc Sync="TRUE">2232593.999970</leftbc>
+        <rightbc Sync="TRUE">2359485.499979</rightbc>
+        <bottombc Sync="TRUE">309626.968714</bottombc>
+        <topbc Sync="TRUE">439327.312504</topbc>
+      </lboundng>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>REQUIRED: Reference to a formally registered thesaurus or a similar authoritative source of theme keywords.</themekt>
+        <themekey>REQUIRED: Common-use word or phrase used to describe the subject of the data set.</themekey>
+      </theme>
+    </keywords>
+    <accconst>none.</accconst>
+    <useconst>none</useconst>
+    <natvform Sync="TRUE">SDE Feature Class</natvform>
+  </idinfo>
+  <dataIdInfo>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataLang>
+      <languageCode Sync="TRUE" value="eng" country="USA" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <idCitation>
+      <resTitle Sync="FALSE">Addresses Jefferson County, WI 2017</resTitle>
+      <presForm>
+        <PresFormCd Sync="TRUE" value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <date>
+        <pubDate>2017-03-31T00:00:00</pubDate>
+      </date>
+      <citRespParty>
+        <rpOrgName>Jefferson County Land Information Office</rpOrgName>
+        <displayName>Jefferson County Land Information Office</displayName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>320 S Main St Room 101</delPoint>
+            <city>Jefferson</city>
+            <adminArea>WI</adminArea>
+            <postCode>53549</postCode>
+            <eMailAdd>andye@jeffersoncountywi.gov</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">920-674-7146</voiceNum>
+            <faxNum>920-674-7368</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Jefferson County Land Information Office</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Andy  Erdman</rpIndName>
+        <rpOrgName>Jefferson County Land Information Office</rpOrgName>
+        <rpPosName>Land Information Officer</rpPosName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>320 S Main St Room 101</delPoint>
+            <city>Jefferson</city>
+            <adminArea>WI</adminArea>
+            <postCode>53549</postCode>
+            <eMailAdd>andye@jeffersoncountywi.gov</eMailAdd>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">920-674-7146</voiceNum>
+            <faxNum>920-674-7368</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+    </idCitation>
+    <spatRpType>
+      <SpatRepTypCd Sync="TRUE" value="001" />
+    </spatRpType>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <westBL Sync="TRUE">-89.015918</westBL>
+          <eastBL Sync="TRUE">-88.533661</eastBL>
+          <northBL Sync="TRUE">43.201094</northBL>
+          <southBL Sync="TRUE">42.840146</southBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2017-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <geoBox esriExtentType="decdegrees">
+      <westBL Sync="TRUE">-89.01524</westBL>
+      <eastBL Sync="TRUE">-88.533661</eastBL>
+      <northBL Sync="TRUE">43.201088</northBL>
+      <southBL Sync="TRUE">42.840146</southBL>
+      <exTypeCode Sync="TRUE">1</exTypeCode>
+    </geoBox>
+    <descKeys>
+      <thesaName uuidref="723f6998-058e-11dc-8314-0800200c9a66" />
+      <keyword Sync="TRUE">002</keyword>
+    </descKeys>
+    <otherKeys>
+      <thesaName uuidref="723f6998-058e-11dc-8314-0800200c9a66" />
+      <keyword>002</keyword>
+    </otherKeys>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data</idPurp>
+    <idAbs>This point data layer represents addresses for Jefferson County, Wisconsin in 2017. It is a feature class within the geodatabase, Jefferson_Addresses_2017.gdb.</idAbs>
+    <idCredit>Jefferson County Land Information Office</idCredit>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Point</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Street addresses</keyword>
+    </themeKeys>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Jefferson County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <suppInfo>This data was submitted to the UW geospatial archive in 2017. Content may be considered current as of December 31, 2016. It was published to the UW geospatial archive as part of the Wisconsin Department of Administration Land Information Program annual collection of public data for the year 2017.</suppInfo>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <idPoC>
+      <rpOrgName>Jefferson County Land Information Office</rpOrgName>
+      <displayName>Jefferson County Land Information Office</displayName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>320 S Main St Room 101</delPoint>
+          <city>Jefferson</city>
+          <adminArea>WI</adminArea>
+          <postCode>53549</postCode>
+          <eMailAdd>andye@jeffersoncountywi.gov</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">920-674-7146</voiceNum>
+          <faxNum>920-674-7368</faxNum>
+        </cntPhone>
+      </rpCntInfo>
+      <displayName>Jefferson County Land Information Office</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+      <displayName>Jefferson County Land Information Office</displayName>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Jefferson County Land Information Office</rpOrgName>
+        <displayName>Jefferson County Land Information Office</displayName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>320 S Main St Room 101</delPoint>
+            <city>Jefferson</city>
+            <adminArea>WI</adminArea>
+            <postCode>53549</postCode>
+            <eMailAdd>andye@jeffersoncountywi.gov</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">920-674-7146</voiceNum>
+            <faxNum>920-674-7368</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Jefferson County Land Information Office</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Jefferson County Land Information Office</displayName>
+      </maintCont>
+    </resMaint>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <tpCat>
+      <TopicCatCd value="013" />
+    </tpCat>
+  </dataIdInfo>
+  <metainfo>
+    <langmeta Sync="TRUE">en</langmeta>
+    <metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+    <metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+    <mettc Sync="TRUE">local time</mettc>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntper>REQUIRED: The person responsible for the metadata information.</cntper>
+          <cntorg>REQUIRED: The organization responsible for the metadata information.</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>REQUIRED: The mailing and/or physical address for the organization or individual.</addrtype>
+          <city>REQUIRED: The city of the address.</city>
+          <state>REQUIRED: The state or province of the address.</state>
+          <postal>REQUIRED: The ZIP or other postal code of the address.</postal>
+        </cntaddr>
+        <cntvoice>REQUIRED: The telephone number by which individuals can speak to the organization or individual.</cntvoice>
+      </cntinfo>
+    </metc>
+    <metd Sync="TRUE">20101123</metd>
+  </metainfo>
+  <mdLang>
+    <languageCode Sync="TRUE" value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <mdChar>
+    <CharSetCd Sync="TRUE" value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd Sync="TRUE" value="005" />
+  </mdHrLv>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <distinfo>
+    <resdesc Sync="TRUE">Downloadable Data</resdesc>
+  </distinfo>
+  <distInfo>
+    <distributor>
+      <distorTran>
+        <onLineSrc>
+          <orDesc Sync="TRUE">002</orDesc>
+          <linkage Sync="TRUE">Server=jeffngis; Service=5151; Database=vector; User=sde; Version=sde.DEFAULT</linkage>
+          <protocol Sync="TRUE">ArcSDE Connection</protocol>
+        </onLineSrc>
+      </distorTran>
+      <distorFormat>
+        <formatName Sync="FALSE">ESRI Geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+      <distorCont>
+        <editorSource>external</editorSource>
+        <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+        <rpPosName>metadata technician</rpPosName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">(608) 262-1471</voiceNum>
+          </cntPhone>
+          <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Arthur H. Robinson Map Library</displayName>
+        <role>
+          <RoleCd value="001" />
+        </role>
+      </distorCont>
+    </distributor>
+    <distFormat>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+      <formatVer>10.3</formatVer>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Jefferson County Land Information Office</rpOrgName>
+        <displayName>Jefferson County Land Information Office</displayName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>320 S Main St Room 101</delPoint>
+            <city>Jefferson</city>
+            <adminArea>WI</adminArea>
+            <postCode>53549</postCode>
+            <eMailAdd>andye@jeffersoncountywi.gov</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">920-674-7146</voiceNum>
+            <faxNum>920-674-7368</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Jefferson County Land Information Office</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <editorSave>False</editorSave>
+        <displayName>Jefferson County Land Information Office</displayName>
+      </distorCont>
+      <distorFormat>
+        <formatName>ESRI Geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Jefferson_Addresses_2017.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+  </distInfo>
+  <spdoinfo>
+    <direct Sync="TRUE">Vector</direct>
+    <ptvctinf>
+      <esriterm Name="Jefferson_Addresses_2017">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="1" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">36600</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <cordsysn>
+        <geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn>
+        <projcsn Sync="TRUE">NAD_1983_StatePlane_Wisconsin_South_FIPS_4803_Feet</projcsn>
+      </cordsysn>
+      <planar>
+        <planci>
+          <plance Sync="TRUE">coordinate pair</plance>
+          <plandu Sync="TRUE">survey feet</plandu>
+          <coordrep>
+            <absres Sync="TRUE">0.000328</absres>
+            <ordres Sync="TRUE">0.000328</ordres>
+          </coordrep>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn Sync="TRUE">North American Datum of 1983</horizdn>
+        <ellips Sync="TRUE">Geodetic Reference System 80</ellips>
+        <semiaxis Sync="TRUE">6378137.000000</semiaxis>
+        <denflat Sync="TRUE">298.257222</denflat>
+      </geodetic>
+    </horizsys>
+    <vertdef>
+      <altsys>
+        <altenc Sync="TRUE">Explicit elevation coordinate included with horizontal coordinates</altenc>
+        <altres Sync="TRUE">1.000000</altres>
+      </altsys>
+    </vertdef>
+  </spref>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode Sync="TRUE" code="2289">NAD_1983_StatePlane_Wisconsin_South_FIPS_4803_Feet</identCode>
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+        <idVersion Sync="FALSE">9.1</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Jefferson_Addresses_2017">
+        <geoObjTyp>
+          <GeoObjTypCd value="004" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">36600</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <eainfo>
+    <detailed Name="Jefferson_Addresses_2017">
+      <enttyp>
+        <enttypl Sync="TRUE">Jefferson_Addresses_2017</enttypl>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">36600</enttypc>
+        <enttypd>Addresses Jefferson County, WI 2017</enttypd>
+        <enttypds>Jefferson County Land Information Office</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">ESRI</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape</attrlabl>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Feature geometry.</attrdef>
+        <attrdefs Sync="TRUE">ESRI</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PIN_LN</attrlabl>
+        <attalias Sync="TRUE">PIN_LN</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdDateSt Sync="TRUE">20170706</mdDateSt>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAK5nUPiJ4Q0uO4e81+zT7PP9mlVWLusnQrtUE8c5OMDFdNXx38Ub/V9f8AiVfW1xYeVPFc
+G0traCNvn+b5SMgFmbIOcc5HbFAH1boXinQ/E1nLdaNqUF3DC22RkJBQ+4OCB6HvVIeP/CjWsdyu
+uWjRPA1yrKxP7tWCkkAZHzEDB56+hrxnw7B4g+D02n6X4gtdHn0jX7hobhFceZyAnzuwA2gHOORh
+j0zwt/I3wW+Jt/eQacx8PX1s/wBnVwWBO0N5SMCdo8wgHI6HoeCQD26+8X+H9MuLqC91WC3ktBCZ
+/MJAjEpwhJxjBP5dTgVSvfiN4PsLGS8l8Q2DxIgkPkSiVipbbkKuSfm44rzy/wDjBa+IbnS7HTNN
+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</Data>
+    </Thumbnail>
+  </Binary>
+  <mdFileID>090C5F66-B069-4CC0-8AB0-44020850C0E4</mdFileID>
+  <mdContact>
+    <editorSource>external</editorSource>
+    <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        <country>US</country>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum tddtty="">(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+    </rpCntInfo>
+    <editorSave>True</editorSave>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <editorSource>external</editorSource>
+      <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform to UW-Madison's data distribution plan. </stepDesc>
+        <stepDateTm>2017-07-06T00:00:00</stepDateTm>
+        <stepProc>
+          <editorSource>external</editorSource>
+          <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+          <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+          <rpPosName>metadata technician</rpPosName>
+          <rpCntInfo>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+              <country>US</country>
+            </cntAddress>
+            <cntPhone>
+              <voiceNum tddtty="">(608) 262-1471</voiceNum>
+            </cntPhone>
+            <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+          </rpCntInfo>
+          <editorSave>True</editorSave>
+          <displayName>Arthur H. Robinson Map Library</displayName>
+          <role>
+            <RoleCd value="001" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+</metadata>

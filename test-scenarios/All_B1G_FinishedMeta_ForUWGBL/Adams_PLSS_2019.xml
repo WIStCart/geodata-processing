@@ -1,0 +1,742 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20160913</CreaDate>
+    <CreaTime>15442000</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <ArcGISstyle>FGDC CSDGM Metadata</ArcGISstyle>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\DefineProjection" Date="20130812" Time="124528" Name="" export="">DefineProjection M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners PROJCS['NAD_1983_HARN_WISCRS_Adams_County_Feet',GEOGCS['GCS_North_American_1983_HARN',DATUM['D_North_American_1983_HARN',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Transverse_Mercator'],PARAMETER['False_Easting',482999.999],PARAMETER['False_Northing',0.012],PARAMETER['Central_Meridian',-90.0],PARAMETER['Scale_Factor',1.0000365285],PARAMETER['Latitude_Of_Origin',43.36666666666667],UNIT['Foot_US',0.3048006096012192]]</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130821" Time="111934" Name="" export="">CalculateField Linked_Corners LINK "!LINK! .lstrip()[:-16]" PYTHON_9.3 #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130821" Time="112107" Name="" export="">CalculateField Linked_Corners LINK "!LINK! .lstrip()[:-16]+('Notfound.html')" PYTHON_9.3 #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130821" Time="140115" Name="" export="">CalculateField Linked_Corners QC !INDEX_KEY!.lstrip()[:-4] PYTHON_9.3 #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130821" Time="140232" Name="" export="">CalculateField Linked_Corners QC !INDEX_KEY!.lstrip()[:-3] PYTHON_9.3 #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20130930" Time="081715" Name="" export="">FeatureClassToFeatureClass M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners M:\Surveyor_Records\Scanning_Project\AC_Corner_Layer CornerCerts_Links.shp # "OBJECTID "OBJECTID" true true false 4 Long 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,OBJECTID,-1,-1;FID_PLSS_Q "FID_PLSS_Q" true true false 4 Long 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,FID_PLSS_Q,-1,-1;QUARTER_DE "QUARTER_DE" true true false 10 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,QUARTER_DE,-1,-1;QUARTER_IN "QUARTER_IN" true true false 2 Short 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,QUARTER_IN,-1,-1;SECTION_IN "SECTION_IN" true true false 2 Short 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,SECTION_IN,-1,-1;TOWNNUM "TOWNNUM" true true false 2 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,TOWNNUM,-1,-1;TOWNDIR "TOWNDIR" true true false 1 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,TOWNDIR,-1,-1;RANGENUM "RANGENUM" true true false 2 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,RANGENUM,-1,-1;RANGEDIR "RANGEDIR" true true false 1 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,RANGEDIR,-1,-1;MCD_NAME "MCD_NAME" true true false 50 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,MCD_NAME,-1,-1;TOWNRANGE "TOWNRANGE" true true false 10 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,TOWNRANGE,-1,-1;TOWNRANGES "TOWNRANGES" true true false 20 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,TOWNRANGES,-1,-1;TOWNRANG_1 "TOWNRANG_1" true true false 40 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,TOWNRANG_1,-1,-1;QUARTERTEX "QUARTERTEX" true true false 50 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,QUARTERTEX,-1,-1;SECTION_NU "SECTION_NU" true true false 10 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,SECTION_NU,-1,-1;MAPBOOKIND "MAPBOOKIND" true true false 50 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,MAPBOOKIND,-1,-1;EDITDATE "EDITDATE" true true false 8 Date 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,EDITDATE,-1,-1;PRINTDATE "PRINTDATE" true true false 8 Date 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,PRINTDATE,-1,-1;MAPINDEXHE "MAPINDEXHE" true true false 50 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,MAPINDEXHE,-1,-1;SECTION__1 "SECTION__1" true true false 5 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,SECTION__1,-1,-1;ORIG_FID "ORIG_FID" true true false 4 Long 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,ORIG_FID,-1,-1;X "X" true true false 8 Double 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,X,-1,-1;Y "Y" true true false 8 Double 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,Y,-1,-1;CORNERNUM "CORNERNUM" true true false 50 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,CORNERNUM,-1,-1;MONUMENT "MONUMENT" true true false 50 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,MONUMENT,-1,-1;INDEX_KEY "INDEX_KEY" true true false 50 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,INDEX_KEY,-1,-1;LINK "LINK" true true false 200 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,LINK,-1,-1;QC "QC" true true false 50 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,QC,-1,-1;Link_Ok "Link_Ok" true true false 50 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,Link_Ok,-1,-1;problem "problem" true true false 50 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Linked_Corners,problem,-1,-1" #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20131004" Time="142834" Name="" export="">CalculateField CornerCerts_Links QC "!QC! + "Y"" PYTHON_9.3 #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20131004" Time="144630" Name="" export="">CalculateField CornerCerts_Links QC "!QC! + "Y"" PYTHON_9.3 #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20131004" Time="151645" Name="" export="">CalculateField CornerCerts_Links QC "!QC! + "Y"" PYTHON_9.3 #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20131004" Time="152235" Name="" export="">CalculateField CornerCerts_Links QC "!QC! + "Y"" PYTHON_9.3 #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20131004" Time="154747" Name="" export="">CalculateField CornerCerts_Links QC "!QC! + "Y"" PYTHON_9.3 #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20131007" Time="130937" Name="" export="">CalculateField CornerCerts_Links QC "!QC! + "Y"" PYTHON_9.3 #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20131007" Time="143956" Name="" export="">CalculateField CornerCerts_Links QC "!QC! + "Y"" PYTHON_9.3 #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20131007" Time="150857" Name="" export="">CalculateField CornerCerts_Links QC "!QC! + "Y"" PYTHON_9.3 #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140121" Time="125304" Name="" export="">CalculateField CornerCerts_LinksV1 TOWNNUM "[TOWNNUM] +"N"" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140121" Time="130138" Name="" export="">CalculateField CornerCerts_LinksV1 Corner_ID "[TOWNNUM]+"N"+ [RANGENUM] + [CORNERNUM]" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140121" Time="131158" Name="" export="">CalculateField CornerCerts_LinksV1 TOWN "[TOWNNUM] +"N"" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140121" Time="131309" Name="" export="">CalculateField CornerCerts_LinksV1 RANGE "[RANGENUM] +"E"" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140121" Time="132125" Name="" export="">CalculateField CornerCerts_LinksV1 SECTION !SECTION_NU![:2] PYTHON_9.3 #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140121" Time="132322" Name="" export="">CalculateField CornerCerts_LinksV1 SECTION !SECTION_NU![8:9] PYTHON_9.3 #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140121" Time="132400" Name="" export="">CalculateField CornerCerts_LinksV1 SECTION !SECTION_NU![8:10] PYTHON_9.3 #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140121" Time="132527" Name="" export="">CalculateField CornerCerts_LinksV1 CORNER [CORNERNUM] VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140121" Time="132557" Name="" export="">CalculateField CornerCerts_LinksV1 QUARTER [QUARTER_DE] VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140121" Time="132703" Name="" export="">CalculateField CornerCerts_LinksV1 Monument_ID "[TOWN] + [RANGE] + [CORNER]" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20140121" Time="134640" Name="" export="">FeatureClassToFeatureClass M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Section_Corners M:\GIS\ACGIS.gdb Section_Corners # "LINK "LINK" true true false 200 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Section_Corners,LINK,-1,-1;TOWN "Town" true true false 4 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Section_Corners,TOWN,-1,-1;RANGE "Range" true true false 4 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Section_Corners,RANGE,-1,-1;SECTION "Section" true true false 4 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Section_Corners,SECTION,-1,-1;CORNER "Corner Number" true true false 5 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Section_Corners,CORNER,-1,-1;QUARTER "Quarter Designation" true true false 7 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Section_Corners,QUARTER,-1,-1;Monument_ID "Monument ID" true true false 14 Text 0 0 ,First,#,M:\Surveyor_Records\Scanning_Project\Scanning_Project.gdb\Section_Corners,Monument_ID,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170322" Time="155715" Name="" export="">CalculateField PLSS_Section_Corners N [Northing] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170322" Time="155729" Name="" export="">CalculateField PLSS_Section_Corners E [Easting] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170322" Time="155848" Name="" export="">CalculateField PLSS_Section_Corners Northing [N] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170322" Time="155912" Name="" export="">CalculateField PLSS_Section_Corners Easting [E] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180207" Time="125617" Name="" export="">CalculateField ADAMS_PLSS_2018 Accuracy "Survey Grade" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180207" Time="130049" Name="" export="">CalculateField ADAMS_PLSS_2018 CRS "NAD_1983_HARN_WISCRS_Adams_County_Feet" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180207" Time="130242" Name="" export="">CalculateField ADAMS_PLSS_2018 DATUM " D_North_American_1983_HARN" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180207" Time="130513" Name="" export="">CalculateField ADAMS_PLSS_2018 Units "Foot_US" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180207" Time="131636" Name="" export="">CalculateField ADAMS_PLSS_2018 Romportl null VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180207" Time="131647" Name="" export="">CalculateField ADAMS_PLSS_2018 Mon_Type null VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180207" Time="131658" Name="" export="">CalculateField ADAMS_PLSS_2018 Northing null VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180207" Time="131706" Name="" export="">CalculateField ADAMS_PLSS_2018 Easting null VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180207" Time="133005" Name="" export="">CalculateField "2018 V4 Data\ADAMS_PLSS_2018" Date "2017" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180207" Time="133048" Name="" export="">CalculateField "2018 V4 Data\ADAMS_PLSS_2018" Date "2017" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180207" Time="133108" Name="" export="">CalculateField "2018 V4 Data\ADAMS_PLSS_2018" Date "2017" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180207" Time="133128" Name="" export="">CalculateField "2018 V4 Data\ADAMS_PLSS_2018" Date "2017" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180207" Time="133159" Name="" export="">CalculateField "2018 V4 Data\ADAMS_PLSS_2018" Date "2017" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180207" Time="133440" Name="" export="">CalculateField "2018 V4 Data\ADAMS_PLSS_2018" Date "2017" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180207" Time="133901" Name="" export="">CalculateField "2018 V4 Data\ADAMS_PLSS_2018" Date "2017" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180207" Time="134739" Name="" export="">CalculateField "2018 V4 Data\ADAMS_PLSS_2018" Date "2017" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190318" Time="135629" Name="" export="">CalculateField ADAMS_PLSS_2018 Date "2018" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190318" Time="140010" Name="" export="">CalculateField ADAMS_PLSS_2018 Accuracy "GIS Grade" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190318" Time="140057" Name="" export="">CalculateField ADAMS_PLSS_2018 Accuracy "GIS Grade" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20190318" Time="155956" Name="" export="">FeatureClassToFeatureClass M:\GIS\Maps_County\GIS_State_Parcel_Initiative\2017\Final\ADAMS_OTHER.gdb\ADAMS_PLSS_2018 M:\GIS\Maps_County\GIS_State_Parcel_Initiative\2018\FINAL\ADAMS_OTHER.gdb ADAMS_PLSS_2019 # "LINK "LINK" true true false 200 Text 0 0 ,First,#,M:\GIS\Maps_County\GIS_State_Parcel_Initiative\2017\Final\ADAMS_OTHER.gdb\ADAMS_PLSS_2018,LINK,-1,-1;TOWN "TOWN" true true false 4 Text 0 0 ,First,#,M:\GIS\Maps_County\GIS_State_Parcel_Initiative\2017\Final\ADAMS_OTHER.gdb\ADAMS_PLSS_2018,TOWN,-1,-1;RANGE "RANGE" true true false 4 Text 0 0 ,First,#,M:\GIS\Maps_County\GIS_State_Parcel_Initiative\2017\Final\ADAMS_OTHER.gdb\ADAMS_PLSS_2018,RANGE,-1,-1;SECTION "SECTION" true true false 4 Text 0 0 ,First,#,M:\GIS\Maps_County\GIS_State_Parcel_Initiative\2017\Final\ADAMS_OTHER.gdb\ADAMS_PLSS_2018,SECTION,-1,-1;CORNER "CORNER" true true false 5 Text 0 0 ,First,#,M:\GIS\Maps_County\GIS_State_Parcel_Initiative\2017\Final\ADAMS_OTHER.gdb\ADAMS_PLSS_2018,CORNER,-1,-1;QUARTER "QUARTER" true true false 7 Text 0 0 ,First,#,M:\GIS\Maps_County\GIS_State_Parcel_Initiative\2017\Final\ADAMS_OTHER.gdb\ADAMS_PLSS_2018,QUARTER,-1,-1;Monument_I "Monument_I" true true false 14 Text 0 0 ,First,#,M:\GIS\Maps_County\GIS_State_Parcel_Initiative\2017\Final\ADAMS_OTHER.gdb\ADAMS_PLSS_2018,Monument_I,-1,-1;Romportl "Romportl" true true false 25 Text 0 0 ,First,#,M:\GIS\Maps_County\GIS_State_Parcel_Initiative\2017\Final\ADAMS_OTHER.gdb\ADAMS_PLSS_2018,Romportl,-1,-1;Mon_Type "Mon_Type" true true false 254 Text 0 0 ,First,#,M:\GIS\Maps_County\GIS_State_Parcel_Initiative\2017\Final\ADAMS_OTHER.gdb\ADAMS_PLSS_2018,Mon_Type,-1,-1;Northing "Northing" true true false 11 Text 0 0 ,First,#,M:\GIS\Maps_County\GIS_State_Parcel_Initiative\2017\Final\ADAMS_OTHER.gdb\ADAMS_PLSS_2018,Northing,-1,-1;Easting "Easting" true true false 11 Text 0 0 ,First,#,M:\GIS\Maps_County\GIS_State_Parcel_Initiative\2017\Final\ADAMS_OTHER.gdb\ADAMS_PLSS_2018,Easting,-1,-1;Accuracy "Accuracy" true true false 12 Text 0 0 ,First,#,M:\GIS\Maps_County\GIS_State_Parcel_Initiative\2017\Final\ADAMS_OTHER.gdb\ADAMS_PLSS_2018,Accuracy,-1,-1;CRS "Coordinate Reference System" true true false 50 Text 0 0 ,First,#,M:\GIS\Maps_County\GIS_State_Parcel_Initiative\2017\Final\ADAMS_OTHER.gdb\ADAMS_PLSS_2018,CRS,-1,-1;DATUM "DATUM" true true false 30 Text 0 0 ,First,#,M:\GIS\Maps_County\GIS_State_Parcel_Initiative\2017\Final\ADAMS_OTHER.gdb\ADAMS_PLSS_2018,DATUM,-1,-1;Units "Units" true true false 7 Text 0 0 ,First,#,M:\GIS\Maps_County\GIS_State_Parcel_Initiative\2017\Final\ADAMS_OTHER.gdb\ADAMS_PLSS_2018,Units,-1,-1;Date "Date" true true false 4 Text 0 0 ,First,#,M:\GIS\Maps_County\GIS_State_Parcel_Initiative\2017\Final\ADAMS_OTHER.gdb\ADAMS_PLSS_2018,Date,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20190321" Time="113059" Name="" export="">FeatureClassToFeatureClass R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Adams\Originals\ADAMS_OTHER.gdb\ADAMS_PLSS_2019 R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Adams\Adams_PLSS_2019\Adams_PLSS_2019.gdb Adams_PLSS_2019 # "LINK "LINK" true true false 200 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Adams\Originals\ADAMS_OTHER.gdb\ADAMS_PLSS_2019,LINK,-1,-1;TOWN "TOWN" true true false 4 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Adams\Originals\ADAMS_OTHER.gdb\ADAMS_PLSS_2019,TOWN,-1,-1;RANGE "RANGE" true true false 4 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Adams\Originals\ADAMS_OTHER.gdb\ADAMS_PLSS_2019,RANGE,-1,-1;SECTION "SECTION" true true false 4 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Adams\Originals\ADAMS_OTHER.gdb\ADAMS_PLSS_2019,SECTION,-1,-1;CORNER "CORNER" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Adams\Originals\ADAMS_OTHER.gdb\ADAMS_PLSS_2019,CORNER,-1,-1;QUARTER "QUARTER" true true false 7 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Adams\Originals\ADAMS_OTHER.gdb\ADAMS_PLSS_2019,QUARTER,-1,-1;Monument_I "Monument_I" true true false 14 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Adams\Originals\ADAMS_OTHER.gdb\ADAMS_PLSS_2019,Monument_I,-1,-1;Romportl "Romportl" true true false 25 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Adams\Originals\ADAMS_OTHER.gdb\ADAMS_PLSS_2019,Romportl,-1,-1;Mon_Type "Mon_Type" true true false 254 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Adams\Originals\ADAMS_OTHER.gdb\ADAMS_PLSS_2019,Mon_Type,-1,-1;Northing "Northing" true true false 11 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Adams\Originals\ADAMS_OTHER.gdb\ADAMS_PLSS_2019,Northing,-1,-1;Easting "Easting" true true false 11 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Adams\Originals\ADAMS_OTHER.gdb\ADAMS_PLSS_2019,Easting,-1,-1;Accuracy "Accuracy" true true false 12 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Adams\Originals\ADAMS_OTHER.gdb\ADAMS_PLSS_2019,Accuracy,-1,-1;CRS "Coordinate Reference System" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Adams\Originals\ADAMS_OTHER.gdb\ADAMS_PLSS_2019,CRS,-1,-1;DATUM "DATUM" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Adams\Originals\ADAMS_OTHER.gdb\ADAMS_PLSS_2019,DATUM,-1,-1;Units "Units" true true false 7 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Adams\Originals\ADAMS_OTHER.gdb\ADAMS_PLSS_2019,Units,-1,-1;Date "Date" true true false 4 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Adams\Originals\ADAMS_OTHER.gdb\ADAMS_PLSS_2019,Date,-1,-1" #</Process>
+      </lineage>
+      <itemProps>
+        <itemName Sync="TRUE">Adams_PLSS_2019</itemName>
+        <itemSize Sync="TRUE">0.056</itemSize>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2019_ALL_DATA_OPEN_V5\Adams\Adams_PLSS_2019\Adams_PLSS_2019.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <nativeExtBox>
+          <westBL Sync="TRUE">518747.475000</westBL>
+          <eastBL Sync="TRUE">552351.121200</eastBL>
+          <southBL Sync="TRUE">352024.830000</southBL>
+          <northBL Sync="TRUE">419581.217500</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Wisconsin_TM</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Wisconsin_TM&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,3071]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;10000&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;3071&lt;/WKID&gt;&lt;LatestWKID&gt;3071&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+      <copyHistory>
+        <copy source="M:\Surveyor_Records\Scanning_Project\AC_Corner_Layer\CornerCerts_Links" dest="\\ac-DATA\mapping\Surveyor_Records\Scanning_Project\GIS\CornerCerts_Links" date="20131004" time="16130100" />
+      </copyHistory>
+    </DataProperties>
+    <SyncDate>20190325</SyncDate>
+    <SyncTime>11420900</SyncTime>
+    <ModDate>20190325</ModDate>
+    <ModTime>11420900</ModTime>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+  </Esri>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+    <rpPosName>Metadata Technician</rpPosName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum tddtty="">608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <delPoint>310 Science Hall</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      </distorCont>
+    </distributor>
+    <distFormat>
+      <formatVer>10.5</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Adams County Register of Deeds</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-338-4206</voiceNum>
+            <faxNum>608-339-4514</faxNum>
+          </cntPhone>
+          <cntAddress addressType="postal">
+            <delPoint>PO Box 219</delPoint>
+            <city>Friendship</city>
+            <adminArea>WI</adminArea>
+            <postCode>53934</postCode>
+            <country>US</country>
+            <eMailAdd>jhelgeson@co.adams.wi.us</eMailAdd>
+            <delPoint>402 Main St.</delPoint>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Adams County Register of Deeds</displayName>
+      </distorCont>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Adams_PLSS_2019.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">PLSS Adams County, WI 2019</resTitle>
+      <date>
+        <pubDate>2019-03-25T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Adams County Register of Deeds</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-338-4206</voiceNum>
+            <faxNum>608-339-4514</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>PO Box 219</delPoint>
+            <city>Friendship</city>
+            <adminArea>WI</adminArea>
+            <postCode>53934</postCode>
+            <country>US</country>
+            <delPoint>402 Main St.</delPoint>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Adams County Register of Deeds</displayName>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Jodi Helgeson</rpIndName>
+        <rpOrgName>Adams County Register of Deeds</rpOrgName>
+        <rpPosName>Register of Deeds</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-339-4206</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>PO Box 219</delPoint>
+            <city>Friendship</city>
+            <adminArea>WI</adminArea>
+            <postCode>53934</postCode>
+            <country>US</country>
+            <eMailAdd>jhelgeson@co.adams.wi.us</eMailAdd>
+            <delPoint>402 Main St.</delPoint>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Jodi Helgeson</displayName>
+      </citRespParty>
+      <resEd>2019</resEd>
+    </idCitation>
+    <idAbs>This data layer represents public land survey system (PLSS) corners for Adams County, Wisconsin in 2019. [Description and X,Y location data for monumented Adams County PLSS Section Corners.]</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. [Custodial data for Adams County PLSS corner monuments, by type and location, including tie sheet links.]</idPurp>
+    <idCredit>Adams County Register of Deeds. [Adams County GIS.]</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <idPoC>
+      <rpOrgName>Adams County Register of Deeds</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">608-338-4206</voiceNum>
+          <faxNum>608-339-4514</faxNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>PO Box 219</delPoint>
+          <city>Friendship</city>
+          <adminArea>WI</adminArea>
+          <postCode>53934</postCode>
+          <country>US</country>
+          <eMailAdd>jhelgeson@co.adams.wi.us</eMailAdd>
+          <delPoint>402 Main St.</delPoint>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Adams County Register of Deeds</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-338-4206</voiceNum>
+            <faxNum>608-339-4514</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>PO Box 219</delPoint>
+            <city>Friendship</city>
+            <adminArea>WI</adminArea>
+            <postCode>53934</postCode>
+            <country>US</country>
+            <eMailAdd>jhelgeson@co.adams.wi.us</eMailAdd>
+            <delPoint>402 Main St.</delPoint>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Adams County Register of Deeds</displayName>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Adams County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Point</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Surveying - Public Lands</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Public Land Survey System</keyword>
+      <keyword>PLSS</keyword>
+      <keyword>PLSS Corners</keyword>
+      <keyword>Corner Monuments</keyword>
+      <keyword>Adams County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-90.015029</westBL>
+          <eastBL>-89.597364</eastBL>
+          <southBL>43.641584</southBL>
+          <northBL>44.248796</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2019-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements. For access to the most current data for this county, please visit: www.adamscountylandrecords.com  </suppInfo>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-90.015688</westBL>
+          <eastBL Sync="TRUE">-89.594792</eastBL>
+          <northBL Sync="TRUE">44.249467</northBL>
+          <southBL Sync="TRUE">43.640513</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <themeKeys>
+      <keyword>PLSS: Public Land Survey System</keyword>
+    </themeKeys>
+    <tpCat>
+      <TopicCatCd value="015" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+      <rpPosName>Metadata Technician</rpPosName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <delPoint>310 Science Hall</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Provided access to archived data at UW-Madison.</stepDesc>
+        <stepDateTm>2019-03-25T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+          <rpPosName>Metadata Technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum tddtty="">608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="001" />
+          </role>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="3071" Sync="FALSE" />
+        <idVersion Sync="FALSE">9.5.5</idVersion>
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+    <detailed Name="Adams_PLSS_2019">
+      <enttyp>
+        <enttypl Sync="TRUE">Adams_PLSS_2019</enttypl>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">2082</enttypc>
+        <enttypd>PLSS Adams County, WI 2019</enttypd>
+        <enttypds>Adams County Register of Deeds</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape</attrlabl>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Feature geometry.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LINK</attrlabl>
+        <attalias Sync="TRUE">LINK</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">200</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TOWN</attrlabl>
+        <attalias Sync="TRUE">TOWN</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RANGE</attrlabl>
+        <attalias Sync="TRUE">RANGE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SECTION</attrlabl>
+        <attalias Sync="TRUE">SECTION</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CORNER</attrlabl>
+        <attalias Sync="TRUE">CORNER</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">QUARTER</attrlabl>
+        <attalias Sync="TRUE">QUARTER</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">7</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Monument_I</attrlabl>
+        <attalias Sync="TRUE">Monument_I</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">14</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Romportl</attrlabl>
+        <attalias Sync="TRUE">Romportl</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Mon_Type</attrlabl>
+        <attalias Sync="TRUE">Mon_Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">254</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Northing</attrlabl>
+        <attalias Sync="TRUE">Northing</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">11</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Easting</attrlabl>
+        <attalias Sync="TRUE">Easting</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">11</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Accuracy</attrlabl>
+        <attalias Sync="TRUE">Accuracy</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">12</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CRS</attrlabl>
+        <attalias Sync="TRUE">Coordinate Reference System</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DATUM</attrlabl>
+        <attalias Sync="TRUE">DATUM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Units</attrlabl>
+        <attalias Sync="TRUE">Units</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">7</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Date</attrlabl>
+        <attalias Sync="TRUE">Date</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Adams_PLSS_2019">
+        <geoObjTyp>
+          <GeoObjTypCd value="004" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">2082</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Adams_PLSS_2019">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="1" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">2082</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20190325</mdDateSt>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiigAooooAK47xL8StG8KanLYahaam0sdv9o3w225GQEAkEkZxnk9B611l1P9mt
+Jp/LaTyo2fYpALYGcAkgD8SBXyVrOuXl7fa5OL3V4o5o79hBvhKoskqEoTu5Q8BscnAxkZoA91X4
+1eFt6LJDq0StIY97WZIDBdzA7STkAgkAZGRTo/jX4Ml2bLi/Yu2xQLGU5YjKjgdWHIrw+W51mGe2
+LanqjNcTyzAyXFsQyvCAxb5m+YrwVI5HA54qrp97q6tZmO9mUi6gK7ZLZcMsQCEZHULkAnhehwTQ
+B7ynxt8FyGMLc3xMgGwCxlO4lioA45yR/k8VYX4y+BGCH+2mAY4GbSYY6cn5OmTj68V862lzqTac
+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</Data>
+    </Thumbnail>
+  </Binary>
+  <mdFileID>D8FE23F4-A75F-4108-B66E-FB7E6053F173</mdFileID>
+</metadata>

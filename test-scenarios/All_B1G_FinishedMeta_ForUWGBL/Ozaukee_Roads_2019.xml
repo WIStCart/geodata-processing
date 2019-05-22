@@ -1,0 +1,1106 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20180906</CreaDate>
+    <CreaTime>15412100</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <SyncDate>20190404</SyncDate>
+    <SyncTime>13482900</SyncTime>
+    <ModDate>20190404</ModDate>
+    <ModTime>13482900</ModTime>
+    <DataProperties>
+      <lineage>
+        <Process Name="DeleteField_2" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteField" Date="20080102" Time="080029" export="">DeleteField "C:\Data\InsightData\DESTINATION SHAPEFILES\Vector\ROAD_SEGMENTS.shp" M_CITY_L;M_CITY_R;M_ZIP_L;M_ZIP_R;M_STATE_L;M_STATE_R "C:\Data\InsightData\DESTINATION SHAPEFILES\Vector\ROAD_SEGMENTS.shp"</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20090506" Time="112704" Name="" export="">CopyFeatures "C:\SHAPEFILES\E911 Address\BBSI\BBSI_Roads.shp" "Database Connections\OZGIS-GISQA.sde\OZGIS.GIS.CAD_Data_BBSI\OZGIS.GIS.BBSI_Roads" # 0 0 0</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20100426" Time="150830" Name="" export="">CopyFeatures "Database Connections\OZGIS-GISQA.sde\OZGIS.GIS.CAD_Data_BBSI\OZGIS.GIS.Road_Centerlines" "Database Connections\OZGIS-GISQA.sde\OZGIS.GIS.CAD\OZGIS.GIS.OZGIS_GIS_Road_Centerlines" # 0 0 0</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\MigrateStorage" Date="20151022" Time="223548" Name="" export="">MigrateStorage 'Database Connections\QA.sde\OZGIS.GIS.ProPhoenix\OZGIS.GIS.OZGIS_GIS_Responders';'Database Connections\QA.sde\OZGIS.GIS.ProPhoenix\OZGIS.GIS.OZGIS_GIS_Road_Centerlines';'Database Connections\QA.sde\OZGIS.GIS.ProPhoenix\OZGIS.GIS.Intersection_Points';'Database Connections\QA.sde\OZGIS.GIS.ProPhoenix\OZGIS.GIS.OZGIS_GIS_Emergency_Service_Zones';'Database Connections\QA.sde\OZGIS.GIS.ProPhoenix\OZGIS.GIS.Address_Points';'Database Connections\QA.sde\OZGIS.GIS.Shoreland_Zoning\OZGIS.GIS.ShorelandAndFloodplainZone_NAD27';'Database Connections\QA.sde\OZGIS.GIS.Topography\OZGIS.GIS.Elevation_Line';'Database Connections\QA.sde\OZGIS.GIS.OZ_HYDROLINE_CURRENT' GEOMETRY</Process>
+        <Process ToolSource="c:\program files\arcgis\server\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20190322" Time="021557" Name="" export="">FeatureClassToFeatureClass C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines D:\GISDATA\Publication_GDB\Rep.gdb\ProPhoenix Road_Centerlines # "UID "UID" true true false 38 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,UID,-1,-1;LFROM "LFROM" true true false 4 Long 0 10 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,LFROM,-1,-1;LTO "LTO" true true false 4 Long 0 10 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,LTO,-1,-1;RFROM "RFROM" true true false 4 Long 0 10 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,RFROM,-1,-1;RTO "RTO" true true false 4 Long 0 10 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,RTO,-1,-1;PRE_DIR "PRE_DIR" true true false 2 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,PRE_DIR,-1,-1;STR_NAME "STR_NAME" true true false 75 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,STR_NAME,-1,-1;SUFFIX "SUFFIX" true true false 4 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,SUFFIX,-1,-1;RD_CLASS "RD_CLASS" true true false 2 Short 0 5 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,RD_CLASS,-1,-1;RATE "RATE" true true false 2 Short 0 5 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,RATE,-1,-1;LENGTH "LENGTH" true true false 8 Double 8 38 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,LENGTH,-1,-1;COST "COST" true true false 8 Double 8 38 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,COST,-1,-1;ONEWAY "ONEWAY" true true false 2 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,ONEWAY,-1,-1;ZORDER "ZORDER" true true false 2 Short 0 5 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,ZORDER,-1,-1;LABEL "LABEL" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,LABEL,-1,-1;PRINCIPAL "PRINCIPAL" true true false 2 Short 0 5 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,PRINCIPAL,-1,-1;SHIELD "SHIELD" true true false 4 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,SHIELD,-1,-1;HWY_NUM "HWY_NUM" true true false 6 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,HWY_NUM,-1,-1;PREFIX "PREFIX" true true false 30 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,PREFIX,-1,-1;SP_CAT "SP_CAT" true true false 2 Short 0 5 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,SP_CAT,-1,-1;id "id" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,id,-1,-1;updated "updated" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,updated,-1,-1;verified "verified" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,verified,-1,-1;widot "widot" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,widot,-1,-1;rlpx "rlpx" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,rlpx,-1,-1;aliasname1 "aliasname1" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,aliasname1,-1,-1;aliasname2 "aliasname2" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,aliasname2,-1,-1;aliasname3 "aliasname3" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,aliasname3,-1,-1;rlp1_l_s "rlp1_l_s" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,rlp1_l_s,-1,-1;rlp1a_l_s "rlp1a_l_s" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,rlp1a_l_s,-1,-1;rlp2_l_s "rlp2_l_s" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,rlp2_l_s,-1,-1;rlp2a_l_s "rlp2a_l_s" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,rlp2a_l_s,-1,-1;rlp1_l_e "rlp1_l_e" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,rlp1_l_e,-1,-1;rlp1a_l_e "rlp1a_l_e" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,rlp1a_l_e,-1,-1;rlp2_l_e "rlp2_l_e" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,rlp2_l_e,-1,-1;rlp2a_l_e "rlp2a_l_e" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,rlp2a_l_e,-1,-1;rlp1_r_s "rlp1_r_s" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,rlp1_r_s,-1,-1;rlp1a_r_s "rlp1a_r_s" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,rlp1a_r_s,-1,-1;rlp2_r_s "rlp2_r_s" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,rlp2_r_s,-1,-1;rlp2a_r_s "rlp2a_r_s" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,rlp2a_r_s,-1,-1;rlp1_r_e "rlp1_r_e" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,rlp1_r_e,-1,-1;rlp1a_r_e "rlp1a_r_e" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,rlp1a_r_e,-1,-1;rlp2_r_e "rlp2_r_e" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,rlp2_r_e,-1,-1;rlp2a_r_e "rlp2a_r_e" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,rlp2a_r_e,-1,-1;lmrespol_l "lmrespol_l" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,lmrespol_l,-1,-1;lmresaid_l "lmresaid_l" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,lmresaid_l,-1,-1;lmresfir_l "lmresfir_l" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,lmresfir_l,-1,-1;lmrespol_r "lmrespol_r" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,lmrespol_r,-1,-1;lmresaid_r "lmresaid_r" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,lmresaid_r,-1,-1;lmresfir_r "lmresfir_r" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,lmresfir_r,-1,-1;publicpriv "publicpriv" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,publicpriv,-1,-1;lmzone "lmzone" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,lmzone,-1,-1;lmsubzone "lmsubzone" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,lmsubzone,-1,-1;lmaid "lmaid" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,lmaid,-1,-1;lmsubaid "lmsubaid" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,lmsubaid,-1,-1;comment "comment" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,comment,-1,-1;dir "dir" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,dir,-1,-1;streetname "streetname" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,streetname,-1,-1;gtg "gtg" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,gtg,-1,-1;alt_name "alt_name" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,alt_name,-1,-1;lr_pre_dir "lr_pre_dir" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,lr_pre_dir,-1,-1;community "community" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,community,-1,-1;p_dir "p_dir" true true false 100 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,p_dir,-1,-1;POST_DIR "POST_DIR" true true false 7 Text 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,POST_DIR,-1,-1;DIR_CLASS "DIR_CLASS" true true false 2 Short 0 5 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,DIR_CLASS,-1,-1;Shape_STLength__ "Shape_STLength__" false false true 0 Double 0 0 ,First,#,C:\DirtyHackParcelStack\sde.DEFAULT.sde\OZGIS_NAD83.GIS.ProPhoenix\OZGIS_NAD83.GIS.Road_Centerlines,Shape.STLength(),-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20190327" Time="154904" Name="" export="">FeatureClassToFeatureClass D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines D:\GISDATA\Publication_GDB\OZAUKEE_OTHER.gdb OZAUKEE_ROADS_2019 # "UID "UID" true true false 38 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,UID,-1,-1;LFROM "LFROM" true true false 4 Long 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,LFROM,-1,-1;LTO "LTO" true true false 4 Long 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,LTO,-1,-1;RFROM "RFROM" true true false 4 Long 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,RFROM,-1,-1;RTO "RTO" true true false 4 Long 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,RTO,-1,-1;PRE_DIR "PRE_DIR" true true false 2 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,PRE_DIR,-1,-1;STR_NAME "STR_NAME" true true false 75 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,STR_NAME,-1,-1;SUFFIX "SUFFIX" true true false 4 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,SUFFIX,-1,-1;RD_CLASS "RD_CLASS" true true false 2 Short 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,RD_CLASS,-1,-1;RATE "RATE" true true false 2 Short 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,RATE,-1,-1;LENGTH "LENGTH" true true false 8 Double 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,LENGTH,-1,-1;COST "COST" true true false 8 Double 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,COST,-1,-1;ONEWAY "ONEWAY" true true false 2 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,ONEWAY,-1,-1;ZORDER "ZORDER" true true false 2 Short 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,ZORDER,-1,-1;LABEL "LABEL" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,LABEL,-1,-1;PRINCIPAL "PRINCIPAL" true true false 2 Short 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,PRINCIPAL,-1,-1;SHIELD "SHIELD" true true false 4 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,SHIELD,-1,-1;HWY_NUM "HWY_NUM" true true false 6 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,HWY_NUM,-1,-1;PREFIX "PREFIX" true true false 30 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,PREFIX,-1,-1;SP_CAT "SP_CAT" true true false 2 Short 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,SP_CAT,-1,-1;id "id" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,id,-1,-1;updated "updated" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,updated,-1,-1;verified "verified" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,verified,-1,-1;widot "widot" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,widot,-1,-1;rlpx "rlpx" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,rlpx,-1,-1;aliasname1 "aliasname1" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,aliasname1,-1,-1;aliasname2 "aliasname2" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,aliasname2,-1,-1;aliasname3 "aliasname3" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,aliasname3,-1,-1;rlp1_l_s "rlp1_l_s" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,rlp1_l_s,-1,-1;rlp1a_l_s "rlp1a_l_s" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,rlp1a_l_s,-1,-1;rlp2_l_s "rlp2_l_s" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,rlp2_l_s,-1,-1;rlp2a_l_s "rlp2a_l_s" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,rlp2a_l_s,-1,-1;rlp1_l_e "rlp1_l_e" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,rlp1_l_e,-1,-1;rlp1a_l_e "rlp1a_l_e" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,rlp1a_l_e,-1,-1;rlp2_l_e "rlp2_l_e" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,rlp2_l_e,-1,-1;rlp2a_l_e "rlp2a_l_e" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,rlp2a_l_e,-1,-1;rlp1_r_s "rlp1_r_s" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,rlp1_r_s,-1,-1;rlp1a_r_s "rlp1a_r_s" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,rlp1a_r_s,-1,-1;rlp2_r_s "rlp2_r_s" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,rlp2_r_s,-1,-1;rlp2a_r_s "rlp2a_r_s" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,rlp2a_r_s,-1,-1;rlp1_r_e "rlp1_r_e" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,rlp1_r_e,-1,-1;rlp1a_r_e "rlp1a_r_e" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,rlp1a_r_e,-1,-1;rlp2_r_e "rlp2_r_e" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,rlp2_r_e,-1,-1;rlp2a_r_e "rlp2a_r_e" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,rlp2a_r_e,-1,-1;lmrespol_l "lmrespol_l" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,lmrespol_l,-1,-1;lmresaid_l "lmresaid_l" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,lmresaid_l,-1,-1;lmresfir_l "lmresfir_l" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,lmresfir_l,-1,-1;lmrespol_r "lmrespol_r" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,lmrespol_r,-1,-1;lmresaid_r "lmresaid_r" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,lmresaid_r,-1,-1;lmresfir_r "lmresfir_r" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,lmresfir_r,-1,-1;publicpriv "publicpriv" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,publicpriv,-1,-1;lmzone "lmzone" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,lmzone,-1,-1;lmsubzone "lmsubzone" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,lmsubzone,-1,-1;lmaid "lmaid" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,lmaid,-1,-1;lmsubaid "lmsubaid" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,lmsubaid,-1,-1;comment "comment" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,comment,-1,-1;dir "dir" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,dir,-1,-1;streetname "streetname" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,streetname,-1,-1;gtg "gtg" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,gtg,-1,-1;alt_name "alt_name" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,alt_name,-1,-1;lr_pre_dir "lr_pre_dir" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,lr_pre_dir,-1,-1;community "community" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,community,-1,-1;p_dir "p_dir" true true false 100 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,p_dir,-1,-1;POST_DIR "POST_DIR" true true false 7 Text 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,POST_DIR,-1,-1;DIR_CLASS "DIR_CLASS" true true false 2 Short 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,DIR_CLASS,-1,-1;Shape_Length "Shape_Length" false true true 8 Double 0 0 ,First,#,D:\GISDATA\Publication_GDB\Publication.gdb\ProPhoenix\Road_Centerlines,Shape_Length,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20190328" Time="152454" Name="" export="">FeatureClassToFeatureClass R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019 R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Ozaukee_Roads_2019\Ozaukee_Roads_2019.gdb Ozaukee_Roads_2019 # "UID "UID" true true false 38 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,UID,-1,-1;LFROM "LFROM" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,LFROM,-1,-1;LTO "LTO" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,LTO,-1,-1;RFROM "RFROM" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,RFROM,-1,-1;RTO "RTO" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,RTO,-1,-1;PRE_DIR "PRE_DIR" true true false 2 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,PRE_DIR,-1,-1;STR_NAME "STR_NAME" true true false 75 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,STR_NAME,-1,-1;SUFFIX "SUFFIX" true true false 4 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,SUFFIX,-1,-1;RD_CLASS "RD_CLASS" true true false 2 Short 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,RD_CLASS,-1,-1;RATE "RATE" true true false 2 Short 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,RATE,-1,-1;LENGTH "LENGTH" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,LENGTH,-1,-1;COST "COST" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,COST,-1,-1;ONEWAY "ONEWAY" true true false 2 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,ONEWAY,-1,-1;ZORDER "ZORDER" true true false 2 Short 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,ZORDER,-1,-1;LABEL "LABEL" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,LABEL,-1,-1;PRINCIPAL "PRINCIPAL" true true false 2 Short 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,PRINCIPAL,-1,-1;SHIELD "SHIELD" true true false 4 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,SHIELD,-1,-1;HWY_NUM "HWY_NUM" true true false 6 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,HWY_NUM,-1,-1;PREFIX "PREFIX" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,PREFIX,-1,-1;SP_CAT "SP_CAT" true true false 2 Short 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,SP_CAT,-1,-1;id "id" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,id,-1,-1;updated "updated" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,updated,-1,-1;verified "verified" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,verified,-1,-1;widot "widot" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,widot,-1,-1;rlpx "rlpx" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,rlpx,-1,-1;aliasname1 "aliasname1" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,aliasname1,-1,-1;aliasname2 "aliasname2" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,aliasname2,-1,-1;aliasname3 "aliasname3" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,aliasname3,-1,-1;rlp1_l_s "rlp1_l_s" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,rlp1_l_s,-1,-1;rlp1a_l_s "rlp1a_l_s" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,rlp1a_l_s,-1,-1;rlp2_l_s "rlp2_l_s" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,rlp2_l_s,-1,-1;rlp2a_l_s "rlp2a_l_s" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,rlp2a_l_s,-1,-1;rlp1_l_e "rlp1_l_e" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,rlp1_l_e,-1,-1;rlp1a_l_e "rlp1a_l_e" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,rlp1a_l_e,-1,-1;rlp2_l_e "rlp2_l_e" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,rlp2_l_e,-1,-1;rlp2a_l_e "rlp2a_l_e" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,rlp2a_l_e,-1,-1;rlp1_r_s "rlp1_r_s" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,rlp1_r_s,-1,-1;rlp1a_r_s "rlp1a_r_s" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,rlp1a_r_s,-1,-1;rlp2_r_s "rlp2_r_s" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,rlp2_r_s,-1,-1;rlp2a_r_s "rlp2a_r_s" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,rlp2a_r_s,-1,-1;rlp1_r_e "rlp1_r_e" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,rlp1_r_e,-1,-1;rlp1a_r_e "rlp1a_r_e" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,rlp1a_r_e,-1,-1;rlp2_r_e "rlp2_r_e" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,rlp2_r_e,-1,-1;rlp2a_r_e "rlp2a_r_e" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,rlp2a_r_e,-1,-1;lmrespol_l "lmrespol_l" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,lmrespol_l,-1,-1;lmresaid_l "lmresaid_l" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,lmresaid_l,-1,-1;lmresfir_l "lmresfir_l" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,lmresfir_l,-1,-1;lmrespol_r "lmrespol_r" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,lmrespol_r,-1,-1;lmresaid_r "lmresaid_r" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,lmresaid_r,-1,-1;lmresfir_r "lmresfir_r" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,lmresfir_r,-1,-1;publicpriv "publicpriv" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,publicpriv,-1,-1;lmzone "lmzone" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,lmzone,-1,-1;lmsubzone "lmsubzone" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,lmsubzone,-1,-1;lmaid "lmaid" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,lmaid,-1,-1;lmsubaid "lmsubaid" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,lmsubaid,-1,-1;comment "comment" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,comment,-1,-1;dir "dir" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,dir,-1,-1;streetname "streetname" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,streetname,-1,-1;gtg "gtg" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,gtg,-1,-1;alt_name "alt_name" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,alt_name,-1,-1;lr_pre_dir "lr_pre_dir" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,lr_pre_dir,-1,-1;community "community" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,community,-1,-1;p_dir "p_dir" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,p_dir,-1,-1;POST_DIR "POST_DIR" true true false 7 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,POST_DIR,-1,-1;DIR_CLASS "DIR_CLASS" true true false 2 Short 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,DIR_CLASS,-1,-1;Shape_Length "Shape_Length" false true true 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Originals\OZAUKEE_OTHER.gdb\OZAUKEE_ROADS_2019,Shape_Length,-1,-1" #</Process>
+      </lineage>
+      <itemProps>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2019_ALL_DATA_OPEN_V5\Ozaukee\Ozaukee_Roads_2019\Ozaukee_Roads_2019.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemName Sync="TRUE">Ozaukee_Roads_2019</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">-88.067350</westBL>
+          <eastBL Sync="TRUE">-87.792276</eastBL>
+          <southBL Sync="TRUE">43.189252</southBL>
+          <northBL Sync="TRUE">43.551695</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Geographic</type>
+        <geogcsn Sync="TRUE">GCS_WGS_1984</geogcsn>
+        <csUnits Sync="TRUE">Angular Unit: Degree (0.017453)</csUnits>
+        <peXml Sync="TRUE">&lt;GeographicCoordinateSystem xsi:type='typens:GeographicCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;GEOGCS[&amp;quot;GCS_WGS_1984&amp;quot;,DATUM[&amp;quot;D_WGS_1984&amp;quot;,SPHEROID[&amp;quot;WGS_1984&amp;quot;,6378137.0,298.257223563]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433],AUTHORITY[&amp;quot;EPSG&amp;quot;,4326]]&lt;/WKT&gt;&lt;XOrigin&gt;-399.99999999999989&lt;/XOrigin&gt;&lt;YOrigin&gt;-399.99999999999989&lt;/YOrigin&gt;&lt;XYScale&gt;1000000000.0000001&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;8.9831528411952133e-009&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;LeftLongitude&gt;-180&lt;/LeftLongitude&gt;&lt;WKID&gt;4326&lt;/WKID&gt;&lt;LatestWKID&gt;4326&lt;/LatestWKID&gt;&lt;/GeographicCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+    <rpPosName>Metadata Technician</rpPosName>
+    <rpCntInfo>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        <country>US</country>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum>(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+    </rpCntInfo>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      </distorCont>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Ozaukee_Roads_2019.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.5</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Ozaukee County Land Information Department</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>262-284-8262</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>P.O. Box 994</delPoint>
+            <delPoint>121 W. Main St.</delPoint>
+            <city>Port Washington</city>
+            <adminArea>WI</adminArea>
+            <postCode>53074</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Ozaukee County Land Information Office</displayName>
+        <displayName>Ozaukee County Land Information Office</displayName>
+        <displayName>Ozaukee County Land Information Office</displayName>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Roads Ozaukee County, WI 2019</resTitle>
+      <date>
+        <pubDate>2019-04-04T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Ozaukee County Land Information Department</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>262-284-9411</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>P.O. Box 994</delPoint>
+            <delPoint>121 W. Main St.</delPoint>
+            <city>Port Washington</city>
+            <adminArea>WI</adminArea>
+            <postCode>53074</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Ozaukee County Land Information Office</displayName>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Cristina Richards</rpIndName>
+        <rpOrgName>Ozaukee County Land Information Department</rpOrgName>
+        <rpPosName>Land Information Coordinator</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>262-284-8262</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>P.O. Box 994</delPoint>
+            <delPoint>121 W. Main St.</delPoint>
+            <city>Port Washington</city>
+            <adminArea>WI</adminArea>
+            <postCode>53074</postCode>
+            <country>US</country>
+            <eMailAdd>cpearson@co.ozaukee.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Christina Richards</displayName>
+      </citRespParty>
+      <resEd>2019</resEd>
+    </idCitation>
+    <idAbs>This data represents roads for Ozaukee County, Wisconsin in 2019.</idAbs>
+    <idPurp>This data is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.</idPurp>
+    <idCredit>Ozaukee County Land Information Department</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Ozaukee County Land Information Department</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">262-284-8262</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>P.O. Box 994</delPoint>
+            <delPoint>121 W. Main St.</delPoint>
+            <city>Port Washington</city>
+            <adminArea>WI</adminArea>
+            <postCode>53074</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Ozaukee County Land Information Office</displayName>
+        <displayName>Ozaukee County Land Information Office</displayName>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Ozaukee County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Line</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Roads, Streets, Transportation</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Roads</keyword>
+      <keyword>Streets</keyword>
+      <keyword>Transportation</keyword>
+      <keyword>Ozaukee County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-88.063712</westBL>
+          <eastBL>-87.792252</eastBL>
+          <southBL>43.192145</southBL>
+          <northBL>43.543366</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2019-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idPoC>
+      <rpOrgName>Ozaukee County Land Information Department</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">262-284-8262</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>P.O. Box 994</delPoint>
+          <delPoint>121 W. Main St.</delPoint>
+          <city>Port Washington</city>
+          <adminArea>WI</adminArea>
+          <postCode>53074</postCode>
+          <country>US</country>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="006" />
+      </role>
+      <displayName>Ozaukee County Land Information Office</displayName>
+    </idPoC>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-88.067350</westBL>
+          <eastBL Sync="TRUE">-87.792276</eastBL>
+          <northBL Sync="TRUE">43.551695</northBL>
+          <southBL Sync="TRUE">43.189252</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="018" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+      <rpPosName>Metadata Technician</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum>(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Provided access to archived data at UW-Madison.</stepDesc>
+        <stepDateTm>2019-04-04T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+          <rpPosName>Metadata Technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum tddtty="">608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="001" />
+          </role>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="4326" Sync="FALSE" />
+        <idVersion Sync="FALSE">9.5.5</idVersion>
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Ozaukee_Roads_2019">
+      <enttyp>
+        <enttypl Sync="TRUE">Ozaukee_Roads_2019</enttypl>
+        <enttypd>Roads Ozaukee County, WI 2019</enttypd>
+        <enttypds>Ozaukee County Land Information Department</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">6602</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Prefix</attrlabl>
+        <attalias Sync="TRUE">PREFIX</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">UID</attrlabl>
+        <attalias Sync="TRUE">UID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">38</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LFROM</attrlabl>
+        <attalias Sync="TRUE">LFROM</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LTO</attrlabl>
+        <attalias Sync="TRUE">LTO</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RFROM</attrlabl>
+        <attalias Sync="TRUE">RFROM</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RTO</attrlabl>
+        <attalias Sync="TRUE">RTO</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRE_DIR</attrlabl>
+        <attalias Sync="TRUE">PRE_DIR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STR_NAME</attrlabl>
+        <attalias Sync="TRUE">STR_NAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">75</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SUFFIX</attrlabl>
+        <attalias Sync="TRUE">SUFFIX</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RD_CLASS</attrlabl>
+        <attalias Sync="TRUE">RD_CLASS</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RATE</attrlabl>
+        <attalias Sync="TRUE">RATE</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LENGTH</attrlabl>
+        <attalias Sync="TRUE">LENGTH</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">COST</attrlabl>
+        <attalias Sync="TRUE">COST</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ONEWAY</attrlabl>
+        <attalias Sync="TRUE">ONEWAY</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ZORDER</attrlabl>
+        <attalias Sync="TRUE">ZORDER</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LABEL</attrlabl>
+        <attalias Sync="TRUE">LABEL</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRINCIPAL</attrlabl>
+        <attalias Sync="TRUE">PRINCIPAL</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SHIELD</attrlabl>
+        <attalias Sync="TRUE">SHIELD</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">HWY_NUM</attrlabl>
+        <attalias Sync="TRUE">HWY_NUM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">6</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SP_CAT</attrlabl>
+        <attalias Sync="TRUE">SP_CAT</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">id</attrlabl>
+        <attalias Sync="TRUE">id</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">updated</attrlabl>
+        <attalias Sync="TRUE">updated</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">verified</attrlabl>
+        <attalias Sync="TRUE">verified</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">widot</attrlabl>
+        <attalias Sync="TRUE">widot</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">rlpx</attrlabl>
+        <attalias Sync="TRUE">rlpx</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">aliasname1</attrlabl>
+        <attalias Sync="TRUE">aliasname1</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">aliasname2</attrlabl>
+        <attalias Sync="TRUE">aliasname2</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">aliasname3</attrlabl>
+        <attalias Sync="TRUE">aliasname3</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">rlp1_l_s</attrlabl>
+        <attalias Sync="TRUE">rlp1_l_s</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">rlp1a_l_s</attrlabl>
+        <attalias Sync="TRUE">rlp1a_l_s</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">rlp2_l_s</attrlabl>
+        <attalias Sync="TRUE">rlp2_l_s</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">rlp2a_l_s</attrlabl>
+        <attalias Sync="TRUE">rlp2a_l_s</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">rlp1_l_e</attrlabl>
+        <attalias Sync="TRUE">rlp1_l_e</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">rlp1a_l_e</attrlabl>
+        <attalias Sync="TRUE">rlp1a_l_e</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">rlp2_l_e</attrlabl>
+        <attalias Sync="TRUE">rlp2_l_e</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">rlp2a_l_e</attrlabl>
+        <attalias Sync="TRUE">rlp2a_l_e</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">rlp1_r_s</attrlabl>
+        <attalias Sync="TRUE">rlp1_r_s</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">rlp1a_r_s</attrlabl>
+        <attalias Sync="TRUE">rlp1a_r_s</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">rlp2_r_s</attrlabl>
+        <attalias Sync="TRUE">rlp2_r_s</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">rlp2a_r_s</attrlabl>
+        <attalias Sync="TRUE">rlp2a_r_s</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">rlp1_r_e</attrlabl>
+        <attalias Sync="TRUE">rlp1_r_e</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">rlp1a_r_e</attrlabl>
+        <attalias Sync="TRUE">rlp1a_r_e</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">rlp2_r_e</attrlabl>
+        <attalias Sync="TRUE">rlp2_r_e</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">rlp2a_r_e</attrlabl>
+        <attalias Sync="TRUE">rlp2a_r_e</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">lmrespol_l</attrlabl>
+        <attalias Sync="TRUE">lmrespol_l</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">lmresaid_l</attrlabl>
+        <attalias Sync="TRUE">lmresaid_l</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">lmresfir_l</attrlabl>
+        <attalias Sync="TRUE">lmresfir_l</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">lmrespol_r</attrlabl>
+        <attalias Sync="TRUE">lmrespol_r</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">lmresaid_r</attrlabl>
+        <attalias Sync="TRUE">lmresaid_r</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">lmresfir_r</attrlabl>
+        <attalias Sync="TRUE">lmresfir_r</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">publicpriv</attrlabl>
+        <attalias Sync="TRUE">publicpriv</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">lmzone</attrlabl>
+        <attalias Sync="TRUE">lmzone</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">lmsubzone</attrlabl>
+        <attalias Sync="TRUE">lmsubzone</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">lmaid</attrlabl>
+        <attalias Sync="TRUE">lmaid</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">lmsubaid</attrlabl>
+        <attalias Sync="TRUE">lmsubaid</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">comment</attrlabl>
+        <attalias Sync="TRUE">comment</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">dir</attrlabl>
+        <attalias Sync="TRUE">dir</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>StreetName</attrlabl>
+        <attalias Sync="TRUE">streetname</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">gtg</attrlabl>
+        <attalias Sync="TRUE">gtg</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">alt_name</attrlabl>
+        <attalias Sync="TRUE">alt_name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">lr_pre_dir</attrlabl>
+        <attalias Sync="TRUE">lr_pre_dir</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">community</attrlabl>
+        <attalias Sync="TRUE">community</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">p_dir</attrlabl>
+        <attalias Sync="TRUE">p_dir</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">POST_DIR</attrlabl>
+        <attalias Sync="TRUE">POST_DIR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">7</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DIR_CLASS</attrlabl>
+        <attalias Sync="TRUE">DIR_CLASS</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Length</attrlabl>
+        <attalias Sync="TRUE">Shape_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Length of feature in internal units.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Ozaukee_Roads_2019">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">6602</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Ozaukee_Roads_2019">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="3" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">6602</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20190404</mdDateSt>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiqmqErpF6QzKRA5yoyR8p6U0ruwFuisd7oxXVoftV+6tKQyNakAjY3ogPUCrCa
+xbm3kmdLhERnDH7PIcBSRn7vtmqdOQrmhRWBe3iT6i0Ucl8koSF0EccowBId5xjB4x1HNWGuLa4u
+d0cV6yMG3unnR/OpCgYwBzzz22+9P2bC5r0VyWn2Qs/BsET2N5M8diPmmuBKA2zqN7nHPStC4t4F
+urVhozDfJtK7YsEBHPTd/nA9Kp0km1f8v8wubtFYM5jt7tCLC7ghWCR3WGVUU4Kc4VwCcZ96eiMd
+QmT7LqW0RRkL9r6El8n/AFnsPypez0vf+vvC5t0zzk88whsyBd5GOgzgZ/I/kfSufhlWW1e++z6m
+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
+igAooooAKKKKACiiigD/2Q==</Data>
+    </Thumbnail>
+  </Binary>
+  <mdFileID>FA340A28-632F-4228-80FD-42D800C772EE</mdFileID>
+</metadata>

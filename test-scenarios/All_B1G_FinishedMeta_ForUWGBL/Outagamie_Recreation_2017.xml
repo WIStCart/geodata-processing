@@ -1,0 +1,667 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20150323</CreaDate>
+    <CreaTime>10231700</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process Name="Create Feature Class" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CreateFeatureclass" Date="20060808" Time="090743" export="">CreateFeatureclass "Database Connections\GIS Connection to Vector.sde\vector.GIS.REC_AREAS" All_Rec_areas # recreation-areas_Layer SAME_AS_TEMPLATE SAME_AS_TEMPLATE "{B286C06B-0879-11D2-AACA-00C04FA33C20};530379.860322057 343977.605728919 3906.24999636202;0 100000;0 100000" # 0 0 0 "Database Connections\GIS Connection to Vector.sde\vector.GIS.REC_AREAS\vector.GIS.All_Rec_areas"</Process>
+        <Process Name="Append" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20060808" Time="090745" export="">Append recreation-areas_Layer "Database Connections\GIS Connection to Vector.sde\vector.GIS.REC_AREAS\vector.GIS.All_Rec_areas" TEST "Database Connections\GIS Connection to Vector.sde\vector.GIS.REC_AREAS\vector.GIS.All_Rec_areas"</Process>
+        <Process Name="FeatureClassToFeatureClass_3" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20060808" Time="090746" export="">FeatureClassToFeatureClass P:\GIS\GISLibrary\Recreation\County\recreation-areas.shp "Database Connections\GIS Connection to Vector.sde\vector.GIS.REC_AREAS" All_Rec_areas # "AREA AREA VISIBLE;PERIMETER PERIMETER VISIBLE;NAME NAME VISIBLE;MUNICIPALI MUNICIPALI VISIBLE;TYPE TYPE VISIBLE;SOURCETHM SOURCETHM VISIBLE;ACRES ACRES VISIBLE;OWNER OWNER VISIBLE" SAME_AS_TEMPLATE SAME_AS_TEMPLATE # 0 "Database Connections\GIS Connection to Vector.sde\vector.GIS.REC_AREAS\vector.GIS.All_Rec_areas"</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20090824" Time="154106" Name="" export="">CopyFeatures "Database Connections\SDE Connection to Vector.sde\vector.GIS.REC_AREAS\vector.GIS.All_Rec_areas" F:\GIS\CoordinateSystemChange.gdb\REC_AREAS\vector_GIS_All_Rec_areas # 0 0 0</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20090824" Time="154654" Name="" export="">CopyFeatures F:\GIS\CoordinateSystemChange.gdb\REC_AREAS\All_Rec_areas "Database Connections\GIS Connection to Vector.sde\Vector.GIS.REC_AREAS\Vector.GIS.All_Rec_areas" # 0 0 0</Process>
+      </lineage>
+      <itemProps>
+        <itemName Sync="TRUE">Outagamie_Recreation_2017</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">742026.567833</westBL>
+          <eastBL Sync="TRUE">881863.785862</eastBL>
+          <southBL Sync="TRUE">555593.872987</southBL>
+          <northBL Sync="TRUE">682117.144874</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2017_ALL_DATA_OPEN\Outagamie\Outagamie_Recreation_2017.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_WISCRS_Outagamie_County_Feet</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_WISCRS_Outagamie_County_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,802999.999],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.016],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-88.5],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,1.0000286569],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,42.71944444444445],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;ESRI&amp;quot;,103444]]&lt;/WKT&gt;&lt;XOrigin&gt;-17646100&lt;/XOrigin&gt;&lt;YOrigin&gt;-48340000&lt;/YOrigin&gt;&lt;XYScale&gt;3048.0060960121914&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.0032808333333333335&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;103444&lt;/WKID&gt;&lt;LatestWKID&gt;103444&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20170726</SyncDate>
+    <SyncTime>13050000</SyncTime>
+    <ModDate>20170726</ModDate>
+    <ModTime>13050000</ModTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACioWuoVkKM+0g4JIIGcZ69KT7XBuwsm8jk7AWx+VLmW4E9FQ/aov+mn/AH7b/CpU
+ZXRXU5VhkH2oUk9mAtFFFMAooooAKKKKACiiigAooooAKKKKACiiigAooooAKge8hTduL4XOSEYj
+jrzip6pyW0zRyxqIyH3YJYjrntj3rOq5pe4rsat1LlFFFaCCiiigClwbucHacMGBBzglQMex4/Ii
+l81PM2ZOc46HGcZxnp0pWinE0rKsZV2BGXIPQD09qWO2LJIJgAWfcuxjx8oHXj3ry5YWVSrK6si+
+ayIxbpNPLnIfy1AYHBHLVcjQRRJGDkKoUZ9qjgtlgLNvd2KhSz4zgZx0Huamrvo0+SCT3JbuFFFF
+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
+QRBvUIKKKAJaKKKACiiigAooooA//9k=</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum>608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Outagamie_Recreation_2017.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <onLineSrc>
+        <linkage>http://data-ocgis.opendata.arcgis.com/</linkage>
+        <protocol>WWW:LINK-1.0-http--link</protocol>
+        <orFunct>
+          <OnFunctCd value="002" />
+        </orFunct>
+        <orName>Outagamie County Open Data</orName>
+        <orDesc>Information from Outagamie Land Information Office</orDesc>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.3</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>310 Science Hall</delPoint>
+            <delPoint>550 N. Park Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="001" />
+        </role>
+        <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+      </distorCont>
+    </distributor>
+    <distributor>
+      <distorCont>
+        <editorSource>external</editorSource>
+        <editorDigest>fa6cdedd46dea3c58b16a657e875c9d3</editorDigest>
+        <rpOrgName>Outagamie Land Information Office</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>410 S Walnut St</delPoint>
+            <city>Appleton</city>
+            <adminArea>WI</adminArea>
+            <postCode>54911</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>920-832-5255</voiceNum>
+            <faxNum>920-832-4770</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Outagamie Land Information Office</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Recreation Outagamie County, WI 2017</resTitle>
+      <date>
+        <pubDate date="unknown">2017-02-21T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Outagamie Land Information Office</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>410 S Walnut St</delPoint>
+            <city>Appleton</city>
+            <adminArea>WI</adminArea>
+            <postCode>54911</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">920-832-5255</voiceNum>
+            <faxNum>920-832-4770</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Brad Bastian  </rpIndName>
+        <rpOrgName>Outagamie Land Information Office</rpOrgName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>410 S Walnut St</delPoint>
+            <city>Appleton</city>
+            <adminArea>WI</adminArea>
+            <postCode>54911</postCode>
+            <eMailAdd>bastiabr@co.outagamie.wi.us </eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">920-832-5255</voiceNum>
+            <faxNum>920-832-4770</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+    </idCitation>
+    <idAbs>This polygon data layer represents recreation for Outagamie County, Wisconsin in 2017. It is a feature class within the geodatabase Outagamie_Recreation_2017.gdb. [This is a polygon shapefile identifying the location of all parks, trails, fishing areas, wildlife areas that are owned or operated by Outagamie County. The attributes contain the names of the specific areas and the "major" municipality it is located in, as well as area and perimeter.]</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.
+
+[This shapefile was created for use in the Outagamie County Planning Department to represent all recreation areas owned by municipalities in Outagamie County.]</idPurp>
+    <idCredit>Outagamie Land Information Office
+
+[This data is not to be distributed or sold without written permission from the Planning Dept.  This data is not to be used as a substitute for a field survey.]</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <editorSource>external</editorSource>
+        <editorDigest>fa6cdedd46dea3c58b16a657e875c9d3</editorDigest>
+        <rpOrgName>Outagamie Land Information Office</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>410 S Walnut St</delPoint>
+            <city>Appleton</city>
+            <adminArea>WI</adminArea>
+            <postCode>54911</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>920-832-5255</voiceNum>
+            <faxNum>920-832-4770</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Outagamie Land Information Office</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Outagamie County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Polygon</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Recreation</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Recreation</keyword>
+      <keyword>Outagamie County</keyword>
+      <keyword>Wisconsin</keyword>
+      <keyword>Polygon</keyword>
+    </searchKeys>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-88.740953</westBL>
+          <eastBL>-88.189444</eastBL>
+          <southBL>44.242171</southBL>
+          <northBL>44.59069</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2017-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements.  For complete metadata documentation, please visit  http://data-ocgis.opendata.arcgis.com/ .
+
+This data was submitted to the UW geospatial archive in 2017. Content may be considered current as of December 31, 2016. It was published to the UW geospatial archive as part of the Wisconsin Department of Administration Land Information Program annual collection of public data for the year 2017.</suppInfo>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idPoC>
+      <editorSource>external</editorSource>
+      <editorDigest>fa6cdedd46dea3c58b16a657e875c9d3</editorDigest>
+      <rpOrgName>Outagamie Land Information Office</rpOrgName>
+      <rpCntInfo>
+        <cntAddress addressType="physical">
+          <delPoint>410 S Walnut St</delPoint>
+          <city>Appleton</city>
+          <adminArea>WI</adminArea>
+          <postCode>54911</postCode>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum>920-832-5255</voiceNum>
+          <faxNum>920-832-4770</faxNum>
+        </cntPhone>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Outagamie Land Information Office</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-88.734039</westBL>
+          <eastBL Sync="TRUE">-88.197292</eastBL>
+          <northBL Sync="TRUE">44.590673</northBL>
+          <southBL Sync="TRUE">44.243236</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="016" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>310 Science Hall</delPoint>
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform to UW-Madison's data distribution plan. </stepDesc>
+        <stepDateTm>2017-06-29T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>310 Science Hall</delPoint>
+              <delPoint>550 N. Park Street</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="001" />
+          </role>
+          <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <idCodeSpace Sync="FALSE">EPSG</idCodeSpace>
+        <identCode code="7594" Sync="FALSE" />
+        <idVersion Sync="FALSE">9.1.1</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Outagamie_Recreation_2017">
+      <enttyp>
+        <enttypl Sync="TRUE">Outagamie_Recreation_2017</enttypl>
+        <enttypd>Recreation Outagamie County, WI 2017</enttypd>
+        <enttypds>Outagamie Land Information Office</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">230</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">vector_GIS_All_Rec_areas_AREA</attrlabl>
+        <attalias Sync="TRUE">vector_GIS_All_Rec_areas_AREA</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PERIMETER</attrlabl>
+        <attalias Sync="TRUE">PERIMETER</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">NAME</attrlabl>
+        <attalias Sync="TRUE">NAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">MUNICIPALI</attrlabl>
+        <attalias Sync="TRUE">MUNICIPALI</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TYPE</attrlabl>
+        <attalias Sync="TRUE">TYPE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SOURCETHM</attrlabl>
+        <attalias Sync="TRUE">SOURCETHM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">16</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ACRES</attrlabl>
+        <attalias Sync="TRUE">ACRES</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">OWNER</attrlabl>
+        <attalias Sync="TRUE">OWNER</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">36</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">created_user</attrlabl>
+        <attalias Sync="TRUE">created_user</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">created_date</attrlabl>
+        <attalias Sync="TRUE">created_date</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">last_edited_user</attrlabl>
+        <attalias Sync="TRUE">last_edited_user</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">last_edited_date</attrlabl>
+        <attalias Sync="TRUE">last_edited_date</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Length</attrlabl>
+        <attalias Sync="TRUE">Shape_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Length of feature in internal units.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Area</attrlabl>
+        <attalias Sync="TRUE">Shape_Area</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Area of feature in internal units squared.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Outagamie_Recreation_2017">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">230</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Outagamie_Recreation_2017">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="4" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">230</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20170726</mdDateSt>
+  <mdFileID>C0E956FD-7EEF-4360-9E9C-CB62C6472572</mdFileID>
+</metadata>

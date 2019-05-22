@@ -1,0 +1,866 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20180305</CreaDate>
+    <CreaTime>08435900</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <itemProps>
+        <itemName Sync="TRUE">Burnett_Addresses_2018</itemName>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\Burnett_Addresses_2018.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <nativeExtBox>
+          <westBL Sync="TRUE">295601.573300</westBL>
+          <eastBL Sync="TRUE">362448.943300</eastBL>
+          <southBL Sync="TRUE">576284.651600</southBL>
+          <northBL Sync="TRUE">633904.927600</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Wisconsin_TM&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,3071]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;10000&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;3071&lt;/WKID&gt;&lt;LatestWKID&gt;3071&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Wisconsin_TM</projcsn>
+      </coordRef>
+      <lineage>
+        <Process ToolSource="c:\arcgis10\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20131003" Time="122624" Name="" export="">CopyFeatures "G:\Wisconsin\Burnett WI\MapData\From_County\Shapefile20131002\Tuan\Sites.shp" "C:\Program Files\GeoComm\GeoLynx\mapdata\Burnett_WI.gdb\basemap\Sites" # 0 0 0</Process>
+        <Process ToolSource="c:\arcgis10\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20131014" Time="111741" Name="" export="">CopyFeatures "G:\Wisconsin\Burnett WI\MapData\~Archive\20131014\Burnett_WI20131014.gdb\basemap\Address_Points" "C:\Program Files\GeoComm\GeoLynx\mapdata\Burnett_WI.gdb\basemap\Address_Points" # 0 0 0</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140515" Time="105226" Name="" export="">CalculateField Address_Points SiteID_MD [SiteID] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140515" Time="105309" Name="" export="">CalculateField Address_Points SiteID_MD [SiteID] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140515" Time="105632" Name="" export="">CalculateField Address_Points ESiteID_MD [ESiteID] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140515" Time="105804" Name="" export="">CalculateField Address_Points SiteID_MD [SiteID] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160916" Time="123854" Name="" export="">CalculateField Address_Points ESN 741 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160916" Time="123942" Name="" export="">CalculateField Address_Points UpdateSour tklatt VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160916" Time="124017" Name="" export="">CalculateField Address_Points UpdateSour tklatt VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160916" Time="124037" Name="" export="">CalculateField Address_Points UpdateSour tklatt VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171219" Time="143338" Name="" export="">CalculateField Address_Points NEWPIN LTrim( [NEWPIN]) VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171219" Time="143358" Name="" export="">CalculateField Address_Points NEWPIN RTrim( [NEWPIN]) VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20180327" Time="135337" Name="" export="">FeatureClassToFeatureClass R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018 R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\Burnett_Addresses_2018.gdb Burnett_Addresses_2018 # "UpdateSour "UpdateSour" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,UpdateSour,-1,-1;UpdateDate "UpdateDate" true true false 8 Date 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,UpdateDate,-1,-1;MCode "MCode" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,MCode,-1,-1;SiteType "SiteType" true true false 2 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,SiteType,-1,-1;LR "LR" true true false 1 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,LR,-1,-1;AddrCalc "AddrCalc" true true false 2 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,AddrCalc,-1,-1;ESN "ESN" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,ESN,-1,-1;GPSX "GPSX" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,GPSX,-1,-1;GPSY "GPSY" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,GPSY,-1,-1;N_DR "N_DR" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,N_DR,-1,-1;E_DR "E_DR" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,E_DR,-1,-1;SRC_DR "SRC_DR" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,SRC_DR,-1,-1;QUAL_DR "QUAL_DR" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,QUAL_DR,-1,-1;N_BLDG "N_BLDG" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,N_BLDG,-1,-1;E_BLDG "E_BLDG" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,E_BLDG,-1,-1;SRC_BLDG "SRC_BLDG" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,SRC_BLDG,-1,-1;QUAL_BLDG "QUAL_BLDG" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,QUAL_BLDG,-1,-1;GPS_DATE "GPS_DATE" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,GPS_DATE,-1,-1;DATE_ADDED "DATE_ADDED" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,DATE_ADDED,-1,-1;NEWPIN "NEWPIN" true true false 34 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,NEWPIN,-1,-1;NEWSTR "NEWSTR" true true false 40 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,NEWSTR,-1,-1;NEWCITST "NEWCITST" true true false 32 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,NEWCITST,-1,-1;NEWZIP "NEWZIP" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,NEWZIP,-1,-1;COM "COM" true true false 68 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,COM,-1,-1;HSNUM "HSNUM" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,HSNUM,-1,-1;ALISTR "ALISTR" true true false 35 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,ALISTR,-1,-1;ESiteID_MD "ESiteID_MD" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,ESiteID_MD,-1,-1;SiteID_MD "SiteID_MD" true true false 7 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Burnett\BURNETT_OTHER.gdb\BURNETT_ADDRESSES_2018,SiteID_MD,-1,-1" #</Process>
+      </lineage>
+    </DataProperties>
+    <SyncDate>20180403</SyncDate>
+    <SyncTime>11382100</SyncTime>
+    <ModDate>20180403</ModDate>
+    <ModTime>11382100</ModTime>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <editorSource>external</editorSource>
+    <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        <country>US</country>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum>(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+    </rpCntInfo>
+    <editorSave>True</editorSave>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+        <rpPosName>metadata technician</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>(608) 262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park St.</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday-Friday: 9:00am-4:00pm</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorFormat>
+        <formatName>ESRI Geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Burnett_Addresses_2018.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.3</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <editorSource>external</editorSource>
+        <editorDigest>ba00ea2b191665ffef992cde9a3b712d</editorDigest>
+        <rpOrgName>Burnett County Land Information/County Surveyor</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>7410 County Rd K #120</delPoint>
+            <city>Siren</city>
+            <adminArea>WI</adminArea>
+            <postCode>54872</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>715-349-2599</voiceNum>
+          </cntPhone>
+          <cntOnlineRes>
+            <linkage>http://www.burnettcounty.com/index.aspx?NID=255 </linkage>
+          </cntOnlineRes>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Burnett County Land Information/County Surveyor</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Addresses Burnett County, WI 2018</resTitle>
+      <date>
+        <pubDate>2018-04-03T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <editorSource>external</editorSource>
+        <editorDigest>ba00ea2b191665ffef992cde9a3b712d</editorDigest>
+        <rpOrgName>Burnett County Land Information/County Surveyor</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>7410 County Rd K #120</delPoint>
+            <city>Siren</city>
+            <adminArea>WI</adminArea>
+            <postCode>54872</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>715-349-2599</voiceNum>
+          </cntPhone>
+          <cntOnlineRes>
+            <linkage>http://www.burnettcounty.com/index.aspx?NID=255 </linkage>
+          </cntOnlineRes>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Burnett County Land Information/County Surveyor</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </citRespParty>
+      <citRespParty>
+        <editorSource>external</editorSource>
+        <editorDigest>ba21ef247bc4c717855eac20c4bdcae6</editorDigest>
+        <rpIndName>Jason Towne</rpIndName>
+        <rpOrgName>Burnett County Land Information/County Surveyor</rpOrgName>
+        <rpPosName>Land Information Director/County Surveyor/LIO</rpPosName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>7410 County Rd K #120</delPoint>
+            <city>Siren</city>
+            <adminArea>WI</adminArea>
+            <postCode>54872</postCode>
+            <eMailAdd>jtowne@burnettcounty.org</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">715-349-2599</voiceNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Jason Towne</displayName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+      </citRespParty>
+      <resEdDate>20180101</resEdDate>
+    </idCitation>
+    <idAbs>This point data layer represents addresses for Burnett County, Wisconsin in 2018. It is a feature class within the geodatabase Burnett_Addresses_2018.gdb.</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.</idPurp>
+    <idCredit>Burnett County Land Information/County Surveyor</idCredit>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <editorSource>external</editorSource>
+        <editorDigest>ba00ea2b191665ffef992cde9a3b712d</editorDigest>
+        <rpOrgName>Burnett County Land Information/County Surveyor</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>7410 County Rd K #120</delPoint>
+            <city>Siren</city>
+            <adminArea>WI</adminArea>
+            <postCode>54872</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>715-349-2599</voiceNum>
+          </cntPhone>
+          <cntOnlineRes>
+            <linkage>http://www.burnettcounty.com/index.aspx?NID=255 </linkage>
+          </cntOnlineRes>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Burnett County Land Information/County Surveyor</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Burnett County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Point</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Wisconsin</keyword>
+      <keyword>Burnett County</keyword>
+      <keyword>Street addresses</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-90.026451</westBL>
+          <eastBL>-89.59476</eastBL>
+          <southBL>43.640494</southBL>
+          <northBL>44.249516</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2018-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Street addresses</keyword>
+    </themeKeys>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <idPoC>
+      <editorSource>external</editorSource>
+      <editorDigest>ba00ea2b191665ffef992cde9a3b712d</editorDigest>
+      <rpOrgName>Burnett County Land Information/County Surveyor</rpOrgName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>7410 County Rd K #120</delPoint>
+          <city>Siren</city>
+          <adminArea>WI</adminArea>
+          <postCode>54872</postCode>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum>715-349-2599</voiceNum>
+        </cntPhone>
+        <cntOnlineRes>
+          <linkage>http://www.burnettcounty.com/index.aspx?NID=255 </linkage>
+        </cntOnlineRes>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Burnett County Land Information/County Surveyor</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-92.905473</westBL>
+          <eastBL Sync="TRUE">-92.021712</eastBL>
+          <northBL Sync="TRUE">46.160504</northBL>
+          <southBL Sync="TRUE">45.623831</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="013" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <editorSource>external</editorSource>
+      <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum>(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform to UW-Madison's data distribution plan. </stepDesc>
+        <stepDateTm>2018-04-03T00:00:00</stepDateTm>
+        <stepProc>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+          <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+          <rpPosName>metadata technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>(608) 262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park St.</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday-Friday: 9:00am-4:00pm</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="005" />
+          </role>
+          <editorSave>False</editorSave>
+          <displayName>Arthur H. Robinson Map Library</displayName>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <idVersion Sync="TRUE">8.6.2</idVersion>
+        <identCode code="3071" Sync="FALSE" />
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Burnett_Addresses_2018">
+      <enttyp>
+        <enttypl Sync="TRUE">Burnett_Addresses_2018</enttypl>
+        <enttypd>Addresses Burnett County WI, 2018</enttypd>
+        <enttypds>Burnett County Land Information/County Surveyor</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">16839</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SHAPE</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">UpdateSour</attrlabl>
+        <attalias Sync="TRUE">UpdateSour</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">UpdateDate</attrlabl>
+        <attalias Sync="TRUE">UpdateDate</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">MCode</attrlabl>
+        <attalias Sync="TRUE">MCode</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SiteType</attrlabl>
+        <attalias Sync="TRUE">SiteType</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LR</attrlabl>
+        <attalias Sync="TRUE">LR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">1</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">AddrCalc</attrlabl>
+        <attalias Sync="TRUE">AddrCalc</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ESN</attrlabl>
+        <attalias Sync="TRUE">ESN</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">GPSX</attrlabl>
+        <attalias Sync="TRUE">GPSX</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">GPSY</attrlabl>
+        <attalias Sync="TRUE">GPSY</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">N_DR</attrlabl>
+        <attalias Sync="TRUE">N_DR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">E_DR</attrlabl>
+        <attalias Sync="TRUE">E_DR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SRC_DR</attrlabl>
+        <attalias Sync="TRUE">SRC_DR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">QUAL_DR</attrlabl>
+        <attalias Sync="TRUE">QUAL_DR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">N_BLDG</attrlabl>
+        <attalias Sync="TRUE">N_BLDG</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">E_BLDG</attrlabl>
+        <attalias Sync="TRUE">E_BLDG</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SRC_BLDG</attrlabl>
+        <attalias Sync="TRUE">SRC_BLDG</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">QUAL_BLDG</attrlabl>
+        <attalias Sync="TRUE">QUAL_BLDG</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">GPS_DATE</attrlabl>
+        <attalias Sync="TRUE">GPS_DATE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DATE_ADDED</attrlabl>
+        <attalias Sync="TRUE">DATE_ADDED</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">NEWPIN</attrlabl>
+        <attalias Sync="TRUE">NEWPIN</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">34</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">NEWSTR</attrlabl>
+        <attalias Sync="TRUE">NEWSTR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">40</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">NEWCITST</attrlabl>
+        <attalias Sync="TRUE">NEWCITST</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">32</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">NEWZIP</attrlabl>
+        <attalias Sync="TRUE">NEWZIP</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">COM</attrlabl>
+        <attalias Sync="TRUE">COM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">68</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">HSNUM</attrlabl>
+        <attalias Sync="TRUE">HSNUM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ALISTR</attrlabl>
+        <attalias Sync="TRUE">ALISTR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">35</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ESiteID_MD</attrlabl>
+        <attalias Sync="TRUE">ESiteID_MD</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SiteID_MD</attrlabl>
+        <attalias Sync="TRUE">SiteID_MD</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">7</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Burnett_Addresses_2018">
+        <geoObjTyp>
+          <GeoObjTypCd value="004" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">16839</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Burnett_Addresses_2018">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="1" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">16839</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20180403</mdDateSt>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAqR36yarPp4t7lWhiSUzNERE24sNqv0LDbyO2R
+WXovjHSNfvtWtrGV2XS5RDPcMuImfByFbPOMHP8AUc1uuXEbGNVZ8HaGOAT7nBx+VfN3gf4Ur49i
+1TV9Y1O4tbpdYlju7eMZJwMupzjaxZupB4HTmgD2zWfH+gaD4nsPDt7cS/2jfbfKjiiLgbm2ruI6
+ZOfy+mdH/hJ9DMscSataSSSXItVWKUOfNO7CHGcH5W6+leWah8PPA6eMb1ovEOuPr9rbyXstvbXP
+mXBBHG07c7gOi5zgjtXeeAvCWgeEtFFroyMZZNr3Ms+PPZtoIDj+EgN93jGfckgHW0Vl+IvEFh4X
+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
+FFFFAH//2Q==</Data>
+    </Thumbnail>
+  </Binary>
+  <mdFileID>F8D4DC47-DE05-438E-92C8-DA8FC2FEFF0E</mdFileID>
+</metadata>

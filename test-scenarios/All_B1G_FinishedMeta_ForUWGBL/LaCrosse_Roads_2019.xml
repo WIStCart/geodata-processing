@@ -1,0 +1,843 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20190208</CreaDate>
+    <CreaTime>14094900</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <SyncDate>20190227</SyncDate>
+    <SyncTime>13174300</SyncTime>
+    <ModDate>20190227</ModDate>
+    <ModTime>13174300</ModTime>
+    <DataProperties>
+      <lineage>
+        <Process Name="DeleteFeatures_1" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteFeatures" Date="20041110" Time="101548" export="">DeleteFeatures "Database Connections\GisdbaownertoLaxVector.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads" "Database Connections\GisdbaownertoLaxVector.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads"</Process>
+        <Process Name="CalculateField_1" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20041210" Time="153304" export="">CalculateField "Database Connections\GisdbaownertoLaxVector.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads" PolyID [OBJECTID] "Database Connections\GisdbaownertoLaxVector.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads"</Process>
+        <Process Name="CalculateField_2" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20041216" Time="122711" export="">CalculateField "Database Connections\GisdbaownertoLaxVector.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads" DIRS [RDDIRS] "Database Connections\GisdbaownertoLaxVector.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads"</Process>
+        <Process Name="FeatureClassToFeatureClass_2" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20070329" Time="140241" export="">FeatureClassToFeatureClass "Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads" "M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads" tigerroads # "RDCLASS RDCLASS true false false 3 Text 0 0 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,RDCLASS,-1,-1;OWNERSHIP OWNERSHIP true false false 3 Text 0 0 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,OWNERSHIP,-1,-1;PRETYPE PRETYPE true true false 20 Text 0 0 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,PRETYPE,-1,-1;RDDIRP RDDIRP true true false 2 Text 0 0 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,RDDIRP,-1,-1;RDNAME RDNAME true true false 30 Text 0 0 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,RDNAME,-1,-1;RDTYPE RDTYPE true true false 4 Text 0 0 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,RDTYPE,-1,-1;RDDIRS RDDIRS true true false 2 Text 0 0 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,RDDIRS,-1,-1;ALTNAME ALTNAME true true false 42 Text 0 0 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,ALTNAME,-1,-1;FRADDL FRADDL true true false 11 Text 0 0 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,FRADDL,-1,-1;TOADDL TOADDL true true false 11 Text 0 0 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,TOADDL,-1,-1;FRADDR FRADDR true true false 11 Text 0 0 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,FRADDR,-1,-1;TOADDR TOADDR true true false 11 Text 0 0 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,TOADDR,-1,-1;GRIDDIR GRIDDIR true true false 1 Text 0 0 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,GRIDDIR,-1,-1;ZIPL ZIPL true false false 5 Text 0 0 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,ZIPL,-1,-1;ZIPR ZIPR true false false 5 Text 0 0 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,ZIPR,-1,-1;COMMUNITYL COMMUNITYL true false false 40 Text 0 0 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,COMMUNITYL,-1,-1;COMMUNITYR COMMUNITYR true false false 40 Text 0 0 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,COMMUNITYR,-1,-1;POLYID POLYID true true false 4 Long 0 10 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,POLYID,-1,-1;DIRS DIRS true true false 2 Text 0 0 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,DIRS,-1,-1;COMMUNITYIDL COMMUNITYIDL true true false 2 Short 0 5 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,COMMUNITYIDL,-1,-1;COMMUNITYIDR COMMUNITYIDR true true false 2 Short 0 5 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,COMMUNITYIDR,-1,-1;len len false false true 0 Double 0 0 ,First,#,Database Connections\RonsConnection.sde\LaxVector.GISDBAOWNER.Transportation\LaxVector.GISDBAOWNER.TigerRoads,SHAPE.len,-1,-1" # "M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\tigerroads"</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20090501" Time="160045" Name="" export="">FeatureClassToFeatureClass "M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\tigerroads" "C:\TEMP\ESRI\New Personal Geodatabase.mdb" "CountyRoads " # "RDCLASS 'RDCLASS' true true false 3 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\tigerroads,RDCLASS,-1,-1;OWNERSHIP 'OWNERSHIP' true true false 3 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\tigerroads,OWNERSHIP,-1,-1;PRETYPE 'PRETYPE' true true false 20 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\tigerroads,PRETYPE,-1,-1;RDDIRP 'RDDIRP' true true false 2 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\tigerroads,RDDIRP,-1,-1;RDNAME 'RDNAME' true true false 30 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\tigerroads,RDNAME,-1,-1;RDTYPE 'RDTYPE' true true false 4 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\tigerroads,RDTYPE,-1,-1;RDDIRS 'RDDIRS' true true false 2 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\tigerroads,RDDIRS,-1,-1;ALTNAME 'ALTNAME' true true false 42 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\tigerroads,ALTNAME,-1,-1;FRADDL 'FRADDL' true true false 11 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\tigerroads,FRADDL,-1,-1;TOADDL 'TOADDL' true true false 11 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\tigerroads,TOADDL,-1,-1;FRADDR 'FRADDR' true true false 11 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\tigerroads,FRADDR,-1,-1;TOADDR 'TOADDR' true true false 11 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\tigerroads,TOADDR,-1,-1;GRIDDIR 'GRIDDIR' true true false 1 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\tigerroads,GRIDDIR,-1,-1;ZIPL 'ZIPL' true true false 5 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\tigerroads,ZIPL,-1,-1;ZIPR 'ZIPR' true true false 5 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\tigerroads,ZIPR,-1,-1;POLYID 'POLYID' true true false 4 Long 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\tigerroads,POLYID,-1,-1;COMMUNITYIDL 'COMMUNITYIDL' true true false 2 Short 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\tigerroads,COMMUNITYIDL,-1,-1;COMMUNITYIDR 'COMMUNITYIDR' true true false 2 Short 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\tigerroads,COMMUNITYIDR,-1,-1;Shape_Length 'Shape_Length' false true true 8 Double 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\tigerroads,Shape_Length,-1,-1" # "C:\TEMP\ESRI\New Personal Geodatabase.mdb\CountyRoads"</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20090501" Time="160733" Name="" export="">FeatureClassToFeatureClass "C:\TEMP\ESRI\New Personal Geodatabase.mdb\CountyRoads" "M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads" CountyRoads # "RDCLASS 'RDCLASS' true true false 3 Text 0 0 ,First,#,C:\TEMP\ESRI\New Personal Geodatabase.mdb\CountyRoads,RDCLASS,-1,-1;OWNERSHIP 'OWNERSHIP' true true false 3 Text 0 0 ,First,#,C:\TEMP\ESRI\New Personal Geodatabase.mdb\CountyRoads,OWNERSHIP,-1,-1;PRETYPE 'PRETYPE' true true false 20 Text 0 0 ,First,#,C:\TEMP\ESRI\New Personal Geodatabase.mdb\CountyRoads,PRETYPE,-1,-1;RDDIRP 'RDDIRP' true true false 2 Text 0 0 ,First,#,C:\TEMP\ESRI\New Personal Geodatabase.mdb\CountyRoads,RDDIRP,-1,-1;RDNAME 'RDNAME' true true false 30 Text 0 0 ,First,#,C:\TEMP\ESRI\New Personal Geodatabase.mdb\CountyRoads,RDNAME,-1,-1;RDTYPE 'RDTYPE' true true false 4 Text 0 0 ,First,#,C:\TEMP\ESRI\New Personal Geodatabase.mdb\CountyRoads,RDTYPE,-1,-1;RDDIRS 'RDDIRS' true true false 2 Text 0 0 ,First,#,C:\TEMP\ESRI\New Personal Geodatabase.mdb\CountyRoads,RDDIRS,-1,-1;ALTNAME 'ALTNAME' true true false 42 Text 0 0 ,First,#,C:\TEMP\ESRI\New Personal Geodatabase.mdb\CountyRoads,ALTNAME,-1,-1;FRADDL 'FRADDL' true true false 11 Text 0 0 ,First,#,C:\TEMP\ESRI\New Personal Geodatabase.mdb\CountyRoads,FRADDL,-1,-1;TOADDL 'TOADDL' true true false 11 Text 0 0 ,First,#,C:\TEMP\ESRI\New Personal Geodatabase.mdb\CountyRoads,TOADDL,-1,-1;FRADDR 'FRADDR' true true false 11 Text 0 0 ,First,#,C:\TEMP\ESRI\New Personal Geodatabase.mdb\CountyRoads,FRADDR,-1,-1;TOADDR 'TOADDR' true true false 11 Text 0 0 ,First,#,C:\TEMP\ESRI\New Personal Geodatabase.mdb\CountyRoads,TOADDR,-1,-1;GRIDDIR 'GRIDDIR' true true false 1 Text 0 0 ,First,#,C:\TEMP\ESRI\New Personal Geodatabase.mdb\CountyRoads,GRIDDIR,-1,-1;ZIPL 'ZIPL' true true false 5 Text 0 0 ,First,#,C:\TEMP\ESRI\New Personal Geodatabase.mdb\CountyRoads,ZIPL,-1,-1;ZIPR 'ZIPR' true true false 5 Text 0 0 ,First,#,C:\TEMP\ESRI\New Personal Geodatabase.mdb\CountyRoads,ZIPR,-1,-1;POLYID 'POLYID' true true false 4 Long 0 0 ,First,#,C:\TEMP\ESRI\New Personal Geodatabase.mdb\CountyRoads,POLYID,-1,-1;COMMUNITYIDL 'COMMUNITYIDL' true true false 2 Short 0 0 ,First,#,C:\TEMP\ESRI\New Personal Geodatabase.mdb\CountyRoads,COMMUNITYIDL,-1,-1;COMMUNITYIDR 'COMMUNITYIDR' true true false 2 Short 0 0 ,First,#,C:\TEMP\ESRI\New Personal Geodatabase.mdb\CountyRoads,COMMUNITYIDR,-1,-1;Shape_Length 'Shape_Length' false true true 8 Double 0 0 ,First,#,C:\TEMP\ESRI\New Personal Geodatabase.mdb\CountyRoads,Shape_Length,-1,-1" # "M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\CountyRoads"</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20090514" Time="142301" Name="" export="">FeatureClassToFeatureClass "M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\CountyRoads" "Database Connections\GISDBAOWNER To Vector.sde\LAXVEC.GISDBAOWNER.Transportation" CountyRoads # "RDCLASS 'RDCLASS' true true false 3 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\CountyRoads,RDCLASS,-1,-1;OWNERSHIP 'OWNERSHIP' true true false 3 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\CountyRoads,OWNERSHIP,-1,-1;PRETYPE 'PRETYPE' true true false 20 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\CountyRoads,PRETYPE,-1,-1;RDDIRP 'RDDIRP' true true false 2 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\CountyRoads,RDDIRP,-1,-1;RDNAME 'RDNAME' true true false 30 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\CountyRoads,RDNAME,-1,-1;RDTYPE 'RDTYPE' true true false 4 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\CountyRoads,RDTYPE,-1,-1;RDDIRS 'RDDIRS' true true false 2 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\CountyRoads,RDDIRS,-1,-1;ALTNAME 'ALTNAME' true true false 42 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\CountyRoads,ALTNAME,-1,-1;FRADDL 'FRADDL' true true false 11 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\CountyRoads,FRADDL,-1,-1;TOADDL 'TOADDL' true true false 11 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\CountyRoads,TOADDL,-1,-1;FRADDR 'FRADDR' true true false 11 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\CountyRoads,FRADDR,-1,-1;TOADDR 'TOADDR' true true false 11 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\CountyRoads,TOADDR,-1,-1;GRIDDIR 'GRIDDIR' true true false 1 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\CountyRoads,GRIDDIR,-1,-1;ZIPL 'ZIPL' true true false 5 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\CountyRoads,ZIPL,-1,-1;ZIPR 'ZIPR' true true false 5 Text 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\CountyRoads,ZIPR,-1,-1;POLYID 'POLYID' true true false 4 Long 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\CountyRoads,POLYID,-1,-1;COMMUNITYIDL 'COMMUNITYIDL' true true false 2 Short 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\CountyRoads,COMMUNITYIDL,-1,-1;COMMUNITYIDR 'COMMUNITYIDR' true true false 2 Short 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\CountyRoads,COMMUNITYIDR,-1,-1;Shape_Length 'Shape_Length' false true true 8 Double 0 0 ,First,#,M:\ESRISHAR\Projects\Emergency Dispatch(projects &amp; coverages)\Nancy.mdb\Roads\CountyRoads,Shape_Length,-1,-1" # "Database Connections\GISDBAOWNER To Vector.sde\LAXVEC.GISDBAOWNER.Transportation\LAXVEC.GISDBAOWNER.CountyRoads"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\TruncateTable" Date="20131108" Time="123806" Name="" export="">TruncateTable "Database Connections\NEWServerVector.sde\LAXVEC.DBO.Transportation\LAXVEC.DBO.CountyRoads"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\AssignDomainToField" Date="20140825" Time="131313" Name="" export="">AssignDomainToField "Database Connections\GIS Connection to LAXVEC.sde\LAXVEC.DBO.Transportation\LAXVEC.DBO.CountyRoads" PRETYPE "Valid Pretypes" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160322" Time="161019" Name="" export="">CalculateField "TRANSPORTATION\County Roads" PRETYPE "STATE ROAD 108" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160322" Time="161053" Name="" export="">CalculateField "TRANSPORTATION\County Roads" OWNERSHIP "State" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160322" Time="161117" Name="" export="">CalculateField "TRANSPORTATION\County Roads" OWNERSHIP "St" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160322" Time="161257" Name="" export="">CalculateField "TRANSPORTATION\County Roads" PRETYPE "STATE ROAD" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160322" Time="161307" Name="" export="">CalculateField "TRANSPORTATION\County Roads" RDNAME "108" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160322" Time="161708" Name="" export="">CalculateField "TRANSPORTATION\County Roads" PRETYPE "COUNTY ROAD" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160322" Time="161718" Name="" export="">CalculateField "TRANSPORTATION\County Roads" RDNAME "C" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160322" Time="161726" Name="" export="">CalculateField "TRANSPORTATION\County Roads" OWNERSHIP "C" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160406" Time="143211" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads PRETYPE "STATE ROAD" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160406" Time="143221" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads RDNAME "108" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160406" Time="143237" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads OWNERSHIP "S" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160406" Time="143540" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads PRETYPE "COUNTY ROAD" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160406" Time="143548" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads RDNAME "C" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160406" Time="143554" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads OWNERSHIP "C" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160504" Time="091038" Name="" export="">CalculateField "County Roads" PRETYPE "COUNTY ROAD" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160504" Time="091050" Name="" export="">CalculateField "County Roads" RDNAME "C" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160504" Time="091250" Name="" export="">CalculateField "County Roads" PRETYPE "STATE ROAD" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160504" Time="091300" Name="" export="">CalculateField "County Roads" RDNAME "108" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160504" Time="091322" Name="" export="">CalculateField "County Roads" OWNERSHIP "S" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160504" Time="091517" Name="" export="">CalculateField "County Roads" OWNERSHIP "C" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="135949" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD FA" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="140015" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD F" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="140223" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD B" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="140955" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD B" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="141151" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD BW" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="141310" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD S" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="141724" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD OT" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="143310" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD MH" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="143433" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD MH" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="144113" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD HD" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="145501" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD MW" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="145556" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD M" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="145931" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD C" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="145948" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD C" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="150004" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD C" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="150055" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD C" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="150119" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD C" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="150231" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD U" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="150401" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD B" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="150640" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD U" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="150704" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD J" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20161006" Time="150735" Name="" export="">CalculateField LAXVEC.DBO.CountyRoads ALTNAME "COUNTY ROAD J" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180108" Time="144854" Name="" export="">CalculateField "TRANSPORTATION\County Roads" RDNAME "EMERALD" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180108" Time="144906" Name="" export="">CalculateField "TRANSPORTATION\County Roads" RDTYPE "DRIVE" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180108" Time="144919" Name="" export="">CalculateField "TRANSPORTATION\County Roads" RDTYPE "DR" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180108" Time="144928" Name="" export="">CalculateField "TRANSPORTATION\County Roads" RDDIRS "S" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180328" Time="162219" Name="" export="">CalculateField "County Roads" FRADDL "N8905" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180328" Time="162227" Name="" export="">CalculateField "County Roads" TOADDL "N8905" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180620" Time="135718" Name="" export="">CalculateField "County Roads" RDNAME "WEST SALEM MHP" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20190204" Time="153324" Name="" export="">FeatureClassToFeatureClass C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads "M:\ESRISHAR\StateSearchableFormatDataSubmission\V5 Submission\2018\LA_CROSSE_OTHER.gdb" LA_CROSSE_ROADS_2019 # "RDCLASS "RDCLASS" true true false 3 Text 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,RDCLASS,-1,-1;OWNERSHIP "OWNERSHIP" true true false 3 Text 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,OWNERSHIP,-1,-1;PRETYPE "PRETYPE" true true false 20 Text 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,PRETYPE,-1,-1;RDDIRP "RDDIRP" true true false 2 Text 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,RDDIRP,-1,-1;RDNAME "RDNAME" true true false 30 Text 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,RDNAME,-1,-1;RDTYPE "RDTYPE" true true false 4 Text 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,RDTYPE,-1,-1;RDDIRS "RDDIRS" true true false 2 Text 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,RDDIRS,-1,-1;ALTNAME "ALTNAME" true true false 42 Text 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,ALTNAME,-1,-1;FRADDL "FRADDL" true true false 11 Text 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,FRADDL,-1,-1;TOADDL "TOADDL" true true false 11 Text 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,TOADDL,-1,-1;FRADDR "FRADDR" true true false 11 Text 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,FRADDR,-1,-1;TOADDR "TOADDR" true true false 11 Text 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,TOADDR,-1,-1;GRIDDIR "GRIDDIR" true true false 1 Text 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,GRIDDIR,-1,-1;ZIPL "ZIPL" true true false 5 Text 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,ZIPL,-1,-1;ZIPR "ZIPR" true true false 5 Text 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,ZIPR,-1,-1;POLYID "POLYID" true true false 4 Long 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,POLYID,-1,-1;COMMUNITYIDL "COMMUNITYIDL" true true false 2 Short 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,COMMUNITYIDL,-1,-1;COMMUNITYIDR "COMMUNITYIDR" true true false 2 Short 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,COMMUNITYIDR,-1,-1;ROUTABLE "ROUTABLE" true true false 3 Text 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,ROUTABLE,-1,-1;ONEWAY "ONEWAY" true true false 2 Short 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,ONEWAY,-1,-1;SPEEDCODE "SPEEDCODE" true true false 4 Long 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,SPEEDCODE,-1,-1;Shape_Length "Shape_Length" false true true 8 Double 0 0 ,First,#,C:\TEMP\Geodatabases\ShapefilesGeodatabase.gdb\CountyRoads,Shape_Length,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20190213" Time="113909" Name="" export="">FeatureClassToFeatureClass P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019 P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LaCrosse_Roads_2019.gdb LaCrosse_Roads_2019 # "RDCLASS "RDCLASS" true true false 3 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,RDCLASS,-1,-1;OWNERSHIP "OWNERSHIP" true true false 3 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,OWNERSHIP,-1,-1;PRETYPE "PRETYPE" true true false 20 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,PRETYPE,-1,-1;RDDIRP "RDDIRP" true true false 2 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,RDDIRP,-1,-1;RDNAME "RDNAME" true true false 30 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,RDNAME,-1,-1;RDTYPE "RDTYPE" true true false 4 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,RDTYPE,-1,-1;RDDIRS "RDDIRS" true true false 2 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,RDDIRS,-1,-1;ALTNAME "ALTNAME" true true false 42 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,ALTNAME,-1,-1;FRADDL "FRADDL" true true false 11 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,FRADDL,-1,-1;TOADDL "TOADDL" true true false 11 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,TOADDL,-1,-1;FRADDR "FRADDR" true true false 11 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,FRADDR,-1,-1;TOADDR "TOADDR" true true false 11 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,TOADDR,-1,-1;GRIDDIR "GRIDDIR" true true false 1 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,GRIDDIR,-1,-1;ZIPL "ZIPL" true true false 5 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,ZIPL,-1,-1;ZIPR "ZIPR" true true false 5 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,ZIPR,-1,-1;POLYID "POLYID" true true false 4 Long 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,POLYID,-1,-1;COMMUNITYIDL "COMMUNITYIDL" true true false 2 Short 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,COMMUNITYIDL,-1,-1;COMMUNITYIDR "COMMUNITYIDR" true true false 2 Short 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,COMMUNITYIDR,-1,-1;ROUTABLE "ROUTABLE" true true false 3 Text 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,ROUTABLE,-1,-1;ONEWAY "ONEWAY" true true false 2 Short 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,ONEWAY,-1,-1;SPEEDCODE "SPEEDCODE" true true false 4 Long 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,SPEEDCODE,-1,-1;Shape_Length "Shape_Length" false true true 8 Double 0 0 ,First,#,P:\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LA_CROSSE_OTHER.gdb\LA_CROSSE_ROADS_2019,Shape_Length,-1,-1" #</Process>
+      </lineage>
+      <itemProps>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2019_ALL_DATA_OPEN_V5\LaCrosse\LaCrosse_Roads_2019.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemName Sync="TRUE">LaCrosse_Roads_2019</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">406903.885600</westBL>
+          <eastBL Sync="TRUE">446919.082900</eastBL>
+          <southBL Sync="TRUE">361783.819700</southBL>
+          <northBL Sync="TRUE">401040.273400</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Wisconsin_TM</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Wisconsin_TM&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,3071]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;10000&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;3071&lt;/WKID&gt;&lt;LatestWKID&gt;3071&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiigAorG1PWHstVitYprNmMDytbyv5bthlAIcnAHzdMfiKbb69vJaeTTUj81wSt
+78wRTgtgqM8+44P4HT2U2roVzbpssiQxPLIcIilmPoBVW11Syu2jjiuIjM6b/J3guF9SAeKpS3d3
+euBFZxPYMxTzHAlLMH2527gAvBOck+wpKDvroFzZBBGQcg0Vz4sL2GSysfPgmjgtmAjKPGsgXYAG
+w5/MqRyeKnuL28di32eFfsgE0yi5OcFG+XhevQ46dPWq9n2dwubNFc5aW1tDp85k0iOUK8oZmEbL
+hWK4LH5iAFAyRn60/wDtd9OiNi6lrlQVg8ySPIUAbTJmT8z37U/Za2iFzoKK5vSJvORQqXMyRBQY
+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
+ooooAKKKKACiiigAooooAKKKKACiiigD/9k=</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum tddtty="">608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <delPoint>310 Science Hall</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpPosName>metadata technician</rpPosName>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>310 Science Hall</delPoint>
+            <delPoint>550 N. Park Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorFormat>
+        <formatName>ESRI Geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/LaCrosse_Roads_2019.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.5</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>La Crosse County Land Records GIS Department</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-785-9637</voiceNum>
+            <faxNum>608-785-5922</faxNum>
+          </cntPhone>
+          <cntAddress addressType="physical">
+            <delPoint>400 4th Street N - Rm 3170</delPoint>
+            <city>La Crosse,</city>
+            <adminArea>WI</adminArea>
+            <postCode>54601-3200</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>La Crosse County Land Records GIS Department</displayName>
+        <displayName>La Crosse County Land Records GIS Department</displayName>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Roads La Crosse County, WI 2019</resTitle>
+      <date>
+        <pubDate>2019-02-27T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <resEdDate>20190101</resEdDate>
+      <citRespParty>
+        <rpOrgName>La Crosse County Land Records GIS Department</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-785-9637</voiceNum>
+            <faxNum>608-785-5922</faxNum>
+          </cntPhone>
+          <cntAddress addressType="physical">
+            <delPoint>400 4th Street N - Rm 3170</delPoint>
+            <city>La Crosse,</city>
+            <adminArea>WI</adminArea>
+            <postCode>54601-3200</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>La Crosse County Land Records GIS Department</displayName>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Ron Roth</rpIndName>
+        <rpOrgName>La Crosse County Land Records GIS Department</rpOrgName>
+        <rpPosName>GIS Specialist/Land Information Officer</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-785-9637</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>400 4th Street North, Rm 3170</delPoint>
+            <city>La Crosse</city>
+            <adminArea>WI</adminArea>
+            <postCode>54601-3200</postCode>
+            <country>US</country>
+            <eMailAdd>roth.ron@co.la-crosse.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Ron Roth</displayName>
+      </citRespParty>
+    </idCitation>
+    <idAbs>This data layer represents roads for La Crosse County, Wisconsin in 2019.</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.
+
+</idPurp>
+    <idCredit>La Crosse County Land Records GIS Department</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <idPoC>
+      <rpOrgName>La Crosse County Land Records GIS Department</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">608-785-9637</voiceNum>
+          <faxNum>608-785-5922</faxNum>
+        </cntPhone>
+        <cntAddress addressType="physical">
+          <delPoint>400 4th Street N - Rm 3170</delPoint>
+          <city>La Crosse,</city>
+          <adminArea>WI</adminArea>
+          <postCode>54601-3200</postCode>
+          <country>US</country>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>La Crosse County Land Records GIS Department</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-785-9637</voiceNum>
+            <faxNum>608-785-5922</faxNum>
+          </cntPhone>
+          <cntAddress addressType="physical">
+            <delPoint>400 4th Street N - Rm 3170</delPoint>
+            <city>La Crosse,</city>
+            <adminArea>WI</adminArea>
+            <postCode>54601-3200</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>La Crosse County Land Records GIS Department</displayName>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>La Crosse County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Line</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Roads</keyword>
+      <keyword>Streets</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Roads</keyword>
+      <keyword>Streets</keyword>
+      <keyword>Wisconsin</keyword>
+      <keyword>La Crosse County</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-91.412596</westBL>
+          <eastBL>-90.907514</eastBL>
+          <southBL>43.7208</southBL>
+          <northBL>44.079346</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2019-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-91.412379</westBL>
+          <eastBL Sync="TRUE">-90.907353</eastBL>
+          <northBL Sync="TRUE">44.078893</northBL>
+          <southBL Sync="TRUE">43.720463</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <resConst>
+      <Consts>
+        <useLimit>None.</useLimit>
+      </Consts>
+    </resConst>
+    <tpCat>
+      <TopicCatCd value="018" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <editorSource>external</editorSource>
+      <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <editorSave>True</editorSave>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Provided access to archived data at UW-Madison.</stepDesc>
+        <stepDateTm>2019-02-27T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+          <rpPosName>Data Technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum tddtty="">608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="001" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <eainfo>
+    <detailed Name="LaCrosse_Roads_2019">
+      <enttyp>
+        <enttypl Sync="TRUE">LaCrosse_Roads_2019</enttypl>
+        <enttypd>Roads La Crosse County, WI 2019</enttypd>
+        <enttypds>La Crosse County Land Records GIS Department</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">10577</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">OWNERSHIP</attrlabl>
+        <attalias Sync="TRUE">OWNERSHIP</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">3</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RDCLASS</attrlabl>
+        <attalias Sync="TRUE">RDCLASS</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">3</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRETYPE</attrlabl>
+        <attalias Sync="TRUE">PRETYPE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RDDIRP</attrlabl>
+        <attalias Sync="TRUE">RDDIRP</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RDNAME</attrlabl>
+        <attalias Sync="TRUE">RDNAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RDTYPE</attrlabl>
+        <attalias Sync="TRUE">RDTYPE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RDDIRS</attrlabl>
+        <attalias Sync="TRUE">RDDIRS</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ALTNAME</attrlabl>
+        <attalias Sync="TRUE">ALTNAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">42</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FRADDL</attrlabl>
+        <attalias Sync="TRUE">FRADDL</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">11</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TOADDL</attrlabl>
+        <attalias Sync="TRUE">TOADDL</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">11</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FRADDR</attrlabl>
+        <attalias Sync="TRUE">FRADDR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">11</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TOADDR</attrlabl>
+        <attalias Sync="TRUE">TOADDR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">11</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">GRIDDIR</attrlabl>
+        <attalias Sync="TRUE">GRIDDIR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">1</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ZIPL</attrlabl>
+        <attalias Sync="TRUE">ZIPL</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ZIPR</attrlabl>
+        <attalias Sync="TRUE">ZIPR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">POLYID</attrlabl>
+        <attalias Sync="TRUE">POLYID</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">COMMUNITYIDL</attrlabl>
+        <attalias Sync="TRUE">COMMUNITYIDL</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">COMMUNITYIDR</attrlabl>
+        <attalias Sync="TRUE">COMMUNITYIDR</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ROUTABLE</attrlabl>
+        <attalias Sync="TRUE">ROUTABLE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">3</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ONEWAY</attrlabl>
+        <attalias Sync="TRUE">ONEWAY</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SPEEDCODE</attrlabl>
+        <attalias Sync="TRUE">SPEEDCODE</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Length</attrlabl>
+        <attalias Sync="TRUE">Shape_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Length of feature in internal units.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="3071" Sync="TRUE" />
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+        <idVersion Sync="FALSE">9.5.5</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="LaCrosse_Roads_2019">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">10577</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="LaCrosse_Roads_2019">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="3" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">10577</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20190227</mdDateSt>
+  <mdFileID>80A6DA0E-2C1A-4DCC-AD20-42DAF24CB9A1</mdFileID>
+</metadata>

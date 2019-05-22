@@ -1,0 +1,726 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20170402</CreaDate>
+    <CreaTime>01115500</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <SyncDate>20170501</SyncDate>
+    <SyncTime>13572500</SyncTime>
+    <ModDate>20170501</ModDate>
+    <ModTime>13572500</ModTime>
+    <DataProperties>
+      <lineage>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20041214" Time="153041" Name="" export="">CopyFeatures Z:\Library\County\HYD4.shp Z:\Workspace\LIO\W_Andy\County.mdb\Environmental\HYD4 # 0 0 0</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130107" Time="111602" Name="" export="">CalculateField county.DBO.HydrologyArea LAK4_TYPE "PD" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130107" Time="111621" Name="" export="">CalculateField county.DBO.HydrologyArea LAK4_DUR "PN" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20130401" Time="150759" Name="" export="">CopyFeatures "Database Connections\Publishing.sde\Publishing.DBO.Environmental\Publishing.DBO.HydrologyArea" Z:\Workspace\LIO\W_Intern\Projects\HydroClean\Geodata\HydrologyArea.shp # 0 0 0</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteField" Date="20130617" Time="114400" Name="" export="">DeleteField "Area Hydrology" Comments</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20130805" Time="135740" Name="" export="">CopyFeatures Z:\Workspace\LIO\W_Intern\Projects\HydroClean\Geodata\HydrologyArea.shp "Database Connections\County GDB.sde\county.DBO.Environmental\county.DBO.HydrologyArea_1" # 0 0 0</Process>
+      </lineage>
+      <itemProps>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\data\ARCHIVE_PROJECT\COUNTIES\2017_ALL_DATA_OPEN\Calumet\Calumet_Hydro_2017.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemName Sync="TRUE">HYDRO_POLY_2017</itemName>
+        <itemSize Sync="TRUE">0.000</itemSize>
+        <nativeExtBox>
+          <westBL Sync="TRUE">647470.100200</westBL>
+          <eastBL Sync="TRUE">677279.955200</eastBL>
+          <southBL Sync="TRUE">381274.479200</southBL>
+          <northBL Sync="TRUE">420485.130600</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Wisconsin_TM</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Wisconsin_TM&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,3071]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;10000&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;3071&lt;/WKID&gt;&lt;LatestWKID&gt;3071&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum>608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorOrdPrc>
+        <resFees units="">None</resFees>
+      </distorOrdPrc>
+      <distorFormat>
+        <formatName>ESRI geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Calumet_Hydro_2017.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http—download</protocol>
+        <appProfile>Archived dataset at UW-Madison</appProfile>
+        <orName>GeoData@Wisconsin</orName>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <onLineSrc>
+        <linkage>http://www.calumetmaps.com/data.html</linkage>
+        <protocol>WWW:LINK-1.0-http--link</protocol>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.3</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Calumet County Land Information/GIS</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>206 Court St</delPoint>
+            <city>Chilton</city>
+            <adminArea>WI</adminArea>
+            <postCode>53014</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>920-849-2361 X260    </voiceNum>
+            <faxNum>920-849-1481</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Calumet County Land Information/GIS</displayName>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Hydro (Polygon and Line) Calumet County, WI 2017</resTitle>
+      <date>
+        <pubDate>2017-04-07T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Calumet County Land Information/GIS</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>206 Court St</delPoint>
+            <city>Chilton</city>
+            <adminArea>WI</adminArea>
+            <postCode>53014</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>920-849-2361 X260    </voiceNum>
+            <faxNum>920-849-1481</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Calumet County Land Information/GIS</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Andy Hess</rpIndName>
+        <rpOrgName>Calumet County Land Information/GIS</rpOrgName>
+        <rpPosName>GIS Administrator</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>920-849-2361 X260</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>206 Court Street</delPoint>
+            <city>Chilton</city>
+            <adminArea>WI</adminArea>
+            <postCode>53014</postCode>
+            <country>US</country>
+            <eMailAdd>hess.andy@co.calumet.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Andy Hess</displayName>
+      </citRespParty>
+    </idCitation>
+    <idAbs>These polygon and line data layers represent hydrography for Calumet County, Wisconsin in 2017. They are feature classes within the geodatabase Calumet_Hydro_2017.gdb</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.</idPurp>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Calumet County Land Information/GIS</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>206 Court St</delPoint>
+            <city>Chilton</city>
+            <adminArea>WI</adminArea>
+            <postCode>53014</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>920-849-2361 X260    </voiceNum>
+            <faxNum>920-849-1481</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Calumet County Land Information/GIS</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Calumet County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Polygon</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Hydrography</keyword>
+      <keyword>Polygon</keyword>
+      <keyword>Calumet County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-88.4049</westBL>
+          <eastBL>-88.039141</eastBL>
+          <southBL>43.891095</southBL>
+          <northBL>44.244176</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2017-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <suppInfo>For complete metadata documentatThis data was submitted to the UW geospatial archive in 2017. Content may be considered current as of December 31, 2016. It was published to the UW geospatial archive as part of the Wisconsin Department of Administration Land Information Program annual collection of public data for the year 2017.
+
+For more information please visit http://www.calumetmaps.com/data.html</suppInfo>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Hydrography</keyword>
+    </themeKeys>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idPoC>
+      <rpOrgName>Calumet County Land Information/GIS</rpOrgName>
+      <rpCntInfo>
+        <cntAddress addressType="physical">
+          <delPoint>206 Court St</delPoint>
+          <city>Chilton</city>
+          <adminArea>WI</adminArea>
+          <postCode>53014</postCode>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">920-849-2361 X260    </voiceNum>
+          <faxNum>920-849-1481</faxNum>
+        </cntPhone>
+      </rpCntInfo>
+      <displayName>Calumet County Land Information/GIS</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <envirDesc Sync="TRUE">Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.3.0.4322</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-88.412927</westBL>
+          <eastBL Sync="TRUE">-88.030303</eastBL>
+          <northBL Sync="TRUE">44.246447</northBL>
+          <southBL Sync="TRUE">43.887799</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <idCredit>Calumet County Land Information/GIS</idCredit>
+    <tpCat>
+      <TopicCatCd value="012" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>310 Science Hall</delPoint>
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform to UW-Madison's data distribution plan. </stepDesc>
+        <stepDateTm>2017-04-24T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>310 Science Hall</delPoint>
+              <delPoint>550 N. Park Street</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="001" />
+          </role>
+          <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+        </stepProc>
+      </prcStep>
+      <prcStep>
+        <stepDesc>Created new feature dataset  Calumet_Hydro_2017 within the geodatabase Calumet_Hydro_2017.gdb.</stepDesc>
+        <stepDateTm>2017-04-24T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>310 Science Hall</delPoint>
+              <delPoint>550 N. Park Street</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="001" />
+          </role>
+          <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+        </stepProc>
+      </prcStep>
+      <prcStep>
+        <stepDesc>The data for this layer was published with multiple feature classes, and the metadata was generated at the HYDRO_POLY_2017 level. </stepDesc>
+        <stepDateTm>2017-04-24T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>310 Science Hall</delPoint>
+              <delPoint>550 N. Park Street</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="001" />
+          </role>
+          <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <eainfo>
+    <detailed Name="HYDRO_POLY_2017">
+      <enttyp>
+        <enttypl Sync="TRUE">HYDRO_POLY_2017</enttypl>
+        <enttypd>Hydrography (Polygon and Line)  Calumet County, WI 2017</enttypd>
+        <enttypds>Calumet County Land Information/GIS</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">1771</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Area</attrlabl>
+        <attrdef>Area of feature in internal units squared.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape_Area</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Publishing</attrlabl>
+        <attalias Sync="TRUE">Publishing</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PERIMETER</attrlabl>
+        <attalias Sync="TRUE">PERIMETER</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FEATURE</attrlabl>
+        <attalias Sync="TRUE">FEATURE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">16</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LAK4_NAME</attrlabl>
+        <attalias Sync="TRUE">LAK4_NAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LAK4_TYPE</attrlabl>
+        <attalias Sync="TRUE">LAK4_TYPE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LAK4_WBIC</attrlabl>
+        <attalias Sync="TRUE">LAK4_WBIC</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LAK4_DUR</attrlabl>
+        <attalias Sync="TRUE">LAK4_DUR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PERMIT_ID</attrlabl>
+        <attalias Sync="TRUE">PERMIT_ID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Acre</attrlabl>
+        <attalias Sync="TRUE">Acre</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Sq_Mi</attrlabl>
+        <attalias Sync="TRUE">Sq_Mi</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Edited</attrlabl>
+        <attalias Sync="TRUE">Edited</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Edit_Date</attrlabl>
+        <attalias Sync="TRUE">Edit_Date</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Comments</attrlabl>
+        <attalias Sync="TRUE">Comments</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Length</attrlabl>
+        <attalias Sync="TRUE">Shape_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Length of feature in internal units.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="7594" Sync="FALSE" />
+        <idCodeSpace>EPSG</idCodeSpace>
+        <idVersion Sync="TRUE">8.2.6</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="HYDRO_POLY_2017">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">1771</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="HYDRO_POLY_2017">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="4" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">1771</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20170501</mdDateSt>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACimuwRGduijJqGeWGSCRS8mwoxLw54A4OCvf9aAJDPEs4hLgSEZAPcU8sB/gOarQ
+upWSZQQWIGGOWBPY5PHUcdvxqYeSZ2ICGZVAYgcgHoKAEhuIp42eJ9yqSCcdCKlyM4zzUSxhldJF
+Vhuzg88Z44xx0/SlWTdGHVkdWGVZTwfT1/OgCSjOc+1MP7tMgjr3OAST/jTgeSMj6UALSKwYZUgj
+JHHqOKhnt4JkxcLvTI4boCDwR6HPenlsTKCDyDgjOMd88Y9P1oAeSFGT0oDKVDAjacYPrS859qi3
+EzKrK2MEqwPGfQ/h/nigCWiiigAooooAKKKKACiiigAooooAKKKKACiiigCG7/485/8Arm3bPasf
+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</Data>
+    </Thumbnail>
+  </Binary>
+  <mdFileID>8D692A29-ABCD-445E-96DE-04DF7488305F</mdFileID>
+</metadata>

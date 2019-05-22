@@ -1,0 +1,1131 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20120626</CreaDate>
+    <CreaTime>15262500</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.0\ArcToolbox\Toolboxes\Geocoding Tools.tbx\StandardizeAddresses" Date="20120228" Time="154655" Name="" export="">StandardizeAddresses Roads FULL_ST "US Alphanumeric Ranges" PreDir;PreType;StreetName;SufType;SufDir C:\GIS\Databases\Spillman_SGB.gdb\Roads_stnd Static</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120229" Time="101138" Name="" export="">CalculateField Roads_stnd RPREFIX Trim( [RPREFIX]) VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120229" Time="101205" Name="" export="">CalculateField Roads_stnd LPREFIX Trim( [LPREFIX]) VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120229" Time="101821" Name="" export="">CalculateField Roads_stnd FLAR CalcField VB "dim CalcField\n\nIf [LPREFIX] = "" then\nCalcField = [FROMLEFT] \nElse CalcField = [LPREFIX] &amp; [FROMLEFT] \nEnd If\n\n"</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120229" Time="101927" Name="" export="">CalculateField Roads_stnd TLAR CalcField VB "dim CalcField\ndim Prefix\n\nPrefix = [LPREFIX] \n\nIf Prefix = "" then\nCalcField = [FROMLEFT] \nElse CalcField = Prefix &amp; [FROMLEFT] \nEnd If\n\n"</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120229" Time="101934" Name="" export="">CalculateField Roads_stnd FLAR CalcField VB "dim CalcField\ndim Prefix\n\nPrefix = [LPREFIX] \n\nIf Prefix = "" then\nCalcField = [FROMLEFT] \nElse CalcField = Prefix &amp; [FROMLEFT] \nEnd If\n\n"</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120229" Time="102134" Name="" export="">CalculateField Roads_stnd TLAR CalcField VB "dim CalcField\ndim Prefix\ndim AddrNumb\n\nPrefix = [LPREFIX] \nAddrNumb = [TOLEFT] \n\nIf Prefix = "" then\nCalcField = AddrNumb\nElse CalcField = Prefix &amp; AddrNumb\nEnd If\n\n"</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120229" Time="102222" Name="" export="">CalculateField Roads_stnd FRAR CalcField VB "dim CalcField\ndim Prefix\ndim AddrNumb\n\nPrefix = [RPREFIX] \nAddrNumb = [FROMRIGHT] \n\nIf Prefix = "" then\nCalcField = AddrNumb\nElse CalcField = Prefix &amp; AddrNumb\nEnd If\n\n"</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120229" Time="102237" Name="" export="">CalculateField Roads_stnd TRAR CalcField VB "dim CalcField\ndim Prefix\ndim AddrNumb\n\nPrefix = [RPREFIX] \nAddrNumb = [TORIGHT] \n\nIf Prefix = "" then\nCalcField = AddrNumb\nElse CalcField = Prefix &amp; AddrNumb\nEnd If\n\n"</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120229" Time="102505" Name="" export="">CalculateField Roads_stnd FLAR CalcField VB "dim CalcField\ndim Prefix\ndim AddrNumb\n\nPrefix = [LPREFIX] \nAddrNumb = [FROMLEFT] \n\nIf Prefix = "" then\nCalcField = AddrNumb\nElse CalcField = Prefix &amp; AddrNumb\nEnd If\n\n"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.0\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20120302" Time="092939" Name="" export="">FeatureClassToFeatureClass C:\GIS\Databases\Spillman_SGB.gdb\ROADS "Database Connections\JacksonCoWI.sde\JacksonCoWI.SDE.Highway" Roads # "ADDR_PD "PreDir" true true false 2 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,ADDR_PD,-1,-1;ADDR_PT "PreType" true true false 6 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,ADDR_PT,-1,-1;ADDR_SN "StreetName" true true false 30 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,ADDR_SN,-1,-1;ADDR_ST "SufType" true true false 6 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,ADDR_ST,-1,-1;ADDR_SD "SufDir" true true false 2 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,ADDR_SD,-1,-1;OBJECTID_1 "OBJECTID" true true false 4 Long 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,OBJECTID_1,-1,-1;TOWNSHIP "TOWNSHIP" true true false 35 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,TOWNSHIP,-1,-1;LENGTH "LENGTH" true true false 8 Double 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,LENGTH,-1,-1;MILES "MILES" true true false 8 Double 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,MILES,-1,-1;TYPEROADSO "TYPEROADSO" true true false 24 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,TYPEROADSO,-1,-1;LPREFIX "LPREFIX" true true false 5 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,LPREFIX,-1,-1;RPREFIX "RPREFIX" true true false 5 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,RPREFIX,-1,-1;EXCLUDE "EXCLUDE" true true false 1 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,EXCLUDE,-1,-1;LOCATION "LOCATION" true true false 20 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,LOCATION,-1,-1;STREET "STREET" true true false 30 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,STREET,-1,-1;FROMLEFT "FROMLEFT" true true false 4 Long 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,FROMLEFT,-1,-1;TOLEFT "TOLEFT" true true false 4 Long 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,TOLEFT,-1,-1;FROMRIGHT "FROMRIGHT" true true false 4 Long 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,FROMRIGHT,-1,-1;TORIGHT "TORIGHT" true true false 4 Long 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,TORIGHT,-1,-1;SIDE "SIDE" true true false 1 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,SIDE,-1,-1;NAME "NAME" true true false 24 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,NAME,-1,-1;ZIPCODE "ZIPCODE" true true false 4 Long 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,ZIPCODE,-1,-1;PRE_TYPE "PRE_TYPE" true true false 15 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,PRE_TYPE,-1,-1;PRE_DIR "PRE_DIR" true true false 5 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,PRE_DIR,-1,-1;TYPE "TYPE" true true false 10 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,TYPE,-1,-1;POST_DIR "POST_DIR" true true false 5 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,POST_DIR,-1,-1;LABEL "LABEL" true true false 35 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,LABEL,-1,-1;DIRECTIONA "DIRECTIONA" true true false 2 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,DIRECTIONA,-1,-1;RDCODE "RDCODE" true true false 8 Double 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,RDCODE,-1,-1;WARD "WARD" true true false 40 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,WARD,-1,-1;ROUTING "ROUTING" true true false 3 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,ROUTING,-1,-1;ONEWAY "ONEWAY" true true false 2 Short 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,ONEWAY,-1,-1;LINK_NO "LINK_NO" true true false 8 Double 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,LINK_NO,-1,-1;LCITYCD "LCITYCD" true true false 3 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,LCITYCD,-1,-1;RCITYCD "RCITYCD" true true false 3 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,RCITYCD,-1,-1;lz_left "lz_left" true true false 5 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,lz_left,-1,-1;lz_right "lz_right" true true false 5 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,lz_right,-1,-1;la_left "la_left" true true false 5 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,la_left,-1,-1;la_right "la_right" true true false 5 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,la_right,-1,-1;fz_left "fz_left" true true false 5 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,fz_left,-1,-1;fz_right "fz_right" true true false 5 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,fz_right,-1,-1;ez_left "ez_left" true true false 5 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,ez_left,-1,-1;ez_right "ez_right" true true false 5 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,ez_right,-1,-1;Maintenanc "Maintenanc" true true false 50 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,Maintenanc,-1,-1;Shape_Leng "Shape_Leng" true true false 8 Double 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,Shape_Leng,-1,-1;JoinID "JoinID" true true false 4 Long 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,JoinID,-1,-1;St_Alias1 "St_Alias1" true true false 50 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,St_Alias1,-1,-1;St_Alias2 "St_Alias2" true true false 50 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,St_Alias2,-1,-1;St_Alias3 "St_Alias3" true true false 50 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,St_Alias3,-1,-1;FULL_ST "FULL_ST" true true false 50 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,FULL_ST,-1,-1;Shape_Length "Shape_Length" false true true 8 Double 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,Shape_Length,-1,-1;FLAR "FLAR" true true false 6 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,FLAR,-1,-1;TLAR "TLAR" true true false 6 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,TLAR,-1,-1;FRAR "FRAR" true true false 6 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,FRAR,-1,-1;TRAR "TRAR" true true false 6 Text 0 0 ,First,#,C:\GIS\Databases\Spillman_SGB.gdb\ROADS,TRAR,-1,-1" #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120731" Time="141030" Name="" export="">CalculateField "Local Roads" St_Alias1 "E STATE HWY 54" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120731" Time="141042" Name="" export="">CalculateField "Local Roads" St_Alias2 "STATE HWY 54" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120731" Time="141214" Name="" export="">CalculateField "Local Roads" St_Alias1 "US HWY 12" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120808" Time="143448" Name="" export="">CalculateField "Local Roads" FLAR ""N" &amp; [FROMLEFT]" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120808" Time="143534" Name="" export="">CalculateField "Local Roads" TLAR ""N" &amp; [TOLEFT]" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130402" Time="133830" Name="" export="">CalculateField "Local Roads" TYPEROADSO "state hwy" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130402" Time="133913" Name="" export="">CalculateField "Local Roads" St_Alias1 "STATE HWY 95" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130402" Time="133948" Name="" export="">CalculateField "Local Roads" RDCODE 2 VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130402" Time="134124" Name="" export="">CalculateField "Local Roads" RDCODE 2 VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130402" Time="134217" Name="" export="">CalculateField "Local Roads" St_Alias1 "US HWY 12/27" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130402" Time="134315" Name="" export="">CalculateField "Local Roads" TYPEROADSO "us hwy" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130402" Time="134657" Name="" export="">CalculateField "Local Roads" TYPEROADSO "city/village street" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130911" Time="161541" Name="" export="">CalculateField "Local Roads" STREET UCase([STREET]) VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130911" Time="161644" Name="" export="">CalculateField "Local Roads" TOWNSHIP UCase( [TOWNSHIP] ) VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140423" Time="153300" Name="" export="">CalculateField "Local Roads" lz_left "JASO" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140423" Time="153316" Name="" export="">CalculateField "Local Roads" lz_right "JASO" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140430" Time="153246" Name="" export="">CalculateField "Local Roads" ez_left CAMS VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140430" Time="153331" Name="" export="">CalculateField "Local Roads" ez_left "CAMS" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140430" Time="153342" Name="" export="">CalculateField "Local Roads" ez_right "CAMS" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140430" Time="154001" Name="" export="">CalculateField "Local Roads" ez_left "LIMS" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140430" Time="154006" Name="" export="">CalculateField "Local Roads" ez_right "LIMS" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140501" Time="100111" Name="" export="">CalculateField "Local Roads" ez_left "LIMS" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140501" Time="100118" Name="" export="">CalculateField "Local Roads" ez_right "LIMS" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140501" Time="100215" Name="" export="">CalculateField "Local Roads" ez_left "LIMS" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140501" Time="100222" Name="" export="">CalculateField "Local Roads" ez_right "LIMS" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140514" Time="134555" Name="" export="">CalculateField "Local Roads" lz_left "HCPD" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140514" Time="134602" Name="" export="">CalculateField "Local Roads" lz_right "HCPD" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140514" Time="134645" Name="" export="">CalculateField "Local Roads" lz_right "HCPD" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140514" Time="134655" Name="" export="">CalculateField "Local Roads" lz_left "HCPD" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140514" Time="134720" Name="" export="">CalculateField "Local Roads" lz_left "HCPD" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140514" Time="134846" Name="" export="">CalculateField "Local Roads" lz_left "HCPD" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140514" Time="134851" Name="" export="">CalculateField "Local Roads" lz_right "HCPD" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="093736" Name="" export="">CalculateField "Local Roads" lz_left "JASO" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="093743" Name="" export="">CalculateField "Local Roads" lz_right "JASO" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="093759" Name="" export="">CalculateField "Local Roads" fz_left "HAFD" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="093804" Name="" export="">CalculateField "Local Roads" fz_right "HAFD" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="093817" Name="" export="">CalculateField "Local Roads" ez_left "HAMS" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="093822" Name="" export="">CalculateField "Local Roads" ez_right "HAMS" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="093944" Name="" export="">CalculateField "Local Roads" la_left "KOM" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="093952" Name="" export="">CalculateField "Local Roads" la_right "KOM" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="094011" Name="" export="">CalculateField "Local Roads" la_left "KOM" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="094016" Name="" export="">CalculateField "Local Roads" la_right "KOM" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="094027" Name="" export="">CalculateField "Local Roads" LCITYCD "KO1" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="094033" Name="" export="">CalculateField "Local Roads" RCITYCD "KO1" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="094058" Name="" export="">CalculateField "Local Roads" LCITYCD "AD1" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="094104" Name="" export="">CalculateField "Local Roads" RCITYCD "AD1" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="094113" Name="" export="">CalculateField "Local Roads" la_left "ADM" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="094119" Name="" export="">CalculateField "Local Roads" la_right "ADM" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="110311" Name="" export="">CalculateField "Local Roads" LCITYCD "BRY" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="110317" Name="" export="">CalculateField "Local Roads" RCITYCD "BRY" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="110331" Name="" export="">CalculateField "Local Roads" lz_left "JASO" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="110338" Name="" export="">CalculateField "Local Roads" lz_right "JASO" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="110349" Name="" export="">CalculateField "Local Roads" la_left "BRY" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="110357" Name="" export="">CalculateField "Local Roads" la_right "BRY" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="110413" Name="" export="">CalculateField "Local Roads" fz_left "BRFD" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="110421" Name="" export="">CalculateField "Local Roads" fz_right "BRFD" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="110431" Name="" export="">CalculateField "Local Roads" ez_left "BRFA" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="110438" Name="" export="">CalculateField "Local Roads" ez_right "BRFA" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="110804" Name="" export="">CalculateField "Local Roads" ez_left "BRFA" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="111046" Name="" export="">CalculateField "Local Roads" ez_right "BRFA" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="111137" Name="" export="">CalculateField "Local Roads" la_left "MIL" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="111152" Name="" export="">CalculateField "Local Roads" LCITYCD "MI2" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="111329" Name="" export="">CalculateField "Local Roads" ez_left "BRFA" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="111338" Name="" export="">CalculateField "Local Roads" ez_right "BRFA" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="111401" Name="" export="">CalculateField "Local Roads" ez_right "BRFA" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="111411" Name="" export="">CalculateField "Local Roads" ez_left "BRFA" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="111718" Name="" export="">CalculateField "Local Roads" ez_left "BRFA" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140519" Time="111810" Name="" export="">CalculateField "Local Roads" ez_right "BRFA" VB #</Process>
+      </lineage>
+      <itemProps>
+        <itemName Sync="TRUE">Jackson_Roads_2016</itemName>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\Operation_Unrestrict_Data\Jackson\Jackson_Roads_2016\Jackson_Roads_2016.shp</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemSize Sync="TRUE">1.511</itemSize>
+        <nativeExtBox>
+          <westBL Sync="TRUE">4221.069825</westBL>
+          <eastBL Sync="TRUE">228135.909724</eastBL>
+          <southBL Sync="TRUE">15674.986870</southBL>
+          <northBL Sync="TRUE">207470.819157</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Wisconsin_TM</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Wisconsin_TM&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,3071]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;450445547.3910538&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;3071&lt;/WKID&gt;&lt;LatestWKID&gt;3071&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20181107</SyncDate>
+    <SyncTime>10060900</SyncTime>
+    <ModDate>20181107</ModDate>
+    <ModTime>10060900</ModTime>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gApksqwxl3ztGOgJPp0FPqteMPLSIwxzGZ9gSQ4XgFueD/d9KaV2A6C9t7mNZIpAys7RjIIO5SQw
+wecjafyqV5FjUM5wCQv4k4H6muXstBi3SXEGk6ZFI0jqsq8NCyyP8wKqCeuMAjO0DIzwh0OxtG1C
+WeW4SaFPtUk8V1INyl2f7rMVXBTr7Z4rd0oXsn/X3iuzo7q9hs1Bl8wkgkLFE0jEDGTtUE9x271S
+j8R6XI8iefJG8RAdZbeSMqSCQCGUdQCR61h2dglpfxmZdSm1NGWO6b7ZNIDEwOHXkALuxxgcq2M4
+ObOpadBBqNwtvCzXF9CsQZrqQEt8w5xk4xg84GFOM4NUqVNOzv8AgK7OkiuIpkiZHyJU8xMjBK8c
+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</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum>608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorOrdPrc>
+        <resFees units="">None</resFees>
+      </distorOrdPrc>
+      <distorFormat>
+        <formatName>ESRI geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Jackson_Roads_2016.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http—download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <transSize Sync="TRUE">1.511</transSize>
+    </distTranOps>
+    <distFormat>
+      <formatVer>1.0</formatVer>
+      <formatName Sync="TRUE">Shapefile</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Jackson County Land Information Department</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>307 Main St</delPoint>
+            <city>Black River Falls</city>
+            <adminArea>WI</adminArea>
+            <postCode>54615</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">715-284-0221</voiceNum>
+            <faxNum>715-284-7600</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Jackson County Land Information Department</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </distorCont>
+      <distorFormat>
+        <formatName>ESRI Geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Roads Jackson County, WI 2016</resTitle>
+      <date>
+        <pubDate>2016-01-01T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Jackson County Land Information Department</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>307 Main St</delPoint>
+            <city>Black River Falls</city>
+            <adminArea>WI</adminArea>
+            <postCode>54615</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">715-284-0221</voiceNum>
+            <faxNum>715-284-7600</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Ethan Remus</rpIndName>
+        <rpOrgName>Jackson County Land Information Department</rpOrgName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>307 Main St</delPoint>
+            <city>Black River Falls</city>
+            <adminArea>WI</adminArea>
+            <postCode>54615</postCode>
+            <eMailAdd>ethan.remus@co.jackson.wi.us </eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">715-284-0221</voiceNum>
+            <faxNum>715-284-7600</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <resEdDate>20160101</resEdDate>
+      <otherCitDet>This metadata was updated to reflect that the data is no longer restricted and has been opened for public use.</otherCitDet>
+    </idCitation>
+    <idAbs>This data layer represents roads for Jackson County, Wisconsin in 2016.</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.</idPurp>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Jackson County Land Information Department</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>307 Main St</delPoint>
+            <city>Black River Falls</city>
+            <adminArea>WI</adminArea>
+            <postCode>54615</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">715-284-0221</voiceNum>
+            <faxNum>715-284-7600</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Jackson County Land Information Department</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GeoNames</resTitle>
+      </thesaName>
+      <keyword>Jackson County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Line</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Roads, Streets, Transportation</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>roads</keyword>
+      <keyword>streets</keyword>
+      <keyword>Wisconsin</keyword>
+      <keyword>Jackson County</keyword>
+      <keyword>transportation</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-91.167946</westBL>
+          <eastBL>-90.30881</eastBL>
+          <southBL>44.070233</southBL>
+          <northBL>44.597365</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2016-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <idCredit>Jackson County Land Information Department</idCredit>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idPoC>
+      <rpOrgName>Jackson County Land Information Department</rpOrgName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>307 Main St</delPoint>
+          <city>Black River Falls</city>
+          <adminArea>WI</adminArea>
+          <postCode>54615</postCode>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">715-284-0221</voiceNum>
+          <faxNum>715-284-7600</faxNum>
+        </cntPhone>
+      </rpCntInfo>
+      <displayName>Jackson County Land Information Department</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-91.167946</westBL>
+          <eastBL Sync="TRUE">-90.30881</eastBL>
+          <northBL Sync="TRUE">44.070233</northBL>
+          <southBL Sync="TRUE">44.597365</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <resConst>
+      <Consts>
+        <useLimit>None.</useLimit>
+      </Consts>
+    </resConst>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements. </suppInfo>
+    <tpCat>
+      <TopicCatCd value="018" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>310 Science Hall</delPoint>
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+    </maintCont>
+  </mdMaint>
+  <mdConst>
+    <Consts>
+      <useLimit>None</useLimit>
+    </Consts>
+  </mdConst>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform with UW-Madison's data distribution plan.</stepDesc>
+        <stepDateTm>2018-11-07T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+          <rpPosName>Data Technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum tddtty="">608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="001" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="3071" Sync="FALSE" />
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+        <idVersion Sync="FALSE">9.5</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Jackson_Roads_2016">
+      <enttyp>
+        <enttypl Sync="TRUE">Jackson_Roads_2016</enttypl>
+        <enttypd>Roads Jackson County, WI 2016</enttypd>
+        <enttypds>Jackson County Land Information Department</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">4583</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">FID</attrlabl>
+        <attalias Sync="TRUE">FID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDR_PD</attrlabl>
+        <attalias Sync="TRUE">ADDR_PD</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDR_PT</attrlabl>
+        <attalias Sync="TRUE">ADDR_PT</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">6</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDR_SN</attrlabl>
+        <attalias Sync="TRUE">ADDR_SN</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDR_ST</attrlabl>
+        <attalias Sync="TRUE">ADDR_ST</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">6</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDR_SD</attrlabl>
+        <attalias Sync="TRUE">ADDR_SD</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID_1</attrlabl>
+        <attalias Sync="TRUE">OBJECTID_1</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TOWNSHIP</attrlabl>
+        <attalias Sync="TRUE">TOWNSHIP</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">35</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRE_DIR</attrlabl>
+        <attalias Sync="TRUE">PRE_DIR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRE_TYPE</attrlabl>
+        <attalias Sync="TRUE">PRE_TYPE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">15</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TYPE</attrlabl>
+        <attalias Sync="TRUE">TYPE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LPREFIX</attrlabl>
+        <attalias Sync="TRUE">LPREFIX</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RPREFIX</attrlabl>
+        <attalias Sync="TRUE">RPREFIX</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">POST_DIR</attrlabl>
+        <attalias Sync="TRUE">POST_DIR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>JoinID</attrlabl>
+        <attalias Sync="TRUE">JoinID</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>FULL_ST</attrlabl>
+        <attalias Sync="TRUE">FULL_ST</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FROMLEFT</attrlabl>
+        <attalias Sync="TRUE">FROMLEFT</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TOLEFT</attrlabl>
+        <attalias Sync="TRUE">TOLEFT</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FROMRIGHT</attrlabl>
+        <attalias Sync="TRUE">FROMRIGHT</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TORIGHT</attrlabl>
+        <attalias Sync="TRUE">TORIGHT</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SIDE</attrlabl>
+        <attalias Sync="TRUE">SIDE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">1</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>NAME</attrlabl>
+        <attalias Sync="TRUE">NAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">24</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ZIPCODE</attrlabl>
+        <attalias Sync="TRUE">ZIPCODE</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>STREET</attrlabl>
+        <attalias Sync="TRUE">STREET</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TYPEROADSO</attrlabl>
+        <attalias Sync="TRUE">TYPEROADSO</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">24</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RDCODE</attrlabl>
+        <attalias Sync="TRUE">RDCODE</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FLAR</attrlabl>
+        <attalias Sync="TRUE">FLAR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">6</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TLAR</attrlabl>
+        <attalias Sync="TRUE">TLAR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">6</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DIRECTIONA</attrlabl>
+        <attalias Sync="TRUE">DIRECTIONA</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FRAR</attrlabl>
+        <attalias Sync="TRUE">FRAR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">6</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">WARD</attrlabl>
+        <attalias Sync="TRUE">WARD</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">40</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TRAR</attrlabl>
+        <attalias Sync="TRUE">TRAR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">6</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">St_Alias1</attrlabl>
+        <attalias Sync="TRUE">St_Alias1</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">St_Alias2</attrlabl>
+        <attalias Sync="TRUE">St_Alias2</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">St_Alias3</attrlabl>
+        <attalias Sync="TRUE">St_Alias3</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LCITYCD</attrlabl>
+        <attalias Sync="TRUE">LCITYCD</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">3</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RCITYCD</attrlabl>
+        <attalias Sync="TRUE">RCITYCD</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">3</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">lz_left</attrlabl>
+        <attalias Sync="TRUE">lz_left</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">lz_right</attrlabl>
+        <attalias Sync="TRUE">lz_right</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">la_left</attrlabl>
+        <attalias Sync="TRUE">la_left</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">la_right</attrlabl>
+        <attalias Sync="TRUE">la_right</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">fz_left</attrlabl>
+        <attalias Sync="TRUE">fz_left</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">fz_right</attrlabl>
+        <attalias Sync="TRUE">fz_right</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ez_left</attrlabl>
+        <attalias Sync="TRUE">ez_left</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Maintenanc</attrlabl>
+        <attalias Sync="TRUE">Maintenanc</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Leng</attrlabl>
+        <attalias Sync="TRUE">Shape_Leng</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ez_right</attrlabl>
+        <attalias Sync="TRUE">ez_right</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ROUTING</attrlabl>
+        <attalias Sync="TRUE">ROUTING</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">3</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">OneWay</attrlabl>
+        <attalias Sync="TRUE">ONEWAY</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">5</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LINK_NO</attrlabl>
+        <attalias Sync="TRUE">LINK_NO</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LOCATION</attrlabl>
+        <attalias Sync="TRUE">LOCATION</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LABEL</attrlabl>
+        <attalias Sync="TRUE">LABEL</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">35</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">EXCLUDE</attrlabl>
+        <attalias Sync="TRUE">EXCLUDE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">1</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LENGTH</attrlabl>
+        <attalias Sync="TRUE">LENGTH</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">MILES</attrlabl>
+        <attalias Sync="TRUE">MILES</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_STLe</attrlabl>
+        <attalias Sync="TRUE">Shape_STLe</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.
+
+</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Jackson_Roads_2016">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">4583</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Jackson_Roads_2016">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="3" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">4583</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20181107</mdDateSt>
+  <mdFileID>665719BE-8F1D-41C4-8E22-7BF4ADC637EB</mdFileID>
+</metadata>

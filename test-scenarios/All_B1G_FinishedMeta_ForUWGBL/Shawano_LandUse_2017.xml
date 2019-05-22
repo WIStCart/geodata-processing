@@ -1,0 +1,767 @@
+﻿<metadata>
+  <Esri>
+    <CreaDate>20180316</CreaDate>
+    <CreaTime>09322200</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <ModDate>20180710</ModDate>
+    <ModTime>09572300</ModTime>
+    <DataProperties>
+      <itemProps>
+        <itemName Sync="TRUE">Shawano_LandUse_2017</itemName>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2018_ALL_DATA_OPEN_V4\Shawano\Shawano_LandUse_2017.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <nativeExtBox>
+          <westBL Sync="TRUE">581143.750000</westBL>
+          <eastBL Sync="TRUE">659315.062500</eastBL>
+          <southBL Sync="TRUE">458310.937500</southBL>
+          <northBL Sync="TRUE">506686.093800</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Transverse_Mercator</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Transverse_Mercator&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;450445547.3910538&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+      <lineage>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170822" Time="102017" Name="" export="">CalculateField "Existing LU" Reglu_txt "Barns / Sheds / Outbuildings" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170822" Time="102145" Name="" export="">CalculateField "Existing LU" Reglu_txt "Undeveloped Land Areas" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="110641" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 9 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="110700" Name="" export="">CalculateField Landuse_2017_merge SC_ELU_TEX "Mineral Extraction" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="110853" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 1 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="110922" Name="" export="">CalculateField Landuse_2017_merge SC_ELU_TEX Agriculture VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="111002" Name="" export="">CalculateField Landuse_2017_merge SC_ELU_TEX "Agriculture" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="111112" Name="" export="">CalculateField Landuse_2017_merge SC_ELU_TEX "Agriculture" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="111125" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 1 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="113126" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 2 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="113747" Name="" export="">CalculateField Landuse_2017_merge SC_ELU_TEX "Open Space Recreation and Forestry" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="114020" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 2 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="114050" Name="" export="">CalculateField Landuse_2017_merge SC_ELU_TEX "Public Open Space and Forestry" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="115134" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 3 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="115222" Name="" export="">CalculateField Landuse_2017_merge SC_ELU_TEX "Public Open Space and Recreation" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="115356" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 6 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="115414" Name="" export="">CalculateField Landuse_2017_merge SC_ELU_TEX "Mixed Residential" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="115751" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 3 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="144446" Name="" export="">CalculateField Landuse_2017_merge SC_ELU_TEX "Commercial" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="144543" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 8 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="144558" Name="" export="">CalculateField Landuse_2017_merge SC_ELU_TEX "Industrial" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="144817" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="144837" Name="" export="">CalculateField Landuse_2017_merge SC_ELU_TEX "Community Facilities" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="145229" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 9 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="145259" Name="" export="">CalculateField Landuse_2017_merge SC_ELU_TEX "Right of Way" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="145344" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 10 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="145408" Name="" export="">CalculateField Landuse_2017_merge SC_ELU_TEX "Surface Water" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="145457" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 12 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="145532" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 11 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="145629" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 10 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="145937" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 10 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="150025" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 10 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="150054" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 7 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="150218" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 4 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="150256" Name="" export="">CalculateField Landuse_2017_merge SC_ELU_TEX "Residential Unsewered" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="150326" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 10 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180117" Time="150408" Name="" export="">CalculateField Landuse_2017_merge SC_ELU_TEX "Community Facilities" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="095924" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="100204" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="100246" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="100743" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="102128" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="102348" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="102437" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="102547" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="102624" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="102754" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="102910" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="102917" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="103021" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="103208" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="103317" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="103435" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="103546" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="103646" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="103753" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="103842" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="103942" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="104007" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="104124" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="104245" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="104453" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="104605" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="110949" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="111242" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="111350" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="111443" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="111522" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="111628" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="111743" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="111844" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="111918" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="111957" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="112024" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="112133" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="113107" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="113221" Name="" export="">CalculateField Landuse_2017_merge SC_ELU 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="115105" Name="" export="">CalculateField Landuse_2017_merge SC_ELU_TEX "Residential Sewered" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20180327" Time="125944" Name="" export="">FeatureClassToFeatureClass R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Shawano\SHAWANO_OTHER.gdb\SHAWANO_LANDUSE_2017 R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Shawano\Shawano_LandUse_2017.gdb Shawano_LandUse_2017 # "OBJECTID "OBJECTID" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Shawano\SHAWANO_OTHER.gdb\SHAWANO_LANDUSE_2017,OBJECTID,-1,-1;Reglu "Reglu" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Shawano\SHAWANO_OTHER.gdb\SHAWANO_LANDUSE_2017,Reglu,-1,-1;Reglu_txt "Reglu_txt" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Shawano\SHAWANO_OTHER.gdb\SHAWANO_LANDUSE_2017,Reglu_txt,-1,-1;Tranlu "Tranlu" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Shawano\SHAWANO_OTHER.gdb\SHAWANO_LANDUSE_2017,Tranlu,-1,-1;Clustatus "Clustatus" true true false 12 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Shawano\SHAWANO_OTHER.gdb\SHAWANO_LANDUSE_2017,Clustatus,-1,-1;Acres "Acres" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Shawano\SHAWANO_OTHER.gdb\SHAWANO_LANDUSE_2017,Acres,-1,-1;SHAPE_Leng "SHAPE_Leng" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Shawano\SHAWANO_OTHER.gdb\SHAWANO_LANDUSE_2017,SHAPE_Leng,-1,-1;SC_ELU "SC_ELU" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Shawano\SHAWANO_OTHER.gdb\SHAWANO_LANDUSE_2017,SC_ELU,-1,-1;SC_ELU_TEX "SC_ELU_TEX" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Shawano\SHAWANO_OTHER.gdb\SHAWANO_LANDUSE_2017,SC_ELU_TEX,-1,-1;Shape_Length "Shape_Length" false true true 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Shawano\SHAWANO_OTHER.gdb\SHAWANO_LANDUSE_2017,Shape_Length,-1,-1;Shape_Area "Shape_Area" false true true 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Shawano\SHAWANO_OTHER.gdb\SHAWANO_LANDUSE_2017,Shape_Area,-1,-1" #</Process>
+      </lineage>
+    </DataProperties>
+    <SyncDate>20180710</SyncDate>
+    <SyncTime>09572300</SyncTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum tddtty="">608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorFormat>
+        <formatName>ESRI Geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Shawano_LandUse_2017.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+      <formatVer>10.3</formatVer>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Shawano County Land Information Office</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">(715) 526-8622</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="physical">
+            <delPoint>311 N. Main Street</delPoint>
+            <city>Shawano</city>
+            <adminArea>WI</adminArea>
+            <postCode>54166</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <displayName>Shawano County Land Information Office</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Land Use Shawano County, WI 2017</resTitle>
+      <date>
+        <pubDate>2018-07-10T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <resEdDate>20170101</resEdDate>
+      <citRespParty>
+        <rpOrgName>Shawano County Land Information Office</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">(715) 526-8622</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="physical">
+            <delPoint>311 N. Main Street</delPoint>
+            <city>Shawano</city>
+            <adminArea>WI</adminArea>
+            <postCode>54166</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Shawano County Land Information Office</displayName>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>David Poffinbarger </rpIndName>
+        <rpOrgName>Shawano County Land Information Office</rpOrgName>
+        <rpPosName>Land Information Officer</rpPosName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>311 N. Main Street</delPoint>
+            <city>Shawano</city>
+            <adminArea>WI</adminArea>
+            <postCode>54166</postCode>
+            <eMailAdd>David.Poffinbarger@co.shawano.wi.us</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">(715) 526-4614</voiceNum>
+            <faxNum>(715) 526-6273</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+    </idCitation>
+    <idAbs>This data layer represents land use areas for Shawano County, Wisconsin in 2017. It is a feature class within the geodatabase, "Shawano_LandUse_2017.gdb". [Land use data for Shawano County.]</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. [The data are created to serve as base information for use in GIS systems for a variety of planning and analysis purposes.  Use of data for Engineering work is prohibited.]</idPurp>
+    <idCredit>Shawano County Land Information Office</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <idPoC>
+      <rpOrgName>Shawano County Land Information Office</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">(715) 526-8622</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="physical">
+          <delPoint>311 N. Main Street</delPoint>
+          <city>Shawano</city>
+          <adminArea>WI</adminArea>
+          <postCode>54166</postCode>
+          <country>US</country>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="007" />
+      </role>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Shawano County Land Information Office</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">(715) 526-8622</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="physical">
+            <delPoint>311 N. Main Street</delPoint>
+            <city>Shawano</city>
+            <adminArea>WI</adminArea>
+            <postCode>54166</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <displayName>Shawano County Land Information Office</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Shawano County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Polygon</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Land Use, Planning</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Land Use</keyword>
+      <keyword>Planning</keyword>
+      <keyword>Shawano County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <resConst>
+      <Consts>
+        <useLimit>[East Central Wisconsin Regional Planning Commission (ECWRPC) shall not be held liable for any errors in these data. This includes errors of omission, commission, errors concerning the content of the data, and relative and positional accuracy of the data. These data cannot be construed to be a legal document. Primary sources from which these data were compiled must be consulted for verification of information contained in this data. Use for engineering work is prohibited.]</useLimit>
+      </Consts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-89.229609</westBL>
+          <eastBL>-88.231122</eastBL>
+          <southBL>44.584458</southBL>
+          <northBL>45.030996</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2018-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements. 
+
+This data was submitted to the UW geospatial archive in 2018. Content may be considered current as of December 31, 2017. It was published to the UW geospatial archive as part of the Wisconsin Department of Administration Land Information Program annual collection of public data for the year 2018.</suppInfo>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-89.229616</westBL>
+          <eastBL Sync="TRUE">-88.231772</eastBL>
+          <northBL Sync="TRUE">45.030991</northBL>
+          <southBL Sync="TRUE">44.584659</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="015" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>310 Science Hall</delPoint>
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform to UW-Madison's data distribution plan.</stepDesc>
+        <stepDateTm>2018-07-10T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+          <rpPosName>Metadata Technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum tddtty="">608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="009" />
+          </role>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <idVersion Sync="FALSE">9.4.1</idVersion>
+        <identCode code="6884" Sync="FALSE" />
+        <idCodeSpace>SR-ORG</idCodeSpace>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Shawano_LandUse_2017">
+      <enttyp>
+        <enttypl Sync="TRUE">Shawano_LandUse_2017</enttypl>
+        <enttypd>Land Use Shawano County, WI 2017</enttypd>
+        <enttypds>Shawano County Land Information Office</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">44310</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID_1</attrlabl>
+        <attalias Sync="TRUE">OBJECTID_1</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape</attrlabl>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Feature geometry.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Reglu</attrlabl>
+        <attalias Sync="TRUE">Reglu</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Reglu_txt</attrlabl>
+        <attalias Sync="TRUE">Reglu_txt</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Tranlu</attrlabl>
+        <attalias Sync="TRUE">Tranlu</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Clustatus</attrlabl>
+        <attalias Sync="TRUE">Clustatus</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">12</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Acres</attrlabl>
+        <attalias Sync="TRUE">Acres</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SHAPE_Leng</attrlabl>
+        <attalias Sync="TRUE">SHAPE_Leng</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SC_ELU</attrlabl>
+        <attalias Sync="TRUE">SC_ELU</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SC_ELU_TEX</attrlabl>
+        <attalias Sync="TRUE">SC_ELU_TEX</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Length</attrlabl>
+        <attalias Sync="TRUE">Shape_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Length of feature in internal units.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Area</attrlabl>
+        <attalias Sync="TRUE">Shape_Area</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Area of feature in internal units squared.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Shawano_LandUse_2017">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">44310</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Shawano_LandUse_2017">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="4" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">44310</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20180710</mdDateSt>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiv
+Pb7xlqlvq13ao0CrFO8aK0RyRuKg5zz2+tJuwHoVFcBP4wv4ZZ18+CRAmY3jCgscdBycnJXj0zVO
+LxhrEzSFrtYgF3KPJUnJUkDnHXHWp9otwsel0V59deK9RhRFgvBOXCfMIlOCeqjAxwQR3+8PrVSL
+xdrs7yJHcIWRQ5/dLgrjOenpn/PUVRNXCx6ZRXLaHq19e3NmZ7rcsq5MQjGfuk5YgYXkcDOTiupp
+xkpaoAoooqgCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK8r1IeR4wvZ4Y0lkWRiQ7H
+qeMDGPXnPY+1eqV5Nquz/hL7lZWjRXuHTc7kKM8ZODnv14A796ip8II0bu70RXMsMQScx+V+8IQO
+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
+UAFFFFABRRRQAUUUUAf/2Q==</Data>
+    </Thumbnail>
+  </Binary>
+  <mdFileID>7210496C-CE5B-4793-895F-96CD8447F8BE</mdFileID>
+</metadata>

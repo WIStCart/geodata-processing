@@ -1,0 +1,765 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20120907</CreaDate>
+    <CreaTime>15205600</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process Name="Create Feature Class" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CreateFeatureclass" Date="20060913" Time="093639" export="">CreateFeatureclass Z:\Library\County Mun4New # Mun_Layer SAME_AS_TEMPLATE SAME_AS_TEMPLATE "PROJCS['Calumet_County',GEOGCS['GCS_User_Defined',DATUM['&lt;custom&gt;',SPHEROID['&lt;custom&gt;',6378345.09,298.266952895494]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Transverse_Mercator'],PARAMETER['False_Easting',803000.0],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',-88.5],PARAMETER['Scale_Factor',0.999996],PARAMETER['Latitude_Of_Origin',42.7194444444],UNIT['Foot_US',0.3048006096012192]];248409.250923874 -71671.3261932994 1953.12499818101;0 100000;0 100000" # 0 0 0 Z:\Library\County\Mun4New.shp</Process>
+        <Process Name="Append" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20060913" Time="093647" export="">Append Mun_Layer Z:\Library\County\Mun4New.shp TEST Z:\Library\County\Mun4New.shp</Process>
+        <Process Name="FeatureClassToFeatureClass_2" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20060913" Time="093655" export="">FeatureClassToFeatureClass Z:\Workspace\LIO\W_Andy\Geodata\Scrap.mdb\Scrap\Mun Z:\Library\County Mun4New # "MUN_NAME MUN_NAME VISIBLE;MUN_TYPE MUN_TYPE VISIBLE;AREA AREA VISIBLE;ACRES ACRES VISIBLE;PERIMETER PERIMETER VISIBLE;Sq_Mi Sq_Mi VISIBLE;Shape_Length Shape_Leng VISIBLE;Shape_Area Shape_Area VISIBLE" SAME_AS_TEMPLATE SAME_AS_TEMPLATE # 0 Z:\Library\County\Mun4New.shp</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20060913" Time="094554" Name="" export="">CopyFeatures Z:\Library\County\Mun4.shp Z:\Library\County.mdb\Administrative\Mun4 # 0 0 0</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120604" Time="121136" Name="" export="">CalculateField "Municipal Boundaries" Label2 "Right( [Label] , ((len( [Label] )) - (InStr(1, [Label]," ")))) " VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120604" Time="121208" Name="" export="">CalculateField "Municipal Boundaries" Label2 "Right( [Label2] , ((len( [Label2] )) - (InStr(1, [Label2]," ")))) " VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.0\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20120914" Time="103217" Name="" export="">FeatureClassToFeatureClass R:\WI_County_Data\Calumet\2012\UWMadisonData.gdb\Administrative\MunicipalBoundary R:\ARCHIVE_PROJECT\COUNTIES\Calumet\Municipalities\Calumet_Municipalities_2012.gdb Calumet_Municipalities_2012 # "Shape_Leng "Shape_Leng" true true false 8 Double 0 0 ,First,#,R:\WI_County_Data\Calumet\2012\UWMadisonData.gdb\Administrative\MunicipalBoundary,Shape_Leng,-1,-1;MunType "MunType" true true false 2 Short 0 0 ,First,#,R:\WI_County_Data\Calumet\2012\UWMadisonData.gdb\Administrative\MunicipalBoundary,MunType,-1,-1;Acres "Acres" true true false 8 Double 0 0 ,First,#,R:\WI_County_Data\Calumet\2012\UWMadisonData.gdb\Administrative\MunicipalBoundary,Acres,-1,-1;Sq_Miles "Sq_Miles" true true false 8 Double 0 0 ,First,#,R:\WI_County_Data\Calumet\2012\UWMadisonData.gdb\Administrative\MunicipalBoundary,Sq_Miles,-1,-1;Label "Label" true true false 25 Text 0 0 ,First,#,R:\WI_County_Data\Calumet\2012\UWMadisonData.gdb\Administrative\MunicipalBoundary,Label,-1,-1;Pop2010 "Pop2010" true true false 10 Text 0 0 ,First,#,R:\WI_County_Data\Calumet\2012\UWMadisonData.gdb\Administrative\MunicipalBoundary,Pop2010,-1,-1;Pop2000 "Pop2000" true true false 10 Text 0 0 ,First,#,R:\WI_County_Data\Calumet\2012\UWMadisonData.gdb\Administrative\MunicipalBoundary,Pop2000,-1,-1;NumChange "NumChange" true true false 10 Text 0 0 ,First,#,R:\WI_County_Data\Calumet\2012\UWMadisonData.gdb\Administrative\MunicipalBoundary,NumChange,-1,-1;PctChange "PctChange" true true false 10 Text 0 0 ,First,#,R:\WI_County_Data\Calumet\2012\UWMadisonData.gdb\Administrative\MunicipalBoundary,PctChange,-1,-1;PctTotPop2000 "PctTotPop2000" true true false 2 Short 0 0 ,First,#,R:\WI_County_Data\Calumet\2012\UWMadisonData.gdb\Administrative\MunicipalBoundary,PctTotPop2000,-1,-1;PctTotPop2010 "PctTotPop2010" true true false 2 Short 0 0 ,First,#,R:\WI_County_Data\Calumet\2012\UWMadisonData.gdb\Administrative\MunicipalBoundary,PctTotPop2010,-1,-1;Label2 "Label2" true true false 25 Text 0 0 ,First,#,R:\WI_County_Data\Calumet\2012\UWMadisonData.gdb\Administrative\MunicipalBoundary,Label2,-1,-1;Shape_Length "Shape_Length" false true true 8 Double 0 0 ,First,#,R:\WI_County_Data\Calumet\2012\UWMadisonData.gdb\Administrative\MunicipalBoundary,Shape_Length,-1,-1;Shape_Area "Shape_Area" false true true 8 Double 0 0 ,First,#,R:\WI_County_Data\Calumet\2012\UWMadisonData.gdb\Administrative\MunicipalBoundary,Shape_Area,-1,-1" #</Process>
+      </lineage>
+      <itemProps>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\Operation_Unrestrict\Calumet\Calumet_Municipalities_2012\Calumet_Municipalities_2012.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemName Sync="TRUE">Calumet_Municipalities_2012</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">828087.255560</westBL>
+          <eastBL Sync="TRUE">923778.628060</eastBL>
+          <southBL Sync="TRUE">427409.373718</southBL>
+          <northBL Sync="TRUE">555774.871218</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_User_Defined</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+        <projcsn Sync="TRUE">Calumet_County</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;Calumet_County&amp;quot;,GEOGCS[&amp;quot;GCS_User_Defined&amp;quot;,DATUM[&amp;quot;&amp;lt;custom&amp;gt;&amp;quot;,SPHEROID[&amp;quot;&amp;lt;custom&amp;gt;&amp;quot;,6378345.09,298.266952895494]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,803000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-88.5],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.999996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,42.7194444444],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192]]&lt;/WKT&gt;&lt;XOrigin&gt;-17646099.994440157&lt;/XOrigin&gt;&lt;YOrigin&gt;-48339999.998782255&lt;/YOrigin&gt;&lt;XYScale&gt;1600.0000000000009&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.019999999999999987&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20171129</SyncDate>
+    <SyncTime>10550600</SyncTime>
+    <ModDate>20171129</ModDate>
+    <ModTime>10550600</ModTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <ArcGISstyle>FGDC CSDGM Metadata</ArcGISstyle>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <editorSource>external</editorSource>
+    <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        <country>US</country>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum>(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+    </rpCntInfo>
+    <editorSave>True</editorSave>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorFormat>
+        <formatName>ESRI Geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Calumet County Land Information/GIS</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress>
+            <delPoint>206 Court St</delPoint>
+            <city>Chilton</city>
+            <adminArea>WI</adminArea>
+            <postCode> 53014</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>920-849-2361 X260    </voiceNum>
+            <faxNum>920-849-1481</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Calumet County Land Information/GIS</displayName>
+      </distorCont>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Calumet_Municipalities_2012.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <onLineSrc>
+        <linkage>http://www.calumetmaps.com/data.html</linkage>
+        <protocol>WWW:LINK-1.0-http--link</protocol>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.3</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Municipalities Calumet County, WI 2012</resTitle>
+      <presForm>
+        <PresFormCd value="005" />
+      </presForm>
+      <presForm>
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Calumet County Land Information/GIS</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress>
+            <delPoint>206 Court St</delPoint>
+            <city>Chilton</city>
+            <adminArea>WI</adminArea>
+            <postCode> 53014</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>920-849-2361 X260    </voiceNum>
+            <faxNum>920-849-1481</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Andy Hess</rpIndName>
+        <rpOrgName>Calumet County Land Information/GIS</rpOrgName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <rpCntInfo>
+          <cntAddress>
+            <delPoint>206 Court St</delPoint>
+            <city>Chilton</city>
+            <adminArea>WI</adminArea>
+            <postCode>53014</postCode>
+            <eMailAdd>hess.andy@co.calumet.wi.us </eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>920-849-2361 X260    </voiceNum>
+            <faxNum>920-849-1481</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <date>
+        <pubDate>2017-11-20T00:00:00</pubDate>
+      </date>
+      <resEdDate>20120101</resEdDate>
+    </idCitation>
+    <idAbs>This polygon data layer represents municipalities for Calumet County, Wisconsin in 2012. It is a feature class within the geodatabase, Calumet_Municipalities_2012.gdb.[This municipal file shows political townships, cities, and villages in Calumet County.]</idAbs>
+    <idPurp>This layer is intended for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. 
+
+[This was developed and is maintained as a baseline GIS layer.]</idPurp>
+    <idCredit>Calumet County Land Information/GIS</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Calumet County Land Information/GIS</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress>
+            <delPoint>206 Court St</delPoint>
+            <city>Chilton</city>
+            <adminArea>WI</adminArea>
+            <postCode> 53014</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>920-849-2361 X260    </voiceNum>
+            <faxNum>920-849-1481</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Calumet County Land Information/GIS</displayName>
+        <displayName>Calumet County Land Information/GIS</displayName>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Calumet County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <searchKeys>
+      <keyword>Cities</keyword>
+      <keyword>Towns</keyword>
+      <keyword>Municipalities</keyword>
+      <keyword>Polygon</keyword>
+      <keyword>Wisconsin</keyword>
+      <keyword>Calumet County</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-88.257849</westBL>
+          <eastBL>-87.762152</eastBL>
+          <southBL>44.240096</southBL>
+          <northBL>44.680135</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2012-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <suppInfo>This metadata was updated in fall of 2017 to reflect that the data is no longer restricted and has been opened for public use.
+
+Augmented original metadata with UW-Madison specific elements. 
+
+For complete metadata documentation, please visit http://www.calumetmaps.com/data.html</suppInfo>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Polygon</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Cities</keyword>
+      <keyword>Towns</keyword>
+    </themeKeys>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idPoC>
+      <rpIndName>Andy Hess</rpIndName>
+      <rpOrgName>Calumet County Land Information/GIS</rpOrgName>
+      <role>
+        <RoleCd value="007" />
+      </role>
+      <rpCntInfo>
+        <cntAddress>
+          <delPoint>206 Court St</delPoint>
+          <city>Chilton</city>
+          <adminArea>WI</adminArea>
+          <postCode>53014</postCode>
+          <eMailAdd>hess.andy@co.calumet.wi.us </eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum>920-849-2361 X260    </voiceNum>
+          <faxNum>920-849-1481</faxNum>
+        </cntPhone>
+      </rpCntInfo>
+      <displayName>Andy Hess</displayName>
+    </idPoC>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-88.404838</westBL>
+          <eastBL Sync="TRUE">-88.039142</eastBL>
+          <northBL Sync="TRUE">44.244088</northBL>
+          <southBL Sync="TRUE">43.891095</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="003" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <editorSource>external</editorSource>
+      <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum>(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform with UW-Madison's data distribution plan.</stepDesc>
+        <stepProc>
+          <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+          <rpPosName>Data Technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="009" />
+          </role>
+        </stepProc>
+        <stepDateTm>2017-11-29T00:00:00</stepDateTm>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="7594" Sync="FALSE" />
+        <idCodeSpace>EPSG</idCodeSpace>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Calumet_Municipalities_2012">
+      <enttyp>
+        <enttypl Sync="TRUE">Calumet_Municipalities_2012</enttypl>
+        <enttypd>Municipalities Calumet County, WI 2012</enttypd>
+        <enttypds>Calumet County Land Information/GIS</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">28</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape</attrlabl>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Feature geometry.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <subtype>
+        <stname Sync="TRUE">City Boundary</stname>
+        <stcode Sync="TRUE">1</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">MunType</stfldnm>
+          <stflddv Sync="TRUE">1</stflddv>
+        </stfield>
+        <stfield>
+          <stfldnm Sync="TRUE">OnBuilding</stfldnm>
+          <stflddd>
+            <domname Sync="TRUE">YesNo</domname>
+            <domdesc Sync="TRUE">Yes or no</domdesc>
+            <domtype Sync="TRUE">Coded Value</domtype>
+            <mrgtype Sync="TRUE">Default value</mrgtype>
+            <splttype Sync="TRUE">Duplicate</splttype>
+            <domfldtp Sync="TRUE">String</domfldtp>
+          </stflddd>
+        </stfield>
+        <stfield>
+          <stfldnm Sync="TRUE">MUNI</stfldnm>
+          <stflddd>
+            <domname Sync="TRUE">LongMuniName</domname>
+            <domdesc Sync="TRUE">Long Municipal Name</domdesc>
+            <domtype Sync="TRUE">Coded Value</domtype>
+            <mrgtype Sync="TRUE">Default value</mrgtype>
+            <splttype Sync="TRUE">Duplicate</splttype>
+            <domfldtp Sync="TRUE">String</domfldtp>
+          </stflddd>
+        </stfield>
+      </subtype>
+      <subtype>
+        <stname Sync="TRUE">Village Boundary</stname>
+        <stcode Sync="TRUE">2</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">MunType</stfldnm>
+          <stflddv Sync="TRUE">1</stflddv>
+        </stfield>
+        <stfield>
+          <stfldnm Sync="TRUE">OnBuilding</stfldnm>
+          <stflddd>
+            <domname Sync="TRUE">YesNo</domname>
+            <domdesc Sync="TRUE">Yes or no</domdesc>
+            <domtype Sync="TRUE">Coded Value</domtype>
+            <mrgtype Sync="TRUE">Default value</mrgtype>
+            <splttype Sync="TRUE">Duplicate</splttype>
+            <domfldtp Sync="TRUE">String</domfldtp>
+          </stflddd>
+        </stfield>
+        <stfield>
+          <stfldnm Sync="TRUE">MUNI</stfldnm>
+          <stflddd>
+            <domname Sync="TRUE">LongMuniName</domname>
+            <domdesc Sync="TRUE">Long Municipal Name</domdesc>
+            <domtype Sync="TRUE">Coded Value</domtype>
+            <mrgtype Sync="TRUE">Default value</mrgtype>
+            <splttype Sync="TRUE">Duplicate</splttype>
+            <domfldtp Sync="TRUE">String</domfldtp>
+          </stflddd>
+        </stfield>
+      </subtype>
+      <subtype>
+        <stname Sync="TRUE">Township Boundary</stname>
+        <stcode Sync="TRUE">3</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">MunType</stfldnm>
+          <stflddv Sync="TRUE">1</stflddv>
+        </stfield>
+        <stfield>
+          <stfldnm Sync="TRUE">OnBuilding</stfldnm>
+          <stflddd>
+            <domname Sync="TRUE">YesNo</domname>
+            <domdesc Sync="TRUE">Yes or no</domdesc>
+            <domtype Sync="TRUE">Coded Value</domtype>
+            <mrgtype Sync="TRUE">Default value</mrgtype>
+            <splttype Sync="TRUE">Duplicate</splttype>
+            <domfldtp Sync="TRUE">String</domfldtp>
+          </stflddd>
+        </stfield>
+        <stfield>
+          <stfldnm Sync="TRUE">MUNI</stfldnm>
+          <stflddd>
+            <domname Sync="TRUE">LongMuniName</domname>
+            <domdesc Sync="TRUE">Long Municipal Name</domdesc>
+            <domtype Sync="TRUE">Coded Value</domtype>
+            <mrgtype Sync="TRUE">Default value</mrgtype>
+            <splttype Sync="TRUE">Duplicate</splttype>
+            <domfldtp Sync="TRUE">String</domfldtp>
+          </stflddd>
+        </stfield>
+      </subtype>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Leng</attrlabl>
+        <attalias Sync="TRUE">Shape_Leng</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">MunType</attrlabl>
+        <attalias Sync="TRUE">MunType</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Acres</attrlabl>
+        <attalias Sync="TRUE">Acres</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Sq_Miles</attrlabl>
+        <attalias Sync="TRUE">Sq_Miles</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Label</attrlabl>
+        <attalias Sync="TRUE">Label</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Pop2010</attrlabl>
+        <attalias Sync="TRUE">Pop2010</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Pop2000</attrlabl>
+        <attalias Sync="TRUE">Pop2000</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">NumChange</attrlabl>
+        <attalias Sync="TRUE">NumChange</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PctChange</attrlabl>
+        <attalias Sync="TRUE">PctChange</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PctTotPop2000</attrlabl>
+        <attalias Sync="TRUE">PctTotPop2000</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PctTotPop2010</attrlabl>
+        <attalias Sync="TRUE">PctTotPop2010</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Label2</attrlabl>
+        <attalias Sync="TRUE">Label2</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Length</attrlabl>
+        <attalias Sync="TRUE">Shape_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Length of feature in internal units.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Area</attrlabl>
+        <attalias Sync="TRUE">Shape_Area</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Area of feature in internal units squared.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Calumet_Municipalities_2012">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">28</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Calumet_Municipalities_2012">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="4" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">28</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20171129</mdDateSt>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKAGSyJDE8rnCIpZjjOAKrf2raf3pP+/L/4U7Us/wBl3eOvkv1/3TXK3WpXtq0itZbg
+M7JA3DDGc47fTPODUScrpRNYRi03I6R9bsI2CvK4JIAHkv36dvY0/wDtay/56t/37b/CuagM72iJ
+JIDg5bcp3ZBzgnPtip66adFtXkYzkk/dN06xYqMmVuuP9U/+FB1ixAyZWHb/AFbf4VhVHN/qx/vr
+/wChCtPq67kc50Y1SzPSU/ijD+lL/adn/wA9f/HG/wAK5+ij6uu4c50C6nYkkfaY1x13nb/Onf2l
+Y/8AP7b/APf1f8a5mP8A1k3+/wD+yipKPq67j5zoTqVkBxdRN7IwY/kKT+07P/nr/wCON/hXP0Uf
+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
+AKKKKACiiigAooooAKKKKACiiigAooooA//Z</Data>
+    </Thumbnail>
+  </Binary>
+  <mdFileID>E1EA1BD0-F6AF-475B-B017-4D7670E12F85</mdFileID>
+</metadata>

@@ -1,0 +1,806 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20180627</CreaDate>
+    <CreaTime>14460800</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <itemProps>
+        <itemName Sync="TRUE">WI_Unified_School_Dist_2018</itemName>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+        <itemSize Sync="TRUE">10.549</itemSize>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\data\ARCHIVE_PROJECT\STATEWIDE_DATA\WI_DPI\Unified\2018\WI_Unified_School_Dist_2018.shp</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <nativeExtBox>
+          <westBL Sync="TRUE">294831.123200</westBL>
+          <eastBL Sync="TRUE">773288.251600</eastBL>
+          <southBL Sync="TRUE">225105.234000</southBL>
+          <northBL Sync="TRUE">734418.020600</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Wisconsin_TM</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Wisconsin_TM&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,3071]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;450445547.3910538&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;3071&lt;/WKID&gt;&lt;LatestWKID&gt;3071&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+      <lineage>
+        <Process ToolSource="c:\program files (x86)\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Dissolve" Date="20180123" Time="095337" Name="" export="">Dissolve WI_merge_1_22_2_45 F:\Boundaries_Project\SchoolCollection\Wisconsin_Unified_Secondary_SD_Jan23.shp SDID;SDNM # MULTI_PART DISSOLVE_LINES</Process>
+        <Process ToolSource="c:\program files (x86)\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Sort" Date="20180123" Time="100458" Name="" export="">Sort Wisconsin_Unified_Secondary_SD_Jan23 F:\Boundaries_Project\SchoolCollection\Wisconsin_Unified_Secondary_SD_Jan23_2.shp "SDNM ASCENDING" UR</Process>
+        <Process ToolSource="c:\program files (x86)\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\JoinField" Date="20180123" Time="100749" Name="" export="">JoinField Wisconsin_Unified_Secondary_SD_Jan23_2 SDNM F:\Boundaries_Project\school_districts_useForJoin.dbf SDNM SDID</Process>
+        <Process ToolSource="c:\program files (x86)\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\JoinField" Date="20180123" Time="100914" Name="" export="">JoinField Wisconsin_Unified_Secondary_SD_Jan23_2 SDID Wisconsin_Unified_Secondary_SD SDID SDTYPE;CESA</Process>
+        <Process ToolSource="c:\program files (x86)\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Sort" Date="20180123" Time="132811" Name="" export="">Sort Wisconsin_Unified_Secondary_SD F:\Boundaries_Project\SchoolCollection\Wisconsin_Unified_Secondary_SD_1.shp "SDNM ASCENDING" UR</Process>
+        <Process ToolSource="c:\program files (x86)\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180124" Time="131609" Name="" export="">CalculateField Wisconsin_Unified_Secondary_SD Display !SDNM!.istitle() PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\JoinField" Date="20180124" Time="154609" Name="" export="">JoinField Wisconsin_Unified_Secondary_SD SDID F:\Boundaries_Project\school_districts_Jan_2018.dbf SDID Display;LEAID</Process>
+        <Process ToolSource="c:\program files (x86)\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180208" Time="120243" Name="" export="">CalculateField Wisconsin_Unified_SD CESA_2 [CESA] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\JoinField" Date="20180226" Time="160315" Name="" export="">JoinField WI_Unified_School_Districts_2017 SDID demographics SDID SCHOOL_NAM;All_Studen;1st;2nd;3rd;4th;5th;6th;7th;8th;9th;10th;11th;12th;Amer_India;Asian;Autism;Black;Deaf_Blind;Econ_Disad;ELL_LEP;Emotional;Eng_Prof;Female;Hearing_Im;Hispanic;Intellectu;K3;K4;KG;Male;Migrant;Not_Econ_D;Not_IDEA_E;Not_Migran;Orthopedic;Other_Heal;Pacific_Is;PreK;Significan;Specific_L;Speech_or;SwD;SwoD;Traumatic;Two_or_Mor;Unknown;Visual_Imp;White</Process>
+        <Process ToolSource="c:\program files (x86)\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteField" Date="20180226" Time="160428" Name="" export="">DeleteField WI_Unified_School_Districts_2017 SCHOOL_NAM;All_Studen;1st;2nd;3rd;4th;5th;6th;7th;8th;9th;10th;11th;12th;Amer_India;Asian;Autism;Black;Deaf_Blind;Econ_Disad;ELL_LEP;Emotional;Eng_Prof;Female;Hearing_Im;Hispanic;Intellectu;K3;K4;KG;Male;Migrant;Not_Econ_D;Not_IDEA_E;Not_Migran;Orthopedic;Other_Heal;Pacific_Is;PreK;Significan;Specific_L;Speech_or;SwD;SwoD;Traumatic;Two_or_Mor;Unknown;Visual_Imp;White</Process>
+        <Process ToolSource="c:\program files (x86)\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Merge" Date="20180320" Time="104345" Name="" export="">Merge 'Unified School Districts';'Secondary School Districts' C:\Users\wittesm\Documents\Maps_In_Progress\HustisfordMerge.shp "SDNM "SDNM" true true false 30 Text 0 0 ,First,#,Unified School Districts,SDNM,-1,-1,Secondary School Districts,SDNM,-1,-1;SDID "SDID" true true false 50 Text 0 0 ,First,#,Unified School Districts,SDID,-1,-1,Secondary School Districts,SDID,-1,-1;CESA "CESA" true true false 10 Long 0 10 ,First,#,Unified School Districts,CESA,-1,-1,Secondary School Districts,CESA,-1,-1;LEAID "LEAID" true true false 10 Long 0 10 ,First,#,Unified School Districts,LEAID,-1,-1,Secondary School Districts,LEAID,-1,-1;Display "Display" true true false 254 Text 0 0 ,First,#,Unified School Districts,Display,-1,-1,Secondary School Districts,Display,-1,-1"</Process>
+        <Process ToolSource="c:\program files (x86)\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Sort" Date="20180405" Time="153005" Name="" export="">Sort "Unified School Districts" C:\Users\wittesm\Documents\Maps_In_Progress\WI_Unified_School_Districts_2017_sort.shp "SDNM ASCENDING" UR</Process>
+        <Process ToolSource="c:\program files (x86)\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Sort" Date="20180430" Time="092449" Name="" export="">Sort "Unified School Districts" C:\Users\wittesm\Documents\Maps_In_Progress\WI_Unified_School_Districts_2017_sort.shp "SDNM ASCENDING" UR</Process>
+        <Process ToolSource="c:\program files (x86)\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Merge" Date="20180621" Time="163257" Name="" export="">Merge Unified_2017;'Unified School Districts' C:\Users\wittesm\Documents\Maps_In_Progress\Unified_2018merge.shp "SDNM "SDNM" true true false 30 Text 0 0 ,First,#,Unified_2017,SDNM,-1,-1,Unified School Districts,SDNM,-1,-1;SDID "SDID" true true false 50 Text 0 0 ,First,#,Unified_2017,SDID,-1,-1,Unified School Districts,SDID,-1,-1;CESA "CESA" true true false 10 Long 0 10 ,First,#,Unified_2017,CESA,-1,-1,Unified School Districts,CESA,-1,-1;LEAID "LEAID" true true false 10 Long 0 10 ,First,#,Unified_2017,LEAID,-1,-1,Unified School Districts,LEAID,-1,-1;Display "Display" true true false 254 Text 0 0 ,First,#,Unified_2017,Display,-1,-1,Unified School Districts,Display,-1,-1;U_Area "U_Area" true true false 13 Float 0 0 ,First,#,Unified_2017,U_Area,-1,-1,Unified School Districts,U_Area,-1,-1"</Process>
+        <Process ToolSource="c:\program files (x86)\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\Merge" Date="20180627" Time="131952" Name="" export="">Merge Unified_2018merge;'Secondary School Districts' F:\Boundaries_Project\Topology.gdb\TopoCheck\statewide2018 "SDNM "SDNM" true true false 30 Text 0 0 ,First,#,Unified_2018merge,SDNM,-1,-1,Secondary School Districts,SDNM,-1,-1;SDID "SDID" true true false 50 Text 0 0 ,First,#,Unified_2018merge,SDID,-1,-1,Secondary School Districts,SDID,-1,-1;CESA "CESA" true true false 10 Long 0 10 ,First,#,Unified_2018merge,CESA,-1,-1,Secondary School Districts,CESA,-1,-1;LEAID "LEAID" true true false 10 Long 0 10 ,First,#,Unified_2018merge,LEAID,-1,-1,Secondary School Districts,LEAID,-1,-1;Display "Display" true true false 254 Text 0 0 ,First,#,Unified_2018merge,Display,-1,-1,Secondary School Districts,Display,-1,-1"</Process>
+        <Process ToolSource="c:\program files (x86)\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180627" Time="144226" Name="" export="">CalculateField Statewide_Unified_Secondary_2018 Type Secondary VB #</Process>
+        <Process ToolSource="c:\program files (x86)\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180627" Time="144300" Name="" export="">CalculateField Statewide_Unified_Secondary_2018 Type Secondary VB #</Process>
+        <Process ToolSource="c:\program files (x86)\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180627" Time="144325" Name="" export="">CalculateField Statewide_Unified_Secondary_2018 Type "Secondary" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180627" Time="144341" Name="" export="">CalculateField Statewide_Unified_Secondary_2018 Type "Unified" VB #</Process>
+      </lineage>
+      <copyHistory>
+        <copy source="F:\Boundaries_Project\SchoolCollection\Wisconsin_Unified_SD" dest="\\W2166\C$\Users\wittesm\Documents\Maps_In_Progress\Wisconsin_Unified_SD" date="20180206" time="09521700" />
+      </copyHistory>
+    </DataProperties>
+    <SyncDate>20180710</SyncDate>
+    <SyncTime>14165200</SyncTime>
+    <ModDate>20180710</ModDate>
+    <ModTime>14165200</ModTime>
+    <scaleRange>
+      <minScale>625000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISstyle>ISO 19139 Metadata Implementation Specification GML3.2</ArcGISstyle>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <dataIdInfo>
+    <envirDesc Sync="TRUE">Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataLang>
+      <languageCode value="eng" Sync="TRUE" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <idCitation>
+      <resTitle Sync="FALSE">Unified School Districts, Wisconsin 2018</resTitle>
+      <presForm>
+        <PresFormCd value="005" Sync="TRUE" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <resAltTitle>WI_Unified_School_Districts_2018</resAltTitle>
+      <date>
+        <createDate>2018-02-07T00:00:00</createDate>
+        <pubDate>2018-02-09T00:00:00</pubDate>
+        <reviseDate>2018-06-27T00:00:00</reviseDate>
+      </date>
+      <resEd>2.0</resEd>
+      <resEdDate>20180627</resEdDate>
+      <citRespParty>
+        <rpIndName>Wisconsin Department of Public Instruction</rpIndName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>125 S. Webster St.</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53703</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">608-266-3390</voiceNum>
+          </cntPhone>
+          <cntHours>Monday - Friday:  7:30am - 4:30pm</cntHours>
+        </rpCntInfo>
+        <displayName>Wisconsin Department of Public Instruction</displayName>
+        <displayName>Wisconsin Department of Public Instruction</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Shelley Witte</rpIndName>
+        <rpOrgName>Wisconsin Department of Public Instruction</rpOrgName>
+        <rpPosName>GIS Technician</rpPosName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>125 S. Webster Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53701</postCode>
+            <eMailAdd>shelley.witte@dpi.wi.gov</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">608-266-3939</voiceNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Shelley Witte</displayName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+      </citRespParty>
+    </idCitation>
+    <spatRpType>
+      <SpatRepTypCd value="001" Sync="TRUE" />
+    </spatRpType>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-92.964328</westBL>
+          <eastBL Sync="TRUE">-86.666089</eastBL>
+          <northBL Sync="TRUE">47.083273</northBL>
+          <southBL Sync="TRUE">42.456895</southBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2018-02-09T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <idAbs>This dataset includes boundaries for unified school district boundaries within the state of Wisconsin. By law, all territory in the state must be included within a public school district. The US Census Bureau identifies three types of school districts. Unified school districts serve children of all grade levels, Elementary primarily serve students in the elementary grades, and Secondary primarily serve children in grades 9-12. Out of 422 school districts in Wisconsin, 368 are considered unified districts.This layer is an aggregate of county-submitted data for school district boundaries.Each year, there is a chance for reorganizations to take place that either transfer territory between school districts or consolidate/dissolve/create districts. These reorganizations go into effect on July 1st of each year. In 2018, there were twelve (12) reorganizations that involved unified school districts. The reorganizations took place in Dane, Fond du Lac, Iron, Iowa, La, Crosse, Polk, St. Croix, and Washington counties. Transfers of territory took place between the following pairs of districts:Turtle Lake and Amery; Hurley (unified) and Lakeland UHS (secondary) / North Lakeland (elementary); West Salem and La Crosse; Waupun and Rosendale-Brandon; Middleton Cross-Plains and Madison Metropolitan; Osceola and Somerset; Mineral Point and PecatonicaPlease refer to the property transfer logfor more information.</idAbs>
+    <idCredit>Wisconsin Department of Public Instruction</idCredit>
+    <searchKeys>
+      <keyword>WI</keyword>
+      <keyword>wisconsin</keyword>
+      <keyword>state of wisconsin</keyword>
+      <keyword>DPI</keyword>
+      <keyword>Department of Public Instruction</keyword>
+      <keyword>DPIboundaries</keyword>
+      <keyword>education</keyword>
+    </searchKeys>
+    <resConst>
+      <Consts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials. [The layer is intended for your reference use only. It contains the best information the Department of Public Instruction (DPI) has to date, but no guarantee of accuracy is made. It should not be used for any land transactions, financial decisions, taxation, surveying, or other similar uses. See summary information about boundary changes in the DPI property transfer log. The DPI is not responsible for data that is misinterpreted or altered in any way. Derived conclusions and analyses generated from this data are not to be considered attributable to the DPI.]</useLimit>
+      </Consts>
+    </resConst>
+    <placeKeys>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idPoC>
+      <rpIndName>Wisconsin Department of Public Instruction</rpIndName>
+      <rpCntInfo>
+        <cntAddress addressType="physical">
+          <delPoint>125 S. Webster St.</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53703</postCode>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">608-266-3390</voiceNum>
+        </cntPhone>
+        <cntHours>Monday - Friday:  7:30am - 4:30pm</cntHours>
+      </rpCntInfo>
+      <displayName>Wisconsin Department of Public Instruction</displayName>
+      <displayName>Wisconsin Department of Public Instruction</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <idPoC>
+      <rpIndName>Shelley Witte</rpIndName>
+      <rpOrgName>Wisconsin Department of Public Instruction</rpOrgName>
+      <rpPosName>GIS Technician</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="physical">
+          <delPoint>125 S. Webster Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53701</postCode>
+          <eMailAdd>shelley.witte@dpi.wi.gov</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">608-266-3939</voiceNum>
+        </cntPhone>
+      </rpCntInfo>
+      <displayName>Shelley Witte</displayName>
+      <role>
+        <RoleCd value="007" />
+      </role>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="009" />
+      </maintFreq>
+      <maintCont>
+        <rpIndName>Shelley Witte</rpIndName>
+        <rpOrgName>Wisconsin Department of Public Instruction</rpOrgName>
+        <rpPosName>GIS Technician</rpPosName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>125 S. Webster Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53701</postCode>
+            <eMailAdd>shelley.witte@dpi.wi.gov</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">608-266-3939</voiceNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Shelley Witte</displayName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <idPurp>This polygon layer contains the unified school districts within the state of Wisconsin in 2018.</idPurp>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <suppInfo>Augmented metadata with UW-Madison specific elements. Archived dataset at UW-Madison. [In 2018, there were twelve (12) reorganizations that involved unified school districts. The reorganizations took place in Dane, Fond du Lac, Iron, Iowa, La, Crosse, Polk, St. Croix, and Washington counties. Transfers of territory took place between the following pairs of districts:
+Turtle Lake and Amery; Hurley (unified) and Lakeland UHS (secondary) / North Lakeland (elementary); West Salem and La Crosse; Waupun and Rosendale-Brandon; Middleton Cross-Plains and Madison Metropolitan; Osceola and Somerset; Mineral Point and Pecatonica]</suppInfo>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Polygon</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>School districts</keyword>
+    </themeKeys>
+    <tpCat>
+      <TopicCatCd value="003" />
+    </tpCat>
+  </dataIdInfo>
+  <mdLang>
+    <languageCode value="eng" Sync="TRUE" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" Sync="TRUE" />
+  </mdChar>
+  <distInfo>
+    <distFormat>
+      <formatName Sync="TRUE">Shapefile</formatName>
+      <formatVer>1.0</formatVer>
+    </distFormat>
+    <distTranOps>
+      <transSize Sync="TRUE">10.549</transSize>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/WI_Unified_School_Dist_2018.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <onLineSrc>
+        <linkage>https://wi-dpi.maps.arcgis.com/</linkage>
+        <protocol>WWW:LINK-1.0-http--link</protocol>
+        <orName>Online access from originator</orName>
+        <orFunct>
+          <OnFunctCd value="002" />
+        </orFunct>
+      </onLineSrc>
+      <onLineSrc>
+        <linkage>https://services8.arcgis.com/o4NJgD3NfeHnWy06/ArcGIS/rest/services/WI_Unified_School_Districts_2018/FeatureServer</linkage>
+        <protocol>ESRI:ArcGIS</protocol>
+        <orName>Web service access from originator</orName>
+        <orDesc>Web service</orDesc>
+        <orFunct>
+          <OnFunctCd value="002" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distributor>
+      <distorCont>
+        <rpIndName>Wisconsin Department of Public Instruction</rpIndName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>125 S. Webster St.</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53703</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">608-266-3390</voiceNum>
+          </cntPhone>
+          <cntHours>Monday - Friday:  7:30am - 4:30pm</cntHours>
+        </rpCntInfo>
+        <displayName>Wisconsin Department of Public Instruction</displayName>
+        <displayName>Wisconsin Department of Public Instruction</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </distorCont>
+    </distributor>
+    <distributor>
+      <distorCont>
+        <editorSource>external</editorSource>
+        <editorDigest>54960e0da2e1d5b6b87d6ff73b5e08e6</editorDigest>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park St</delPoint>
+            <city>Madison</city>
+            <adminArea>Wisconsin</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">(608) 262-1471</voiceNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Data Technician</displayName>
+        <rpPosName>metadata technician</rpPosName>
+        <editorSave>True</editorSave>
+        <displayName>Arthur H. Robinson Map Library</displayName>
+        <role>
+          <RoleCd value="001" />
+        </role>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <mdHrLv>
+    <ScopeCd value="005" Sync="TRUE" />
+  </mdHrLv>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="3071" Sync="TRUE" />
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+        <idVersion Sync="TRUE">6.13(9.2.0)</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="WI_Unified_School_Dist_2018">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">369</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="WI_Unified_School_Dist_2018">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="4" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">369</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <eainfo>
+    <detailed Name="WI_Unified_School_Dist_2018">
+      <enttyp>
+        <enttypl Sync="FALSE">WI_Unified_School_Dist_2018</enttypl>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">369</enttypc>
+        <enttypd>Unified School Districts Wisconsin 2018</enttypd>
+        <enttypds>Wisconsin Department of Public Instruction</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">FID</attrlabl>
+        <attalias Sync="TRUE">FID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape</attrlabl>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Feature geometry.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SDID</attrlabl>
+        <attalias Sync="TRUE">SDID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef>School district code used by the Wisconsin Department of Public Instruction. Each school district within the state of Wisconsin has a unique four-digit district number. These codes are used to identify school districts by counties, municipalities, and the Wisconsin Department of Revenue for property tax purposes.</attrdef>
+        <attrdefs>Wisconsin Department of Public Instruction</attrdefs>
+        <attrdomv>
+          <udom>school district code used by the WI Department of Public Instruction</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SDNM</attrlabl>
+        <attalias Sync="TRUE">SDNM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef>Contains the working school district names. Legal names for Wisconsin school districts can be found here:  https://dpi.wi.gov/sites/default/files/imce/sms/rg-legal-names-since-2010.pdf</attrdef>
+        <attrdefs>Wisconsin Department of Public Instruction</attrdefs>
+        <attrdomv>
+          <udom>school district name - not necessarily legal names of school districts</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CESA</attrlabl>
+        <attalias Sync="TRUE">CESA</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef>Number associated with each Cooperative Educational Service Agency</attrdef>
+        <attrdefs>Wisconsin Department of Public Instruction</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>12</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LEAID</attrlabl>
+        <attalias Sync="TRUE">LEAID</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef>Local Education Agency code used by the US Census Bureau</attrdef>
+        <attrdefs>Wisconsin Department of Public Instruction</attrdefs>
+        <attrdomv>
+          <udom>Contains Wisconsin's state FIPS code (55) and a 5-digit Local Education Agency code. This five-digit code does not match the four-digit school digit codes used by the Wisconsin Department of Public Instruction.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Display</attrlabl>
+        <attalias Sync="TRUE">Display</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">254</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef>School district name in proper case, used for display/labeling purposes.</attrdef>
+        <attrdefs>Wisconsin Department of Public Instruction</attrdefs>
+        <attrdomv>
+          <udom>Proper case school district name</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <mdDateSt Sync="TRUE">20180710</mdDateSt>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiioo7mGVykciswzwD6HB+vPFAEtFVnv4FYojGV8HCxjOfbPQfie9UrueeUiCbyo
+4JhtZFy0hGDkf5z3+tZTrQhuxpNl97y2inEEkyLK2MKTgnJxx+P8x61JDMk8QkjOUOcHGOhxXKRa
+Y15rIe3SaOGBfkmcn5SecDPPfOP1FdXEnlxKmEGBzsXaM+w7VcZcyuIfRRRVAFFFFABRRRQAUUUU
+AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAQXmDZTg942H5iqNwIVe2h8tHIfIj4zja3PNXrsZtyDn
+ll6HH8Qql9nH2p9ssqHYvIcn+965rzcc/eRcRHkVtjJ5qSDcgRFB7gHPb07ioTI9rG7zNHbhyxaZ
+kUAdSMndU/lxW14HAkJkRt3LP0K/XFLc3EYtZiRIBsbkxt6fSuFeRRBiKzlCw3IW6O1SGOQQTjlc
+88kn1561oRXMvmiKeJVLHCOjZDdT06g4Ge496rmOXZsSGFBuDcOR0IP932phnacMNiqEwSzOVwQT
+yOORxXRSxM4vV3QnFGrRVayleWJt7hyrY3Ag54HcAevpTE1BGiMjxSogz823I6+nX9MfhzXq+0jZ
+Nu1yLFyimRyxzLmNg2OD6g+hHan1YgooooAKKKKACiiigAooooAKKKKACiiigAooooAKiuJjDGCq
+7nY7UXOMn/OT+FS1m6ibiKdZ40V0ChRu6KST78ZyBnBrOrJxg3HcaIWl/wBIc3jyMYmDIQpEY4OO
+B3/3iecEYyKWA21zNJ5jRST8gxsVLIoY44/GqCSSxWa3c8O1ym57gsemO+0njOO+PbtUk8AmsIov
+PjP2g7Q8qfMrHOcfywfxNePNuTvJmha8yGzvZgVRVMauD8oJJyNq+v3amkaadfLELRBhhmfacAg9
+MN16VWNuluXjMQkZirJKxw2cqDkjkYODx9OMU6B7i2aK3dhM5Cozs5G5tpJbocZwePaoa6oBJ18i
+VFMVuVZWYt5BO3BHYZ7E+lSILRZBJJLbkqoVQCAqgcjAzUoMhu0Dqi/u2xhs919hSCeWZV222Y3z
+gs2OPce/br17UruwFm3jZrQ72+eVdzFRjBIA4qktxGYjAsZJUFZPKUEKeQeM+oNIFnTpNK6owVxv
+OSMLz3PqeMU3NuiskXnNKuFIG9SMnOTge5PSuvEVoVIpRWwkmiOISGV98ckaRAJG0Z2k5xwfmPr3
+45q1B9pePf8Aa5Q25htdUIGDjBwPb1pikm2uWJJZSDkrjkKpzg+4ppKpcOQJDBuALLI/DknOAOvO
+B+PtWEas46Rdh2Rdt7mQ3DW85jLBQwZBtBznjBJ54Pf8u9usQwQzANIJi6swAeJnBXdkAgg+g6YN
+aGmOz2KlixIZ1y3XAYgfyr0sNXdRcr3RDVi3RRRXUSFFFFABRRRQAUUUUAFFFFABRRRQAVn6xPFD
+YFJplhSY+UZGxwCDnr1OARWhWVrm8xwCOaaNyzBREu4k7D144+vvUVHaDY0ZoiEyRxROGm85XjVt
+wRIwcgqDnGQuM+/AxULS7Y7u5meHa6NDncCFcKWDDtk/Lkeqg9+JJ2gZvLk8orZIhW3ZAoOQ3y8k
+84Axz+FIiQi0hnfS8RxM0jtLGuViOcAYznAI49F+mfILJZktYhKjSRyXbKYwx2qEYDIwW7jKnv07
+VKpEji/IWRdwlaONgzR/IRnOR6dPc9aSySIXE9vawpEgcEyH5ZPUrgjPTofQ+1Itj5y28UjSGJJZ
+FQEr8qqWCjOCTwO56Zz6VN+4yeZLomKZ2dWZCjKgGFLFeByD265P4UryiJds0oiESZEedm7g45DH
+0qEtPOltJPKqBF884wFYAj72QccHt9aH1EzxRia3nhhdgHZVJyD0HToTgcetTZgW0iuIHihi8nyy
+pLv5ZHIwB35J/pUZhkXUGnASRwqFgqAMR8wwDn8eajgmYyus+9IFyEYuwIwA3zfge57VIrlZ0lji
+l2u2wbpDuYBSfut05z78UtQGXHnu7BbUI8quh+624cYzyP8APrUgw9sYCko2ycNEAMkPnt06DOfW
+jz45ZTJJHcIqjYvDddxBHy9egqRjHB5csRkcSNn5WL7vlOO/sOaL9AEglMiIy3aMxXLKwBx+WKTR
+pJ2BjeRWjiQLlVAVjk4YdznBJPuOPWlI4W2kS4iieNQxhSU4cEMwwCM5P3cYOean020ljkidWdIo
+wyO/mbgxGQcZ5xuzwemOOpz14S6noTLY0rm/gt4nberMp2hd3VvT9efSodLjlMb3U7MGnO5YyT+7
+XJOOfr6DtxVKdV1Wdgk0T28+6AFF3EKAd5znHOAvTsK3QABgDAFehGXM32RIUUUVoIKKKKACiiig
+AooooAKKKKACqGqQytGJ4QzSQqxCKSCenTnnp0PWr9FTKKkrMDnrgALBLbXOZZm8t5GZcsANxGcE
+A8H2GT3NRGK5GlH7JJb2drIpIVlZjGpHReRyT+HpnNbt1Yw3QBdE8xSGVygOCOnXrXOS2l/ZagyP
+d28NqQXgj+6mcEEA5ypAIOBkHmvOqYaUFdO6LTuJeRldOAvoJY7glpjLbrnoehxkrkYHGfrxVpY4
+5937oRTvKFRF6ovXccccjccjrkDJqqt5cTJJMA9khChGkYyeaufvKxxt78fSrDvJF5akXE9qSUEc
+g2E8KAo4Hv8AePPNYO+wxZYrdrNi1qZUWTmRFyAobBC8k4wOQOOT706MySW/mRRs6QM+BNgLhQRt
+wOh7Zx2PXNWnScWcqTRI8bk/KhOVDHpwDkjJ5FRiBGsHme4MpAMjmPaoLY9MegHWovoMr2lupuLm
+3uYTK6/PsRvkVW4GATwflPToKs8w3DTOh2RAnDtuZVIOWyWI7EfSo4ZhzIDJ9ojQs7uuVkAxuAYc
+Yz0/l1qG4uYr6QuEJRUVVO5QVduQG56dOvGeOTRq2AnmT3NqTE00Rc5fCquJM4AAIJGTg59Prw6V
+oInSOS38owQNIRx8xxgYYHP973yAalnWX7UzOsTS/IBMrY8lScdPXlu+DjkVCkjQHzIUeZvtLbi8
+gY4wwx3P+1jHAzTQA7GMW8EFwJxI6F5eG2nIUkHPUkjg5/iq7PLbyxxhYWlskwqjACsxbb/ERkD1
+6HPesi4l8yR9QEokEPzFlGE5UY+UtnGcfN/hxoSlIFaORvNgSPzQqx/IWLHA47ccDn+VaqbjDlW7
+F1L+mWscbXFwsQQzPnhiQfcZ6ZPp14rQpkMYhhjiXoihR+Ap9erCPLFRRmFFFFUAUUUUAFFFFABR
+RRQAUUUUAFFFFABUNxbidV52ujbkbGcH/wDUSPxqaik0mrMDAuGkhM8c5NvbEF3baeT1IQ574z68
+n8IpJVjhuZ2mm8+IbIY5JBkNt44Bwevv0roJ4VuIWjfIB7jqD2I9xXKbyI2RBPdyv8xlQB/LBXaQ
+SPmGCSe/A9a82vQVN3WxadzbJujdLG00SoyFvkjw2QR3JIxyO1RSQW80otWEY2jBy3zuNuOmORz+
+lVVumuJEd71EMMRd1gHzDJHDBh39MDn8KiilWUBbm6SSdyELSIY2hG3+4QMHIOGOOW+grkUWUX0j
+mubSKWYwM4AbCwkkd9oy3tioJJEu3jaTZFtjVnWVsLIDnAxnoOTznrVqJmtBJbrHJNsG9SGBYgk9
+dx65zVaO6E2nsI7ny0igIaRRyTjGcEDgc+nTtQrgQOrp9quY5FEMpWJ1aVnRieCwY9OoXp2/I+zC
+f7Vi3dEjBVzNLufdjOQ3J6N6+nTmopkubeJZHgmW0R1SSE3G7d2GM/wlmAPI4HfsnmpaxMISYkkJ
+eYFcLGzkYAG3PIB4HfHTNaWfQRViEjRxvLFCCskYjWWUbtqyLgqApIGep79a1YrcXN08SXQPmkSy
+eVgpjkfj0H1Jycjiq0q3iXdnDGEghRZJJHZgpZVwoY5BGcYPIPXt2l0OcS69OvmK7i1TcRLv7nv2
+znp0B9c1tSipzV9hPRHSKoVQo6AYFLRRXqEBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAVzE
+otLKTz7y4KxNMUXEjLtdeAMA85Cjr7da6eub1uCGe58lLPe5J2srhMPgHf17DbzjnOO3PNiopxu2
+OJA1tPM0pViLhn8yMPDmRAo+U7mIGN2c4z146mluUne6k+1uHgEimSOJMCQKobG7Ocg844yAfpUn
+nNI0N/Pey20bqyZAASIg98jGCAeTxxx1FR7rYanO+pXMckQImhiMRQA7SGbaeW4HXkc15yuWWsW0
+FxdQR3MFpEQNyAKPmK9fbgD8jUO6OSCBraziYHKOyAKqyOBnnr97GeCc496cLmOzintImt2hgXdt
+Q4JRiQFz0B6jvngnGarSM8kMkN5EBhRC4Q/InHykn+LqTjHGBx0NJIYyzBjuY4w7wNgo7vIDGxXG
+59ueWLA4JGMAn2pbmUXDfNE0t2Qx2LhAV2YLEEk4Gcj6+ucPM4a1lVCXVP3iiOMKcKx+Z88ZAUHt
+zwRToJIIr2eeyuZNkKNNOtwGJY9ONwz0Qg9hxxWkLOXvCJbrbOrXUiGRoW24kKCLDbeDgk4IIPft
+6Ve0OHCyzbWI4jjdiTlRk4GScAZx9VrLuriNL27KuGi3ooYNgAZJ+Y4xglmAJ6Y61u6Q6vpsZUFc
+FgysCCp3HIOe9dOGp8tRp9CW9C9RRRXcSFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABWDqs9
+lZXrPexsyOpdThmXgAEEdOy8n1reqGe2jnKltwdc7XU4Iz1rOrT9pDlGnY5dIAYIUayt3kuSJN0B
+3SIN24gk9QAcbs9SBirCXJi1B7pJ0W1kiRES4Zg0jZJypOePmA479ulSzaZJp+oR3Fku4FH3/uss
+xJB5IAz7A+/NU9OfUcC6ntpP3GY0gaGRTtO0luBgkdOnODzXmzozTaauWmSw3UgSJlt4GNwD5Pzg
+Ih+ZzuOCRgdwD74rOhsbKUi3ZmldwsjpbFioGCGO0kgNnv6HjkmtCKz/AHtuskEskUzPK7pbPGUb
+kjJ+9/E3X9KYqyIZEkmud4uBKCcoxHmFeTjn5AOPQ9BwaSjJbIBn2GOJ4mhgkW3LGUmMgFEblQd3
+BUnJxjjgnuSr2DRzIY4IYrtgBEoij6Y5J6DcCc9+nQ81YTyI74wRRGOOV3Z5w2d3HRic9T0PoAKl
+g025n2HDxxyxhZpJJN7M3BDqDnHfGfy4pxhUk7JBoVptNnvLQ2oRyoUIJQi8kNl/48DkDr3xjOK1
+NCM0dqYbly0vEg/3SBnH45/P3qxa6cIJUcsmUBA2pjPbJOeuKZp0bJI2/wA07YkUGRMY+9kDge36
+V2Uqbg153uS3c0aKKK6iQooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKK
+KKACiiigAooooAKKKKACiiigAooooA//2Q==</Data>
+    </Thumbnail>
+  </Binary>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <dataLineage>
+      <statement>This layer is the result of aggregation procedures implemented over school district boundary data provided by Wisconsin's 72 counties. 
+
+Counties that specifically contributed school district boundary data:
+Adams County
+Ashland County
+Barron County
+Bayfield County
+Brown County
+Buffalo County
+Burnett County
+Calumet County
+Chippewa County
+Columbia County
+Crawford County
+Dane County
+Dodge County
+Door County
+Douglas County
+Dunn County
+Eau Claire County
+Florence County
+Fond du Lac County
+Forest County
+Grant County
+Green County
+Green Lake County
+Iowa County
+Iron County
+Jackson County
+Jefferson County
+Juneau County
+Kenosha County
+Kewaunee County
+La Crosse County
+Lafayette County
+Langlade County
+Lincoln County
+Manitowoc County
+Marathon County
+Marinette County
+Marquette County
+Menominee County
+Monroe County
+Oconto County
+Oneida County
+Outagamie County
+Pepin County
+Pierce County
+Polk County
+Portage County
+Price County
+Racine County
+Richland County
+Rock County
+Sauk County
+Sawyer County
+Shawano County
+Sheboygan County
+St. Croix County
+Taylor County
+Trempealeau County
+Vernon County
+Vilas County
+Walworth County
+Washburn County
+Washington County
+Waukesha County
+Waupaca County
+Waushara County
+Winnebago County
+Wood County
+
+Counties whose school district boundary data was derived from the V301_WisconsinParcels_2017 feature class layer (https://www.sco.wisc.edu/parcels/data/):
+Clark County
+Milwaukee County
+Ozaukee County
+Rusk County
+
+Each county-submitted layer was checked for proper school district code attribute information and general location accuracy of school districts. Layers were reprojected to NAD_1983_HARN_Wisconsin_TM (EPSG: 3071), exported to a geodatabase feature dataset, and checked for topology errors. Topology errors were corrected and newly created Null features were merged into the appropriate adjacent school district polygons. School district name, Census LEA code, Cooperative Educational Service Agencies (CESA) number, and school district type (unified or secondary) attribute information was added via a field join using the school district code (SDID) number as the join attribute.
+
+School district boundary data was built up from the V3 Wisconsin Parcels 2017 dataset for counties that did not submit data or had more than 200 topology errors in their submitted layer. Using a modified ArcGIS model built by Codie See (csee@wisc.edu) at the Wisconsin State Cartographer's Office, parcels were aggregated by school district code. The process resulted in a separate geodatabase feature class for each school district located within a county. The feature classes were merged into a single county layer and checked for topology errors. The errors were corrected and NULL features were merged into the appropriate adjacent school district polygons. Right-of-Ways and rivers that fell along school district boundaries were split in half lengthwise using the Midpoint tool on the Editor tool bar in ArcGIS. Each half was merged into the appropriate adjacent school district polygon. 
+
+Once all county data was cleaned and the districts were rechecked for locational accuracy, the 72 county shapefiles were merged into a single statewide layer. School districts that crossed county lines and had adjacent polygons were merged together. A final topology check and subsequent fixing of errors occured before a final dissolve that resulted in 378 school district multi-part polygons (368 unifed, 10 secondary) and one multi-part NULL feature. A unified school district dataset and a secondary school district dataset were created through an export of selected features based on their school district type attribute.
+
+This dataset retained the multipart NULL feature. </statement>
+    </dataLineage>
+  </dqInfo>
+  <mdContact>
+    <rpIndName>Wisconsin Department of Public Instruction</rpIndName>
+    <rpCntInfo>
+      <cntAddress addressType="physical">
+        <delPoint>125 S. Webster St.</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53703</postCode>
+        <country>US</country>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum tddtty="">608-266-3390</voiceNum>
+      </cntPhone>
+      <cntHours>Monday - Friday:  7:30am - 4:30pm</cntHours>
+    </rpCntInfo>
+    <displayName>Wisconsin Department of Public Instruction</displayName>
+    <displayName>Wisconsin Department of Public Instruction</displayName>
+    <role>
+      <RoleCd value="006" />
+    </role>
+  </mdContact>
+  <mdContact>
+    <rpIndName>Shelley Witte</rpIndName>
+    <rpOrgName>Wisconsin Department of Public Instruction</rpOrgName>
+    <rpPosName>GIS Technician</rpPosName>
+    <rpCntInfo>
+      <cntAddress addressType="physical">
+        <delPoint>125 S. Webster Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53701</postCode>
+        <eMailAdd>shelley.witte@dpi.wi.gov</eMailAdd>
+        <country>US</country>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum tddtty="">608-266-3939</voiceNum>
+      </cntPhone>
+    </rpCntInfo>
+    <displayName>Shelley Witte</displayName>
+    <role>
+      <RoleCd value="007" />
+    </role>
+  </mdContact>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Wisconsin Department of Public Instruction</rpIndName>
+      <rpCntInfo>
+        <cntAddress addressType="physical">
+          <delPoint>125 S. Webster St.</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53703</postCode>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">608-266-3390</voiceNum>
+        </cntPhone>
+        <cntHours>Monday - Friday:  7:30am - 4:30pm</cntHours>
+      </rpCntInfo>
+      <displayName>Wisconsin Department of Public Instruction</displayName>
+      <displayName>Wisconsin Department of Public Instruction</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </maintCont>
+    <maintCont>
+      <rpIndName>Shelley Witte</rpIndName>
+      <rpOrgName>Wisconsin Department of Public Instruction</rpOrgName>
+      <rpPosName>GIS Technician</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="physical">
+          <delPoint>125 S. Webster Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53701</postCode>
+          <eMailAdd>shelley.witte@dpi.wi.gov</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">608-266-3939</voiceNum>
+        </cntPhone>
+      </rpCntInfo>
+      <displayName>Shelley Witte</displayName>
+      <role>
+        <RoleCd value="007" />
+      </role>
+    </maintCont>
+  </mdMaint>
+  <mdFileID>F9CC3C2B-BED0-41C0-AE76-965A31684704</mdFileID>
+  <mdContact>
+    <editorSource>external</editorSource>
+    <editorDigest>972908c15f5781c9cf3df38fcd40b4be</editorDigest>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+    <rpCntInfo>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park St</delPoint>
+        <city>Madison</city>
+        <adminArea>Wisconsin</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum tddtty="">(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntHours>9 AM to 4 PM Monday - Friday</cntHours>
+    </rpCntInfo>
+    <displayName>Data Technician</displayName>
+    <rpPosName>metadata technician</rpPosName>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+    <editorSave>True</editorSave>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+</metadata>

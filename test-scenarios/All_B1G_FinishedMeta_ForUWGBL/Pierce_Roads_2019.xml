@@ -1,0 +1,955 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20190319</CreaDate>
+    <CreaTime>15110900</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="110102" Name="" export="">CalculateField ROAD_SEGMENTS COST "( [LENGTH] / [RATE] ) * 60" VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180201" Time="110134" Name="" export="">CalculateField ROAD_SEGMENTS DIR_CLASS dirclass VB "dirclass = 0\n\nif [RD_CLASS] = 1 or [RD_CLASS] = 2 or [RD_CLASS] = 3 then\ndirclass = 2\nelseif [RD_CLASS] = 4 or [RD_CLASS] = 5 or [RD_CLASS] = 7 then\ndirclass = 1\nelseif [RD_CLASS] = 6 then\ndirclass = 3\nend if\n"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Analysis Tools.tbx\SpatialJoin" Date="20180510" Time="110923" Name="" export="">SpatialJoin ROAD_SEGMENTS EMERGENCY_SERVICE_ZONES D:\Roads\ROAD_SEGMENTS_new.shp JOIN_ONE_TO_ONE KEEP_ALL "UID "UID" true true false 38 Text 0 0 ,First,#,ROAD_SEGMENTS,UID,-1,-1;LFROM "LFROM" true true false 20 Text 0 0 ,First,#,ROAD_SEGMENTS,LFROM,-1,-1;LTO "LTO" true true false 20 Text 0 0 ,First,#,ROAD_SEGMENTS,LTO,-1,-1;RFROM "RFROM" true true false 20 Text 0 0 ,First,#,ROAD_SEGMENTS,RFROM,-1,-1;RTO "RTO" true true false 20 Text 0 0 ,First,#,ROAD_SEGMENTS,RTO,-1,-1;PRE_DIR "PRE_DIR" true true false 2 Text 0 0 ,First,#,ROAD_SEGMENTS,PRE_DIR,-1,-1;STR_NAME "STR_NAME" true true false 75 Text 0 0 ,First,#,ROAD_SEGMENTS,STR_NAME,-1,-1;SUFFIX "SUFFIX" true true false 4 Text 0 0 ,First,#,ROAD_SEGMENTS,SUFFIX,-1,-1;POST_DIR "POST_DIR" true true false 2 Text 0 0 ,First,#,ROAD_SEGMENTS,POST_DIR,-1,-1;RD_CLASS "RD_CLASS" true true false 10 Text 0 0 ,First,#,ROAD_SEGMENTS,RD_CLASS,-1,-1;RATE "RATE" true true false 19 Double 0 0 ,First,#,ROAD_SEGMENTS,RATE,-1,-1;LENGTH "LENGTH" true true false 19 Double 0 0 ,First,#,ROAD_SEGMENTS,LENGTH,-1,-1;COST "COST" true true false 19 Double 0 0 ,First,#,ROAD_SEGMENTS,COST,-1,-1;ONEWAY "ONEWAY" true true false 2 Text 0 0 ,First,#,ROAD_SEGMENTS,ONEWAY,-1,-1;ZORDER "ZORDER" true true false 19 Double 0 0 ,First,#,ROAD_SEGMENTS,ZORDER,-1,-1;LABEL "LABEL" true true false 100 Text 0 0 ,First,#,ROAD_SEGMENTS,LABEL,-1,-1;PRINCIPAL "PRINCIPAL" true true false 19 Double 0 0 ,First,#,ROAD_SEGMENTS,PRINCIPAL,-1,-1;SHIELD "SHIELD" true true false 4 Text 0 0 ,First,#,ROAD_SEGMENTS,SHIELD,-1,-1;HWY_NUM "HWY_NUM" true true false 6 Text 0 0 ,First,#,ROAD_SEGMENTS,HWY_NUM,-1,-1;PREFIX "PREFIX" true true false 30 Text 0 0 ,First,#,ROAD_SEGMENTS,PREFIX,-1,-1;rd_name "rd_name" true true false 100 Text 0 0 ,First,#,ROAD_SEGMENTS,rd_name,-1,-1;community "community" true true false 100 Text 0 0 ,First,#,ROAD_SEGMENTS,community,-1,-1;second_nam "second_nam" true true false 100 Text 0 0 ,First,#,ROAD_SEGMENTS,second_nam,-1,-1;second_typ "second_typ" true true false 100 Text 0 0 ,First,#,ROAD_SEGMENTS,second_typ,-1,-1;addrzone "addrzone" true true false 100 Text 0 0 ,First,#,ROAD_SEGMENTS,addrzone,-1,-1;shpid "shpid" true true false 100 Text 0 0 ,First,#,ROAD_SEGMENTS,shpid,-1,-1;comment "comment" true true false 100 Text 0 0 ,First,#,ROAD_SEGMENTS,comment,-1,-1;esnl "esnl" true true false 100 Text 0 0 ,First,#,ROAD_SEGMENTS,esnl,-1,-1;esnr "esnr" true true false 100 Text 0 0 ,First,#,ROAD_SEGMENTS,esnr,-1,-1;DIR_CLASS "DIR_CLASS" true true false 19 Double 0 0 ,First,#,ROAD_SEGMENTS,DIR_CLASS,-1,-1;speed_lim "speed_lim" true true false 19 Double 0 0 ,First,#,ROAD_SEGMENTS,speed_lim,-1,-1;zipcode "zipcode" true true false 5 Text 0 0 ,First,#,ROAD_SEGMENTS,zipcode,-1,-1;county "county" true true false 15 Text 0 0 ,First,#,ROAD_SEGMENTS,county,-1,-1;DATETAG "DATETAG" true true false 10 Text 0 0 ,First,#,ROAD_SEGMENTS,DATETAG,-1,-1;ESN "ESN" true true false 10 Long 0 10 ,First,#,EMERGENCY_SERVICE_ZONES,ESN,-1,-1" INTERSECT # #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180510" Time="111110" Name="" export="">CalculateField ROAD_SEGMENTS_new esnl [ESN] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180510" Time="111122" Name="" export="">CalculateField ROAD_SEGMENTS_new esnr [ESN] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180510" Time="114843" Name="" export="">CalculateField ROAD_SEGMENTS_new esnl 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180510" Time="114848" Name="" export="">CalculateField ROAD_SEGMENTS_new esnr 5 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180510" Time="114922" Name="" export="">CalculateField ROAD_SEGMENTS_new esnl 534 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180510" Time="114931" Name="" export="">CalculateField ROAD_SEGMENTS_new esnr 534 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180510" Time="120319" Name="" export="">CalculateField ROAD_SEGMENTS_new esnl 513 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180510" Time="120323" Name="" export="">CalculateField ROAD_SEGMENTS_new esnr 513 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180510" Time="133604" Name="" export="">CalculateField ROAD_SEGMENTS comment "RAMP" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180510" Time="133650" Name="" export="">CalculateField ROAD_SEGMENTS comment "DRIVEWAY/ALLEY" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180510" Time="133714" Name="" export="">CalculateField ROAD_SEGMENTS comment "PRIVATE" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180510" Time="133748" Name="" export="">CalculateField ROAD_SEGMENTS comment "CITY/TOWN/VILLAGE" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180510" Time="133804" Name="" export="">CalculateField ROAD_SEGMENTS comment "COUNTY" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180510" Time="133841" Name="" export="">CalculateField ROAD_SEGMENTS comment "STATE HWY" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20180510" Time="133900" Name="" export="">CalculateField ROAD_SEGMENTS comment "US HWY" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190125" Time="084108" Name="" export="">CalculateField ROAD_SEGMENTS speed_lim [RATE] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Data Management Tools.tbx\Project" Date="20190319" Time="151110" Name="" export="">Project D:\Roads\ROAD_SEGMENTS.shp D:\Parcels\Act20\2019\Roads3.shp PROJCS['NAD_1983_HARN_Wisconsin_TM',GEOGCS['GCS_North_American_1983_HARN',DATUM['D_North_American_1983_HARN',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Transverse_Mercator'],PARAMETER['False_Easting',520000.0],PARAMETER['False_Northing',-4480000.0],PARAMETER['Central_Meridian',-90.0],PARAMETER['Scale_Factor',0.9996],PARAMETER['Latitude_Of_Origin',0.0],UNIT['Meter',1.0]] NAD_1983_To_HARN_Wisconsin PROJCS['NAD_1983_StatePlane_Wisconsin_Central_FIPS_4802_Feet',GEOGCS['GCS_North_American_1983',DATUM['D_North_American_1983',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['degree',0.0174532925199433]],PROJECTION['Lambert_Conformal_Conic_2SP'],PARAMETER['false_easting',1968500.0],PARAMETER['false_northing',0.0],PARAMETER['central_meridian',-90.0],PARAMETER['standard_parallel_1',44.25],PARAMETER['standard_parallel_2',45.5],PARAMETER['scale_factor',1.0],PARAMETER['latitude_of_origin',43.83333333333334],UNIT['foot_survey_us',0.3048006096012192]] NO_PRESERVE_SHAPE # NO_VERTICAL</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20190319" Time="151246" Name="" export="">FeatureClassToFeatureClass D:\Parcels\Act20\2019\Roads3.shp D:\Parcels\Act20\2019\PIERCE_OTHER.gdb PIERCE_ROADS_2019 # "UID "UID" true true false 38 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,UID,-1,-1;LFROM "LFROM" true true false 20 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,LFROM,-1,-1;LTO "LTO" true true false 20 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,LTO,-1,-1;RFROM "RFROM" true true false 20 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,RFROM,-1,-1;RTO "RTO" true true false 20 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,RTO,-1,-1;PRE_DIR "PRE_DIR" true true false 2 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,PRE_DIR,-1,-1;STR_NAME "STR_NAME" true true false 75 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,STR_NAME,-1,-1;SUFFIX "SUFFIX" true true false 4 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,SUFFIX,-1,-1;POST_DIR "POST_DIR" true true false 2 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,POST_DIR,-1,-1;RD_CLASS "RD_CLASS" true true false 10 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,RD_CLASS,-1,-1;RATE "RATE" true true false 19 Double 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,RATE,-1,-1;LENGTH "LENGTH" true true false 19 Double 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,LENGTH,-1,-1;COST "COST" true true false 19 Double 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,COST,-1,-1;ONEWAY "ONEWAY" true true false 2 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,ONEWAY,-1,-1;ZORDER "ZORDER" true true false 19 Double 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,ZORDER,-1,-1;LABEL "LABEL" true true false 100 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,LABEL,-1,-1;PRINCIPAL "PRINCIPAL" true true false 19 Double 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,PRINCIPAL,-1,-1;SHIELD "SHIELD" true true false 4 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,SHIELD,-1,-1;HWY_NUM "HWY_NUM" true true false 6 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,HWY_NUM,-1,-1;PREFIX "PREFIX" true true false 30 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,PREFIX,-1,-1;rd_name "rd_name" true true false 100 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,rd_name,-1,-1;community "community" true true false 100 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,community,-1,-1;second_nam "second_nam" true true false 100 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,second_nam,-1,-1;second_typ "second_typ" true true false 100 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,second_typ,-1,-1;addrzone "addrzone" true true false 100 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,addrzone,-1,-1;shpid "shpid" true true false 100 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,shpid,-1,-1;comment "comment" true true false 100 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,comment,-1,-1;esnl "esnl" true true false 100 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,esnl,-1,-1;esnr "esnr" true true false 100 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,esnr,-1,-1;DIR_CLASS "DIR_CLASS" true true false 19 Double 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,DIR_CLASS,-1,-1;speed_lim "speed_lim" true true false 19 Double 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,speed_lim,-1,-1;zipcode "zipcode" true true false 5 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,zipcode,-1,-1;county "county" true true false 15 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,county,-1,-1;DATETAG "DATETAG" true true false 10 Text 0 0 ,First,#,D:\Parcels\Act20\2019\Roads3.shp,DATETAG,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20190321" Time="123940" Name="" export="">FeatureClassToFeatureClass R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019 R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Pierce_Roads_2019\Pierce_Roads_2019.gdb Pierce_Roads_2019 # "UID "UID" true true false 38 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,UID,-1,-1;LFROM "LFROM" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,LFROM,-1,-1;LTO "LTO" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,LTO,-1,-1;RFROM "RFROM" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,RFROM,-1,-1;RTO "RTO" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,RTO,-1,-1;PRE_DIR "PRE_DIR" true true false 2 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,PRE_DIR,-1,-1;STR_NAME "STR_NAME" true true false 75 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,STR_NAME,-1,-1;SUFFIX "SUFFIX" true true false 4 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,SUFFIX,-1,-1;POST_DIR "POST_DIR" true true false 2 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,POST_DIR,-1,-1;RD_CLASS "RD_CLASS" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,RD_CLASS,-1,-1;RATE "RATE" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,RATE,-1,-1;LENGTH "LENGTH" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,LENGTH,-1,-1;COST "COST" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,COST,-1,-1;ONEWAY "ONEWAY" true true false 2 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,ONEWAY,-1,-1;ZORDER "ZORDER" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,ZORDER,-1,-1;LABEL "LABEL" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,LABEL,-1,-1;PRINCIPAL "PRINCIPAL" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,PRINCIPAL,-1,-1;SHIELD "SHIELD" true true false 4 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,SHIELD,-1,-1;HWY_NUM "HWY_NUM" true true false 6 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,HWY_NUM,-1,-1;PREFIX "PREFIX" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,PREFIX,-1,-1;rd_name "rd_name" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,rd_name,-1,-1;community "community" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,community,-1,-1;second_nam "second_nam" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,second_nam,-1,-1;second_typ "second_typ" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,second_typ,-1,-1;addrzone "addrzone" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,addrzone,-1,-1;shpid "shpid" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,shpid,-1,-1;comment "comment" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,comment,-1,-1;esnl "esnl" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,esnl,-1,-1;esnr "esnr" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,esnr,-1,-1;DIR_CLASS "DIR_CLASS" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,DIR_CLASS,-1,-1;speed_lim "speed_lim" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,speed_lim,-1,-1;zipcode "zipcode" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,zipcode,-1,-1;county "county" true true false 15 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,county,-1,-1;DATETAG "DATETAG" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,DATETAG,-1,-1;Shape_Length "Shape_Length" false true true 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Originals\PIERCE_OTHER.gdb\PIERCE_ROADS_2019,Shape_Length,-1,-1" #</Process>
+      </lineage>
+      <itemProps>
+        <itemName Sync="TRUE">Pierce_Roads_2019</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">298004.301000</westBL>
+          <eastBL Sync="TRUE">351248.549000</eastBL>
+          <southBL Sync="TRUE">454031.144800</southBL>
+          <northBL Sync="TRUE">491335.127100</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <itemSize Sync="TRUE">0.000</itemSize>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2019_ALL_DATA_OPEN_V5\Pierce\Pierce_Roads_2019\Pierce_Roads_2019.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Wisconsin_TM</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Wisconsin_TM&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,3071]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;10000&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;3071&lt;/WKID&gt;&lt;LatestWKID&gt;3071&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20190415</SyncDate>
+    <SyncTime>13380800</SyncTime>
+    <ModDate>20190415</ModDate>
+    <ModTime>13380800</ModTime>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAqg2s2SahDYl5TcTFggWByp29csBgYx1Jq/XGX9xq1tq1xa3d1pVlpspd4HvY1ZGAKHGN4JyWOc
+4wRkZyANaNNTbTE3Y6mXUbeKYxMZS+7bhIXbnG7GQMdOaY+q2sX3xcLgZJNtJwO5+70rFsnePTLW
+a28iazW6kaN7IqAwJdVCLjaAWIHLfxZyB0vXNnca1EYryIwRKwVoBKwEnzKSSy4yNvGPUnPSqdOK
+eu39dAuST+I9JtI2kubwQImdzTIyBcYyDkcdR+YqI+MfDAcIfEekByAdpvYwcHGON3fI/Oku9HsP
+OuZ72WJLZ49nlOE8sR4UHIYEdQP0rwjXrHTNV8a3en6rA2lR+aiQTsiq6xj5fNkJwSD8p4IUDp1r
+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
+ACiiigAooooAKKKKACiiigAooooAKKKKAP/Z</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpOrgName>UW-Madison</rpOrgName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum>608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpPosName>Metadata technician</rpPosName>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>310 Science Hall</delPoint>
+            <delPoint>550 N. Park Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpPosName>metadata technician</rpPosName>
+      </distorCont>
+      <distorOrdPrc>
+        <resFees units="">None</resFees>
+      </distorOrdPrc>
+      <distorFormat>
+        <formatName>ESRI Geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Pierce_Roads_2019.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.5</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Pierce County Land Management and Zoning</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>715-273-6746</voiceNum>
+            <faxNum>715-273-6864</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>PO Box 647</delPoint>
+            <city>Ellsworth</city>
+            <adminArea>WI</adminArea>
+            <postCode>54011</postCode>
+            <country>US</country>
+            <delPoint>414 W. Main St. Room 10</delPoint>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Pierce County Land Management and Zoning</displayName>
+        <displayName>Pierce County Land Management and Zoning</displayName>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Roads Pierce County, WI 2019</resTitle>
+      <date>
+        <pubDate>2019-04-15T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Pierce County Land Management and Zoning</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>715-273-6746</voiceNum>
+            <faxNum>715-273-6864</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>PO Box 647</delPoint>
+            <city>Ellsworth</city>
+            <adminArea>WI</adminArea>
+            <postCode>54011</postCode>
+            <country>US</country>
+            <delPoint>414 W. Main St. Room 10</delPoint>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Pierce County Land Management and Zoning</displayName>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Andy Pichotta</rpIndName>
+        <rpOrgName>Pierce County Land Management and Zoning</rpOrgName>
+        <rpPosName>Land Management Director</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>715-273-6747</voiceNum>
+            <faxNum>715-273-6864</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>PO Box 647</delPoint>
+            <city>Ellsworth</city>
+            <adminArea>WI</adminArea>
+            <postCode>54011</postCode>
+            <country>US</country>
+            <eMailAdd>apichott@co.pierce.wi.us</eMailAdd>
+            <delPoint>414 W. Main St. Room 10</delPoint>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Andy Pichotta</displayName>
+      </citRespParty>
+      <resEd>2019</resEd>
+    </idCitation>
+    <idAbs>This data represents roads for Pierce County, Wisconsin in 2019.[Currently used for map products and e911. Aligned to 2015 orthos.]</idAbs>
+    <idPurp>This data is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. [Street Centerlines Pierce County.]</idPurp>
+    <idCredit>Pierce County Land Management and Zoning</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Pierce County Land Management and Zoning</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>715-273-6746</voiceNum>
+            <faxNum>715-273-6864</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>PO Box 647</delPoint>
+            <city>Ellsworth</city>
+            <adminArea>WI</adminArea>
+            <postCode>54011</postCode>
+            <country>US</country>
+            <delPoint>414 W. Main St. Room 10</delPoint>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Pierce County Land Management and Zoning</displayName>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Pierce County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Line</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Roads, Streets, Transportation</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Roads</keyword>
+      <keyword>Streets</keyword>
+      <keyword>Pierce County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-92.809339</westBL>
+          <eastBL>-92.125327</eastBL>
+          <southBL>44.527054</southBL>
+          <northBL>44.875107</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2019-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements.</suppInfo>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idPoC>
+      <rpOrgName>Pierce County Land Management and Zoning</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">715-273-6746</voiceNum>
+          <faxNum>715-273-6864</faxNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>PO Box 647</delPoint>
+          <city>Ellsworth</city>
+          <adminArea>WI</adminArea>
+          <postCode>54011</postCode>
+          <country>US</country>
+          <delPoint>414 W. Main St. Room 10</delPoint>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="006" />
+      </role>
+      <displayName>Pierce County Land Management and Zoning</displayName>
+    </idPoC>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-92.809858</westBL>
+          <eastBL Sync="TRUE">-92.124159</eastBL>
+          <northBL Sync="TRUE">44.875451</northBL>
+          <southBL Sync="TRUE">44.525436</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <resConst>
+      <Consts>
+        <useLimit>None.</useLimit>
+      </Consts>
+    </resConst>
+    <tpCat>
+      <TopicCatCd value="018" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+      <rpPosName>Metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum>(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Provided access to archived data at UW-Madison.</stepDesc>
+        <stepDateTm>2019-04-15T00:00:00</stepDateTm>
+        <stepProc>
+          <editorSource>external</editorSource>
+          <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+          <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+          <rpPosName>metadata technician</rpPosName>
+          <rpCntInfo>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+              <country>US</country>
+            </cntAddress>
+            <cntPhone>
+              <voiceNum tddtty="">(608) 262-1471</voiceNum>
+            </cntPhone>
+            <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+          </rpCntInfo>
+          <displayName>Arthur H. Robinson Map Library</displayName>
+          <editorSave>True</editorSave>
+          <displayName>Arthur H. Robinson Map Library</displayName>
+          <role>
+            <RoleCd value="001" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <idVersion Sync="FALSE">9.5.5</idVersion>
+        <identCode code="3071" Sync="TRUE" />
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Pierce_Roads_2019">
+      <enttyp>
+        <enttypl Sync="TRUE">Pierce_Roads_2019</enttypl>
+        <enttypd>Roads Pierce County, WI 2019</enttypd>
+        <enttypds>Pierce County Land Management and Zoning</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">4915</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl>ZIPCODE</attrlabl>
+        <attalias Sync="TRUE">zipcode</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>COUNTY</attrlabl>
+        <attalias Sync="TRUE">county</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">15</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">UID</attrlabl>
+        <attalias Sync="TRUE">UID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">38</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LFROM</attrlabl>
+        <attalias Sync="TRUE">LFROM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LTO</attrlabl>
+        <attalias Sync="TRUE">LTO</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RFROM</attrlabl>
+        <attalias Sync="TRUE">RFROM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RTO</attrlabl>
+        <attalias Sync="TRUE">RTO</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRE_DIR</attrlabl>
+        <attalias Sync="TRUE">PRE_DIR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STR_NAME</attrlabl>
+        <attalias Sync="TRUE">STR_NAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">75</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SUFFIX</attrlabl>
+        <attalias Sync="TRUE">SUFFIX</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">POST_DIR</attrlabl>
+        <attalias Sync="TRUE">POST_DIR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RD_CLASS</attrlabl>
+        <attalias Sync="TRUE">RD_CLASS</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RATE</attrlabl>
+        <attalias Sync="TRUE">RATE</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LENGTH</attrlabl>
+        <attalias Sync="TRUE">LENGTH</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">COST</attrlabl>
+        <attalias Sync="TRUE">COST</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ONEWAY</attrlabl>
+        <attalias Sync="TRUE">ONEWAY</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ZORDER</attrlabl>
+        <attalias Sync="TRUE">ZORDER</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LABEL</attrlabl>
+        <attalias Sync="TRUE">LABEL</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRINCIPAL</attrlabl>
+        <attalias Sync="TRUE">PRINCIPAL</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SHIELD</attrlabl>
+        <attalias Sync="TRUE">SHIELD</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">HWY_NUM</attrlabl>
+        <attalias Sync="TRUE">HWY_NUM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">6</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PREFIX</attrlabl>
+        <attalias Sync="TRUE">PREFIX</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">rd_name</attrlabl>
+        <attalias Sync="TRUE">rd_name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">community</attrlabl>
+        <attalias Sync="TRUE">community</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">second_nam</attrlabl>
+        <attalias Sync="TRUE">second_nam</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">second_typ</attrlabl>
+        <attalias Sync="TRUE">second_typ</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">addrzone</attrlabl>
+        <attalias Sync="TRUE">addrzone</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">shpid</attrlabl>
+        <attalias Sync="TRUE">shpid</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">comment</attrlabl>
+        <attalias Sync="TRUE">comment</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">esnl</attrlabl>
+        <attalias Sync="TRUE">esnl</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">esnr</attrlabl>
+        <attalias Sync="TRUE">esnr</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DIR_CLASS</attrlabl>
+        <attalias Sync="TRUE">DIR_CLASS</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">speed_lim</attrlabl>
+        <attalias Sync="TRUE">speed_lim</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DATETAG</attrlabl>
+        <attalias Sync="TRUE">DATETAG</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Length</attrlabl>
+        <attalias Sync="TRUE">Shape_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Length of feature in internal units.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Pierce_Roads_2019">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">4915</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Pierce_Roads_2019">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="3" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">4915</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20190415</mdDateSt>
+  <mdFileID>53F68A7D-8391-40B4-9194-02B04477F06D</mdFileID>
+</metadata>

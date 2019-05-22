@@ -1,0 +1,884 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <SyncOnce>FALSE</SyncOnce>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <CreaDate>20180326</CreaDate>
+    <CreaTime>14395100</CreaTime>
+    <DataProperties>
+      <itemProps>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\Menominee_Addresses_2018.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemName Sync="TRUE">Menominee_Addresses_2018</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">215851.189908</westBL>
+          <eastBL Sync="TRUE">327308.199933</eastBL>
+          <southBL Sync="TRUE">51071.788091</southBL>
+          <northBL Sync="TRUE">144731.418357</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <lineage>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160711" Time="123115" Name="" export="">CalculateField "Site Address Points" PREADDRNUM LEFT( [ADDRESS],1) VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160711" Time="123137" Name="" export="">CalculateField "Site Address Points" ADDRNUM MID( [ADDRESS],1,5) VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160711" Time="123147" Name="" export="">CalculateField "Site Address Points" ADDRNUM MID( [ADDRESS],2,5) VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160711" Time="124534" Name="" export="">CalculateField "Site Address Points" FULLNAME Split( [ADDRESS], " ", 2)(1)
+ VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170329" Time="130915" Name="" export="">CalculateField "Site Address Points" ADDR_NUM !ADDRESS!.split(" ")[0] PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170329" Time="130933" Name="" export="">CalculateField "Site Address Points" ADDR_NUM !ADDRESS!.split(" ")[0] PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170329" Time="131208" Name="" export="">CalculateField "Site Address Points" ADDR_NUM !ADDRESS!.split(" ")[0] PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170329" Time="131240" Name="" export="">CalculateField "Site Address Points" ADDR_NUM !ADDRESS!.split(" ")[0] PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170329" Time="131343" Name="" export="">CalculateField "Site Address Points" ADDR_NUM NULL VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170329" Time="132600" Name="" export="">CalculateField "Site Address Points" ADDR_NUM NULL VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170329" Time="133043" Name="" export="">CalculateField "Site Address Points" ADDR_NUM NULL VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170811" Time="133522" Name="" export="">CalculateField "Site Address Points" UniqueID [OBJECTID] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170811" Time="133737" Name="" export="">CalculateField "Site Address Points" UniqueID [OBJECTID] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170811" Time="133842" Name="" export="">CalculateField "Site Address Points" UniqueID [OBJECTID] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170815" Time="104559" Name="" export="">CalculateField "Site Address Points" Addr [ADDRESS] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170831" Time="095924" Name="" export="">CalculateField "Site Address Points" SITEADDID [UniqueID] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170831" Time="100001" Name="" export="">CalculateField "Site Address Points" SITEADDID [UniqueID] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170831" Time="100125" Name="" export="">CalculateField "Site Address Points" ADDR_NUM "[PREADDRNUM] + [ADDRNUM]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170831" Time="100208" Name="" export="">CalculateField "Site Address Points" ADDR_NUM "[PREADDRNUM] + [ADDRNUM]" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Analysis Tools.tbx\SpatialJoin" Date="20170901" Time="133040" Name="" export="">SpatialJoin "Site Address Points" Parcels "D:\Users\mjunker\Dropbox\Projects\Menominee County\working\SiteAddress_Working.gdb\SiteAddressPoint_Orientation" JOIN_ONE_TO_ONE KEEP_ALL "SITEADDID "Site Address ID" true true false 20 Text 0 0 ,First,#,Site Address Points,SITEADDID,-1,-1;ADDPTKEY "Address Point ID" true true false 20 Text 0 0 ,First,#,Site Address Points,ADDPTKEY,-1,-1;PREADDRNUM "Address Number Prefix" true true false 5 Text 0 0 ,First,#,Site Address Points,PREADDRNUM,-1,-1;ADDRNUMSUF "Address Number Suffix" true true false 5 Text 0 0 ,First,#,Site Address Points,ADDRNUMSUF,-1,-1;ADDRNUM "Full Address Number" true true false 20 Text 0 0 ,First,#,Site Address Points,ADDRNUM,-1,-1;ADDRRANGE "Address Range" true true false 50 Text 0 0 ,First,#,Site Address Points,ADDRRANGE,-1,-1;UNITTYPE "Address Unit Type" true true false 10 Text 0 0 ,First,#,Site Address Points,UNITTYPE,-1,-1;UNITID "Address Unit Number" true true false 10 Text 0 0 ,First,#,Site Address Points,UNITID,-1,-1;ALTUNITTYPE "Alternate Address Unit Type" true true false 10 Text 0 0 ,First,#,Site Address Points,ALTUNITTYPE,-1,-1;ALTUNITID "Alternate Address Unit Number" true true false 10 Text 0 0 ,First,#,Site Address Points,ALTUNITID,-1,-1;FULLNAME "Full Road Name" true true false 125 Text 0 0 ,First,#,Site Address Points,FULLNAME,-1,-1;FULLADDR "Full Address" true true false 250 Text 0 0 ,First,#,Site Address Points,FULLADDR,-1,-1;PLACENAME "Place Name" true true false 250 Text 0 0 ,First,#,Site Address Points,PLACENAME,-1,-1;MUNICIPALITY "Municipality Name" true true false 100 Text 0 0 ,First,#,Site Address Points,MUNICIPALITY,-1,-1;ESN "Emergency Service Number" true true false 5 Text 0 0 ,First,#,Site Address Points,ESN,-1,-1;PSAP "Public Safety Answering Point" true true false 4 Text 0 0 ,First,#,Site Address Points,PSAP,-1,-1;MSAG "MSAG Community" true true false 35 Text 0 0 ,First,#,Site Address Points,MSAG,-1,-1;USNGCOORD "USNG Coordinate" true true false 50 Text 0 0 ,First,#,Site Address Points,USNGCOORD,-1,-1;ADDRCLASS "Description" true true false 4 Long 0 0 ,First,#,Site Address Points,ADDRCLASS,-1,-1;POINTTYPE "Location" true true false 30 Text 0 0 ,First,#,Site Address Points,POINTTYPE,-1,-1;CAPTUREMETH "Capture Method" true true false 30 Text 0 0 ,First,#,Site Address Points,CAPTUREMETH,-1,-1;STATUS "Status" true true false 30 Text 0 0 ,First,#,Site Address Points,STATUS,-1,-1;LASTUPDATE "Last Update Date" true true false 8 Date 0 0 ,First,#,Site Address Points,LASTUPDATE,-1,-1;LASTEDITOR "Last Editor" true true false 50 Text 0 0 ,First,#,Site Address Points,LASTEDITOR,-1,-1;ADDR_NUM "ADDR_NUM" true true false 50 Text 0 0 ,First,#,Site Address Points,ADDR_NUM,-1,-1;UniqueID "UniqueID" true true false 8 Double 0 0 ,First,#,Site Address Points,UniqueID,-1,-1;PREFIX "PREFIX" true true false 20 Text 0 0 ,First,#,Site Address Points,PREFIX,-1,-1;STREETTYPE "STREETTYPE" true true false 50 Text 0 0 ,First,#,Site Address Points,STREETTYPE,-1,-1;SUFFIX "SUFFIX" true true false 20 Text 0 0 ,First,#,Site Address Points,SUFFIX,-1,-1;ADDRNUM2 "ADDRNUM2" true true false 8 Double 0 0 ,First,#,Site Address Points,ADDRNUM2,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,Parcels,Parcels.SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,Parcels,Parcels.SHAPE_Area,-1,-1;Parcels_MBG_OBJECTID "OBJECTID" false true false 4 Long 0 9 ,First,#,Parcels,Parcels_MBG.OBJECTID,-1,-1;Parcels_MBG_ORIG_FID "Parcels_MBG_ORIG_FID" true true false 4 Long 0 0 ,First,#,Parcels,Parcels_MBG.ORIG_FID,-1,-1;Parcels_MBG_MBG_Width "Parcels_MBG_MBG_Width" true true false 8 Double 0 0 ,First,#,Parcels,Parcels_MBG.MBG_Width,-1,-1;Parcels_MBG_MBG_Length "Parcels_MBG_MBG_Length" true true false 8 Double 0 0 ,First,#,Parcels,Parcels_MBG.MBG_Length,-1,-1;Parcels_MBG_MBG_Orientation "Parcels_MBG_MBG_Orientation" true true false 8 Double 0 0 ,First,#,Parcels,Parcels_MBG.MBG_Orientation,-1,-1;Parcels_MBG_SHAPE_Length "Parcels_MBG_SHAPE_Length" false true true 8 Double 0 0 ,First,#,Parcels,Parcels_MBG.SHAPE_Length,-1,-1;Parcels_MBG_SHAPE_Area "Parcels_MBG_SHAPE_Area" false true true 8 Double 0 0 ,First,#,Parcels,Parcels_MBG.SHAPE_Area,-1,-1" HAVE_THEIR_CENTER_IN # #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20180524" Time="132631" Name="" export="">FeatureClassToFeatureClass R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018 R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\Menominee_Addresses_2018.gdb Menominee_Addresses_2018 # "Join_Count "Join_Count" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,Join_Count,-1,-1;TARGET_FID "TARGET_FID" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,TARGET_FID,-1,-1;SITEADDID "Site Address ID" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,SITEADDID,-1,-1;ADDPTKEY "Address Point ID" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,ADDPTKEY,-1,-1;PREADDRNUM "Address Number Prefix" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,PREADDRNUM,-1,-1;ADDRNUMSUF "Address Number Suffix" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,ADDRNUMSUF,-1,-1;ADDRNUM "Full Address Number" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,ADDRNUM,-1,-1;ADDRRANGE "Address Range" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,ADDRRANGE,-1,-1;UNITTYPE "Address Unit Type" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,UNITTYPE,-1,-1;UNITID "Address Unit Number" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,UNITID,-1,-1;ALTUNITTYPE "Alternate Address Unit Type" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,ALTUNITTYPE,-1,-1;ALTUNITID "Alternate Address Unit Number" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,ALTUNITID,-1,-1;FULLNAME "Full Road Name" true true false 125 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,FULLNAME,-1,-1;FULLADDR "Full Address" true true false 250 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,FULLADDR,-1,-1;PLACENAME "Place Name" true true false 250 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,PLACENAME,-1,-1;MUNICIPALITY "Municipality Name" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,MUNICIPALITY,-1,-1;ESN "Emergency Service Number" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,ESN,-1,-1;PSAP "Public Safety Answering Point" true true false 4 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,PSAP,-1,-1;MSAG "MSAG Community" true true false 35 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,MSAG,-1,-1;USNGCOORD "USNG Coordinate" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,USNGCOORD,-1,-1;ADDRCLASS "Description" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,ADDRCLASS,-1,-1;POINTTYPE "Location" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,POINTTYPE,-1,-1;CAPTUREMETH "Capture Method" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,CAPTUREMETH,-1,-1;STATUS "Status" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,STATUS,-1,-1;LASTUPDATE "Last Update Date" true true false 8 Date 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,LASTUPDATE,-1,-1;LASTEDITOR "Last Editor" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,LASTEDITOR,-1,-1;ADDR_NUM "ADDR_NUM" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,ADDR_NUM,-1,-1;UniqueID "UniqueID" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,UniqueID,-1,-1;PREFIX "PREFIX" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,PREFIX,-1,-1;STREETTYPE "STREETTYPE" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,STREETTYPE,-1,-1;SUFFIX "SUFFIX" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,SUFFIX,-1,-1;ADDRNUM2 "ADDRNUM2" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,ADDRNUM2,-1,-1;Parcels_MBG_OBJECTID "OBJECTID" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,Parcels_MBG_OBJECTID,-1,-1;Parcels_MBG_ORIG_FID "Parcels_MBG_ORIG_FID" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,Parcels_MBG_ORIG_FID,-1,-1;Parcels_MBG_MBG_Width "Parcels_MBG_MBG_Width" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,Parcels_MBG_MBG_Width,-1,-1;Parcels_MBG_MBG_Length "Parcels_MBG_MBG_Length" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,Parcels_MBG_MBG_Length,-1,-1;Parcels_MBG_MBG_Orientation "Parcels_MBG_MBG_Orientation" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,Parcels_MBG_MBG_Orientation,-1,-1;Parcels_MBG_SHAPE_Length "Parcels_MBG_SHAPE_Length" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,Parcels_MBG_SHAPE_Length,-1,-1;Parcels_MBG_SHAPE_Area "Parcels_MBG_SHAPE_Area" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Menominee\MENOMINEE_OTHER.gdb\MENOMINEE_ADDRESSES_2018,Parcels_MBG_SHAPE_Area,-1,-1" #</Process>
+      </lineage>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_WISCRS_Menominee_County_Feet</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_WISCRS_Menominee_County_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,346000.004],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.01],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-88.41666666666667],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,1.0000362499],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,44.71666666666667],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;ESRI&amp;quot;,103439]]&lt;/WKT&gt;&lt;XOrigin&gt;-18103200&lt;/XOrigin&gt;&lt;YOrigin&gt;-49068400&lt;/YOrigin&gt;&lt;XYScale&gt;3048.0060960121928&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.0032808333333333331&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;103439&lt;/WKID&gt;&lt;LatestWKID&gt;103439&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20180614</SyncDate>
+    <SyncTime>10090200</SyncTime>
+    <ModDate>20180614</ModDate>
+    <ModTime>10090200</ModTime>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+    <rpPosName>Metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum tddtty="">608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday: 9:00am - 5:00pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+        <rpPosName>Metadata technician</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday: 9:00am - 5:00pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorFormat>
+        <formatName>ESRI Geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distributor>
+      <distorCont>
+        <editorSource>external</editorSource>
+        <editorDigest>cedd4a17dc733604be334dbc7c11e28</editorDigest>
+        <rpOrgName>Menominee County Land Information Department</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>W3269 Courthouse Lane</delPoint>
+            <city>Keshena</city>
+            <adminArea>WI</adminArea>
+            <postCode>54135-0279</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">715-799-5845</voiceNum>
+            <faxNum>715-799-1322</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Menominee County Land Information Department</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </distorCont>
+      <distorFormat>
+        <formatName>ESRI Geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Menominee_Addresses_2018.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.3</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Addresses Menominee County, WI 2018</resTitle>
+      <date>
+        <pubDate>2018-06-14T00:00:00</pubDate>
+      </date>
+      <citRespParty>
+        <rpOrgName>Menominee County Land Information Department</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>W3269 Courthouse Lane</delPoint>
+            <city>Keshena</city>
+            <adminArea>WI</adminArea>
+            <postCode>54135-0279</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">715-799-5845</voiceNum>
+            <faxNum>715-799-1322</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpIndName>Ruth Winter</rpIndName>
+        <rpOrgName>Menominee County Land Information Department</rpOrgName>
+        <rpPosName>GIS Coordinator/LIO/Property Lister</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">715-799-5845</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>W3269 Courthouse Lane</delPoint>
+            <city>Keshena</city>
+            <adminArea>WI</adminArea>
+            <postCode>54135-0279</postCode>
+            <country>US</country>
+            <eMailAdd>ruthw@co.menominee.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Ruth Winter</displayName>
+      </citRespParty>
+      <resEdDate>20180101</resEdDate>
+    </idCitation>
+    <idAbs>This point data layer represents street addresses for Menominee County, Wisconsin in 2018. It is a feature class within the geodatabase "Menominee_Addresses_2018.gdb". [Site address points represent the location of site or service delivery addresses assigned by local governments.]</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. [Site Address Points.]</idPurp>
+    <idCredit>Menominee County Land Information Department</idCredit>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <editorSource>external</editorSource>
+        <editorDigest>cedd4a17dc733604be334dbc7c11e28</editorDigest>
+        <rpOrgName>Menominee County Land Information Department</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>W3269 Courthouse Lane</delPoint>
+            <city>Keshena</city>
+            <adminArea>WI</adminArea>
+            <postCode>54135-0279</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">715-799-5845</voiceNum>
+            <faxNum>715-799-1322</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Menominee County Land Information Department</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Menominee County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Point</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Street Addresses</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Street Addresses</keyword>
+      <keyword>Point</keyword>
+      <keyword>Menominee County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-88.967189</westBL>
+          <eastBL>-88.487179</eastBL>
+          <southBL>44.850268</southBL>
+          <northBL>45.114016</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2018-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idPoC>
+      <editorSource>external</editorSource>
+      <editorDigest>cedd4a17dc733604be334dbc7c11e28</editorDigest>
+      <rpOrgName>Menominee County Land Information Department</rpOrgName>
+      <rpCntInfo>
+        <cntAddress addressType="physical">
+          <delPoint>W3269 Courthouse Lane</delPoint>
+          <city>Keshena</city>
+          <adminArea>WI</adminArea>
+          <postCode>54135-0279</postCode>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">715-799-5845</voiceNum>
+          <faxNum>715-799-1322</faxNum>
+        </cntPhone>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Menominee County Land Information Department</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements. 
+
+</suppInfo>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-88.920756</westBL>
+          <eastBL Sync="TRUE">-88.488742</eastBL>
+          <northBL Sync="TRUE">45.113589</northBL>
+          <southBL Sync="TRUE">44.855639</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="013" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+      <rpPosName>Metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>310 Science Hall</delPoint>
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday: 9:00am - 5:00pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform to UW-Madison's data distribution plan. </stepDesc>
+        <stepDateTm>2018-06-14T00:00:00</stepDateTm>
+        <stepProc>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+          <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+          <rpPosName>Metadata technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum tddtty="">608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>310 Science Hall</delPoint>
+              <delPoint>550 N. Park Street</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday: 9:00am - 5:00pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="001" />
+          </role>
+          <displayName>Arthur H. Robinson Map Library</displayName>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <eainfo>
+    <detailed Name="Menominee_Addresses_2018">
+      <enttyp>
+        <enttypl Sync="TRUE">Menominee_Addresses_2018</enttypl>
+        <enttypd>Addresses Menominee County, WI 2018</enttypd>
+        <enttypds>Menominee County Land Information Department</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">4208</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Join_Count</attrlabl>
+        <attalias Sync="TRUE">Join_Count</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TARGET_FID</attrlabl>
+        <attalias Sync="TRUE">TARGET_FID</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SITEADDID</attrlabl>
+        <attalias Sync="TRUE">Site Address ID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDPTKEY</attrlabl>
+        <attalias Sync="TRUE">Address Point ID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PREADDRNUM</attrlabl>
+        <attalias Sync="TRUE">Address Number Prefix</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDRNUMSUF</attrlabl>
+        <attalias Sync="TRUE">Address Number Suffix</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDRNUM</attrlabl>
+        <attalias Sync="TRUE">Full Address Number</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDRRANGE</attrlabl>
+        <attalias Sync="TRUE">Address Range</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">UNITTYPE</attrlabl>
+        <attalias Sync="TRUE">Address Unit Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">UNITID</attrlabl>
+        <attalias Sync="TRUE">Address Unit Number</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ALTUNITTYPE</attrlabl>
+        <attalias Sync="TRUE">Alternate Address Unit Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ALTUNITID</attrlabl>
+        <attalias Sync="TRUE">Alternate Address Unit Number</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FULLNAME</attrlabl>
+        <attalias Sync="TRUE">Full Road Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">125</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FULLADDR</attrlabl>
+        <attalias Sync="TRUE">Full Address</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">250</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PLACENAME</attrlabl>
+        <attalias Sync="TRUE">Place Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">250</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">MUNICIPALITY</attrlabl>
+        <attalias Sync="TRUE">Municipality Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ESN</attrlabl>
+        <attalias Sync="TRUE">Emergency Service Number</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PSAP</attrlabl>
+        <attalias Sync="TRUE">Public Safety Answering Point</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">MSAG</attrlabl>
+        <attalias Sync="TRUE">MSAG Community</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">35</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">USNGCOORD</attrlabl>
+        <attalias Sync="TRUE">USNG Coordinate</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDRCLASS</attrlabl>
+        <attalias Sync="TRUE">Description</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">POINTTYPE</attrlabl>
+        <attalias Sync="TRUE">Location</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CAPTUREMETH</attrlabl>
+        <attalias Sync="TRUE">Capture Method</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STATUS</attrlabl>
+        <attalias Sync="TRUE">Status</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LASTUPDATE</attrlabl>
+        <attalias Sync="TRUE">Last Update Date</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LASTEDITOR</attrlabl>
+        <attalias Sync="TRUE">Last Editor</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDR_NUM</attrlabl>
+        <attalias Sync="TRUE">ADDR_NUM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">UniqueID</attrlabl>
+        <attalias Sync="TRUE">UniqueID</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PREFIX</attrlabl>
+        <attalias Sync="TRUE">PREFIX</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STREETTYPE</attrlabl>
+        <attalias Sync="TRUE">STREETTYPE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SUFFIX</attrlabl>
+        <attalias Sync="TRUE">SUFFIX</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDRNUM2</attrlabl>
+        <attalias Sync="TRUE">ADDRNUM2</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Parcels_MBG_OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Parcels_MBG_ORIG_FID</attrlabl>
+        <attalias Sync="TRUE">Parcels_MBG_ORIG_FID</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Parcels_MBG_MBG_Width</attrlabl>
+        <attalias Sync="TRUE">Parcels_MBG_MBG_Width</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Parcels_MBG_MBG_Length</attrlabl>
+        <attalias Sync="TRUE">Parcels_MBG_MBG_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Parcels_MBG_MBG_Orientation</attrlabl>
+        <attalias Sync="TRUE">Parcels_MBG_MBG_Orientation</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Parcels_MBG_SHAPE_Length</attrlabl>
+        <attalias Sync="TRUE">Parcels_MBG_SHAPE_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Parcels_MBG_SHAPE_Area</attrlabl>
+        <attalias Sync="TRUE">Parcels_MBG_SHAPE_Area</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="8146" Sync="FALSE" />
+        <idCodeSpace Sync="FALSE">EPSG</idCodeSpace>
+        <idVersion Sync="FALSE">9.4.1</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Menominee_Addresses_2018">
+        <geoObjTyp>
+          <GeoObjTypCd value="004" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">4208</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Menominee_Addresses_2018">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="1" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">4208</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20180614</mdDateSt>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKyoPENhceJrvw/G0hvrW3S4lGz5QrEgDd68A4PYjGecatQQ2Vrb3NxcQ20Uc9wQZpEQBp
+CBgbj1OBxzQBPRRRQAUUUUAFFFFABRRRQAUUVRi1exm1m40iObN9bwpNLHsPyo5IU5xg/dPegC9R
+RRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRgZzjmiigAooo
+oAKKKqam91HpV3JZNbpdLC5ha5JEQcA4Lkc7c9aALdFcroXxC8M6wbWzj8QaZNqUiqrRRSFQ8hHI
+QNgkZzjv0ro7S9tb+JpbO5huI1doy8ThgGU4YZHcEEGgCeiiigAooooAKKKKACiiqhmvRqyQCzQ2
+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</Data>
+    </Thumbnail>
+  </Binary>
+  <mdFileID>5434CF39-6195-4AA8-8958-08C1F03E87F1</mdFileID>
+</metadata>

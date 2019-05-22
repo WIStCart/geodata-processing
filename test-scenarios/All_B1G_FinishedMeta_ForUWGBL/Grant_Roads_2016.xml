@@ -1,0 +1,864 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20070515</CreaDate>
+    <CreaTime>14084100</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process Name="Create Feature Class" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CreateFeatureclass" Date="20070109" Time="141216" export="">CreateFeatureclass "G:\Wisconsin\Grant WI\Mapdata" roads # roads_Layer SAME_AS_TEMPLATE SAME_AS_TEMPLATE "PROJCS['Transverse Mercator',GEOGCS['GCS_North_American_1983',DATUM['D_North_American_1983',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Transverse_Mercator'],PARAMETER['False_Easting',242316.4847],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',90.8],PARAMETER['Scale_Factor',0.999997],PARAMETER['Latitude_Of_Origin',41.4111111111],UNIT['Meter',1.0]];248319.339844 -22804.232156 1953.12499818101;0 100000;0 100000" # 0 0 0 "G:\Wisconsin\Grant WI\Mapdata\roads.shp"</Process>
+        <Process Name="Append" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20070109" Time="141227" export="">Append roads_Layer "G:\Wisconsin\Grant WI\Mapdata\roads.shp" TEST "G:\Wisconsin\Grant WI\Mapdata\roads.shp"</Process>
+        <Process Name="FeatureClassToFeatureClass_1" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20070109" Time="141228" export="">FeatureClassToFeatureClass "G:\Wisconsin\Grant WI\Mapdata\GrantWI.mdb\Basemap\roads" "G:\Wisconsin\Grant WI\Mapdata" roads # "Entity Entity VISIBLE;Handle Handle VISIBLE;Layer Layer VISIBLE;Color Color VISIBLE;Linetype Linetype VISIBLE;Elevation Elevation VISIBLE;Thickness Thickness VISIBLE;Text_ Text_ VISIBLE;Shape_Length Shape_Leng VISIBLE" SAME_AS_TEMPLATE SAME_AS_TEMPLATE # 0 "G:\Wisconsin\Grant WI\Mapdata\roads.shp"</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20070117" Time="091411" Name="" export="">CopyFeatures "G:\Wisconsin\Grant WI\Mapdata\Roads_WCCS.shp" "G:\Wisconsin\Grant WI\Mapdata\GrantWI.mdb\Basemap\Roads_WCCS" # 0 0 0</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20070507" Time="093334" Name="" export="">CopyFeatures "G:\Wisconsin\Grant WI\Mapdata\GrantWI.mdb\Basemap\Roads" "Database Connections\Connection to GISARCSERVER.sde\GrantWI.SDE.Roads" # 0 0 0</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20070615" Time="165036" Name="" export="">CopyFeatures "Database Connections\GrantWI.sde\GrantWI.SDE.Roads" "G:\Wisconsin\Grant WI\Mapdata\GrantWI_6.15.07.mdb\Basemap\GrantWI_SDE_Roads" # 0 0 0</Process>
+        <Process Name="SpatialJoin_3" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Analysis Tools.tbx\SpatialJoin" Date="20070712" Time="111249" export="">SpatialJoin Roads ESNs "G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads_SpatialJoin2" JOIN_ONE_TO_ONE KEEP_ALL "PREDIR PREDIR true true false 4 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,PREDIR,-1,-1;PRETYPE PRETYPE true true false 4 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,PRETYPE,-1,-1;STREETNAME STREETNAME true true false 50 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,STREETNAME,-1,-1;STREETTYPE STREETTYPE true true false 4 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,STREETTYPE,-1,-1;SUFDIR SUFDIR true true false 4 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,SUFDIR,-1,-1;LEFT_LOW LEFT_LOW true true false 4 Long 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,LEFT_LOW,-1,-1;LEFT_HIGH LEFT_HIGH true true false 4 Long 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,LEFT_HIGH,-1,-1;RIGHT_LOW RIGHT_LOW true true false 4 Long 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,RIGHT_LOW,-1,-1;RIGHT_HIGH RIGHT_HIGH true true false 4 Long 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,RIGHT_HIGH,-1,-1;RDCODE RDCODE true true false 2 Short 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,RDCODE,-1,-1;ROUTING ROUTING true true false 3 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,ROUTING,-1,-1;ONEWAY ONEWAY true true false 2 Short 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,ONEWAY,-1,-1;ESN_BORDER ESN_BORDER true true false 2 Short 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,ESN_BORDER,-1,-1;BND_BORDER BND_BORDER true true false 2 Short 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,BND_BORDER,-1,-1;DEADEND DEADEND true true false 2 Short 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,DEADEND,-1,-1;STREET STREET true true false 50 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,STREET,-1,-1;COMMENTS COMMENTS true true false 100 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,COMMENTS,-1,-1;AT_DATE AT_DATE true true false 8 Date 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,AT_DATE,-1,-1;AT_NAME AT_NAME true true false 25 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,AT_NAME,-1,-1;SP_DATE SP_DATE true true false 8 Date 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,SP_DATE,-1,-1;SP_NAME SP_NAME true true false 25 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,SP_NAME,-1,-1;ELEVATION ELEVATION true true false 8 Double 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,ELEVATION,-1,-1;Shape_Length Shape_Length false true true 8 Double 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,Shape_Length,-1,-1,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\ESNs,Shape_Length,-1,-1;ESN_L ESN_L true true false 4 Long 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,ESN_L,-1,-1;ESN_R ESN_R true true false 4 Long 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,ESN_R,-1,-1;VOIP_ESN_L VOIP_ESN_L true true false 4 Long 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,VOIP_ESN_L,-1,-1;VOIP_ESN_R VOIP_ESN_R true true false 4 Long 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,VOIP_ESN_R,-1,-1;COMM_L COMM_L true true false 50 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,COMM_L,-1,-1;COMM_R COMM_R true true false 50 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,COMM_R,-1,-1;ESNNUM ESNNUM true true false 8 Double 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\ESNs,ESNNUM,-1,-1" IS_WITHIN "0 Feet"</Process>
+        <Process Name="SpatialJoin_1" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Analysis Tools.tbx\SpatialJoin" Date="20070712" Time="155259" export="">SpatialJoin Roads ZipCode "G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads_SpatialJoin" JOIN_ONE_TO_ONE KEEP_ALL "Join_Count Join_Count true true false 4 Long 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,Join_Count,-1,-1;PREDIR PREDIR true true false 4 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,PREDIR,-1,-1;PRETYPE PRETYPE true true false 4 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,PRETYPE,-1,-1;STREETNAME STREETNAME true true false 50 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,STREETNAME,-1,-1;STREETTYPE STREETTYPE true true false 4 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,STREETTYPE,-1,-1;SUFDIR SUFDIR true true false 4 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,SUFDIR,-1,-1;LEFT_LOW LEFT_LOW true true false 4 Long 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,LEFT_LOW,-1,-1;LEFT_HIGH LEFT_HIGH true true false 4 Long 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,LEFT_HIGH,-1,-1;RIGHT_LOW RIGHT_LOW true true false 4 Long 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,RIGHT_LOW,-1,-1;RIGHT_HIGH RIGHT_HIGH true true false 4 Long 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,RIGHT_HIGH,-1,-1;RDCODE RDCODE true true false 2 Short 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,RDCODE,-1,-1;ROUTING ROUTING true true false 3 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,ROUTING,-1,-1;ONEWAY ONEWAY true true false 2 Short 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,ONEWAY,-1,-1;ESN_BORDER ESN_BORDER true true false 2 Short 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,ESN_BORDER,-1,-1;BND_BORDER BND_BORDER true true false 2 Short 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,BND_BORDER,-1,-1;DEADEND DEADEND true true false 2 Short 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,DEADEND,-1,-1;STREET STREET true true false 50 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,STREET,-1,-1;COMMENTS COMMENTS true true false 100 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,COMMENTS,-1,-1;AT_DATE AT_DATE true true false 8 Date 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,AT_DATE,-1,-1;AT_NAME AT_NAME true true false 25 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,AT_NAME,-1,-1;SP_DATE SP_DATE true true false 8 Date 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,SP_DATE,-1,-1;SP_NAME SP_NAME true true false 25 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,SP_NAME,-1,-1;ELEVATION ELEVATION true true false 8 Double 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,ELEVATION,-1,-1;ESN_L ESN_L true true false 4 Long 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,ESN_L,-1,-1;ESN_R ESN_R true true false 4 Long 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,ESN_R,-1,-1;VOIP_ESN_L VOIP_ESN_L true true false 4 Long 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,VOIP_ESN_L,-1,-1;VOIP_ESN_R VOIP_ESN_R true true false 4 Long 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,VOIP_ESN_R,-1,-1;COMM_L COMM_L true true false 50 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,COMM_L,-1,-1;COMM_R COMM_R true true false 50 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,COMM_R,-1,-1;ESNNUM ESNNUM true true false 8 Double 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,ESNNUM,-1,-1;Shape_Length Shape_Length false true true 8 Double 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Roads,Shape_Length,-1,-1,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Zipcode,Shape_Length,-1,-1;Community Community true true false 30 Text 0 0 ,First,#,G:\Wisconsin\Grant WI\Mapdata\GrantWI_current.mdb\Basemap\Zipcode,Community,-1,-1" IS_WITHIN "0 Feet"</Process>
+      </lineage>
+      <itemProps>
+        <itemName Sync="TRUE">Grant_Roads_2016</itemName>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\Operation_Unrestrict_Data\Grant\Grant_Roads_2016\Grant_Roads_2016.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <nativeExtBox>
+          <westBL Sync="TRUE">703502.481644</westBL>
+          <eastBL Sync="TRUE">896546.957216</eastBL>
+          <southBL Sync="TRUE">399449.883053</southBL>
+          <northBL Sync="TRUE">653920.900250</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_NAD_1983_HARN_Adj_WI_Grant</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Adj_WI_Grant_Feet</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Adj_WI_Grant_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_NAD_1983_HARN_Adj_WI_Grant&amp;quot;,DATUM[&amp;quot;D_NAD_1983_HARN_Adj_WI_GT&amp;quot;,SPHEROID[&amp;quot;GRS_1980_Adj_WI_GT&amp;quot;,6378378.881,298.268533044963]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,795000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.8],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.999997],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,41.41111111111111],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;Esri&amp;quot;,103914]]&lt;/WKT&gt;&lt;XOrigin&gt;-17654199.99996502&lt;/XOrigin&gt;&lt;YOrigin&gt;-47863499.999719121&lt;/YOrigin&gt;&lt;XYScale&gt;7812.4999927240415&lt;/XYScale&gt;&lt;ZOrigin&gt;-371.60491950000005&lt;/ZOrigin&gt;&lt;ZScale&gt;3999999.9962747097&lt;/ZScale&gt;&lt;MOrigin&gt;0&lt;/MOrigin&gt;&lt;MScale&gt;32768&lt;/MScale&gt;&lt;XYTolerance&gt;0.0010240000009536744&lt;/XYTolerance&gt;&lt;ZTolerance&gt;2.0000000018626453e-006&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.000244140625&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;103914&lt;/WKID&gt;&lt;LatestWKID&gt;103914&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20181029</SyncDate>
+    <SyncTime>13104400</SyncTime>
+    <ModDate>20181029</ModDate>
+    <ModTime>13104400</ModTime>
+    <MetaID>{0D18147F-209F-4C03-82FE-E193772A3DB6}</MetaID>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiigAooooAKKKKACiik3DcFyMkZAoAWmySJEm6Rgq5AyfUnA/U1jTeIoZ75NO0v
+y7q7kRmEhbEKbeuWHU8j5VyfXA5rJ1ManLpl3JqUz+QbeIbVUwIJWfadpVw+BwcMecjkYNbQottc
+2n5iudcs0TPsWRC+0PtDDO09D9KZc3dtZx+ZdXEUCf3pXCj8zXOG3XUbWeIWUiRxMFiuTdsYCg2t
+nlskDGCAMHbwR1HMal4L0XxNa3cM89tbpK4dJxbv5mMnazMzEKDg7cYJUDkg4rWnQpt+/Jpel/1E
+2z1CiobSFreyggeTzHjjVGfGNxAxmpq5WUFFFFIAooooAKKKKACiiigAooooAKKKKACiiigAoooo
+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
+kArlRjBOK66itIVpx6iscNpjWllf3OlXtrafYvO3gzbYvJJTP3COcEhQ2TwVGemW3TCwX7PbB7e7
+ixFZGFQxmlbhJJBj7hAAyDjhgeQora1BLq28RLqHmFYWiW3jzG0qAkk52hshu2QOQQCeBjm9Q0y0
+s/FGn3jX87QBT9ptp1dEILKFKpkZ+c528hRuOM/e7YOM3d9vXUl6F5zqVtpTTxv5qtdDyVs5/m8q
+MeYBI8g4wEIKgDknOck0scJXWroz3FlDe/urg+cYo5d+MDJAYlcIBwV4LetVdRubGVZrf7BPDMf3
+6rJGgkXdGwwd2T987s+rE9RT7TUEs7uVftN+s0kqrIFkhkyqR7wN56nt174p8rs7L+tAOr8PxrF4
+esEXG0QLjamwdOw9K0qxvCeopqvhewu0SdFaPZidArfKSucDjHGQe4xWzXBVTU5J73KWwUUUVmMK
+KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA5/wAW287afFe2xlMtq+4qjHlWG0kj
+a3TIY/KTgMB1wefttJMVzeaj/avnYuVs7gvMREFyAB8r5Y5K53YJOR04rvJ1V4HVozIpHKA43e3U
+V59pfhe5tJLwRabZW9u1xIxBlLyY2nAXCHlQcfeYbsnHGD3Yep+7ava35EtalvSpZbBpmOqG42ji
+WS7zM8W+XaCrqQWxg9q0EvnkuJ5rPVp2tCxZ5ltRMpPlxkcquBxu/L1rLtLG8tUmec3UTPcRyK6I
+x5LZdpGC53bXcHbtX5SPlyKu/wBmQzvFcSi5EssZVo100nbI5DN99CoXqMt06bscVpNRcm3/AF+A
+joNCkM2iWszM7PIu9y8ZjbeSS2VPIOSeK0aztAjni8PafHclzMsCBi6hW6dwOBWjXBU+N27loKKK
+KgAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKK
+ACiiigD/2Q==</Data>
+    </Thumbnail>
+  </Binary>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdContact>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>UW-Madison</rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <role>
+      <RoleCd value="001" />
+    </role>
+    <rpCntInfo>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        <country>US</country>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum tddtty="">608-262-1471</voiceNum>
+      </cntPhone>
+      <cntHours>Mon-Fri 9:00am - 5:00pm CST-USA</cntHours>
+    </rpCntInfo>
+  </mdContact>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>UW-Madison</rpOrgName>
+        <rpPosName>metadata technician</rpPosName>
+        <role>
+          <RoleCd value="005" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">608-262-1471</voiceNum>
+          </cntPhone>
+          <cntHours>Mon-Fri 9:00am - 5:00pm CST-USA</cntHours>
+        </rpCntInfo>
+        <displayName>Arthur H. Robinson Map Library</displayName>
+      </distorCont>
+    </distributor>
+    <distFormat>
+      <formatVer>10.5</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Grant_Roads_2016.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <onLineSrc>
+        <linkage>http://www.grantcountylandrecords.com/publicinfo/</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>Grant County Land Records Public Info</orName>
+        <orDesc>Access to Grant County GIS data</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Grant County Land Information Office</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="postal">
+            <delPoint>PO Box 391</delPoint>
+            <city>Lancaster</city>
+            <adminArea>WI</adminArea>
+            <postCode>53813</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">608-723-2666</voiceNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Grant County Land Information Office</displayName>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Roads Grant County, WI 2016</resTitle>
+      <presForm>
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+        <PresFormCd value="005" Sync="TRUE" />
+      </presForm>
+      <date>
+        <pubDate>2016-01-01T00:00:00</pubDate>
+      </date>
+      <citRespParty>
+        <rpOrgName>Grant County Land Information Office</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="postal">
+            <delPoint>PO Box 391</delPoint>
+            <city>Lancaster</city>
+            <adminArea>WI</adminArea>
+            <postCode>53813</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">608-723-2666</voiceNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Chris Colney</rpIndName>
+        <rpOrgName>Grant County Land Information Office</rpOrgName>
+        <rpPosName>GIS Specialist, Land Information Officer</rpPosName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="postal">
+            <delPoint>PO Box 391</delPoint>
+            <city>Lancaster</city>
+            <adminArea>WI</adminArea>
+            <postCode>53813</postCode>
+            <eMailAdd>ccolney@co.grant.wi.gov</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">608-723-2666</voiceNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <resEdDate>20160101</resEdDate>
+      <otherCitDet>This metadata was updated to reflect that the data is no longer restricted and has been opened for public use.</otherCitDet>
+    </idCitation>
+    <dataExt>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2016-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+      <vertEle>
+        <vertMinVal Sync="TRUE">-0.000000</vertMinVal>
+        <vertMaxVal Sync="TRUE">1239.900000</vertMaxVal>
+      </vertEle>
+    </dataExt>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.</idPurp>
+    <idAbs>This data layer represents roads for Grant County, Wisconsin in 2016. It is a feature class within the geodatabase, 'Grant_Roads_2016.gdb.'</idAbs>
+    <searchKeys>
+      <keyword>Roads</keyword>
+      <keyword>Streets</keyword>
+      <keyword>Transportation</keyword>
+      <keyword>Grant County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <idCredit>Grant County Land Information Office</idCredit>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Line</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Roads, Streets, Transportation</keyword>
+    </themeKeys>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Grant County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idPoC>
+      <rpOrgName>Grant County Land Information Office</rpOrgName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+      <rpCntInfo>
+        <cntAddress addressType="postal">
+          <delPoint>PO Box 391</delPoint>
+          <city>Lancaster</city>
+          <adminArea>WI</adminArea>
+          <postCode>53813</postCode>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">608-723-2666</voiceNum>
+        </cntPhone>
+      </rpCntInfo>
+      <displayName>Grant County Land Information Office</displayName>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Grant County Land Information Office</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="postal">
+            <delPoint>PO Box 391</delPoint>
+            <city>Lancaster</city>
+            <adminArea>WI</adminArea>
+            <postCode>53813</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">608-723-2666</voiceNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Grant County Land Information Office</displayName>
+        <displayName>Grant County Land Information Office</displayName>
+      </maintCont>
+    </resMaint>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataLang>
+      <languageCode value="eng" Sync="TRUE" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <spatRpType>
+      <SpatRepTypCd value="001" Sync="TRUE" />
+    </spatRpType>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-91.143149</westBL>
+          <eastBL Sync="TRUE">-90.419163</eastBL>
+          <northBL Sync="TRUE">43.205402</northBL>
+          <southBL Sync="TRUE">42.506608</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="018" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>UW-Madison</rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">608-262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Mon-Fri 9:00am - 5:00pm CST-USA</cntHours>
+      </rpCntInfo>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform to UW-Madison's data distribution plan.</stepDesc>
+        <stepProc>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+          <rpOrgName>UW-Madison</rpOrgName>
+          <rpPosName>metadata technician</rpPosName>
+          <role>
+            <RoleCd value="001" />
+          </role>
+          <rpCntInfo>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+              <country>US</country>
+            </cntAddress>
+            <cntPhone>
+              <voiceNum tddtty="">608-262-1471</voiceNum>
+            </cntPhone>
+            <cntHours>Mon-Fri 9:00am - 5:00pm CST-USA</cntHours>
+          </rpCntInfo>
+          <displayName>Arthur H. Robinson Map Library</displayName>
+        </stepProc>
+        <stepDateTm>2018-10-29T00:00:00</stepDateTm>
+      </prcStep>
+    </dataLineage>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode Sync="FALSE" value="103914" code="7607">NAD_1983_HARN_Adj_WI_Grant_Feet</identCode>
+        <idVersion Sync="FALSE">9.5.4</idVersion>
+        <idCodeSpace Sync="FALSE">EPSG</idCodeSpace>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Grant_Roads_2016">
+      <enttyp>
+        <enttypl Sync="TRUE">Grant_Roads_2016</enttypl>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">8998</enttypc>
+        <enttypd>Roads Grant County, WI 2016</enttypd>
+        <enttypds>Grant County Land Information Office</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>STREETNAME</attrlabl>
+        <attrdef>STREET NAME (FIRST/ELM/15TH)</attrdef>
+        <attrdefs>GEOCOMM</attrdefs>
+        <attrvai>
+          <attrva>BASED ON MSAG</attrva>
+          <attrvae>VALIDATED WITH MSAG</attrvae>
+        </attrvai>
+        <attalias Sync="TRUE">STREETNAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Length</attrlabl>
+        <attalias Sync="TRUE">Shape_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Length of feature in internal units.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <subtype>
+        <stname Sync="TRUE">Road Centerline</stname>
+        <stcode Sync="TRUE">0</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">ROW_CENTERLINETYPE</stfldnm>
+          <stflddv Sync="TRUE">2</stflddv>
+        </stfield>
+      </subtype>
+      <subtype>
+        <stname Sync="TRUE">Railroad Centerline</stname>
+        <stcode Sync="TRUE">1</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">ROW_CENTERLINETYPE</stfldnm>
+          <stflddv Sync="TRUE">2</stflddv>
+        </stfield>
+      </subtype>
+      <attr>
+        <attrlabl Sync="TRUE">Join_Count</attrlabl>
+        <attalias Sync="TRUE">Join_Count</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Join_Count_1</attrlabl>
+        <attalias Sync="TRUE">Join_Count_1</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PREDIR</attrlabl>
+        <attalias Sync="TRUE">PREDIR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRETYPE</attrlabl>
+        <attalias Sync="TRUE">PRETYPE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <subtype>
+        <stname Sync="TRUE">Bridge Centerline</stname>
+        <stcode Sync="TRUE">2</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">ROW_CENTERLINETYPE</stfldnm>
+          <stflddv Sync="TRUE">2</stflddv>
+        </stfield>
+      </subtype>
+      <attr>
+        <attrlabl Sync="TRUE">STREETTYPE</attrlabl>
+        <attalias Sync="TRUE">STREETTYPE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SUFDIR</attrlabl>
+        <attalias Sync="TRUE">SUFDIR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LEFT_LOW</attrlabl>
+        <attalias Sync="TRUE">LEFT_LOW</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LEFT_HIGH</attrlabl>
+        <attalias Sync="TRUE">LEFT_HIGH</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RIGHT_LOW</attrlabl>
+        <attalias Sync="TRUE">RIGHT_LOW</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RIGHT_HIGH</attrlabl>
+        <attalias Sync="TRUE">RIGHT_HIGH</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RDCODE</attrlabl>
+        <attalias Sync="TRUE">RDCODE</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ROUTING</attrlabl>
+        <attalias Sync="TRUE">ROUTING</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">3</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ONEWAY</attrlabl>
+        <attalias Sync="TRUE">ONEWAY</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ESN_BORDER</attrlabl>
+        <attalias Sync="TRUE">ESN_BORDER</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">BND_BORDER</attrlabl>
+        <attalias Sync="TRUE">BND_BORDER</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DEADEND</attrlabl>
+        <attalias Sync="TRUE">DEADEND</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STREET</attrlabl>
+        <attalias Sync="TRUE">STREET</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">COMMENTS</attrlabl>
+        <attalias Sync="TRUE">COMMENTS</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">AT_DATE</attrlabl>
+        <attalias Sync="TRUE">AT_DATE</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">AT_NAME</attrlabl>
+        <attalias Sync="TRUE">AT_NAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SP_DATE</attrlabl>
+        <attalias Sync="TRUE">SP_DATE</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SP_NAME</attrlabl>
+        <attalias Sync="TRUE">SP_NAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ELEVATION</attrlabl>
+        <attalias Sync="TRUE">ELEVATION</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ESN_L</attrlabl>
+        <attalias Sync="TRUE">ESN_L</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ESN_R</attrlabl>
+        <attalias Sync="TRUE">ESN_R</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">VOIP_ESN_L</attrlabl>
+        <attalias Sync="TRUE">VOIP_ESN_L</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">VOIP_ESN_R</attrlabl>
+        <attalias Sync="TRUE">VOIP_ESN_R</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">COMM_L</attrlabl>
+        <attalias Sync="TRUE">COMM_L</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">COMM_R</attrlabl>
+        <attalias Sync="TRUE">COMM_R</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <subtype>
+        <stname Sync="TRUE">Other Centerline</stname>
+        <stcode Sync="TRUE">3</stcode>
+        <stfield>
+          <stfldnm Sync="TRUE">ROW_CENTERLINETYPE</stfldnm>
+          <stflddv Sync="TRUE">2</stflddv>
+        </stfield>
+      </subtype>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdLang>
+    <languageCode value="eng" Sync="TRUE" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdHrLv>
+    <ScopeCd value="005" Sync="TRUE" />
+  </mdHrLv>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Grant_Roads_2016">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">8998</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Grant_Roads_2016">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="3" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">8998</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">TRUE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20181029</mdDateSt>
+  <mdFileID>6EEC7C06-0B01-49D1-A1F3-0623A2058E15</mdFileID>
+</metadata>

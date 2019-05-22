@@ -1,0 +1,704 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20170217</CreaDate>
+    <CreaTime>12212200</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <SyncDate>20170706</SyncDate>
+    <SyncTime>10442300</SyncTime>
+    <ModDate>20170706</ModDate>
+    <ModTime>10442300</ModTime>
+    <DataProperties>
+      <lineage>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20090520" Time="081912" Name="" export="">FeatureClassToFeatureClass D:\Matt\Oneida\lu\polygon X:\Oneida\Oneida.mdb Lu2008_working # "AREA 'AREA' false true true 4 Float 0 0 ,First,#,D:\Matt\Oneida\lu\polygon,AREA,-1,-1;PERIMETER 'PERIMETER' false true true 4 Float 0 0 ,First,#,D:\Matt\Oneida\lu\polygon,PERIMETER,-1,-1;LU_ 'LU_' false true true 4 Long 0 0 ,First,#,D:\Matt\Oneida\lu\polygon,LU#,-1,-1;LU_ID 'LU_ID' true true true 4 Long 0 0 ,First,#,D:\Matt\Oneida\lu\polygon,LU-ID,-1,-1;OBJECTID 'OBJECTID' true true false 8 Double 0 0 ,First,#,D:\Matt\Oneida\lu\polygon,OBJECTID,-1,-1;MCD 'MCD' true true false 40 Text 0 0 ,First,#,D:\Matt\Oneida\lu\polygon,MCD,-1,-1;LANDUSE 'LANDUSE' true true false 40 Text 0 0 ,First,#,D:\Matt\Oneida\lu\polygon,LANDUSE,-1,-1" # X:\Oneida\Oneida.mdb\Lu2008_working</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20090618" Time="131108" Name="" export="">FeatureClassToFeatureClass X:\Oneida\Oneida.mdb\Lu2008_working X:\Oneida\Oneida.mdb\Landuse LU2008 # "AREA 'AREA' true true false 4 Float 0 0 ,First,#,X:\Oneida\Oneida.mdb\Lu2008_working,AREA,-1,-1;PERIMETER 'PERIMETER' true true false 4 Float 0 0 ,First,#,X:\Oneida\Oneida.mdb\Lu2008_working,PERIMETER,-1,-1;LU_ 'LU_' true true false 4 Long 0 0 ,First,#,X:\Oneida\Oneida.mdb\Lu2008_working,LU_,-1,-1;LU_ID 'LU_ID' true true false 4 Long 0 0 ,First,#,X:\Oneida\Oneida.mdb\Lu2008_working,LU_ID,-1,-1;OBJECTID 'OBJECTID' true true false 8 Double 0 0 ,First,#,X:\Oneida\Oneida.mdb\Lu2008_working,OBJECTID,-1,-1;MCD 'MCD' true true false 40 Text 0 0 ,First,#,X:\Oneida\Oneida.mdb\Lu2008_working,MCD,-1,-1;LANDUSE 'LANDUSE' true true false 40 Text 0 0 ,First,#,X:\Oneida\Oneida.mdb\Lu2008_working,LANDUSE,-1,-1;Shape_Length 'Shape_Length' false true true 8 Double 0 0 ,First,#,X:\Oneida\Oneida.mdb\Lu2008_working,Shape_Length,-1,-1;Shape_Area 'Shape_Area' false true true 8 Double 0 0 ,First,#,X:\Oneida\Oneida.mdb\Lu2008_working,Shape_Area,-1,-1;Year_ 'Year_' true true false 2 Short 0 0 ,First,#,X:\Oneida\Oneida.mdb\Lu2008_working,Year_,-1,-1" # X:\Oneida\Oneida.mdb\Landuse\LU2008</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120730" Time="104641" Name="" export="">CalculateField LU2008 GRID_NAME "Agriculture" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120730" Time="104755" Name="" export="">CalculateField LU2008 GRID_NAME "Commercial" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120730" Time="104943" Name="" export="">CalculateField LU2008 GRID_NAME "Cranberry Bog" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120730" Time="105040" Name="" export="">CalculateField LU2008 GRID_NAME "Public/Quasi-Public" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120730" Time="105147" Name="" export="">CalculateField LU2008 GRID_NAME "Industrial" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120730" Time="105228" Name="" export="">CalculateField LU2008 GRID_NAME "Open Lands" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120730" Time="105250" Name="" export="">CalculateField LU2008 GRID_NAME "Recreational" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120730" Time="105413" Name="" export="">CalculateField LU2008 GRID_NAME "Transportation" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120730" Time="105544" Name="" export="">CalculateField LU2008 GRID_NAME "Residential" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120730" Time="110457" Name="" export="">CalculateField LU2008 GRID_NAME "Transportation" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120730" Time="110542" Name="" export="">CalculateField LU2008 GRID_NAME "Water" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120730" Time="110717" Name="" export="">CalculateField LU2008 GRID_NAME "Woodlands" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120802" Time="111845" Name="" export="">CalculateField LU2008 Dev_Undev 1 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120802" Time="111954" Name="" export="">CalculateField LU2008 Dev_Undev 2 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120802" Time="112047" Name="" export="">CalculateField LU2008 Dev_Undev 2 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120802" Time="112225" Name="" export="">CalculateField LU2008 Dev_Undev 2 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120802" Time="112434" Name="" export="">CalculateField LU2008 Dev_Undev 1 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120802" Time="112536" Name="" export="">CalculateField LU2008 Dev_Undev 2 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120802" Time="112644" Name="" export="">CalculateField LU2008 Dev_Undev 2 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120802" Time="113844" Name="" export="">CalculateField LU2008 Dev_Undev 2 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120802" Time="114230" Name="" export="">CalculateField LU2008 Dev_Undev 2 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120802" Time="114905" Name="" export="">CalculateField LU2008 Dev_Undev 1 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120802" Time="115644" Name="" export="">CalculateField LU2008 Dev_Undev 1 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120809" Time="132639" Name="" export="">CalculateField LU2008 Dev_Un_08 [Dev_Undev] VB #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20131206" Time="084537" Name="" export="">CalculateField LU2008 LU2010 [LANDUSE] VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20131213" Time="110350" Name="" export="">FeatureClassToFeatureClass X:\Oneida\Oneida.mdb\Landuse\LU2008 X:\RPC_LU\LU_All.gdb Oneida_Lu # "AREA "AREA" true true false 4 Float 0 0 ,First,#,X:\Oneida\Oneida.mdb\Landuse\LU2008,AREA,-1,-1;PERIMETER "PERIMETER" true true false 4 Float 0 0 ,First,#,X:\Oneida\Oneida.mdb\Landuse\LU2008,PERIMETER,-1,-1;LU_ "LU_" true true false 4 Long 0 0 ,First,#,X:\Oneida\Oneida.mdb\Landuse\LU2008,LU_,-1,-1;LU_ID "LU_ID" true true false 4 Long 0 0 ,First,#,X:\Oneida\Oneida.mdb\Landuse\LU2008,LU_ID,-1,-1;OBJECTID "OBJECTID" true true false 8 Double 0 0 ,First,#,X:\Oneida\Oneida.mdb\Landuse\LU2008,OBJECTID,-1,-1;MCD "MCD" true true false 40 Text 0 0 ,First,#,X:\Oneida\Oneida.mdb\Landuse\LU2008,MCD,-1,-1;LANDUSE "LANDUSE" true true false 40 Text 0 0 ,First,#,X:\Oneida\Oneida.mdb\Landuse\LU2008,LANDUSE,-1,-1;Year_ "Year_" true true false 2 Short 0 0 ,First,#,X:\Oneida\Oneida.mdb\Landuse\LU2008,Year_,-1,-1;Shape_Length "Shape_Length" false true true 8 Double 0 0 ,First,#,X:\Oneida\Oneida.mdb\Landuse\LU2008,Shape_Length,-1,-1;Shape_Area "Shape_Area" false true true 8 Double 0 0 ,First,#,X:\Oneida\Oneida.mdb\Landuse\LU2008,Shape_Area,-1,-1;Acres "Acres" true true false 8 Double 0 0 ,First,#,X:\Oneida\Oneida.mdb\Landuse\LU2008,Acres,-1,-1;GRID_NAME "GRID_NAME" true true false 150 Text 0 0 ,First,#,X:\Oneida\Oneida.mdb\Landuse\LU2008,GRID_NAME,-1,-1;Dev_Un_08 "Dev_Un_08" true true false 2 Short 0 0 ,First,#,X:\Oneida\Oneida.mdb\Landuse\LU2008,Dev_Un_08,-1,-1;LU2010 "LU2010" true true false 40 Text 0 0 ,First,#,X:\Oneida\Oneida.mdb\Landuse\LU2008,LU2010,-1,-1" #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\Dissolve" Date="20131213" Time="110835" Name="" export="">Dissolve X:\RPC_LU\LU_All.gdb\Oneida_Lu X:\RPC_LU\LU_All.gdb\Oneida_Lu_Dissolve LU2010 # MULTI_PART DISSOLVE_LINES</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Analysis Tools.tbx\Union" Date="20131213" Time="111638" Name="" export="">Union "X:\RPC_LU\LU_All.gdb\Oneida_Lu_Dissolve #;X:\RPC_LU\Oneida.shp #" X:\RPC_LU\LU_All.gdb\Oneida_Lu_Dissolve_Union ALL # GAPS</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20131218" Time="090537" Name="" export="">CalculateField Oneida_Lu County "Oneida County" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20131218" Time="133643" Name="" export="">FeatureClassToFeatureClass X:\RPC_LU\LU_All.gdb\Oneida_Lu X:\Oneida\Oneida.mdb\Landuse Landuse # "LU2010 "LU2010" true true false 40 Text 0 0 ,First,#,X:\RPC_LU\LU_All.gdb\Oneida_Lu,LU2010,-1,-1;Shape_Length "Shape_Length" false true true 8 Double 0 0 ,First,#,X:\RPC_LU\LU_All.gdb\Oneida_Lu,Shape_Length,-1,-1;Shape_Area "Shape_Area" false true true 8 Double 0 0 ,First,#,X:\RPC_LU\LU_All.gdb\Oneida_Lu,Shape_Area,-1,-1;Acres "Acres" true true false 8 Double 0 0 ,First,#,X:\RPC_LU\LU_All.gdb\Oneida_Lu,Acres,-1,-1;County "County" true true false 50 Text 0 0 ,First,#,X:\RPC_LU\LU_All.gdb\Oneida_Lu,County,-1,-1" #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20150217" Time="160651" Name="" export="">FeatureClassToFeatureClass V:\Gisdata\Geodatabase\Onieda_Landuse.mdb\Landuse "Database Connections\L@GISPub@Carla.sde" LandUse # "LU2010 'LU2010' true true false 40 Text 0 0 ,First,#,V:\Gisdata\Geodatabase\Onieda_Landuse.mdb\Landuse,LU2010,-1,-1;Acres 'Acres' true true false 8 Double 0 0 ,First,#,V:\Gisdata\Geodatabase\Onieda_Landuse.mdb\Landuse,Acres,-1,-1;County 'County' true true false 50 Text 0 0 ,First,#,V:\Gisdata\Geodatabase\Onieda_Landuse.mdb\Landuse,County,-1,-1;Shape_Length 'Shape_Length' false true true 8 Double 0 0 ,First,#,V:\Gisdata\Geodatabase\Onieda_Landuse.mdb\Landuse,Shape_Length,-1,-1;Shape_Area 'Shape_Area' false true true 8 Double 0 0 ,First,#,V:\Gisdata\Geodatabase\Onieda_Landuse.mdb\Landuse,Shape_Area,-1,-1" # "Database Connections\L@GISPub@Carla.sde\GISpub.L.LandUse"</Process>
+        <Process ToolSource="d:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\Copy" Date="20170211" Time="023918" Name="" export="">Copy D:\GIS\Maintenance\ReconcilePostCompress\config\GIS_carla3_sa.sde\GIS.L.LandUse D:\GIS\Maintenance\ReconcilePostCompress\config\PUB_carla3_L.sde\PUB.L.LandUse FeatureClass</Process>
+        <Process ToolSource="d:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\Project" Date="20170217" Time="122141" Name="" export="">Project "Database Connections\L@PUB@carla3.sde\PUB.L.LandUse" D:\GIS\Gisdata\Geodatabase\ONEIDA_OTHER.gdb\ONEIDA_LANDUSE_2016 PROJCS['NAD_1983_HARN_Wisconsin_TM',GEOGCS['GCS_North_American_1983_HARN',DATUM['D_North_American_1983_HARN',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Transverse_Mercator'],PARAMETER['False_Easting',520000.0],PARAMETER['False_Northing',-4480000.0],PARAMETER['Central_Meridian',-90.0],PARAMETER['Scale_Factor',0.9996],PARAMETER['Latitude_Of_Origin',0.0],UNIT['Meter',1.0]] # PROJCS['NAD_1983_HARN_WISCRS_Oneida_County_Feet',GEOGCS['GCS_North_American_1983_HARN',DATUM['D_North_American_1983_HARN',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Lambert_Conformal_Conic'],PARAMETER['False_Easting',230000.0],PARAMETER['False_Northing',188936.744],PARAMETER['Central_Meridian',-89.54444444444444],PARAMETER['Standard_Parallel_1',45.70422377027778],PARAMETER['Scale_Factor',1.0000686968],PARAMETER['Latitude_Of_Origin',45.70422377027778],UNIT['Foot_US',0.3048006096012192]] NO_PRESERVE_SHAPE #</Process>
+      </lineage>
+      <itemProps>
+        <itemName Sync="TRUE">Oneida_LandUse_YE2016</itemName>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2017_ALL_DATA_OPEN\Oneida\Oneida_LandUse_YE2016.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <nativeExtBox>
+          <westBL Sync="TRUE">516481.920800</westBL>
+          <eastBL Sync="TRUE">594541.578100</eastBL>
+          <southBL Sync="TRUE">554987.997800</southBL>
+          <northBL Sync="TRUE">603340.439300</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Wisconsin_TM</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Wisconsin_TM&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,3071]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;10000&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;3071&lt;/WKID&gt;&lt;LatestWKID&gt;3071&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+      </coordRef>
+    </DataProperties>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iis
+t9TuVmZFsQ6+Y0aES4JxnnBA9D0z298TOcYK8mFjUorlpvF3k3LRPAqgM65TL5K8e3fA/EU+58TT
+Wlr5skduWcZiVWJ8wckkH0wP1FT7aHcdjpqK5SDxZPLKsckNtCSxBLyYGwAkuCeCOP5etP1HxTc6
+dKA9k7RFQwl8pwPcfgP89MntYXtcLHUUVxz+M7uG2trqfTWitZsBpWBG0nOMA9RjHPFQ3njp4X/0
+YWs0e4LuOQehJOATwBjnPXPpT9pF7CsdvRXAX3j28tptsEdlcpt3b13AD1HJ61C3xC1FFbfYQB1I
+yMNjvnJzx2qlJNXA9Forj7XxfdXkXmRwRKp+4WQndgjPfsCOPWtxL65cswe3MKhQZNpHzZIYEZyM
+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
+iigAooooAKKKKACiiigD/9k=</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum>608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorFormat>
+        <formatName>ESRI geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Oneida_LandUse_YE2016.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <onLineSrc>
+        <linkage>http://oneida.ncwrpc.info/</linkage>
+        <protocol>WWW:LINK-1.0-http--link</protocol>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.3</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Land Use Oneida County, WI YE2016</resTitle>
+      <date>
+        <pubDate>2017-02-20T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Oneida County Land Information Office</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>1 Courthouse Square</delPoint>
+            <city>Rhinelander</city>
+            <adminArea>WI</adminArea>
+            <postCode>54501</postCode>
+            <country>US</country>
+            <delPoint>PO Box 400</delPoint>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>715-369-6179</voiceNum>
+            <faxNum>715-369-6277</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <citRespParty>
+        <rpOrgName>Oneida County Land Information Office</rpOrgName>
+        <rpIndName>Michael Romportl    </rpIndName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>1 Courthouse Square</delPoint>
+            <city>Rhinelander</city>
+            <adminArea>WI</adminArea>
+            <postCode>54501</postCode>
+            <eMailAdd>lio@co.oneida.wi.us </eMailAdd>
+            <country>US</country>
+            <delPoint>PO Box 400</delPoint>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>715-369-6179</voiceNum>
+            <faxNum>715-369-6277</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <resEdDate>20161231</resEdDate>
+    </idCitation>
+    <idAbs>This polygon data layer represents land use for Oneida County, Wisconsin at year-end 2016. It is a feature class within the geodatabase, Oneida_LandUse_YE2016.gdb.</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.
+
+</idPurp>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <editorSource>external</editorSource>
+        <editorDigest>b92695e4d5571902d552c3fb6a04df4</editorDigest>
+        <rpOrgName>Oneida County Land Information Office</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="physical">
+            <delPoint>1 Courthouse Square</delPoint>
+            <city>Rhinelander</city>
+            <adminArea>WI</adminArea>
+            <postCode>54501</postCode>
+            <country>US</country>
+            <delPoint>PO Box 400</delPoint>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">715-369-6179</voiceNum>
+            <faxNum>715-369-6277</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Oneida County Land Information Office</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Oneida County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Polygon</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Land Use</keyword>
+      <keyword>Planning</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Land Use</keyword>
+      <keyword>Polygon</keyword>
+      <keyword>Oneida County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-90.045995</westBL>
+          <eastBL>-89.043559</eastBL>
+          <southBL>45.466051</southBL>
+          <northBL>45.90106</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2017-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <suppInfo>For complete metadata documentation, please visit http://oneida.ncwrpc.info/
+
+This data was submitted to the UW geospatial archive in 2017. Content may be considered current as of December 31, 2016. It was published to the UW geospatial archive as part of the Wisconsin Department of Administration Land Information Program annual collection of public data for the year 2017.
+</suppInfo>
+    <idCredit>Oneida County Land Information Office</idCredit>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idPoC>
+      <editorSource>external</editorSource>
+      <editorDigest>b92695e4d5571902d552c3fb6a04df4</editorDigest>
+      <rpOrgName>Oneida County Land Information Office</rpOrgName>
+      <rpCntInfo>
+        <cntAddress addressType="physical">
+          <delPoint>1 Courthouse Square</delPoint>
+          <city>Rhinelander</city>
+          <adminArea>WI</adminArea>
+          <postCode>54501</postCode>
+          <country>US</country>
+          <delPoint>PO Box 400</delPoint>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">715-369-6179</voiceNum>
+          <faxNum>715-369-6277</faxNum>
+        </cntPhone>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Oneida County Land Information Office</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-90.045356</westBL>
+          <eastBL Sync="TRUE">-89.039068</eastBL>
+          <northBL Sync="TRUE">45.903632</northBL>
+          <southBL Sync="TRUE">45.464440</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="015" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>310 Science Hall</delPoint>
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform with UW-Madison's data distribution plan.</stepDesc>
+        <stepDateTm>2017-07-06T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+          <rpPosName>Data Technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="009" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <eainfo>
+    <detailed Name="Oneida_LandUse_YE2016">
+      <enttyp>
+        <enttypl Sync="TRUE">Oneida_LandUse_YE2016</enttypl>
+        <enttypd>Land Use Oneida County, WI YE2016</enttypd>
+        <enttypds>Oneida County Land Information Office</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">20557</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LU2010</attrlabl>
+        <attalias Sync="TRUE">LU2010</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">40</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Acres</attrlabl>
+        <attalias Sync="TRUE">Acres</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">County</attrlabl>
+        <attalias Sync="TRUE">County</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SHAPE_Length</attrlabl>
+        <attalias Sync="TRUE">Shape_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Length of feature in internal units.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SHAPE_Area</attrlabl>
+        <attalias Sync="TRUE">Shape_Area</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Area of feature in internal units squared.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="3071" Sync="TRUE" />
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+        <idVersion Sync="TRUE">8.6.2</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Oneida_LandUse_YE2016">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">20557</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Oneida_LandUse_YE2016">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="4" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">20557</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20170706</mdDateSt>
+  <mdFileID>C503EA98-3DBD-445B-A558-9A8C654B0B42</mdFileID>
+</metadata>

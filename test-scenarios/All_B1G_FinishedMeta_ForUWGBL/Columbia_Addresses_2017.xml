@@ -1,0 +1,763 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20170329</CreaDate>
+    <CreaTime>15565500</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process Name="Project (5)" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\Project" Date="20170329" Time="155655" export="">Project in_memory\ESITE_2 "G:\GIS-Data\arcdata\Misc-Projects\Statewide Digital Parcel Layer\COLUMBIA_OTHER.gdb\ADDRESSES_yyyy" PROJCS['NAD_1983_HARN_Wisconsin_TM',GEOGCS['GCS_North_American_1983_HARN',DATUM['D_North_American_1983_HARN',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Transverse_Mercator'],PARAMETER['False_Easting',520000.0],PARAMETER['False_Northing',-4480000.0],PARAMETER['Central_Meridian',-90.0],PARAMETER['Scale_Factor',0.9996],PARAMETER['Latitude_Of_Origin',0.0],UNIT['Meter',1.0]] # PROJCS['NAD_1983_HARN_WISCRS_Columbia_County_Feet',GEOGCS['GCS_North_American_1983_HARN',DATUM['D_North_American_1983_HARN',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Lambert_Conformal_Conic'],PARAMETER['False_Easting',554999.999],PARAMETER['False_Northing',366041.307],PARAMETER['Central_Meridian',-89.39444444444445],PARAMETER['Standard_Parallel_1',43.46254664583333],PARAMETER['Scale_Factor',1.00003498],PARAMETER['Latitude_Of_Origin',43.46254664583333],UNIT['Foot_US',0.3048006096012192]]</Process>
+        <Process Name="Calculate Field (26)" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170329" Time="155657" export="">CalculateField ADDRESSES_yyyy_Layer PREFIX "STH" VB #</Process>
+        <Process Name="Calculate Field (32)" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170329" Time="155658" export="">CalculateField ADDRESSES_yyyy_Layer STREETNAME Replace( [STREETNAME], "STATE HIGHWAY ", "" ) VB #</Process>
+        <Process Name="Calculate Field (27)" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170329" Time="155659" export="">CalculateField ADDRESSES_yyyy_Layer3 PREFIX "USH" VB #</Process>
+        <Process Name="Calculate Field (34)" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170329" Time="155700" export="">CalculateField ADDRESSES_yyyy_Layer3 STREETNAME Replace( [STREETNAME], "US HIGHWAY ", "" ) VB #</Process>
+        <Process Name="Calculate Field (29)" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170329" Time="155702" export="">CalculateField ADDRESSES_yyyy_Layer4 PREFIX "CTH" VB #</Process>
+        <Process Name="Calculate Field (36)" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170329" Time="155703" export="">CalculateField ADDRESSES_yyyy_Layer4 STREETNAME Replace( [STREETNAME], "COUNTY HIGHWAY ", "" ) VB #</Process>
+        <Process Name="Calculate Field (30)" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170329" Time="155704" export="">CalculateField ADDRESSES_yyyy_Layer1 PREFIX "INTERSTATE" VB #</Process>
+        <Process Name="Calculate Field (38)" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170329" Time="155705" export="">CalculateField ADDRESSES_yyyy_Layer1 STREETNAME Replace( [STREETNAME], "INTERSTATE HIGHWAY ", "" ) VB #</Process>
+        <Process Name="Calculate Field (28)" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170329" Time="155706" export="">CalculateField ADDRESSES_yyyy_Layer2 STREETNAME_FULL "[STREETNAME_FULL] &amp; " (PRIVATE)" " VB #</Process>
+        <Process Name="Delete Field" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteField" Date="20170329" Time="155707" export="">DeleteField ADDRESSES_yyyy_Layer2 GISDATA_GISOWNER_ESite_PRIV_IND</Process>
+      </lineage>
+      <itemProps>
+        <itemName Sync="TRUE">Columbia_Addresses_2017</itemName>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2017_ALL_DATA_OPEN\Columbia\Columbia_Addresses_2017.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <nativeExtBox>
+          <westBL Sync="TRUE">537465.310400</westBL>
+          <eastBL Sync="TRUE">601064.026100</eastBL>
+          <southBL Sync="TRUE">311374.704700</southBL>
+          <northBL Sync="TRUE">352684.101700</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Wisconsin_TM</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Wisconsin_TM&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,3071]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;10000&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;3071&lt;/WKID&gt;&lt;LatestWKID&gt;3071&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20170420</SyncDate>
+    <SyncTime>13350000</SyncTime>
+    <ModDate>20170420</ModDate>
+    <ModTime>13350000</ModTime>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+gEH
+oc0V8e/FW8ksviX4ht9Oa6sraSUCWEM8YkJUFiRnkFizDsQcgUAfYLMqKWdgqjqScAUblIJDDA6n
+NfEsFjrV3oU2+KWGznY3Mk7CZjclI3cEgZBAGfmwANwLEDmuia71fQtGktjd6wbS6tka4NpFstZ0
+xFG37xxkgRlBuxjc4xxgsAfXORnGeaMgYyevSvKvA/hux8Oada+J9W137PcxgQTvHqv2i3lj4SNJ
+GYYypbAC4ANc7rXgXxvBqWoahqHiyw06xjv11G2upLpgkLkuCqbwSvBGRnaRgc9gD3WSRIl3SOqL
+kDLHAyTgfqaGdFzuZRgZOT0HrXzrqXjfTPGHhbTF1fWbie9W9sZL+x8tVSMI7RuYyo+YvuDbck45
+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
+RRRQAUUUUAFFFFABRRRQAUUUUAf/2Q==</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>UW-Madison</rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum tddtty="">608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdDateSt Sync="TRUE">20170420</mdDateSt>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>UW-Madison</rpOrgName>
+        <rpPosName>metadata technician</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorOrdPrc>
+        <resFees units="">None</resFees>
+      </distorOrdPrc>
+      <distorFormat>
+        <formatName>ESRI geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Columbia_Addresses_2017.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http—download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+      <formatVer>10.3</formatVer>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Columbia County Land Information Office</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-742-9882</voiceNum>
+            <faxNum>608-742-9806</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>400 Dewitt St</delPoint>
+            <city>Portage</city>
+            <adminArea>WI</adminArea>
+            <postCode>53901</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Columbia County Land Information Office</displayName>
+        <editorSave>False</editorSave>
+        <displayName>Columbia County Land Information Office</displayName>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Addresses Columbia County, WI 2017</resTitle>
+      <date>
+        <pubDate>2017-03-30T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Columbia County Land Information Office</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-742-9882</voiceNum>
+            <faxNum>608-742-9806</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>400 Dewitt St</delPoint>
+            <city>Portage</city>
+            <adminArea>WI</adminArea>
+            <postCode>53901</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Columbia County Land Information Office</displayName>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Kristen Anderson</rpIndName>
+        <rpOrgName>Columbia County Land Information Office</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-742-9882</voiceNum>
+            <faxNum>608-742-9806</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>400 Dewitt St</delPoint>
+            <city>Portage</city>
+            <adminArea>WI</adminArea>
+            <postCode>53901</postCode>
+            <country>US</country>
+            <eMailAdd>kristen.anderson@co.columbia.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Kristen Anderson</displayName>
+      </citRespParty>
+    </idCitation>
+    <idAbs>This point data layer represents addresses for Columbia County, Wisconsin in 2017. It is a feature class within the geodatabase, Columbia_Addresses_2017.gdb.</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.</idPurp>
+    <idCredit>Columbia County Land Information Office</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <idPoC>
+      <rpOrgName>Columbia County Land Information Office</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">608-742-9882</voiceNum>
+          <faxNum>608-742-9806</faxNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>400 Dewitt St</delPoint>
+          <city>Portage</city>
+          <adminArea>WI</adminArea>
+          <postCode>53901</postCode>
+          <country>US</country>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="007" />
+      </role>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Columbia County Land Information Office</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">608-742-9882</voiceNum>
+            <faxNum>608-742-9806</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>400 Dewitt St</delPoint>
+            <city>Portage</city>
+            <adminArea>WI</adminArea>
+            <postCode>53901</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Columbia County Land Information Office</displayName>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Columbia County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Point</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Street addresses</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Street addresses</keyword>
+      <keyword>location</keyword>
+      <keyword>Wisconsin</keyword>
+      <keyword>Point</keyword>
+      <keyword>Columbia County</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-89.783739</westBL>
+          <eastBL>-88.997801</eastBL>
+          <southBL>43.271391</southBL>
+          <northBL>43.645208</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2017-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-89.784761</westBL>
+          <eastBL Sync="TRUE">-88.994914</eastBL>
+          <northBL Sync="TRUE">43.646948</northBL>
+          <southBL Sync="TRUE">43.270826</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <suppInfo>For complete metadata documentation, please visit http://www.co.columbia.wi.us/ColumbiaCounty/landinformation/InteractiveMapping/tabid/235/Default.aspx
+
+This data was submitted to the UW geospatial archive in 2017. Content may be considered current as of December 31, 2016. It was published to the UW geospatial archive as part of the Wisconsin Department of Administration Land Information Program annual collection of public data for the year 2017.</suppInfo>
+    <tpCat>
+      <TopicCatCd value="013" />
+    </tpCat>
+  </dataIdInfo>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported each feature class into its own file geodatabase to maintain the original file format of the data and to conform with UW-Madison's data distribution plan.</stepDesc>
+        <stepDateTm>2017-04-17T00:00:00</stepDateTm>
+        <stepProc>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+          <rpOrgName>UW-Madison</rpOrgName>
+          <rpPosName>metadata technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="009" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Columbia_Addresses_2017">
+        <geoObjTyp>
+          <GeoObjTypCd value="004" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">27427</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <eainfo>
+    <detailed Name="Columbia_Addresses_2017">
+      <enttyp>
+        <enttypl Sync="TRUE">Columbia_Addresses_2017</enttypl>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">27427</enttypc>
+        <enttypd>Addresses Columbia County, WI 2017</enttypd>
+        <enttypds>Columbia County Land Information Office</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>SITETYPE</attrlabl>
+        <attalias Sync="TRUE">Desc</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDNUM_FULL</attrlabl>
+        <attalias Sync="TRUE">ADDRESSNUM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">15</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STREETNAME_FULL</attrlabl>
+        <attalias Sync="TRUE">FULL_NM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">1073741822</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PREFIX</attrlabl>
+        <attalias Sync="TRUE">ST_PRE_ABBR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STREETNAME</attrlabl>
+        <attalias Sync="TRUE">ST_NM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SUFFIX</attrlabl>
+        <attalias Sync="TRUE">ST_SFX_ABBR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STREETTYPE</attrlabl>
+        <attalias Sync="TRUE">ST_TY_ABBR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="3071" Sync="FALSE" />
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+        <idVersion Sync="FALSE">9.0.1</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Columbia_Addresses_2017">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="1" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">27427</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdFileID>71A20EEB-6716-4239-8E30-EA9891710EFB</mdFileID>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>UW-Madison</rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>310 Science Hall</delPoint>
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+    </maintCont>
+  </mdMaint>
+</metadata>

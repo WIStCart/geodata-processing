@@ -1,0 +1,745 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20121008</CreaDate>
+    <CreaTime>14273200</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <ArcGISstyle>North American Profile of ISO19115 2003</ArcGISstyle>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120718" Time="091105" Name="" export="">CalculateField Address_Points DLVRY_ADD [ADDRESS] VB #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\DefineProjection" Date="20120719" Time="160600" Name="" export="">DefineProjection N:\Emergency\Bullberry\Insight\Address_Points.shp PROJCS['NAD_1983_HARN_WISCRS_Barron_County_Feet',GEOGCS['GCS_North_American_1983_HARN',DATUM['D_North_American_1983_HARN',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Transverse_Mercator'],PARAMETER['False_Easting',305609.625],PARAMETER['False_Northing',0.01],PARAMETER['Central_Meridian',-91.85],PARAMETER['Scale_Factor',1.0000486665],PARAMETER['Latitude_Of_Origin',45.13333333333333],UNIT['Foot_US',0.3048006096012192]]</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120806" Time="113722" Name="" export="">CalculateField masterbldg DLVRY_ADD [ADDRESS] VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20121008" Time="091016" Name="" export="">CalculateField masterbldg DLVRY_ADD [ADDRESS] VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130115" Time="084651" Name="" export="">CalculateField Address_Points LABEL Left( [DLVRY_ADD],Len( [DLVRY_ADD] )-InStr( [DLVRY_ADD], " " )  ) VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130115" Time="084846" Name="" export="">CalculateField Address_Points LABEL InStr( [DLVRY_ADD], " " ) VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130115" Time="085211" Name="" export="">CalculateField Address_Points LABEL InStr( [DLVRY_ADD], " " ) VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130115" Time="093133" Name="" export="">CalculateField Address_Points LABEL Left( [DLVRY_ADD], 6 ) VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130115" Time="093722" Name="" export="">CalculateField Address_Points LABEL Left( [DLVRY_ADD], Len( [DLVRY_ADD] ) - InStrRev( [DLVRY_ADD], " ") ) VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20130115" Time="094851" Name="" export="">CalculateField Address_Points LABEL Left( [DLVRY_ADD], InStr( [DLVRY_ADD], " "  )-1 ) VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20131125" Time="083053" Name="" export="">CalculateField Address_Points UNIQUE "" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20131125" Time="083121" Name="" export="">CalculateField Address_Points XCOORD "" VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20131125" Time="083148" Name="" export="">CalculateField Address_Points XCOORD 0 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20131125" Time="083205" Name="" export="">CalculateField Address_Points YCOORD 0 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20131213" Time="161544" Name="" export="">CalculateField Address_Points LOCATED X2012 VB #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20140520" Time="134549" Name="" export="">CalculateField "BBSI Address_Points" ESZ "126" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20151022" Time="160010" Name="" export="">CalculateField "BBSI Address_Points" LOCATED X2015 VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171016" Time="141201" Name="" export="">CalculateField "BBSI Address_Points" DLVRY_ADD "[LABEL] + " " + "MOON LAKE DR"" VB #</Process>
+      </lineage>
+      <itemProps>
+        <itemName Sync="TRUE">Barron_Addresses_2018</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">224618.999965</westBL>
+          <eastBL Sync="TRUE">385067.742387</eastBL>
+          <southBL Sync="TRUE">27003.522697</southBL>
+          <northBL Sync="TRUE">185526.456963</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <itemSize Sync="TRUE">0.624</itemSize>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2018_ALL_DATA_OPEN_V4\Barron\Barron_Addresses_2018.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_WISCRS_Barron_County_Feet</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_WISCRS_Barron_County_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,305609.625],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.01],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-91.85],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,1.0000486665],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,45.13333333333333],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;ESRI&amp;quot;,103402]]&lt;/WKT&gt;&lt;XOrigin&gt;-18143800&lt;/XOrigin&gt;&lt;YOrigin&gt;-49220900&lt;/YOrigin&gt;&lt;XYScale&gt;3048.0060960121918&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.0032808333333333331&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;103402&lt;/WKID&gt;&lt;LatestWKID&gt;103402&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20180514</SyncDate>
+    <SyncTime>16001500</SyncTime>
+    <ModDate>20180514</ModDate>
+    <ModTime>16001500</ModTime>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <eainfo>
+    <detailed Name="Barron_Addresses_2018">
+      <enttyp>
+        <enttypl Sync="TRUE">Barron_Addresses_2018</enttypl>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">24288</enttypc>
+        <enttypd>Addresses Barron County, WI 2018</enttypd>
+        <enttypds>Barron County GIS</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape</attrlabl>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Feature geometry.</attrdef>
+        <attrdefs Sync="TRUE">ESRI</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CITY</attrlabl>
+        <attalias Sync="TRUE">CITY</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ESZ</attrlabl>
+        <attalias Sync="TRUE">ESZ</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">HOTLINK</attrlabl>
+        <attalias Sync="TRUE">HOTLINK</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LOCATED</attrlabl>
+        <attalias Sync="TRUE">LOCATED</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">NOTES</attrlabl>
+        <attalias Sync="TRUE">NOTES</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">XY</attrlabl>
+        <attalias Sync="TRUE">XY</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">XCOORD</attrlabl>
+        <attalias Sync="TRUE">XCOORD</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">YCOORD</attrlabl>
+        <attalias Sync="TRUE">YCOORD</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DLVRY_ADD</attrlabl>
+        <attalias Sync="TRUE">DLVRY_ADD</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">75</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LABEL</attrlabl>
+        <attalias Sync="TRUE">LABEL</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum>(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park St</delPoint>
+        <city>Madison</city>
+        <adminArea>Wisconsin</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdDateSt Sync="TRUE">20180514</mdDateSt>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+        <rpPosName>metadata technician</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">(608) 262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park St</delPoint>
+            <city>Madison</city>
+            <adminArea>Wisconsin</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday – Friday: 9:00am – 4:00pm</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Barron_Addresses_2018.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.3</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Barron County Land Information/Surveyor/Real Property Lister</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>715-537-6824</voiceNum>
+            <faxNum>715-537-6277</faxNum>
+          </cntPhone>
+          <cntAddress>
+            <delPoint>330 E La Salle Ave Rm 2401</delPoint>
+            <city>Barron</city>
+            <adminArea>WI</adminArea>
+            <postCode>54812</postCode>
+            <country>US</country>
+            <eMailAdd>mark.netterlund@co.barron.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Barron County Land Information/Surveyor/Real Property Lister</displayName>
+        <displayName>Barron County Land Information/Surveyor/Real Property Lister</displayName>
+        <displayName>Barron County Land Information/Surveyor/Real Property Lister</displayName>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Addresses Barron County, WI 2018</resTitle>
+      <date>
+        <pubDate>2018-05-14T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Barron County Land Information/Surveyor/Real Property Lister</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">715-537-6824</voiceNum>
+            <faxNum>715-537-6277</faxNum>
+          </cntPhone>
+          <cntAddress addressType="">
+            <delPoint>330 E La Salle Ave Rm 2401</delPoint>
+            <city>Barron</city>
+            <adminArea>WI</adminArea>
+            <postCode>54812</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Barron County Land Information/Surveyor/Real Property Lister</displayName>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Mark Netterlund</rpIndName>
+        <rpOrgName>Barron County Land Information/Surveyor/Real Property Lister</rpOrgName>
+        <rpPosName>County Surveyor/Land Information Officer</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">715-537-6824</voiceNum>
+            <faxNum>715-537-6277</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>330 East La Salle Avenue, Room 2401</delPoint>
+            <city>Barron</city>
+            <adminArea>WI</adminArea>
+            <postCode>54812</postCode>
+            <country>US</country>
+            <eMailAdd>mark.netterlund@co.barron.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Mark Netterlund</displayName>
+      </citRespParty>
+      <resEdDate>20180101</resEdDate>
+    </idCitation>
+    <idAbs>This point data layer represents street addresses for Barron County in 2018. It is a feature class within the geodatabase, Barron_Addresses_2018.gdb.</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.</idPurp>
+    <idCredit>Barron County Land Information/Surveyor/Real Property Lister</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <idPoC>
+      <rpOrgName>Barron County Land Information/Surveyor/Real Property Lister</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">715-537-6824</voiceNum>
+          <faxNum>715-537-6277</faxNum>
+        </cntPhone>
+        <cntAddress addressType="">
+          <delPoint>330 E La Salle Ave Rm 2401</delPoint>
+          <city>Barron</city>
+          <adminArea>WI</adminArea>
+          <postCode>54812</postCode>
+          <country>US</country>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Barron County Land Information/Surveyor/Real Property Lister</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>715-537-6824</voiceNum>
+            <faxNum>715-537-6277</faxNum>
+          </cntPhone>
+          <cntAddress>
+            <delPoint>330 E La Salle Ave Rm 2401</delPoint>
+            <city>Barron</city>
+            <adminArea>WI</adminArea>
+            <postCode>54812</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Barron County Land Information/Surveyor/Real Property Lister</displayName>
+        <displayName>Barron County Land Information/Surveyor/Real Property Lister</displayName>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Barron County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Point</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Street addresses</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Street Addresses</keyword>
+      <keyword>Barron County</keyword>
+      <keyword>Wisconsin</keyword>
+      <keyword>Point</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-92.172937</westBL>
+          <eastBL>-91.528664</eastBL>
+          <southBL>45.197177</southBL>
+          <northBL>45.649698</northBL>
+          <exTypeCode>0</exTypeCode>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2018-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-92.166627</westBL>
+          <eastBL Sync="TRUE">-91.539364</eastBL>
+          <northBL Sync="TRUE">45.642116</northBL>
+          <southBL Sync="TRUE">45.206958</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="013" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park St</delPoint>
+          <city>Madison</city>
+          <adminArea>Wisconsin</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform to UW-Madison's data distribution plan. </stepDesc>
+        <stepDateTm>2018-05-14T00:00:00</stepDateTm>
+        <stepProc>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+          <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+          <rpPosName>metadata technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>(608) 262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park St</delPoint>
+              <city>Madison</city>
+              <adminArea>Wisconsin</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday – Friday: 9:00am – 4:00pm</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="009" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <idVersion Sync="TRUE">10.3.1</idVersion>
+        <identCode code="103402" Sync="TRUE" />
+        <idCodeSpace Sync="FALSE">EPSG</idCodeSpace>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Barron_Addresses_2018">
+        <geoObjTyp>
+          <GeoObjTypCd value="004" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">24288</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Barron_Addresses_2018">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="1" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">24288</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKyrHxDp1/NqESS+U9hO0EwmwnKgEsMnlfmHNateQfEPwh8P7Tw3feSmnWGpNG0qNCyebK
+I38yRVDMASQxB5zggc4AoA9Qv9asdMvbC0u5WSa/kaOACNiCyqXOSBheATzirEt5awOqTXMMbN90
+O4BPIHGfcgfjXzz8R47Tx94p8PabofiSYfb7eJotNmiZYrbdGWVzjhcrjgAkZznBFbPwu8D+H9Z0
+q+0rxVown1rSpmt38+TBWN8soAVs9SxyRnng+gB6HL8VfBEEDyy+ILddgcshV942ttI2YznPQYya
+avxY8DvLFGPEEG6VVZP3cmGBz32+xz6Hg14J47g8EypYad4f0O60bVpbrbPFdwysyqWZBn5yR2fA
+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</Data>
+    </Thumbnail>
+  </Binary>
+  <mdFileID>88BE73DE-EF76-48AE-ACA9-DCB7D0499AD5</mdFileID>
+</metadata>

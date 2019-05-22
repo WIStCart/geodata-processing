@@ -1,0 +1,368 @@
+﻿<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Brown County Land Information Office</origin>
+        <pubdate>20150101</pubdate>
+        <title>Parcels Brown County, WI 2015</title>
+        <geoform>vector digital data</geoform>
+        <onlink>https://gisdata.wisc.edu/public/Brown_Parcels_2015.zip</onlink>
+        <onlink>http://www.co.brown.wi.us/departments/?department=85713eda4cdc&amp;subdepartment=89ce08984445</onlink>
+        <pubinfo>
+          <pubplace>Brown County (Wis.)</pubplace>
+          <publish>Brown County Land Information Office</publish>
+        </pubinfo>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This polygon data layer represents tax parcels for Brown County, Wisconsin in 2015. It is a feature class within the geodatabase, Brown_Parcels_2015.gdb. [TaxParcel depicts parcels of land as polygon features. Attributes include ParcelType, ParcelID, LegalLabel, MapAreaTxt, CSM, Lot, Municipality and more. The ParcelType is a subtype code which indicates whether a parcel polygon is a regular Tax Parcel or if it's a Condominium. Condominiums are currently mapped as overlapping (stacked) polygons so that a 1:1 join can be used to link up tax assessment records with the parcel. For other areas of land where records are ambiguous and ownership is uncertain, ParcelType may show Gap, Overlap or Undetermined. In some areas, private roadways, public road rights-of-way, and railroad rights-of-way are also coded. ParcelID is the parcel identification number which can be used to relate or join the TaxParcel polygon to assessment records and other information. In the GeoDatabase version of this dataset, the ParcelID is set up as a 1:M Relate to various tables within the geodatabase to link ownership, tax information, assessment, and more. LegalLabel depicts the document of record that CREATED or MODIFIED the shape of the parcel (this document reference does NOT necessarily show the latest document of record (the latest document of record number is instead obtained through the joined/related table in the DocID field). The document numbers on the LegalLabel as well as the DocID number in the related table can be used to look up the deed or other document recorded in the Brown County Register of Deeds office. MapAreaTxt is the size of the parcel, generally the size recorded on the plat, CSM or other legal document. The format follows that shown on the legal document (which may be square feet -- SF -- or Acreage). If the parcel was recently created using a Certified Survey Map (CSM) then that CSM number may be recorded in the ParcelPolygon attributes, which is graphically feature-linked to the CSM text annotation on the map. Lot numbers for some of the recent parcels may also be held as an attribute. The Lot Number is based on the lot shown on the source subdivision plat or CSM. Please refer to the LotNumber annotation feature class, as this text layer contains many more lot numbers. The Lot attribute field in this parcel polygon layer is primarily used to generate feature-linked text on the map for newly-created lots. Please keep in mind that lots are often split, merged and otherwise changed from their original shape and size. In these cases, the legally-recorded lot does not change in size or shape, but the TaxParcel polygon does. MashedWorld is a computed field used to view the parcel from the Google StreetView and Microsoft Virtual Earth perspectives. Created_User and Created_Date fields in TaxParcel polygons tracks the GIS editor who digitized the parcel and the date it was digitized (NOT necessarily the date the parcel was recorded!). Last_Editied_User and Date are automatic GIS data tracking fields to indicate when a parcel was modiefied on the GIS database.]</abstract>
+      <purpose>This layer is intended for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. assessment, and more. [TaxParcel GIS feature class captures the polygon geometry of a recorded parcel of land.]</purpose>
+      <supplinf>For online dataset download, please visit: http://www.co.brown.wi.us/departments/?department=85713eda4cdc&amp;subdepartment=89ce08984445 Best known date is January 14, 2015.</supplinf>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <sngdate>
+          <caldate>20150101</caldate>
+        </sngdate>
+      </timeinfo>
+      <current>publication date</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>Unknown</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-88.252631</westbc>
+        <eastbc>-87.762150</eastbc>
+        <northbc>44.680133</northbc>
+        <southbc>44.240216</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>FGDC</themekt>
+        <themekey>Polygon</themekey>
+      </theme>
+      <theme>
+        <themekt>RML</themekt>
+        <themekey>Land ownership</themekey>
+      </theme>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>planningCadastre</themekey>
+      </theme>
+      <theme>
+        <themekt>LCSH</themekt>
+        <themekey>Real property</themekey>
+      </theme>
+      <theme>
+        <themekt>ISO 19115 Topic Categories</themekt>
+        <themekey>planningCadastre</themekey>
+      </theme>
+      <place>
+        <placekt>GNIS</placekt>
+        <placekey>Wisconsin</placekey>
+        <placekey>Brown County</placekey>
+      </place>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>Online data downloaded directly from Brown County: [Disclaimer and Data Usage Agreement: By clicking the 'Submit' button, you agree that all boundaries shown in the mapping are general representations only and should NOT be used for legal documentation, boundary survey determinations, or property-related issues. All data are based on sources believed to be reliable, but Brown County distributes this information on an "As Is" basis. no warranties are implied. Data may be downloaded and used free-of-charge provided Brown County is credited as the data source.]</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Brown County Land Information Office</cntorg>
+          <cntper>Jeff DuMez</cntper>
+        </cntorgp>
+        <cntpos>LIO/GIS Coordinator</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>305 East Walnut Street, Room 320</address>
+          <address>P.O. Box 23600</address>
+          <city>Green Bay</city>
+          <state>WI</state>
+          <postal>54305</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>920-448-6295</cntvoice>
+        <cntemail>DuMez_JD@co.brown.wi.us</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <datacred>Brown County Land Information Office</datacred>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.3.0.4322</native>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>Attribute information remains the same as given by the author of the data.</attraccr>
+    </attracc>
+    <logic>Unknown</logic>
+    <complete>Unknown</complete>
+    <lineage>
+      <procstep>
+        <procdesc>Changed name of file from 'TaxParcel' to Brown_Parcels_2015.</procdesc>
+        <procdate>20150518</procdate>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>Arthur H. Robinson Map Library, UW-Madison</cntorg>
+            </cntorgp>
+            <cntpos>Data Technician</cntpos>
+            <cntaddr>
+              <addrtype>mailing and physical</addrtype>
+              <address>550 N. Park Street</address>
+              <address>310 Science Hall</address>
+              <city>Madison</city>
+              <state>WI</state>
+              <postal>53706</postal>
+              <country>US</country>
+            </cntaddr>
+            <cntvoice>608-262-1471</cntvoice>
+            <cntemail>askmap@library.wisc.edu</cntemail>
+            <hours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</hours>
+          </cntinfo>
+        </proccont>
+      </procstep>
+      <procstep>
+        <procdesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform with UW-Madison's data distribution plan.</procdesc>
+        <procdate>20150518</procdate>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>Arthur H. Robinson Map Library, UW-Madison</cntorg>
+            </cntorgp>
+            <cntpos>Data Technician</cntpos>
+            <cntaddr>
+              <addrtype>mailing and physical</addrtype>
+              <address>310 Science Hall</address>
+              <address>550 N. Park Street</address>
+              <city>Madison</city>
+              <state>WI</state>
+              <postal>53706</postal>
+              <country>US</country>
+            </cntaddr>
+            <cntvoice>608-262-1471</cntvoice>
+            <cntemail>askmap@library.wisc.edu</cntemail>
+            <hours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</hours>
+          </cntinfo>
+        </proccont>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>GT-polygon composed of chains</sdtstype>
+        <ptvctcnt>102433</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>NAD 1983 HARN WISCRS Brown County Feet</mapprojn>
+          <transmer>
+            <sfctrmer>1.00002</sfctrmer>
+            <longcm>-88.0</longcm>
+            <latprjo>43.0</latprjo>
+            <feast>103674.333</feast>
+            <fnorth>15091.833</fnorth>
+          </transmer>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.00025</absres>
+            <ordres>0.00025</ordres>
+          </coordrep>
+          <plandu>foot_us</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D North American 1983 HARN</horizdn>
+        <ellips>GRS 1980</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257222101</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>Brown_Parcels_2015</enttypl>
+        <enttypd>Parcels Brown County, WI 2015</enttypd>
+        <enttypds>Brown County Land Information Office</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ParcelType</attrlabl>
+        <attrdef>Undetermined (0)  TaxParcel (1)  Condominium (2)   Gap (3)  Overlap (4)  Right of Way (road) (5)  Right of Way (railroad) (6)  Private Roadway (7)  Hydrography (8)  </attrdef>
+      </attr>
+      <attr>
+        <attrlabl>PARCELID</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>LegalLabel</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>MapAreaTxt</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>CSM</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>LOT</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>MUNI</attrlabl>
+        <attrdef>Undetermined (0)  TaxParcel (1)  Condominium (2)  Gap (3)  Overlap (4)  Right of Way (road) (5)  Right of Way (railroad) (6)  Private Roadway (7)  Hydrography (8)</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>GlobalID</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>MashedWorld</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Address_Guid</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>created_user</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>created_date</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>last_edited_user</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>last_edited_date</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Length</attrlabl>
+        <attrdef>Length of feature in internal units.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Area</attrlabl>
+        <attrdef>Area of feature in internal units squared.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Arthur H. Robinson Map Library, UW-Madison</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>550 N. Park Street</address>
+          <address>310 Science Hall</address>
+          <city>Madison</city>
+          <state>WI</state>
+          <postal>53706</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>608-262-1471</cntvoice>
+        <cntemail>askmap@library.wisc.edu</cntemail>
+        <hours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</hours>
+      </cntinfo>
+    </distrib>
+    <resdesc>Archived dataset at UW-Madison</resdesc>
+    <distliab>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>ESRI geodatabase</formname>
+          <formvern>10.3</formvern>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://gisdata.wisc.edu/public/Brown_Parcels_2015.zip</networkr>
+              </networka>
+            </computer>
+            <accinstr>Archived dataset at UW-Madison</accinstr>
+          </onlinopt>
+        </digtopt>
+      </digform>
+    </stdorder>
+  </distinfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Brown County Land Information Office</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>unknown</addrtype>
+          <address>Brown County (Wis.)</address>
+        </cntaddr>
+      </cntinfo>
+    </distrib>
+    <distliab>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</distliab>
+    <stdorder>
+      <digform>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>http://www.co.brown.wi.us/departments/?department=85713eda4cdc&amp;subdepartment=89ce08984445</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20160408</metd>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Arthur H. Robinson Map Library, UW-Madison</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>550 N. Park Street</address>
+          <address>310 Science Hall</address>
+          <city>Madison</city>
+          <state>WI</state>
+          <postal>53706</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>608-262-1471</cntvoice>
+        <cntemail>askmap@library.wisc.edu</cntemail>
+        <hours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</hours>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>

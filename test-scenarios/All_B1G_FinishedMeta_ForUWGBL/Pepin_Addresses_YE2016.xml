@@ -1,0 +1,722 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20170502</CreaDate>
+    <CreaTime>12254200</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <SyncDate>20170720</SyncDate>
+    <SyncTime>13263700</SyncTime>
+    <ModDate>20170720</ModDate>
+    <ModTime>13263700</ModTime>
+    <DataProperties>
+      <lineage>
+        <Process Name="Intersect_1" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Analysis Tools.tbx\Intersect" Date="20070327" Time="120528" export="">Intersect "master_addresses #;'emergency response areas' #" R:\Johne\John2006\Themes\master_addresses_Intersect.shp ALL # INPUT</Process>
+        <Process Name="Project_5" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\Project" Date="20070703" Time="131226" export="">Project "U:\Joel Brown\projected county shapefiles\2006 Address and ESN.shp" "U:\Joel Brown\projected county shapefiles\2006AddressandESN_Project.shp" PROJCS['NAD_1983_HARN_WISCRS_Pepin_County_Feet',GEOGCS['GCS_North_American_1983_HARN',DATUM['D_North_American_1983_HARN',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Lambert_Conformal_Conic'],PARAMETER['False_Easting',550000.0],PARAMETER['False_Northing',282260.222],PARAMETER['Central_Meridian',-92.22777777777777],PARAMETER['Standard_Parallel_1',44.63614887194444],PARAMETER['Scale_Factor',1.0000362977],PARAMETER['Latitude_Of_Origin',44.63614887194444],UNIT['Foot_US',0.3048006096012192]] # PROJCS['NAD_1983_HARN_WISCRS_Pepin_County_Feet',GEOGCS['GCS_North_American_1983_HARN',DATUM['D_North_American_1983_HARN',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Lambert_Conformal_Conic'],PARAMETER['False_Easting',550000.0],PARAMETER['False_Northing',282260.222],PARAMETER['Central_Meridian',-92.22777777777777],PARAMETER['Standard_Parallel_1',44.63614887194444],PARAMETER['Scale_Factor',1.0000362977],PARAMETER['Latitude_Of_Origin',44.63614887194444],UNIT['Foot_US',0.3048006096012192]]</Process>
+        <Process Name="Merge_3" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\Merge" Date="20071115" Time="091034" export="">Merge 'U:\Bullberry\GIS Data\BBSI\Vector\2006AddressandESN_Project.shp';'U:\Joel Brown\projected county shapefiles\addresses\Village of Pepin Addresses and ESN.shp' "U:\Bullberry\GIS Data\BBSI\Vector\2006CombinedAddressPoints2.shp" "FID_master FID_master true false false 9 Long 0 9 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006AddressandESN_Project.shp,FID_master,-1,-1,U:\Joel Brown\projected county shapefiles\addresses\Village of Pepin Addresses and ESN.shp,FID_master,-1,-1;NAME NAME true false false 3 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006AddressandESN_Project.shp,NAME,-1,-1,U:\Joel Brown\projected county shapefiles\addresses\Village of Pepin Addresses and ESN.shp,NAME,-1,-1;ROAD_NAME ROAD_NAME true false false 19 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006AddressandESN_Project.shp,ROAD_NAME,-1,-1,U:\Joel Brown\projected county shapefiles\addresses\Village of Pepin Addresses and ESN.shp,ROAD_NAME,-1,-1;ADDRESS ADDRESS true false false 7 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006AddressandESN_Project.shp,ADDRESS,-1,-1,U:\Joel Brown\projected county shapefiles\addresses\Village of Pepin Addresses and ESN.shp,ADDRESS,-1,-1;SOURCETHM SOURCETHM true false false 16 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006AddressandESN_Project.shp,SOURCETHM,-1,-1,U:\Joel Brown\projected county shapefiles\addresses\Village of Pepin Addresses and ESN.shp,SOURCETHM,-1,-1;Address_RD Address_RD true false false 254 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006AddressandESN_Project.shp,Address_RD,-1,-1,U:\Joel Brown\projected county shapefiles\addresses\Village of Pepin Addresses and ESN.shp,Address_RD,-1,-1;FID_emerge FID_emerge true false false 9 Long 0 9 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006AddressandESN_Project.shp,FID_emerge,-1,-1,U:\Joel Brown\projected county shapefiles\addresses\Village of Pepin Addresses and ESN.shp,FID_emerge,-1,-1;ID ID true false false 8 Long 0 8 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006AddressandESN_Project.shp,ID,-1,-1,U:\Joel Brown\projected county shapefiles\addresses\Village of Pepin Addresses and ESN.shp,ID,-1,-1;LAW_ENFORC LAW_ENFORC true false false 24 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006AddressandESN_Project.shp,LAW_ENFORC,-1,-1,U:\Joel Brown\projected county shapefiles\addresses\Village of Pepin Addresses and ESN.shp,LAW_ENFORC,-1,-1;FIRE_DEPAR FIRE_DEPAR true false false 24 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006AddressandESN_Project.shp,FIRE_DEPAR,-1,-1,U:\Joel Brown\projected county shapefiles\addresses\Village of Pepin Addresses and ESN.shp,FIRE_DEPAR,-1,-1;AMBULANCE AMBULANCE true false false 24 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006AddressandESN_Project.shp,AMBULANCE,-1,-1,U:\Joel Brown\projected county shapefiles\addresses\Village of Pepin Addresses and ESN.shp,AMBULANCE,-1,-1;FIRST_RESP FIRST_RESP true false false 24 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006AddressandESN_Project.shp,FIRST_RESP,-1,-1,U:\Joel Brown\projected county shapefiles\addresses\Village of Pepin Addresses and ESN.shp,FIRST_RESP,-1,-1;MUNCIPALIT MUNCIPALIT true false false 24 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006AddressandESN_Project.shp,MUNCIPALIT,-1,-1,U:\Joel Brown\projected county shapefiles\addresses\Village of Pepin Addresses and ESN.shp,MUNCIPALIT,-1,-1;UID UID true false false 38 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006AddressandESN_Project.shp,UID,-1,-1,U:\Joel Brown\projected county shapefiles\addresses\Village of Pepin Addresses and ESN.shp,UID,-1,-1;DLVRY_ADD DLVRY_ADD true false false 75 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006AddressandESN_Project.shp,DLVRY_ADD,-1,-1,U:\Joel Brown\projected county shapefiles\addresses\Village of Pepin Addresses and ESN.shp,DLVRY_ADD,-1,-1"</Process>
+        <Process Name="Merge_4" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\Merge" Date="20071115" Time="092741" export="">Merge 'U:\Bullberry\GIS Data\BBSI\Vector\2006CombinedAddressPoints2.shp';'U:\Bullberry\GIS Data\BBSI\Vector\c_durand address_06.shp' "U:\Bullberry\GIS Data\BBSI\Vector\2006CombinedAddressPoints.shp" "FID_master FID_master true false false 9 Long 0 9 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006CombinedAddressPoints2.shp,FID_master,-1,-1,U:\Bullberry\GIS Data\BBSI\Vector\c_durand address_06.shp,FID_MASTER,-1,-1;NAME NAME true false false 3 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006CombinedAddressPoints2.shp,NAME,-1,-1,U:\Bullberry\GIS Data\BBSI\Vector\c_durand address_06.shp,NAME,-1,-1;ROAD_NAME ROAD_NAME true false false 19 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006CombinedAddressPoints2.shp,ROAD_NAME,-1,-1,U:\Bullberry\GIS Data\BBSI\Vector\c_durand address_06.shp,ROAD_NAME,-1,-1;ADDRESS ADDRESS true false false 7 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006CombinedAddressPoints2.shp,ADDRESS,-1,-1,U:\Bullberry\GIS Data\BBSI\Vector\c_durand address_06.shp,ADDRESS,-1,-1;SOURCETHM SOURCETHM true false false 16 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006CombinedAddressPoints2.shp,SOURCETHM,-1,-1,U:\Bullberry\GIS Data\BBSI\Vector\c_durand address_06.shp,SOURCETHM,-1,-1;Address_RD Address_RD true false false 254 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006CombinedAddressPoints2.shp,Address_RD,-1,-1,U:\Bullberry\GIS Data\BBSI\Vector\c_durand address_06.shp,ADDRESS_RD,-1,-1;FID_emerge FID_emerge true false false 9 Long 0 9 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006CombinedAddressPoints2.shp,FID_emerge,-1,-1,U:\Bullberry\GIS Data\BBSI\Vector\c_durand address_06.shp,FID_EMERGE,-1,-1;ID ID true false false 8 Long 0 8 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006CombinedAddressPoints2.shp,ID,-1,-1,U:\Bullberry\GIS Data\BBSI\Vector\c_durand address_06.shp,ID,-1,-1;LAW_ENFORC LAW_ENFORC true false false 24 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006CombinedAddressPoints2.shp,LAW_ENFORC,-1,-1,U:\Bullberry\GIS Data\BBSI\Vector\c_durand address_06.shp,LAW_ENFORC,-1,-1;FIRE_DEPAR FIRE_DEPAR true false false 24 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006CombinedAddressPoints2.shp,FIRE_DEPAR,-1,-1,U:\Bullberry\GIS Data\BBSI\Vector\c_durand address_06.shp,FIRE_DEPAR,-1,-1;AMBULANCE AMBULANCE true false false 24 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006CombinedAddressPoints2.shp,AMBULANCE,-1,-1,U:\Bullberry\GIS Data\BBSI\Vector\c_durand address_06.shp,AMBULANCE,-1,-1;FIRST_RESP FIRST_RESP true false false 24 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006CombinedAddressPoints2.shp,FIRST_RESP,-1,-1,U:\Bullberry\GIS Data\BBSI\Vector\c_durand address_06.shp,FIRST_RESP,-1,-1;MUNCIPALIT MUNCIPALIT true false false 24 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006CombinedAddressPoints2.shp,MUNCIPALIT,-1,-1,U:\Bullberry\GIS Data\BBSI\Vector\c_durand address_06.shp,MUNCIPALIT,-1,-1;UID UID true false false 38 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006CombinedAddressPoints2.shp,UID,-1,-1;DLVRY_ADD DLVRY_ADD true false false 75 Text 0 0 ,First,#,U:\Bullberry\GIS Data\BBSI\Vector\2006CombinedAddressPoints2.shp,DLVRY_ADD,-1,-1"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160406" Time="104403" Name="" export="">CalculateField "Address Points" Status Active VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160406" Time="104519" Name="" export="">CalculateField "Address Points" Status "Active" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160406" Time="104559" Name="" export="">CalculateField "Address Points" Status "Retired" VB #</Process>
+      </lineage>
+      <itemProps>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2017_ALL_DATA_OPEN\Pepin\Pepin_Addresses_YE2016.shp</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemName Sync="TRUE">Pepin_Addresses_YE2016</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">532447.252227</westBL>
+          <eastBL Sync="TRUE">700096.937767</eastBL>
+          <southBL Sync="TRUE">208715.554787</southBL>
+          <northBL Sync="TRUE">299899.121783</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <itemSize Sync="TRUE">0.101</itemSize>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <copyHistory>
+        <copy source="R:\ARCHIVE_PROJECT\COUNTIES\2017_ALL_DATA_OPEN\Pepin\Originals\Upload_3_28_2017_12316_PM\Pepin_V3_2017\PepinCountyAddresses" dest="\\robbie\data\ARCHIVE_PROJECT\COUNTIES\2017_ALL_DATA_OPEN\Pepin\PepinCountyAddresses" date="20170502" time="12254200" />
+      </copyHistory>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_WISCRS_Pepin_County_Feet</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_WISCRS_Pepin_County_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Lambert_Conformal_Conic&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,550000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,282260.222],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-92.22777777777777],PARAMETER[&amp;quot;Standard_Parallel_1&amp;quot;,44.63614887194444],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,1.0000362977],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,44.63614887194444],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;ESRI&amp;quot;,103446]]&lt;/WKT&gt;&lt;XOrigin&gt;-119157900&lt;/XOrigin&gt;&lt;YOrigin&gt;-98196800&lt;/YOrigin&gt;&lt;XYScale&gt;37621574.076318227&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.0032808333333333331&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;103446&lt;/WKID&gt;&lt;LatestWKID&gt;103446&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <ArcGISstyle>ISO 19139 Metadata Implementation Specification</ArcGISstyle>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <eainfo>
+    <detailed Name="Pepin_Addresses_YE2016">
+      <enttyp>
+        <enttypl Sync="TRUE">Pepin_Addresses_YE2016</enttypl>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">3797</enttypc>
+        <enttypd>Addresses Pepin County, WI YE2016</enttypd>
+        <enttypds>Pepin County Land Management Office</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">FID</attrlabl>
+        <attalias Sync="TRUE">FID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">ESRI</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape</attrlabl>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Feature geometry.</attrdef>
+        <attrdefs Sync="TRUE">ESRI</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FID_master</attrlabl>
+        <attalias Sync="TRUE">FID_master</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">9</attwidth>
+        <atprecis Sync="TRUE">9</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">NAME</attrlabl>
+        <attalias Sync="TRUE">NAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">3</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ROAD_NAME</attrlabl>
+        <attalias Sync="TRUE">ROAD_NAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDRESS</attrlabl>
+        <attalias Sync="TRUE">ADDRESS</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">7</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SOURCETHM</attrlabl>
+        <attalias Sync="TRUE">SOURCETHM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">16</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Address_RD</attrlabl>
+        <attalias Sync="TRUE">Address_RD</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">254</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FID_emerge</attrlabl>
+        <attalias Sync="TRUE">FID_emerge</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">9</attwidth>
+        <atprecis Sync="TRUE">9</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ID</attrlabl>
+        <attalias Sync="TRUE">ID</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">8</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LAW_ENFORC</attrlabl>
+        <attalias Sync="TRUE">LAW_ENFORC</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">24</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FIRE_DEPAR</attrlabl>
+        <attalias Sync="TRUE">FIRE_DEPAR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">24</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">AMBULANCE</attrlabl>
+        <attalias Sync="TRUE">AMBULANCE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">24</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FIRST_RESP</attrlabl>
+        <attalias Sync="TRUE">FIRST_RESP</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">24</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">MUNCIPALIT</attrlabl>
+        <attalias Sync="TRUE">MUNCIPALIT</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">24</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">UID</attrlabl>
+        <attalias Sync="TRUE">UID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">38</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DLVRY_ADD</attrlabl>
+        <attalias Sync="TRUE">DLVRY_ADD</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">75</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">T4</attrlabl>
+        <attalias Sync="TRUE">T4</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">6</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Status</attrlabl>
+        <attalias Sync="TRUE">Status</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Created</attrlabl>
+        <attalias Sync="TRUE">Created</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKA
+CiiigCC8u7fT7Ke8upRFbwRtLK56KqjJP5CvN/FGs+I9Wt3174f6tBqFr5QsjbRfeikMvzS7WBDH
+gLyOASRkV6XcQR3VtLbzKWilQo4DEZBGDyOR+FeIeJvD3hvQvEJ8L216uhWtykF/5yWCyLGI1lUN
+JK75xvx1GOcfxE0Ad14m0/UfEXw+S5a/u1vEtGkmt9DnBS7Yr80YJGSp5Ax6964SZPFHhrVNNn8S
++K77TfDtu4WWKSTLysIhIY4zGCzpxt3MQRtbuauzfDi4HhWWDwv451O9uNJZpbG1tZ4kWOQplFJX
+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
+ofkPHdiJ/wCyJIYzFKRIryKS4KqDt4wOCT2FZuneE/8AhXfiqbxDFoIMKPeoFEse5otqvF5O+Xg7
+fMB4J2oeBk17bVa70+0vjE1xbxySQsWhdl+aJiCu5T1U4JGQQaAPBPDsWgeP/HmvQ6ddXs8GrWcx
+muJHMdxZ4mVhgElGQkLtAG4A4OOa6Tw9pEeh6nrF1qGq3J1nRxBFqOu6kXEU1q6hjFEA4wQFXDHJ
+3HPcY4/Tfhhq/h/Ubyw1Pw9qOq+YlyLG+0++8uMsyA5fOTGx2AAnglsEMMVm6jqmm+J9W8SalP4m
+v/DsyWNvbNZ6hEZWmi8vZJGRuJdt+05wDyWxnJAB7D8MtNu7/wAERya7O2pWU84m02K8RXaK3TAh
+J4+9hQ35d81x2nSappHjk3vjDVbNFsbie4sby4nM0RheTy5VRQ+Y2y8SjIwoDcda4K38WxeFvEFx
+BLqB1nSLOK3S0tbO8dI7hY23xuzDOx1+8QABnIPcFNc8b6cniy3mh8Miy0qC1LjSnuSkcs74k3yB
+OCMlPlOMhADjgAA9j8I+GLfxLrF54u1rVrfWZ5o5bBrKLD29soc7os4HmAD+8vfPPBr0xVVEVEUK
+qjAAGABXk92/xD8L+FLLTdF0TSgZCIonsXluPIZipBcSc7SS4LHIGRnAr1aIyGJDKFEm0bgvQHvi
+gB9FFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABWF4k8HeH/FtsIda0yG52
+ghJSNsiZ/uuOR0HtxW7RQB4dqf7ONkHnm0PX7q2cj91HcIGC54YFlwcEHHT65q74G+EWr6W+sJ4n
+vLK+iv7c24kSWVplAYMpD/KQCckgeg969kooAxvCug/8I14ctdLN1JdyxAtNcSFiZZGOWf5iSMkk
+4zWzRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUU
+AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB/9k=</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <editorSource>external</editorSource>
+    <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        <country>US</country>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum>(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+    </rpCntInfo>
+    <editorSave>True</editorSave>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>310 Science Hall</delPoint>
+            <delPoint>550 N. Park Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorOrdPrc>
+        <resFees>None</resFees>
+      </distorOrdPrc>
+      <distorFormat>
+        <formatName>ESRI Geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Pepin_Addresses_YE2016.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <transSize Sync="TRUE">0.101</transSize>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.3</formatVer>
+      <formatName Sync="TRUE">Shapefile</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Pepin County Land Management Office</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>715-672-8897</voiceNum>
+            <faxNum>715-672-8677</faxNum>
+          </cntPhone>
+          <cntAddress addressType="postal">
+            <delPoint>PO Box 39</delPoint>
+            <city>Durand</city>
+            <adminArea>WI</adminArea>
+            <postCode>54736</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Pepin County Land Management Office</displayName>
+        <displayName>Pepin County Land Management Office</displayName>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Addresses Pepin County, WI YE2016</resTitle>
+      <date>
+        <pubDate>2017-03-28T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Pepin County Land Management Office</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>715-672-8897</voiceNum>
+            <faxNum>715-672-8677</faxNum>
+          </cntPhone>
+          <cntAddress addressType="postal">
+            <delPoint>PO Box 39</delPoint>
+            <city>Durand</city>
+            <adminArea>WI</adminArea>
+            <postCode>54736</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Pepin County Land Management Office</displayName>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Maria Nelson</rpIndName>
+        <rpOrgName>Pepin County Land Management Office</rpOrgName>
+        <rpPosName>pepza@co.pepin.wi.us </rpPosName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="postal">
+            <delPoint>PO Box 39</delPoint>
+            <city>Durand</city>
+            <adminArea>WI</adminArea>
+            <postCode>54736</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>715-672-8897</voiceNum>
+            <faxNum>715-672-8677</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <resEdDate>20161231</resEdDate>
+    </idCitation>
+    <idAbs>This point data layer represents street addresses for Pepin County, Wisconsin at year-end 2016.</idAbs>
+    <idPurp>This layer is intended reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.</idPurp>
+    <idCredit>Pepin County Land Management Office</idCredit>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Pepin County Land Management Office</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>715-672-8897</voiceNum>
+            <faxNum>715-672-8677</faxNum>
+          </cntPhone>
+          <cntAddress addressType="postal">
+            <delPoint>PO Box 39</delPoint>
+            <city>Durand</city>
+            <adminArea>WI</adminArea>
+            <postCode>54736</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Pepin County Land Management Office</displayName>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Pepin County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Point</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Street Addresses</keyword>
+      <keyword>Point</keyword>
+      <keyword>Pepin County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-92.297824</westBL>
+          <eastBL>-91.64949</eastBL>
+          <southBL>44.409304</southBL>
+          <northBL>44.685092</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2017-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Street Addresses</keyword>
+    </themeKeys>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <suppInfo>This data was submitted to the UW geospatial archive in 2017. Content may be considered current as of December 31, 2016. It was published to the UW geospatial archive as part of the Wisconsin Department of Administration Land Information Program annual collection of public data for the year 2017.</suppInfo>
+    <idPoC>
+      <rpOrgName>Pepin County Land Management Office</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>715-672-8897</voiceNum>
+          <faxNum>715-672-8677</faxNum>
+        </cntPhone>
+        <cntAddress addressType="postal">
+          <delPoint>PO Box 39</delPoint>
+          <city>Durand</city>
+          <adminArea>WI</adminArea>
+          <postCode>54736</postCode>
+          <country>US</country>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="006" />
+      </role>
+      <displayName>Pepin County Land Management Office</displayName>
+      <displayName>Pepin County Land Management Office</displayName>
+    </idPoC>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-92.295260</westBL>
+          <eastBL Sync="TRUE">-91.650732</eastBL>
+          <northBL Sync="TRUE">44.684528</northBL>
+          <southBL Sync="TRUE">44.432979</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="013" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <editorSource>external</editorSource>
+      <editorDigest>d360c47fa90dc70258b439b6f3fde627</editorDigest>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum>(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="7624" Sync="FALSE" />
+        <idCodeSpace Sync="FALSE">EPSG</idCodeSpace>
+        <idVersion Sync="TRUE">10.3.1</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Pepin_Addresses_YE2016">
+        <geoObjTyp>
+          <GeoObjTypCd value="004" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">3797</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Pepin_Addresses_YE2016">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="1" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">3797</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20170720</mdDateSt>
+  <mdFileID>42242D4F-A021-40C1-9A7C-8F6316949D1D</mdFileID>
+</metadata>

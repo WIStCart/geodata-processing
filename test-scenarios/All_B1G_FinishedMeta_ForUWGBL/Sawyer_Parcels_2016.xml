@@ -1,0 +1,946 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20160404</CreaDate>
+    <CreaTime>15080200</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20160404" Time="133144" Name="" export="">CalculateField ParcelC PARCELID [PARCEL_ID] VB #</Process>
+      </lineage>
+      <itemProps>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\Operation_Unrestrict_Data\Sawyer\Sawyer_Parcels_2016\Sawyer_Parcels_2016.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemName Sync="TRUE">Sawyer_Parcels_2016</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">399809.819458</westBL>
+          <eastBL Sync="TRUE">467549.871806</eastBL>
+          <southBL Sync="TRUE">574089.621555</southBL>
+          <northBL Sync="TRUE">632694.669207</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Wisconsin_TM</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Wisconsin_TM&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,3071]]&lt;/WKT&gt;&lt;XOrigin&gt;-118622799.99860919&lt;/XOrigin&gt;&lt;YOrigin&gt;-98624499.99924168&lt;/YOrigin&gt;&lt;XYScale&gt;2438.4048768097532&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;8192&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;8192&lt;/MScale&gt;&lt;XYTolerance&gt;0.00082020833333333349&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.000244140625&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.000244140625&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;3071&lt;/WKID&gt;&lt;LatestWKID&gt;3071&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20190123</SyncDate>
+    <SyncTime>11370600</SyncTime>
+    <ModDate>20190123</ModDate>
+    <ModTime>11370600</ModTime>
+    <scaleRange>
+      <minScale>625000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gApk00dvBJPK22ONS7tjoAMk0+qWsBm0a9RAS7wsigDPJGB+poYEUGv6ZczCGC6EkhBIVUYk4/Cp
+V1ayZiolJIZlP7tuCvUHjtXm+14tRUxYmbIAdGODu78gZGBjgfzqzI6WrpDd7mkMJ8ryMfIzYzkD
+HGG6e+PWuZ1pdB2O9fWdOj277uNdwBXORke35H8qT+3NMxn7bFg+9eaX873EheeW5lfITc2QAOOv
+H/66o3U5knjMsh2klcEgBexzj/61XGpJhY9dh1WwuNxiu4mCHax3cA+hPr7U/wDtC05xcxuQcEI2
+4jvyBXmmj3c+mmALdKEuHR5l2gswznIJ7/410a63YGchZZjvkLkBE5G3HP4msp15xeiuNI6kX1rj
+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
+igAooooAKKKKAP/Z</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+    <role>
+      <RoleCd value="001" />
+    </role>
+    <rpCntInfo>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        <country>US</country>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum>608-262-1471</voiceNum>
+      </cntPhone>
+      <cntHours>Mon-Fri 9:00am - 5:00pm CST-USA</cntHours>
+    </rpCntInfo>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+    <rpPosName>metadata technician</rpPosName>
+  </mdContact>
+  <distInfo>
+    <distFormat>
+      <formatVer>10.5</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Sawyer_Parcels_2016.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distributor>
+      <distorCont>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+        <role>
+          <RoleCd value="005" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntHours>Mon-Fri 9:00am - 5:00pm CST-USA</cntHours>
+        </rpCntInfo>
+        <rpPosName>metadata technician</rpPosName>
+      </distorCont>
+    </distributor>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Sawyer County Land Information Office</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>10610 Main Street Ste 54</delPoint>
+            <city>Hayward</city>
+            <adminArea>WI</adminArea>
+            <postCode>54843-6569</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>715-634-3564</voiceNum>
+            <faxNum>715-634-3546</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Sawyer County Land Information Office</displayName>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <presForm>
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+        <PresFormCd value="005" Sync="TRUE" />
+      </presForm>
+      <date>
+        <pubDate>2016-01-01T00:00:00</pubDate>
+      </date>
+      <resEdDate>20160101</resEdDate>
+      <resTitle Sync="FALSE">Parcels Sawyer County, WI 2016</resTitle>
+      <otherCitDet>This metadata was updated to reflect that the data is no longer restricted and has been opened for public use.</otherCitDet>
+      <citRespParty>
+        <rpOrgName>Sawyer County Land Information Office</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>10610 Main Street Ste 54</delPoint>
+            <city>Hayward</city>
+            <adminArea>WI</adminArea>
+            <postCode>54843-6569</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>715-634-3564</voiceNum>
+            <faxNum>715-634-3546</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Dan Pleoger</rpIndName>
+        <rpOrgName>Sawyer County Land Information Office</rpOrgName>
+        <rpPosName>Land Records Director/Surveyor</rpPosName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>10610 Main Street Ste 54</delPoint>
+            <city>Hayward</city>
+            <adminArea>WI</adminArea>
+            <postCode>54843-6569</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>715-634-3564</voiceNum>
+            <faxNum>715-634-3546</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+    </idCitation>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. 
+
+[this parcel map exists to provide a representation of the shape and location of assessment and title parcels. They were created to support the taxation and assessment base for the Real Property Listing division of the Land Records Department. The maps also provide a base for land information activities used by the County government agencies such as zoning, building, sanitation, planning, conservation, and transportation departments et cetera. Other uses include information used by the private property owners and real estate and title professionals.]</idPurp>
+    <idAbs>This data layer represents parcels for Sawyer County, Wisconsin in 2016. It is a feature class within the geodatabase, Sawyer_Parcels_2016.gdb. [The areas of land that are managed for the real estate tax system, these may be multipart polygons, all have a unique tax key number.]</idAbs>
+    <searchKeys>
+      <keyword>Real property</keyword>
+      <keyword>planning &amp; Cadastre</keyword>
+      <keyword>Land Ownership</keyword>
+      <keyword>Wisconsin</keyword>
+      <keyword>Sawyer County</keyword>
+    </searchKeys>
+    <idCredit>Sawyer County Land Information Office</idCredit>
+    <resConst>
+      <Consts>
+        <useLimit>None.</useLimit>
+      </Consts>
+    </resConst>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Sawyer County Land Information Office</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>10610 Main Street Ste 54</delPoint>
+            <city>Hayward</city>
+            <adminArea>WI</adminArea>
+            <postCode>54843-6569</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>715-634-3564</voiceNum>
+            <faxNum>715-634-3546</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Sawyer County Land Information Office</displayName>
+      </maintCont>
+    </resMaint>
+    <dataExt>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2016-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Polygon</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Real Property, Property Boundary Maps, Plat</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>RML</resTitle>
+      </thesaName>
+      <keyword>Real property</keyword>
+    </themeKeys>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Sawyer County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements.</suppInfo>
+    <idPoC>
+      <rpOrgName>Sawyer County Land Information Office</rpOrgName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>10610 Main Street Ste 54</delPoint>
+          <city>Hayward</city>
+          <adminArea>WI</adminArea>
+          <postCode>54843-6569</postCode>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">715-634-3564</voiceNum>
+          <faxNum>715-634-3546</faxNum>
+        </cntPhone>
+      </rpCntInfo>
+      <displayName>Sawyer County Land Information Office</displayName>
+    </idPoC>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataLang>
+      <languageCode value="eng" Sync="TRUE" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <spatRpType>
+      <SpatRepTypCd value="001" Sync="TRUE" />
+    </spatRpType>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-91.556619</westBL>
+          <eastBL Sync="TRUE">-90.672997</eastBL>
+          <northBL Sync="TRUE">46.165810</northBL>
+          <southBL Sync="TRUE">45.629947</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="015" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum>608-262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Mon-Fri 9:00am - 5:00pm CST-USA</cntHours>
+      </rpCntInfo>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <rpPosName>metadata technician</rpPosName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform to UW-Madison's data distribution plan.</stepDesc>
+        <stepDateTm>2019-01-23T00:00:00</stepDateTm>
+        <stepProc>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+          <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+          <role>
+            <RoleCd value="001" />
+          </role>
+          <rpCntInfo>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+              <country>US</country>
+            </cntAddress>
+            <cntPhone>
+              <voiceNum tddtty="">608-262-1471</voiceNum>
+            </cntPhone>
+            <cntHours>Mon-Fri 9:00am - 5:00pm CST-USA</cntHours>
+          </rpCntInfo>
+          <displayName>Arthur H. Robinson Map Library</displayName>
+          <rpPosName>metadata technician</rpPosName>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="3071" Sync="FALSE" />
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+        <idVersion Sync="FALSE">9.5.4</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Sawyer_Parcels_2016">
+      <enttyp>
+        <enttypl Sync="TRUE">Sawyer_Parcels_2016</enttypl>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">39406</enttypc>
+        <enttypd>Parcels Sawyer County, WI 2016</enttypd>
+        <enttypds>Sawyer County Land Information Office</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape</attrlabl>
+        <attalias Sync="TRUE">SHAPE</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Feature geometry.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STATEID</attrlabl>
+        <attalias Sync="TRUE">STATEID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PARCELID</attrlabl>
+        <attalias Sync="TRUE">PARCELID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TAXPARCELID</attrlabl>
+        <attalias Sync="TRUE">TAXPARCELID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PARCELDATE</attrlabl>
+        <attalias Sync="TRUE">PARCELDATE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TAXROLLYEAR</attrlabl>
+        <attalias Sync="TRUE">TAXROLLYEAR</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">OWNERNME1</attrlabl>
+        <attalias Sync="TRUE">OWNERNME1</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">OWNERNME2</attrlabl>
+        <attalias Sync="TRUE">OWNERNME2</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PSTLADRESS</attrlabl>
+        <attalias Sync="TRUE">PSTLADRESS</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SITEADRESS</attrlabl>
+        <attalias Sync="TRUE">SITEADRESS</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDNUMPREFIX</attrlabl>
+        <attalias Sync="TRUE">ADDNUMPREFIX</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDNUM</attrlabl>
+        <attalias Sync="TRUE">ADDNUM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDNUMSUFFIX</attrlabl>
+        <attalias Sync="TRUE">ADDNUMSUFFIX</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PREFIX</attrlabl>
+        <attalias Sync="TRUE">PREFIX</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STREETNAME</attrlabl>
+        <attalias Sync="TRUE">STREETNAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STREETTYPE</attrlabl>
+        <attalias Sync="TRUE">STREETTYPE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SUFFIX</attrlabl>
+        <attalias Sync="TRUE">SUFFIX</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LANDMARKNAME</attrlabl>
+        <attalias Sync="TRUE">LANDMARKNAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">UNITTYPE</attrlabl>
+        <attalias Sync="TRUE">UNITTYPE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">UNITID</attrlabl>
+        <attalias Sync="TRUE">UNITID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PLACENAME</attrlabl>
+        <attalias Sync="TRUE">PLACENAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ZIPCODE</attrlabl>
+        <attalias Sync="TRUE">ZIPCODE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ZIP4</attrlabl>
+        <attalias Sync="TRUE">ZIP4</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STATE</attrlabl>
+        <attalias Sync="TRUE">STATE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SCHOOLDIST</attrlabl>
+        <attalias Sync="TRUE">SCHOOLDIST</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SCHOOLDISTNO</attrlabl>
+        <attalias Sync="TRUE">SCHOOLDISTNO</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">IMPROVED</attrlabl>
+        <attalias Sync="TRUE">IMPROVED</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CNTASSDVALUE</attrlabl>
+        <attalias Sync="TRUE">CNTASSDVALUE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LNDVALUE</attrlabl>
+        <attalias Sync="TRUE">LNDVALUE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">IMPVALUE</attrlabl>
+        <attalias Sync="TRUE">IMPVALUE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FORESTVALUE</attrlabl>
+        <attalias Sync="TRUE">FORESTVALUE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ESTFMKVALUE</attrlabl>
+        <attalias Sync="TRUE">ESTFMKVALUE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">NETPRPTA</attrlabl>
+        <attalias Sync="TRUE">NETPRPTA</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">GRSPRPTA</attrlabl>
+        <attalias Sync="TRUE">GRSPRPTA</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PROPCLASS</attrlabl>
+        <attalias Sync="TRUE">PROPCLASS</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">AUXCLASS</attrlabl>
+        <attalias Sync="TRUE">AUXCLASS</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ASSDACRES</attrlabl>
+        <attalias Sync="TRUE">ASSDACRES</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DEEDACRES</attrlabl>
+        <attalias Sync="TRUE">DEEDACRES</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">GISACRES</attrlabl>
+        <attalias Sync="TRUE">GISACRES</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CONAME</attrlabl>
+        <attalias Sync="TRUE">CONAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LOADDATE</attrlabl>
+        <attalias Sync="TRUE">LOADDATE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PARCELFIPS</attrlabl>
+        <attalias Sync="TRUE">PARCELFIPS</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PARCELSRC</attrlabl>
+        <attalias Sync="TRUE">PARCELSRC</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Length</attrlabl>
+        <attalias Sync="TRUE">SHAPE_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Length of feature in internal units.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Area</attrlabl>
+        <attalias Sync="TRUE">SHAPE_Area</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Area of feature in internal units squared.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Sawyer_Parcels_2016">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">39406</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Sawyer_Parcels_2016">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="4" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">39406</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20190123</mdDateSt>
+  <mdFileID>C8403A5F-3757-4F41-B079-1026FC203127</mdFileID>
+</metadata>

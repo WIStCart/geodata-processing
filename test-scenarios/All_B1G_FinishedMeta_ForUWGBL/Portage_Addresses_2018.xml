@@ -1,0 +1,894 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <SyncOnce>FALSE</SyncOnce>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <CreaDate>20150512</CreaDate>
+    <CreaTime>13185000</CreaTime>
+    <DataProperties>
+      <itemProps>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\Portage_Addresses_2018.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <itemName Sync="TRUE">Portage_Addresses_2018</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">95148.062004</westBL>
+          <eastBL Sync="TRUE">257140.975994</eastBL>
+          <southBL Sync="TRUE">101122.043994</southBL>
+          <northBL Sync="TRUE">262053.472008</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <lineage>
+        <Process ToolSource="c:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150512" Time="132341" Name="" export="">CalculateField "Site Address Points" SITEADDID ""SID-" + str(!OBJECTID!)" PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150512" Time="132517" Name="" export="">CalculateField "Site Address Points" FULLADDR "!ADDRNUM! + !FULLNAME!" PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150512" Time="132535" Name="" export="">CalculateField "Site Address Points" FULLADDR "!ADDRNUM! + " " + !FULLNAME!" PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\TruncateTable" Date="20150513" Time="133312" Name="" export="">TruncateTable C:\arcdata\LocalGovernment.gdb\Address\SiteAddressPoint</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150513" Time="133624" Name="" export="">CalculateField "Site Address Points" SITEADDID ""SID-" + !ADDRNUM!" PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150513" Time="133816" Name="" export="">CalculateField "Site Address Points" SITEADDID ""SID-" + str(!OBJECTID!)" PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150513" Time="133945" Name="" export="">CalculateField "Site Address Points" FULLADDR "!ADDRNUM! + " " + !FULLNAME!" PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.3\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20150513" Time="134601" Name="" export="">CalculateField "Site Address Points" UNITID None PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170926" Time="160311" Name="" export="">CalculateField "Site Address Points" ADDRNUM None PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170926" Time="160352" Name="" export="">CalculateField "Site Address Points" ADDRNUM "3654" PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170926" Time="160404" Name="" export="">CalculateField "Site Address Points" ADDRRANGE None PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170926" Time="161412" Name="" export="">CalculateField "Site Address Points" ADDRNUMSUF "A" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20170926" Time="161425" Name="" export="">CalculateField "Site Address Points" ADDRNUM "1150" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.4\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20180328" Time="114136" Name="" export="">CopyFeatures N:\Geodata\LocalGovernment.gdb\Address\SiteAddressPoint U:\Hartman\LIO\StatewideParcelMapProject\V4\PORTAGE_OTHER.gdb\SiteAddressPoint # 0 0 0</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20180611" Time="162535" Name="" export="">FeatureClassToFeatureClass R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018 R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\Portage_Addresses_2018.gdb Portage_Addresses_2018 # "SITEADDID "Site Address ID" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,SITEADDID,-1,-1;ADDPTKEY "Address Point ID" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,ADDPTKEY,-1,-1;PREADDRNUM "Address Number Prefix" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,PREADDRNUM,-1,-1;ADDRNUMSUF "Address Number Suffix" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,ADDRNUMSUF,-1,-1;ADDRNUM "Full Address Number" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,ADDRNUM,-1,-1;ADDRRANGE "Address Range" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,ADDRRANGE,-1,-1;UNITTYPE "Address Unit Type" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,UNITTYPE,-1,-1;UNITID "Address Unit Number" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,UNITID,-1,-1;ALTUNITTYPE "Alternate Address Unit Type" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,ALTUNITTYPE,-1,-1;ALTUNITID "Alternate Address Unit Number" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,ALTUNITID,-1,-1;FULLNAME "Full Road Name" true true false 125 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,FULLNAME,-1,-1;FULLADDR "Full Address" true true false 250 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,FULLADDR,-1,-1;PLACENAME "Place Name" true true false 250 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,PLACENAME,-1,-1;MUNICIPALITY "Municipality Name" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,MUNICIPALITY,-1,-1;ESN "Emergency Service Number" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,ESN,-1,-1;PSAP "Public Safety Answering Point" true true false 4 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,PSAP,-1,-1;MSAG "MSAG Community" true true false 35 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,MSAG,-1,-1;USNGCOORD "USNG Coordinate" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,USNGCOORD,-1,-1;ADDRCLASS "Description" true true false 4 Long 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,ADDRCLASS,-1,-1;POINTTYPE "Location" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,POINTTYPE,-1,-1;CAPTUREMETH "Capture Method" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,CAPTUREMETH,-1,-1;STATUS "Status" true true false 30 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,STATUS,-1,-1;LASTUPDATE "Last Update Date" true true false 8 Date 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,LASTUPDATE,-1,-1;LASTEDITOR "Last Editor" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,LASTEDITOR,-1,-1;ALI_NAME "ALI_NAME" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,ALI_NAME,-1,-1;ZIPCODE "ZIPCODE" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,ZIPCODE,-1,-1;CITY "CITY" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2018_ALL_DATA_OPEN_V4\Portage\PORTAGE_OTHER.gdb\PORTAGE_ADDRESSES_2018,CITY,-1,-1" #</Process>
+      </lineage>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_WISCRS_Portage_County_Feet</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_WISCRS_Portage_County_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Lambert_Conformal_Conic&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,185000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,164114.46],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-89.5],PARAMETER[&amp;quot;Standard_Parallel_1&amp;quot;,44.41682397527777],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,1.000039936],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,44.41682397527777],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;ESRI&amp;quot;,103449]]&lt;/WKT&gt;&lt;XOrigin&gt;-119585099.99995799&lt;/XOrigin&gt;&lt;YOrigin&gt;-98215199.999984995&lt;/YOrigin&gt;&lt;XYScale&gt;52964.319121566397&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.00015104508341999001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;103449&lt;/WKID&gt;&lt;LatestWKID&gt;103449&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <SyncDate>20180711</SyncDate>
+    <SyncTime>09202000</SyncTime>
+    <ModDate>20180711</ModDate>
+    <ModTime>09202000</ModTime>
+    <scaleRange>
+      <minScale>50000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKqapqVto+lXWpXj7La1iaWRgMkKoyce9ctoXxK0bUn06y1JxpmtX6h49Ol3M4VifLy20
+AFlAOO2RQB2lNdxHGzsGIUEnapJ/ADk15Z8UfG+m+QnhvTtVuIdaN9ApNuTGIirxsQ8hKhRhxzkj
+IwcVofFvUZLv4S6pd6JP9ojLIGntJ/uosgDkFeoBGCPTPpQBLffGjwXpwthdXtykk8KzeUbWTfGr
+DI3DHBI5+hB6EGkl+NvgCKFH/ttmLgHYlrKSucdflx3/AENeXXHwjvNP+FM1/e6dFc6vBdRXQWBz
+I72u1QyAqAc8knkgbeDUvj+Pw54j0e217wHpqC60iNZrqVLR08mOPaAjKfkLLnJBU5VTg4HIB6fH
+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
+Z9B+P9aXAznHNFFABRRRQAUUUUAFFFFAH//Z</Data>
+    </Thumbnail>
+  </Binary>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdContact>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+    <rpPosName>Metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        <country>US</country>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum tddtty="">(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+    </rpCntInfo>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+        <rpPosName>Metadata technician</rpPosName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">(608) 262-1471</voiceNum>
+          </cntPhone>
+          <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+        </rpCntInfo>
+        <displayName>Arthur H. Robinson Map Library</displayName>
+        <role>
+          <RoleCd value="001" />
+        </role>
+      </distorCont>
+    </distributor>
+    <distFormat>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+      <formatVer>10.3</formatVer>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Portage County Planning and Zoning</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <eMailAdd>hartmanj@co.portage.wi.us</eMailAdd>
+            <delPoint>1462 Strongs Ave</delPoint>
+            <city>Stevens Point</city>
+            <adminArea>WI</adminArea>
+            <postCode>54481</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">715-346-1211</voiceNum>
+            <faxNum>715-346-1677</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Portage County Planning and Zoning</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </distorCont>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Portage_Addresses_2018.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Addresses Portage County, WI 2018</resTitle>
+      <presForm>
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+        <PresFormCd value="005" Sync="TRUE" />
+      </presForm>
+      <date>
+        <pubDate>2018-07-11T00:00:00</pubDate>
+      </date>
+      <resEdDate>20180101</resEdDate>
+      <citRespParty>
+        <rpOrgName>Portage Planning and Zoning </rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <eMailAdd>hartmanj@co.portage.wi.us</eMailAdd>
+            <delPoint>1462 Strongs Ave</delPoint>
+            <city>Stevens Point</city>
+            <adminArea>WI</adminArea>
+            <postCode>54481</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">715-346-1211</voiceNum>
+            <faxNum>715-346-1677</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Jeff Hartman</rpIndName>
+        <rpOrgName>Portage County Planning and Zoning</rpOrgName>
+        <rpPosName>Land Information Officer</rpPosName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>1462 Strongs Ave</delPoint>
+            <city>Stevens Point</city>
+            <adminArea>WI</adminArea>
+            <postCode>54481</postCode>
+            <eMailAdd>hartmanj@co.portage.wi.us</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">715-346-1211</voiceNum>
+            <faxNum>715-346-1677</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+    </idCitation>
+    <dataExt>
+      <exDesc>[Addresses are added as we become aware of them. Only current addresses are kept.]</exDesc>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2018-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. [Site address points.]
+</idPurp>
+    <idAbs>This data layer represents addresses for Portage County, Wisconsin in 2018. It is a feature class within the geodatabase, "Portage_Addresses_2018.gdb". [Site address points represent the location of site or service delivery addresses assigned by local governments.]</idAbs>
+    <searchKeys>
+      <keyword>Addresses</keyword>
+      <keyword>Street Addresses</keyword>
+      <keyword>Portage County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Portage County Planning and Zoning</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <eMailAdd>hartmanj@co.portage.wi.us</eMailAdd>
+            <delPoint>1462 Strongs Ave</delPoint>
+            <city>Stevens Point</city>
+            <adminArea>WI</adminArea>
+            <postCode>54481</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">715-346-1211</voiceNum>
+            <faxNum>715-346-1677</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <displayName>Portage County Planning and Zoning</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.
+
+</useLimit>
+      </LegConsts>
+    </resConst>
+    <idCredit>Portage County Planning and Zoning</idCredit>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Point</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Street Addresses</keyword>
+    </themeKeys>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Portage County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements.</suppInfo>
+    <idPoC>
+      <rpOrgName>Portage County Planning and Zoning</rpOrgName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <eMailAdd>hartmanj@co.portage.wi.us</eMailAdd>
+          <delPoint>1462 Strongs Ave</delPoint>
+          <city>Stevens Point</city>
+          <adminArea>WI</adminArea>
+          <postCode>54481</postCode>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">715-346-1211</voiceNum>
+          <faxNum>715-346-1677</faxNum>
+        </cntPhone>
+      </rpCntInfo>
+      <displayName>Portage County Planning and Zoning</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataLang>
+      <languageCode value="eng" Sync="TRUE" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <spatRpType>
+      <SpatRepTypCd value="001" Sync="TRUE" />
+    </spatRpType>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-89.845439</westBL>
+          <eastBL Sync="TRUE">-89.222651</eastBL>
+          <northBL Sync="TRUE">44.685450</northBL>
+          <southBL Sync="TRUE">44.243526</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="013" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+      <rpPosName>Metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Monday – Friday: 9:00am – 5:00pm</cntHours>
+      </rpCntInfo>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform to UW-Madison's data distribution plan. </stepDesc>
+        <stepDateTm>2018-07-11T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>UW-Madison</rpOrgName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum tddtty="">608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>310 Science Hall</delPoint>
+              <delPoint>550 N. Park Street</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+          <rpPosName>Metadata technician</rpPosName>
+          <displayName>Arthur H. Robinson Map Library</displayName>
+          <role>
+            <RoleCd value="001" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="7626" Sync="FALSE" />
+        <idCodeSpace Sync="FALSE">EPSG</idCodeSpace>
+        <idVersion Sync="FALSE">9.4.1</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Portage_Addresses_2018">
+      <enttyp>
+        <enttypl Sync="TRUE">Portage_Addresses_2018</enttypl>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">30438</enttypc>
+        <enttypd>Addresses Portage County, WI 2018</enttypd>
+        <enttypds>Portage County Planning and Zoning</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SHAPE</attrlabl>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Feature geometry.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SITEADDID</attrlabl>
+        <attalias Sync="TRUE">Site Address ID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDPTKEY</attrlabl>
+        <attalias Sync="TRUE">Address Point ID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PREADDRNUM</attrlabl>
+        <attalias Sync="TRUE">Address Number Prefix</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDRNUMSUF</attrlabl>
+        <attalias Sync="TRUE">Address Number Suffix</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDRNUM</attrlabl>
+        <attalias Sync="TRUE">Full Address Number</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDRRANGE</attrlabl>
+        <attalias Sync="TRUE">Address Range</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">UNITTYPE</attrlabl>
+        <attalias Sync="TRUE">Address Unit Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">UNITID</attrlabl>
+        <attalias Sync="TRUE">Address Unit Number</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ALTUNITTYPE</attrlabl>
+        <attalias Sync="TRUE">Alternate Address Unit Type</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ALTUNITID</attrlabl>
+        <attalias Sync="TRUE">Alternate Address Unit Number</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">City</attrlabl>
+        <attalias Sync="TRUE">CITY</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef>site address city</attrdef>
+        <attrdefs>Portage County</attrdefs>
+        <attrdomv>
+          <udom>free text</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FULLADDR</attrlabl>
+        <attalias Sync="TRUE">Full Address</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">250</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PLACENAME</attrlabl>
+        <attalias Sync="TRUE">Place Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">250</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Zipcode</attrlabl>
+        <attalias Sync="TRUE">ZIPCODE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef>site address ZIP code</attrdef>
+        <attrdefs>Portage County</attrdefs>
+        <attrdomv>
+          <udom>54406, 54407, 54423, 54443, 54454, 54455, 54458, 54467, 54473, 54475, 54481, 54482, 54494, 54499, 54909, 54921, 54945, 54966, 54977, 54981, 54984</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">municipality</attrlabl>
+        <attalias Sync="TRUE">Municipality Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef>Name of the municipality in which the site address lies.</attrdef>
+        <attrdefs>Portage County</attrdefs>
+        <attrdomv>
+          <udom>All municipalities in Portage County, Wisconsin.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PSAP</attrlabl>
+        <attalias Sync="TRUE">Public Safety Answering Point</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">MSAG</attrlabl>
+        <attalias Sync="TRUE">MSAG Community</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">35</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">USNGCOORD</attrlabl>
+        <attalias Sync="TRUE">USNG Coordinate</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ADDRCLASS</attrlabl>
+        <attalias Sync="TRUE">Description</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">POINTTYPE</attrlabl>
+        <attalias Sync="TRUE">Location</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CAPTUREMETH</attrlabl>
+        <attalias Sync="TRUE">Capture Method</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">STATUS</attrlabl>
+        <attalias Sync="TRUE">Status</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">30</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ESN</attrlabl>
+        <attalias Sync="TRUE">Emergency Service Number</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef>emergency service number that identifies emergency response agencies.</attrdef>
+        <attrdefs>Portage County</attrdefs>
+        <attrdomv>
+          <udom>55 three digit codes.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FullName</attrlabl>
+        <attalias Sync="TRUE">Full Road Name</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">125</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef>Full address minus address number for geocoding purposes.</attrdef>
+        <attrdefs>Portage county</attrdefs>
+        <attrdomv>
+          <udom>Free text</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ALI_NAME</attrlabl>
+        <attalias Sync="TRUE">ALI_NAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LASTUPDATE</attrlabl>
+        <attalias Sync="TRUE">Last Update Date</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef>Most recent edit on individual address point.  Started 4/6/2015</attrdef>
+        <attrdefs>Portage County</attrdefs>
+        <attrdomv>
+          <udom>Dates beginning April 6, 2015</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LASTEDITOR</attrlabl>
+        <attalias Sync="TRUE">Last Editor</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef>Account name of last person to edit individual address point.  Begun 4/6/2015.</attrdef>
+        <attrdefs>Portage County</attrdefs>
+        <attrdomv>
+          <udom>User account names.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <mdLang>
+    <languageCode value="eng" Sync="TRUE" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdHrLv>
+    <ScopeCd value="005" Sync="TRUE" />
+  </mdHrLv>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Portage_Addresses_2018">
+        <geoObjTyp>
+          <GeoObjTypCd value="004" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">30438</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Portage_Addresses_2018">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="1" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">30438</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20180711</mdDateSt>
+  <mdFileID>FFF4CC7E-7656-484B-8217-2EF00C6CA600</mdFileID>
+</metadata>

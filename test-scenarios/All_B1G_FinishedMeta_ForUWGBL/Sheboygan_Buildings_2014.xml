@@ -1,0 +1,670 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <SyncOnce>FALSE</SyncOnce>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <DataProperties>
+      <itemProps>
+        <itemName Sync="TRUE">Sheboygan_Buildings_2014</itemName>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\Operation_Unrestrict_Data\Sheboygan\Sheboygan_Buildings_2014\Sheboygan_Buildings_2014.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <nativeExtBox>
+          <westBL Sync="TRUE">100105.152631</westBL>
+          <eastBL Sync="TRUE">223352.886368</eastBL>
+          <southBL Sync="TRUE">100884.662111</southBL>
+          <northBL Sync="TRUE">228326.439297</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_User_Defined</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+        <projcsn Sync="TRUE">User_Defined_Transverse_Mercator</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;User_Defined_Transverse_Mercator&amp;quot;,GEOGCS[&amp;quot;GCS_User_Defined&amp;quot;,DATUM[&amp;quot;D_User_Defined&amp;quot;,SPHEROID[&amp;quot;User_Defined_Spheroid&amp;quot;,6378285.48,298.2641653866821]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,262000.0009333333],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-87.55],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,1.0],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,43.26666666666667],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192]]&lt;/WKT&gt;&lt;XOrigin&gt;-17463800&lt;/XOrigin&gt;&lt;YOrigin&gt;-46132600&lt;/YOrigin&gt;&lt;XYScale&gt;2438.4048768097518&lt;/XYScale&gt;&lt;ZOrigin&gt;0&lt;/ZOrigin&gt;&lt;ZScale&gt;199999.99999999997&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.0065616666666666714&lt;/XYTolerance&gt;&lt;ZTolerance&gt;4.0000000000000003e-005&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+      <lineage>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.0\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20120502" Time="135150" Name="" export="">FeatureClassToFeatureClass "C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\DamageAssess\Buildings.gdb\BuildingFootprint" "C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\LocalGovernment.gdb\ReferenceData" BuildingFootprint # "BLDGHEIGHT "Building Height" true true false 4 Long 0 0 ,First,#,C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\DamageAssess\Buildings.gdb\BuildingFootprint,BLDGHEIGHT,-1,-1;NUMSTORIES "Number of Stories" true true false 2 Short 0 0 ,First,#,C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\DamageAssess\Buildings.gdb\BuildingFootprint,NUMSTORIES,-1,-1;FEATURECODE "Facility Site Code" true true false 100 Text 0 0 ,First,#,C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\DamageAssess\Buildings.gdb\BuildingFootprint,FEATURECODE,-1,-1;LASTUPDATE "Last Update Date" true true false 8 Date 0 0 ,First,#,C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\DamageAssess\Buildings.gdb\BuildingFootprint,LASTUPDATE,-1,-1;LASTEDITOR "Last Editor" true true false 50 Text 0 0 ,First,#,C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\DamageAssess\Buildings.gdb\BuildingFootprint,LASTEDITOR,-1,-1;SHAPE_Length "SHAPE_Length" false true true 8 Double 0 0 ,First,#,C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\DamageAssess\Buildings.gdb\BuildingFootprint,SHAPE_Length,-1,-1;SHAPE_Area "SHAPE_Area" false true true 8 Double 0 0 ,First,#,C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\DamageAssess\Buildings.gdb\BuildingFootprint,SHAPE_Area,-1,-1" #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" Date="20120603" Time="150709" Name="" export="">AddField "C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\LocalGovernment.gdb\ReferenceData\BuildingFootprint" BLDGHEIGHT_794063 DOUBLE 0 0 8 "Building Height" NULLABLE NON_REQUIRED #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120603" Time="150713" Name="" export="">CalculateField "C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\LocalGovernment.gdb\ReferenceData\BuildingFootprint" BLDGHEIGHT_794063 !BLDGHEIGHT! PYTHON #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteField" Date="20120603" Time="150716" Name="" export="">DeleteField "C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\LocalGovernment.gdb\ReferenceData\BuildingFootprint" BLDGHEIGHT</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" Date="20120603" Time="150720" Name="" export="">AddField "C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\LocalGovernment.gdb\ReferenceData\BuildingFootprint" BLDGHEIGHT DOUBLE 0 0 8 "Building Height" NULLABLE NON_REQUIRED #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20120603" Time="150723" Name="" export="">CalculateField "C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\LocalGovernment.gdb\ReferenceData\BuildingFootprint" BLDGHEIGHT !BLDGHEIGHT_794063! PYTHON #</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteField" Date="20120603" Time="150727" Name="" export="">DeleteField "C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\LocalGovernment.gdb\ReferenceData\BuildingFootprint" BLDGHEIGHT_794063</Process>
+        <Process ToolSource="C:\Program Files (x86)\ArcGIS\Desktop10.0\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20120603" Time="150851" Name="" export="">FeatureClassToFeatureClass "C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\LocalGovernment.gdb\ReferenceData\BuildingFootprint" "C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\LocalGovernment.gdb\ReferenceData" BuildingFootprint0 # "NUMSTORIES "Number of Stories" true true false 2 Short 0 0 ,First,#,C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\LocalGovernment.gdb\ReferenceData\BuildingFootprint,NUMSTORIES,-1,-1;BLDGHEIGHT "Building Height" true true false 8 Double 0 0 ,First,#,C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\LocalGovernment.gdb\ReferenceData\BuildingFootprint,BLDGHEIGHT,-1,-1;FEATURECODE "Facility Site Code" true true false 100 Text 0 0 ,First,#,C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\LocalGovernment.gdb\ReferenceData\BuildingFootprint,FEATURECODE,-1,-1;LASTUPDATE "Last Update Date" true true false 8 Date 0 0 ,First,#,C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\LocalGovernment.gdb\ReferenceData\BuildingFootprint,LASTUPDATE,-1,-1;LASTEDITOR "Last Editor" true true false 50 Text 0 0 ,First,#,C:\Users\scot6032\Documents\Application Templates\Local Government\MasterLocalGovGDB\LGIM Future Release\LocalGovernment.gdb\ReferenceData\BuildingFootprint,LASTEDITOR,-1,-1" #</Process>
+        <Process ToolSource="c:\program files\arcgis\desktop10.1\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20130419" Time="114107" Name="" export="">Append C:\ShebcoLocalGovernment\MapsandGeodatabase\StagingGeodatabase.gdb\FOOTPRINTS C:\ShebcoLocalGovernment\MapsandGeodatabase\LocalGovernment.gdb\ReferenceData\BuildingFootprint NO_TEST "NUMSTORIES "Number of Stories" true true false 2 Short 0 0 ,First,#;BLDGHEIGHT "Building Height" true true false 8 Double 0 0 ,First,#;FEATURECODE "Facility Site Code" true true false 100 Text 0 0 ,First,#;LASTUPDATE "Last Update Date" true true false 8 Date 0 0 ,First,#;LASTEDITOR "Last Editor" true true false 50 Text 0 0 ,First,#;Shape_Length "Shape_Length" false true true 8 Double 0 0 ,First,#,C:\ShebcoLocalGovernment\MapsandGeodatabase\StagingGeodatabase.gdb\FOOTPRINTS,Shape_Length,-1,-1;Shape_Area "Shape_Area" false true true 8 Double 0 0 ,First,#,C:\ShebcoLocalGovernment\MapsandGeodatabase\StagingGeodatabase.gdb\FOOTPRINTS,Shape_Area,-1,-1" #</Process>
+      </lineage>
+    </DataProperties>
+    <SyncDate>20190117</SyncDate>
+    <SyncTime>10453800</SyncTime>
+    <ModDate>20190117</ModDate>
+    <ModTime>10453800</ModTime>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKa0iIyqzAM3QE9f8APH506kIB6gHtQAwToXCfPuI3fcPTOPSiKaOYuEJOxircEcillEhQ
+iMgN2J7Gqu6ZEZ4Ajj5j5SKBluf4s47/AI/nQBbV1dQykMpGQR0IoMiBgpYbvSq4lbzxGVdNykqd
+vAxxgnPv7ZouMgi4QA7FIJCliBwcBR6/4cGgCcSIWK55AyeOPzpsdzDM7JHIGZfvAduM/wBR+dQ3
+DvvSFn2+YONiEkHI756c+negxP5iNwZlVvnCkLgsDjGepx+lAE/nJtLfNgHBO00n2mIru3HH+6ee
+vT16GoVhcQCPfGckocjqMnP41Eba5+2eY1wskectGU9MYxg9ePTHJoAv5GB159qj+0R/LyQWOACp
+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
+KACiiigAooooAKKKKACiiigAooooAKKKKAP/2Q==</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum>608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Sheboygan_Buildings_2014.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.5</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Sheboygan County Land Information</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum tddtty="">920-459-3826</voiceNum>
+            <faxNum>920-459-3831</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>1211 N 23rd St</delPoint>
+            <city>Sheboygan</city>
+            <adminArea>WI</adminArea>
+            <postCode>53081</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Ed Harvey Jr.</displayName>
+        <displayName>Ed Harvey Jr.</displayName>
+        <displayName>Ed Harvey Jr.</displayName>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Buildings Sheboygan County, WI 2014</resTitle>
+      <date>
+        <pubDate>2014-01-01T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <resEdDate>20140101</resEdDate>
+      <citRespParty>
+        <rpOrgName>Sheboygan County Land Information</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>1211 N 23rd St</delPoint>
+            <city>Sheboygan</city>
+            <adminArea>WI</adminArea>
+            <postCode>53081</postCode>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>920-459-3826</voiceNum>
+            <faxNum>920-459-3831</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Aaron Brault</rpIndName>
+        <rpOrgName>Planning and Conservation Department</rpOrgName>
+        <rpPosName>Director</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>920-459-3060</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>1211 N 23rd St</delPoint>
+            <city>Sheboygan</city>
+            <adminArea>WI</adminArea>
+            <postCode>53081</postCode>
+            <country>US</country>
+            <eMailAdd>aaron.brault@sheboygancounty.com</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Ed Harvey Jr.</displayName>
+      </citRespParty>
+      <otherCitDet>This metadata was updated to reflect that the data is no longer restricted and has been opened for public use.</otherCitDet>
+    </idCitation>
+    <idAbs>This data layer represents buildings for Sheboygan County, Wisconsin in 2014. It is a feature class within the geodatabase “Sheboygan_Buildings_2014.gdb”. [The shape and orientation of the ground floor of all structures in a local government. This information is typically compiled from orthoimagery or other aerial photography sources. This representation of the building footprints support the local government basemaps. It also serves as a source for public works, public safety, planning and other agencies that are responsible for the active management of site addresses, facilities, and land use information.]</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. [Building Footprints.]</idPurp>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Sheboygan County Land Information</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>920-459-3826</voiceNum>
+            <faxNum>920-459-3831</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>1211 N 23rd St</delPoint>
+            <city>Sheboygan</city>
+            <adminArea>WI</adminArea>
+            <postCode>53081</postCode>
+            <country>US</country>
+            <eMailAdd>aaron.brault@sheboygancounty.com</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Ed Harvey Jr.</displayName>
+        <displayName>Ed Harvey Jr.</displayName>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Sheboygan County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Polygon</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Buildings, Structures</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Buildings</keyword>
+      <keyword>Structures</keyword>
+      <keyword>Building Footprints</keyword>
+      <keyword>Sheboygan County</keyword>
+      <keyword>Wisconsin</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-88.164484</westBL>
+          <eastBL>-87.695744</eastBL>
+          <southBL>43.527413</southBL>
+          <northBL>43.901261</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2014-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+      <vertEle>
+        <vertMinVal Sync="TRUE">0.000000</vertMinVal>
+        <vertMaxVal Sync="TRUE">0.000000</vertMaxVal>
+      </vertEle>
+    </dataExt>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements.</suppInfo>
+    <idCredit>Sheboygan County Land Information</idCredit>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idPoC>
+      <rpOrgName>Sheboygan County Land Information</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">920-459-3826</voiceNum>
+          <faxNum>920-459-3831</faxNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>1211 N 23rd St</delPoint>
+          <city>Sheboygan</city>
+          <adminArea>WI</adminArea>
+          <postCode>53081</postCode>
+          <country>US</country>
+          <eMailAdd>aaron.brault@sheboygancounty.com</eMailAdd>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="006" />
+      </role>
+      <displayName>Ed Harvey Jr.</displayName>
+      <displayName>Ed Harvey Jr.</displayName>
+    </idPoC>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-88.164101</westBL>
+          <eastBL Sync="TRUE">-87.695751</eastBL>
+          <northBL Sync="TRUE">43.892944</northBL>
+          <southBL Sync="TRUE">43.541804</southBL>
+        </GeoBndBox>
+      </geoEle>
+      <vertEle>
+        <vertMinVal Sync="TRUE">0.000000</vertMinVal>
+        <vertMaxVal Sync="TRUE">0.000000</vertMaxVal>
+      </vertEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="017" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>310 Science Hall</delPoint>
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Exported original feature class into a new file geodatabase to maintain the original file format of the data and to conform to UW-Madison's data distribution plan. </stepDesc>
+        <stepDateTm>2019-01-17T00:00:00</stepDateTm>
+        <stepProc>
+          <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum tddtty="">608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>310 Science Hall</delPoint>
+              <delPoint>550 N. Park Street</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday, 9:00 am - 5:00 pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="001" />
+          </role>
+          <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+          <rpPosName>Metadata technician</rpPosName>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <idVersion Sync="FALSE">9.5.4</idVersion>
+        <identCode code="9807" Sync="FALSE" />
+        <idCodeSpace>EPSG</idCodeSpace>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Sheboygan_Buildings_2014">
+      <enttyp>
+        <enttypl Sync="TRUE">Sheboygan_Buildings_2014</enttypl>
+        <enttypd>Buildings Sheboygan County, WI 2014</enttypd>
+        <enttypds>Sheboygan County Land Information</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">85020</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LASTUPDATE</attrlabl>
+        <attrdef>The date the feature was last updated in the maintenance database</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attalias Sync="TRUE">Last Update Date</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">NUMSTORIES</attrlabl>
+        <attalias Sync="TRUE">Number of Stories</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">2</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">BLDGHEIGHT</attrlabl>
+        <attalias Sync="TRUE">Building Height</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FEATURECODE</attrlabl>
+        <attalias Sync="TRUE">Facility Site Code</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>LASTEDITOR</attrlabl>
+        <attrdef>The user who performed the last update</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attalias Sync="TRUE">Last Editor</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_STArea__</attrlabl>
+        <attalias Sync="TRUE">Shape_STArea__</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_STLength__</attrlabl>
+        <attalias Sync="TRUE">Shape_STLength__</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Length</attrlabl>
+        <attalias Sync="TRUE">Shape_Length</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Length of feature in internal units.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Area</attrlabl>
+        <attalias Sync="TRUE">Shape_Area</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Area of feature in internal units squared.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Sheboygan_Buildings_2014">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">85020</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Sheboygan_Buildings_2014">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="4" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">85020</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20190117</mdDateSt>
+  <mdFileID>376CCA66-331D-4EB3-A420-EF40F2D839BE</mdFileID>
+</metadata>

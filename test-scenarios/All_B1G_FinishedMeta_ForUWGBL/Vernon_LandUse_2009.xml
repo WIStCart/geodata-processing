@@ -1,0 +1,649 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20170810</CreaDate>
+    <CreaTime>12260100</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process Name="AddField_1" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" Date="20080915" Time="162926" export="">AddField "V:\LIO Master GIS Folder\Comp Planning\Comp Planning.mdb\Existing Land Use\Existing_LandUse" LU_Prim_Code SHORT # # # # NULLABLE NON_REQUIRED # "V:\LIO Master GIS Folder\Comp Planning\Comp Planning.mdb\Existing Land Use\Existing_LandUse"</Process>
+        <Process Name="AddField_1" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" Date="20080916" Time="121917" export="">AddField "V:\LIO Master GIS Folder\Comp Planning\Comp Planning.mdb\Existing Land Use\Existing_LandUse" LU_Sec_Code TEXT # # 50 # NULLABLE NON_REQUIRED # "V:\LIO Master GIS Folder\Comp Planning\Comp Planning.mdb\Existing Land Use\Existing_LandUse"</Process>
+        <Process Name="CalculateField_2" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20080916" Time="122048" export="">CalculateField "V:\LIO Master GIS Folder\Comp Planning\Comp Planning.mdb\Existing Land Use\Existing_LandUse" LU_Sec_Code [LU_Code] VB # "V:\LIO Master GIS Folder\Comp Planning\Comp Planning.mdb\Existing Land Use\Existing_LandUse"</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20081216" Time="153333" Name="" export="">Append 'C:\Comp Planning\GIS Data\CompPlan.gdb\Existing_LandUse' "V:\LIO Master GIS Folder\Comp Planning\Comp Planning.mdb\Existing Land Use\Existing_LandUse" TEST # # "V:\LIO Master GIS Folder\Comp Planning\Comp Planning.mdb\Existing Land Use\Existing_LandUse"</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Analysis Tools.tbx\Clip" Date="20090213" Time="092959" Name="" export="">Clip Existing_LandUse East_Clip "V:\LIO Master GIS Folder\Comp Planning\Comp Planning.mdb\Existing Land Use\East_Existing_LU" #</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20091217" Time="112711" Name="" export="">Append 'V:\LIO Master GIS Folder\Comp Planning\Monique_Copy_Comp Planning.mdb\Existing Land Use\East_Existing_LU_Clipped' "V:\LIO Master GIS Folder\Comp Planning\Comp Planning.mdb\Existing Land Use\East_Existing_LU_1" TEST # # "V:\LIO Master GIS Folder\Comp Planning\Comp Planning.mdb\Existing Land Use\East_Existing_LU_1"</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.3\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20170407" Time="112529" Name="" export="">FeatureClassToFeatureClass "V:\Land Use\VC_Master_Existing_LU.shp" "S:\LIO-Shared\WLIP Documents\WLIP Grants and Retained Fee Reports\2017\V3 Data Submittal\V3_PACKAGE" VERNON_LANDUSE_2009.shp # "OBJECTID "OBJECTID" true true false 9 Long 0 9 ,First,#,V:\Land Use\VC_Master_Existing_LU.shp,OBJECTID,-1,-1;Acreage "Acreage" true true false 19 Double 0 0 ,First,#,V:\Land Use\VC_Master_Existing_LU.shp,Acreage,-1,-1;LU_Prim_Co "LU_Prim_Co" true true false 4 Short 0 4 ,First,#,V:\Land Use\VC_Master_Existing_LU.shp,LU_Prim_Co,-1,-1;LU_Prim_De "LU_Prim_De" true true false 24 Text 0 0 ,First,#,V:\Land Use\VC_Master_Existing_LU.shp,LU_Prim_De,-1,-1;LU_Sec_Cod "LU_Sec_Cod" true true false 50 Text 0 0 ,First,#,V:\Land Use\VC_Master_Existing_LU.shp,LU_Sec_Cod,-1,-1;LU_Sec_Des "LU_Sec_Des" true true false 50 Text 0 0 ,First,#,V:\Land Use\VC_Master_Existing_LU.shp,LU_Sec_Des,-1,-1;Comments "Comments" true true false 150 Text 0 0 ,First,#,V:\Land Use\VC_Master_Existing_LU.shp,Comments,-1,-1;SHAPE_Leng "SHAPE_Leng" true true false 19 Double 0 0 ,First,#,V:\Land Use\VC_Master_Existing_LU.shp,SHAPE_Leng,-1,-1;SHAPE_Area "SHAPE_Area" true true false 19 Double 0 0 ,First,#,V:\Land Use\VC_Master_Existing_LU.shp,SHAPE_Area,-1,-1" #</Process>
+      </lineage>
+      <itemProps>
+        <itemName Sync="TRUE">Vernon_LandUse_2009</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">600344.556746</westBL>
+          <eastBL Sync="TRUE">855204.066055</eastBL>
+          <southBL Sync="TRUE">100287.050154</southBL>
+          <northBL Sync="TRUE">213323.069160</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <itemSize Sync="TRUE">30.709</itemSize>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2017_ALL_DATA_OPEN\Vernon\Vernon_LandUse_2009.shp</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <projcsn Sync="TRUE">NAD_1983_HARN_WISCRS_Vernon_County_Feet</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_WISCRS_Vernon_County_Feet&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Lambert_Conformal_Conic&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,730000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,155944.768],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.78333333333333],PARAMETER[&amp;quot;Standard_Parallel_1&amp;quot;,43.57503293972223],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,1.0000408158],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,43.57503293972223],UNIT[&amp;quot;Foot_US&amp;quot;,0.3048006096012192],AUTHORITY[&amp;quot;ESRI&amp;quot;,103462]]&lt;/WKT&gt;&lt;XOrigin&gt;-119313300&lt;/XOrigin&gt;&lt;YOrigin&gt;-97858200&lt;/YOrigin&gt;&lt;XYScale&gt;37516459.705543704&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.0032808333333333331&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;103462&lt;/WKID&gt;&lt;LatestWKID&gt;103462&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+        <csUnits Sync="TRUE">Linear Unit: Foot_US (0.304801)</csUnits>
+      </coordRef>
+      <copyHistory>
+        <copy source="P:\COUNTIES\2017_ALL_DATA_OPEN\Vernon\Originals\Upload_4_7_2017_120338_PM\VERNON_LANDUSE_2009" dest="\\robbie\archive project\COUNTIES\2017_ALL_DATA_OPEN\Vernon\VERNON_LANDUSE_2009" date="20170810" time="12260100" />
+      </copyHistory>
+    </DataProperties>
+    <SyncDate>20170824</SyncDate>
+    <SyncTime>13490700</SyncTime>
+    <ModDate>20170824</ModDate>
+    <ModTime>13490700</ModTime>
+    <ArcGISstyle>ISO 19139 Metadata Implementation Specification</ArcGISstyle>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoorD1fxFFp
+t0YA8OUiMkm9iMHjav48/wD16TaSuwNyiuRbxoPsxmSNThBncpUeYR9wHvjDZPt3qvF4/YlfN03E
+ZB/eCU4JyQMDaTz/AI+lSpxYWO2orkW8dwJ55NvFtj+7ifJfnB4C/U1HJ49G4mDTvNjA+/5xHcDp
+tJ7g8ZPtT54hY7KiuVPjRDGzx2iPhd4xMeQQCP4fUkfgepwKjfxu0dr9obT02M/lp/pONzAZI5UH
+jpnpnvS9pHuFjrqK4iX4gSwbRPo/lOQDiS5xwe4+XpjB/OpY/HUspwmlKT5TS4Fwc7QCc/c6cdfe
+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</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum>608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park Street</delPoint>
+        <delPoint>310 Science Hall</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday 9:00am - 5:00pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="007" />
+    </role>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+        <rpPosName>metadata technician</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park Street</delPoint>
+            <delPoint>310 Science Hall</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday 9:00am - 5:00pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorFormat>
+        <formatName>Shapefile</formatName>
+        <formatVer>1.0</formatVer>
+      </distorFormat>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Vernon_LandUse_2009.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <transSize Sync="TRUE">30.709</transSize>
+    </distTranOps>
+    <distFormat>
+      <formatVer>1.0</formatVer>
+      <formatName Sync="TRUE">Shapefile</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <editorSource>external</editorSource>
+        <editorDigest>69f58a483b82901242f1983d1fce2ff</editorDigest>
+        <rpOrgName>Vernon County Land Information Office</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>Rm 310 Courthouse Annex</delPoint>
+            <city>Viroqua</city>
+            <adminArea>WI</adminArea>
+            <postCode> 54665</postCode>
+            <country>US</country>
+            <delPoint>LWCD, 220 Airport Rd</delPoint>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>608-637-5314  </voiceNum>
+            <faxNum>608-637-8322</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Vernon County Land Information Office</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </distorCont>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">Land Use Vernon County, WI 2009</resTitle>
+      <date>
+        <pubDate>2017-04-07T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <resEdDate>20090101</resEdDate>
+      <citRespParty>
+        <rpOrgName>Vernon County Land Information Office</rpOrgName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>Rm 310 Courthouse Annex</delPoint>
+            <city>Viroqua</city>
+            <adminArea>WI</adminArea>
+            <postCode> 54665</postCode>
+            <country>US</country>
+            <delPoint>LWCD, 220 Airport Rd</delPoint>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>608-637-5314  </voiceNum>
+            <faxNum>608-637-8322</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Doug Avoles   </rpIndName>
+        <rpOrgName>Vernon County Land Information Office</rpOrgName>
+        <role>
+          <RoleCd value="001" />
+        </role>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>Rm 310 Courthouse Annex</delPoint>
+            <city>Viroqua</city>
+            <adminArea>WI</adminArea>
+            <postCode> 54665</postCode>
+            <country>US</country>
+            <delPoint>LWCD, 220 Airport Rd</delPoint>
+            <eMailAdd>davoles@vernoncounty.org </eMailAdd>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>608-637-5314  </voiceNum>
+            <faxNum>608-637-8322</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+      </citRespParty>
+    </idCitation>
+    <idAbs>This polygon data layer represents land use for Vernon County, Wisconsin in 2009.</idAbs>
+    <idPurp>This layer is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. </idPurp>
+    <idCredit>Vernon County Land Information Office</idCredit>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <editorSource>external</editorSource>
+        <editorDigest>69f58a483b82901242f1983d1fce2ff</editorDigest>
+        <rpOrgName>Vernon County Land Information Office</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>Rm 310 Courthouse Annex</delPoint>
+            <city>Viroqua</city>
+            <adminArea>WI</adminArea>
+            <postCode> 54665</postCode>
+            <country>US</country>
+            <delPoint>LWCD, 220 Airport Rd</delPoint>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum>608-637-5314  </voiceNum>
+            <faxNum>608-637-8322</faxNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Vernon County Land Information Office</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Vernon County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Polygon</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Land Use</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Land Use</keyword>
+      <keyword>Vernon County</keyword>
+      <keyword>Wisconsin</keyword>
+      <keyword>Polygon</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-91.230716</westBL>
+          <eastBL>-90.309544</eastBL>
+          <southBL>43.422194</southBL>
+          <northBL>43.730501</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2009-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <idPoC>
+      <editorSource>external</editorSource>
+      <editorDigest>69f58a483b82901242f1983d1fce2ff</editorDigest>
+      <rpOrgName>Vernon County Land Information Office</rpOrgName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>Rm 310 Courthouse Annex</delPoint>
+          <city>Viroqua</city>
+          <adminArea>WI</adminArea>
+          <postCode> 54665</postCode>
+          <country>US</country>
+          <delPoint>LWCD, 220 Airport Rd</delPoint>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum>608-637-5314  </voiceNum>
+          <faxNum>608-637-8322</faxNum>
+        </cntPhone>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Vernon County Land Information Office</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-91.273825</westBL>
+          <eastBL Sync="TRUE">-90.309681</eastBL>
+          <northBL Sync="TRUE">43.732435</northBL>
+          <southBL Sync="TRUE">43.421303</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <tpCat>
+      <TopicCatCd value="015" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpOrgName>Arthur H. Robinson Map Library, UW-Madison</rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park Street</delPoint>
+          <delPoint>310 Science Hall</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday 9:00am - 5:00pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="007" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library, UW-Madison</displayName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <idCodeSpace Sync="FALSE">EPSG</idCodeSpace>
+        <identCode code="7637" Sync="FALSE" />
+        <idVersion Sync="TRUE">10.3.1</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Vernon_LandUse_2009">
+      <enttyp>
+        <enttypl Sync="TRUE">Vernon_LandUse_2009</enttypl>
+        <enttypd>Land Use Vernon County, WI 2009</enttypd>
+        <enttypds>Vernon County Land Information Office</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">28401</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl>SHAPE</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>FID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">FID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">9</attwidth>
+        <atprecis Sync="TRUE">9</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Acreage</attrlabl>
+        <attalias Sync="TRUE">Acreage</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LU_Prim_Co</attrlabl>
+        <attalias Sync="TRUE">LU_Prim_Co</attalias>
+        <attrtype Sync="TRUE">SmallInteger</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">4</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LU_Prim_De</attrlabl>
+        <attalias Sync="TRUE">LU_Prim_De</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">24</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LU_Sec_Cod</attrlabl>
+        <attalias Sync="TRUE">LU_Sec_Cod</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LU_Sec_Des</attrlabl>
+        <attalias Sync="TRUE">LU_Sec_Des</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Comments</attrlabl>
+        <attalias Sync="TRUE">Comments</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">150</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SHAPE_Leng</attrlabl>
+        <attalias Sync="TRUE">SHAPE_Leng</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SHAPE_Area</attrlabl>
+        <attalias Sync="TRUE">SHAPE_Area</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Area of feature in internal units squared.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Vernon_LandUse_2009">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">28401</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Vernon_LandUse_2009">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="4" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">28401</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20170824</mdDateSt>
+  <mdFileID>246D495B-D338-4AF1-959F-0C232571A9CE</mdFileID>
+</metadata>

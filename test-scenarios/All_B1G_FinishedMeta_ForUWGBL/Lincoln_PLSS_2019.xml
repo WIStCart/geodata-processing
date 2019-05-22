@@ -1,0 +1,905 @@
+﻿<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20180502</CreaDate>
+    <CreaTime>11584900</CreaTime>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <ArcGISstyle>FGDC CSDGM Metadata</ArcGISstyle>
+    <SyncOnce>FALSE</SyncOnce>
+    <ModDate>20190409</ModDate>
+    <ModTime>16120400</ModTime>
+    <DataProperties>
+      <itemProps>
+        <itemName Sync="TRUE">Lincoln_PLSS_2019</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">516350.159500</westBL>
+          <eastBL Sync="TRUE">565150.595000</eastBL>
+          <southBL Sync="TRUE">516284.733700</southBL>
+          <northBL Sync="TRUE">564806.365600</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\archive project\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Lincoln_PLSS_2019\Lincoln_PLSS_2019.gdb</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <imsContentType Sync="TRUE" export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+        <projcsn Sync="TRUE">NAD_1983_HARN_Wisconsin_TM</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_HARN_Wisconsin_TM&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983_HARN&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,3071]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;10000&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;3071&lt;/WKID&gt;&lt;LatestWKID&gt;3071&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+      <lineage>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180503" Time="085729" Name="" export="">CalculateField PLSSCONTROL DATUM NAD83(91) "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180503" Time="090448" Name="" export="">CalculateField PLSSCONTROL DATUM 'NAD83(91)' "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180503" Time="090525" Name="" export="">CalculateField PLSSCONTROL UNITS 'FEET' "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180503" Time="091004" Name="" export="">CalculateField PLSSCONTROL WEBLINK 'http://land.co.lincoln.wi.us/Section%20Summaries_Tie%20Sheets/TieSheetsWiPtID/'+!WIPOINTIDTEXT!+'.PDF' "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180503" Time="091639" Name="" export="">CalculateField PLSSCONTROL COORDSYSTEM 'NAD 1983 HARN WISCRS Lincoln County Feet' "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180503" Time="091752" Name="" export="">CalculateField PLSSCONTROL COORDSYSTEM 'NAD 1983 HARN WISCRS Lincoln County Feet' "Python 3" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteFeatures" Date="20180503" Time="105300" Name="" export="">DeleteFeatures P:\PLSSReview\2018\Phase5\PLSS_Phase5.gdb\PLSSCONTROL</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteFeatures" Date="20180503" Time="111744" Name="" export="">DeleteFeatures P:\PLSSReview\2018\Phase5\PLSS_Phase5.gdb\PLSSCONTROL</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\ConvertTimeField" Date="20180503" Time="113526" Name="" export="">ConvertTimeField PLSSCONTROL SURVEYDATE_C2 yyyy SURVEYDATE_C2_Converted Date 'Not Used'</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180503" Time="113547" Name="" export="">CalculateField PLSSCONTROL SURVEYDATE_C !SURVEYDATE_C2_Converted! "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180503" Time="113637" Name="" export="">CalculateField PLSSCONTROL WEBADDRESS_MR !WEBLINK2! "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180503" Time="113856" Name="" export="">CalculateField PLSSCONTROL COORDSOURCE_MR2 'LINCOLN CTY' "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180503" Time="114001" Name="" export="">CalculateField PLSSCONTROL COORDSOURCE_MR !COORDSOURCE_MR2! "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180503" Time="114655" Name="" export="">CalculateField PLSSCONTROL COORDSYSTEM 'NAD 1983 HARN WISCRS LINCOLN COUNTY FEET - WKID: 103434' "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180503" Time="115026" Name="" export="">CalculateField PLSSCONTROL MONUMENTRECORD 'NO' "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180503" Time="115039" Name="" export="">CalculateField PLSSCONTROL MONUMENTRECORD 'YES' "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\AddRelate" Date="20180510" Time="131159" Name="" export="">AddRelate PLSSCONTROL WIPOINTIDTEXT TieSheet_3_20_2018$ Field2 Relate1 "One to many"</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180510" Time="140814" Name="" export="">CalculateField PLSSCONTROL WEBADDRESS_MR 'http://land.co.lincoln.wi.us/Section%20Summaries_Tie%20Sheets/TieSheetsWiPtID/NO_MONUMENT_RECORD.PDF' "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180510" Time="140837" Name="" export="">CalculateField PLSSCONTROL MONUMENT_RECORD 'NO' "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180510" Time="140920" Name="" export="">CalculateField PLSSCONTROL MONUMENT_RECORD 'YES' "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180514" Time="144131" Name="" export="">CalculateField PLSSCONTROL SURVEYDATE_MR None "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\AddRelate" Date="20180514" Time="150825" Name="" export="">AddRelate PLSSCONTROL WIPOINTIDTEXT PLSSCONTROL_SpatialJoin68 WIPOINTIDTEXT Relate2 "One to many"</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\RemoveRelate" Date="20180514" Time="152018" Name="" export="">RemoveRelate PLSSCONTROL #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\DeleteField" Date="20180518" Time="110853" Name="" export="">DeleteField PLSSCONTROL MONUMENT_RECORD</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20180618" Time="125939" Name="" export="">FeatureClassToFeatureClass P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL "Database Connections\GISDB_Production_GIS.sde\production.GIS.PLSS" PLSS_Corners # "WIPOINTIDTEXT "WI POINT ID TEXT" true true false 15 Text 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,WIPOINTIDTEXT,-1,-1;WIPOINTIDDBL "WI POINT ID DBL" true true false 8 Double 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,WIPOINTIDDBL,-1,-1;CONTROLFLAG "CONTROL FLAG" true true false 5 Text 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,CONTROLFLAG,-1,-1;TOWNSHIPRANGE "TOWNSHIP RANGE" true true false 6 Text 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,TOWNSHIPRANGE,-1,-1;LCPAPERID "LC PAPER ID" true true false 20 Text 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,LCPAPERID,-1,-1;XCOORD "X-COORD" true true false 8 Double 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,XCOORD,-1,-1;YCOORD "Y-COORD" true true false 8 Double 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,YCOORD,-1,-1;COORDSYSTEM "COORDINATE SYSTEM" true true false 100 Text 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,COORDSYSTEM,-1,-1;DATUM "DATUM" true true false 25 Text 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,DATUM,-1,-1;UNITS "UNITS" true true false 10 Text 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,UNITS,-1,-1;SURVEYGRADE "SURVEY GRADE" true true false 50 Text 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,SURVEYGRADE,-1,-1;SURVEYMETHOD "SURVEY METHOD" true true false 50 Text 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,SURVEYMETHOD,-1,-1;MONUMENTRECORD "MONUMENT RECORD" true true false 5 Text 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,MONUMENTRECORD,-1,-1;WEBADDRESS_MR "WEBADDRESS MR" true true false 255 Text 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,WEBADDRESS_MR,-1,-1;CORNERTYPE_MR "CORNER TYPE MR" true true false 50 Text 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,CORNERTYPE_MR,-1,-1;MONUMENTTYPE_MR "MONUMENT TYPE MR" true true false 75 Text 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,MONUMENTTYPE_MR,-1,-1;SURVEYDATE_MR "SURVEY DATE MR" true true false 8 Date 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,SURVEYDATE_MR,-1,-1;SURVEYORCOMPANY_MR "SURVEYOR COMPANY_MR" true true false 100 Text 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,SURVEYORCOMPANY_MR,-1,-1;COORDSOURCE_MR "COORDSOURCE MR" true true false 15 Text 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,COORDSOURCE_MR,-1,-1;XCOORD_MR "X COORD MR" true true false 8 Double 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,XCOORD_MR,-1,-1;YCOORD_MR "Y COORD MR" true true false 8 Double 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,YCOORD_MR,-1,-1;ELEVATION_MR "ELEVATION MR" true true false 8 Double 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,ELEVATION_MR,-1,-1;MONUMENTTYPE_C "MONUMENT TYPE C" true true false 75 Text 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,MONUMENTTYPE_C,-1,-1;SURVEYDATE_C "SURVEY DATE C" true true false 8 Date 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,SURVEYDATE_C,-1,-1;SURVEYORCOMPANY_C "SURVEYOR COMPANY C" true true false 100 Text 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,SURVEYORCOMPANY_C,-1,-1;RFPACCURACY_C "RFP ACCURACY C" true true false 50 Text 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,RFPACCURACY_C,-1,-1;ELEVATION_C "ELEVATION C" true true false 8 Double 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,ELEVATION_C,-1,-1;UPDATE_DATE "UPDATE DATE" true true false 8 Date 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,UPDATE_DATE,-1,-1;ORTHOMETRIC_HEIGHT "ORTHOMETRIC HEIGHT" true true false 50 Text 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,ORTHOMETRIC_HEIGHT,-1,-1;ORTHOMETRIC_ACCURACY "ORTHOMETRIC ACCURACY" true true false 50 Text 0 0 ,First,#,P:\PLSSReview\2018\Final_Production\PLSS_Final__Redesign.gdb\PLSSCONTROL,ORTHOMETRIC_ACCURACY,-1,-1" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180920" Time="102118" Name="" export="">CalculateField "PLSS Layers\production.GIS.PLSS_Corners" CONTROLFLAG CTYFS "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180920" Time="102137" Name="" export="">CalculateField "PLSS Layers\production.GIS.PLSS_Corners" CONTROLFLAG 'CTYFS' "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\AddRelate" Date="20180926" Time="141157" Name="" export="">AddRelate "PLSS Layers\production.GIS.PLSS_Corners" WIPOINTIDDBL Sheet1$ Field1 Relate1 "One to many"</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\RemoveRelate" Date="20180926" Time="141655" Name="" export="">RemoveRelate "PLSS Layers\production.GIS.PLSS_Corners" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\AddRelate" Date="20180926" Time="141746" Name="" export="">AddRelate "PLSS Layers\production.GIS.PLSS_Corners" WIPOINTIDTEXT Sheet1$ Field1 Relate1 "One to many"</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\RemoveRelate" Date="20180926" Time="142338" Name="" export="">RemoveRelate "PLSS Layers\production.GIS.PLSS_Corners" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\AddRelate" Date="20180926" Time="142529" Name="" export="">AddRelate "PLSS Layers\production.GIS.PLSS_Corners" WIPOINTIDTEXT TieRecordsList.csv Field1 Relate1 "One to many"</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\RemoveRelate" Date="20180926" Time="142703" Name="" export="">RemoveRelate "PLSS Layers\production.GIS.PLSS_Corners" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\AddRelate" Date="20180926" Time="142849" Name="" export="">AddRelate "PLSS Layers\production.GIS.PLSS_Corners" WIPOINTIDDBL TieRecordsList.csv Field1 Relate1 "One to many"</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\RemoveRelate" Date="20180926" Time="143600" Name="" export="">RemoveRelate "PLSS Layers\production.GIS.PLSS_Corners" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180927" Time="083136" Name="" export="">CalculateField "PLSS Layers\production.GIS.PLSS_Corners" MONUMENTRECORD 'NO' "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180927" Time="094222" Name="" export="">CalculateField "PLSS Layers\production.GIS.PLSS_Corners" CONTROLFLAG 'WATER' "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180927" Time="094259" Name="" export="">CalculateField "PLSS Layers\production.GIS.PLSS_Corners" SURVEYGRADE CALCULATED "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180927" Time="095514" Name="" export="">CalculateField "PLSS Layers\production.GIS.PLSS_Corners" SURVEYGRADE 'UNKNOWN' "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180927" Time="100536" Name="" export="">CalculateField "PLSS Layers\production.GIS.PLSS_Corners" CONTROLFLAG 'YES' "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180927" Time="113511" Name="" export="">CalculateField "PLSS Layers\production.GIS.PLSS_Corners" CONTROLFLAG 'WATER' "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180927" Time="113553" Name="" export="">CalculateField "PLSS Layers\production.GIS.PLSS_Corners" SURVEYGRADE 'UNKNOWN' "Python 3" #</Process>
+        <Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20180927" Time="114001" Name="" export="">CalculateField "PLSS Layers\production.GIS.PLSS_Corners" WEBADDRESS_MR 'http://land.co.lincoln.wi.us/Section%20Summaries_Tie%20Sheets/TieSheetsWiPtID/NO_MONUMENT_RECORD.PDF' "Python 3" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190306" Time="111229" Name="" export="">CalculateField production.GIS.PLSS_Corners TOWNSHIPRANGE !WIPOINTIDTEXT![1:5] PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190306" Time="111719" Name="" export="">CalculateField production.GIS.PLSS_Corners LCPAPERID "'T' + !WIPOINTIDTEXT![1:3]+ 'NR' + !WIPOINTIDTEXT![3:5] + 'E_'" PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190306" Time="112309" Name="" export="">CalculateField production.GIS.PLSS_Corners LCPAPERID None PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190311" Time="102725" Name="" export="">CalculateField production.GIS.PLSS_Corners SURVEYGRADE 'APPROXIMATE' PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190311" Time="102902" Name="" export="">CalculateField production.GIS.PLSS_Corners SURVEYGRADE 'SUB-METER' PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190311" Time="103101" Name="" export="">CalculateField production.GIS.PLSS_Corners SURVEYGRADE 'SURVEY GRADE' PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190311" Time="103145" Name="" export="">CalculateField production.GIS.PLSS_Corners SURVEYGRADE 'SURVEY GRADE' PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190311" Time="152412" Name="" export="">CalculateField production.GIS.PLSS_Corners SURVEYMETHOD 'GPS' PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190311" Time="161905" Name="" export="">CalculateField production.GIS.PLSS_Corners SURVEYMETHOD 'GPS' PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190313" Time="151846" Name="" export="">CalculateField production.GIS.PLSS_Corners SURVEYGRADE "APPROXIMATE" VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190314" Time="082929" Name="" export="">CalculateField production.GIS.PLSS_Corners SURVEYGRADE 'APPROXIMATE' PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190314" Time="100608" Name="" export="">CalculateField production.GIS.PLSS_Corners CORNERTYPE_MR None PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190314" Time="100614" Name="" export="">CalculateField production.GIS.PLSS_Corners MONUMENTTYPE_MR None PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190314" Time="100619" Name="" export="">CalculateField production.GIS.PLSS_Corners SURVEYORCOMPANY_MR None PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190314" Time="100638" Name="" export="">CalculateField production.GIS.PLSS_Corners ELEVATION_MR None PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190314" Time="100731" Name="" export="">CalculateField production.GIS.PLSS_Corners LCPAPERID None PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20190328" Time="092802" Name="" export="">FeatureClassToFeatureClass "Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners" P:\Data\WLIP_State_Benchmark\StateV5\Final\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb LINCOLN_PLSS_2019 "CONTROLFLAG = 'YES'" "WIPOINTIDTEXT "WI POINT ID TEXT" true true false 15 Text 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,WIPOINTIDTEXT,-1,-1;WIPOINTIDDBL "WI POINT ID DBL" true true false 8 Double 8 38 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,WIPOINTIDDBL,-1,-1;CONTROLFLAG "CONTROL FLAG" true true false 5 Text 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,CONTROLFLAG,-1,-1;TOWNSHIPRANGE "TOWNSHIP RANGE" true true false 6 Text 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,TOWNSHIPRANGE,-1,-1;LCPAPERID "LC PAPER ID" true true false 20 Text 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,LCPAPERID,-1,-1;XCOORD "X-COORD" true true false 8 Double 8 38 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,XCOORD,-1,-1;YCOORD "Y-COORD" true true false 8 Double 8 38 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,YCOORD,-1,-1;COORDSYSTEM "COORDINATE SYSTEM" true true false 100 Text 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,COORDSYSTEM,-1,-1;DATUM "DATUM" true true false 25 Text 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,DATUM,-1,-1;UNITS "UNITS" true true false 10 Text 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,UNITS,-1,-1;SURVEYGRADE "SURVEY GRADE" true true false 50 Text 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,SURVEYGRADE,-1,-1;SURVEYMETHOD "SURVEY METHOD" true true false 50 Text 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,SURVEYMETHOD,-1,-1;MONUMENTRECORD "MONUMENT RECORD" true true false 5 Text 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,MONUMENTRECORD,-1,-1;WEBADDRESS_MR "WEBADDRESS MR" true true false 255 Text 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,WEBADDRESS_MR,-1,-1;CORNERTYPE_MR "CORNER TYPE MR" true true false 50 Text 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,CORNERTYPE_MR,-1,-1;MONUMENTTYPE_MR "MONUMENT TYPE MR" true true false 75 Text 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,MONUMENTTYPE_MR,-1,-1;SURVEYDATE_MR "SURVEY DATE MR" true true false 8 Date 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,SURVEYDATE_MR,-1,-1;SURVEYORCOMPANY_MR "SURVEYOR COMPANY_MR" true true false 100 Text 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,SURVEYORCOMPANY_MR,-1,-1;COORDSOURCE_MR "COORDSOURCE MR" true true false 15 Text 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,COORDSOURCE_MR,-1,-1;XCOORD_MR "X COORD MR" true true false 8 Double 8 38 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,XCOORD_MR,-1,-1;YCOORD_MR "Y COORD MR" true true false 8 Double 8 38 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,YCOORD_MR,-1,-1;ELEVATION_MR "ELEVATION MR" true true false 8 Double 8 38 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,ELEVATION_MR,-1,-1;MONUMENTTYPE_C "MONUMENT TYPE C" true true false 75 Text 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,MONUMENTTYPE_C,-1,-1;SURVEYDATE_C "SURVEY DATE C" true true false 8 Date 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,SURVEYDATE_C,-1,-1;SURVEYORCOMPANY_C "SURVEYOR COMPANY C" true true false 100 Text 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,SURVEYORCOMPANY_C,-1,-1;RFPACCURACY_C "RFP ACCURACY C" true true false 50 Text 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,RFPACCURACY_C,-1,-1;ELEVATION_C "ELEVATION C" true true false 8 Double 8 38 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,ELEVATION_C,-1,-1;UPDATE_DATE "UPDATE DATE" true true false 8 Date 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,UPDATE_DATE,-1,-1;ORTHOMETRIC_HEIGHT "ORTHOMETRIC HEIGHT" true true false 50 Text 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,ORTHOMETRIC_HEIGHT,-1,-1;ORTHOMETRIC_ACCURACY "ORTHOMETRIC ACCURACY" true true false 50 Text 0 0 ,First,#,Database Connections\GISDB_Production_DBO.sde\production.GIS.PLSS\production.GIS.PLSS_Corners,ORTHOMETRIC_ACCURACY,-1,-1" #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190329" Time="085200" Name="" export="">CalculateField LINCOLN_PLSS_2019 TOWNSHIP [WIPOINTIDTEXT] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190329" Time="085213" Name="" export="">CalculateField LINCOLN_PLSS_2019 RANGE [WIPOINTIDTEXT] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190329" Time="085221" Name="" export="">CalculateField LINCOLN_PLSS_2019 SECTION [WIPOINTIDTEXT] VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190329" Time="090734" Name="" export="">CalculateField LINCOLN_PLSS_2019 TOWNSHIP !TOWNSHIP!.lstrip('4') PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190329" Time="090801" Name="" export="">CalculateField LINCOLN_PLSS_2019 RANGE "!RANGE! .lstrip('4')" PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190329" Time="090818" Name="" export="">CalculateField LINCOLN_PLSS_2019 SECTION "!SECTION! .lstrip('4')" PYTHON_9.3 #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190329" Time="092228" Name="" export="">CalculateField LINCOLN_PLSS_2019 TOWNSHIP Left( [TOWNSHIPRANGE],2 ) VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190329" Time="092307" Name="" export="">CalculateField LINCOLN_PLSS_2019 RANGE Right( [TOWNSHIPRANGE],2 ) VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190329" Time="092718" Name="" export="">CalculateField LINCOLN_PLSS_2019 SECTION Left( [SECTION], 6 ) VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20190329" Time="092750" Name="" export="">CalculateField LINCOLN_PLSS_2019 SECTION Right( [SECTION], 2 ) VB #</Process>
+        <Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20190329" Time="141511" Name="" export="">FeatureClassToFeatureClass R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019 R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Lincoln_PLSS_2019\Lincoln_PLSS_2019.gdb Lincoln_PLSS_2019 # "WIPOINTIDTEXT "WI POINT ID TEXT" true true false 15 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019,WIPOINTIDTEXT,-1,-1;WIPOINTIDDBL "WI POINT ID DBL" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019,WIPOINTIDDBL,-1,-1;CONTROLFLAG "CONTROL FLAG" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019,CONTROLFLAG,-1,-1;TOWNSHIPRANGE "TOWNSHIP RANGE" true true false 6 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019,TOWNSHIPRANGE,-1,-1;LCPAPERID "LC PAPER ID" true true false 20 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019,LCPAPERID,-1,-1;XCOORD "X-COORD" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019,XCOORD,-1,-1;YCOORD "Y-COORD" true true false 8 Double 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019,YCOORD,-1,-1;COORDSYSTEM "COORDINATE SYSTEM" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019,COORDSYSTEM,-1,-1;DATUM "DATUM" true true false 25 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019,DATUM,-1,-1;UNITS "UNITS" true true false 10 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019,UNITS,-1,-1;SURVEYGRADE "SURVEY GRADE" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019,SURVEYGRADE,-1,-1;SURVEYMETHOD "SURVEY METHOD" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019,SURVEYMETHOD,-1,-1;MONUMENTRECORD "MONUMENT RECORD" true true false 5 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019,MONUMENTRECORD,-1,-1;WEBADDRESS_MR "WEBADDRESS MR" true true false 255 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019,WEBADDRESS_MR,-1,-1;CORNERTYPE_MR "CORNER TYPE MR" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019,CORNERTYPE_MR,-1,-1;MONUMENTTYPE_MR "MONUMENT TYPE MR" true true false 75 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019,MONUMENTTYPE_MR,-1,-1;SURVEYDATE_MR "SURVEY DATE MR" true true false 8 Date 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019,SURVEYDATE_MR,-1,-1;SURVEYORCOMPANY_MR "SURVEYOR COMPANY_MR" true true false 100 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019,SURVEYORCOMPANY_MR,-1,-1;TOWNSHIP "TOWNSHIP" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019,TOWNSHIP,-1,-1;RANGE "RANGE" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019,RANGE,-1,-1;SECTION "SECTION" true true false 50 Text 0 0 ,First,#,R:\ARCHIVE_PROJECT\COUNTIES\2019_ALL_DATA_OPEN_V5\Lincoln\Originals\LINCOLN_V5_SUBMISSION\LINCOLN_OTHERDATA.gdb\LINCOLN_PLSS_2019,SECTION,-1,-1" #</Process>
+      </lineage>
+    </DataProperties>
+    <SyncDate>20190409</SyncDate>
+    <SyncTime>16120400</SyncTime>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+  </Esri>
+  <Binary>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAgvbyHT7G4vLhmWC3jaWQqpYhVGScDk8DtXOn4h+GlmMX2u53ggYFjP324/g/21rT8Unb4
+S1k7ymLGb5gu7HyHtg5/I145Y6sLMsZPEOnQNBo8dtIotlEgXJAtfvq2QZYx5mAMjqMGgD09PiN4
+Zfbtu7n5sY/0Gfvtx/B/tr+dCfEbwy+3bd3PzYx/oM/fbj+D/bX868rtNRMxs8eIVYjRVtQ0dgZN
+mfJ/0ZyEkyDnl8nG7p6paXrK9kh1i5O3RltfMXSjsBPk/wCig+Typz9/tu6eoB6pB8QtEuTH5MGr
+OsvKMNLuCGHzcj5Onyn8xQnxC0aTZtttY+cAj/iVXHfZ/sf7Y/WvNJfP0iy0mW91iZFk8PfK62Ct
++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
+FFABRRRQAUUUUAFFFFAH/9k=</Data>
+    </Thumbnail>
+  </Binary>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdContact>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+    <rpPosName>metadata technician</rpPosName>
+    <rpCntInfo>
+      <cntPhone>
+        <voiceNum>608-262-1471</voiceNum>
+      </cntPhone>
+      <cntAddress addressType="both">
+        <delPoint>310 Science Hall</delPoint>
+        <delPoint>550 N. Park Street</delPoint>
+        <city>Madison</city>
+        <adminArea>WI</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntHours>Monday - Friday: 9:00am - 5:00pm CST-USA</cntHours>
+    </rpCntInfo>
+    <role>
+      <RoleCd value="001" />
+    </role>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+  </mdContact>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distributor>
+      <distorCont>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+        <rpPosName>metadata technician</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>608-262-1471</voiceNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>310 Science Hall</delPoint>
+            <delPoint>550 N. Park Street</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntHours>Monday - Friday: 9:00am - 5:00pm CST-USA</cntHours>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+      <distorFormat>
+        <formatName>ESRI Geodatabase</formatName>
+        <formatVer>10.3</formatVer>
+      </distorFormat>
+    </distributor>
+    <distributor>
+      <distorCont>
+        <rpOrgName>Lincoln County Land Information and Conservation</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>715-539-1049</voiceNum>
+            <faxNum>715-539-8093</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>801 N. Sales Street Suite 105</delPoint>
+            <city>Merrill</city>
+            <adminArea>WI</adminArea>
+            <postCode>54452</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="005" />
+        </role>
+      </distorCont>
+    </distributor>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>https://gisdata.wisc.edu/public/Lincoln_PLSS_2019.zip</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>GeoData@Wisconsin</orName>
+        <orDesc>Archived dataset at UW-Madison</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+      <onLineSrc>
+        <linkage>http://maps.co.lincoln.wi.us/webapps/gisportal/data.html</linkage>
+        <protocol>WWW:DOWNLOAD-1.0-http--download</protocol>
+        <orName>Lincoln County Land Services</orName>
+        <orDesc>Information from originator</orDesc>
+        <orFunct>
+          <OnFunctCd value="001" />
+        </orFunct>
+      </onLineSrc>
+    </distTranOps>
+    <distFormat>
+      <formatVer>10.5</formatVer>
+      <formatName Sync="TRUE">File Geodatabase Feature Class</formatName>
+    </distFormat>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <resTitle Sync="FALSE">PLSS Lincoln County, WI 2019</resTitle>
+      <date>
+        <pubDate>2019-04-09T00:00:00</pubDate>
+      </date>
+      <presForm>
+        <PresFormCd value="005" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <citRespParty>
+        <rpOrgName>Lincoln County Land Information and Conservation</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>715-539-1049</voiceNum>
+            <faxNum>715-539-8093</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>801 N. Sales Street Suite 105</delPoint>
+            <city>Merrill</city>
+            <adminArea>WI</adminArea>
+            <postCode>54452</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="006" />
+        </role>
+        <displayName>Lincoln County Land Information and Conservation</displayName>
+      </citRespParty>
+      <citRespParty>
+        <rpIndName>Norm Bushor</rpIndName>
+        <rpOrgName>Lincoln County Land Information and Conservation</rpOrgName>
+        <rpPosName>Land Information Program Manager</rpPosName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>715-539-1049</voiceNum>
+            <faxNum>715-539-8093</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>801 N. Sales Street Suite 105</delPoint>
+            <city>Merrill</city>
+            <adminArea>WI</adminArea>
+            <postCode>54452</postCode>
+            <country>US</country>
+            <eMailAdd>nbushor@co.lincoln.wi.us</eMailAdd>
+          </cntAddress>
+        </rpCntInfo>
+        <role>
+          <RoleCd value="007" />
+        </role>
+        <displayName>Norm Bushor</displayName>
+      </citRespParty>
+      <resEd>2019</resEd>
+    </idCitation>
+    <idAbs>This data represents Public Land Survey System (PLSS) corners for Lincoln County, Wisconsin in 2019.[This dataset is a compilation of source data from Contract Remonumentation projects, Monument Records (tie sheets), existing Survey Corners maintained by the Lincoln County Surveyor, and existing GIS Coordinates used in Parcel Data compilation and mapping. This data set is a work in progress. Users of this data should check with the Contact Identified for the latest information before using.]</idAbs>
+    <idPurp>This data is intended for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data. 
+
+[The purpose of this data layer is to manage PLSS CORNER and CONTROL information for Lincoln County WI.]</idPurp>
+    <idCredit>Lincoln County Land Information and Conservation</idCredit>
+    <idPoC>
+      <rpOrgName>Lincoln County Land Information and Conservation</rpOrgName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum tddtty="">715-539-1049</voiceNum>
+          <faxNum>715-539-8093</faxNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>801 N. Sales Street Suite 105</delPoint>
+          <city>Merrill</city>
+          <adminArea>WI</adminArea>
+          <postCode>54452</postCode>
+          <country>US</country>
+        </cntAddress>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <rpOrgName>Lincoln County Land Information and Conservation</rpOrgName>
+        <rpCntInfo>
+          <cntPhone>
+            <voiceNum>715-539-1049</voiceNum>
+            <faxNum>715-539-8093</faxNum>
+          </cntPhone>
+          <cntAddress addressType="both">
+            <delPoint>801 N. Sales Street Suite 105</delPoint>
+            <city>Merrill</city>
+            <adminArea>WI</adminArea>
+            <postCode>54452</postCode>
+            <country>US</country>
+          </cntAddress>
+        </rpCntInfo>
+        <displayName>Lincoln County Land Information and Conservation</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNS</resTitle>
+      </thesaName>
+      <keyword>Lincoln County</keyword>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+      </thesaName>
+      <keyword>Point</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+      </thesaName>
+      <keyword>Surveying – Public Lands</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Wisconsin</keyword>
+      <keyword>Lincoln County</keyword>
+      <keyword>PLSS</keyword>
+      <keyword>Planning &amp; Cadastral</keyword>
+      <keyword>Surveying</keyword>
+      <keyword>Public Lands</keyword>
+    </searchKeys>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+      </LegConsts>
+    </resConst>
+    <spatRpType>
+      <SpatRepTypCd value="001" />
+    </spatRpType>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox>
+          <westBL>-90.048086</westBL>
+          <eastBL>-89.423327</eastBL>
+          <southBL>45.1192</southBL>
+          <northBL>45.556088</northBL>
+        </GeoBndBox>
+      </geoEle>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2019-01-01T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements.
+
+For access to the most current data for this county, please visit: http://maps.co.lincoln.wi.us/webapps/gisportal/data.html</suppInfo>
+    <envirDesc Sync="TRUE"> Version 6.2 (Build 9200) ; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-90.046764</westBL>
+          <eastBL Sync="TRUE">-89.421519</eastBL>
+          <northBL Sync="TRUE">45.556796</northBL>
+          <southBL Sync="TRUE">45.118591</southBL>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <resConst>
+      <Consts>
+        <useLimit>None.</useLimit>
+      </Consts>
+    </resConst>
+    <tpCat>
+      <TopicCatCd value="015" />
+    </tpCat>
+  </dataIdInfo>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+      <rpPosName>metadata technician</rpPosName>
+      <rpCntInfo>
+        <cntPhone>
+          <voiceNum>608-262-1471</voiceNum>
+        </cntPhone>
+        <cntAddress addressType="both">
+          <delPoint>310 Science Hall</delPoint>
+          <delPoint>550 N. Park Street</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntHours>Monday - Friday: 9:00am - 5:00pm CST-USA</cntHours>
+      </rpCntInfo>
+      <role>
+        <RoleCd value="001" />
+      </role>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+    </maintCont>
+  </mdMaint>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>Provided access to archived data at UW-Madison.</stepDesc>
+        <stepDateTm>2019-04-09T00:00:00</stepDateTm>
+        <stepProc>
+          <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+          <rpOrgName>University of Wisconsin-Madison</rpOrgName>
+          <rpPosName>metadata technician</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum tddtty="">608-262-1471</voiceNum>
+            </cntPhone>
+            <cntAddress addressType="both">
+              <delPoint>550 N. Park Street</delPoint>
+              <delPoint>310 Science Hall</delPoint>
+              <city>Madison</city>
+              <adminArea>WI</adminArea>
+              <postCode>53706</postCode>
+              <country>US</country>
+              <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+            </cntAddress>
+            <cntHours>Monday - Friday: 9:00am - 5:00pm CST-USA</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="001" />
+          </role>
+        </stepProc>
+      </prcStep>
+    </dataLineage>
+  </dqInfo>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+        <identCode code="3071" Sync="TRUE" />
+        <idVersion Sync="FALSE">9.5.5</idVersion>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <eainfo>
+    <detailed Name="Lincoln_PLSS_2019">
+      <enttyp>
+        <enttypl Sync="TRUE">Lincoln_PLSS_2019</enttypl>
+        <enttypd>PLSS Lincoln County, WI 2019</enttypd>
+        <enttypds>Lincoln County Land Information and Conservation</enttypds>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">2758</enttypc>
+      </enttyp>
+      <attr>
+        <attrlabl>SHAPE</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">WIPOINTIDTEXT</attrlabl>
+        <attalias Sync="TRUE">WI POINT ID TEXT</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">15</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">WIPOINTIDDBL</attrlabl>
+        <attalias Sync="TRUE">WI POINT ID DBL</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CONTROLFLAG</attrlabl>
+        <attalias Sync="TRUE">CONTROL FLAG</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TOWNSHIPRANGE</attrlabl>
+        <attalias Sync="TRUE">TOWNSHIP RANGE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">6</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">LCPAPERID</attrlabl>
+        <attalias Sync="TRUE">LC PAPER ID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">20</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">XCOORD</attrlabl>
+        <attalias Sync="TRUE">X-COORD</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">YCOORD</attrlabl>
+        <attalias Sync="TRUE">Y-COORD</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">COORDSYSTEM</attrlabl>
+        <attalias Sync="TRUE">COORDINATE SYSTEM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DATUM</attrlabl>
+        <attalias Sync="TRUE">DATUM</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">25</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">UNITS</attrlabl>
+        <attalias Sync="TRUE">UNITS</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SURVEYGRADE</attrlabl>
+        <attalias Sync="TRUE">SURVEY GRADE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SURVEYMETHOD</attrlabl>
+        <attalias Sync="TRUE">SURVEY METHOD</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">MONUMENTRECORD</attrlabl>
+        <attalias Sync="TRUE">MONUMENT RECORD</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">5</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">WEBADDRESS_MR</attrlabl>
+        <attalias Sync="TRUE">WEBADDRESS MR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">255</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CORNERTYPE_MR</attrlabl>
+        <attalias Sync="TRUE">CORNER TYPE MR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">MONUMENTTYPE_MR</attrlabl>
+        <attalias Sync="TRUE">MONUMENT TYPE MR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">75</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SURVEYDATE_MR</attrlabl>
+        <attalias Sync="TRUE">SURVEY DATE MR</attalias>
+        <attrtype Sync="TRUE">Date</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SURVEYORCOMPANY_MR</attrlabl>
+        <attalias Sync="TRUE">SURVEYOR COMPANY_MR</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">100</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">TOWNSHIP</attrlabl>
+        <attalias Sync="TRUE">TOWNSHIP</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">RANGE</attrlabl>
+        <attalias Sync="TRUE">RANGE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SECTION</attrlabl>
+        <attalias Sync="TRUE">SECTION</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">50</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Attribute information remains the same as given by the author of the data.</eaover>
+      <eadetcit>Robinson Map Library</eadetcit>
+    </overview>
+  </eainfo>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="Lincoln_PLSS_2019">
+        <geoObjTyp>
+          <GeoObjTypCd value="004" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">2758</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <spdoinfo>
+    <ptvctinf>
+      <esriterm Name="Lincoln_PLSS_2019">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="1" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">2758</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <mdDateSt Sync="TRUE">20190409</mdDateSt>
+  <mdFileID>F45499E0-EFE3-4F52-B869-2E10A82CF7EB</mdFileID>
+</metadata>

@@ -1,0 +1,2543 @@
+﻿<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>LTSB</origin>
+        <pubdate>5/30/2002</pubdate>
+        <title Sync="TRUE">Election Data, Wisconsin 2008</title>
+        <geoform Sync="TRUE">vector digital data</geoform>
+        <onlink>Server=svr022v; Service=5151; Database=sde; User=sde; Version=sde.DEFAULT</onlink>
+        <ftname Sync="TRUE">sde.SDE.Election_Data_2008_Wards</ftname>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This polygon data layer represents election data by ward for Wisconsin in 2008[This file was created by disaggregating the State of Wisconsin's 2008 General Election Results to the 2001 municipal ward layer.]</abstract>
+      <purpose>[This data was created to perform generalizations on voting patterns in the State of Wisconsin. Municipal annexations, population growth and general errors associated with the process of disaggregating data may be present within this data. Due to the previously mentioned factors election data totals may not match the Wisconsin State Elections Board official results. Please make note of these factors while using this data.]</purpose>
+      <langdata Sync="TRUE">en</langdata>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <sngdate>
+          <caldate>August 1, 2001</caldate>
+        </sngdate>
+      </timeinfo>
+      <current>ground condition</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc Sync="TRUE">-92.964438</westbc>
+        <eastbc Sync="TRUE">-86.666231</eastbc>
+        <northbc Sync="TRUE">47.083194</northbc>
+        <southbc Sync="TRUE">42.456930</southbc>
+      </bounding>
+      <lboundng>
+        <leftbc Sync="TRUE">294822.467000</leftbc>
+        <rightbc Sync="TRUE">773277.784900</rightbc>
+        <bottombc Sync="TRUE">225108.729200</bottombc>
+        <topbc Sync="TRUE">734409.177900</topbc>
+      </lboundng>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekey>Districts</themekey>
+        <themekey>Election Data</themekey>
+        <themekey>Assembly</themekey>
+        <themekey>2008</themekey>
+        <themekey>Legislative</themekey>
+        <themekey>Polygon</themekey>
+        <themekey>Voting</themekey>
+      </theme>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>None</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Legislative Technology Services Bureau</cntorg>
+          <cntper>Tony J. Van Der Wielen</cntper>
+        </cntorgp>
+        <cntpos>GIS Application Developer</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical address</addrtype>
+          <address>17 S. Fairchild St.</address>
+          <address>Suite 400</address>
+          <city>Madison</city>
+          <state>WI</state>
+          <postal>53703</postal>
+        </cntaddr>
+        <cntvoice>608-266-6640</cntvoice>
+        <cntfax>608-267-6763</cntfax>
+        <cntemail>gis@legis.state.wi.us</cntemail>
+        <hours>8-5 Monday - Friday</hours>
+        <cntinst>Please send an e-mail to gis@legis.state.wi.us</cntinst>
+      </cntinfo>
+    </ptcontac>
+    <native Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 2; ESRI ArcCatalog 9.3.0.1770</native>
+    <natvform Sync="TRUE">SDE Feature Class</natvform>
+  </idinfo>
+  <dataqual>
+    <logic>The source shapefiles were created by ArcInfo coverages with polygon topology.</logic>
+    <complete>This data does not reflect changes which have occurred after the source date.</complete>
+    <lineage>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>United States Census Bureau</origin>
+            <pubdate>12/2000</pubdate>
+            <pubtime>Unknown</pubtime>
+            <title>Redistricting Census 200 TIGER/Line Files</title>
+            <geoform>vector digital data</geoform>
+          </citeinfo>
+        </srccite>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Legislative Technology Services Bureau</origin>
+            <pubdate>11/01</pubdate>
+            <title>2001 Ward Collection Project (WISE-LR Data)</title>
+            <geoform>vector digital data</geoform>
+            <othercit>Census 2000 data was given to all 72 County Clerks in the State of Wisconsin with an application developed by LTSB called WISE-LR. Each county performed local redistricting including the creation of municiple wards and submitted the data to the Legislature. These assembly Districts were created with the municiple wards. This data includes municiple annexations up to August 1, 2001.</othercit>
+          </citeinfo>
+        </srccite>
+      </srcinfo>
+      <procstep>
+        <procdesc>Census 2000 TIGER files were translated using GISTools TIGER2SHP. The files were combined and converted into statewide coverages.</procdesc>
+        <srcused>\\04FS\gis$\leg_gis\GIS Data\Geodatabase\Redistricting_10_31_02.mdb</srcused>
+        <procdate>12/00</procdate>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>Legislative Technology Services Bureau</cntorg>
+              <cntper>Tony J. Van Der Wielen</cntper>
+            </cntorgp>
+            <cntpos>GIS Application Developer</cntpos>
+            <cntvoice>608-266-6640</cntvoice>
+            <cntfax>608-267-6763</cntfax>
+            <cntemail>gis@legis.state.wi.us</cntemail>
+            <hours>8-5 Monday - Friday</hours>
+          </cntinfo>
+        </proccont>
+      </procstep>
+      <procstep>
+        <procdesc>
+2001 Ward Collection Project
+Census 2000 TIGER data was placed into the WISE-LR application and delivered to all 72 Wisconsin Counties.
+Each county used the WISE-LR application to add municipal annexations and create Supervisory, Aldermanic and municipal wards. Data was collect from each county and new block, ward, municipal and county statewide files were created. This data was then placed into the redistricting appliction autoBound for Legislative district creation.
+</procdesc>
+        <procdate>11/01</procdate>
+        <proccont>
+          <cntinfo>
+            <cntorgp>
+              <cntorg>Legislative Technology Services Bureau</cntorg>
+              <cntper>Tony J. Van Der Wielen</cntper>
+            </cntorgp>
+            <cntpos>GIS Application Developer</cntpos>
+            <cntvoice>608-266-6640 Ext. 1</cntvoice>
+            <cntfax>608-267-6763</cntfax>
+            <cntemail>gis@legis.state.wi.us</cntemail>
+            <hours>8-5 Monday - Friday</hours>
+          </cntinfo>
+        </proccont>
+      </procstep>
+      <procstep>
+        <procdesc Sync="TRUE">Dataset copied.</procdesc>
+        <srcused Sync="TRUE">Server=svr022v; Service=5151; Database=sde; User=sde; Version=sde.DEFAULT</srcused>
+        <procdate Sync="TRUE">20090319</procdate>
+        <proctime Sync="TRUE">11143800</proctime>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct Sync="TRUE">Vector</direct>
+    <ptvctinf>
+      <esriterm Name="WI_ElectionData_2008">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom code="4" Sync="TRUE" />
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">6278</efeacnt>
+        <spindex Sync="TRUE">TRUE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <planci>
+          <plance Sync="TRUE">coordinate pair</plance>
+          <coordrep>
+            <absres Sync="TRUE">0.000100</absres>
+            <ordres Sync="TRUE">0.000100</ordres>
+          </coordrep>
+          <plandu Sync="TRUE">meters</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn Sync="TRUE">D_North_American_1983_HARN</horizdn>
+        <ellips Sync="TRUE">Geodetic Reference System 80</ellips>
+        <semiaxis Sync="TRUE">6378137.000000</semiaxis>
+        <denflat Sync="TRUE">298.257222</denflat>
+      </geodetic>
+      <cordsysn>
+        <geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn>
+        <projcsn Sync="TRUE">Wisconsin Transverse Mercator (WTM83/91)</projcsn>
+      </cordsysn>
+    </horizsys>
+    <vertdef>
+      <altsys>
+        <altres>1.000000</altres>
+        <altenc>Explicit elevation coordinate included with horizontal coordinates</altenc>
+      </altsys>
+    </vertdef>
+  </spref>
+  <eainfo>
+    <detailed Name="WI_ElectionData_2008">
+      <enttyp>
+        <enttypl Sync="TRUE">WI_ElectionData_2008</enttypl>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">6278</enttypc>
+        <enttypd>Election Data, Wisconsin 2008</enttypd>
+        <enttypds>WI Legislative Technology Services Bureau </enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">FID</attrlabl>
+        <attalias Sync="TRUE">FID</attalias>
+        <attrtype Sync="TRUE">OID</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">OBJECTID</attrlabl>
+        <attalias Sync="TRUE">OBJECTID</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">ESRI</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>STFID</attrlabl>
+        <attrdef>Unique ID (State,Mcd,Ward) in Cenus FIPS format.</attrdef>
+        <attrdefs>LTSB</attrdefs>
+        <attalias Sync="TRUE">STFID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">15</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>NAME</attrlabl>
+        <attrdef>Name of feature</attrdef>
+        <attrdefs>LTSB</attrdefs>
+        <attalias Sync="TRUE">NAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">6</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>COUSUBFP</attrlabl>
+        <attrdef>Minor Civil Division FIPS code</attrdef>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">COUSUBFP</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">11</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>FIPSSTCO</attrlabl>
+        <attrdef>State County FIPS code</attrdef>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">FIPSSTCO</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>JID</attrlabl>
+        <attrdef>State County Mcd FIPS Code</attrdef>
+        <attrdefs>LTSB</attrdefs>
+        <attalias Sync="TRUE">JID</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">11</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>JVTD</attrlabl>
+        <attrdef>Ward Number assignment as a number</attrdef>
+        <attrdefs>LTSB</attrdefs>
+        <attalias Sync="TRUE">JVTD</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>JVTD2</attrlabl>
+        <attrdef>Mcd name,  City, Town or Village designation, ward number</attrdef>
+        <attrdefs>LTSB</attrdefs>
+        <attalias Sync="TRUE">JVTD2</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">26</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>PERSONS</attrlabl>
+        <attrdef>Total Population</attrdef>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">PERSONS</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">8</attscale>
+      </attr>
+      <attr>
+        <attrlabl>WHITE</attrlabl>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">WHITE</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>BLACK</attrlabl>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">BLACK</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>HISPANIC</attrlabl>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">HISPANIC</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ASIAN</attrlabl>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">ASIAN</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>AMINDIAN</attrlabl>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">AMINDIAN</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">8</attscale>
+      </attr>
+      <attr>
+        <attrlabl>PISLAND</attrlabl>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">PISLAND</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OTHER</attrlabl>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">OTHER</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OTHERMLT</attrlabl>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">OTHERMLT</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">8</attscale>
+      </attr>
+      <attr>
+        <attrlabl>PERSONS18</attrlabl>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">PERSONS18</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">8</attscale>
+      </attr>
+      <attr>
+        <attrlabl>WHITE18</attrlabl>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">WHITE18</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>BLACK18</attrlabl>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">BLACK18</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>HISPANIC18</attrlabl>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">HISPANIC18</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">8</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ASIAN18</attrlabl>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">ASIAN18</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>AMINDIAN18</attrlabl>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">AMINDIAN18</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">8</attscale>
+      </attr>
+      <attr>
+        <attrlabl>PISLAND18</attrlabl>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">PISLAND18</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">8</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OTHER18</attrlabl>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">OTHER18</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>OTHERMLT18</attrlabl>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">OTHERMLT18</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">8</attscale>
+      </attr>
+      <attr>
+        <attrlabl>COUNTY</attrlabl>
+        <attrdef>County Name as string</attrdef>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">COUNTY</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>MINORITY</attrlabl>
+        <attalias Sync="TRUE">MINORITY</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>ASSEMBLY</attrlabl>
+        <attrdef>Assembly District assignment</attrdef>
+        <attrdefs>Eastern District Federal Court</attrdefs>
+        <attalias Sync="TRUE">ASSEMBLY</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">11</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>SENATE</attrlabl>
+        <attrdef>Senate District</attrdef>
+        <attrdefs>Eastern District Federal Court</attrdefs>
+        <attalias Sync="TRUE">SENATE</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>CONGRESS</attrlabl>
+        <attrdef>Congressional District Assignment</attrdef>
+        <attrdefs>Wisconsin State Legislature</attrdefs>
+        <attalias Sync="TRUE">CONGRESS</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">11</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>CNTY_NAME</attrlabl>
+        <attrdef>County name</attrdef>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">CNTY_NAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">12</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>MCD_NAME</attrlabl>
+        <attrdef>Mcd Name</attrdef>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">MCD_NAME</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">17</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl>CTV</attrlabl>
+        <attrdef>City, Town or Village designation</attrdef>
+        <attrdefs>U.S. Census Bureau</attrdefs>
+        <attalias Sync="TRUE">CTV</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">4</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRESDEM08</attrlabl>
+        <attalias Sync="TRUE">PRESDEM08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdef>2008 Presidential Results - Democrat</attrdef>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRESREP08</attrlabl>
+        <attalias Sync="TRUE">PRESREP08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 Presidential Results - Republican</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRESGRN08</attrlabl>
+        <attalias Sync="TRUE">PRESGRN08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 Presidential Results - Green Party</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRESLBR08</attrlabl>
+        <attalias Sync="TRUE">PRESLBR08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 Presidential Results - Libertarian</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRESIND108</attrlabl>
+        <attalias Sync="TRUE">PRESIND108</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 Presidential Results - Independent</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRESIND208</attrlabl>
+        <attalias Sync="TRUE">PRESIND208</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 Presidential Results - Independent</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRESIND308</attrlabl>
+        <attalias Sync="TRUE">PRESIND308</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 Presidential Results - Independent</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRESIND408</attrlabl>
+        <attalias Sync="TRUE">PRESIND408</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 Presidential Results - Independent</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRESIND508</attrlabl>
+        <attalias Sync="TRUE">PRESIND508</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 Presidential Results - Independent</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRESSCT08</attrlabl>
+        <attalias Sync="TRUE">PRESSCT08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 Presidential Results - Scatter</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ASMDEM08</attrlabl>
+        <attalias Sync="TRUE">ASMDEM08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 State Assembly Results - Democrat</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ASMREP08</attrlabl>
+        <attalias Sync="TRUE">ASMREP08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 State Assembly Results - Republican</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ASMSCT08</attrlabl>
+        <attalias Sync="TRUE">ASMSCT08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 State Assembly Results - Scatter</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ASMLIB08</attrlabl>
+        <attalias Sync="TRUE">ASMLIB08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 State Assembly Results - Libertarian</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ASMIND08</attrlabl>
+        <attalias Sync="TRUE">ASMIND08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 State Assembly Results - Independent</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SENDEM08</attrlabl>
+        <attalias Sync="TRUE">SENDEM08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 State Senate Results - Democrat</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SENREP08</attrlabl>
+        <attalias Sync="TRUE">SENREP08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 State Senate Results - Republican</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SENSCT08</attrlabl>
+        <attalias Sync="TRUE">SENSCT08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 State Senate Results - Scatter</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SENIND08</attrlabl>
+        <attalias Sync="TRUE">SENIND08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 State Senate Results - Independent</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CONDEM08</attrlabl>
+        <attalias Sync="TRUE">CONDEM08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 US Congress Results - Democrat</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CONREP08</attrlabl>
+        <attalias Sync="TRUE">CONREP08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 US Congress Results - Republican</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CONSCT08</attrlabl>
+        <attalias Sync="TRUE">CONSCT08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 US Congress Results - Scatter</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CONLIB08</attrlabl>
+        <attalias Sync="TRUE">CONLIB08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 US Congress Results - Libertarian</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CONIND08</attrlabl>
+        <attalias Sync="TRUE">CONIND08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 US Congress Results - Independent</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DADEM08</attrlabl>
+        <attalias Sync="TRUE">DADEM08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 District Attorney Results - Democrat</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DAREP08</attrlabl>
+        <attalias Sync="TRUE">DAREP08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 District Attorney Results - Republican</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DASCAT08</attrlabl>
+        <attalias Sync="TRUE">DASCAT08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 District Attorney Results - Scatter</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DAIND08</attrlabl>
+        <attalias Sync="TRUE">DAIND08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 District Attorney Results - Independent</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DAOTH08</attrlabl>
+        <attalias Sync="TRUE">DAOTH08</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdefs>Elections Division - Wisconsin Government Accountability Board</attrdefs>
+        <attrdef>2008 District Attorney Results - Other</attrdef>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">5</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">PRES08T</attrlabl>
+        <attalias Sync="TRUE">PRES08T</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <attrdefs>LTSB</attrdefs>
+        <attrdef>2008 Presidential Results - Total</attrdef>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">ASM08T</attrlabl>
+        <attalias Sync="TRUE">ASM08T</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <attrdefs>LTSB</attrdefs>
+        <attrdef>2008 State Assembly - Total Votes</attrdef>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">SEN08T</attrlabl>
+        <attalias Sync="TRUE">SEN08T</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <attrdefs>LTSB</attrdefs>
+        <attrdef>2008 State Senate - Totals</attrdef>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">CON08T</attrlabl>
+        <attalias Sync="TRUE">CON08T</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <attrdefs>LTSB</attrdefs>
+        <attrdef>2008 US Congress - Total</attrdef>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">DA08T</attrlabl>
+        <attalias Sync="TRUE">DA08T</attalias>
+        <attrtype Sync="TRUE">Integer</attrtype>
+        <attwidth Sync="TRUE">10</attwidth>
+        <attrdefs>LTSB</attrdefs>
+        <attrdef>2008 District Attorney - Total</attrdef>
+        <atprecis Sync="TRUE">10</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_area</attrlabl>
+        <attalias Sync="TRUE">Shape_area</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Area of feature in internal units squared.</attrdef>
+        <attrdefs Sync="TRUE">Esri</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_len</attrlabl>
+        <attalias Sync="TRUE">Shape_len</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <resdesc>Downloadable Data</resdesc>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <transize Sync="TRUE">9.430</transize>
+          <dssize Sync="TRUE">9.430</dssize>
+        </digtinfo>
+      </digform>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd Sync="TRUE">20090319</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>Tony J. Van Der Wielen</cntper>
+          <cntorg>Legislative Technology Services Bureau</cntorg>
+        </cntperp>
+        <cntpos>GIS Application Developer</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical address</addrtype>
+          <address>17 S. Fairchild St.</address>
+          <address>Suite 400</address>
+          <city>Madison</city>
+          <state>WI</state>
+          <postal>53703</postal>
+        </cntaddr>
+        <cntvoice>608-266-6640 Ext 1</cntvoice>
+        <cntemail>gis@legis.state.wi.us</cntemail>
+        <hours>8-5 M-F</hours>
+      </cntinfo>
+    </metc>
+    <metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+    <metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+    <mettc Sync="TRUE">local time</mettc>
+    <metac>None</metac>
+    <metuc>None</metuc>
+    <metextns>
+      <onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+      <metprof>ESRI Metadata Profile</metprof>
+    </metextns>
+    <metextns>
+      <onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+      <metprof>ESRI Metadata Profile</metprof>
+    </metextns>
+    <langmeta Sync="TRUE">en</langmeta>
+  </metainfo>
+  <Esri>
+    <CreaDate>20090319</CreaDate>
+    <CreaTime>11143800</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <SyncDate>20190226</SyncDate>
+    <SyncTime>15562000</SyncTime>
+    <ModDate>20190226</ModDate>
+    <ModTime>15562000</ModTime>
+    <DataProperties>
+      <lineage>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20090319" Time="105954" Name="" export="">FeatureClassToFeatureClass "T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp" "Database Connections\Legislative GIS Data.sde" Election_Data_2008_Wards # "STFID 'STFID' true true false 15 Text 0 0 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,STFID,-1,-1;NAME 'NAME' true true false 6 Text 0 0 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,NAME,-1,-1;COUSUBFP 'COUSUBFP' true true false 11 Text 0 0 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,COUSUBFP,-1,-1;FIPSSTCO 'FIPSSTCO' true true false 10 Text 0 0 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,FIPSSTCO,-1,-1;JID 'JID' true true false 11 Text 0 0 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,JID,-1,-1;JVTD 'JVTD' true true false 10 Double 0 10 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,JVTD,-1,-1;JVTD2 'JVTD2' true true false 26 Text 0 0 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,JVTD2,-1,-1;PERSONS 'PERSONS' true true false 19 Double 8 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,PERSONS,-1,-1;WHITE 'WHITE' true true false 10 Double 0 10 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,WHITE,-1,-1;BLACK 'BLACK' true true false 10 Double 0 10 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,BLACK,-1,-1;HISPANIC 'HISPANIC' true true false 10 Double 0 10 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,HISPANIC,-1,-1;ASIAN 'ASIAN' true true false 10 Double 0 10 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,ASIAN,-1,-1;AMINDIAN 'AMINDIAN' true true false 19 Double 8 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,AMINDIAN,-1,-1;PISLAND 'PISLAND' true true false 10 Double 0 10 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,PISLAND,-1,-1;OTHER 'OTHER' true true false 10 Double 0 10 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,OTHER,-1,-1;OTHERMLT 'OTHERMLT' true true false 19 Double 8 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,OTHERMLT,-1,-1;PERSONS18 'PERSONS18' true true false 19 Double 8 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,PERSONS18,-1,-1;WHITE18 'WHITE18' true true false 10 Double 0 10 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,WHITE18,-1,-1;BLACK18 'BLACK18' true true false 10 Double 0 10 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,BLACK18,-1,-1;HISPANIC18 'HISPANIC18' true true false 19 Double 8 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,HISPANIC18,-1,-1;ASIAN18 'ASIAN18' true true false 10 Double 0 10 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,ASIAN18,-1,-1;AMINDIAN18 'AMINDIAN18' true true false 19 Double 8 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,AMINDIAN18,-1,-1;PISLAND18 'PISLAND18' true true false 19 Double 8 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,PISLAND18,-1,-1;OTHER18 'OTHER18' true true false 10 Double 0 10 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,OTHER18,-1,-1;OTHERMLT18 'OTHERMLT18' true true false 19 Double 8 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,OTHERMLT18,-1,-1;COUNTY 'COUNTY' true true false 8 Text 0 0 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,COUNTY,-1,-1;MINORITY 'MINORITY' true true false 10 Double 0 10 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,MINORITY,-1,-1;ASSEMBLY 'ASSEMBLY' true true false 11 Text 0 0 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,ASSEMBLY,-1,-1;SENATE 'SENATE' true true false 8 Text 0 0 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,SENATE,-1,-1;CONGRESS 'CONGRESS' true true false 11 Text 0 0 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,CONGRESS,-1,-1;CNTY_NAME 'CNTY_NAME' true true false 12 Text 0 0 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,CNTY_NAME,-1,-1;MCD_NAME 'MCD_NAME' true true false 17 Text 0 0 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,MCD_NAME,-1,-1;CTV 'CTV' true true false 4 Text 0 0 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,CTV,-1,-1;PRESDEM08 'PRESDEM08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,PRESDEM08,-1,-1;PRESREP08 'PRESREP08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,PRESREP08,-1,-1;PRESGRN08 'PRESGRN08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,PRESGRN08,-1,-1;PRESLBR08 'PRESLBR08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,PRESLBR08,-1,-1;PRESIND108 'PRESIND108' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,PRESIND108,-1,-1;PRESIND208 'PRESIND208' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,PRESIND208,-1,-1;PRESIND308 'PRESIND308' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,PRESIND308,-1,-1;PRESIND408 'PRESIND408' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,PRESIND408,-1,-1;PRESIND508 'PRESIND508' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,PRESIND508,-1,-1;PRESSCT08 'PRESSCT08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,PRESSCT08,-1,-1;ASMDEM08 'ASMDEM08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,ASMDEM08,-1,-1;ASMREP08 'ASMREP08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,ASMREP08,-1,-1;ASMSCT08 'ASMSCT08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,ASMSCT08,-1,-1;ASMLIB08 'ASMLIB08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,ASMLIB08,-1,-1;ASMIND08 'ASMIND08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,ASMIND08,-1,-1;SENDEM08 'SENDEM08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,SENDEM08,-1,-1;SENREP08 'SENREP08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,SENREP08,-1,-1;SENSCT08 'SENSCT08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,SENSCT08,-1,-1;SENIND08 'SENIND08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,SENIND08,-1,-1;CONDEM08 'CONDEM08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,CONDEM08,-1,-1;CONREP08 'CONREP08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,CONREP08,-1,-1;CONSCT08 'CONSCT08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,CONSCT08,-1,-1;CONLIB08 'CONLIB08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,CONLIB08,-1,-1;CONIND08 'CONIND08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,CONIND08,-1,-1;DADEM08 'DADEM08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,DADEM08,-1,-1;DAREP08 'DAREP08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,DAREP08,-1,-1;DASCAT08 'DASCAT08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,DASCAT08,-1,-1;DAIND08 'DAIND08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,DAIND08,-1,-1;DAOTH08 'DAOTH08' true true false 19 Double 5 18 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,DAOTH08,-1,-1;PRES08T 'PRES08T' true true false 10 Double 0 10 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,PRES08T,-1,-1;ASM08T 'ASM08T' true true false 10 Double 0 10 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,ASM08T,-1,-1;SEN08T 'SEN08T' true true false 10 Double 0 10 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,SEN08T,-1,-1;CON08T 'CON08T' true true false 10 Double 0 10 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,CON08T,-1,-1;DA08T 'DA08T' true true false 10 Double 0 10 ,First,#,T:\leg_gis\GIS Data\Election_Data\2008\Final_Data_031909\Website_Wards_2008.shp,DA08T,-1,-1" # "Database Connections\Legislative GIS Data.sde\sde.SDE.Election_Data_2008_Wards"</Process>
+      </lineage>
+      <itemProps>
+        <itemName Sync="TRUE">WI_ElectionData_2008</itemName>
+        <nativeExtBox>
+          <westBL Sync="TRUE">294822.467000</westBL>
+          <eastBL Sync="TRUE">773277.784900</eastBL>
+          <southBL Sync="TRUE">225108.729200</southBL>
+          <northBL Sync="TRUE">734409.177900</northBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </nativeExtBox>
+        <itemSize Sync="TRUE">9.430</itemSize>
+        <itemLocation>
+          <linkage Sync="TRUE">file://\\robbie\data\ARCHIVE_PROJECT\STATEWIDE_DATA\LTSB\2015-16\ElectionData\WI_ElectionData_2008.shp</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </itemLocation>
+        <imsContentType export="False">002</imsContentType>
+      </itemProps>
+      <coordRef>
+        <type Sync="TRUE">Projected</type>
+        <geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn>
+        <csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+        <projcsn Sync="TRUE">Wisconsin Transverse Mercator (WTM83/91)</projcsn>
+        <peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.5'&gt;&lt;WKT&gt;PROJCS[&amp;quot;Wisconsin Transverse Mercator (WTM83/91)&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983&amp;quot;,DATUM[&amp;quot;D_North_American_1983_HARN&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,520000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,-4480000.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-90.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0]]&lt;/WKT&gt;&lt;XOrigin&gt;-5100900&lt;/XOrigin&gt;&lt;YOrigin&gt;-14478100&lt;/YOrigin&gt;&lt;XYScale&gt;450445547.3910538&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+      </coordRef>
+    </DataProperties>
+    <MetaID>{2F36EA02-F322-445A-9883-42B3055B870E}</MetaID>
+    <ArcGISFormat>1.0</ArcGISFormat>
+    <scaleRange>
+      <minScale>150000000</minScale>
+      <maxScale>5000</maxScale>
+    </scaleRange>
+    <ArcGISProfile>ISO19139</ArcGISProfile>
+  </Esri>
+  <mdLang>
+    <languageCode value="eng" />
+    <countryCode value="USA" Sync="TRUE" />
+  </mdLang>
+  <mdChar>
+    <CharSetCd value="004" />
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd value="005" />
+  </mdHrLv>
+  <mdStanName>ArcGIS Metadata</mdStanName>
+  <mdStanVer>1.0</mdStanVer>
+  <distInfo>
+    <distTranOps>
+      <onLineSrc>
+        <linkage>Server=svr022v; Service=5151; Database=sde; User=sde; Version=sde.DEFAULT</linkage>
+      </onLineSrc>
+      <transSize Sync="TRUE">9.430</transSize>
+    </distTranOps>
+    <distFormat>
+      <formatName Sync="TRUE">Shapefile</formatName>
+    </distFormat>
+    <distributor>
+      <distorCont>
+        <editorSource>external</editorSource>
+        <editorDigest>22a7e348507f81e7f38bdbb4417b8782</editorDigest>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park St</delPoint>
+            <city>Madison</city>
+            <adminArea>Wisconsin</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">(608) 262-1471</voiceNum>
+          </cntPhone>
+          <cntHours>Monday – Friday: 9:00am – 4:00pm</cntHours>
+        </rpCntInfo>
+        <displayName>Data Technician</displayName>
+        <rpPosName>metadata technician</rpPosName>
+        <displayName>Arthur H. Robinson Map Library</displayName>
+        <editorSave>True</editorSave>
+        <displayName>Arthur H. Robinson Map Library</displayName>
+        <role>
+          <RoleCd value="001" />
+        </role>
+      </distorCont>
+    </distributor>
+    <distributor>
+      <distorCont>
+        <editorSource>external</editorSource>
+        <editorDigest>22a7e348507f81e7f38bdbb4417b8782</editorDigest>
+        <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+        <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="both">
+            <delPoint>550 N. Park St</delPoint>
+            <city>Madison</city>
+            <adminArea>Wisconsin</adminArea>
+            <postCode>53706</postCode>
+            <country>US</country>
+            <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">(608) 262-1471</voiceNum>
+          </cntPhone>
+          <cntHours>Monday – Friday: 9:00am – 4:00pm</cntHours>
+        </rpCntInfo>
+        <displayName>Data Technician</displayName>
+        <rpPosName>metadata technician</rpPosName>
+        <displayName>Arthur H. Robinson Map Library</displayName>
+        <editorSave>True</editorSave>
+        <displayName>Arthur H. Robinson Map Library</displayName>
+        <role>
+          <RoleCd value="001" />
+        </role>
+      </distorCont>
+      <distorTran>
+        <onLineSrc>
+          <linkage>https://gisdata.wisc.edu/public/WI_ElectionData_2008.zip</linkage>
+          <orName>GeoData@UW-Madison</orName>
+          <orDesc>Archived dataset at UW-Madison</orDesc>
+          <orFunct>
+            <OnFunctCd value="001" />
+          </orFunct>
+        </onLineSrc>
+      </distorTran>
+    </distributor>
+    <distributor>
+      <distorCont>
+        <editorSource>external</editorSource>
+        <editorDigest>85c437098d7f54377716d37a94f6cd2e</editorDigest>
+        <rpOrgName>WI Legislative Technology Services Bureau</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="">
+            <delPoint>17 West Main Street, Suite 200</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53703-3305</postCode>
+            <eMailAdd>GIS@legis.wisconsin.gov</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">(608) 266-6640 ext. 1 </voiceNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>WI Legislative Technology Services Bureau</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </distorCont>
+      <distorTran>
+        <onLineSrc>
+          <linkage>http://legis.wisconsin.gov/ltsb/gis/data/ </linkage>
+          <orName>LTSB Data Library</orName>
+          <orFunct>
+            <OnFunctCd value="001" />
+          </orFunct>
+        </onLineSrc>
+      </distorTran>
+    </distributor>
+  </distInfo>
+  <dataIdInfo>
+    <idCitation>
+      <presForm>
+        <PresFormCd value="005" Sync="TRUE" />
+        <fgdcGeoform>vector digital data</fgdcGeoform>
+      </presForm>
+      <resTitle Sync="FALSE">Election Data, Wisconsin 2008</resTitle>
+      <resAltTitle>2008_Election_Data_by_Ward.shp</resAltTitle>
+      <date>
+        <pubDate>2016-03-11T00:00:00</pubDate>
+      </date>
+      <citRespParty>
+        <editorSource>external</editorSource>
+        <editorDigest>85c437098d7f54377716d37a94f6cd2e</editorDigest>
+        <rpOrgName>WI Legislative Technology Services Bureau</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="">
+            <delPoint>17 West Main Street, Suite 200</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53703-3305</postCode>
+            <eMailAdd>GIS@legis.wisconsin.gov</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">(608) 266-6640 ext. 1 </voiceNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>WI Legislative Technology Services Bureau</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </citRespParty>
+      <citRespParty>
+        <editorSource>external</editorSource>
+        <editorDigest>1f794b8b58db2b6049af4b8bbf921af9</editorDigest>
+        <rpIndName>Tony Van Der Wielen</rpIndName>
+        <rpOrgName>WI Legislative Technology Services Bureau</rpOrgName>
+        <rpPosName>GIS Team Manager</rpPosName>
+        <rpCntInfo>
+          <cntAddress addressType="">
+            <delPoint>17 West Main Street, Suite 200</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53703-3305</postCode>
+            <eMailAdd>GIS Team Manager</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">(608) 266-6640 ext. 1</voiceNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Tony Van Der Wielen</displayName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+      </citRespParty>
+    </idCitation>
+    <idAbs>This polygon data layer represents election data by ward for Wisconsin in 2008[This file was created by disaggregating the State of Wisconsin's 2008 General Election Results to the 2001 municipal ward layer.]</idAbs>
+    <idPurp>[This data was created to perform generalizations on voting patterns in the State of Wisconsin. Municipal annexations, population growth and general errors associated with the process of disaggregating data may be present within this data. Due to the previously mentioned factors election data totals may not match the Wisconsin State Elections Board official results. Please make note of these factors while using this data.]</idPurp>
+    <idStatus>
+      <ProgCd value="001" />
+    </idStatus>
+    <resMaint>
+      <maintFreq>
+        <MaintFreqCd value="012" />
+      </maintFreq>
+      <maintCont>
+        <editorSource>external</editorSource>
+        <editorDigest>85c437098d7f54377716d37a94f6cd2e</editorDigest>
+        <rpOrgName>WI Legislative Technology Services Bureau</rpOrgName>
+        <rpCntInfo>
+          <cntAddress addressType="">
+            <delPoint>17 West Main Street, Suite 200</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53703-3305</postCode>
+            <eMailAdd>GIS@legis.wisconsin.gov</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">(608) 266-6640 ext. 1 </voiceNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>WI Legislative Technology Services Bureau</displayName>
+        <role>
+          <RoleCd value="006" />
+        </role>
+      </maintCont>
+      <maintCont>
+        <editorSource>external</editorSource>
+        <editorDigest>1f794b8b58db2b6049af4b8bbf921af9</editorDigest>
+        <rpIndName>Tony Van Der Wielen</rpIndName>
+        <rpOrgName>WI Legislative Technology Services Bureau</rpOrgName>
+        <rpPosName>GIS Team Manager</rpPosName>
+        <rpCntInfo>
+          <cntAddress addressType="">
+            <delPoint>17 West Main Street, Suite 200</delPoint>
+            <city>Madison</city>
+            <adminArea>WI</adminArea>
+            <postCode>53703-3305</postCode>
+            <eMailAdd>GIS Team Manager</eMailAdd>
+            <country>US</country>
+          </cntAddress>
+          <cntPhone>
+            <voiceNum tddtty="">(608) 266-6640 ext. 1</voiceNum>
+          </cntPhone>
+        </rpCntInfo>
+        <editorSave>True</editorSave>
+        <displayName>Tony Van Der Wielen</displayName>
+        <role>
+          <RoleCd value="007" />
+        </role>
+      </maintCont>
+    </resMaint>
+    <themeKeys>
+      <keyword>Districts</keyword>
+      <keyword>Election Data</keyword>
+      <keyword>Assembly</keyword>
+      <keyword>2008</keyword>
+      <keyword>Legislative</keyword>
+    </themeKeys>
+    <searchKeys>
+      <keyword>Districts</keyword>
+      <keyword>Election Data</keyword>
+      <keyword>Assembly</keyword>
+      <keyword>2008</keyword>
+      <keyword>Legislative</keyword>
+    </searchKeys>
+    <dataLang>
+      <languageCode value="eng" />
+      <countryCode value="USA" Sync="TRUE" />
+    </dataLang>
+    <envirDesc Sync="TRUE">Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.5.1.7333</envirDesc>
+    <spatRpType>
+      <SpatRepTypCd value="001" Sync="TRUE" />
+    </spatRpType>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="search">
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+          <westBL Sync="TRUE">-92.964438</westBL>
+          <eastBL Sync="TRUE">-86.666231</eastBL>
+          <northBL Sync="TRUE">47.083194</northBL>
+          <southBL Sync="TRUE">42.456930</southBL>
+        </GeoBndBox>
+      </geoEle>
+      <exDesc>publication date</exDesc>
+      <tempEle>
+        <TempExtent>
+          <exTemp>
+            <TM_Instant>
+              <tmPosition>2016-03-11T00:00:00</tmPosition>
+            </TM_Instant>
+          </exTemp>
+        </TempExtent>
+      </tempEle>
+    </dataExt>
+    <idCredit>WI Legislative Technology Services Bureau </idCredit>
+    <themeKeys>
+      <thesaName>
+        <resTitle>FGDC</resTitle>
+        <date>
+          <pubDate>2016-03-11T00:00:00</pubDate>
+        </date>
+      </thesaName>
+      <keyword>Polygon</keyword>
+    </themeKeys>
+    <themeKeys>
+      <thesaName>
+        <resTitle>LCSH</resTitle>
+        <date>
+          <pubDate>2016-03-11T00:00:00</pubDate>
+        </date>
+      </thesaName>
+      <keyword>Voting</keyword>
+    </themeKeys>
+    <placeKeys>
+      <thesaName>
+        <resTitle>GNIS</resTitle>
+        <date>
+          <pubDate>2016-03-11T00:00:00</pubDate>
+        </date>
+      </thesaName>
+      <keyword>Wisconsin</keyword>
+    </placeKeys>
+    <dataChar>
+      <CharSetCd value="004" />
+    </dataChar>
+    <suppInfo>Augmented original metadata with UW-Madison specific elements.  For complete metadata documentation and online dataset download, please visit: http://legis.wisconsin.gov/ltsb/gis/data/  </suppInfo>
+    <idPoC>
+      <editorSource>external</editorSource>
+      <editorDigest>85c437098d7f54377716d37a94f6cd2e</editorDigest>
+      <rpOrgName>WI Legislative Technology Services Bureau</rpOrgName>
+      <rpCntInfo>
+        <cntAddress addressType="">
+          <delPoint>17 West Main Street, Suite 200</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53703-3305</postCode>
+          <eMailAdd>GIS@legis.wisconsin.gov</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">(608) 266-6640 ext. 1 </voiceNum>
+        </cntPhone>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>WI Legislative Technology Services Bureau</displayName>
+      <role>
+        <RoleCd value="006" />
+      </role>
+    </idPoC>
+    <idPoC>
+      <editorSource>external</editorSource>
+      <editorDigest>1f794b8b58db2b6049af4b8bbf921af9</editorDigest>
+      <rpIndName>Tony Van Der Wielen</rpIndName>
+      <rpOrgName>WI Legislative Technology Services Bureau</rpOrgName>
+      <rpPosName>GIS Team Manager</rpPosName>
+      <rpCntInfo>
+        <cntAddress addressType="">
+          <delPoint>17 West Main Street, Suite 200</delPoint>
+          <city>Madison</city>
+          <adminArea>WI</adminArea>
+          <postCode>53703-3305</postCode>
+          <eMailAdd>GIS Team Manager</eMailAdd>
+          <country>US</country>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">(608) 266-6640 ext. 1</voiceNum>
+        </cntPhone>
+      </rpCntInfo>
+      <editorSave>True</editorSave>
+      <displayName>Tony Van Der Wielen</displayName>
+      <role>
+        <RoleCd value="007" />
+      </role>
+    </idPoC>
+    <resConst>
+      <LegConsts>
+        <useLimit>Although this data is being distributed by the University of Wisconsin-Madison, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</useLimit>
+        <othConsts>None</othConsts>
+      </LegConsts>
+    </resConst>
+    <resConst>
+      <Consts>
+        <useLimit>None</useLimit>
+      </Consts>
+    </resConst>
+    <tpCat>
+      <TopicCatCd value="003" />
+    </tpCat>
+  </dataIdInfo>
+  <dqInfo>
+    <dqScope>
+      <scpLvl>
+        <ScopeCd value="005" />
+      </scpLvl>
+    </dqScope>
+    <report type="DQTopConsis" dimension="">
+      <evalMethDesc>The source shapefiles were created by ArcInfo coverages with polygon topology.</evalMethDesc>
+    </report>
+    <report type="DQConcConsis" dimension="">
+      <measDesc>The source shapefiles were created by ArcInfo coverages with polygon topology.</measDesc>
+    </report>
+    <report type="DQCompOm" dimension="">
+      <measDesc>This data does not reflect changes which have occurred after the source date.</measDesc>
+    </report>
+    <dataLineage>
+      <prcStep>
+        <stepDesc>2001 Ward Collection Project Census 2000 TIGER data was placed into the WISE-LR application and delivered to all 72 Wisconsin Counties. Each county used the WISE-LR application to add municipal annexations and create Supervisory, Aldermanic and municipal wards. Data was collect from each county and new block, ward, municipal and county statewide files were created. This data was then placed into the redistricting appliction autoBound for Legislative district creation.</stepDesc>
+        <stepProc>
+          <rpIndName>Tony J. Van Der Wielen</rpIndName>
+          <rpOrgName>Legislative Technology Services Bureau</rpOrgName>
+          <rpPosName>GIS Application Developer</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>608-266-6640 Ext. 1</voiceNum>
+              <faxNum>608-267-6763</faxNum>
+            </cntPhone>
+            <cntAddress>
+              <eMailAdd>gis@legis.state.wi.us</eMailAdd>
+            </cntAddress>
+            <cntHours>8-5 Monday - Friday</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="009" />
+          </role>
+        </stepProc>
+      </prcStep>
+      <prcStep>
+        <stepDesc>Census 2000 TIGER files were translated using GISTools TIGER2SHP. The files were combined and converted into statewide coverages.</stepDesc>
+        <stepProc>
+          <rpIndName>Tony J. Van Der Wielen</rpIndName>
+          <rpOrgName>Legislative Technology Services Bureau</rpOrgName>
+          <rpPosName>GIS Application Developer</rpPosName>
+          <rpCntInfo>
+            <cntPhone>
+              <voiceNum>608-266-6640</voiceNum>
+              <faxNum>608-267-6763</faxNum>
+            </cntPhone>
+            <cntAddress>
+              <eMailAdd>gis@legis.state.wi.us</eMailAdd>
+            </cntAddress>
+            <cntHours>8-5 Monday - Friday</cntHours>
+          </rpCntInfo>
+          <role>
+            <RoleCd value="009" />
+          </role>
+        </stepProc>
+        <stepSrc type="used">
+          <srcCitatn>
+            <resAltTitle>\\04FS\gis$\leg_gis\GIS Data\Geodatabase\Redistricting_10_31_02.mdb</resAltTitle>
+          </srcCitatn>
+        </stepSrc>
+      </prcStep>
+      <dataSource type="">
+        <srcCitatn>
+          <resTitle>Redistricting Census 200 TIGER/Line Files</resTitle>
+          <citRespParty>
+            <rpOrgName>United States Census Bureau</rpOrgName>
+            <role>
+              <RoleCd value="006" />
+            </role>
+          </citRespParty>
+          <presForm>
+            <PresFormCd value="005" />
+          </presForm>
+          <presForm>
+            <fgdcGeoform>vector digital data</fgdcGeoform>
+          </presForm>
+        </srcCitatn>
+      </dataSource>
+      <dataSource type="">
+        <srcCitatn>
+          <resTitle>2001 Ward Collection Project (WISE-LR Data)</resTitle>
+          <citRespParty>
+            <rpOrgName>Legislative Technology Services Bureau</rpOrgName>
+            <role>
+              <RoleCd value="006" />
+            </role>
+          </citRespParty>
+          <presForm>
+            <PresFormCd value="005" />
+          </presForm>
+          <presForm>
+            <fgdcGeoform>vector digital data</fgdcGeoform>
+          </presForm>
+          <otherCitDet>Census 2000 data was given to all 72 County Clerks in the State of Wisconsin with an application developed by LTSB called WISE-LR. Each county performed local redistricting including the creation of municiple wards and submitted the data to the Legislature. These assembly Districts were created with the municiple wards. This data includes municiple annexations up to August 1, 2001.</otherCitDet>
+        </srcCitatn>
+      </dataSource>
+      <prcStep>
+        <stepDesc>Changed name of file from ‘2008_Election_Data_by_Ward.shp’ to  WI_ElectionData_2008</stepDesc>
+        <stepDateTm>2016-03-11T00:00:00</stepDateTm>
+      </prcStep>
+    </dataLineage>
+    <report type="DQQuanAttAcc" dimension="">
+      <measDesc>Attribute information remains the same as given by the author of the data.</measDesc>
+    </report>
+  </dqInfo>
+  <Binary>
+    <Enclosure>
+      <Descript>original metadata</Descript>
+      <Data SourceMetadata="yes" OriginalFileName="source_metadata.xml" SourceMetadataDigest="c5a5d6c38bad871ef375bd1c6331540f" EsriPropertyType="Base64" SourceMetadataSchema="fgdc">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxtZXRhZGF0YT4NCiAgPGlk
+aW5mbz4NCiAgICA8Y2l0YXRpb24+DQogICAgICA8Y2l0ZWluZm8+DQogICAgICAgIDxvcmlnaW4+
+TFRTQjwvb3JpZ2luPg0KICAgICAgICA8cHViZGF0ZT41LzMwLzIwMDI8L3B1YmRhdGU+DQogICAg
+ICAgIDxvbmxpbms+U2VydmVyPXN2cjAyMnY7IFNlcnZpY2U9NTE1MTsgRGF0YWJhc2U9c2RlOyBV
+c2VyPXNkZTsgVmVyc2lvbj1zZGUuREVGQVVMVDwvb25saW5rPg0KICAgICAgPC9jaXRlaW5mbz4N
+CiAgICA8L2NpdGF0aW9uPg0KICAgIDxkZXNjcmlwdD4NCiAgICAgIDxhYnN0cmFjdD5UaGlzIGZp
+bGUgd2FzIGNyZWF0ZWQgYnkgZGlzYWdncmVnYXRpbmcgdGhlIFN0YXRlIG9mIFdpc2NvbnNpbidz
+IDIwMDggR2VuZXJhbCBFbGVjdGlvbiBSZXN1bHRzIHRvIHRoZSAyMDAxIG11bmljaXBhbCB3YXJk
+IGxheWVyLjwvYWJzdHJhY3Q+DQogICAgICA8cHVycG9zZT5UaGlzIGRhdGEgd2FzIGNyZWF0ZWQg
+dG8gcGVyZm9ybSBnZW5lcmFsaXphdGlvbnMgb24gdm90aW5nIHBhdHRlcm5zIGluIHRoZSBTdGF0
+ZSBvZiBXaXNjb25zaW4uIE11bmljaXBhbCBhbm5leGF0aW9ucywgcG9wdWxhdGlvbiBncm93dGgg
+YW5kIGdlbmVyYWwgZXJyb3JzIGFzc29jaWF0ZWQgd2l0aCB0aGUgcHJvY2VzcyBvZiBkaXNhZ2dy
+ZWdhdGluZyBkYXRhIG1heSBiZSBwcmVzZW50IHdpdGhpbiB0aGlzIGRhdGEuIER1ZSB0byB0aGUg
+cHJldmlvdXNseSBtZW50aW9uZWQgZmFjdG9ycyBlbGVjdGlvbiBkYXRhIHRvdGFscyBtYXkgbm90
+IG1hdGNoIHRoZSBXaXNjb25zaW4gU3RhdGUgRWxlY3Rpb25zIEJvYXJkIG9mZmljaWFsIHJlc3Vs
+dHMuIFBsZWFzZSBtYWtlIG5vdGUgb2YgdGhlc2UgZmFjdG9ycyB3aGlsZSB1c2luZyB0aGlzIGRh
+dGEuPC9wdXJwb3NlPg0KICAgIDwvZGVzY3JpcHQ+DQogICAgPHRpbWVwZXJkPg0KICAgICAgPHRp
+bWVpbmZvPg0KICAgICAgICA8c25nZGF0ZT4NCiAgICAgICAgICA8Y2FsZGF0ZT5BdWd1c3QgMSwg
+MjAwMTwvY2FsZGF0ZT4NCiAgICAgICAgPC9zbmdkYXRlPg0KICAgICAgPC90aW1laW5mbz4NCiAg
+ICAgIDxjdXJyZW50Pmdyb3VuZCBjb25kaXRpb248L2N1cnJlbnQ+DQogICAgPC90aW1lcGVyZD4N
+CiAgICA8c3RhdHVzPg0KICAgICAgPHByb2dyZXNzPkNvbXBsZXRlPC9wcm9ncmVzcz4NCiAgICAg
+IDx1cGRhdGU+Tm9uZSBwbGFubmVkPC91cGRhdGU+DQogICAgPC9zdGF0dXM+DQogICAgPGtleXdv
+cmRzPg0KICAgICAgPHRoZW1lPg0KICAgICAgICA8dGhlbWVrZXk+QXNzZW1ibHk8L3RoZW1la2V5
+Pg0KICAgICAgICA8dGhlbWVrZXk+RGlzdHJpY3RzPC90aGVtZWtleT4NCiAgICAgICAgPHRoZW1l
+a2V5PkxlZ2lzbGF0aXZlPC90aGVtZWtleT4NCiAgICAgICAgPHRoZW1la2V5PjIwMDggPC90aGVt
+ZWtleT4NCiAgICAgICAgPHRoZW1la2V5PkVsZWN0aW9uIERhdGE8L3RoZW1la2V5Pg0KICAgICAg
+PC90aGVtZT4NCiAgICA8L2tleXdvcmRzPg0KICAgIDxhY2Njb25zdD5Ob25lPC9hY2Njb25zdD4N
+CiAgICA8dXNlY29uc3Q+Tm9uZTwvdXNlY29uc3Q+DQogICAgPHB0Y29udGFjPg0KICAgICAgPGNu
+dGluZm8+DQogICAgICAgIDxjbnRvcmdwPg0KICAgICAgICAgIDxjbnRvcmc+TGVnaXNsYXRpdmUg
+VGVjaG5vbG9neSBTZXJ2aWNlcyBCdXJlYXU8L2NudG9yZz4NCiAgICAgICAgICA8Y250cGVyPlRv
+bnkgSi4gVmFuIERlciBXaWVsZW48L2NudHBlcj4NCiAgICAgICAgPC9jbnRvcmdwPg0KICAgICAg
+ICA8Y250cG9zPkdJUyBBcHBsaWNhdGlvbiBEZXZlbG9wZXI8L2NudHBvcz4NCiAgICAgICAgPGNu
+dGFkZHI+DQogICAgICAgICAgPGFkZHJ0eXBlPm1haWxpbmcgYW5kIHBoeXNpY2FsIGFkZHJlc3M8
+L2FkZHJ0eXBlPg0KICAgICAgICAgIDxhZGRyZXNzPjE3IFMuIEZhaXJjaGlsZCBTdC48L2FkZHJl
+c3M+DQogICAgICAgICAgPGFkZHJlc3M+U3VpdGUgNDAwPC9hZGRyZXNzPg0KICAgICAgICAgIDxj
+aXR5Pk1hZGlzb248L2NpdHk+DQogICAgICAgICAgPHN0YXRlPldJPC9zdGF0ZT4NCiAgICAgICAg
+ICA8cG9zdGFsPjUzNzAzPC9wb3N0YWw+DQogICAgICAgIDwvY250YWRkcj4NCiAgICAgICAgPGNu
+dHZvaWNlPjYwOC0yNjYtNjY0MDwvY250dm9pY2U+DQogICAgICAgIDxjbnRmYXg+NjA4LTI2Ny02
+NzYzPC9jbnRmYXg+DQogICAgICAgIDxjbnRlbWFpbD5naXNAbGVnaXMuc3RhdGUud2kudXM8L2Nu
+dGVtYWlsPg0KICAgICAgICA8aG91cnM+OC01IE1vbmRheSAtIEZyaWRheTwvaG91cnM+DQogICAg
+ICAgIDxjbnRpbnN0PlBsZWFzZSBzZW5kIGFuIGUtbWFpbCB0byBnaXNAbGVnaXMuc3RhdGUud2ku
+dXM8L2NudGluc3Q+DQogICAgICA8L2NudGluZm8+DQogICAgPC9wdGNvbnRhYz4NCiAgPC9pZGlu
+Zm8+DQogIDxkYXRhcXVhbD4NCiAgICA8bG9naWM+VGhlIHNvdXJjZSBzaGFwZWZpbGVzIHdlcmUg
+Y3JlYXRlZCBieSBBcmNJbmZvIGNvdmVyYWdlcyB3aXRoIHBvbHlnb24gdG9wb2xvZ3kuPC9sb2dp
+Yz4NCiAgICA8Y29tcGxldGU+VGhpcyBkYXRhIGRvZXMgbm90IHJlZmxlY3QgY2hhbmdlcyB3aGlj
+aCBoYXZlIG9jY3VycmVkIGFmdGVyIHRoZSBzb3VyY2UgZGF0ZS48L2NvbXBsZXRlPg0KICAgIDxs
+aW5lYWdlPg0KICAgICAgPHNyY2luZm8+DQogICAgICAgIDxzcmNjaXRlPg0KICAgICAgICAgIDxj
+aXRlaW5mbz4NCiAgICAgICAgICAgIDxvcmlnaW4+VW5pdGVkIFN0YXRlcyBDZW5zdXMgQnVyZWF1
+PC9vcmlnaW4+DQogICAgICAgICAgICA8cHViZGF0ZT4xMi8yMDAwPC9wdWJkYXRlPg0KICAgICAg
+ICAgICAgPHB1YnRpbWU+VW5rbm93bjwvcHVidGltZT4NCiAgICAgICAgICAgIDx0aXRsZT5SZWRp
+c3RyaWN0aW5nIENlbnN1cyAyMDAgVElHRVIvTGluZSBGaWxlczwvdGl0bGU+DQogICAgICAgICAg
+ICA8Z2VvZm9ybT52ZWN0b3IgZGlnaXRhbCBkYXRhPC9nZW9mb3JtPg0KICAgICAgICAgIDwvY2l0
+ZWluZm8+DQogICAgICAgIDwvc3JjY2l0ZT4NCiAgICAgIDwvc3JjaW5mbz4NCiAgICAgIDxzcmNp
+bmZvPg0KICAgICAgICA8c3JjY2l0ZT4NCiAgICAgICAgICA8Y2l0ZWluZm8+DQogICAgICAgICAg
+ICA8b3JpZ2luPkxlZ2lzbGF0aXZlIFRlY2hub2xvZ3kgU2VydmljZXMgQnVyZWF1PC9vcmlnaW4+
+DQogICAgICAgICAgICA8cHViZGF0ZT4xMS8wMTwvcHViZGF0ZT4NCiAgICAgICAgICAgIDx0aXRs
+ZT4yMDAxIFdhcmQgQ29sbGVjdGlvbiBQcm9qZWN0IChXSVNFLUxSIERhdGEpPC90aXRsZT4NCiAg
+ICAgICAgICAgIDxnZW9mb3JtPnZlY3RvciBkaWdpdGFsIGRhdGE8L2dlb2Zvcm0+DQogICAgICAg
+ICAgICA8b3RoZXJjaXQ+Q2Vuc3VzIDIwMDAgZGF0YSB3YXMgZ2l2ZW4gdG8gYWxsIDcyIENvdW50
+eSBDbGVya3MgaW4gdGhlIFN0YXRlIG9mIFdpc2NvbnNpbiB3aXRoIGFuIGFwcGxpY2F0aW9uIGRl
+dmVsb3BlZCBieSBMVFNCIGNhbGxlZCBXSVNFLUxSLiBFYWNoIGNvdW50eSBwZXJmb3JtZWQgbG9j
+YWwgcmVkaXN0cmljdGluZyBpbmNsdWRpbmcgdGhlIGNyZWF0aW9uIG9mIG11bmljaXBsZSB3YXJk
+cyBhbmQgc3VibWl0dGVkIHRoZSBkYXRhIHRvIHRoZSBMZWdpc2xhdHVyZS4gVGhlc2UgYXNzZW1i
+bHkgRGlzdHJpY3RzIHdlcmUgY3JlYXRlZCB3aXRoIHRoZSBtdW5pY2lwbGUgd2FyZHMuIFRoaXMg
+ZGF0YSBpbmNsdWRlcyBtdW5pY2lwbGUgYW5uZXhhdGlvbnMgdXAgdG8gQXVndXN0IDEsIDIwMDEu
+PC9vdGhlcmNpdD4NCiAgICAgICAgICA8L2NpdGVpbmZvPg0KICAgICAgICA8L3NyY2NpdGU+DQog
+ICAgICA8L3NyY2luZm8+DQogICAgICA8cHJvY3N0ZXA+DQogICAgICAgIDxwcm9jZGVzYz5DZW5z
+dXMgMjAwMCBUSUdFUiBmaWxlcyB3ZXJlIHRyYW5zbGF0ZWQgdXNpbmcgR0lTVG9vbHMgVElHRVIy
+U0hQLiBUaGUgZmlsZXMgd2VyZSBjb21iaW5lZCBhbmQgY29udmVydGVkIGludG8gc3RhdGV3aWRl
+IGNvdmVyYWdlcy48L3Byb2NkZXNjPg0KICAgICAgICA8c3JjdXNlZD5cXDA0RlNcZ2lzJFxsZWdf
+Z2lzXEdJUyBEYXRhXEdlb2RhdGFiYXNlXFJlZGlzdHJpY3RpbmdfMTBfMzFfMDIubWRiPC9zcmN1
+c2VkPg0KICAgICAgICA8cHJvY2RhdGU+MTIvMDA8L3Byb2NkYXRlPg0KICAgICAgICA8cHJvY2Nv
+bnQ+DQogICAgICAgICAgPGNudGluZm8+DQogICAgICAgICAgICA8Y250b3JncD4NCiAgICAgICAg
+ICAgICAgPGNudG9yZz5MZWdpc2xhdGl2ZSBUZWNobm9sb2d5IFNlcnZpY2VzIEJ1cmVhdTwvY250
+b3JnPg0KICAgICAgICAgICAgICA8Y250cGVyPlRvbnkgSi4gVmFuIERlciBXaWVsZW48L2NudHBl
+cj4NCiAgICAgICAgICAgIDwvY250b3JncD4NCiAgICAgICAgICAgIDxjbnRwb3M+R0lTIEFwcGxp
+Y2F0aW9uIERldmVsb3BlcjwvY250cG9zPg0KICAgICAgICAgICAgPGNudHZvaWNlPjYwOC0yNjYt
+NjY0MDwvY250dm9pY2U+DQogICAgICAgICAgICA8Y250ZmF4PjYwOC0yNjctNjc2MzwvY250ZmF4
+Pg0KICAgICAgICAgICAgPGNudGVtYWlsPmdpc0BsZWdpcy5zdGF0ZS53aS51czwvY250ZW1haWw+
+DQogICAgICAgICAgICA8aG91cnM+OC01IE1vbmRheSAtIEZyaWRheTwvaG91cnM+DQogICAgICAg
+ICAgPC9jbnRpbmZvPg0KICAgICAgICA8L3Byb2Njb250Pg0KICAgICAgPC9wcm9jc3RlcD4NCiAg
+ICAgIDxwcm9jc3RlcD4NCiAgICAgICAgPHByb2NkZXNjPg0KMjAwMSBXYXJkIENvbGxlY3Rpb24g
+UHJvamVjdA0KQ2Vuc3VzIDIwMDAgVElHRVIgZGF0YSB3YXMgcGxhY2VkIGludG8gdGhlIFdJU0Ut
+TFIgYXBwbGljYXRpb24gYW5kIGRlbGl2ZXJlZCB0byBhbGwgNzIgV2lzY29uc2luIENvdW50aWVz
+Lg0KRWFjaCBjb3VudHkgdXNlZCB0aGUgV0lTRS1MUiBhcHBsaWNhdGlvbiB0byBhZGQgbXVuaWNp
+cGFsIGFubmV4YXRpb25zIGFuZCBjcmVhdGUgU3VwZXJ2aXNvcnksIEFsZGVybWFuaWMgYW5kIG11
+bmljaXBhbCB3YXJkcy4gRGF0YSB3YXMgY29sbGVjdCBmcm9tIGVhY2ggY291bnR5IGFuZCBuZXcg
+YmxvY2ssIHdhcmQsIG11bmljaXBhbCBhbmQgY291bnR5IHN0YXRld2lkZSBmaWxlcyB3ZXJlIGNy
+ZWF0ZWQuIFRoaXMgZGF0YSB3YXMgdGhlbiBwbGFjZWQgaW50byB0aGUgcmVkaXN0cmljdGluZyBh
+cHBsaWN0aW9uIGF1dG9Cb3VuZCBmb3IgTGVnaXNsYXRpdmUgZGlzdHJpY3QgY3JlYXRpb24uDQo8
+L3Byb2NkZXNjPg0KICAgICAgICA8cHJvY2RhdGU+MTEvMDE8L3Byb2NkYXRlPg0KICAgICAgICA8
+cHJvY2NvbnQ+DQogICAgICAgICAgPGNudGluZm8+DQogICAgICAgICAgICA8Y250b3JncD4NCiAg
+ICAgICAgICAgICAgPGNudG9yZz5MZWdpc2xhdGl2ZSBUZWNobm9sb2d5IFNlcnZpY2VzIEJ1cmVh
+dTwvY250b3JnPg0KICAgICAgICAgICAgICA8Y250cGVyPlRvbnkgSi4gVmFuIERlciBXaWVsZW48
+L2NudHBlcj4NCiAgICAgICAgICAgIDwvY250b3JncD4NCiAgICAgICAgICAgIDxjbnRwb3M+R0lT
+IEFwcGxpY2F0aW9uIERldmVsb3BlcjwvY250cG9zPg0KICAgICAgICAgICAgPGNudHZvaWNlPjYw
+OC0yNjYtNjY0MCBFeHQuIDE8L2NudHZvaWNlPg0KICAgICAgICAgICAgPGNudGZheD42MDgtMjY3
+LTY3NjM8L2NudGZheD4NCiAgICAgICAgICAgIDxjbnRlbWFpbD5naXNAbGVnaXMuc3RhdGUud2ku
+dXM8L2NudGVtYWlsPg0KICAgICAgICAgICAgPGhvdXJzPjgtNSBNb25kYXkgLSBGcmlkYXk8L2hv
+dXJzPg0KICAgICAgICAgIDwvY250aW5mbz4NCiAgICAgICAgPC9wcm9jY29udD4NCiAgICAgIDwv
+cHJvY3N0ZXA+DQogICAgPC9saW5lYWdlPg0KICA8L2RhdGFxdWFsPg0KICA8c3ByZWY+DQogICAg
+PHZlcnRkZWY+DQogICAgICA8YWx0c3lzPg0KICAgICAgICA8YWx0cmVzPjEuMDAwMDAwPC9hbHRy
+ZXM+DQogICAgICAgIDxhbHRlbmM+RXhwbGljaXQgZWxldmF0aW9uIGNvb3JkaW5hdGUgaW5jbHVk
+ZWQgd2l0aCBob3Jpem9udGFsIGNvb3JkaW5hdGVzPC9hbHRlbmM+DQogICAgICA8L2FsdHN5cz4N
+CiAgICA8L3ZlcnRkZWY+DQogIDwvc3ByZWY+DQogIDxlYWluZm8+DQogICAgPGRldGFpbGVkIE5h
+bWU9IjIwMDhfRWxlY3Rpb25fRGF0YV9CeV9XYXJkIj4NCiAgICAgIDxlbnR0eXA+DQogICAgICAg
+IDxlbnR0eXBsIFN5bmM9IlRSVUUiPjIwMDhfRWxlY3Rpb25fRGF0YV9CeV9XYXJkPC9lbnR0eXBs
+Pg0KICAgICAgICA8ZW50dHlwdCBTeW5jPSJUUlVFIj5GZWF0dXJlIENsYXNzPC9lbnR0eXB0Pg0K
+ICAgICAgICA8ZW50dHlwYyBTeW5jPSJUUlVFIj42Mjc4PC9lbnR0eXBjPg0KICAgICAgPC9lbnR0
+eXA+DQogICAgICA8YXR0cj4NCiAgICAgICAgPGF0dHJsYWJsIFN5bmM9IlRSVUUiPkZJRDwvYXR0
+cmxhYmw+DQogICAgICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5GSUQ8L2F0dGFsaWFzPg0KICAg
+ICAgICA8YXR0cnR5cGUgU3luYz0iVFJVRSI+T0lEPC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdp
+ZHRoIFN5bmM9IlRSVUUiPjQ8L2F0dHdpZHRoPg0KICAgICAgICA8YXRwcmVjaXMgU3luYz0iVFJV
+RSI+MDwvYXRwcmVjaXM+DQogICAgICAgIDxhdHRzY2FsZSBTeW5jPSJUUlVFIj4wPC9hdHRzY2Fs
+ZT4NCiAgICAgICAgPGF0dHJkZWYgU3luYz0iVFJVRSI+SW50ZXJuYWwgZmVhdHVyZSBudW1iZXIu
+PC9hdHRyZGVmPg0KICAgICAgICA8YXR0cmRlZnMgU3luYz0iVFJVRSI+RXNyaTwvYXR0cmRlZnM+
+DQogICAgICAgIDxhdHRyZG9tdj4NCiAgICAgICAgICA8dWRvbSBTeW5jPSJUUlVFIj5TZXF1ZW50
+aWFsIHVuaXF1ZSB3aG9sZSBudW1iZXJzIHRoYXQgYXJlIGF1dG9tYXRpY2FsbHkgZ2VuZXJhdGVk
+LjwvdWRvbT4NCiAgICAgICAgPC9hdHRyZG9tdj4NCiAgICAgIDwvYXR0cj4NCiAgICAgIDxhdHRy
+Pg0KICAgICAgICA8YXR0cmxhYmwgU3luYz0iVFJVRSI+T0JKRUNUSUQ8L2F0dHJsYWJsPg0KICAg
+ICAgICA8YXR0YWxpYXMgU3luYz0iVFJVRSI+T0JKRUNUSUQ8L2F0dGFsaWFzPg0KICAgICAgICA8
+YXR0cnR5cGUgU3luYz0iVFJVRSI+SW50ZWdlcjwvYXR0cnR5cGU+DQogICAgICAgIDxhdHR3aWR0
+aCBTeW5jPSJUUlVFIj4xMDwvYXR0d2lkdGg+DQogICAgICAgIDxhdHByZWNpcyBTeW5jPSJUUlVF
+Ij4xMDwvYXRwcmVjaXM+DQogICAgICAgIDxhdHRzY2FsZSBTeW5jPSJUUlVFIj4wPC9hdHRzY2Fs
+ZT4NCiAgICAgICAgPGF0dHJkZWYgU3luYz0iVFJVRSI+SW50ZXJuYWwgZmVhdHVyZSBudW1iZXIu
+PC9hdHRyZGVmPg0KICAgICAgICA8YXR0cmRlZnMgU3luYz0iVFJVRSI+RVNSSTwvYXR0cmRlZnM+
+DQogICAgICAgIDxhdHRyZG9tdj4NCiAgICAgICAgICA8dWRvbSBTeW5jPSJUUlVFIj5TZXF1ZW50
+aWFsIHVuaXF1ZSB3aG9sZSBudW1iZXJzIHRoYXQgYXJlIGF1dG9tYXRpY2FsbHkgZ2VuZXJhdGVk
+LjwvdWRvbT4NCiAgICAgICAgPC9hdHRyZG9tdj4NCiAgICAgIDwvYXR0cj4NCiAgICAgIDxhdHRy
+Pg0KICAgICAgICA8YXR0cmxhYmw+U2hhcGU8L2F0dHJsYWJsPg0KICAgICAgICA8YXR0cmRlZj5G
+ZWF0dXJlIGdlb21ldHJ5LjwvYXR0cmRlZj4NCiAgICAgICAgPGF0dHJkZWZzPkVTUkk8L2F0dHJk
+ZWZzPg0KICAgICAgICA8YXR0cmRvbXY+DQogICAgICAgICAgPHVkb20+Q29vcmRpbmF0ZXMgZGVm
+aW5pbmcgdGhlIGZlYXR1cmVzLjwvdWRvbT4NCiAgICAgICAgPC9hdHRyZG9tdj4NCiAgICAgICAg
+PGF0dGFsaWFzIFN5bmM9IlRSVUUiPlNoYXBlPC9hdHRhbGlhcz4NCiAgICAgICAgPGF0dHJ0eXBl
+IFN5bmM9IlRSVUUiPkdlb21ldHJ5PC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdpZHRoIFN5bmM9
+IlRSVUUiPjA8L2F0dHdpZHRoPg0KICAgICAgICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+MDwvYXRw
+cmVjaXM+DQogICAgICAgIDxhdHRzY2FsZSBTeW5jPSJUUlVFIj4wPC9hdHRzY2FsZT4NCiAgICAg
+IDwvYXR0cj4NCiAgICAgIDxhdHRyPg0KICAgICAgICA8YXR0cmxhYmw+U1RGSUQ8L2F0dHJsYWJs
+Pg0KICAgICAgICA8YXR0cmRlZj5VbmlxdWUgSUQgKFN0YXRlLE1jZCxXYXJkKSBpbiBDZW51cyBG
+SVBTIGZvcm1hdC48L2F0dHJkZWY+DQogICAgICAgIDxhdHRyZGVmcz5MVFNCPC9hdHRyZGVmcz4N
+CiAgICAgICAgPGF0dGFsaWFzIFN5bmM9IlRSVUUiPlNURklEPC9hdHRhbGlhcz4NCiAgICAgICAg
+PGF0dHJ0eXBlIFN5bmM9IlRSVUUiPlN0cmluZzwvYXR0cnR5cGU+DQogICAgICAgIDxhdHR3aWR0
+aCBTeW5jPSJUUlVFIj4xNTwvYXR0d2lkdGg+DQogICAgICAgIDxhdHByZWNpcyBTeW5jPSJUUlVF
+Ij4wPC9hdHByZWNpcz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjA8L2F0dHNjYWxl
+Pg0KICAgICAgPC9hdHRyPg0KICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRybGFibD5OQU1FPC9h
+dHRybGFibD4NCiAgICAgICAgPGF0dHJkZWY+TmFtZSBvZiBmZWF0dXJlPC9hdHRyZGVmPg0KICAg
+ICAgICA8YXR0cmRlZnM+TFRTQjwvYXR0cmRlZnM+DQogICAgICAgIDxhdHRhbGlhcyBTeW5jPSJU
+UlVFIj5OQU1FPC9hdHRhbGlhcz4NCiAgICAgICAgPGF0dHJ0eXBlIFN5bmM9IlRSVUUiPlN0cmlu
+ZzwvYXR0cnR5cGU+DQogICAgICAgIDxhdHR3aWR0aCBTeW5jPSJUUlVFIj42PC9hdHR3aWR0aD4N
+CiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUiPjA8L2F0cHJlY2lzPg0KICAgICAgICA8YXR0
+c2NhbGUgU3luYz0iVFJVRSI+MDwvYXR0c2NhbGU+DQogICAgICA8L2F0dHI+DQogICAgICA8YXR0
+cj4NCiAgICAgICAgPGF0dHJsYWJsPkNPVVNVQkZQPC9hdHRybGFibD4NCiAgICAgICAgPGF0dHJk
+ZWY+TWlub3IgQ2l2aWwgRGl2aXNpb24gRklQUyBjb2RlPC9hdHRyZGVmPg0KICAgICAgICA8YXR0
+cmRlZnM+VS5TLiBDZW5zdXMgQnVyZWF1PC9hdHRyZGVmcz4NCiAgICAgICAgPGF0dGFsaWFzIFN5
+bmM9IlRSVUUiPkNPVVNVQkZQPC9hdHRhbGlhcz4NCiAgICAgICAgPGF0dHJ0eXBlIFN5bmM9IlRS
+VUUiPlN0cmluZzwvYXR0cnR5cGU+DQogICAgICAgIDxhdHR3aWR0aCBTeW5jPSJUUlVFIj4xMTwv
+YXR0d2lkdGg+DQogICAgICAgIDxhdHByZWNpcyBTeW5jPSJUUlVFIj4wPC9hdHByZWNpcz4NCiAg
+ICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjA8L2F0dHNjYWxlPg0KICAgICAgPC9hdHRyPg0K
+ICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRybGFibD5GSVBTU1RDTzwvYXR0cmxhYmw+DQogICAg
+ICAgIDxhdHRyZGVmPlN0YXRlIENvdW50eSBGSVBTIGNvZGU8L2F0dHJkZWY+DQogICAgICAgIDxh
+dHRyZGVmcz5VLlMuIENlbnN1cyBCdXJlYXU8L2F0dHJkZWZzPg0KICAgICAgICA8YXR0YWxpYXMg
+U3luYz0iVFJVRSI+RklQU1NUQ088L2F0dGFsaWFzPg0KICAgICAgICA8YXR0cnR5cGUgU3luYz0i
+VFJVRSI+U3RyaW5nPC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdpZHRoIFN5bmM9IlRSVUUiPjEw
+PC9hdHR3aWR0aD4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUiPjA8L2F0cHJlY2lzPg0K
+ICAgICAgICA8YXR0c2NhbGUgU3luYz0iVFJVRSI+MDwvYXR0c2NhbGU+DQogICAgICA8L2F0dHI+
+DQogICAgICA8YXR0cj4NCiAgICAgICAgPGF0dHJsYWJsPkpJRDwvYXR0cmxhYmw+DQogICAgICAg
+IDxhdHRyZGVmPlN0YXRlIENvdW50eSBNY2QgRklQUyBDb2RlPC9hdHRyZGVmPg0KICAgICAgICA8
+YXR0cmRlZnM+TFRTQjwvYXR0cmRlZnM+DQogICAgICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5K
+SUQ8L2F0dGFsaWFzPg0KICAgICAgICA8YXR0cnR5cGUgU3luYz0iVFJVRSI+U3RyaW5nPC9hdHRy
+dHlwZT4NCiAgICAgICAgPGF0dHdpZHRoIFN5bmM9IlRSVUUiPjExPC9hdHR3aWR0aD4NCiAgICAg
+ICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUiPjA8L2F0cHJlY2lzPg0KICAgICAgICA8YXR0c2NhbGUg
+U3luYz0iVFJVRSI+MDwvYXR0c2NhbGU+DQogICAgICA8L2F0dHI+DQogICAgICA8YXR0cj4NCiAg
+ICAgICAgPGF0dHJsYWJsPkpWVEQ8L2F0dHJsYWJsPg0KICAgICAgICA8YXR0cmRlZj5XYXJkIE51
+bWJlciBhc3NpZ25tZW50IGFzIGEgbnVtYmVyPC9hdHRyZGVmPg0KICAgICAgICA8YXR0cmRlZnM+
+TFRTQjwvYXR0cmRlZnM+DQogICAgICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5KVlREPC9hdHRh
+bGlhcz4NCiAgICAgICAgPGF0dHJ0eXBlIFN5bmM9IlRSVUUiPkludGVnZXI8L2F0dHJ0eXBlPg0K
+ICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MTA8L2F0dHdpZHRoPg0KICAgICAgICA8YXRw
+cmVjaXMgU3luYz0iVFJVRSI+MTA8L2F0cHJlY2lzPg0KICAgICAgICA8YXR0c2NhbGUgU3luYz0i
+VFJVRSI+MDwvYXR0c2NhbGU+DQogICAgICA8L2F0dHI+DQogICAgICA8YXR0cj4NCiAgICAgICAg
+PGF0dHJsYWJsPkpWVEQyPC9hdHRybGFibD4NCiAgICAgICAgPGF0dHJkZWY+TWNkIG5hbWUsICBD
+aXR5LCBUb3duIG9yIFZpbGxhZ2UgZGVzaWduYXRpb24sIHdhcmQgbnVtYmVyPC9hdHRyZGVmPg0K
+ICAgICAgICA8YXR0cmRlZnM+TFRTQjwvYXR0cmRlZnM+DQogICAgICAgIDxhdHRhbGlhcyBTeW5j
+PSJUUlVFIj5KVlREMjwvYXR0YWxpYXM+DQogICAgICAgIDxhdHRydHlwZSBTeW5jPSJUUlVFIj5T
+dHJpbmc8L2F0dHJ0eXBlPg0KICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MjY8L2F0dHdp
+ZHRoPg0KICAgICAgICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+MDwvYXRwcmVjaXM+DQogICAgICAg
+IDxhdHRzY2FsZSBTeW5jPSJUUlVFIj4wPC9hdHRzY2FsZT4NCiAgICAgIDwvYXR0cj4NCiAgICAg
+IDxhdHRyPg0KICAgICAgICA8YXR0cmxhYmw+UEVSU09OUzwvYXR0cmxhYmw+DQogICAgICAgIDxh
+dHRyZGVmPlRvdGFsIFBvcHVsYXRpb248L2F0dHJkZWY+DQogICAgICAgIDxhdHRyZGVmcz5VLlMu
+IENlbnN1cyBCdXJlYXU8L2F0dHJkZWZzPg0KICAgICAgICA8YXR0YWxpYXMgU3luYz0iVFJVRSI+
+UEVSU09OUzwvYXR0YWxpYXM+DQogICAgICAgIDxhdHRydHlwZSBTeW5jPSJUUlVFIj5Eb3VibGU8
+L2F0dHJ0eXBlPg0KICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MTk8L2F0dHdpZHRoPg0K
+ICAgICAgICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+MTg8L2F0cHJlY2lzPg0KICAgICAgICA8YXR0
+c2NhbGUgU3luYz0iVFJVRSI+ODwvYXR0c2NhbGU+DQogICAgICA8L2F0dHI+DQogICAgICA8YXR0
+cj4NCiAgICAgICAgPGF0dHJsYWJsPldISVRFPC9hdHRybGFibD4NCiAgICAgICAgPGF0dHJkZWZz
+PlUuUy4gQ2Vuc3VzIEJ1cmVhdTwvYXR0cmRlZnM+DQogICAgICAgIDxhdHRhbGlhcyBTeW5jPSJU
+UlVFIj5XSElURTwvYXR0YWxpYXM+DQogICAgICAgIDxhdHRydHlwZSBTeW5jPSJUUlVFIj5JbnRl
+Z2VyPC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdpZHRoIFN5bmM9IlRSVUUiPjEwPC9hdHR3aWR0
+aD4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUiPjEwPC9hdHByZWNpcz4NCiAgICAgICAg
+PGF0dHNjYWxlIFN5bmM9IlRSVUUiPjA8L2F0dHNjYWxlPg0KICAgICAgPC9hdHRyPg0KICAgICAg
+PGF0dHI+DQogICAgICAgIDxhdHRybGFibD5CTEFDSzwvYXR0cmxhYmw+DQogICAgICAgIDxhdHRy
+ZGVmcz5VLlMuIENlbnN1cyBCdXJlYXU8L2F0dHJkZWZzPg0KICAgICAgICA8YXR0YWxpYXMgU3lu
+Yz0iVFJVRSI+QkxBQ0s8L2F0dGFsaWFzPg0KICAgICAgICA8YXR0cnR5cGUgU3luYz0iVFJVRSI+
+SW50ZWdlcjwvYXR0cnR5cGU+DQogICAgICAgIDxhdHR3aWR0aCBTeW5jPSJUUlVFIj4xMDwvYXR0
+d2lkdGg+DQogICAgICAgIDxhdHByZWNpcyBTeW5jPSJUUlVFIj4xMDwvYXRwcmVjaXM+DQogICAg
+ICAgIDxhdHRzY2FsZSBTeW5jPSJUUlVFIj4wPC9hdHRzY2FsZT4NCiAgICAgIDwvYXR0cj4NCiAg
+ICAgIDxhdHRyPg0KICAgICAgICA8YXR0cmxhYmw+SElTUEFOSUM8L2F0dHJsYWJsPg0KICAgICAg
+ICA8YXR0cmRlZnM+VS5TLiBDZW5zdXMgQnVyZWF1PC9hdHRyZGVmcz4NCiAgICAgICAgPGF0dGFs
+aWFzIFN5bmM9IlRSVUUiPkhJU1BBTklDPC9hdHRhbGlhcz4NCiAgICAgICAgPGF0dHJ0eXBlIFN5
+bmM9IlRSVUUiPkludGVnZXI8L2F0dHJ0eXBlPg0KICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJV
+RSI+MTA8L2F0dHdpZHRoPg0KICAgICAgICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+MTA8L2F0cHJl
+Y2lzPg0KICAgICAgICA8YXR0c2NhbGUgU3luYz0iVFJVRSI+MDwvYXR0c2NhbGU+DQogICAgICA8
+L2F0dHI+DQogICAgICA8YXR0cj4NCiAgICAgICAgPGF0dHJsYWJsPkFTSUFOPC9hdHRybGFibD4N
+CiAgICAgICAgPGF0dHJkZWZzPlUuUy4gQ2Vuc3VzIEJ1cmVhdTwvYXR0cmRlZnM+DQogICAgICAg
+IDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5BU0lBTjwvYXR0YWxpYXM+DQogICAgICAgIDxhdHRydHlw
+ZSBTeW5jPSJUUlVFIj5JbnRlZ2VyPC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdpZHRoIFN5bmM9
+IlRSVUUiPjEwPC9hdHR3aWR0aD4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUiPjEwPC9h
+dHByZWNpcz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjA8L2F0dHNjYWxlPg0KICAg
+ICAgPC9hdHRyPg0KICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRybGFibD5BTUlORElBTjwvYXR0
+cmxhYmw+DQogICAgICAgIDxhdHRyZGVmcz5VLlMuIENlbnN1cyBCdXJlYXU8L2F0dHJkZWZzPg0K
+ICAgICAgICA8YXR0YWxpYXMgU3luYz0iVFJVRSI+QU1JTkRJQU48L2F0dGFsaWFzPg0KICAgICAg
+ICA8YXR0cnR5cGUgU3luYz0iVFJVRSI+RG91YmxlPC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdp
+ZHRoIFN5bmM9IlRSVUUiPjE5PC9hdHR3aWR0aD4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRS
+VUUiPjE4PC9hdHByZWNpcz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjg8L2F0dHNj
+YWxlPg0KICAgICAgPC9hdHRyPg0KICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRybGFibD5QSVNM
+QU5EPC9hdHRybGFibD4NCiAgICAgICAgPGF0dHJkZWZzPlUuUy4gQ2Vuc3VzIEJ1cmVhdTwvYXR0
+cmRlZnM+DQogICAgICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5QSVNMQU5EPC9hdHRhbGlhcz4N
+CiAgICAgICAgPGF0dHJ0eXBlIFN5bmM9IlRSVUUiPkludGVnZXI8L2F0dHJ0eXBlPg0KICAgICAg
+ICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MTA8L2F0dHdpZHRoPg0KICAgICAgICA8YXRwcmVjaXMg
+U3luYz0iVFJVRSI+MTA8L2F0cHJlY2lzPg0KICAgICAgICA8YXR0c2NhbGUgU3luYz0iVFJVRSI+
+MDwvYXR0c2NhbGU+DQogICAgICA8L2F0dHI+DQogICAgICA8YXR0cj4NCiAgICAgICAgPGF0dHJs
+YWJsPk9USEVSPC9hdHRybGFibD4NCiAgICAgICAgPGF0dHJkZWZzPlUuUy4gQ2Vuc3VzIEJ1cmVh
+dTwvYXR0cmRlZnM+DQogICAgICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5PVEhFUjwvYXR0YWxp
+YXM+DQogICAgICAgIDxhdHRydHlwZSBTeW5jPSJUUlVFIj5JbnRlZ2VyPC9hdHRydHlwZT4NCiAg
+ICAgICAgPGF0dHdpZHRoIFN5bmM9IlRSVUUiPjEwPC9hdHR3aWR0aD4NCiAgICAgICAgPGF0cHJl
+Y2lzIFN5bmM9IlRSVUUiPjEwPC9hdHByZWNpcz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRS
+VUUiPjA8L2F0dHNjYWxlPg0KICAgICAgPC9hdHRyPg0KICAgICAgPGF0dHI+DQogICAgICAgIDxh
+dHRybGFibD5PVEhFUk1MVDwvYXR0cmxhYmw+DQogICAgICAgIDxhdHRyZGVmcz5VLlMuIENlbnN1
+cyBCdXJlYXU8L2F0dHJkZWZzPg0KICAgICAgICA8YXR0YWxpYXMgU3luYz0iVFJVRSI+T1RIRVJN
+TFQ8L2F0dGFsaWFzPg0KICAgICAgICA8YXR0cnR5cGUgU3luYz0iVFJVRSI+RG91YmxlPC9hdHRy
+dHlwZT4NCiAgICAgICAgPGF0dHdpZHRoIFN5bmM9IlRSVUUiPjE5PC9hdHR3aWR0aD4NCiAgICAg
+ICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUiPjE4PC9hdHByZWNpcz4NCiAgICAgICAgPGF0dHNjYWxl
+IFN5bmM9IlRSVUUiPjg8L2F0dHNjYWxlPg0KICAgICAgPC9hdHRyPg0KICAgICAgPGF0dHI+DQog
+ICAgICAgIDxhdHRybGFibD5QRVJTT05TMTg8L2F0dHJsYWJsPg0KICAgICAgICA8YXR0cmRlZnM+
+VS5TLiBDZW5zdXMgQnVyZWF1PC9hdHRyZGVmcz4NCiAgICAgICAgPGF0dGFsaWFzIFN5bmM9IlRS
+VUUiPlBFUlNPTlMxODwvYXR0YWxpYXM+DQogICAgICAgIDxhdHRydHlwZSBTeW5jPSJUUlVFIj5E
+b3VibGU8L2F0dHJ0eXBlPg0KICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MTk8L2F0dHdp
+ZHRoPg0KICAgICAgICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+MTg8L2F0cHJlY2lzPg0KICAgICAg
+ICA8YXR0c2NhbGUgU3luYz0iVFJVRSI+ODwvYXR0c2NhbGU+DQogICAgICA8L2F0dHI+DQogICAg
+ICA8YXR0cj4NCiAgICAgICAgPGF0dHJsYWJsPldISVRFMTg8L2F0dHJsYWJsPg0KICAgICAgICA8
+YXR0cmRlZnM+VS5TLiBDZW5zdXMgQnVyZWF1PC9hdHRyZGVmcz4NCiAgICAgICAgPGF0dGFsaWFz
+IFN5bmM9IlRSVUUiPldISVRFMTg8L2F0dGFsaWFzPg0KICAgICAgICA8YXR0cnR5cGUgU3luYz0i
+VFJVRSI+SW50ZWdlcjwvYXR0cnR5cGU+DQogICAgICAgIDxhdHR3aWR0aCBTeW5jPSJUUlVFIj4x
+MDwvYXR0d2lkdGg+DQogICAgICAgIDxhdHByZWNpcyBTeW5jPSJUUlVFIj4xMDwvYXRwcmVjaXM+
+DQogICAgICAgIDxhdHRzY2FsZSBTeW5jPSJUUlVFIj4wPC9hdHRzY2FsZT4NCiAgICAgIDwvYXR0
+cj4NCiAgICAgIDxhdHRyPg0KICAgICAgICA8YXR0cmxhYmw+QkxBQ0sxODwvYXR0cmxhYmw+DQog
+ICAgICAgIDxhdHRyZGVmcz5VLlMuIENlbnN1cyBCdXJlYXU8L2F0dHJkZWZzPg0KICAgICAgICA8
+YXR0YWxpYXMgU3luYz0iVFJVRSI+QkxBQ0sxODwvYXR0YWxpYXM+DQogICAgICAgIDxhdHRydHlw
+ZSBTeW5jPSJUUlVFIj5JbnRlZ2VyPC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdpZHRoIFN5bmM9
+IlRSVUUiPjEwPC9hdHR3aWR0aD4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUiPjEwPC9h
+dHByZWNpcz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjA8L2F0dHNjYWxlPg0KICAg
+ICAgPC9hdHRyPg0KICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRybGFibD5ISVNQQU5JQzE4PC9h
+dHRybGFibD4NCiAgICAgICAgPGF0dHJkZWZzPlUuUy4gQ2Vuc3VzIEJ1cmVhdTwvYXR0cmRlZnM+
+DQogICAgICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5ISVNQQU5JQzE4PC9hdHRhbGlhcz4NCiAg
+ICAgICAgPGF0dHJ0eXBlIFN5bmM9IlRSVUUiPkRvdWJsZTwvYXR0cnR5cGU+DQogICAgICAgIDxh
+dHR3aWR0aCBTeW5jPSJUUlVFIj4xOTwvYXR0d2lkdGg+DQogICAgICAgIDxhdHByZWNpcyBTeW5j
+PSJUUlVFIj4xODwvYXRwcmVjaXM+DQogICAgICAgIDxhdHRzY2FsZSBTeW5jPSJUUlVFIj44PC9h
+dHRzY2FsZT4NCiAgICAgIDwvYXR0cj4NCiAgICAgIDxhdHRyPg0KICAgICAgICA8YXR0cmxhYmw+
+QVNJQU4xODwvYXR0cmxhYmw+DQogICAgICAgIDxhdHRyZGVmcz5VLlMuIENlbnN1cyBCdXJlYXU8
+L2F0dHJkZWZzPg0KICAgICAgICA8YXR0YWxpYXMgU3luYz0iVFJVRSI+QVNJQU4xODwvYXR0YWxp
+YXM+DQogICAgICAgIDxhdHRydHlwZSBTeW5jPSJUUlVFIj5JbnRlZ2VyPC9hdHRydHlwZT4NCiAg
+ICAgICAgPGF0dHdpZHRoIFN5bmM9IlRSVUUiPjEwPC9hdHR3aWR0aD4NCiAgICAgICAgPGF0cHJl
+Y2lzIFN5bmM9IlRSVUUiPjEwPC9hdHByZWNpcz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRS
+VUUiPjA8L2F0dHNjYWxlPg0KICAgICAgPC9hdHRyPg0KICAgICAgPGF0dHI+DQogICAgICAgIDxh
+dHRybGFibD5BTUlORElBTjE4PC9hdHRybGFibD4NCiAgICAgICAgPGF0dHJkZWZzPlUuUy4gQ2Vu
+c3VzIEJ1cmVhdTwvYXR0cmRlZnM+DQogICAgICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5BTUlO
+RElBTjE4PC9hdHRhbGlhcz4NCiAgICAgICAgPGF0dHJ0eXBlIFN5bmM9IlRSVUUiPkRvdWJsZTwv
+YXR0cnR5cGU+DQogICAgICAgIDxhdHR3aWR0aCBTeW5jPSJUUlVFIj4xOTwvYXR0d2lkdGg+DQog
+ICAgICAgIDxhdHByZWNpcyBTeW5jPSJUUlVFIj4xODwvYXRwcmVjaXM+DQogICAgICAgIDxhdHRz
+Y2FsZSBTeW5jPSJUUlVFIj44PC9hdHRzY2FsZT4NCiAgICAgIDwvYXR0cj4NCiAgICAgIDxhdHRy
+Pg0KICAgICAgICA8YXR0cmxhYmw+UElTTEFORDE4PC9hdHRybGFibD4NCiAgICAgICAgPGF0dHJk
+ZWZzPlUuUy4gQ2Vuc3VzIEJ1cmVhdTwvYXR0cmRlZnM+DQogICAgICAgIDxhdHRhbGlhcyBTeW5j
+PSJUUlVFIj5QSVNMQU5EMTg8L2F0dGFsaWFzPg0KICAgICAgICA8YXR0cnR5cGUgU3luYz0iVFJV
+RSI+RG91YmxlPC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdpZHRoIFN5bmM9IlRSVUUiPjE5PC9h
+dHR3aWR0aD4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUiPjE4PC9hdHByZWNpcz4NCiAg
+ICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjg8L2F0dHNjYWxlPg0KICAgICAgPC9hdHRyPg0K
+ICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRybGFibD5PVEhFUjE4PC9hdHRybGFibD4NCiAgICAg
+ICAgPGF0dHJkZWZzPlUuUy4gQ2Vuc3VzIEJ1cmVhdTwvYXR0cmRlZnM+DQogICAgICAgIDxhdHRh
+bGlhcyBTeW5jPSJUUlVFIj5PVEhFUjE4PC9hdHRhbGlhcz4NCiAgICAgICAgPGF0dHJ0eXBlIFN5
+bmM9IlRSVUUiPkludGVnZXI8L2F0dHJ0eXBlPg0KICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJV
+RSI+MTA8L2F0dHdpZHRoPg0KICAgICAgICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+MTA8L2F0cHJl
+Y2lzPg0KICAgICAgICA8YXR0c2NhbGUgU3luYz0iVFJVRSI+MDwvYXR0c2NhbGU+DQogICAgICA8
+L2F0dHI+DQogICAgICA8YXR0cj4NCiAgICAgICAgPGF0dHJsYWJsPk9USEVSTUxUMTg8L2F0dHJs
+YWJsPg0KICAgICAgICA8YXR0cmRlZnM+VS5TLiBDZW5zdXMgQnVyZWF1PC9hdHRyZGVmcz4NCiAg
+ICAgICAgPGF0dGFsaWFzIFN5bmM9IlRSVUUiPk9USEVSTUxUMTg8L2F0dGFsaWFzPg0KICAgICAg
+ICA8YXR0cnR5cGUgU3luYz0iVFJVRSI+RG91YmxlPC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdp
+ZHRoIFN5bmM9IlRSVUUiPjE5PC9hdHR3aWR0aD4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRS
+VUUiPjE4PC9hdHByZWNpcz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjg8L2F0dHNj
+YWxlPg0KICAgICAgPC9hdHRyPg0KICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRybGFibD5DT1VO
+VFk8L2F0dHJsYWJsPg0KICAgICAgICA8YXR0cmRlZj5Db3VudHkgTmFtZSBhcyBzdHJpbmc8L2F0
+dHJkZWY+DQogICAgICAgIDxhdHRyZGVmcz5VLlMuIENlbnN1cyBCdXJlYXU8L2F0dHJkZWZzPg0K
+ICAgICAgICA8YXR0YWxpYXMgU3luYz0iVFJVRSI+Q09VTlRZPC9hdHRhbGlhcz4NCiAgICAgICAg
+PGF0dHJ0eXBlIFN5bmM9IlRSVUUiPlN0cmluZzwvYXR0cnR5cGU+DQogICAgICAgIDxhdHR3aWR0
+aCBTeW5jPSJUUlVFIj44PC9hdHR3aWR0aD4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUi
+PjA8L2F0cHJlY2lzPg0KICAgICAgICA8YXR0c2NhbGUgU3luYz0iVFJVRSI+MDwvYXR0c2NhbGU+
+DQogICAgICA8L2F0dHI+DQogICAgICA8YXR0cj4NCiAgICAgICAgPGF0dHJsYWJsPk1JTk9SSVRZ
+PC9hdHRybGFibD4NCiAgICAgICAgPGF0dGFsaWFzIFN5bmM9IlRSVUUiPk1JTk9SSVRZPC9hdHRh
+bGlhcz4NCiAgICAgICAgPGF0dHJ0eXBlIFN5bmM9IlRSVUUiPkludGVnZXI8L2F0dHJ0eXBlPg0K
+ICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MTA8L2F0dHdpZHRoPg0KICAgICAgICA8YXRw
+cmVjaXMgU3luYz0iVFJVRSI+MTA8L2F0cHJlY2lzPg0KICAgICAgICA8YXR0c2NhbGUgU3luYz0i
+VFJVRSI+MDwvYXR0c2NhbGU+DQogICAgICA8L2F0dHI+DQogICAgICA8YXR0cj4NCiAgICAgICAg
+PGF0dHJsYWJsPkFTU0VNQkxZPC9hdHRybGFibD4NCiAgICAgICAgPGF0dHJkZWY+QXNzZW1ibHkg
+RGlzdHJpY3QgYXNzaWdubWVudDwvYXR0cmRlZj4NCiAgICAgICAgPGF0dHJkZWZzPkVhc3Rlcm4g
+RGlzdHJpY3QgRmVkZXJhbCBDb3VydDwvYXR0cmRlZnM+DQogICAgICAgIDxhdHRhbGlhcyBTeW5j
+PSJUUlVFIj5BU1NFTUJMWTwvYXR0YWxpYXM+DQogICAgICAgIDxhdHRydHlwZSBTeW5jPSJUUlVF
+Ij5TdHJpbmc8L2F0dHJ0eXBlPg0KICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MTE8L2F0
+dHdpZHRoPg0KICAgICAgICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+MDwvYXRwcmVjaXM+DQogICAg
+ICAgIDxhdHRzY2FsZSBTeW5jPSJUUlVFIj4wPC9hdHRzY2FsZT4NCiAgICAgIDwvYXR0cj4NCiAg
+ICAgIDxhdHRyPg0KICAgICAgICA8YXR0cmxhYmw+U0VOQVRFPC9hdHRybGFibD4NCiAgICAgICAg
+PGF0dHJkZWY+U2VuYXRlIERpc3RyaWN0PC9hdHRyZGVmPg0KICAgICAgICA8YXR0cmRlZnM+RWFz
+dGVybiBEaXN0cmljdCBGZWRlcmFsIENvdXJ0PC9hdHRyZGVmcz4NCiAgICAgICAgPGF0dGFsaWFz
+IFN5bmM9IlRSVUUiPlNFTkFURTwvYXR0YWxpYXM+DQogICAgICAgIDxhdHRydHlwZSBTeW5jPSJU
+UlVFIj5TdHJpbmc8L2F0dHJ0eXBlPg0KICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+ODwv
+YXR0d2lkdGg+DQogICAgICAgIDxhdHByZWNpcyBTeW5jPSJUUlVFIj4wPC9hdHByZWNpcz4NCiAg
+ICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjA8L2F0dHNjYWxlPg0KICAgICAgPC9hdHRyPg0K
+ICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRybGFibD5DT05HUkVTUzwvYXR0cmxhYmw+DQogICAg
+ICAgIDxhdHRyZGVmPkNvbmdyZXNzaW9uYWwgRGlzdHJpY3QgQXNzaWdubWVudDwvYXR0cmRlZj4N
+CiAgICAgICAgPGF0dHJkZWZzPldpc2NvbnNpbiBTdGF0ZSBMZWdpc2xhdHVyZTwvYXR0cmRlZnM+
+DQogICAgICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5DT05HUkVTUzwvYXR0YWxpYXM+DQogICAg
+ICAgIDxhdHRydHlwZSBTeW5jPSJUUlVFIj5TdHJpbmc8L2F0dHJ0eXBlPg0KICAgICAgICA8YXR0
+d2lkdGggU3luYz0iVFJVRSI+MTE8L2F0dHdpZHRoPg0KICAgICAgICA8YXRwcmVjaXMgU3luYz0i
+VFJVRSI+MDwvYXRwcmVjaXM+DQogICAgICAgIDxhdHRzY2FsZSBTeW5jPSJUUlVFIj4wPC9hdHRz
+Y2FsZT4NCiAgICAgIDwvYXR0cj4NCiAgICAgIDxhdHRyPg0KICAgICAgICA8YXR0cmxhYmw+Q05U
+WV9OQU1FPC9hdHRybGFibD4NCiAgICAgICAgPGF0dHJkZWY+Q291bnR5IG5hbWU8L2F0dHJkZWY+
+DQogICAgICAgIDxhdHRyZGVmcz5VLlMuIENlbnN1cyBCdXJlYXU8L2F0dHJkZWZzPg0KICAgICAg
+ICA8YXR0YWxpYXMgU3luYz0iVFJVRSI+Q05UWV9OQU1FPC9hdHRhbGlhcz4NCiAgICAgICAgPGF0
+dHJ0eXBlIFN5bmM9IlRSVUUiPlN0cmluZzwvYXR0cnR5cGU+DQogICAgICAgIDxhdHR3aWR0aCBT
+eW5jPSJUUlVFIj4xMjwvYXR0d2lkdGg+DQogICAgICAgIDxhdHByZWNpcyBTeW5jPSJUUlVFIj4w
+PC9hdHByZWNpcz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjA8L2F0dHNjYWxlPg0K
+ICAgICAgPC9hdHRyPg0KICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRybGFibD5NQ0RfTkFNRTwv
+YXR0cmxhYmw+DQogICAgICAgIDxhdHRyZGVmPk1jZCBOYW1lPC9hdHRyZGVmPg0KICAgICAgICA8
+YXR0cmRlZnM+VS5TLiBDZW5zdXMgQnVyZWF1PC9hdHRyZGVmcz4NCiAgICAgICAgPGF0dGFsaWFz
+IFN5bmM9IlRSVUUiPk1DRF9OQU1FPC9hdHRhbGlhcz4NCiAgICAgICAgPGF0dHJ0eXBlIFN5bmM9
+IlRSVUUiPlN0cmluZzwvYXR0cnR5cGU+DQogICAgICAgIDxhdHR3aWR0aCBTeW5jPSJUUlVFIj4x
+NzwvYXR0d2lkdGg+DQogICAgICAgIDxhdHByZWNpcyBTeW5jPSJUUlVFIj4wPC9hdHByZWNpcz4N
+CiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjA8L2F0dHNjYWxlPg0KICAgICAgPC9hdHRy
+Pg0KICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRybGFibD5DVFY8L2F0dHJsYWJsPg0KICAgICAg
+ICA8YXR0cmRlZj5DaXR5LCBUb3duIG9yIFZpbGxhZ2UgZGVzaWduYXRpb248L2F0dHJkZWY+DQog
+ICAgICAgIDxhdHRyZGVmcz5VLlMuIENlbnN1cyBCdXJlYXU8L2F0dHJkZWZzPg0KICAgICAgICA8
+YXR0YWxpYXMgU3luYz0iVFJVRSI+Q1RWPC9hdHRhbGlhcz4NCiAgICAgICAgPGF0dHJ0eXBlIFN5
+bmM9IlRSVUUiPlN0cmluZzwvYXR0cnR5cGU+DQogICAgICAgIDxhdHR3aWR0aCBTeW5jPSJUUlVF
+Ij40PC9hdHR3aWR0aD4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUiPjA8L2F0cHJlY2lz
+Pg0KICAgICAgICA8YXR0c2NhbGUgU3luYz0iVFJVRSI+MDwvYXR0c2NhbGU+DQogICAgICA8L2F0
+dHI+DQogICAgICA8YXR0cj4NCiAgICAgICAgPGF0dHJsYWJsIFN5bmM9IlRSVUUiPlBSRVNERU0w
+ODwvYXR0cmxhYmw+DQogICAgICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5QUkVTREVNMDg8L2F0
+dGFsaWFzPg0KICAgICAgICA8YXR0cnR5cGUgU3luYz0iVFJVRSI+RG91YmxlPC9hdHRydHlwZT4N
+CiAgICAgICAgPGF0dHdpZHRoIFN5bmM9IlRSVUUiPjE5PC9hdHR3aWR0aD4NCiAgICAgICAgPGF0
+dHJkZWY+MjAwOCBQcmVzaWRlbnRpYWwgUmVzdWx0cyAtIERlbW9jcmF0PC9hdHRyZGVmPg0KICAg
+ICAgICA8YXR0cmRlZnM+RWxlY3Rpb25zIERpdmlzaW9uIC0gV2lzY29uc2luIEdvdmVybm1lbnQg
+QWNjb3VudGFiaWxpdHkgQm9hcmQ8L2F0dHJkZWZzPg0KICAgICAgICA8YXRwcmVjaXMgU3luYz0i
+VFJVRSI+MTg8L2F0cHJlY2lzPg0KICAgICAgICA8YXR0c2NhbGUgU3luYz0iVFJVRSI+NTwvYXR0
+c2NhbGU+DQogICAgICA8L2F0dHI+DQogICAgICA8YXR0cj4NCiAgICAgICAgPGF0dHJsYWJsIFN5
+bmM9IlRSVUUiPlBSRVNSRVAwODwvYXR0cmxhYmw+DQogICAgICAgIDxhdHRhbGlhcyBTeW5jPSJU
+UlVFIj5QUkVTUkVQMDg8L2F0dGFsaWFzPg0KICAgICAgICA8YXR0cnR5cGUgU3luYz0iVFJVRSI+
+RG91YmxlPC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdpZHRoIFN5bmM9IlRSVUUiPjE5PC9hdHR3
+aWR0aD4NCiAgICAgICAgPGF0dHJkZWZzPkVsZWN0aW9ucyBEaXZpc2lvbiAtIFdpc2NvbnNpbiBH
+b3Zlcm5tZW50IEFjY291bnRhYmlsaXR5IEJvYXJkPC9hdHRyZGVmcz4NCiAgICAgICAgPGF0dHJk
+ZWY+MjAwOCBQcmVzaWRlbnRpYWwgUmVzdWx0cyAtIFJlcHVibGljYW48L2F0dHJkZWY+DQogICAg
+ICAgIDxhdHByZWNpcyBTeW5jPSJUUlVFIj4xODwvYXRwcmVjaXM+DQogICAgICAgIDxhdHRzY2Fs
+ZSBTeW5jPSJUUlVFIj41PC9hdHRzY2FsZT4NCiAgICAgIDwvYXR0cj4NCiAgICAgIDxhdHRyPg0K
+ICAgICAgICA8YXR0cmxhYmwgU3luYz0iVFJVRSI+UFJFU0dSTjA4PC9hdHRybGFibD4NCiAgICAg
+ICAgPGF0dGFsaWFzIFN5bmM9IlRSVUUiPlBSRVNHUk4wODwvYXR0YWxpYXM+DQogICAgICAgIDxh
+dHRydHlwZSBTeW5jPSJUUlVFIj5Eb3VibGU8L2F0dHJ0eXBlPg0KICAgICAgICA8YXR0d2lkdGgg
+U3luYz0iVFJVRSI+MTk8L2F0dHdpZHRoPg0KICAgICAgICA8YXR0cmRlZnM+RWxlY3Rpb25zIERp
+dmlzaW9uIC0gV2lzY29uc2luIEdvdmVybm1lbnQgQWNjb3VudGFiaWxpdHkgQm9hcmQ8L2F0dHJk
+ZWZzPg0KICAgICAgICA8YXR0cmRlZj4yMDA4IFByZXNpZGVudGlhbCBSZXN1bHRzIC0gR3JlZW4g
+UGFydHk8L2F0dHJkZWY+DQogICAgICAgIDxhdHByZWNpcyBTeW5jPSJUUlVFIj4xODwvYXRwcmVj
+aXM+DQogICAgICAgIDxhdHRzY2FsZSBTeW5jPSJUUlVFIj41PC9hdHRzY2FsZT4NCiAgICAgIDwv
+YXR0cj4NCiAgICAgIDxhdHRyPg0KICAgICAgICA8YXR0cmxhYmwgU3luYz0iVFJVRSI+UFJFU0xC
+UjA4PC9hdHRybGFibD4NCiAgICAgICAgPGF0dGFsaWFzIFN5bmM9IlRSVUUiPlBSRVNMQlIwODwv
+YXR0YWxpYXM+DQogICAgICAgIDxhdHRydHlwZSBTeW5jPSJUUlVFIj5Eb3VibGU8L2F0dHJ0eXBl
+Pg0KICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MTk8L2F0dHdpZHRoPg0KICAgICAgICA8
+YXR0cmRlZnM+RWxlY3Rpb25zIERpdmlzaW9uIC0gV2lzY29uc2luIEdvdmVybm1lbnQgQWNjb3Vu
+dGFiaWxpdHkgQm9hcmQ8L2F0dHJkZWZzPg0KICAgICAgICA8YXR0cmRlZj4yMDA4IFByZXNpZGVu
+dGlhbCBSZXN1bHRzIC0gTGliZXJ0YXJpYW48L2F0dHJkZWY+DQogICAgICAgIDxhdHByZWNpcyBT
+eW5jPSJUUlVFIj4xODwvYXRwcmVjaXM+DQogICAgICAgIDxhdHRzY2FsZSBTeW5jPSJUUlVFIj41
+PC9hdHRzY2FsZT4NCiAgICAgIDwvYXR0cj4NCiAgICAgIDxhdHRyPg0KICAgICAgICA8YXR0cmxh
+YmwgU3luYz0iVFJVRSI+UFJFU0lORDEwODwvYXR0cmxhYmw+DQogICAgICAgIDxhdHRhbGlhcyBT
+eW5jPSJUUlVFIj5QUkVTSU5EMTA4PC9hdHRhbGlhcz4NCiAgICAgICAgPGF0dHJ0eXBlIFN5bmM9
+IlRSVUUiPkRvdWJsZTwvYXR0cnR5cGU+DQogICAgICAgIDxhdHR3aWR0aCBTeW5jPSJUUlVFIj4x
+OTwvYXR0d2lkdGg+DQogICAgICAgIDxhdHRyZGVmcz5FbGVjdGlvbnMgRGl2aXNpb24gLSBXaXNj
+b25zaW4gR292ZXJubWVudCBBY2NvdW50YWJpbGl0eSBCb2FyZDwvYXR0cmRlZnM+DQogICAgICAg
+IDxhdHRyZGVmPjIwMDggUHJlc2lkZW50aWFsIFJlc3VsdHMgLSBJbmRlcGVuZGVudDwvYXR0cmRl
+Zj4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUiPjE4PC9hdHByZWNpcz4NCiAgICAgICAg
+PGF0dHNjYWxlIFN5bmM9IlRSVUUiPjU8L2F0dHNjYWxlPg0KICAgICAgPC9hdHRyPg0KICAgICAg
+PGF0dHI+DQogICAgICAgIDxhdHRybGFibCBTeW5jPSJUUlVFIj5QUkVTSU5EMjA4PC9hdHRybGFi
+bD4NCiAgICAgICAgPGF0dGFsaWFzIFN5bmM9IlRSVUUiPlBSRVNJTkQyMDg8L2F0dGFsaWFzPg0K
+ICAgICAgICA8YXR0cnR5cGUgU3luYz0iVFJVRSI+RG91YmxlPC9hdHRydHlwZT4NCiAgICAgICAg
+PGF0dHdpZHRoIFN5bmM9IlRSVUUiPjE5PC9hdHR3aWR0aD4NCiAgICAgICAgPGF0dHJkZWZzPkVs
+ZWN0aW9ucyBEaXZpc2lvbiAtIFdpc2NvbnNpbiBHb3Zlcm5tZW50IEFjY291bnRhYmlsaXR5IEJv
+YXJkPC9hdHRyZGVmcz4NCiAgICAgICAgPGF0dHJkZWY+MjAwOCBQcmVzaWRlbnRpYWwgUmVzdWx0
+cyAtIEluZGVwZW5kZW50PC9hdHRyZGVmPg0KICAgICAgICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+
+MTg8L2F0cHJlY2lzPg0KICAgICAgICA8YXR0c2NhbGUgU3luYz0iVFJVRSI+NTwvYXR0c2NhbGU+
+DQogICAgICA8L2F0dHI+DQogICAgICA8YXR0cj4NCiAgICAgICAgPGF0dHJsYWJsIFN5bmM9IlRS
+VUUiPlBSRVNJTkQzMDg8L2F0dHJsYWJsPg0KICAgICAgICA8YXR0YWxpYXMgU3luYz0iVFJVRSI+
+UFJFU0lORDMwODwvYXR0YWxpYXM+DQogICAgICAgIDxhdHRydHlwZSBTeW5jPSJUUlVFIj5Eb3Vi
+bGU8L2F0dHJ0eXBlPg0KICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MTk8L2F0dHdpZHRo
+Pg0KICAgICAgICA8YXR0cmRlZnM+RWxlY3Rpb25zIERpdmlzaW9uIC0gV2lzY29uc2luIEdvdmVy
+bm1lbnQgQWNjb3VudGFiaWxpdHkgQm9hcmQ8L2F0dHJkZWZzPg0KICAgICAgICA8YXR0cmRlZj4y
+MDA4IFByZXNpZGVudGlhbCBSZXN1bHRzIC0gSW5kZXBlbmRlbnQ8L2F0dHJkZWY+DQogICAgICAg
+IDxhdHByZWNpcyBTeW5jPSJUUlVFIj4xODwvYXRwcmVjaXM+DQogICAgICAgIDxhdHRzY2FsZSBT
+eW5jPSJUUlVFIj41PC9hdHRzY2FsZT4NCiAgICAgIDwvYXR0cj4NCiAgICAgIDxhdHRyPg0KICAg
+ICAgICA8YXR0cmxhYmwgU3luYz0iVFJVRSI+UFJFU0lORDQwODwvYXR0cmxhYmw+DQogICAgICAg
+IDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5QUkVTSU5ENDA4PC9hdHRhbGlhcz4NCiAgICAgICAgPGF0
+dHJ0eXBlIFN5bmM9IlRSVUUiPkRvdWJsZTwvYXR0cnR5cGU+DQogICAgICAgIDxhdHR3aWR0aCBT
+eW5jPSJUUlVFIj4xOTwvYXR0d2lkdGg+DQogICAgICAgIDxhdHRyZGVmcz5FbGVjdGlvbnMgRGl2
+aXNpb24gLSBXaXNjb25zaW4gR292ZXJubWVudCBBY2NvdW50YWJpbGl0eSBCb2FyZDwvYXR0cmRl
+ZnM+DQogICAgICAgIDxhdHRyZGVmPjIwMDggUHJlc2lkZW50aWFsIFJlc3VsdHMgLSBJbmRlcGVu
+ZGVudDwvYXR0cmRlZj4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUiPjE4PC9hdHByZWNp
+cz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjU8L2F0dHNjYWxlPg0KICAgICAgPC9h
+dHRyPg0KICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRybGFibCBTeW5jPSJUUlVFIj5QUkVTSU5E
+NTA4PC9hdHRybGFibD4NCiAgICAgICAgPGF0dGFsaWFzIFN5bmM9IlRSVUUiPlBSRVNJTkQ1MDg8
+L2F0dGFsaWFzPg0KICAgICAgICA8YXR0cnR5cGUgU3luYz0iVFJVRSI+RG91YmxlPC9hdHRydHlw
+ZT4NCiAgICAgICAgPGF0dHdpZHRoIFN5bmM9IlRSVUUiPjE5PC9hdHR3aWR0aD4NCiAgICAgICAg
+PGF0dHJkZWZzPkVsZWN0aW9ucyBEaXZpc2lvbiAtIFdpc2NvbnNpbiBHb3Zlcm5tZW50IEFjY291
+bnRhYmlsaXR5IEJvYXJkPC9hdHRyZGVmcz4NCiAgICAgICAgPGF0dHJkZWY+MjAwOCBQcmVzaWRl
+bnRpYWwgUmVzdWx0cyAtIEluZGVwZW5kZW50PC9hdHRyZGVmPg0KICAgICAgICA8YXRwcmVjaXMg
+U3luYz0iVFJVRSI+MTg8L2F0cHJlY2lzPg0KICAgICAgICA8YXR0c2NhbGUgU3luYz0iVFJVRSI+
+NTwvYXR0c2NhbGU+DQogICAgICA8L2F0dHI+DQogICAgICA8YXR0cj4NCiAgICAgICAgPGF0dHJs
+YWJsIFN5bmM9IlRSVUUiPlBSRVNTQ1QwODwvYXR0cmxhYmw+DQogICAgICAgIDxhdHRhbGlhcyBT
+eW5jPSJUUlVFIj5QUkVTU0NUMDg8L2F0dGFsaWFzPg0KICAgICAgICA8YXR0cnR5cGUgU3luYz0i
+VFJVRSI+RG91YmxlPC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdpZHRoIFN5bmM9IlRSVUUiPjE5
+PC9hdHR3aWR0aD4NCiAgICAgICAgPGF0dHJkZWZzPkVsZWN0aW9ucyBEaXZpc2lvbiAtIFdpc2Nv
+bnNpbiBHb3Zlcm5tZW50IEFjY291bnRhYmlsaXR5IEJvYXJkPC9hdHRyZGVmcz4NCiAgICAgICAg
+PGF0dHJkZWY+MjAwOCBQcmVzaWRlbnRpYWwgUmVzdWx0cyAtIFNjYXR0ZXI8L2F0dHJkZWY+DQog
+ICAgICAgIDxhdHByZWNpcyBTeW5jPSJUUlVFIj4xODwvYXRwcmVjaXM+DQogICAgICAgIDxhdHRz
+Y2FsZSBTeW5jPSJUUlVFIj41PC9hdHRzY2FsZT4NCiAgICAgIDwvYXR0cj4NCiAgICAgIDxhdHRy
+Pg0KICAgICAgICA8YXR0cmxhYmwgU3luYz0iVFJVRSI+QVNNREVNMDg8L2F0dHJsYWJsPg0KICAg
+ICAgICA8YXR0YWxpYXMgU3luYz0iVFJVRSI+QVNNREVNMDg8L2F0dGFsaWFzPg0KICAgICAgICA8
+YXR0cnR5cGUgU3luYz0iVFJVRSI+RG91YmxlPC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdpZHRo
+IFN5bmM9IlRSVUUiPjE5PC9hdHR3aWR0aD4NCiAgICAgICAgPGF0dHJkZWZzPkVsZWN0aW9ucyBE
+aXZpc2lvbiAtIFdpc2NvbnNpbiBHb3Zlcm5tZW50IEFjY291bnRhYmlsaXR5IEJvYXJkPC9hdHRy
+ZGVmcz4NCiAgICAgICAgPGF0dHJkZWY+MjAwOCBTdGF0ZSBBc3NlbWJseSBSZXN1bHRzIC0gRGVt
+b2NyYXQ8L2F0dHJkZWY+DQogICAgICAgIDxhdHByZWNpcyBTeW5jPSJUUlVFIj4xODwvYXRwcmVj
+aXM+DQogICAgICAgIDxhdHRzY2FsZSBTeW5jPSJUUlVFIj41PC9hdHRzY2FsZT4NCiAgICAgIDwv
+YXR0cj4NCiAgICAgIDxhdHRyPg0KICAgICAgICA8YXR0cmxhYmwgU3luYz0iVFJVRSI+QVNNUkVQ
+MDg8L2F0dHJsYWJsPg0KICAgICAgICA8YXR0YWxpYXMgU3luYz0iVFJVRSI+QVNNUkVQMDg8L2F0
+dGFsaWFzPg0KICAgICAgICA8YXR0cnR5cGUgU3luYz0iVFJVRSI+RG91YmxlPC9hdHRydHlwZT4N
+CiAgICAgICAgPGF0dHdpZHRoIFN5bmM9IlRSVUUiPjE5PC9hdHR3aWR0aD4NCiAgICAgICAgPGF0
+dHJkZWZzPkVsZWN0aW9ucyBEaXZpc2lvbiAtIFdpc2NvbnNpbiBHb3Zlcm5tZW50IEFjY291bnRh
+YmlsaXR5IEJvYXJkPC9hdHRyZGVmcz4NCiAgICAgICAgPGF0dHJkZWY+MjAwOCBTdGF0ZSBBc3Nl
+bWJseSBSZXN1bHRzIC0gUmVwdWJsaWNhbjwvYXR0cmRlZj4NCiAgICAgICAgPGF0cHJlY2lzIFN5
+bmM9IlRSVUUiPjE4PC9hdHByZWNpcz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjU8
+L2F0dHNjYWxlPg0KICAgICAgPC9hdHRyPg0KICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRybGFi
+bCBTeW5jPSJUUlVFIj5BU01TQ1QwODwvYXR0cmxhYmw+DQogICAgICAgIDxhdHRhbGlhcyBTeW5j
+PSJUUlVFIj5BU01TQ1QwODwvYXR0YWxpYXM+DQogICAgICAgIDxhdHRydHlwZSBTeW5jPSJUUlVF
+Ij5Eb3VibGU8L2F0dHJ0eXBlPg0KICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MTk8L2F0
+dHdpZHRoPg0KICAgICAgICA8YXR0cmRlZnM+RWxlY3Rpb25zIERpdmlzaW9uIC0gV2lzY29uc2lu
+IEdvdmVybm1lbnQgQWNjb3VudGFiaWxpdHkgQm9hcmQ8L2F0dHJkZWZzPg0KICAgICAgICA8YXR0
+cmRlZj4yMDA4IFN0YXRlIEFzc2VtYmx5IFJlc3VsdHMgLSBTY2F0dGVyPC9hdHRyZGVmPg0KICAg
+ICAgICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+MTg8L2F0cHJlY2lzPg0KICAgICAgICA8YXR0c2Nh
+bGUgU3luYz0iVFJVRSI+NTwvYXR0c2NhbGU+DQogICAgICA8L2F0dHI+DQogICAgICA8YXR0cj4N
+CiAgICAgICAgPGF0dHJsYWJsIFN5bmM9IlRSVUUiPkFTTUxJQjA4PC9hdHRybGFibD4NCiAgICAg
+ICAgPGF0dGFsaWFzIFN5bmM9IlRSVUUiPkFTTUxJQjA4PC9hdHRhbGlhcz4NCiAgICAgICAgPGF0
+dHJ0eXBlIFN5bmM9IlRSVUUiPkRvdWJsZTwvYXR0cnR5cGU+DQogICAgICAgIDxhdHR3aWR0aCBT
+eW5jPSJUUlVFIj4xOTwvYXR0d2lkdGg+DQogICAgICAgIDxhdHRyZGVmcz5FbGVjdGlvbnMgRGl2
+aXNpb24gLSBXaXNjb25zaW4gR292ZXJubWVudCBBY2NvdW50YWJpbGl0eSBCb2FyZDwvYXR0cmRl
+ZnM+DQogICAgICAgIDxhdHRyZGVmPjIwMDggU3RhdGUgQXNzZW1ibHkgUmVzdWx0cyAtIExpYmVy
+dGFyaWFuPC9hdHRyZGVmPg0KICAgICAgICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+MTg8L2F0cHJl
+Y2lzPg0KICAgICAgICA8YXR0c2NhbGUgU3luYz0iVFJVRSI+NTwvYXR0c2NhbGU+DQogICAgICA8
+L2F0dHI+DQogICAgICA8YXR0cj4NCiAgICAgICAgPGF0dHJsYWJsIFN5bmM9IlRSVUUiPkFTTUlO
+RDA4PC9hdHRybGFibD4NCiAgICAgICAgPGF0dGFsaWFzIFN5bmM9IlRSVUUiPkFTTUlORDA4PC9h
+dHRhbGlhcz4NCiAgICAgICAgPGF0dHJ0eXBlIFN5bmM9IlRSVUUiPkRvdWJsZTwvYXR0cnR5cGU+
+DQogICAgICAgIDxhdHR3aWR0aCBTeW5jPSJUUlVFIj4xOTwvYXR0d2lkdGg+DQogICAgICAgIDxh
+dHRyZGVmcz5FbGVjdGlvbnMgRGl2aXNpb24gLSBXaXNjb25zaW4gR292ZXJubWVudCBBY2NvdW50
+YWJpbGl0eSBCb2FyZDwvYXR0cmRlZnM+DQogICAgICAgIDxhdHRyZGVmPjIwMDggU3RhdGUgQXNz
+ZW1ibHkgUmVzdWx0cyAtIEluZGVwZW5kZW50PC9hdHRyZGVmPg0KICAgICAgICA8YXRwcmVjaXMg
+U3luYz0iVFJVRSI+MTg8L2F0cHJlY2lzPg0KICAgICAgICA8YXR0c2NhbGUgU3luYz0iVFJVRSI+
+NTwvYXR0c2NhbGU+DQogICAgICA8L2F0dHI+DQogICAgICA8YXR0cj4NCiAgICAgICAgPGF0dHJs
+YWJsIFN5bmM9IlRSVUUiPlNFTkRFTTA4PC9hdHRybGFibD4NCiAgICAgICAgPGF0dGFsaWFzIFN5
+bmM9IlRSVUUiPlNFTkRFTTA4PC9hdHRhbGlhcz4NCiAgICAgICAgPGF0dHJ0eXBlIFN5bmM9IlRS
+VUUiPkRvdWJsZTwvYXR0cnR5cGU+DQogICAgICAgIDxhdHR3aWR0aCBTeW5jPSJUUlVFIj4xOTwv
+YXR0d2lkdGg+DQogICAgICAgIDxhdHRyZGVmcz5FbGVjdGlvbnMgRGl2aXNpb24gLSBXaXNjb25z
+aW4gR292ZXJubWVudCBBY2NvdW50YWJpbGl0eSBCb2FyZDwvYXR0cmRlZnM+DQogICAgICAgIDxh
+dHRyZGVmPjIwMDggU3RhdGUgU2VuYXRlIFJlc3VsdHMgLSBEZW1vY3JhdDwvYXR0cmRlZj4NCiAg
+ICAgICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUiPjE4PC9hdHByZWNpcz4NCiAgICAgICAgPGF0dHNj
+YWxlIFN5bmM9IlRSVUUiPjU8L2F0dHNjYWxlPg0KICAgICAgPC9hdHRyPg0KICAgICAgPGF0dHI+
+DQogICAgICAgIDxhdHRybGFibCBTeW5jPSJUUlVFIj5TRU5SRVAwODwvYXR0cmxhYmw+DQogICAg
+ICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5TRU5SRVAwODwvYXR0YWxpYXM+DQogICAgICAgIDxh
+dHRydHlwZSBTeW5jPSJUUlVFIj5Eb3VibGU8L2F0dHJ0eXBlPg0KICAgICAgICA8YXR0d2lkdGgg
+U3luYz0iVFJVRSI+MTk8L2F0dHdpZHRoPg0KICAgICAgICA8YXR0cmRlZnM+RWxlY3Rpb25zIERp
+dmlzaW9uIC0gV2lzY29uc2luIEdvdmVybm1lbnQgQWNjb3VudGFiaWxpdHkgQm9hcmQ8L2F0dHJk
+ZWZzPg0KICAgICAgICA8YXR0cmRlZj4yMDA4IFN0YXRlIFNlbmF0ZSBSZXN1bHRzIC0gUmVwdWJs
+aWNhbjwvYXR0cmRlZj4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUiPjE4PC9hdHByZWNp
+cz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjU8L2F0dHNjYWxlPg0KICAgICAgPC9h
+dHRyPg0KICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRybGFibCBTeW5jPSJUUlVFIj5TRU5TQ1Qw
+ODwvYXR0cmxhYmw+DQogICAgICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5TRU5TQ1QwODwvYXR0
+YWxpYXM+DQogICAgICAgIDxhdHRydHlwZSBTeW5jPSJUUlVFIj5Eb3VibGU8L2F0dHJ0eXBlPg0K
+ICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MTk8L2F0dHdpZHRoPg0KICAgICAgICA8YXR0
+cmRlZnM+RWxlY3Rpb25zIERpdmlzaW9uIC0gV2lzY29uc2luIEdvdmVybm1lbnQgQWNjb3VudGFi
+aWxpdHkgQm9hcmQ8L2F0dHJkZWZzPg0KICAgICAgICA8YXR0cmRlZj4yMDA4IFN0YXRlIFNlbmF0
+ZSBSZXN1bHRzIC0gU2NhdHRlcjwvYXR0cmRlZj4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRS
+VUUiPjE4PC9hdHByZWNpcz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjU8L2F0dHNj
+YWxlPg0KICAgICAgPC9hdHRyPg0KICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRybGFibCBTeW5j
+PSJUUlVFIj5TRU5JTkQwODwvYXR0cmxhYmw+DQogICAgICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVF
+Ij5TRU5JTkQwODwvYXR0YWxpYXM+DQogICAgICAgIDxhdHRydHlwZSBTeW5jPSJUUlVFIj5Eb3Vi
+bGU8L2F0dHJ0eXBlPg0KICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MTk8L2F0dHdpZHRo
+Pg0KICAgICAgICA8YXR0cmRlZnM+RWxlY3Rpb25zIERpdmlzaW9uIC0gV2lzY29uc2luIEdvdmVy
+bm1lbnQgQWNjb3VudGFiaWxpdHkgQm9hcmQ8L2F0dHJkZWZzPg0KICAgICAgICA8YXR0cmRlZj4y
+MDA4IFN0YXRlIFNlbmF0ZSBSZXN1bHRzIC0gSW5kZXBlbmRlbnQ8L2F0dHJkZWY+DQogICAgICAg
+IDxhdHByZWNpcyBTeW5jPSJUUlVFIj4xODwvYXRwcmVjaXM+DQogICAgICAgIDxhdHRzY2FsZSBT
+eW5jPSJUUlVFIj41PC9hdHRzY2FsZT4NCiAgICAgIDwvYXR0cj4NCiAgICAgIDxhdHRyPg0KICAg
+ICAgICA8YXR0cmxhYmwgU3luYz0iVFJVRSI+Q09OREVNMDg8L2F0dHJsYWJsPg0KICAgICAgICA8
+YXR0YWxpYXMgU3luYz0iVFJVRSI+Q09OREVNMDg8L2F0dGFsaWFzPg0KICAgICAgICA8YXR0cnR5
+cGUgU3luYz0iVFJVRSI+RG91YmxlPC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdpZHRoIFN5bmM9
+IlRSVUUiPjE5PC9hdHR3aWR0aD4NCiAgICAgICAgPGF0dHJkZWZzPkVsZWN0aW9ucyBEaXZpc2lv
+biAtIFdpc2NvbnNpbiBHb3Zlcm5tZW50IEFjY291bnRhYmlsaXR5IEJvYXJkPC9hdHRyZGVmcz4N
+CiAgICAgICAgPGF0dHJkZWY+MjAwOCBVUyBDb25ncmVzcyBSZXN1bHRzIC0gRGVtb2NyYXQ8L2F0
+dHJkZWY+DQogICAgICAgIDxhdHByZWNpcyBTeW5jPSJUUlVFIj4xODwvYXRwcmVjaXM+DQogICAg
+ICAgIDxhdHRzY2FsZSBTeW5jPSJUUlVFIj41PC9hdHRzY2FsZT4NCiAgICAgIDwvYXR0cj4NCiAg
+ICAgIDxhdHRyPg0KICAgICAgICA8YXR0cmxhYmwgU3luYz0iVFJVRSI+Q09OUkVQMDg8L2F0dHJs
+YWJsPg0KICAgICAgICA8YXR0YWxpYXMgU3luYz0iVFJVRSI+Q09OUkVQMDg8L2F0dGFsaWFzPg0K
+ICAgICAgICA8YXR0cnR5cGUgU3luYz0iVFJVRSI+RG91YmxlPC9hdHRydHlwZT4NCiAgICAgICAg
+PGF0dHdpZHRoIFN5bmM9IlRSVUUiPjE5PC9hdHR3aWR0aD4NCiAgICAgICAgPGF0dHJkZWZzPkVs
+ZWN0aW9ucyBEaXZpc2lvbiAtIFdpc2NvbnNpbiBHb3Zlcm5tZW50IEFjY291bnRhYmlsaXR5IEJv
+YXJkPC9hdHRyZGVmcz4NCiAgICAgICAgPGF0dHJkZWY+MjAwOCBVUyBDb25ncmVzcyBSZXN1bHRz
+IC0gUmVwdWJsaWNhbjwvYXR0cmRlZj4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUiPjE4
+PC9hdHByZWNpcz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjU8L2F0dHNjYWxlPg0K
+ICAgICAgPC9hdHRyPg0KICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRybGFibCBTeW5jPSJUUlVF
+Ij5DT05TQ1QwODwvYXR0cmxhYmw+DQogICAgICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5DT05T
+Q1QwODwvYXR0YWxpYXM+DQogICAgICAgIDxhdHRydHlwZSBTeW5jPSJUUlVFIj5Eb3VibGU8L2F0
+dHJ0eXBlPg0KICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MTk8L2F0dHdpZHRoPg0KICAg
+ICAgICA8YXR0cmRlZnM+RWxlY3Rpb25zIERpdmlzaW9uIC0gV2lzY29uc2luIEdvdmVybm1lbnQg
+QWNjb3VudGFiaWxpdHkgQm9hcmQ8L2F0dHJkZWZzPg0KICAgICAgICA8YXR0cmRlZj4yMDA4IFVT
+IENvbmdyZXNzIFJlc3VsdHMgLSBTY2F0dGVyPC9hdHRyZGVmPg0KICAgICAgICA8YXRwcmVjaXMg
+U3luYz0iVFJVRSI+MTg8L2F0cHJlY2lzPg0KICAgICAgICA8YXR0c2NhbGUgU3luYz0iVFJVRSI+
+NTwvYXR0c2NhbGU+DQogICAgICA8L2F0dHI+DQogICAgICA8YXR0cj4NCiAgICAgICAgPGF0dHJs
+YWJsIFN5bmM9IlRSVUUiPkNPTkxJQjA4PC9hdHRybGFibD4NCiAgICAgICAgPGF0dGFsaWFzIFN5
+bmM9IlRSVUUiPkNPTkxJQjA4PC9hdHRhbGlhcz4NCiAgICAgICAgPGF0dHJ0eXBlIFN5bmM9IlRS
+VUUiPkRvdWJsZTwvYXR0cnR5cGU+DQogICAgICAgIDxhdHR3aWR0aCBTeW5jPSJUUlVFIj4xOTwv
+YXR0d2lkdGg+DQogICAgICAgIDxhdHRyZGVmcz5FbGVjdGlvbnMgRGl2aXNpb24gLSBXaXNjb25z
+aW4gR292ZXJubWVudCBBY2NvdW50YWJpbGl0eSBCb2FyZDwvYXR0cmRlZnM+DQogICAgICAgIDxh
+dHRyZGVmPjIwMDggVVMgQ29uZ3Jlc3MgUmVzdWx0cyAtIExpYmVydGFyaWFuPC9hdHRyZGVmPg0K
+ICAgICAgICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+MTg8L2F0cHJlY2lzPg0KICAgICAgICA8YXR0
+c2NhbGUgU3luYz0iVFJVRSI+NTwvYXR0c2NhbGU+DQogICAgICA8L2F0dHI+DQogICAgICA8YXR0
+cj4NCiAgICAgICAgPGF0dHJsYWJsIFN5bmM9IlRSVUUiPkNPTklORDA4PC9hdHRybGFibD4NCiAg
+ICAgICAgPGF0dGFsaWFzIFN5bmM9IlRSVUUiPkNPTklORDA4PC9hdHRhbGlhcz4NCiAgICAgICAg
+PGF0dHJ0eXBlIFN5bmM9IlRSVUUiPkRvdWJsZTwvYXR0cnR5cGU+DQogICAgICAgIDxhdHR3aWR0
+aCBTeW5jPSJUUlVFIj4xOTwvYXR0d2lkdGg+DQogICAgICAgIDxhdHRyZGVmcz5FbGVjdGlvbnMg
+RGl2aXNpb24gLSBXaXNjb25zaW4gR292ZXJubWVudCBBY2NvdW50YWJpbGl0eSBCb2FyZDwvYXR0
+cmRlZnM+DQogICAgICAgIDxhdHRyZGVmPjIwMDggVVMgQ29uZ3Jlc3MgUmVzdWx0cyAtIEluZGVw
+ZW5kZW50PC9hdHRyZGVmPg0KICAgICAgICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+MTg8L2F0cHJl
+Y2lzPg0KICAgICAgICA8YXR0c2NhbGUgU3luYz0iVFJVRSI+NTwvYXR0c2NhbGU+DQogICAgICA8
+L2F0dHI+DQogICAgICA8YXR0cj4NCiAgICAgICAgPGF0dHJsYWJsIFN5bmM9IlRSVUUiPkRBREVN
+MDg8L2F0dHJsYWJsPg0KICAgICAgICA8YXR0YWxpYXMgU3luYz0iVFJVRSI+REFERU0wODwvYXR0
+YWxpYXM+DQogICAgICAgIDxhdHRydHlwZSBTeW5jPSJUUlVFIj5Eb3VibGU8L2F0dHJ0eXBlPg0K
+ICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MTk8L2F0dHdpZHRoPg0KICAgICAgICA8YXR0
+cmRlZnM+RWxlY3Rpb25zIERpdmlzaW9uIC0gV2lzY29uc2luIEdvdmVybm1lbnQgQWNjb3VudGFi
+aWxpdHkgQm9hcmQ8L2F0dHJkZWZzPg0KICAgICAgICA8YXR0cmRlZj4yMDA4IERpc3RyaWN0IEF0
+dG9ybmV5IFJlc3VsdHMgLSBEZW1vY3JhdDwvYXR0cmRlZj4NCiAgICAgICAgPGF0cHJlY2lzIFN5
+bmM9IlRSVUUiPjE4PC9hdHByZWNpcz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjU8
+L2F0dHNjYWxlPg0KICAgICAgPC9hdHRyPg0KICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRybGFi
+bCBTeW5jPSJUUlVFIj5EQVJFUDA4PC9hdHRybGFibD4NCiAgICAgICAgPGF0dGFsaWFzIFN5bmM9
+IlRSVUUiPkRBUkVQMDg8L2F0dGFsaWFzPg0KICAgICAgICA8YXR0cnR5cGUgU3luYz0iVFJVRSI+
+RG91YmxlPC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdpZHRoIFN5bmM9IlRSVUUiPjE5PC9hdHR3
+aWR0aD4NCiAgICAgICAgPGF0dHJkZWZzPkVsZWN0aW9ucyBEaXZpc2lvbiAtIFdpc2NvbnNpbiBH
+b3Zlcm5tZW50IEFjY291bnRhYmlsaXR5IEJvYXJkPC9hdHRyZGVmcz4NCiAgICAgICAgPGF0dHJk
+ZWY+MjAwOCBEaXN0cmljdCBBdHRvcm5leSBSZXN1bHRzIC0gUmVwdWJsaWNhbjwvYXR0cmRlZj4N
+CiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUiPjE4PC9hdHByZWNpcz4NCiAgICAgICAgPGF0
+dHNjYWxlIFN5bmM9IlRSVUUiPjU8L2F0dHNjYWxlPg0KICAgICAgPC9hdHRyPg0KICAgICAgPGF0
+dHI+DQogICAgICAgIDxhdHRybGFibCBTeW5jPSJUUlVFIj5EQVNDQVQwODwvYXR0cmxhYmw+DQog
+ICAgICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5EQVNDQVQwODwvYXR0YWxpYXM+DQogICAgICAg
+IDxhdHRydHlwZSBTeW5jPSJUUlVFIj5Eb3VibGU8L2F0dHJ0eXBlPg0KICAgICAgICA8YXR0d2lk
+dGggU3luYz0iVFJVRSI+MTk8L2F0dHdpZHRoPg0KICAgICAgICA8YXR0cmRlZnM+RWxlY3Rpb25z
+IERpdmlzaW9uIC0gV2lzY29uc2luIEdvdmVybm1lbnQgQWNjb3VudGFiaWxpdHkgQm9hcmQ8L2F0
+dHJkZWZzPg0KICAgICAgICA8YXR0cmRlZj4yMDA4IERpc3RyaWN0IEF0dG9ybmV5IFJlc3VsdHMg
+LSBTY2F0dGVyPC9hdHRyZGVmPg0KICAgICAgICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+MTg8L2F0
+cHJlY2lzPg0KICAgICAgICA8YXR0c2NhbGUgU3luYz0iVFJVRSI+NTwvYXR0c2NhbGU+DQogICAg
+ICA8L2F0dHI+DQogICAgICA8YXR0cj4NCiAgICAgICAgPGF0dHJsYWJsIFN5bmM9IlRSVUUiPkRB
+SU5EMDg8L2F0dHJsYWJsPg0KICAgICAgICA8YXR0YWxpYXMgU3luYz0iVFJVRSI+REFJTkQwODwv
+YXR0YWxpYXM+DQogICAgICAgIDxhdHRydHlwZSBTeW5jPSJUUlVFIj5Eb3VibGU8L2F0dHJ0eXBl
+Pg0KICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MTk8L2F0dHdpZHRoPg0KICAgICAgICA8
+YXR0cmRlZnM+RWxlY3Rpb25zIERpdmlzaW9uIC0gV2lzY29uc2luIEdvdmVybm1lbnQgQWNjb3Vu
+dGFiaWxpdHkgQm9hcmQ8L2F0dHJkZWZzPg0KICAgICAgICA8YXR0cmRlZj4yMDA4IERpc3RyaWN0
+IEF0dG9ybmV5IFJlc3VsdHMgLSBJbmRlcGVuZGVudDwvYXR0cmRlZj4NCiAgICAgICAgPGF0cHJl
+Y2lzIFN5bmM9IlRSVUUiPjE4PC9hdHByZWNpcz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRS
+VUUiPjU8L2F0dHNjYWxlPg0KICAgICAgPC9hdHRyPg0KICAgICAgPGF0dHI+DQogICAgICAgIDxh
+dHRybGFibCBTeW5jPSJUUlVFIj5EQU9USDA4PC9hdHRybGFibD4NCiAgICAgICAgPGF0dGFsaWFz
+IFN5bmM9IlRSVUUiPkRBT1RIMDg8L2F0dGFsaWFzPg0KICAgICAgICA8YXR0cnR5cGUgU3luYz0i
+VFJVRSI+RG91YmxlPC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdpZHRoIFN5bmM9IlRSVUUiPjE5
+PC9hdHR3aWR0aD4NCiAgICAgICAgPGF0dHJkZWZzPkVsZWN0aW9ucyBEaXZpc2lvbiAtIFdpc2Nv
+bnNpbiBHb3Zlcm5tZW50IEFjY291bnRhYmlsaXR5IEJvYXJkPC9hdHRyZGVmcz4NCiAgICAgICAg
+PGF0dHJkZWY+MjAwOCBEaXN0cmljdCBBdHRvcm5leSBSZXN1bHRzIC0gT3RoZXI8L2F0dHJkZWY+
+DQogICAgICAgIDxhdHByZWNpcyBTeW5jPSJUUlVFIj4xODwvYXRwcmVjaXM+DQogICAgICAgIDxh
+dHRzY2FsZSBTeW5jPSJUUlVFIj41PC9hdHRzY2FsZT4NCiAgICAgIDwvYXR0cj4NCiAgICAgIDxh
+dHRyPg0KICAgICAgICA8YXR0cmxhYmwgU3luYz0iVFJVRSI+UFJFUzA4VDwvYXR0cmxhYmw+DQog
+ICAgICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5QUkVTMDhUPC9hdHRhbGlhcz4NCiAgICAgICAg
+PGF0dHJ0eXBlIFN5bmM9IlRSVUUiPkludGVnZXI8L2F0dHJ0eXBlPg0KICAgICAgICA8YXR0d2lk
+dGggU3luYz0iVFJVRSI+MTA8L2F0dHdpZHRoPg0KICAgICAgICA8YXR0cmRlZnM+TFRTQjwvYXR0
+cmRlZnM+DQogICAgICAgIDxhdHRyZGVmPjIwMDggUHJlc2lkZW50aWFsIFJlc3VsdHMgLSBUb3Rh
+bDwvYXR0cmRlZj4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUiPjEwPC9hdHByZWNpcz4N
+CiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjA8L2F0dHNjYWxlPg0KICAgICAgPC9hdHRy
+Pg0KICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRybGFibCBTeW5jPSJUUlVFIj5BU00wOFQ8L2F0
+dHJsYWJsPg0KICAgICAgICA8YXR0YWxpYXMgU3luYz0iVFJVRSI+QVNNMDhUPC9hdHRhbGlhcz4N
+CiAgICAgICAgPGF0dHJ0eXBlIFN5bmM9IlRSVUUiPkludGVnZXI8L2F0dHJ0eXBlPg0KICAgICAg
+ICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MTA8L2F0dHdpZHRoPg0KICAgICAgICA8YXR0cmRlZnM+
+TFRTQjwvYXR0cmRlZnM+DQogICAgICAgIDxhdHRyZGVmPjIwMDggU3RhdGUgQXNzZW1ibHkgLSBU
+b3RhbCBWb3RlczwvYXR0cmRlZj4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUiPjEwPC9h
+dHByZWNpcz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjA8L2F0dHNjYWxlPg0KICAg
+ICAgPC9hdHRyPg0KICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRybGFibCBTeW5jPSJUUlVFIj5T
+RU4wOFQ8L2F0dHJsYWJsPg0KICAgICAgICA8YXR0YWxpYXMgU3luYz0iVFJVRSI+U0VOMDhUPC9h
+dHRhbGlhcz4NCiAgICAgICAgPGF0dHJ0eXBlIFN5bmM9IlRSVUUiPkludGVnZXI8L2F0dHJ0eXBl
+Pg0KICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MTA8L2F0dHdpZHRoPg0KICAgICAgICA8
+YXR0cmRlZnM+TFRTQjwvYXR0cmRlZnM+DQogICAgICAgIDxhdHRyZGVmPjIwMDggU3RhdGUgU2Vu
+YXRlIC0gVG90YWxzPC9hdHRyZGVmPg0KICAgICAgICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+MTA8
+L2F0cHJlY2lzPg0KICAgICAgICA8YXR0c2NhbGUgU3luYz0iVFJVRSI+MDwvYXR0c2NhbGU+DQog
+ICAgICA8L2F0dHI+DQogICAgICA8YXR0cj4NCiAgICAgICAgPGF0dHJsYWJsIFN5bmM9IlRSVUUi
+PkNPTjA4VDwvYXR0cmxhYmw+DQogICAgICAgIDxhdHRhbGlhcyBTeW5jPSJUUlVFIj5DT04wOFQ8
+L2F0dGFsaWFzPg0KICAgICAgICA8YXR0cnR5cGUgU3luYz0iVFJVRSI+SW50ZWdlcjwvYXR0cnR5
+cGU+DQogICAgICAgIDxhdHR3aWR0aCBTeW5jPSJUUlVFIj4xMDwvYXR0d2lkdGg+DQogICAgICAg
+IDxhdHRyZGVmcz5MVFNCPC9hdHRyZGVmcz4NCiAgICAgICAgPGF0dHJkZWY+MjAwOCBVUyBDb25n
+cmVzcyAtIFRvdGFsPC9hdHRyZGVmPg0KICAgICAgICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+MTA8
+L2F0cHJlY2lzPg0KICAgICAgICA8YXR0c2NhbGUgU3luYz0iVFJVRSI+MDwvYXR0c2NhbGU+DQog
+ICAgICA8L2F0dHI+DQogICAgICA8YXR0cj4NCiAgICAgICAgPGF0dHJsYWJsIFN5bmM9IlRSVUUi
+PkRBMDhUPC9hdHRybGFibD4NCiAgICAgICAgPGF0dGFsaWFzIFN5bmM9IlRSVUUiPkRBMDhUPC9h
+dHRhbGlhcz4NCiAgICAgICAgPGF0dHJ0eXBlIFN5bmM9IlRSVUUiPkludGVnZXI8L2F0dHJ0eXBl
+Pg0KICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MTA8L2F0dHdpZHRoPg0KICAgICAgICA8
+YXR0cmRlZnM+TFRTQjwvYXR0cmRlZnM+DQogICAgICAgIDxhdHRyZGVmPjIwMDggRGlzdHJpY3Qg
+QXR0b3JuZXkgLSBUb3RhbDwvYXR0cmRlZj4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUi
+PjEwPC9hdHByZWNpcz4NCiAgICAgICAgPGF0dHNjYWxlIFN5bmM9IlRSVUUiPjA8L2F0dHNjYWxl
+Pg0KICAgICAgPC9hdHRyPg0KICAgICAgPGF0dHI+DQogICAgICAgIDxhdHRybGFibCBTeW5jPSJU
+UlVFIj5TaGFwZV9hcmVhPC9hdHRybGFibD4NCiAgICAgICAgPGF0dGFsaWFzIFN5bmM9IlRSVUUi
+PlNoYXBlX2FyZWE8L2F0dGFsaWFzPg0KICAgICAgICA8YXR0cnR5cGUgU3luYz0iVFJVRSI+RG91
+YmxlPC9hdHRydHlwZT4NCiAgICAgICAgPGF0dHdpZHRoIFN5bmM9IlRSVUUiPjE5PC9hdHR3aWR0
+aD4NCiAgICAgICAgPGF0cHJlY2lzIFN5bmM9IlRSVUUiPjA8L2F0cHJlY2lzPg0KICAgICAgICA8
+YXR0c2NhbGUgU3luYz0iVFJVRSI+MDwvYXR0c2NhbGU+DQogICAgICAgIDxhdHRyZGVmIFN5bmM9
+IlRSVUUiPkFyZWEgb2YgZmVhdHVyZSBpbiBpbnRlcm5hbCB1bml0cyBzcXVhcmVkLjwvYXR0cmRl
+Zj4NCiAgICAgICAgPGF0dHJkZWZzIFN5bmM9IlRSVUUiPkVzcmk8L2F0dHJkZWZzPg0KICAgICAg
+ICA8YXR0cmRvbXY+DQogICAgICAgICAgPHVkb20gU3luYz0iVFJVRSI+UG9zaXRpdmUgcmVhbCBu
+dW1iZXJzIHRoYXQgYXJlIGF1dG9tYXRpY2FsbHkgZ2VuZXJhdGVkLjwvdWRvbT4NCiAgICAgICAg
+PC9hdHRyZG9tdj4NCiAgICAgIDwvYXR0cj4NCiAgICAgIDxhdHRyPg0KICAgICAgICA8YXR0cmxh
+YmwgU3luYz0iVFJVRSI+U2hhcGVfbGVuPC9hdHRybGFibD4NCiAgICAgICAgPGF0dGFsaWFzIFN5
+bmM9IlRSVUUiPlNoYXBlX2xlbjwvYXR0YWxpYXM+DQogICAgICAgIDxhdHRydHlwZSBTeW5jPSJU
+UlVFIj5Eb3VibGU8L2F0dHJ0eXBlPg0KICAgICAgICA8YXR0d2lkdGggU3luYz0iVFJVRSI+MTk8
+L2F0dHdpZHRoPg0KICAgICAgICA8YXRwcmVjaXMgU3luYz0iVFJVRSI+MDwvYXRwcmVjaXM+DQog
+ICAgICAgIDxhdHRzY2FsZSBTeW5jPSJUUlVFIj4wPC9hdHRzY2FsZT4NCiAgICAgIDwvYXR0cj4N
+CiAgICA8L2RldGFpbGVkPg0KICA8L2VhaW5mbz4NCiAgPGRpc3RpbmZvPg0KICAgIDxyZXNkZXNj
+PkRvd25sb2FkYWJsZSBEYXRhPC9yZXNkZXNjPg0KICA8L2Rpc3RpbmZvPg0KICA8bWV0YWluZm8+
+DQogICAgPG1ldGM+DQogICAgICA8Y250aW5mbz4NCiAgICAgICAgPGNudHBlcnA+DQogICAgICAg
+ICAgPGNudHBlcj5Ub255IEouIFZhbiBEZXIgV2llbGVuPC9jbnRwZXI+DQogICAgICAgICAgPGNu
+dG9yZz5MZWdpc2xhdGl2ZSBUZWNobm9sb2d5IFNlcnZpY2VzIEJ1cmVhdTwvY250b3JnPg0KICAg
+ICAgICA8L2NudHBlcnA+DQogICAgICAgIDxjbnRwb3M+R0lTIEFwcGxpY2F0aW9uIERldmVsb3Bl
+cjwvY250cG9zPg0KICAgICAgICA8Y250YWRkcj4NCiAgICAgICAgICA8YWRkcnR5cGU+bWFpbGlu
+ZyBhbmQgcGh5c2ljYWwgYWRkcmVzczwvYWRkcnR5cGU+DQogICAgICAgICAgPGFkZHJlc3M+MTcg
+Uy4gRmFpcmNoaWxkIFN0LjwvYWRkcmVzcz4NCiAgICAgICAgICA8YWRkcmVzcz5TdWl0ZSA0MDA8
+L2FkZHJlc3M+DQogICAgICAgICAgPGNpdHk+TWFkaXNvbjwvY2l0eT4NCiAgICAgICAgICA8c3Rh
+dGU+V0k8L3N0YXRlPg0KICAgICAgICAgIDxwb3N0YWw+NTM3MDM8L3Bvc3RhbD4NCiAgICAgICAg
+PC9jbnRhZGRyPg0KICAgICAgICA8Y250dm9pY2U+NjA4LTI2Ni02NjQwIEV4dCAxPC9jbnR2b2lj
+ZT4NCiAgICAgICAgPGNudGVtYWlsPmdpc0BsZWdpcy5zdGF0ZS53aS51czwvY250ZW1haWw+DQog
+ICAgICAgIDxob3Vycz44LTUgTS1GPC9ob3Vycz4NCiAgICAgIDwvY250aW5mbz4NCiAgICA8L21l
+dGM+DQogICAgPG1ldGFjPk5vbmU8L21ldGFjPg0KICAgIDxtZXR1Yz5Ob25lPC9tZXR1Yz4NCiAg
+ICA8bWV0ZXh0bnM+DQogICAgICA8b25saW5rPmh0dHA6Ly93d3cuZXNyaS5jb20vbWV0YWRhdGEv
+ZXNyaXByb2Y4MC5odG1sPC9vbmxpbms+DQogICAgICA8bWV0cHJvZj5FU1JJIE1ldGFkYXRhIFBy
+b2ZpbGU8L21ldHByb2Y+DQogICAgPC9tZXRleHRucz4NCiAgICA8bWV0ZXh0bnM+DQogICAgICA8
+b25saW5rPmh0dHA6Ly93d3cuZXNyaS5jb20vbWV0YWRhdGEvZXNyaXByb2Y4MC5odG1sPC9vbmxp
+bms+DQogICAgICA8bWV0cHJvZj5FU1JJIE1ldGFkYXRhIFByb2ZpbGU8L21ldHByb2Y+DQogICAg
+PC9tZXRleHRucz4NCiAgPC9tZXRhaW5mbz4NCiAgPEVzcmk+DQogICAgPENyZWFEYXRlPjIwMDkw
+MzE5PC9DcmVhRGF0ZT4NCiAgICA8Q3JlYVRpbWU+MTExNDM4MDA8L0NyZWFUaW1lPg0KICAgIDxT
+eW5jT25jZT5GQUxTRTwvU3luY09uY2U+DQogICAgPFN5bmNEYXRlPjIwMTYwMzEwPC9TeW5jRGF0
+ZT4NCiAgICA8U3luY1RpbWU+MTQ0MzA3MDA8L1N5bmNUaW1lPg0KICAgIDxNb2REYXRlPjIwMTYw
+MzEwPC9Nb2REYXRlPg0KICAgIDxNb2RUaW1lPjE0NDMwNzAwPC9Nb2RUaW1lPg0KICAgIDxEYXRh
+UHJvcGVydGllcz4NCiAgICAgIDxsaW5lYWdlPg0KICAgICAgICA8UHJvY2VzcyBUb29sU291cmNl
+PSJDOlxQcm9ncmFtIEZpbGVzXEFyY0dJU1xBcmNUb29sYm94XFRvb2xib3hlc1xDb252ZXJzaW9u
+IFRvb2xzLnRieFxGZWF0dXJlQ2xhc3NUb0ZlYXR1cmVDbGFzcyIgRGF0ZT0iMjAwOTAzMTkiIFRp
+bWU9IjEwNTk1NCI+RmVhdHVyZUNsYXNzVG9GZWF0dXJlQ2xhc3MgIlQ6XGxlZ19naXNcR0lTIERh
+dGFcRWxlY3Rpb25fRGF0YVwyMDA4XEZpbmFsX0RhdGFfMDMxOTA5XFdlYnNpdGVfV2FyZHNfMjAw
+OC5zaHAiICJEYXRhYmFzZSBDb25uZWN0aW9uc1xMZWdpc2xhdGl2ZSBHSVMgRGF0YS5zZGUiIEVs
+ZWN0aW9uX0RhdGFfMjAwOF9XYXJkcyAjICJTVEZJRCAnU1RGSUQnIHRydWUgdHJ1ZSBmYWxzZSAx
+NSBUZXh0IDAgMCAsRmlyc3QsIyxUOlxsZWdfZ2lzXEdJUyBEYXRhXEVsZWN0aW9uX0RhdGFcMjAw
+OFxGaW5hbF9EYXRhXzAzMTkwOVxXZWJzaXRlX1dhcmRzXzIwMDguc2hwLFNURklELC0xLC0xO05B
+TUUgJ05BTUUnIHRydWUgdHJ1ZSBmYWxzZSA2IFRleHQgMCAwICxGaXJzdCwjLFQ6XGxlZ19naXNc
+R0lTIERhdGFcRWxlY3Rpb25fRGF0YVwyMDA4XEZpbmFsX0RhdGFfMDMxOTA5XFdlYnNpdGVfV2Fy
+ZHNfMjAwOC5zaHAsTkFNRSwtMSwtMTtDT1VTVUJGUCAnQ09VU1VCRlAnIHRydWUgdHJ1ZSBmYWxz
+ZSAxMSBUZXh0IDAgMCAsRmlyc3QsIyxUOlxsZWdfZ2lzXEdJUyBEYXRhXEVsZWN0aW9uX0RhdGFc
+MjAwOFxGaW5hbF9EYXRhXzAzMTkwOVxXZWJzaXRlX1dhcmRzXzIwMDguc2hwLENPVVNVQkZQLC0x
+LC0xO0ZJUFNTVENPICdGSVBTU1RDTycgdHJ1ZSB0cnVlIGZhbHNlIDEwIFRleHQgMCAwICxGaXJz
+dCwjLFQ6XGxlZ19naXNcR0lTIERhdGFcRWxlY3Rpb25fRGF0YVwyMDA4XEZpbmFsX0RhdGFfMDMx
+OTA5XFdlYnNpdGVfV2FyZHNfMjAwOC5zaHAsRklQU1NUQ08sLTEsLTE7SklEICdKSUQnIHRydWUg
+dHJ1ZSBmYWxzZSAxMSBUZXh0IDAgMCAsRmlyc3QsIyxUOlxsZWdfZ2lzXEdJUyBEYXRhXEVsZWN0
+aW9uX0RhdGFcMjAwOFxGaW5hbF9EYXRhXzAzMTkwOVxXZWJzaXRlX1dhcmRzXzIwMDguc2hwLEpJ
+RCwtMSwtMTtKVlREICdKVlREJyB0cnVlIHRydWUgZmFsc2UgMTAgRG91YmxlIDAgMTAgLEZpcnN0
+LCMsVDpcbGVnX2dpc1xHSVMgRGF0YVxFbGVjdGlvbl9EYXRhXDIwMDhcRmluYWxfRGF0YV8wMzE5
+MDlcV2Vic2l0ZV9XYXJkc18yMDA4LnNocCxKVlRELC0xLC0xO0pWVEQyICdKVlREMicgdHJ1ZSB0
+cnVlIGZhbHNlIDI2IFRleHQgMCAwICxGaXJzdCwjLFQ6XGxlZ19naXNcR0lTIERhdGFcRWxlY3Rp
+b25fRGF0YVwyMDA4XEZpbmFsX0RhdGFfMDMxOTA5XFdlYnNpdGVfV2FyZHNfMjAwOC5zaHAsSlZU
+RDIsLTEsLTE7UEVSU09OUyAnUEVSU09OUycgdHJ1ZSB0cnVlIGZhbHNlIDE5IERvdWJsZSA4IDE4
+ICxGaXJzdCwjLFQ6XGxlZ19naXNcR0lTIERhdGFcRWxlY3Rpb25fRGF0YVwyMDA4XEZpbmFsX0Rh
+dGFfMDMxOTA5XFdlYnNpdGVfV2FyZHNfMjAwOC5zaHAsUEVSU09OUywtMSwtMTtXSElURSAnV0hJ
+VEUnIHRydWUgdHJ1ZSBmYWxzZSAxMCBEb3VibGUgMCAxMCAsRmlyc3QsIyxUOlxsZWdfZ2lzXEdJ
+UyBEYXRhXEVsZWN0aW9uX0RhdGFcMjAwOFxGaW5hbF9EYXRhXzAzMTkwOVxXZWJzaXRlX1dhcmRz
+XzIwMDguc2hwLFdISVRFLC0xLC0xO0JMQUNLICdCTEFDSycgdHJ1ZSB0cnVlIGZhbHNlIDEwIERv
+dWJsZSAwIDEwICxGaXJzdCwjLFQ6XGxlZ19naXNcR0lTIERhdGFcRWxlY3Rpb25fRGF0YVwyMDA4
+XEZpbmFsX0RhdGFfMDMxOTA5XFdlYnNpdGVfV2FyZHNfMjAwOC5zaHAsQkxBQ0ssLTEsLTE7SElT
+UEFOSUMgJ0hJU1BBTklDJyB0cnVlIHRydWUgZmFsc2UgMTAgRG91YmxlIDAgMTAgLEZpcnN0LCMs
+VDpcbGVnX2dpc1xHSVMgRGF0YVxFbGVjdGlvbl9EYXRhXDIwMDhcRmluYWxfRGF0YV8wMzE5MDlc
+V2Vic2l0ZV9XYXJkc18yMDA4LnNocCxISVNQQU5JQywtMSwtMTtBU0lBTiAnQVNJQU4nIHRydWUg
+dHJ1ZSBmYWxzZSAxMCBEb3VibGUgMCAxMCAsRmlyc3QsIyxUOlxsZWdfZ2lzXEdJUyBEYXRhXEVs
+ZWN0aW9uX0RhdGFcMjAwOFxGaW5hbF9EYXRhXzAzMTkwOVxXZWJzaXRlX1dhcmRzXzIwMDguc2hw
+LEFTSUFOLC0xLC0xO0FNSU5ESUFOICdBTUlORElBTicgdHJ1ZSB0cnVlIGZhbHNlIDE5IERvdWJs
+ZSA4IDE4ICxGaXJzdCwjLFQ6XGxlZ19naXNcR0lTIERhdGFcRWxlY3Rpb25fRGF0YVwyMDA4XEZp
+bmFsX0RhdGFfMDMxOTA5XFdlYnNpdGVfV2FyZHNfMjAwOC5zaHAsQU1JTkRJQU4sLTEsLTE7UElT
+TEFORCAnUElTTEFORCcgdHJ1ZSB0cnVlIGZhbHNlIDEwIERvdWJsZSAwIDEwICxGaXJzdCwjLFQ6
+XGxlZ19naXNcR0lTIERhdGFcRWxlY3Rpb25fRGF0YVwyMDA4XEZpbmFsX0RhdGFfMDMxOTA5XFdl
+YnNpdGVfV2FyZHNfMjAwOC5zaHAsUElTTEFORCwtMSwtMTtPVEhFUiAnT1RIRVInIHRydWUgdHJ1
+ZSBmYWxzZSAxMCBEb3VibGUgMCAxMCAsRmlyc3QsIyxUOlxsZWdfZ2lzXEdJUyBEYXRhXEVsZWN0
+aW9uX0RhdGFcMjAwOFxGaW5hbF9EYXRhXzAzMTkwOVxXZWJzaXRlX1dhcmRzXzIwMDguc2hwLE9U
+SEVSLC0xLC0xO09USEVSTUxUICdPVEhFUk1MVCcgdHJ1ZSB0cnVlIGZhbHNlIDE5IERvdWJsZSA4
+IDE4ICxGaXJzdCwjLFQ6XGxlZ19naXNcR0lTIERhdGFcRWxlY3Rpb25fRGF0YVwyMDA4XEZpbmFs
+X0RhdGFfMDMxOTA5XFdlYnNpdGVfV2FyZHNfMjAwOC5zaHAsT1RIRVJNTFQsLTEsLTE7UEVSU09O
+UzE4ICdQRVJTT05TMTgnIHRydWUgdHJ1ZSBmYWxzZSAxOSBEb3VibGUgOCAxOCAsRmlyc3QsIyxU
+OlxsZWdfZ2lzXEdJUyBEYXRhXEVsZWN0aW9uX0RhdGFcMjAwOFxGaW5hbF9EYXRhXzAzMTkwOVxX
+ZWJzaXRlX1dhcmRzXzIwMDguc2hwLFBFUlNPTlMxOCwtMSwtMTtXSElURTE4ICdXSElURTE4JyB0
+cnVlIHRydWUgZmFsc2UgMTAgRG91YmxlIDAgMTAgLEZpcnN0LCMsVDpcbGVnX2dpc1xHSVMgRGF0
+YVxFbGVjdGlvbl9EYXRhXDIwMDhcRmluYWxfRGF0YV8wMzE5MDlcV2Vic2l0ZV9XYXJkc18yMDA4
+LnNocCxXSElURTE4LC0xLC0xO0JMQUNLMTggJ0JMQUNLMTgnIHRydWUgdHJ1ZSBmYWxzZSAxMCBE
+b3VibGUgMCAxMCAsRmlyc3QsIyxUOlxsZWdfZ2lzXEdJUyBEYXRhXEVsZWN0aW9uX0RhdGFcMjAw
+OFxGaW5hbF9EYXRhXzAzMTkwOVxXZWJzaXRlX1dhcmRzXzIwMDguc2hwLEJMQUNLMTgsLTEsLTE7
+SElTUEFOSUMxOCAnSElTUEFOSUMxOCcgdHJ1ZSB0cnVlIGZhbHNlIDE5IERvdWJsZSA4IDE4ICxG
+aXJzdCwjLFQ6XGxlZ19naXNcR0lTIERhdGFcRWxlY3Rpb25fRGF0YVwyMDA4XEZpbmFsX0RhdGFf
+MDMxOTA5XFdlYnNpdGVfV2FyZHNfMjAwOC5zaHAsSElTUEFOSUMxOCwtMSwtMTtBU0lBTjE4ICdB
+U0lBTjE4JyB0cnVlIHRydWUgZmFsc2UgMTAgRG91YmxlIDAgMTAgLEZpcnN0LCMsVDpcbGVnX2dp
+c1xHSVMgRGF0YVxFbGVjdGlvbl9EYXRhXDIwMDhcRmluYWxfRGF0YV8wMzE5MDlcV2Vic2l0ZV9X
+YXJkc18yMDA4LnNocCxBU0lBTjE4LC0xLC0xO0FNSU5ESUFOMTggJ0FNSU5ESUFOMTgnIHRydWUg
+dHJ1ZSBmYWxzZSAxOSBEb3VibGUgOCAxOCAsRmlyc3QsIyxUOlxsZWdfZ2lzXEdJUyBEYXRhXEVs
+ZWN0aW9uX0RhdGFcMjAwOFxGaW5hbF9EYXRhXzAzMTkwOVxXZWJzaXRlX1dhcmRzXzIwMDguc2hw
+LEFNSU5ESUFOMTgsLTEsLTE7UElTTEFORDE4ICdQSVNMQU5EMTgnIHRydWUgdHJ1ZSBmYWxzZSAx
+OSBEb3VibGUgOCAxOCAsRmlyc3QsIyxUOlxsZWdfZ2lzXEdJUyBEYXRhXEVsZWN0aW9uX0RhdGFc
+MjAwOFxGaW5hbF9EYXRhXzAzMTkwOVxXZWJzaXRlX1dhcmRzXzIwMDguc2hwLFBJU0xBTkQxOCwt
+MSwtMTtPVEhFUjE4ICdPVEhFUjE4JyB0cnVlIHRydWUgZmFsc2UgMTAgRG91YmxlIDAgMTAgLEZp
+cnN0LCMsVDpcbGVnX2dpc1xHSVMgRGF0YVxFbGVjdGlvbl9EYXRhXDIwMDhcRmluYWxfRGF0YV8w
+MzE5MDlcV2Vic2l0ZV9XYXJkc18yMDA4LnNocCxPVEhFUjE4LC0xLC0xO09USEVSTUxUMTggJ09U
+SEVSTUxUMTgnIHRydWUgdHJ1ZSBmYWxzZSAxOSBEb3VibGUgOCAxOCAsRmlyc3QsIyxUOlxsZWdf
+Z2lzXEdJUyBEYXRhXEVsZWN0aW9uX0RhdGFcMjAwOFxGaW5hbF9EYXRhXzAzMTkwOVxXZWJzaXRl
+X1dhcmRzXzIwMDguc2hwLE9USEVSTUxUMTgsLTEsLTE7Q09VTlRZICdDT1VOVFknIHRydWUgdHJ1
+ZSBmYWxzZSA4IFRleHQgMCAwICxGaXJzdCwjLFQ6XGxlZ19naXNcR0lTIERhdGFcRWxlY3Rpb25f
+RGF0YVwyMDA4XEZpbmFsX0RhdGFfMDMxOTA5XFdlYnNpdGVfV2FyZHNfMjAwOC5zaHAsQ09VTlRZ
+LC0xLC0xO01JTk9SSVRZICdNSU5PUklUWScgdHJ1ZSB0cnVlIGZhbHNlIDEwIERvdWJsZSAwIDEw
+ICxGaXJzdCwjLFQ6XGxlZ19naXNcR0lTIERhdGFcRWxlY3Rpb25fRGF0YVwyMDA4XEZpbmFsX0Rh
+dGFfMDMxOTA5XFdlYnNpdGVfV2FyZHNfMjAwOC5zaHAsTUlOT1JJVFksLTEsLTE7QVNTRU1CTFkg
+J0FTU0VNQkxZJyB0cnVlIHRydWUgZmFsc2UgMTEgVGV4dCAwIDAgLEZpcnN0LCMsVDpcbGVnX2dp
+c1xHSVMgRGF0YVxFbGVjdGlvbl9EYXRhXDIwMDhcRmluYWxfRGF0YV8wMzE5MDlcV2Vic2l0ZV9X
+YXJkc18yMDA4LnNocCxBU1NFTUJMWSwtMSwtMTtTRU5BVEUgJ1NFTkFURScgdHJ1ZSB0cnVlIGZh
+bHNlIDggVGV4dCAwIDAgLEZpcnN0LCMsVDpcbGVnX2dpc1xHSVMgRGF0YVxFbGVjdGlvbl9EYXRh
+XDIwMDhcRmluYWxfRGF0YV8wMzE5MDlcV2Vic2l0ZV9XYXJkc18yMDA4LnNocCxTRU5BVEUsLTEs
+LTE7Q09OR1JFU1MgJ0NPTkdSRVNTJyB0cnVlIHRydWUgZmFsc2UgMTEgVGV4dCAwIDAgLEZpcnN0
+LCMsVDpcbGVnX2dpc1xHSVMgRGF0YVxFbGVjdGlvbl9EYXRhXDIwMDhcRmluYWxfRGF0YV8wMzE5
+MDlcV2Vic2l0ZV9XYXJkc18yMDA4LnNocCxDT05HUkVTUywtMSwtMTtDTlRZX05BTUUgJ0NOVFlf
+TkFNRScgdHJ1ZSB0cnVlIGZhbHNlIDEyIFRleHQgMCAwICxGaXJzdCwjLFQ6XGxlZ19naXNcR0lT
+IERhdGFcRWxlY3Rpb25fRGF0YVwyMDA4XEZpbmFsX0RhdGFfMDMxOTA5XFdlYnNpdGVfV2FyZHNf
+MjAwOC5zaHAsQ05UWV9OQU1FLC0xLC0xO01DRF9OQU1FICdNQ0RfTkFNRScgdHJ1ZSB0cnVlIGZh
+bHNlIDE3IFRleHQgMCAwICxGaXJzdCwjLFQ6XGxlZ19naXNcR0lTIERhdGFcRWxlY3Rpb25fRGF0
+YVwyMDA4XEZpbmFsX0RhdGFfMDMxOTA5XFdlYnNpdGVfV2FyZHNfMjAwOC5zaHAsTUNEX05BTUUs
+LTEsLTE7Q1RWICdDVFYnIHRydWUgdHJ1ZSBmYWxzZSA0IFRleHQgMCAwICxGaXJzdCwjLFQ6XGxl
+Z19naXNcR0lTIERhdGFcRWxlY3Rpb25fRGF0YVwyMDA4XEZpbmFsX0RhdGFfMDMxOTA5XFdlYnNp
+dGVfV2FyZHNfMjAwOC5zaHAsQ1RWLC0xLC0xO1BSRVNERU0wOCAnUFJFU0RFTTA4JyB0cnVlIHRy
+dWUgZmFsc2UgMTkgRG91YmxlIDUgMTggLEZpcnN0LCMsVDpcbGVnX2dpc1xHSVMgRGF0YVxFbGVj
+dGlvbl9EYXRhXDIwMDhcRmluYWxfRGF0YV8wMzE5MDlcV2Vic2l0ZV9XYXJkc18yMDA4LnNocCxQ
+UkVTREVNMDgsLTEsLTE7UFJFU1JFUDA4ICdQUkVTUkVQMDgnIHRydWUgdHJ1ZSBmYWxzZSAxOSBE
+b3VibGUgNSAxOCAsRmlyc3QsIyxUOlxsZWdfZ2lzXEdJUyBEYXRhXEVsZWN0aW9uX0RhdGFcMjAw
+OFxGaW5hbF9EYXRhXzAzMTkwOVxXZWJzaXRlX1dhcmRzXzIwMDguc2hwLFBSRVNSRVAwOCwtMSwt
+MTtQUkVTR1JOMDggJ1BSRVNHUk4wOCcgdHJ1ZSB0cnVlIGZhbHNlIDE5IERvdWJsZSA1IDE4ICxG
+aXJzdCwjLFQ6XGxlZ19naXNcR0lTIERhdGFcRWxlY3Rpb25fRGF0YVwyMDA4XEZpbmFsX0RhdGFf
+MDMxOTA5XFdlYnNpdGVfV2FyZHNfMjAwOC5zaHAsUFJFU0dSTjA4LC0xLC0xO1BSRVNMQlIwOCAn
+UFJFU0xCUjA4JyB0cnVlIHRydWUgZmFsc2UgMTkgRG91YmxlIDUgMTggLEZpcnN0LCMsVDpcbGVn
+X2dpc1xHSVMgRGF0YVxFbGVjdGlvbl9EYXRhXDIwMDhcRmluYWxfRGF0YV8wMzE5MDlcV2Vic2l0
+ZV9XYXJkc18yMDA4LnNocCxQUkVTTEJSMDgsLTEsLTE7UFJFU0lORDEwOCAnUFJFU0lORDEwOCcg
+dHJ1ZSB0cnVlIGZhbHNlIDE5IERvdWJsZSA1IDE4ICxGaXJzdCwjLFQ6XGxlZ19naXNcR0lTIERh
+dGFcRWxlY3Rpb25fRGF0YVwyMDA4XEZpbmFsX0RhdGFfMDMxOTA5XFdlYnNpdGVfV2FyZHNfMjAw
+OC5zaHAsUFJFU0lORDEwOCwtMSwtMTtQUkVTSU5EMjA4ICdQUkVTSU5EMjA4JyB0cnVlIHRydWUg
+ZmFsc2UgMTkgRG91YmxlIDUgMTggLEZpcnN0LCMsVDpcbGVnX2dpc1xHSVMgRGF0YVxFbGVjdGlv
+bl9EYXRhXDIwMDhcRmluYWxfRGF0YV8wMzE5MDlcV2Vic2l0ZV9XYXJkc18yMDA4LnNocCxQUkVT
+SU5EMjA4LC0xLC0xO1BSRVNJTkQzMDggJ1BSRVNJTkQzMDgnIHRydWUgdHJ1ZSBmYWxzZSAxOSBE
+b3VibGUgNSAxOCAsRmlyc3QsIyxUOlxsZWdfZ2lzXEdJUyBEYXRhXEVsZWN0aW9uX0RhdGFcMjAw
+OFxGaW5hbF9EYXRhXzAzMTkwOVxXZWJzaXRlX1dhcmRzXzIwMDguc2hwLFBSRVNJTkQzMDgsLTEs
+LTE7UFJFU0lORDQwOCAnUFJFU0lORDQwOCcgdHJ1ZSB0cnVlIGZhbHNlIDE5IERvdWJsZSA1IDE4
+ICxGaXJzdCwjLFQ6XGxlZ19naXNcR0lTIERhdGFcRWxlY3Rpb25fRGF0YVwyMDA4XEZpbmFsX0Rh
+dGFfMDMxOTA5XFdlYnNpdGVfV2FyZHNfMjAwOC5zaHAsUFJFU0lORDQwOCwtMSwtMTtQUkVTSU5E
+NTA4ICdQUkVTSU5ENTA4JyB0cnVlIHRydWUgZmFsc2UgMTkgRG91YmxlIDUgMTggLEZpcnN0LCMs
+VDpcbGVnX2dpc1xHSVMgRGF0YVxFbGVjdGlvbl9EYXRhXDIwMDhcRmluYWxfRGF0YV8wMzE5MDlc
+V2Vic2l0ZV9XYXJkc18yMDA4LnNocCxQUkVTSU5ENTA4LC0xLC0xO1BSRVNTQ1QwOCAnUFJFU1ND
+VDA4JyB0cnVlIHRydWUgZmFsc2UgMTkgRG91YmxlIDUgMTggLEZpcnN0LCMsVDpcbGVnX2dpc1xH
+SVMgRGF0YVxFbGVjdGlvbl9EYXRhXDIwMDhcRmluYWxfRGF0YV8wMzE5MDlcV2Vic2l0ZV9XYXJk
+c18yMDA4LnNocCxQUkVTU0NUMDgsLTEsLTE7QVNNREVNMDggJ0FTTURFTTA4JyB0cnVlIHRydWUg
+ZmFsc2UgMTkgRG91YmxlIDUgMTggLEZpcnN0LCMsVDpcbGVnX2dpc1xHSVMgRGF0YVxFbGVjdGlv
+bl9EYXRhXDIwMDhcRmluYWxfRGF0YV8wMzE5MDlcV2Vic2l0ZV9XYXJkc18yMDA4LnNocCxBU01E
+RU0wOCwtMSwtMTtBU01SRVAwOCAnQVNNUkVQMDgnIHRydWUgdHJ1ZSBmYWxzZSAxOSBEb3VibGUg
+NSAxOCAsRmlyc3QsIyxUOlxsZWdfZ2lzXEdJUyBEYXRhXEVsZWN0aW9uX0RhdGFcMjAwOFxGaW5h
+bF9EYXRhXzAzMTkwOVxXZWJzaXRlX1dhcmRzXzIwMDguc2hwLEFTTVJFUDA4LC0xLC0xO0FTTVND
+VDA4ICdBU01TQ1QwOCcgdHJ1ZSB0cnVlIGZhbHNlIDE5IERvdWJsZSA1IDE4ICxGaXJzdCwjLFQ6
+XGxlZ19naXNcR0lTIERhdGFcRWxlY3Rpb25fRGF0YVwyMDA4XEZpbmFsX0RhdGFfMDMxOTA5XFdl
+YnNpdGVfV2FyZHNfMjAwOC5zaHAsQVNNU0NUMDgsLTEsLTE7QVNNTElCMDggJ0FTTUxJQjA4JyB0
+cnVlIHRydWUgZmFsc2UgMTkgRG91YmxlIDUgMTggLEZpcnN0LCMsVDpcbGVnX2dpc1xHSVMgRGF0
+YVxFbGVjdGlvbl9EYXRhXDIwMDhcRmluYWxfRGF0YV8wMzE5MDlcV2Vic2l0ZV9XYXJkc18yMDA4
+LnNocCxBU01MSUIwOCwtMSwtMTtBU01JTkQwOCAnQVNNSU5EMDgnIHRydWUgdHJ1ZSBmYWxzZSAx
+OSBEb3VibGUgNSAxOCAsRmlyc3QsIyxUOlxsZWdfZ2lzXEdJUyBEYXRhXEVsZWN0aW9uX0RhdGFc
+MjAwOFxGaW5hbF9EYXRhXzAzMTkwOVxXZWJzaXRlX1dhcmRzXzIwMDguc2hwLEFTTUlORDA4LC0x
+LC0xO1NFTkRFTTA4ICdTRU5ERU0wOCcgdHJ1ZSB0cnVlIGZhbHNlIDE5IERvdWJsZSA1IDE4ICxG
+aXJzdCwjLFQ6XGxlZ19naXNcR0lTIERhdGFcRWxlY3Rpb25fRGF0YVwyMDA4XEZpbmFsX0RhdGFf
+MDMxOTA5XFdlYnNpdGVfV2FyZHNfMjAwOC5zaHAsU0VOREVNMDgsLTEsLTE7U0VOUkVQMDggJ1NF
+TlJFUDA4JyB0cnVlIHRydWUgZmFsc2UgMTkgRG91YmxlIDUgMTggLEZpcnN0LCMsVDpcbGVnX2dp
+c1xHSVMgRGF0YVxFbGVjdGlvbl9EYXRhXDIwMDhcRmluYWxfRGF0YV8wMzE5MDlcV2Vic2l0ZV9X
+YXJkc18yMDA4LnNocCxTRU5SRVAwOCwtMSwtMTtTRU5TQ1QwOCAnU0VOU0NUMDgnIHRydWUgdHJ1
+ZSBmYWxzZSAxOSBEb3VibGUgNSAxOCAsRmlyc3QsIyxUOlxsZWdfZ2lzXEdJUyBEYXRhXEVsZWN0
+aW9uX0RhdGFcMjAwOFxGaW5hbF9EYXRhXzAzMTkwOVxXZWJzaXRlX1dhcmRzXzIwMDguc2hwLFNF
+TlNDVDA4LC0xLC0xO1NFTklORDA4ICdTRU5JTkQwOCcgdHJ1ZSB0cnVlIGZhbHNlIDE5IERvdWJs
+ZSA1IDE4ICxGaXJzdCwjLFQ6XGxlZ19naXNcR0lTIERhdGFcRWxlY3Rpb25fRGF0YVwyMDA4XEZp
+bmFsX0RhdGFfMDMxOTA5XFdlYnNpdGVfV2FyZHNfMjAwOC5zaHAsU0VOSU5EMDgsLTEsLTE7Q09O
+REVNMDggJ0NPTkRFTTA4JyB0cnVlIHRydWUgZmFsc2UgMTkgRG91YmxlIDUgMTggLEZpcnN0LCMs
+VDpcbGVnX2dpc1xHSVMgRGF0YVxFbGVjdGlvbl9EYXRhXDIwMDhcRmluYWxfRGF0YV8wMzE5MDlc
+V2Vic2l0ZV9XYXJkc18yMDA4LnNocCxDT05ERU0wOCwtMSwtMTtDT05SRVAwOCAnQ09OUkVQMDgn
+IHRydWUgdHJ1ZSBmYWxzZSAxOSBEb3VibGUgNSAxOCAsRmlyc3QsIyxUOlxsZWdfZ2lzXEdJUyBE
+YXRhXEVsZWN0aW9uX0RhdGFcMjAwOFxGaW5hbF9EYXRhXzAzMTkwOVxXZWJzaXRlX1dhcmRzXzIw
+MDguc2hwLENPTlJFUDA4LC0xLC0xO0NPTlNDVDA4ICdDT05TQ1QwOCcgdHJ1ZSB0cnVlIGZhbHNl
+IDE5IERvdWJsZSA1IDE4ICxGaXJzdCwjLFQ6XGxlZ19naXNcR0lTIERhdGFcRWxlY3Rpb25fRGF0
+YVwyMDA4XEZpbmFsX0RhdGFfMDMxOTA5XFdlYnNpdGVfV2FyZHNfMjAwOC5zaHAsQ09OU0NUMDgs
+LTEsLTE7Q09OTElCMDggJ0NPTkxJQjA4JyB0cnVlIHRydWUgZmFsc2UgMTkgRG91YmxlIDUgMTgg
+LEZpcnN0LCMsVDpcbGVnX2dpc1xHSVMgRGF0YVxFbGVjdGlvbl9EYXRhXDIwMDhcRmluYWxfRGF0
+YV8wMzE5MDlcV2Vic2l0ZV9XYXJkc18yMDA4LnNocCxDT05MSUIwOCwtMSwtMTtDT05JTkQwOCAn
+Q09OSU5EMDgnIHRydWUgdHJ1ZSBmYWxzZSAxOSBEb3VibGUgNSAxOCAsRmlyc3QsIyxUOlxsZWdf
+Z2lzXEdJUyBEYXRhXEVsZWN0aW9uX0RhdGFcMjAwOFxGaW5hbF9EYXRhXzAzMTkwOVxXZWJzaXRl
+X1dhcmRzXzIwMDguc2hwLENPTklORDA4LC0xLC0xO0RBREVNMDggJ0RBREVNMDgnIHRydWUgdHJ1
+ZSBmYWxzZSAxOSBEb3VibGUgNSAxOCAsRmlyc3QsIyxUOlxsZWdfZ2lzXEdJUyBEYXRhXEVsZWN0
+aW9uX0RhdGFcMjAwOFxGaW5hbF9EYXRhXzAzMTkwOVxXZWJzaXRlX1dhcmRzXzIwMDguc2hwLERB
+REVNMDgsLTEsLTE7REFSRVAwOCAnREFSRVAwOCcgdHJ1ZSB0cnVlIGZhbHNlIDE5IERvdWJsZSA1
+IDE4ICxGaXJzdCwjLFQ6XGxlZ19naXNcR0lTIERhdGFcRWxlY3Rpb25fRGF0YVwyMDA4XEZpbmFs
+X0RhdGFfMDMxOTA5XFdlYnNpdGVfV2FyZHNfMjAwOC5zaHAsREFSRVAwOCwtMSwtMTtEQVNDQVQw
+OCAnREFTQ0FUMDgnIHRydWUgdHJ1ZSBmYWxzZSAxOSBEb3VibGUgNSAxOCAsRmlyc3QsIyxUOlxs
+ZWdfZ2lzXEdJUyBEYXRhXEVsZWN0aW9uX0RhdGFcMjAwOFxGaW5hbF9EYXRhXzAzMTkwOVxXZWJz
+aXRlX1dhcmRzXzIwMDguc2hwLERBU0NBVDA4LC0xLC0xO0RBSU5EMDggJ0RBSU5EMDgnIHRydWUg
+dHJ1ZSBmYWxzZSAxOSBEb3VibGUgNSAxOCAsRmlyc3QsIyxUOlxsZWdfZ2lzXEdJUyBEYXRhXEVs
+ZWN0aW9uX0RhdGFcMjAwOFxGaW5hbF9EYXRhXzAzMTkwOVxXZWJzaXRlX1dhcmRzXzIwMDguc2hw
+LERBSU5EMDgsLTEsLTE7REFPVEgwOCAnREFPVEgwOCcgdHJ1ZSB0cnVlIGZhbHNlIDE5IERvdWJs
+ZSA1IDE4ICxGaXJzdCwjLFQ6XGxlZ19naXNcR0lTIERhdGFcRWxlY3Rpb25fRGF0YVwyMDA4XEZp
+bmFsX0RhdGFfMDMxOTA5XFdlYnNpdGVfV2FyZHNfMjAwOC5zaHAsREFPVEgwOCwtMSwtMTtQUkVT
+MDhUICdQUkVTMDhUJyB0cnVlIHRydWUgZmFsc2UgMTAgRG91YmxlIDAgMTAgLEZpcnN0LCMsVDpc
+bGVnX2dpc1xHSVMgRGF0YVxFbGVjdGlvbl9EYXRhXDIwMDhcRmluYWxfRGF0YV8wMzE5MDlcV2Vi
+c2l0ZV9XYXJkc18yMDA4LnNocCxQUkVTMDhULC0xLC0xO0FTTTA4VCAnQVNNMDhUJyB0cnVlIHRy
+dWUgZmFsc2UgMTAgRG91YmxlIDAgMTAgLEZpcnN0LCMsVDpcbGVnX2dpc1xHSVMgRGF0YVxFbGVj
+dGlvbl9EYXRhXDIwMDhcRmluYWxfRGF0YV8wMzE5MDlcV2Vic2l0ZV9XYXJkc18yMDA4LnNocCxB
+U00wOFQsLTEsLTE7U0VOMDhUICdTRU4wOFQnIHRydWUgdHJ1ZSBmYWxzZSAxMCBEb3VibGUgMCAx
+MCAsRmlyc3QsIyxUOlxsZWdfZ2lzXEdJUyBEYXRhXEVsZWN0aW9uX0RhdGFcMjAwOFxGaW5hbF9E
+YXRhXzAzMTkwOVxXZWJzaXRlX1dhcmRzXzIwMDguc2hwLFNFTjA4VCwtMSwtMTtDT04wOFQgJ0NP
+TjA4VCcgdHJ1ZSB0cnVlIGZhbHNlIDEwIERvdWJsZSAwIDEwICxGaXJzdCwjLFQ6XGxlZ19naXNc
+R0lTIERhdGFcRWxlY3Rpb25fRGF0YVwyMDA4XEZpbmFsX0RhdGFfMDMxOTA5XFdlYnNpdGVfV2Fy
+ZHNfMjAwOC5zaHAsQ09OMDhULC0xLC0xO0RBMDhUICdEQTA4VCcgdHJ1ZSB0cnVlIGZhbHNlIDEw
+IERvdWJsZSAwIDEwICxGaXJzdCwjLFQ6XGxlZ19naXNcR0lTIERhdGFcRWxlY3Rpb25fRGF0YVwy
+MDA4XEZpbmFsX0RhdGFfMDMxOTA5XFdlYnNpdGVfV2FyZHNfMjAwOC5zaHAsREEwOFQsLTEsLTEi
+ICMgIkRhdGFiYXNlIENvbm5lY3Rpb25zXExlZ2lzbGF0aXZlIEdJUyBEYXRhLnNkZVxzZGUuU0RF
+LkVsZWN0aW9uX0RhdGFfMjAwOF9XYXJkcyI8L1Byb2Nlc3M+DQogICAgICA8L2xpbmVhZ2U+DQog
+ICAgPC9EYXRhUHJvcGVydGllcz4NCiAgICA8TWV0YUlEPnsyRjM2RUEwMi1GMzIyLTQ0NUEtOTg4
+My00MkIzMDU1Qjg3MEV9PC9NZXRhSUQ+DQogIDwvRXNyaT4NCjwvbWV0YWRhdGE+</Data>
+    </Enclosure>
+    <Thumbnail>
+      <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiq8F9a3Us0VvcRSyQnbIqMCVPvQBYoqpLqNtFkB/MYDpGM/r0HbqR1rOm1Brom
+FzFHbS/IQCWdhlgR/wCO9s9fxrKdaEN2NI1XvLeKcQvMqyHGFJ65OBj/AD3FSQzJPEJIzlDnBxjo
+cVx9lpVzd6mjlWQQLgTgkAH2zz3zt/UV2ESeXEqYQYHOxdoz7DtVxd1cQ+iiiqAKKKKACiiigAoo
+ooAKKKKACiiigAooooAKKKKACiiigAooooAgvRmxuB1zGw647Vx0unxw3skipbw3EruUYbc5+Yfx
+EE/dyT9fWuxvMfZjnONy5xnP3h6VjXKRAzkSyxRiLLMVfODuzz2FcOLm1JIqJTgRxDmQFW8x9r5D
+q3zKMkdBnnPT61HLJLAkkUTW8RkLFmUj5gdzcDd7HjP51oSyLBIrurAnBJPmEE7k9RxTriZ5o5ZB
+GQpiBV1Dejf7Poa4uZ9ijMsJZIJJJILxFmj2RCF18uMr/u57FuvXr61u2esxXF0ltIYxLIMx7HB3
+jGenUcfUe9UZsQuJSrIvmAqihwOq54Cc/dqKeTy5BdyK3lxEkkBsqSzkHG3kZx2rop4mad3qhNHT
+0ViQ6vKpHmEFWPygoSf4cDKjH8Xp7VcTVrfyw8p8sbck5Bx+A5/Su2NenLqTZl+imxyJKpKMCAcH
+2PoadWwgooooAKKKKACiiigAooooAKKKKACiiigAooooAKrX94lhaPO/IX8vqfYdT9Ks1ja5A0qM
+zxCWLZtGQCFJyO7DrkDvUVJOMW0CMzUr24lu7VTKzxtMM4+RNvy84IOfve/rxUEzRgMkjROCSihU
+ByBvAzwM9OuQKWENNeHCylFYeXuGA2DHlvv5zkj/APXnD5k810VjLgRiQvtlHzEOfXnvXmSk5O8j
+Qj1KKSbd9jZzjdvVWjAZSq9cdRnt3qSAywacsTwK5ZQoZokB+4RgfMO6ntUsVwLgRzRgSwuQ6MA+
+ckpnBwfp/nFJC0VnMXSBd8ZOSA434U5PQ9+PqKi7tawFi8ZChSEWsh2MS0cOShGOeM4PNV7O7lea
+A3dvBBIxEajKMqAKW7Pwcg849Kmm1ZXlVklVGQlCFDN1cLz8vHQ9jVbTpZYrkbw1wwCEN5pXaxBX
+BXAB4HX6VKT5dUBX1KacXtsxJDTSRO4VVXap+XrkkjIB9sDmpZ5rkQSvHBbzlWwkZUFV3cMB8xwc
+qccd6luJIfLt0kSWQMyIFcyAcmP2PvVG2e6i1JhLE5soZCq4Z/lOeCxxx1J/nWi1W2wGhYytNbwz
+Rb13HB8v5W6rkHJ5xuIGemKtpfzLK267kzu2qjiMjOW649l9e/uKotc/ZSbaK3L4U8hXYKQqEEjG
+cH8vXFWLeZJWMbfLEshRkWRwQctwFwCOdv0oVScVo9Asi1oOtzaoJEuYUjkUBgUYEEHPHXrwfy7V
+t1yVyITeo8do8szqzF2jL5XcMcEHI4Az2z9a39Ikll02NpgyvucYY5IAYgA/lXfQre00aIasXqKK
+K6BBRRRQAUUUUAFFFFABRRRQAUUUUAFZfiCV49JkijKq0+YtzdFyDn9Bj8a1K5Px606aTbtC5AEv
+zKGxkYPPrx/WlK9tAMmxjbdBJtgIDjzMIFIYnkcgjgk5/rU1zbr9kU+cRKVXd5TA5+XJxlQB6Yz2
+PvTrTNqIreNXiVmDAoxcNkr6MD1J7UjSS26RR3E++WRd8UciOp/1TAkYY9OnfrXlt3d0WT2FrHAP
+szOpWNjsPmRklQ45bPQ8H2NJKsMpiUW8c0sVvuXeqnAwxJPzcHPPTt+FQX2rPFbW9ygYDcyzRCVz
+nc4+XlQckBvToT7VNbXK3LTXDWUheSAsXcSHkZUAZB4HzYOe/Y0mpfExmir7f9WEjTcSfLRQFO5Q
+P4vYVDJMEaFgIpY0TczSgMVGGK8BiepI9uKguJySqxxzANI4O3zDuYSLkcr3HGe2KjtVaM3LrBKH
+bB3M74P7s44C98n9c+8KOl2A/UYILa4hjP2clHB5B6rsYcbsc/y/Cn2Yj8xpMRg3B3tlFGMh+mW4
+HQ4qnr91b/YWNxC8yqSoBeTIAZh3HqqjP/16nstUiuLOae1Rl4zlZG/uE9AD0I71VpcgdSeNbTfO
+yJbq2xyZJEX7pVSFGDnj61LHJDDJLDE82GbeDG0QGd7HI3cdqgsI4FtLm3/eyIiiNAJJGJU5GCOM
+cADt07Va1Bra3ZXtFaS5I3somfIUI2D39ehxnJqHvYDON0FdC29pBH+6+RWUsdpIAAUD7oH4nGa3
+9DmnkQxyP8sK7GXygnzZ64yTngk89xj356a5EqjCyMhG5EjlkbGUdRyF44xjnnH1xo6PZTvfLqEN
+ziycNkxvlZPcliSec9fSuvD3U9iWbV9qltY2skrOrsp2LGGGWfj5R78ik0yKUo91Mz7pzuWMlsIu
+SQOe/PoO3FY15AniDUdolR7MExAoitg4+c5PcjA6dxXUAADAGAK7Iy5m/IkKKKKsAooooAKKKKAC
+iiigAooooAKzNaspby0IibOFKtHjIdSRnsfStOilKKkrMDhiIpHHzQOjyMXQY3KoKnb93qDzgetQ
+SpayXEe1ZTOkQAkcDbGwG4kZxkkDGMY/TPa32nx3iKflSVWDK+wH2IPsRkfywawZ7eTTrZbacbnO
+4iUOyxsMbeeSV+8vtiuCpSlT1WqKTuYGpaYZ7mK6S6UshcBVMa9G9Bnuen45rWiuIBBLuit0UKyq
+3yEfMN2Cd+cj6frTLuJP7O2fYiFXGAXk/dZds9QP5jmkS8WKwkZirEyHcUkcLH+7xgnuRj1z+HNZ
+NuSKJ70g7I4fsxfc5U7FwfnA67sjrWfd3skcCJFFHiTCbxENyt5Z98Y96t2zDUImlEiSsswUyIob
+PzHp8jAZyO/Y1PNC/wDZ0kURV0U5YoflPyDnIXj/ADmpT5XZgU7qNbrTXVWiIAyxjVEJXe2Tyx7D
+p7mntDFboY/KiRQCgOxSGJj5GSx6Y/8AHqpNdXb3sunxb5IskDgEIc8AFQMkbs5z6ZpNPsZ7C2Z7
+eR5N5OXEXXIyQeD2J71dmlqxFzKWgaBhE0LbUDAAuoDHJzu61Tiico12JAsLIJFUlTkbDzjd3A/D
+0qWPUroDdAZD+9dmMiNhjuHAbBHXHfHaq0mrvFa4neYKu2QI21ipxtOGOc/06dqajIBrEy6lZ2bL
+ETNKqrMEXIXe3YZ6AjqR9K39TvrS5iFpayKLSFCrEYA+62ME9cELg9Dk9a5Ewy6hd2k8FxLGI8De
+r/OBuKn5u/Ttn71asdvCbNU8zyWVdgxEWYEqf7uAOCOuc7sk1s5csOVbsR1fh/T0tYp7kL+8uJCx
+fcW3D1yQP/r4FbNMijEUKRjoihR+FPrrjHlSRIUUUVQBRRRQAUUUUAFFFFABRRRQAUUUUAFVb6xS
++iRWZlZG3KwJHOMc4IyOatUUmk1ZgcZeRSWTNHcRKSVAExTgY5YKWbHIBb3zjrTFmaW33p5CK0m8
+usKqxUgL038Hknj0BrsLu1ivLWS3mUMjjB4/WvPNLtLqwlkhm3pG3mKm0bQ/ykjHBz8v5DuK4qtF
+QV0ykzYS9hhtBJELaJUGG2oFHyuuM/MCcf409rgzaaJfJR492yRmj52+Vzx/XP4VVkhFvbSw2kZ2
+tIyyxlWYsS6k8FeuM/Xio5llkt3ESyeYihtoX5WGw/7HBJz+Vc3KmUWY443u/tSkxM5STy0ACqPl
+XbkMOnH4mq0t4UikHzkMmNw3kjKqv97/ADmltcC4LhEhu1dRgruKktg8YJGcD07epwsd5I8k1vJH
+K5kiKSKCMqmwY4C98H8+vFO2ohlsEmhM80jSgH5Q2MkkkE4LEZz/ALPQc5qhZWEWt69bWNzD5axo
+ZpUUna6YHfAOSffjkVdga8aWIxbFaJRFvaJ5OA6g4/Hg4wOD6UT3M9g1td28DzNGcgDP9wA8kDGC
+enp3rak7T1B7DLGBrSZY4REqB92JUG1VPGAc4bBIPUE7cnrTbGwl1bWYoY8xW6gzNKAu4cYwBnHo
+OnFNukm+wf6RHE9wgRo+GVh8x3cjHXaevt6Vr+FbvzNVmt/KfAh3CUs2ONg24P5598ds1dNc07ie
+x1yqFUKOgGBS0UV2khRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAVxs+l5Fwkaxwn7R8swt2Y
+gHKEZwM9vz6k12VcxrU0EV7IyoyADY8iuVAkUeYpPbp+eeelc+JXuXQ0ZlvJGsqQJcCM5G7ylWPe
+d2cN93kA8Y9D6ZpVMMtmZIxABk5lVFL5CfN1bpkD1pYbnyxFBbLI0ShXG0klvn+6p2/MQQoPb8zT
+Y3uLJPItoSEmRpdu9cb2U7j8wXnOe5HtXDqUU4bec3tnIyRqAfL/AHGNuCZOSMk/jjrj606S4kku
+9sD2M0bKM4hAPTLheeemPTPFWbySeW3t2nMnlxxp5hG1lJweTtzjuBkHr+eNc6xFbkJEkboz7yWw
+w3bduMkcHv0AwMdq0inIDUvbiYNNHGzAxyqRBH8mV3nggnAA+h5IqDzlmt4Uhj2xwsxb0Y4GAGLf
+N3qcTieFpWjjjEqqPmZR5p3FgowAO5PPoO1Z1zfRfYAZ8hDIUyq53RnOBnA4IwRn8OhAIp7WARdW
+VriRYoEm+ZpdwjAK/MACevqeOcce9db4OhD2Ml8VXM21VYZwQowcfU5z759q80+3DbMojTypVCsC
+Mk85znqTnBr1bwjKs3hawZAoAQqQD0IJFdlOmou5LZtUUUVsIKKKKACiiigAooooAKKKKACiiigA
+ooooAKKKKACuW1y0ZL+WSKCPfMVfzWkxu42bcHjPQ5HT2rqar3VnDdqvmAhlztdTgrkYP6VnVhzx
+sho5ZLiP7V5ZuCrq4GNwXzTvJ5IcbiB/P24qGK5McaI0mxGViI1+RBt3MMEHqc8/jx209Vsry2mk
+jiWW6trjDMoBBGCSwyqnqSuOneoIUuWtlBsLuNmYFzhwSqgLg/Vc+/41wOnOL2KuRRxRWomAMkbx
+sm5xI25yHOCVyvHt/Lvz7aVbEefG0YIcNnepYnA2gjd0J6/XntXVCK+himMUNz5rKpJbcQzBm/2P
+8jHWqyWswib92sJVChSTGS3l8ELt6ckep/CiLnG7Ay7l5YBLAxZb1VBwxITcM5YHd1AU4IGf1qC6
+Wa60bO1yoJ+RznGMcnLdsk8+1WfsRXxKtwY5ZGLDDCMBMZwTnAAPGeR0xVa70zU/tAeC08yIA5MK
+s3YZz8vXI44xxWsYu6Ec+dOJdomIilbaQjAjr656D9cdcV6H4Bu92jvYySq0tu+QoOcI3T9d3Hau
+Vt9OvUdIzpOolSVXa0cgVQDjnjBHf/IrqfBenzWU+pvcWkkMkjRlS6kArg8DIHTvXVBu9mI62iii
+tBBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUU
+AFFFFABRRRQB/9k=</Data>
+    </Thumbnail>
+  </Binary>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <refSysInfo>
+    <RefSystem dimension="">
+      <refSysID>
+        <identCode code="3071" Sync="FALSE" />
+        <idCodeSpace>EPSG</idCodeSpace>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <spatRepInfo>
+    <VectSpatRep>
+      <geometObjs Name="WI_ElectionData_2008">
+        <geoObjTyp>
+          <GeoObjTypCd value="002" Sync="TRUE" />
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">6278</geoObjCnt>
+      </geometObjs>
+      <topLvl>
+        <TopoLevCd value="001" Sync="TRUE" />
+      </topLvl>
+    </VectSpatRep>
+  </spatRepInfo>
+  <mdDateSt Sync="TRUE">20190226</mdDateSt>
+  <mdFileID>5C772DA4-6689-42F6-B8CB-2118F64C0F89</mdFileID>
+  <mdContact>
+    <editorSource>external</editorSource>
+    <editorDigest>22a7e348507f81e7f38bdbb4417b8782</editorDigest>
+    <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+    <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+    <rpCntInfo>
+      <cntAddress addressType="both">
+        <delPoint>550 N. Park St</delPoint>
+        <city>Madison</city>
+        <adminArea>Wisconsin</adminArea>
+        <postCode>53706</postCode>
+        <country>US</country>
+        <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+      </cntAddress>
+      <cntPhone>
+        <voiceNum tddtty="">(608) 262-1471</voiceNum>
+      </cntPhone>
+      <cntHours>Monday – Friday: 9:00am – 4:00pm</cntHours>
+    </rpCntInfo>
+    <displayName>Data Technician</displayName>
+    <rpPosName>metadata technician</rpPosName>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+    <editorSave>True</editorSave>
+    <displayName>Arthur H. Robinson Map Library</displayName>
+    <role>
+      <RoleCd value="001" />
+    </role>
+  </mdContact>
+  <mdMaint>
+    <maintFreq>
+      <MaintFreqCd value="009" />
+    </maintFreq>
+    <maintCont>
+      <editorSource>external</editorSource>
+      <editorDigest>22a7e348507f81e7f38bdbb4417b8782</editorDigest>
+      <rpIndName>Arthur H. Robinson Map Library</rpIndName>
+      <rpOrgName>University of Wisconsin-Madison </rpOrgName>
+      <rpCntInfo>
+        <cntAddress addressType="both">
+          <delPoint>550 N. Park St</delPoint>
+          <city>Madison</city>
+          <adminArea>Wisconsin</adminArea>
+          <postCode>53706</postCode>
+          <country>US</country>
+          <eMailAdd>askmap@library.wisc.edu</eMailAdd>
+        </cntAddress>
+        <cntPhone>
+          <voiceNum tddtty="">(608) 262-1471</voiceNum>
+        </cntPhone>
+        <cntHours>Monday – Friday: 9:00am – 4:00pm</cntHours>
+      </rpCntInfo>
+      <displayName>Data Technician</displayName>
+      <rpPosName>metadata technician</rpPosName>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <editorSave>True</editorSave>
+      <displayName>Arthur H. Robinson Map Library</displayName>
+      <role>
+        <RoleCd value="001" />
+      </role>
+    </maintCont>
+  </mdMaint>
+  <mdConst>
+    <Consts>
+      <useLimit>None</useLimit>
+    </Consts>
+  </mdConst>
+</metadata>
