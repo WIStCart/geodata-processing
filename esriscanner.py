@@ -19,6 +19,14 @@ import os
 # ruamel.yaml: python -m pip install ruamel.yaml
 import ruamel.yaml as yaml
 
+# To-do:
+# specify output location for scanner files
+# add ability to specify target instance when called (dev, prod, test)
+# re-engineer: 
+#   focus on "provenance" to organize records instead of "collections"
+#   understand why LTSB options are hard-coded
+#   This script will eventually live on a unix server.  Calling update.bat needs to be modified.  Call update.py directly?
+#   no need to save json files that contain all records for each site; ingest is based on records contained in subdirectories.
 
 # Strip html from description
 class MLStripper(HTMLParser):
@@ -48,6 +56,7 @@ def json2gbl (jsonUrl, collection, createdBy, siteName, partOf, prefix, postfix)
     for x in d["dataset"]:
         # call html strip function
         description = strip_tags(x["description"])
+        ##### red flag: specific use-case hardcoded #####
         if (collection == "LTSB_OpenData"):
             description = description.replace('Attribute Field Definitions', '')
         access = x["accessLevel"].capitalize()
@@ -122,7 +131,10 @@ def json2gbl (jsonUrl, collection, createdBy, siteName, partOf, prefix, postfix)
         if (scanCatch == "\n"):
             with open(collection + "\\" + outTitle + ".json", 'w') as k:
                 json.dump(temp_obj, k, indent=1)
-    os.system("r:\\scripts\\update.bat -a " +  collection + "\\ -i test")
+    # rather than calling update.bat/.py, which is designed to accomplish more than adding new json recs to solr,
+    # maybe we should handle all solr ingests in the "scanner" here instead???  The QA check above is redundant
+    # with update.py.  The QA check was replicated here, because if it failed during update.bat, there is no way for the scanner script to know update.py failed.  Similarly, there could be other reasons update.py can fail... and if it does, scanner.py will likely not fail gracefully.
+    os.system("r:\\scripts\\update.bat -a " +  collection + "\\ -i dev")
 
 # loop through each collection in OpenData.yml and call json2gbl function
 with open("OpenData.yml") as stream:
