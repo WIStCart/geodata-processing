@@ -4,7 +4,7 @@ esriscanner.py
 Author(s): Ben Segal
 
 Description: 
-This script is designed to run every day, and convert arcgis json records to GBL records.
+This script is designed to run each day and scan Esri open data sites for data.  No attempt is made to track new/removed datasets.  Instead, our model is to start fresh with a new set of records each day. The process begins by first wiping out any existing records for each site in solr, then re-ingesting whatever is found during the scan.  This guarantees, as much as we can, that links to these scanned datasets are accurate and up-to-date.
 
 Dependencies: Python 3.x
 """
@@ -20,13 +20,15 @@ import os
 import ruamel.yaml as yaml
 
 # To-do:
-# specify output location for scanner files
-# add ability to specify target instance when called (dev, prod, test)
-# re-engineer: 
-#   focus on "provenance" to organize records instead of "collections"
-#   understand why LTSB options are hard-coded
-#   This script will eventually live on a unix server.  Calling update.bat needs to be modified.  Call update.py directly?
-#   no need to save json files that contain all records for each site; ingest is based on records contained in subdirectories.
+# - specify output location for scanner files
+# - add ability to specify target instance when called (dev, prod, test)
+# - what happens if an individual "scan" fails? (currently entire script will fail without graceful exit; would prefer any "good" scans to complete with a notice sent to operator about failed scans.)
+# - is there a reason to keep json files after ingest completes?  make it optional?
+# - re-engineer: 
+#     - focus on "provenance" to organize records instead of "collections"
+#     - understand why LTSB options are hard-coded
+#     - This script will eventually live on a unix server.  Calling update.bat needs to be modified.  Call update.py directly?  (may be preferably to replicate key ingest code in this script instead.
+#     - No need to save json files that contain all records for each site; ingest is based on records contained in subdirectories.
 
 # Strip html from description
 class MLStripper(HTMLParser):
