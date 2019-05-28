@@ -122,7 +122,7 @@ def json2gbl (jsonUrl, collection, createdBy, siteName, partOf, prefix, postfix)
         if (scanCatch == "\n"):
             with open(collection + "\\" + outTitle + ".json", 'w') as k:
                 json.dump(temp_obj, k, indent=1)
-    os.system("r:\\scripts\\update.bat -aj " +  collection + "\\ -i test")
+    os.system("r:\\scripts\\update.bat -a " +  collection + "\\ -i test")
 
 # loop through each collection in OpenData.yml and call json2gbl function
 with open("OpenData.yml") as stream:

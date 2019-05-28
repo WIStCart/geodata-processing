@@ -1,18 +1,18 @@
 @echo off
-set LOGFILE=%2\log.txt
-IF EXIST %LOGFILE% del %LOGFILE%
+SET XSLT=r:\scripts\xslt\iso2geoBL_uw-geodata.xsl
+
 IF "%1"=="" goto noinput
 IF "%2"=="" goto nooutput
-
+echo.
 IF EXIST %1 (
     IF EXIST %2 (
         rem how the heck to get saxon to output files with .json extension?!
-        echo Converting files in %1 to GBL format...
-        java -cp r:\scripts\saxon9he.jar net.sf.saxon.Transform -quit:on -warnings:fatal -s:%1 -xsl:r:\scripts\xslt\iso2geoBL_uw-geodata.xsl -o:%2
+        echo Converting all files in %1 to GBL format...
+        java -cp r:\scripts\saxon9he.jar net.sf.saxon.Transform -quit:on -warnings:fatal -s:%1 -xsl:%XSLT% -o:%2 
 
-        rem this is my hack for now
-        cd %2
-        ren *.xml *.json
+        rem this is my simple hack for now
+        ren %2\*.xml *.json
+        echo Process complete. 
         goto done
     ) ELSE (
         echo ERROR: output folder does not exist
@@ -32,4 +32,5 @@ echo ERROR: No output folder specified
 goto done
 
 :done
+echo.
 

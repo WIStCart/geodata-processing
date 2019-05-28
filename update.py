@@ -4,11 +4,11 @@ Update.py
 Author(s): Jim Lacy, Ben Segal
   
 Description: 
-This script is designed to interact with a Solr instance running the GeoBlacklight 1.0 Schema.  It can perform one of four operations: 
+This script is designed to interact with a Solr instance running the GeoBlacklight 1.0 Schema.  It can perform one of five operations: 
 1. Upload and and then ingest a directory of GBL-formatted json files. Optional: recurse into subfolders.
 2. Delete a named "collection" from the Solr index
 3. Delete a single record from the Index using the unique ID (uuid)
->>>>>>4. Delete all records from a specified repository (a.k.a. dct_provenance_s, a.k.a. "Held by")
+4. Delete all records from a specified repository (a.k.a. dct_provenance_s, a.k.a. "Held by")
 5. Purge the entire Solr index.  The nuclear option!
 
 When processing json inputs, the script performs some basic QA steps before the ingest is run.
@@ -16,6 +16,15 @@ When processing json inputs, the script performs some basic QA steps before the 
 All updates to Solr are "auto-committed" (changes are effective immediately)
 
 Dependencies: Python 3.x, pysolr
+
+
+to-do:
+
+- externalize solr_url's and login/password info
+
+- add a flag (-f) to force ingest for all records that pass the health check.  Currently, the entire process aborts with no ingest if any records fail
+
+
 """
 
 import os
@@ -52,7 +61,6 @@ class SolrInterface(object):
         # establish the connection to Solr instance
         return pysolr.Solr(self.solr_url, auth=HTTPBasicAuth(SOLR_USERNAME, SOLR_PASSWORD), always_commit=True)
 
-
     def escape_query(self, raw_query):
         # Uncertain if this is really necessary
         return raw_query.replace("'", "\'")
@@ -75,10 +83,9 @@ class SolrInterface(object):
 
     def json_to_dict(self, json_doc):
         # read data from one json file
-        j = json.load(open(json_doc, "rt", encoding="utf8"))
         print("Reading input file " + json_doc)
+        j = json.load(open(json_doc, "rt", encoding="utf8"))      
         return j
-
 
     def add_dict_list_to_solr(self, list_of_dicts):
         # ingest dictionary to Solr
@@ -115,11 +122,11 @@ class Update(object):
     def scan_dict_records(self, list_of_dicts):
         # perform QA checks on dictionary object before it is ingested
 
-        status = True  # always set to true for now
+        status = True  
         scanCatch = "\n"
         d = list_of_dicts
 
-        # Check if required elements have valid data 
+        # Check if required elements have valid data       
         if(d["dc_identifier_s"] == ""):
             scanCatch += "dc_identifier_s\n"
         if(d["layer_slug_s"] == ""):
@@ -134,14 +141,15 @@ class Update(object):
             scanCatch += "layer_slug_s\n"
         if(d["geoblacklight_version"] == ""):
             scanCatch += "geoblacklight_version\n"
-        if(d["solr_year_i"] == 9999):
-            scanCatch += "solr_year_i\n"
+       # if(d["solr_year_i"] == 9999):
+        #   scanCatch += "solr_year_i\n"
 
         # If issues, print message and layer ids, set status to false
         if (scanCatch != "\n"):
             status = False
-            print("QA health check failed for dc_title_s: " + d["dc_title_s"] + "  layer_slug_s: " + d["layer_slug_s"] + "\nThe following fields are either missing data or have invalid entrys: " + scanCatch)
- 
+            print("\nQA health check failed for " + d["dc_title_s"] + "\nThe following fields are either missing data or have invalid entries: " + scanCatch) 
+            # also send these result to a log file
+        
         return status
         
     def get_files_from_path(self, start_path, criteria="*"):
@@ -156,8 +164,9 @@ class Update(object):
             files = glob(os.path.join(start_path, criteria))
         return files
 
-    def add_json(self, path_to_json):
+    def add(self, path_to_json):
         global SOLR_INSTANCE
+        failCount = 0
         # cycle through json files, add them to a dictionary object
         files = self.get_files_from_path(path_to_json, criteria="*.json")
         #print(files)
@@ -168,9 +177,10 @@ class Update(object):
             for i in files:
                 dictAppend = self.solr.json_to_dict(i)
                 dicts.append(dictAppend)
-                scanHold = self.scan_dict_records(dictAppend)     
+                scanHold = self.scan_dict_records(dictAppend)  
                 if (scanHold == False):
-                    scanCheck = False  
+                    scanCheck = False 
+                    failCount += 1
             if scanCheck:
                 print("Health check passed.")
                 ingest_result = self.solr.add_dict_list_to_solr(dicts)
@@ -181,7 +191,8 @@ class Update(object):
                 else:   
                     print("Solr ingest on " + SOLR_INSTANCE + " instance failed.  Exiting...")
             else:
-                print("QA health check failed.  Exiting...") 
+                print("\n****************************************************")
+                print("QA health check failed on %i records.  Exiting without ingest..." % (failCount)) 
         else:
             print("No files found.  Exiting...")
         
@@ -214,8 +225,8 @@ def main():
         help="Recurse into subfolders when adding JSON files.")
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument(
-        "-aj",
-        "--add-json",
+        "-a",
+        "--add",
         help="Indicate path to folder with GeoBlacklight \
               JSON files that will be uploaded.") 
     group.add_argument(
@@ -248,14 +259,14 @@ def main():
     interface = Update(SOLR_USERNAME, SOLR_PASSWORD, COLLECTION=args.delete_collection, PROVENANCE=args.delete_provenance, UUID=args.delete,INSTANCE=args.instance, RECURSIVE=args.recursive, PURGE=args.purge)
     #print(args)
 
-    inPath = args.add_json
+    inPath = args.add
     if (inPath is not None and inPath[-1] != '\\'):
             inPath += '\\'
     global SOLR_INSTANCE
     SOLR_INSTANCE = args.instance
     #print (SOLR_INSTANCE)
-    if args.add_json:
-        interface.add_json(inPath)
+    if args.add:
+        interface.add(inPath)
     elif args.delete_collection:
         interface.delete_collection(args.delete_collection)
     elif args.delete_provenance:

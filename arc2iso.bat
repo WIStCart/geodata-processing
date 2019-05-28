@@ -1,13 +1,14 @@
 @echo off
-set LOGFILE=%2\log.txt
-IF EXIST %LOGFILE% del %LOGFILE%
+SET XSLT=r:\scripts\xslt\ArcGIS2ISO19139_uw-geodata.xsl
+
 IF "%1"=="" goto noinput
 IF "%2"=="" goto nooutput
-
+echo.
 IF EXIST %1 (
     IF EXIST %2 (
-        echo Converting files in %1 to ISO format...
-        java -cp r:\scripts\saxon9he.jar net.sf.saxon.Transform -quit:on -warnings:fatal -s:%1 -xsl:r:\scripts\xslt\ArcGIS2ISO19139_uw-geodata.xsl -o:%2 
+        echo Converting all files in %1 to ISO format...
+        java -cp r:\scripts\saxon9he.jar net.sf.saxon.Transform -quit:on -warnings:fatal -s:%1 -xsl:%XSLT% -o:%2
+        echo Process complete.
         goto done
     ) ELSE (
         echo ERROR: output folder does not exist
@@ -27,3 +28,4 @@ echo ERROR: No output folder specified
 goto done
 
 :done
+echo.
