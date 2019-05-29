@@ -19,7 +19,7 @@
 
   <!-- template used for converting strings to Title Case -->
   <xsl:template name="TitleCase">
-    <xsl:param name="text" />
+    <xsl:param name="text" /> 
     <xsl:param name="lastletter" select="' '"/>
     <xsl:if test="$text">
       <xsl:variable name="thisletter" select="substring($text,1,1)"/>
@@ -37,13 +37,19 @@
       </xsl:call-template>
     </xsl:if>
   </xsl:template>
+
+<!-- Template to strip double-quotes, escape characters, and extra line feeds.  Spaces are also normalized to futher clean
+up the specified text -->
+<xsl:template name="ScrubText">
+    <xsl:param name="text" />
+    <!-- some standardized constants -->
+    <xsl:variable name="vQ">"</xsl:variable>
+    <xsl:variable name="sQ">'</xsl:variable>
+    <xsl:variable name="escapeChar">\</xsl:variable>
+    <xsl:value-of select="normalize-space(translate(translate(translate($text, $vQ, $sQ),$escapeChar,' '),'&#xA;',''))"/>
+  </xsl:template>
   
 <xsl:template match="/">
-
-<!-- some standardized constants -->
-<xsl:variable name="vQ">"</xsl:variable>
-<xsl:variable name="sQ">'</xsl:variable>
-<xsl:variable name="escapeChar">\</xsl:variable>
 
 <!-- set location of online web-accessible archive location for all ISO metadata records -->
 <xsl:variable name="metadataBaseURL">https://gisdata.wisc.edu/public/metadata/</xsl:variable>
@@ -137,8 +143,10 @@
         <xsl:text>",&#xa;</xsl:text>
 
 	<!-- Description -->
-    <xsl:text>"dc_description_s": "</xsl:text>     
-        <xsl:value-of select="normalize-space(translate(translate(translate(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:abstract, $vQ, $sQ),$escapeChar,' '),'&#xA;',''))"/>
+    <xsl:text>"dc_description_s": "</xsl:text>           
+        <xsl:call-template name="ScrubText">
+            <xsl:with-param name="text" select="gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:abstract"/>
+        </xsl:call-template>    
         <xsl:text>",&#xa;</xsl:text>
 
     <!-- Rights - Always public for GeoData@WI -->	 
@@ -628,16 +636,9 @@
     <xsl:text>/formatters/xml\"</xsl:text>
 
     <xsl:text>}",&#xa;</xsl:text>
-   
-    <!-- Supplemental info	-->
-    <xsl:text>"uw_supplemental_s": "</xsl:text>
-      <xsl:value-of select="normalize-space(translate(translate(translate($supplemental, $vQ, $sQ),$escapeChar,' '),'&#xA;',''))"/>   
-    <xsl:text>",&#xa;</xsl:text>
-     
-    <!-- Our ISO metadata sometimes contains multiple <extent> elements for unknown reasons.  Each of these
-    may (or may not) contain bounding geographic coordinates.  We have numerous instances with one ISO file
-    containing multiple slightly different bounding boxes!  The code below is an attempt at picking only the 
-    first EX_GeographicBoundingBox and setting the envelope using those values. 
+    
+    
+    <!-- Our ISO metadata sometimes contains multiple <extent> elements for unknown reasons.  Each of these may (or may not) contain bounding geographic coordinates.  We have numerous instances with one ISO file containing multiple slightly different bounding boxes!  The code below is an attempt at picking only the first EX_GeographicBoundingBox and setting the envelope using those values. 
     -->
     <xsl:choose>
     <xsl:when test="(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox)[1]">
@@ -650,14 +651,23 @@
             <xsl:value-of select="(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement[1]/gmd:EX_GeographicBoundingBox/gmd:northBoundLatitude/gco:Decimal)[1]"/>
             <xsl:text>, </xsl:text>
             <xsl:value-of select="(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement[1]/gmd:EX_GeographicBoundingBox/gmd:southBoundLatitude/gco:Decimal)[1]"/>
-            <xsl:text>)"&#xa;</xsl:text>
+            <xsl:text>)",&#xa;</xsl:text>
     </xsl:when>
     <xsl:otherwise>
-        <!-- no EX_GeographicBoundingBox found (should not happen unless there is an error in Metadata) -->
-        <xsl:text>"solr_geom": "ENVELOPE(NaN,NaN,NaN,NaN)"&#xa;</xsl:text>
+        <!-- no EX_GeographicBoundingBox found (this should not happen unless there is an error in Metadata) -->
+        <xsl:text>"solr_geom": "ENVELOPE(NaN,NaN,NaN,NaN)",&#xa;</xsl:text>
     </xsl:otherwise>
     </xsl:choose>
     
+    <!-- Supplemental info	-->
+    <xsl:text>"uw_supplemental_s": "</xsl:text> 
+        <xsl:call-template name="ScrubText">
+            <xsl:with-param name="text" select="$supplemental"/>
+        </xsl:call-template>  
+    <xsl:text>",&#xa;</xsl:text>
+     
+    <!-- Insert placeholder for our per-dataset notices	-->
+    <xsl:text>"uw_notice_s": ""&#xa;</xsl:text>   
    
     <xsl:text>}</xsl:text>
     <!-- end of JSON output -->
