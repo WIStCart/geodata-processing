@@ -19,16 +19,18 @@ import os
 # ruamel.yaml: python -m pip install ruamel.yaml
 import ruamel.yaml as yaml
 
-# To-do:
-# - specify output location for scanner files
-# - add ability to specify target instance when called (dev, prod, test)
-# - what happens if an individual "scan" fails? (currently entire script will fail without graceful exit; would prefer any "good" scans to complete with a notice sent to operator about failed scans.)
-# - is there a reason to keep json files after ingest completes?  make it optional?
-# - re-engineer: 
-#     - focus on "provenance" to organize records instead of "collections"
-#     - understand why LTSB options are hard-coded
-#     - This script will eventually live on a unix server.  Calling update.bat needs to be modified.  Call update.py directly?  (may be preferably to replicate key ingest code in this script instead.
-#     - No need to save json files that contain all records for each site; ingest is based on records contained in subdirectories.
+"""
+To-do:
+ - specify output location for scanner files
+ - add ability to specify target instance when called (dev, prod, test)
+ - what happens if an individual "scan" fails? (currently entire script will fail without graceful exit; would prefer any "good" scans to complete with a notice sent to operator about failed scans.)
+ - is there a reason to keep json files after ingest completes?  make it optional?
+ - re-engineer: 
+     - focus on "provenance" to organize records instead of "collections"
+     - understand why LTSB options are hard-coded
+     - This script will eventually live on a unix server.  Calling update.bat needs to be modified.  Call update.py directly?  (may be preferable to replicate key ingest code in this script instead?)
+     - No need to save json files that contain all records for each site; ingest is based on records contained in subdirectories.
+"""
 
 # Strip html from description
 class MLStripper(HTMLParser):
@@ -106,7 +108,9 @@ def json2gbl (jsonUrl, collection, createdBy, siteName, partOf, prefix, postfix)
             "dct_temporal_sm": "", 
             "solr_geom": envelope,
             "solr_year_i": mod[0:4], 
-            "dct_references_s": references
+            "dct_references_s": references,
+            "uw_supplemental_s" : "",
+            "uw_notice_s": "This dataset was automatically cataloged from the author/publisher's Open Data Portal. In some cases, publication dates and bounding coordinates may be incorrect.  Please check the 'More details link' for additional information.",
         }
         # Check if required elements have valid data before calling update.py
         scanCatch = "\n"
