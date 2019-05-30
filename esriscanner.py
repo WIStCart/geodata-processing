@@ -110,7 +110,7 @@ def json2gbl (jsonUrl, collection, createdBy, siteName, partOf, prefix, postfix)
             "solr_year_i": mod[0:4], 
             "dct_references_s": references,
             "uw_supplemental_s" : "",
-            "uw_notice_s": "This dataset was automatically cataloged from the author/publisher's Open Data Portal. In some cases, publication dates and bounding coordinates may be incorrect.  Please check the 'More details link' for additional information.",
+            "uw_notice_s": "This dataset was automatically cataloged from the author's Open Data Portal. In some cases, publication year and bounding coordinates shown here may be incorrect.  Please check the 'More details at' link for additional information.",
         }
         # Check if required elements have valid data before calling update.py
         scanCatch = "\n"
