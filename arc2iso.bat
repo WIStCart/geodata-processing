@@ -1,5 +1,5 @@
 @echo off
-SET XSLT=r:\scripts\xslt\ArcGIS2ISO19139_uw-geodata.xsl
+SET XSLT=r:\scripts\xslt\arcgis2iso.xsl
 
 IF "%1"=="" goto noinput
 IF "%2"=="" goto nooutput
