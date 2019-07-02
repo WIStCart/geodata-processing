@@ -83,7 +83,7 @@ class SolrInterface(object):
 
     def json_to_dict(self, json_doc):
         # read data from one json file
-        print("Reading input file " + json_doc)
+        #print("Reading input file " + json_doc)
         j = json.load(open(json_doc, "rt", encoding="utf8"))      
         return j
 
@@ -150,6 +150,7 @@ class Update(object):
             print("\nQA health check failed for " + d["dc_title_s"] + "\nThe following fields are either missing data or have invalid entries: " + scanCatch) 
             # also send these result to a log file
         
+        print(d["layer_slug_s"] + "\n")
         return status
         
     def get_files_from_path(self, start_path, criteria="*"):

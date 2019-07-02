@@ -7,6 +7,7 @@ Sites:
     SiteShort: "data-ltsb"
     DatasetPrefix: ""
     DatasetPostfix: ", LTSB"
+    DefaultCollection: "Statewide"
   WiDNR_OpenData: 
     CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "WI Department of Natural Resources"
@@ -14,13 +15,15 @@ Sites:
     SiteShort: "data-wi-dnr"
     DatasetPrefix: ""
     DatasetPostfix: ""
+    DefaultCollection: "Statewide"
   WEM_OpenData:
     CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "WI Emergency Management"
     SiteURL: "http://data-wem.opendata.arcgis.com/data.json"
     SiteShort: "ddata-wem"
     DatasetPrefix: ""
-    DatasetPostfix: ", WI Emergency Management"   
+    DatasetPostfix: ", WI Emergency Management" 
+    DefaultCollection: "Statewide"    
   # Cities
   Madison_OpenData:
     CollectionName: "Wisconsin Open Data Sites"
@@ -29,13 +32,15 @@ Sites:
     SiteShort: "data-cityofmadison"
     DatasetPrefix: ""
     DatasetPostfix: ", City of Madison"
+    DefaultCollection: "Municipal Data" 
   WisconsinRapids_OpenData:
     CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "City of Wisconsin Rapids"
     SiteURL: "http://rapidsdata-wisconsinrapids.opendata.arcgis.com/data.json"
     SiteShort: "rapidsdata-wisconsinrapids"
     DatasetPrefix: ""
-    DatasetPostfix: ", City of Wisconsin Rapids"   
+    DatasetPostfix: ", City of Wisconsin Rapids" 
+    DefaultCollection: "Municipal Data"     
   # RPCs
   CapitalRPC_OpenData:
     CollectionName: "Wisconsin Open Data Sites"
@@ -44,13 +49,15 @@ Sites:
     SiteShort: "data-carpc"
     DatasetPrefix: ""
     DatasetPostfix: ", Capital Area RPC"  
+    DefaultCollection: "" 
   ECWRPC_OpenData:
     CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "East Central Wisconsin RPC"
     SiteURL: "http://data-ecwrpc.opendata.arcgis.com/data.json"
     SiteShort: "data-ecwrpc"
     DatasetPrefix: ""
-    DatasetPostfix: ", East Central WI RPC" 
+    DatasetPostfix: ", East Central WI RPC"
+    DefaultCollection: "" 
 # SEWRPC coming summer of 2019
 # SEWRPC_OpenData:
   # CollectionName: "Southeastern Wisconsin RPC"
@@ -59,7 +66,7 @@ Sites:
   # SiteShort: ""
   # DatasetPrefix: ""
   # DatasetPostfix: ", Southeastern WI RPC"      
-  
+  # DefaultCollection: "RPC Data" 
   # Counties
   AshlandCounty_OpenData:
     CollectionName: "Wisconsin Open Data Sites"
@@ -68,13 +75,15 @@ Sites:
     SiteShort: "data-ashlandcountywi"
     DatasetPrefix: ""
     DatasetPostfix: ", Ashland County"  
+    DefaultCollection: ""
   ColumbiaCounty_OpenData:
     CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Columbia County"
     SiteURL: "http://opendata-cclid.opendata.arcgis.com/data.json"
     SiteShort: "opendata-cclid"
     DatasetPrefix: ""
-    DatasetPostfix: ", Columbia County"      
+    DatasetPostfix: ", Columbia County"  
+    DefaultCollection: ""    
 # Dane County not functioning as of May 29, 2019
 # DaneCounty_OpenData: 
   #   CollectionName: "Dane County Open Data"
@@ -83,13 +92,15 @@ Sites:
   #   SiteShort: "gis-countyofdane"
   #   DatasetPrefix: ""
   #   DatasetPostfix: ", Dane County"
+    DefaultCollection: ""  
   MilwaukeeCounty_OpenData:
     CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Milwaukee County"
     SiteURL: "http://gis-mclio.opendata.arcgis.com/data.json"
     SiteShort: "gis-mclio"
     DatasetPrefix: ""
-    DatasetPostfix: ", Milwaukee County"    
+    DatasetPostfix: ", Milwaukee County"  
+    DefaultCollection: ""    
   OutagamieCounty_OpenData:
     CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Outagamie County"
@@ -97,6 +108,7 @@ Sites:
     SiteShort: "data-ocgis"
     DatasetPrefix: ""
     DatasetPostfix: ", Outagamie County"   
+    DefaultCollection: ""
   RacineCounty_OpenData:
     CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Racine County"
@@ -104,6 +116,7 @@ Sites:
     SiteShort: "data-racinecounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Racine County" 
+    DefaultCollection: ""
   StCroixCounty_OpenData:
     CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "St. Croix County"
@@ -111,6 +124,7 @@ Sites:
     SiteShort: "sccgis-scccdd"
     DatasetPrefix: ""
     DatasetPostfix: ", St. Croix County"  
+    DefaultCollection: ""
   SaukCounty_OpenData:
     CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Sauk County"
@@ -118,6 +132,7 @@ Sites:
     SiteShort: "data-saukgis"
     DatasetPrefix: ""
     DatasetPostfix: ", Sauk County"
+    DefaultCollection: ""
   VilasCounty_OpenData:
     CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Vilas County"
@@ -125,6 +140,7 @@ Sites:
     SiteShort: "data-vilas"
     DatasetPrefix: ""
     DatasetPostfix: ", Vilas County" 
+    DefaultCollection: ""
   WaukeshaCounty_OpenData:
     CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Waukesha County"
@@ -132,6 +148,7 @@ Sites:
     SiteShort: "data-waukeshacounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Waukesha County"
+    DefaultCollection: ""
   WaupacaCounty_OpenData:
     CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Waupaca County"
@@ -139,6 +156,7 @@ Sites:
     SiteShort: "data-waupacacounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Waupaca County"
+    DefaultCollection: ""
   # Waushara under construction
   #WausharaCounty_OpenData:
    # CollectionName: "Waushara County Open Data"
@@ -153,4 +171,5 @@ Sites:
     SiteURL: "http://opendata.woodcogis.com/data.json"
     SiteShort: "opendata"
     DatasetPrefix: ""
-    DatasetPostfix: ", Wood County" 
+    DatasetPostfix: ", Wood County"
+    DefaultCollection: ""

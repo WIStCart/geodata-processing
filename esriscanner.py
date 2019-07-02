@@ -30,6 +30,10 @@ To-do:
      - understand why LTSB options are hard-coded
      - This script will eventually live on a unix server.  Calling update.bat needs to be modified.  Call update.py directly?  (may be preferable to replicate key ingest code in this script instead?)
      - No need to save json files that contain all records for each site; ingest is based on records contained in subdirectories.
+ - examine geographic envelope of each record
+      - if bounding box is off the coast of west africa, ignore record
+      - if bounding box has a smaller extent than Wisconsin, override collection name... should *not* be labeled Statewide (example:  DNR records for Rock River)
+      
 """
 
 # Strip html from description
@@ -96,7 +100,7 @@ def json2gbl (jsonUrl, collection, createdBy, siteName, partOf, prefix, postfix)
             "layer_id_s": "", 
             "layer_slug_s": slug,
             "layer_geom_type_s": "", 
-            "layer_modified_dt": x["modified"],
+            "layer_modified_dt": "",  # not used
             "dc_format_s": "File", 
             "dc_language_s": "English",
             "dct_isPartOf_sm": partOf,
@@ -104,7 +108,7 @@ def json2gbl (jsonUrl, collection, createdBy, siteName, partOf, prefix, postfix)
             "dc_type_s": "Dataset",
             "dc_subject_sm": "",
             "dct_spatial_sm": "", 
-            "dct_issued_s": x["issued"],
+            "dct_issued_s": "",  # Not used
             "dct_temporal_sm": "", 
             "solr_geom": envelope,
             "solr_year_i": mod[0:4], 
@@ -140,7 +144,7 @@ def json2gbl (jsonUrl, collection, createdBy, siteName, partOf, prefix, postfix)
     # rather than calling update.bat/.py, which is designed to accomplish more than adding new json recs to solr,
     # maybe we should handle all solr ingests in the "scanner" here instead???  The QA check above is redundant
     # with update.py.  The QA check was replicated here, because if it failed during update.bat, there is no way for the scanner script to know update.py failed.  Similarly, there could be other reasons update.py can fail... and if it does, scanner.py will likely not fail gracefully.
-    os.system("r:\\scripts\\update.bat -a " +  collection + "\\ -i dev")
+    os.system("r:\\scripts\\update.bat -a " +  collection + "\\ -i test")
 
 # loop through each collection in OpenData.yml and call json2gbl function
 with open("OpenData.yml") as stream:

@@ -53,9 +53,13 @@ up the specified text -->
 
 <!-- set location of online web-accessible archive location for all ISO metadata records -->
 <xsl:variable name="metadataBaseURL">https://gisdata.wisc.edu/public/metadata/</xsl:variable>
-    
 
-<!-- Format Variables -->
+<!-- construct metadata file name from xml input file -->
+<xsl:variable name="metadataFile"> 
+   <xsl:value-of select="tokenize(base-uri(),'/')[last()]"/>
+</xsl:variable>
+
+  <!-- Format Variables -->
 <xsl:variable name="format">
       <xsl:choose>
         <xsl:when
@@ -632,9 +636,8 @@ up the specified text -->
       </xsl:if>
     </xsl:for-each>
     <xsl:text>,\"http://www.isotc211.org/schemas/2005/gmd/\":\"</xsl:text>
-	<xsl:value-of select="concat($metadataBaseURL,$uuid,'.xml')"/>
-    <xsl:text>/formatters/xml\"</xsl:text>
-
+	<xsl:value-of select="concat($metadataBaseURL,$metadataFile)"/>
+    <xsl:text>\"</xsl:text>
     <xsl:text>}",&#xa;</xsl:text>
     
     

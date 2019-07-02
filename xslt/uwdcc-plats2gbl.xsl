@@ -30,16 +30,10 @@ GeoblackLight record -->
     </xsl:variable>
    
     <!-- Parse out child object used to grab derived products (IIIF image) --> 
-    <xsl:variable name="childObject">    
-        <xsl:for-each select="/mets:mets/mets:dmdSec">
-            <xsl:choose>
-                <xsl:when test="mets:mdWrap/mets:xmlData/oai_dc:dc/dc:title = 'Original'">
-                 <xsl:value-of select="tokenize(mets:mdWrap/mets:xmlData/oai_dc:dc/dc:identifier,':')[2]"/>
-                </xsl:when>
-            </xsl:choose>
-        </xsl:for-each>
+    <xsl:variable name="contentIds">    
+        <xsl:value-of select="tokenize(/mets:mets/mets:structMap[@TYPE='physical']/mets:div/mets:div[@ORDER='1']/@CONTENTIDS,':')[3]"/>
     </xsl:variable>
-     
+    
     <xsl:variable name="westBoundLongitude">
         <xsl:value-of select="tokenize(/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/uwdcGeo:geographicDescription/uwdcGeo:footprint/gml:Envelope/gml:lowerCorner,' ')[2]"/>
     </xsl:variable>  
@@ -72,40 +66,32 @@ GeoblackLight record -->
     <xsl:text>",&#xa;</xsl:text>
     
     <!-- Description - hardcoded since description is the same for all maps -->
-    <xsl:text>"dc_description_s": "The field notes and plat maps of the public land survey of Wisconsin are a valuable resource for original land survey information, as well as for understanding Wisconsin's landscape history. The survey of Wisconsin was conducted between 1832 and 1866 by the federal General Land Office. This work established the township, range and section grid; the pattern upon which land ownership and land use is based. The survey records were transferred to the Wisconsin Board of Commissioners of Public Lands after the original survey was completed. Since that time, these records have been available for consultation at the BCPL's office in Madison, as hand-transcriptions, and more recently on microfilm. Now, they are being made available via the internet as electronic images.</xsl:text>       
-    <xsl:text>",&#xa;</xsl:text>
+    <xsl:text>"dc_description_s": "The field notes and plat maps of the public land survey of Wisconsin are a valuable resource for original land survey information, as well as for understanding Wisconsin's landscape history. The survey of Wisconsin was conducted between 1832 and 1866 by the federal General Land Office. This work established the township, range and section grid; the pattern upon which land ownership and land use is based. The survey records were transferred to the Wisconsin Board of Commissioners of Public Lands after the original survey was completed. Since that time, these records have been available for consultation at the BCPL's office in Madison, as hand-transcriptions, and more recently on microfilm. Now, they are being made available via the internet as electronic images.",&#xa;</xsl:text>       
     
     <!-- Rights - Always public for GeoData@WI -->	 
-    <xsl:text>"dc_rights_s": "</xsl:text>
-    <xsl:text>Public",&#xa;</xsl:text>
+    <xsl:text>"dc_rights_s": "Public",&#xa;</xsl:text>
     
     <!-- Provenance - The name of the organization that holds the resource -->
-    <xsl:text>"dct_provenance_s": "</xsl:text>
-    <xsl:text>UW Digital Collections Center",&#xa;</xsl:text>
-    
+    <xsl:text>"dct_provenance_s": "UW Digital Collections Center",&#xa;</xsl:text>
+
     <!-- Layer Slug - This is a string appended to the base URL of a GeoBlacklight installation to create a unique landing page for each resource. It is visible to the user and is used for Permalinks. -->
     <xsl:text>"layer_slug_s": "</xsl:text>
     <xsl:value-of select="$masterObject"/>
     <xsl:text>",&#xa;</xsl:text>
     
-    <xsl:text>"layer_geom_type_s": "Image</xsl:text>
-    <xsl:text>",&#xa;</xsl:text>
+    <xsl:text>"layer_geom_type_s": "Image",&#xa;</xsl:text>  
     
-    <xsl:text>"dc_format_s": "TIFF</xsl:text>
-     <xsl:text>",&#xa;</xsl:text>
+    <xsl:text>"dc_format_s": "TIFF",&#xa;</xsl:text>
     
     <!-- Language - Indicates the language of the data or map -->
-    <xsl:text>"dc_language_s": "</xsl:text>
-    <xsl:text>English",&#xa;</xsl:text>
+    <xsl:text>"dc_language_s": "English",&#xa;</xsl:text>
     
     <!-- Is Part Of
 	aka, collection names assigned to the dataset -->
-    <xsl:text>"dct_isPartOf_sm": "Wisconsin Public Land Survey Records</xsl:text>
-    <xsl:text>",&#xa;</xsl:text> 
+    <xsl:text>"dct_isPartOf_sm": "Wisconsin Public Land Survey Records",&#xa;</xsl:text>
     
     <!-- Creator - The person(s) or organization that created the resource -->
-    <xsl:text>"dc_creator_sm": "United States General Land Office</xsl:text>
-    <xsl:text>",&#xa;</xsl:text>
+    <xsl:text>"dc_creator_sm": "United States General Land Office",&#xa;</xsl:text>
     
     <!-- Subject - These are theme or topic keywords -->
     <xsl:text>"dc_subject_sm": </xsl:text>     
@@ -115,9 +101,7 @@ GeoblackLight record -->
     <!-- Spatial Coverage
 	This field is for place name keywords
 	-->
-    <xsl:text>"dct_spatial_sm": [</xsl:text>
-   
-    
+    <xsl:text>"dct_spatial_sm": [</xsl:text>  
     <xsl:for-each select="/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/ns1:mods/ns1:subject[@authority = 'lcsh']" xmlns:ns1="http://www.loc.gov/mods/v3">
         <xsl:text>"</xsl:text>
         <xsl:value-of select="ns1:geographic"/>
@@ -126,10 +110,8 @@ GeoblackLight record -->
             <xsl:text>,</xsl:text>
         </xsl:if>
     </xsl:for-each>
-
     <xsl:text>],&#xa;</xsl:text>
-    
-    
+      
     <!-- Temporal Coverage
 	This represents the "Ground Condition" of the resource, meaning the time period data was collected or is intended to represent. Displays on the item page in the Year value.
 	-->
@@ -142,13 +124,11 @@ GeoblackLight record -->
 	This is an integer field in the form YYYY that is used for indexing in the Year & Time Period facets.  
 	Uses same data as temporal coverage per Jaime
 	-->
-    <xsl:text>"solr_year_i": ["1866</xsl:text>
-    <xsl:text>"],&#xa;</xsl:text>
+    <xsl:text>"solr_year_i": ["1866"],&#xa;</xsl:text>
 
     <!-- References 
 	This element is a hash of key/value pairs for different types of external links. It external services and references using the CatInterOp approach.
-	-->
-        
+	-->       
     <xsl:text>"dct_references_s": "{</xsl:text> 
         <xsl:text>\"http://schema.org/downloadUrl\":\"</xsl:text> 
             <xsl:text>https://search.library.wisc.edu/digital/A</xsl:text>       
@@ -161,7 +141,7 @@ GeoblackLight record -->
         <xsl:text>\",</xsl:text> 
         <xsl:text>\"http://iiif.io/api/image\":\"</xsl:text>
             <xsl:text>https://asset.library.wisc.edu/iiif/1711.dl%2F</xsl:text>
-            <xsl:value-of select="$childObject"/>
+            <xsl:value-of select="$contentIds"/>
             <xsl:text>/info.json</xsl:text>
         <xsl:text>\"</xsl:text>             
     <xsl:text>}",&#xa;</xsl:text>
