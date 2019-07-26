@@ -36,6 +36,7 @@ from glob import glob
 import fnmatch
 import requests
 from requests.auth import HTTPBasicAuth
+from config import *
 
 # non-standard Python libraries that require additional installation
 # e.g., pip install pysolr
@@ -43,12 +44,7 @@ import pysolr
 
 # we should externalize the following so they can be shared across scripts as needed
 # remember to add external file to .gitignore
-SOLR_USERNAME = "solradmin"
-SOLR_PASSWORD = "Search4BadgerGeos!" 
-SOLR_URL_DEV = "http://localhost:8983/solr/geodata-core/"
-SOLR_URL_TEST = "https://geodata-test.sco.wisc.edu/solr/geodata-core/"
-SOLR_URL_PRODUCTION = "https://geodata-prod.sco.wisc.edu/solr/geodata-development/"
-SOLR_INSTANCE = ""
+
 
 class SolrInterface(object):
 
