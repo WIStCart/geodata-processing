@@ -1,7 +1,7 @@
 """
 Update.py
  
-Author(s): Jim Lacy, Ben Segal
+Author(s): Jim Lacy, Ben Segal, Eli Wilz
   
 Description: 
 This script is designed to interact with a Solr instance running the GeoBlacklight 1.0 Schema.  It can perform one of five operations: 
@@ -20,8 +20,6 @@ Dependencies: Python 3.x, pysolr
 
 to-do:
 
-- externalize solr_url's and login/password info
-
 - add a flag (-f) to force ingest for all records that pass the health check.  Currently, the entire process aborts with no ingest if any records fail
 
 
@@ -36,19 +34,12 @@ from glob import glob
 import fnmatch
 import requests
 from requests.auth import HTTPBasicAuth
+from config import *
 
 # non-standard Python libraries that require additional installation
 # e.g., pip install pysolr
 import pysolr
 
-# we should externalize the following so they can be shared across scripts as needed
-# remember to add external file to .gitignore
-SOLR_USERNAME = "solradmin"
-SOLR_PASSWORD = "Search4BadgerGeos!" 
-SOLR_URL_DEV = "http://localhost:8983/solr/geodata-core/"
-SOLR_URL_TEST = "https://geodata-test.sco.wisc.edu/solr/geodata-core/"
-SOLR_URL_PRODUCTION = "https://geodata-prod.sco.wisc.edu/solr/geodata-development/"
-SOLR_INSTANCE = ""
 
 class SolrInterface(object):
 
@@ -101,7 +92,7 @@ class SolrInterface(object):
     
 class Update(object):
 
-    def __init__(self, SOLR_USERNAME, SOLR_PASSWORD, COLLECTION, PROVENANCE, UUID, INSTANCE, TO_JSON=False, RECURSIVE=False, PURGE=False):
+    def __init__(self, SOLR_USERNAME, SOLR_PASSWORD, FORCE, SCAN, COLLECTION, PROVENANCE, UUID, INSTANCE, TO_JSON=False, RECURSIVE=False, PURGE=False):
         self.RECURSIVE = RECURSIVE
         self.PURGE = PURGE
         if INSTANCE=="prod":
@@ -121,11 +112,9 @@ class Update(object):
            
     def scan_dict_records(self, list_of_dicts):
         # perform QA checks on dictionary object before it is ingested
-
         status = True  
         scanCatch = "\n"
         d = list_of_dicts
-
         # Check if required elements have valid data       
         if(d["dc_identifier_s"] == ""):
             scanCatch += "dc_identifier_s\n"
@@ -196,8 +185,96 @@ class Update(object):
                 print("QA health check failed on %i records.  Exiting without ingest..." % (failCount)) 
         else:
             print("No files found.  Exiting...")
-        
-    
+            
+    def force_add(self, path_to_json):
+        global SOLR_INSTANCE
+        failCount = 0
+        # cycle through json files, add them to a dictionary object
+        files = self.get_files_from_path(path_to_json, criteria="*.json")
+        #print(files)
+        if files:
+            cwd = os.getcwd()
+            path = cwd + "\has_null_data"
+            dicts = []
+            scanCheck = True
+            print("Performing QA scan...") 
+            for i in files:
+                dictAppend = self.solr.json_to_dict(i)
+                dicts.append(dictAppend)
+                scanHold = self.scan_dict_records(dictAppend)  
+                if (scanHold == False):
+                    try:
+                        if os.path.exists(path):
+                            pass
+                        else:
+                            os.mkdir(path)
+                        os.rename(i, path + '/' + os.path.basename(i))
+                    except OSError:
+                        print("Failed to move json to new Directory")
+                    else:
+                        print(os.path.basename(i) + " failed to add ... moving to 'has_null_data'")
+                        print("Try Rerunning the same Command")
+                        self.force_add(path_to_json)
+                    scanCheck = False 
+                    failCount += 1
+            if scanCheck:
+                print("Health check passed.")
+                ingest_result = self.solr.add_dict_list_to_solr(dicts)
+                print("Ingest result: " + str(ingest_result))
+                if ingest_result:
+                    ingestMessage = "Added {n} records to Solr " + SOLR_INSTANCE + " instance."
+                    print(ingestMessage.format(n=len(dicts)))
+                else:   
+                    print("Solr ingest on " + SOLR_INSTANCE + " instance failed.  Exiting...")
+            else:
+                print("\n****************************************************")
+                print("QA health check failed on %i records.  Exiting without ingest..." % (failCount)) 
+        else:
+            print("No files found.  Exiting...")
+
+    def scan(self, path_to_json):
+        global SOLR_INSTANCE
+        failCount = 0
+        # cycle through json files, add them to a dictionary object
+        files = self.get_files_from_path(path_to_json, criteria="*.json")
+        if files:
+            cwd = os.getcwd()
+            path = cwd + "\has_null_data"
+            dicts = []
+            scanCheck = True
+            print("Performing QA scan...") 
+            for i in files:
+                dictAppend = self.solr.json_to_dict(i)
+                dicts.append(dictAppend)
+                scanHold = self.scan_dict_records(dictAppend)  
+                if (scanHold == False):
+                    try:
+                        if os.path.exists(path):
+                            pass
+                        else:
+                            os.mkdir(path)
+                        os.rename(i, path + '/' + os.path.basename(i))
+                    except OSError:
+                        print("Failed to move json to new Directory")
+                    else:
+                        print(os.path.basename(i) + " failed to add ... moving to 'has_null_data'")
+                        self.force_add(path_to_json)
+                    scanCheck = False 
+                    failCount += 1
+            if scanCheck:
+                print("Health check passed.")
+                print("Ingest result: " + str(ingest_result))
+                if ingest_result:
+                    ingestMessage = "Added {n} records to Solr " + SOLR_INSTANCE + " instance."
+                    print(ingestMessage.format(n=len(dicts)))
+                else:   
+                    print("Solr ingest on " + SOLR_INSTANCE + " instance failed.  Exiting...")
+            else:
+                print("\n****************************************************")
+                print("QA health check failed on %i records.  Exiting without ingest..." % (failCount)) 
+        else:
+            print("No files found.  Exiting...")
+	
     def delete(self, uuid):
         # setup query to delete a single record
         # the delete operation is handled by delete_query
@@ -229,7 +306,16 @@ def main():
         "-a",
         "--add",
         help="Indicate path to folder with GeoBlacklight \
-              JSON files that will be uploaded.") 
+              JSON files that will be uploaded.")
+    group.add_argument(
+        "-fa",
+        "--force_add",
+        help="Indicate path to folder with GeoBlacklight \
+              JSON files that will be uploaded.")
+    group.add_argument(
+        "-s",
+        "--scan",
+        help="Indicate path to folder with GeoBlacklight")
     group.add_argument(
         "-dc",
         "--delete-collection",
@@ -257,17 +343,20 @@ def main():
         help="Identify which instance of Solr to use.")           
     
     args = parser.parse_args()
-    interface = Update(SOLR_USERNAME, SOLR_PASSWORD, COLLECTION=args.delete_collection, PROVENANCE=args.delete_provenance, UUID=args.delete,INSTANCE=args.instance, RECURSIVE=args.recursive, PURGE=args.purge)
-    #print(args)
-
+    interface = Update(SOLR_USERNAME, SOLR_PASSWORD, FORCE=args.force_add, SCAN=args.scan, COLLECTION=args.delete_collection, PROVENANCE=args.delete_provenance, UUID=args.delete,INSTANCE=args.instance, RECURSIVE=args.recursive, PURGE=args.purge)
+    
     inPath = args.add
     if (inPath is not None and inPath[-1] != '\\'):
             inPath += '\\'
     global SOLR_INSTANCE
     SOLR_INSTANCE = args.instance
-    #print (SOLR_INSTANCE)
+    
     if args.add:
         interface.add(inPath)
+    elif args.force_add:
+        interface.force_add(args.force_add)
+    elif args.scan:
+        interface.scan(args.scan)
     elif args.delete_collection:
         interface.delete_collection(args.delete_collection)
     elif args.delete_provenance:
@@ -277,7 +366,8 @@ def main():
     elif args.purge:
         interface.purge()
     else:
-        sys.exit(parser.print_help())
+        print("hi")
+        #sys.exit(parser.print_help())
 
 if __name__ == "__main__":
     sys.exit(main())
