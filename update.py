@@ -22,10 +22,23 @@ to-do:
 
 - add a flag (-f) to force ingest for all records that pass the health check.  Currently, the entire process aborts with no ingest if any records fail
 
+- add a default folder for ingest and review at R:\ARCHIVE_PROJECT\SCO_TEST\FinishedOpenMetadata
+
+- add SCAN argument that runs QA test from force add, and sorts good and bad files without opportunity to add
+
+- YES/NO UI Functionality for Partial Directory File Ingesting
+
+- Change Argument Names to Something more universally understood
+
+- Discover why the error still pops up when files are successfully moved 
+
+- Develop UI or GUI  
+
 
 """
 
 import os
+import time
 import json
 import argparse
 import sys
@@ -91,6 +104,8 @@ class SolrInterface(object):
 
     
 class Update(object):
+
+    defaultPath = "R:\ARCHIVE_PROJECT\SCO_TEST\FinishedOpenMetadata\Eli_ReadyForIngest"
 
     def __init__(self, SOLR_USERNAME, SOLR_PASSWORD, FORCE, SCAN, COLLECTION, PROVENANCE, UUID, INSTANCE, TO_JSON=False, RECURSIVE=False, PURGE=False):
         self.RECURSIVE = RECURSIVE
@@ -195,6 +210,8 @@ class Update(object):
         if files:
             cwd = os.getcwd()
             path = cwd + "\has_null_data"
+            #cwd = defaultPath
+            #path = cwd + "\Eli_NeedsReview"
             dicts = []
             scanCheck = True
             print("Performing QA scan...") 
@@ -295,6 +312,7 @@ class Update(object):
         self.solr.delete_query("*:*")
 
 def main():
+    defaultPath = "test-scenarios\eli-testdata"
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "-r",
@@ -311,7 +329,7 @@ def main():
         "-fa",
         "--force_add",
         help="Indicate path to folder with GeoBlacklight \
-              JSON files that will be uploaded.")
+              #JSON files that will be uploaded.")
     group.add_argument(
         "-s",
         "--scan",
