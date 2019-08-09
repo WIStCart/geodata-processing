@@ -19,18 +19,11 @@ Dependencies: Python 3.x, pysolr
 
 
 to-do:
-
-- add a flag (-f) to force ingest for all records that pass the health check.  Currently, the entire process aborts with no ingest if any records fail
+- add functionality to ingest a single file
 
 - add a default folder for ingest and review at R:\ARCHIVE_PROJECT\SCO_TEST\FinishedOpenMetadata
 
-- add SCAN argument that runs QA test from force add, and sorts good and bad files without opportunity to add
-
-- YES/NO UI Functionality for Partial Directory File Ingesting
-
 - Change Argument Names to Something more universally understood
-
-- Discover why the error still pops up when files are successfully moved 
 
 - Develop UI or GUI  
 
@@ -128,33 +121,33 @@ class Update(object):
     def scan_dict_records(self, list_of_dicts):
         # perform QA checks on dictionary object before it is ingested
         status = True  
-        scanCatch = "\n"
         d = list_of_dicts
         # Check if required elements have valid data       
         if(d["dc_identifier_s"] == ""):
-            scanCatch += "dc_identifier_s\n"
+            self.scanCatch.append(os.path.basename(self.currentFile))
         if(d["layer_slug_s"] == ""):
-            scanCatch += "layer_slug_s\n"
+            self.scanCatch.append(os.path.basename(self.currentFile))
         if(d["dc_title_s"] == ""):
-            scanCatch += "dc_title_s\n"
+            self.scanCatch.append(os.path.basename(self.currentFile))
         if("NaN" in d["solr_geom"]):
-            scanCatch += "solr_geom\n"
+            self.scanCatch.append(os.path.basename(self.currentFile))
         if(d["dct_provenance_s"] == ""):
-            scanCatch += "layer_slug_s\n"
+            self.scanCatch.append(os.path.basename(self.currentFile))
         if(d["dc_rights_s"] == ""):
-            scanCatch += "layer_slug_s\n"
+            self.scanCatch.append(os.path.basename(self.currentFile))
         if(d["geoblacklight_version"] == ""):
-            scanCatch += "geoblacklight_version\n"
+            self.scanCatch.append(os.path.basename(self.currentFile))
        # if(d["solr_year_i"] == 9999):
         #   scanCatch += "solr_year_i\n"
 
         # If issues, print message and layer ids, set status to false
-        if (scanCatch != "\n"):
+        if (len(self.scanCatch) != 0):
             status = False
-            print("\nQA health check failed for " + d["dc_title_s"] + "\nThe following fields are either missing data or have invalid entries: " + scanCatch) 
+            #print("\nQA health check failed for " + d["dc_title_s"] +
+                  #"\nThe following fields are either missing data or have invalid entries: " + scanCatch) 
             # also send these result to a log file
         
-        print(d["layer_slug_s"] + "\n")
+        #print(d["layer_slug_s"] + "\n")
         return status
         
     def get_files_from_path(self, start_path, criteria="*"):
@@ -200,97 +193,64 @@ class Update(object):
                 print("QA health check failed on %i records.  Exiting without ingest..." % (failCount)) 
         else:
             print("No files found.  Exiting...")
-            
+
+       
     def force_add(self, path_to_json):
         global SOLR_INSTANCE
-        failCount = 0
+        self.scan(path_to_json)
+        files = self.get_files_from_path(path_to_json, criteria="*.json")
+        if self.success and files:
+            self.dicts = []
+            for i in files:
+                dictAppend = self.solr.json_to_dict(i)
+                self.dicts.append(dictAppend)
+            ingest_result = self.solr.add_dict_list_to_solr(self.dicts)
+            print("%i records successfully ingested into Solr" % (len(self.dicts)))  
+        else:
+            print("Ingest Failed, Check JSON Location and Try Again") 
+
+    def scan(self, path_to_json):
+        self.success = False
+        self.scanCatch = []
         # cycle through json files, add them to a dictionary object
         files = self.get_files_from_path(path_to_json, criteria="*.json")
-        #print(files)
         if files:
             cwd = os.getcwd()
             path = cwd + "\has_null_data"
             #cwd = defaultPath
             #path = cwd + "\Eli_NeedsReview"
-            dicts = []
-            scanCheck = True
+            self.dicts = []
             print("Performing QA scan...") 
             for i in files:
+                self.currentFile = i
                 dictAppend = self.solr.json_to_dict(i)
-                dicts.append(dictAppend)
-                scanHold = self.scan_dict_records(dictAppend)  
-                if (scanHold == False):
+                self.dicts.append(dictAppend)
+                scanHold = self.scan_dict_records(dictAppend)
+            print("QA health check failed on %i files: " % (len(self.scanCatch)))
+            for file in self.scanCatch:
+                print(file)
+            sortYN = input("Sort failed files into review folder and continue? (Y/N) ")
+            if (scanHold == False and sortYN.upper()== "Y"):
                     try:
                         if os.path.exists(path):
-                            pass
+                            print("Moving files to directory 'has_null_data'...")
                         else:
                             os.mkdir(path)
-                        os.rename(i, path + '/' + os.path.basename(i))
+                            print("Creating directory 'has_null_data'...")
+                            print("Moving files to directory 'has_null_data'...")
+                        for file in self.scanCatch:
+                            os.rename(path_to_json+file, path + '/' + os.path.basename(file))
+                        self.success = True
+                        print( "%i records successfully moved to 'has_null_data'" % (len(self.scanCatch)))
                     except OSError:
-                        print("Failed to move json to new Directory")
-                    else:
-                        print(os.path.basename(i) + " failed to add ... moving to 'has_null_data'")
-                        print("Try Rerunning the same Command")
-                        self.force_add(path_to_json)
-                    scanCheck = False 
-                    failCount += 1
-            if scanCheck:
-                print("Health check passed.")
-                ingest_result = self.solr.add_dict_list_to_solr(dicts)
-                print("Ingest result: " + str(ingest_result))
-                if ingest_result:
-                    ingestMessage = "Added {n} records to Solr " + SOLR_INSTANCE + " instance."
-                    print(ingestMessage.format(n=len(dicts)))
-                else:   
-                    print("Solr ingest on " + SOLR_INSTANCE + " instance failed.  Exiting...")
+                        print("holup")
+                        print("OS Failure")
             else:
-                print("\n****************************************************")
-                print("QA health check failed on %i records.  Exiting without ingest..." % (failCount)) 
+                print("Scan Ended")
+                self.success = False  
         else:
             print("No files found.  Exiting...")
-
-    def scan(self, path_to_json):
-        global SOLR_INSTANCE
-        failCount = 0
-        # cycle through json files, add them to a dictionary object
-        files = self.get_files_from_path(path_to_json, criteria="*.json")
-        if files:
-            cwd = os.getcwd()
-            path = cwd + "\has_null_data"
-            dicts = []
-            scanCheck = True
-            print("Performing QA scan...") 
-            for i in files:
-                dictAppend = self.solr.json_to_dict(i)
-                dicts.append(dictAppend)
-                scanHold = self.scan_dict_records(dictAppend)  
-                if (scanHold == False):
-                    try:
-                        if os.path.exists(path):
-                            pass
-                        else:
-                            os.mkdir(path)
-                        os.rename(i, path + '/' + os.path.basename(i))
-                    except OSError:
-                        print("Failed to move json to new Directory")
-                    else:
-                        print(os.path.basename(i) + " failed to add ... moving to 'has_null_data'")
-                        self.force_add(path_to_json)
-                    scanCheck = False 
-                    failCount += 1
-            if scanCheck:
-                print("Health check passed.")
-                print("Ingest result: " + str(ingest_result))
-                if ingest_result:
-                    ingestMessage = "Added {n} records to Solr " + SOLR_INSTANCE + " instance."
-                    print(ingestMessage.format(n=len(dicts)))
-                else:   
-                    print("Solr ingest on " + SOLR_INSTANCE + " instance failed.  Exiting...")
-            else:
-                print("\n****************************************************")
-                print("QA health check failed on %i records.  Exiting without ingest..." % (failCount)) 
-        else:
-            print("No files found.  Exiting...")
+            
 	
     def delete(self, uuid):
         # setup query to delete a single record
@@ -328,6 +288,8 @@ def main():
     group.add_argument(
         "-fa",
         "--force_add",
+        #action='store_const',
+        #const=defaultPath,
         help="Indicate path to folder with GeoBlacklight \
               #JSON files that will be uploaded.")
     group.add_argument(
@@ -384,8 +346,8 @@ def main():
     elif args.purge:
         interface.purge()
     else:
-        print("hi")
-        #sys.exit(parser.print_help())
+        print("nothings happened")
+        sys.exit(parser.print_help())
 
 if __name__ == "__main__":
     sys.exit(main())
