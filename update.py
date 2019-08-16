@@ -19,11 +19,9 @@ Dependencies: Python 3.x, pysolr
 
 
 to-do:
-- add functionality to ingest a single file
+- Change Argument Names to Something more universally understood (Consult with Jim Here)
 
-- add a default folder for ingest and review at R:\ARCHIVE_PROJECT\SCO_TEST\FinishedOpenMetadata
-
-- Change Argument Names to Something more universally understood
+- Update Syntax to remove duplicate Print Statements 
 
 - Develop UI or GUI  
 
@@ -35,12 +33,14 @@ import time
 import json
 import argparse
 import sys
+import shutil
 from collections import OrderedDict
 from glob import glob
 import fnmatch
 import requests
 from requests.auth import HTTPBasicAuth
 from config import *
+
 
 # non-standard Python libraries that require additional installation
 # e.g., pip install pysolr
@@ -161,51 +161,48 @@ class Update(object):
         else:
             files = glob(os.path.join(start_path, criteria))
         return files
+    
 
     def add(self, path_to_json):
+        self.ingested = False
+        #print("Add Single File Functionality still in Development")
         global SOLR_INSTANCE
-        failCount = 0
-        # cycle through json files, add them to a dictionary object
-        files = self.get_files_from_path(path_to_json, criteria="*.json")
-        #print(files)
-        if files: 
-            dicts = []
-            scanCheck = True
-            print("Performing QA scan...") 
-            for i in files:
-                dictAppend = self.solr.json_to_dict(i)
-                dicts.append(dictAppend)
-                scanHold = self.scan_dict_records(dictAppend)  
-                if (scanHold == False):
-                    scanCheck = False 
-                    failCount += 1
-            if scanCheck:
-                print("Health check passed.")
-                ingest_result = self.solr.add_dict_list_to_solr(dicts)
-                print("Ingest result: " + str(ingest_result))
-                if ingest_result:
-                    ingestMessage = "Added {n} records to Solr " + SOLR_INSTANCE + " instance."
-                    print(ingestMessage.format(n=len(dicts)))
-                else:   
-                    print("Solr ingest on " + SOLR_INSTANCE + " instance failed.  Exiting...")
-            else:
-                print("\n****************************************************")
-                print("QA health check failed on %i records.  Exiting without ingest..." % (failCount)) 
+        arg = (path_to_json.strip("\ "))
+        if os.path.isfile(arg) and ".json" in arg:
+            temp = "temp"
+            if not os.path.exists(temp):
+                os.mkdir(temp)
+            file=os.path.basename(arg)
+            newPath = temp+"/"+file
+            shutil.copyfile(arg, newPath)
+            self.force_add(temp)
+            if self.success:
+                os.remove(arg)
+                print("No Files to Ingest")
+            if self.ingested == True:
+                #edit this to change where a file goes after it is successfully ingested
+                os.rename(newPath,arg)
+            shutil.rmtree(temp)   
         else:
-            print("No files found.  Exiting...")
-
-       
+            print("Argument is not a json. Please enter a valid file name.")
+            
+                   
     def force_add(self, path_to_json):
         global SOLR_INSTANCE
         self.scan(path_to_json)
         files = self.get_files_from_path(path_to_json, criteria="*.json")
-        if self.success and files:
+        if files and self.success == True:
             self.dicts = []
             for i in files:
                 dictAppend = self.solr.json_to_dict(i)
                 self.dicts.append(dictAppend)
             ingest_result = self.solr.add_dict_list_to_solr(self.dicts)
-            print("%i records successfully ingested into Solr" % (len(self.dicts)))  
+            print("%i record(s) successfully ingested into Solr" % (len(self.dicts)))
+            self.ingested = True
+        elif self.success == False:
+            print("Ingest Failed, Ingest Halted")
+        elif not files:
+            print("Ingest Failed, No Files to Ingest")
         else:
             print("Ingest Failed, Check JSON Location and Try Again") 
 
@@ -216,9 +213,7 @@ class Update(object):
         files = self.get_files_from_path(path_to_json, criteria="*.json")
         if files:
             cwd = os.getcwd()
-            path = cwd + "\has_null_data"
-            #cwd = defaultPath
-            #path = cwd + "\Eli_NeedsReview"
+            path = cwd + "\ for_review"
             self.dicts = []
             print("Performing QA scan...") 
             for i in files:
@@ -226,27 +221,30 @@ class Update(object):
                 dictAppend = self.solr.json_to_dict(i)
                 self.dicts.append(dictAppend)
                 scanHold = self.scan_dict_records(dictAppend)
-            print("QA health check failed on %i files: " % (len(self.scanCatch)))
-            for file in self.scanCatch:
-                print(file)
+            print("QA health check failed on %i file(s): " % (len(self.scanCatch)))
             sortYN = input("Sort failed files into review folder and continue? (Y/N) ")
             if (scanHold == False and sortYN.upper()== "Y"):
                     try:
                         if os.path.exists(path):
-                            print("Moving files to directory 'has_null_data'...")
+                            print("Moving files to directory 'for_review'...")
                         else:
                             os.mkdir(path)
-                            print("Creating directory 'has_null_data'...")
-                            print("Moving files to directory 'has_null_data'...")
+                            print("Creating directory 'for_review'...")
+                            print("Moving files to directory 'for_review'...")
                         for file in self.scanCatch:
-                            os.rename(path_to_json+file, path + '/' + os.path.basename(file))
+                            os.rename(path_to_json+ '/' +file, path + '/' + os.path.basename(file))
                         self.success = True
-                        print( "%i records successfully moved to 'has_null_data'" % (len(self.scanCatch)))
+                        print( "%i record(s) successfully moved to 'for_review'" % (len(self.scanCatch)))
                     except OSError:
                         print("holup")
                         print("OS Failure")
+            elif sortYN.upper() == "N":
+                print("No Selected, Ingest Halted")
+                self.success = False
+            elif len(self.scanCatch) == 0:
+                self.success = True
             else:
-                print("Scan Ended")
+                print("Unrecognized Input, Scan Ended")
                 self.success = False  
         else:
             print("No files found.  Exiting...")
@@ -281,15 +279,12 @@ def main():
         help="Recurse into subfolders when adding JSON files.")
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument(
-        "-a",
-        "--add",
-        help="Indicate path to folder with GeoBlacklight \
-              JSON files that will be uploaded.")
+        "-afi",
+        "--addFile",
+        help="Indicate path to a GeoBlacklight JSON file")
     group.add_argument(
-        "-fa",
-        "--force_add",
-        #action='store_const',
-        #const=defaultPath,
+        "-afo",
+        "--addFolder",
         help="Indicate path to folder with GeoBlacklight \
               #JSON files that will be uploaded.")
     group.add_argument(
@@ -323,18 +318,18 @@ def main():
         help="Identify which instance of Solr to use.")           
     
     args = parser.parse_args()
-    interface = Update(SOLR_USERNAME, SOLR_PASSWORD, FORCE=args.force_add, SCAN=args.scan, COLLECTION=args.delete_collection, PROVENANCE=args.delete_provenance, UUID=args.delete,INSTANCE=args.instance, RECURSIVE=args.recursive, PURGE=args.purge)
+    interface = Update(SOLR_USERNAME, SOLR_PASSWORD, FORCE=args.addFolder, SCAN=args.scan, COLLECTION=args.delete_collection, PROVENANCE=args.delete_provenance, UUID=args.delete,INSTANCE=args.instance, RECURSIVE=args.recursive, PURGE=args.purge)
     
-    inPath = args.add
+    inPath = args.addFile
     if (inPath is not None and inPath[-1] != '\\'):
             inPath += '\\'
     global SOLR_INSTANCE
     SOLR_INSTANCE = args.instance
     
-    if args.add:
+    if args.addFile:
         interface.add(inPath)
-    elif args.force_add:
-        interface.force_add(args.force_add)
+    elif args.addFolder:
+        interface.force_add(args.addFolder)
     elif args.scan:
         interface.scan(args.scan)
     elif args.delete_collection:
