@@ -47,6 +47,7 @@ from config import *
 import pysolr
 
 
+
 class SolrInterface(object):
 
     def __init__(self, url=None):
