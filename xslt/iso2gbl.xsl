@@ -243,8 +243,6 @@ up the specified text -->
     </xsl:choose>
 
     <!-- Creator - The person(s) or organization that created the resource -->
-    <xsl:if
-      test="gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode[@codeListValue = 'originator']">
       <xsl:text>"dc_creator_sm": [</xsl:text>
 
       <xsl:for-each
@@ -285,7 +283,6 @@ up the specified text -->
         </xsl:if>-->
       </xsl:for-each>
       <xsl:text>],&#xa;</xsl:text>
-    </xsl:if>
     
 	<!-- Publisher - Not used by GeoData@WI	-->
     <xsl:text>"dc_publisher_sm": "",&#xa;</xsl:text>
@@ -319,11 +316,11 @@ up the specified text -->
       </xsl:otherwise>
     </xsl:choose>
 
-    <!-- Subject - These are theme or topic keywords -->
+    <!-- Subject - ISO Category only -->
+    <xsl:text>"dc_subject_sm": [</xsl:text>
     <xsl:if
       test="gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory/gmd:MD_TopicCategoryCode">
-      <xsl:text>"dc_subject_sm": [</xsl:text>
-
+      
       <xsl:for-each
         select="gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory">
 
@@ -411,13 +408,6 @@ up the specified text -->
           <xsl:when test="contains(gmd:MD_TopicCategoryCode, 'utilitiesCommunication')">
             <xsl:text>"Utilities and Communication"</xsl:text>
           </xsl:when>
-
-          <xsl:otherwise>
-                <xsl:text>"</xsl:text>
-                <xsl:value-of select="gmd:MD_TopicCategoryCode"/>
-                <xsl:text>"</xsl:text>
-          </xsl:otherwise>
-
         </xsl:choose>
 
         <xsl:if test="position() != last()">
@@ -425,87 +415,12 @@ up the specified text -->
         </xsl:if>
       </xsl:for-each>
     </xsl:if>
+    <xsl:text>],&#xa;</xsl:text>
 
-    <!-- Extract theme keywords provided by data producer -->
-    <xsl:if
-      test="gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode[@codeListValue = 'theme']">
-      <!-- if no ISO category is present, start a new dc_subject_sm.  If this line is reached, there is an error in the metadata... all records must have an ISO category -->
-      <xsl:if     
-        test="not(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory/gmd:MD_TopicCategoryCode)">
-        <xsl:text>"dc_subject_sm": ["Error: No ISO Category defined"</xsl:text>
-      </xsl:if>
 
-      <xsl:for-each
-            select="gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode[@codeListValue = 'theme']">
-            <xsl:for-each select="ancestor-or-self::*/gmd:keyword">             
-                <!-- Remove Point, Polygon, Line keywords -->
-                <xsl:choose>
-                    <xsl:when test="not(contains(gco:CharacterString, 'Polygon') or contains(gco:CharacterString, 'Point')  or contains(gco:CharacterString, 'Line'))">         
-                        <xsl:text>,"</xsl:text>          
-                        <xsl:call-template name="TitleCase">         
-                            <xsl:with-param name="text" select="normalize-space(.)"/>
-                        </xsl:call-template>       
-                        <xsl:text>"</xsl:text>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <!-- do nothing.  This could be converted to xsl:if instead, but sticking with choose for now -->
-                    </xsl:otherwise>
-                </xsl:choose>	             
-            </xsl:for-each>
+    <!-- Spatial Coverage - Not used -->
+    <xsl:text>"dct_spatial_sm": [],&#xa;</xsl:text>
 
-      </xsl:for-each>
-          
-    </xsl:if>
-
-    <!-- close dc_subject_sm list -->
-    <xsl:if
-      test="gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory/gmd:MD_TopicCategoryCode or gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode[@codeListValue = 'theme']">
-      <xsl:text>],&#xa;</xsl:text>
-    </xsl:if>
-
-    <!-- Spatial Coverage
-	This field is for place name keywords
-	-->
-	<xsl:if
-      test="gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode[@codeListValue = 'place']">
-      <xsl:text>"dct_spatial_sm": [</xsl:text>
-      <xsl:choose>
-        <!-- privilege geonames keywords -->
-        <xsl:when
-          test="gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords[gmd:type/gmd:MD_KeywordTypeCode[@codeListValue = 'place']][gmd:thesaurusName/gmd:CI_Citation/gmd:title[text() = 'GeoNames']]">
-          <xsl:for-each
-            select="gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords[gmd:type/gmd:MD_KeywordTypeCode[@codeListValue = 'place']][gmd:thesaurusName/gmd:CI_Citation/gmd:title[text() = 'GeoNames']]/gmd:keyword">
-            <xsl:text>"</xsl:text>
-            <xsl:value-of select="."/>
-            <xsl:text>"</xsl:text>
-            <xsl:if test="position() != last()">
-              <xsl:text>,</xsl:text>
-            </xsl:if>
-          </xsl:for-each>
-          <xsl:if test="position() != last()">
-            <xsl:text>,</xsl:text>
-          </xsl:if>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:for-each
-            select="gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode[@codeListValue = 'place']">
-            <xsl:for-each select="ancestor-or-self::*/gmd:keyword">
-              <xsl:text>"</xsl:text>
-              <xsl:value-of select="."/>
-              <xsl:text>"</xsl:text>
-              <xsl:if test="position() != last()">
-                <xsl:text>,</xsl:text>
-              </xsl:if>
-            </xsl:for-each>
-            <xsl:if test="position() != last()">
-              <xsl:text>,</xsl:text>
-            </xsl:if>
-          </xsl:for-each>
-        </xsl:otherwise>
-      </xsl:choose>
-
-      <xsl:text>],&#xa;</xsl:text>
-    </xsl:if>
 
 	<!-- Date Issued - We don't use dct_issued_s, aka date of the metadata record. -->
     <xsl:text>"dct_issued_s": "",&#xa;</xsl:text>
