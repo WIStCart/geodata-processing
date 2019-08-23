@@ -183,10 +183,10 @@ up the specified text -->
           <xsl:when test="contains(gmd:MD_Metadata/gmd:spatialRepresentationInfo/gmd:MD_VectorSpatialRepresentation/gmd:geometricObjects[1]/gmd:MD_GeometricObjects/gmd:geometricObjectType/gmd:MD_GeometricObjectTypeCode, 'composite')">
               <xsl:text>Polygon</xsl:text>
           </xsl:when>
-          <xsl:when test="gmd:MD_Metadata/gmd:spatialRepresentationInfo/gmd:MD_VectorSpatialRepresentation/gmd:geometricObjects[1]/gmd:MD_GeometricObjects/gmd:geometricObjectType/gmd:MD_GeometricObjectTypeCode[@codeListValue='line']">
+          <xsl:when test="gmd:MD_Metadata/gmd:spatialRepresentationInfo/gmd:MD_VectorSpatialRepresentation/gmd:geometricObjects[1]/gmd:MD_GeometricObjects/gmd:geometricObjectType/gmd:MD_GeometricObjectTypeCode[@codeListValue='curve']">
               <xsl:text>Line</xsl:text>
           </xsl:when>
-          <xsl:when test="contains(gmd:MD_Metadata/gmd:spatialRepresentationInfo/gmd:MD_VectorSpatialRepresentation/gmd:geometricObjects[1]/gmd:MD_GeometricObjects/gmd:geometricObjectType/gmd:MD_GeometricObjectTypeCode, 'line')">
+          <xsl:when test="contains(gmd:MD_Metadata/gmd:spatialRepresentationInfo/gmd:MD_VectorSpatialRepresentation/gmd:geometricObjects[1]/gmd:MD_GeometricObjects/gmd:geometricObjectType/gmd:MD_GeometricObjectTypeCode, 'curve')">
               <xsl:text>Line</xsl:text>
           </xsl:when>
           <xsl:when test="gmd:MD_Metadata/gmd:spatialRepresentationInfo/gmd:MD_VectorSpatialRepresentation/gmd:geometricObjects[1]/gmd:MD_GeometricObjects/gmd:geometricObjectType/gmd:MD_GeometricObjectTypeCode[@codeListValue='point']">
@@ -522,6 +522,12 @@ up the specified text -->
           <xsl:value-of select="gmd:linkage/gmd:URL"/>
           <xsl:text>\"</xsl:text>
         </xsl:when>
+        <!-- Note: there is an untraceable bug that results in some protocols being listed as "WW:LINK-1.0..." instead of "WWW:LINK-1.0... -->
+        <xsl:when test="contains(gmd:protocol/gco:CharacterString/text(), 'WW:LINK')">
+          <xsl:text>\"http://schema.org/url\":\"</xsl:text>
+          <xsl:value-of select="gmd:linkage/gmd:URL"/>
+          <xsl:text>\"</xsl:text>
+        </xsl:when>
         <xsl:when test="contains(gmd:protocol/gco:CharacterString/text(), 'WWW:IIIF')">
           <xsl:text>\"http://iiif.io/api/image\":\"</xsl:text>
           <xsl:value-of select="gmd:linkage/gmd:URL"/>
@@ -562,10 +568,10 @@ up the specified text -->
     <xsl:when test="(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox)[1]">
      <!-- test statement translated: if any instance of EX_GeographicBoundingBox is found, pick the first instance and proceed -->
             <xsl:text>"solr_geom": "ENVELOPE(</xsl:text>
-            <xsl:value-of select="(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement[1]/gmd:EX_GeographicBoundingBox/gmd:eastBoundLongitude/gco:Decimal)[1]"/>
-            <xsl:text>, </xsl:text>
             <xsl:value-of select="(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement[1]/gmd:EX_GeographicBoundingBox/gmd:westBoundLongitude/gco:Decimal)[1]"/>
             <xsl:text>, </xsl:text>
+            <xsl:value-of select="(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement[1]/gmd:EX_GeographicBoundingBox/gmd:eastBoundLongitude/gco:Decimal)[1]"/>
+            <xsl:text>, </xsl:text>          
             <xsl:value-of select="(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement[1]/gmd:EX_GeographicBoundingBox/gmd:northBoundLatitude/gco:Decimal)[1]"/>
             <xsl:text>, </xsl:text>
             <xsl:value-of select="(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement[1]/gmd:EX_GeographicBoundingBox/gmd:southBoundLatitude/gco:Decimal)[1]"/>
