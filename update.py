@@ -31,10 +31,9 @@ to-do:
 import os
 import time
 import json
-import simplejson
 import argparse
 import sys
-import shutil
+from pathlib import Path
 from collections import OrderedDict
 from glob import glob
 import fnmatch
@@ -46,6 +45,8 @@ from config import *
 # non-standard Python libraries that require additional installation
 # e.g., pip install pysolr
 import pysolr
+import shutil
+
 
 
 
@@ -89,12 +90,12 @@ class SolrInterface(object):
             return j
         except json.decoder.JSONDecodeError as err:
             json_name = os.path.basename(json_doc)
-            print(" - {} has a syntax error at line {} column {}. Fix manually and reingest ".format(json_name,err.lineno, err.colno))
+            print(" - {} has a syntax error at line {} column {}. Fix manually and retry ".format(json_name,err.lineno, err.colno))
             exit()
         try:
             return j
         except UnboundLocalError:
-            print("Fatal Syntax Error may effect the quality of this ingest")
+            print("Syntax Error may effect the quality of this ingest")
         
 
     def add_dict_list_to_solr(self, list_of_dicts):
@@ -140,56 +141,65 @@ class Update(object):
         status = True
         d = list_of_dicts
         # Check if required elements have valid data
+        #currentErrorsList = []
+            #print(self.uuidList)
         try:
-            if(d["dc_identifier_s"] == ""):
-                #self.totalErrorNumbers = self.totalErrorNumbers + 1
-                self.scanCatch.append(os.path.basename(self.currentFile))
+            if(("dc_identifier_s" not in d.keys()) or ((d["dc_identifier_s"] == ""))):
+                if os.path.basename(self.currentFile) not in self.scanCatch:
+                    self.scanCatch.append(os.path.basename(self.currentFile))
                 self.fileProbList.append("File '" + os.path.basename(self.currentFile)+ "' has null field 'dc_identifier_s'")
-            if(d["layer_slug_s"] == ""):
-                #self.totalErrorNumbers = self.totalErrorNumbers + 1
-                self.scanCatch.append(os.path.basename(self.currentFile))
+            if(("layer_slug_s" not in d.keys()) or ((d["layer_slug_s"] == ""))):
+                #currentErrorsList.append("layer_slug_s")
+                if os.path.basename(self.currentFile) not in self.scanCatch:
+                    self.scanCatch.append(os.path.basename(self.currentFile))
                 self.fileProbList.append("File '" + os.path.basename(self.currentFile)+ "' has null field 'layer_slug_s'")
-            if(d["layer_slug_s"] == ""):
-                #self.totalErrorNumbers = self.totalErrorNumbers + 1
-                self.scanCatch.append(os.path.basename(self.currentFile))
-                self.fileProbList.append("File '" + os.path.basename(self.currentFile)+ "' has null field 'layer_slug_s'")
-            if("NaN" in d["solr_geom"]):
-                #self.totalErrorNumbers = self.totalErrorNumbers + 1
-                self.scanCatch.append(os.path.basename(self.currentFile))
+            if ((d["layer_slug_s"]) in self.uuidList):
+                if os.path.basename(self.currentFile) not in self.scanCatch:
+                    self.scanCatch.append(os.path.basename(self.currentFile))
+                self.fileProbList.append("File '" + os.path.basename(self.currentFile)+ "' {} in 'layer_slug_s' already exists".format(d["layer_slug_s"]))  
+            if("solr_geom" not in d.keys() or ("NaN" in d["solr_geom"])):
+                if os.path.basename(self.currentFile) not in self.scanCatch:
+                    self.scanCatch.append(os.path.basename(self.currentFile))
                 self.fileProbList.append("File '" + os.path.basename(self.currentFile)+ "' has null field 'solr_geom'")
-            if(d["dct_provenance_s"] == ""):
-                #self.totalErrorNumbers = self.totalErrorNumbers + 1
-                self.scanCatch.append(os.path.basename(self.currentFile))
+            if(("dct_provenance_s" not in d.keys()) or ((d["dct_provenance_s"] == ""))):
+                if os.path.basename(self.currentFile) not in self.scanCatch:
+                    self.scanCatch.append(os.path.basename(self.currentFile))
                 self.fileProbList.append("File '" + os.path.basename(self.currentFile)+ "' has null field 'dct_provenance_s'")
-            if(d["dc_rights_s"] == ""):
-                #self.totalErrorNumbers = self.totalErrorNumbers + 1
-                self.scanCatch.append(os.path.basename(self.currentFile))
+            if(("dc_rights_s" not in d.keys()) or ((d["dc_rights_s"] == ""))):
+                #currentErrorsList.append("dc_rights_s")
+                if os.path.basename(self.currentFile) not in self.scanCatch:
+                    self.scanCatch.append(os.path.basename(self.currentFile))
                 self.fileProbList.append("File '" + os.path.basename(self.currentFile)+ "' has null field 'dc_rights_s'")
-            if(d["geoblacklight_version"] == ""):
-                #self.totalErrorNumbers = self.totalErrorNumbers + 1
-                self.scanCatch.append(os.path.basename(self.currentFile))
+            if(("geoblacklight_version" not in d.keys()) or ((d["geoblacklight_version"] == ""))):
+                if os.path.basename(self.currentFile) not in self.scanCatch:
+                    self.scanCatch.append(os.path.basename(self.currentFile))
                 self.fileProbList.append("File '" + os.path.basename(self.currentFile)+ "' has null field 'geoblacklight_version'")
-            if(d["dc_creator_sm"] == ""):
-                #self.totalErrorNumbers = self.totalErrorNumbers + 1
-                self.scanCatch.append(os.path.basename(self.currentFile))
+            if(("dc_creator_sm" not in d.keys()) or ((d["dc_creator_sm"] == ""))):
+                if os.path.basename(self.currentFile) not in self.scanCatch:
+                    self.scanCatch.append(os.path.basename(self.currentFile))
                 self.fileProbList.append("File '" + os.path.basename(self.currentFile)+ "' has null field 'dc_creator_sm'")
-            if(d["dc_description_s"] == ""):
-                #self.totalErrorNumbers = self.totalErrorNumbers + 1
-                self.scanCatch.append(os.path.basename(self.currentFile))
+            if(("dc_description_s" not in d.keys()) or ((d["dc_description_s"] == ""))):
+                if os.path.basename(self.currentFile) not in self.scanCatch:
+                    self.scanCatch.append(os.path.basename(self.currentFile))
                 self.fileProbList.append("File '" + os.path.basename(self.currentFile)+ "' has null field 'dc_description_s'")
-            if(d["dc_subject_sm"] == ""):
-                #self.totalErrorNumbers = self.totalErrorNumbers + 1
-                self.scanCatch.append(os.path.basename(self.currentFile))
-                self.fileProbList.append("File '" + os.path.basename(self.currentFile)+ "' has null field 'dc_subject_sm'")
-            if(d["solr_year_i"] == ""):
-                #self.totalErrorNumbers = self.totalErrorNumbers + 1
-                self.scanCatch.append(os.path.basename(self.currentFile))
+            if(("dc_subject_sm" not in d.keys()) or ((d["dc_subject_sm"] == ""))):
+                if os.path.basename(self.currentFile) not in self.scanCatch:
+                    self.scanCatch.append(os.path.basename(self.currentFile))
+                self.fileProbList.append("File '" + os.path.basename(self.currentFile)+ "' has null field 'dc_subject_sm'")   
+            if (("solr_year_i" not in d.keys()) or ((d["solr_year_i"] == ""))):
+                if os.path.basename(self.currentFile) not in self.scanCatch:
+                    self.scanCatch.append(os.path.basename(self.currentFile))
                 self.fileProbList.append("File '" + os.path.basename(self.currentFile)+ "' has null field 'solr_year_i'")
                # if(d["solr_year_i"] == 9999):
                 #   scanCatch += "solr_year_i\n"
-        except TypeError:
-            print("QA Scan Error")
-            #exit()
+            self.uuidList.append(d["layer_slug_s"])
+            
+        except (KeyError,TypeError):
+            print("QA Scan Error on file" + os.path.basename(self.currentFile))
+            exit()
+        # Testing using a dictionary to hold errors instead
+        #if currentErrorsList:
+            #self.fileErrorDict.update({self.currentFile:currentErrorsList})
         
         # If issues, print message and layer ids, set status to false
         if (len(self.scanCatch) != 0):
@@ -210,20 +220,20 @@ class Update(object):
                 for i in fnmatch.filter(ffiles, criteria):
                     files.append(os.path.join(path, i))
         else:
-            files = glob(os.path.join(start_path, criteria))
+            #files = glob(os.path.join(start_path, criteria))
+            files = Path(start_path).glob(criteria)
         return files
     
     def add_single(self, path_to_json):
         self.ingested = False
-        arg = (path_to_json.strip("\ "))
+        arg = (path_to_json.strip("\\"))
         if os.path.isfile(arg) and ".json" in arg:
             temp = "temp"
             if not os.path.exists(temp):
-                #print("creating directory temp...")
                 os.mkdir(temp)
             # get name of file to be ingested
             file=os.path.basename(arg)
-            newPath = temp+"/"+file
+            newPath = Path(temp,file)
             # copy file to temporary folder 'temp'
             shutil.copyfile(arg, newPath)
             # run add_folder function to ingest file in folder 'temp'
@@ -239,7 +249,7 @@ class Update(object):
             # delete temporary folder
             shutil.rmtree(temp)   
         else:
-            print("File not found. Please enter a valid path to json")
+            print("File not found. Please enter a valid path to a single json file")
             
                    
     def add_folder(self, path_to_json):
@@ -251,8 +261,9 @@ class Update(object):
                 dictAppend = self.solr.json_to_dict(i)
                 self.dicts.append(dictAppend)
             if self.readyToIngest == True:
-                confirm = input("Ingest file(s) into %s instance of Solr? (Y/N) " % SOLR_INSTANCE)
+                confirm = input("Ingest {} file(s) into {} instance of Solr? (Y/N) ".format((len(self.dicts)),SOLR_INSTANCE))
                 if confirm.upper() == "Y":
+                    print("Ingesting {} records(s) into Solr. This may take a minute...".format(len(self.dicts)))
                     ingest_result = self.solr.add_dict_list_to_solr(self.dicts)
                     print("{} record(s) successfully ingested into {} instance of Solr".format(len(self.dicts), SOLR_INSTANCE))
                     self.ingested = True
@@ -263,17 +274,21 @@ class Update(object):
         global SOLR_INSTANCE
         if SOLR_INSTANCE == "":
             SOLR_INSTANCE = args.instance
-            print("Solr Instance: %s" % SOLR_INSTANCE)
+            print("Solr Instance: {}".format(SOLR_INSTANCE))
         self.success = False
         self.scanCatch = []
         self.fileProbList = []
+        self.uuidList = []
+        #self.fileErrorDict = {}
         self.sortYN = ""
+        #print(self.fileErrorDict)
         #self.totalErrorNumbers = 0
         # cycle through json files, add them to a dictionary object
         files = self.get_files_from_path(path_to_json, criteria="*.json")
         if files:
             cwd = os.getcwd()
-            path = cwd + "/for_review"
+            #change where 'for_review' folder gets created
+            path = Path(path_to_json,"for_review")
             self.dicts = []
             print("Performing QA scan...") 
             for i in files:
@@ -282,13 +297,16 @@ class Update(object):
                 self.dicts.append(dictAppend)
                 scanHold = self.scan_dict_records(dictAppend)
             if len(self.scanCatch) != 0:
-                print("QA health check failed on {} file(s) ".format((len(self.scanCatch))))
+                print("QA health check found {} error(s) in {} file(s) ".format((len(self.fileProbList)),len(self.scanCatch)))
                 #print("QA health check failed on {} file(s) with {} total errors ".format((len(self.scanCatch)),self.totalErrorNumbers))
                 print("-"*60)
                 for bad_file in self.fileProbList:
                     print(" - "+ bad_file)
                 print("-"*60)
-                self.sortYN = input("Sort failed files into review folder and continue? (Y/N) ")
+                #for item in self.fileErrorDict.values():
+                    #print(item)
+                #print(self.fileErrorDict.values())
+                self.sortYN = input("Sort {} failed files into review folder and continue? (Y/N) ".format((len(self.scanCatch))))
             else:
                 print("QA Health Check Passed!")
                 self.readyToIngest = True
@@ -301,10 +319,13 @@ class Update(object):
                             print("Creating directory 'for_review'...")
                             print("Moving files to directory 'for_review'...")
                         for file in self.scanCatch:
-                            os.rename(path_to_json+ '/' +file, path + '/' + os.path.basename(file))
+                            shutil.move(Path(path_to_json,file),Path(path,os.path.basename(file)))
+                            #os.rename(Path(path_to_json,file),Path(path,os.path.basename(file)))
+                            #print(Path(path_to_json,file))
+                            #print(Path(path,os.path.basename(file)))
                         self.success = True
                         self.readyToIngest = True
-                        print( "%i record(s) successfully moved to 'for_review'" % (len(self.scanCatch)))
+                        print( "{} record(s) successfully moved to 'for_review'".format((len(self.scanCatch))))
                     except OSError:
                         print("OS Failure")
             elif self.sortYN.upper() == "N":
