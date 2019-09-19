@@ -80,8 +80,8 @@ class SolrInterface(object):
                 print(confirmMessage.format(num_recs=s.hits))
             else:
                 print("Okay, nothing deleted from " + SOLR_INSTANCE + " instance. Exiting...")
+        
                 
-
     def json_to_dict(self, json_doc):
         # read data from one json file
         #print("Reading input file " + json_doc)
@@ -108,8 +108,13 @@ class SolrInterface(object):
             print("Solr Error: {e}".format(e=e))
             print("*********************\n\n")
             return False
+        
+    def uuid_scan(self, uuid):
+        results = self.solr.search(uuid)
+        return results
 
-    
+
+          
 class Update(object):
 
 
@@ -135,13 +140,14 @@ class Update(object):
         self.uuid = UUID
         self.collection = COLLECTION
         self.provenance = PROVENANCE
-           
+     
     def scan_dict_records(self, list_of_dicts):
         # perform QA checks on dictionary object before it is ingested
         status = True
         d = list_of_dicts
+        # print(d["layer_slug_s"])
         # Check if required elements have valid data
-        #currentErrorsList = []
+        # currentErrorsList = []
             #print(self.uuidList)
         try:
             if(("dc_identifier_s" not in d.keys()) or ((d["dc_identifier_s"] == ""))):
@@ -218,11 +224,12 @@ class Update(object):
         if self.RECURSIVE:
             for path, folder, ffiles in os.walk(start_path):
                 for i in fnmatch.filter(ffiles, criteria):
-                    files.append(os.path.join(path, i))
+                    #files.append(os.path.join(path, i))
+                    files.append(Path(path, i))
         else:
             #files = glob(os.path.join(start_path, criteria))
             files = Path(start_path).glob(criteria)
-        return files
+        return files  
     
     def add_single(self, path_to_json):
         self.ingested = False
@@ -257,6 +264,7 @@ class Update(object):
         files = self.get_files_from_path(path_to_json, criteria="*.json")
         if files and self.success == True:
             self.dicts = []
+            print("Preparing for ingest. This may take a minute...")
             for i in files:
                 dictAppend = self.solr.json_to_dict(i)
                 self.dicts.append(dictAppend)
@@ -269,6 +277,46 @@ class Update(object):
                     self.ingested = True
                 else:
                     print("Ingest terminated manually. Exiting...")
+                    
+    def uuid_sort(self, path_to_json):
+        exists = False
+        print("Checking for duplicate UUIDs...")
+        self.ingestingDict = {}
+        self.inSolrDict = {}
+        files = self.get_files_from_path(path_to_json, criteria="*.json")
+        for file in files:
+            #self.ingestingList.append(os.path.basename(file))
+            uuidDict = self.solr.json_to_dict(file)
+            uuid = uuidDict["layer_slug_s"]
+            self.ingestingDict[uuid] = str(os.path.basename(file))
+            results = self.solr.uuid_scan(uuid)
+            for result in results:
+                re_uuid = result["layer_slug_s"]
+                self.inSolrDict[re_uuid] = str(os.path.basename(file))
+                #self.inSolrDict[str(os.path.basename(file))] = re_uuid
+            if uuid in self.inSolrDict.keys():
+                inSolrDupe = self.inSolrDict[uuid]
+                ingestingDupe = self.ingestingDict[uuid]
+                print("-"*45)
+                print(" - File '{}' has a UUID that is already associated with a file in Solr: '{}'".format(ingestingDupe,inSolrDupe))
+                print("-"*45)
+                overwrite = input("Overwrite existing file '{}'? (Y/N) ".format(inSolrDupe))
+                if overwrite.upper() != "Y":
+                    move = input("Move {} to 'for_review' folder and continue ingest? (Y/N) ".format(ingestingDupe))
+                    if move.upper() == "Y":
+                        shutil.move(Path(path_to_json,os.path.basename(file)),Path(self.path,os.path.basename(file)))
+                    else:            
+                        print("Ingest terminated manually.  Exiting...")
+                        exit()
+                else:
+                    print("hold")
+                    
+            
+                
+            #else:
+                #print(" - File {} is good to go with its unique uuid {}.".format(os.path.basename(file),uuid))
+            
+
 
     def scan(self, path_to_json):
         global SOLR_INSTANCE
@@ -281,14 +329,11 @@ class Update(object):
         self.uuidList = []
         #self.fileErrorDict = {}
         self.sortYN = ""
-        #print(self.fileErrorDict)
-        #self.totalErrorNumbers = 0
-        # cycle through json files, add them to a dictionary object
         files = self.get_files_from_path(path_to_json, criteria="*.json")
         if files:
             cwd = os.getcwd()
             #change where 'for_review' folder gets created
-            path = Path(path_to_json,"for_review")
+            self.path = Path(path_to_json,"for_review")
             self.dicts = []
             print("Performing QA scan...") 
             for i in files:
@@ -298,14 +343,10 @@ class Update(object):
                 scanHold = self.scan_dict_records(dictAppend)
             if len(self.scanCatch) != 0:
                 print("QA health check found {} error(s) in {} file(s) ".format((len(self.fileProbList)),len(self.scanCatch)))
-                #print("QA health check failed on {} file(s) with {} total errors ".format((len(self.scanCatch)),self.totalErrorNumbers))
                 print("-"*60)
                 for bad_file in self.fileProbList:
                     print(" - "+ bad_file)
                 print("-"*60)
-                #for item in self.fileErrorDict.values():
-                    #print(item)
-                #print(self.fileErrorDict.values())
                 self.sortYN = input("Sort {} failed files into review folder and continue? (Y/N) ".format((len(self.scanCatch))))
             else:
                 print("QA Health Check Passed!")
@@ -338,6 +379,9 @@ class Update(object):
                 self.success = False  
         else:
             print("No files found.  Exiting...")
+
+        # Initiate UUID Scan
+        self.uuid_sort(path_to_json)
             
 	
     def delete(self, uuid):
