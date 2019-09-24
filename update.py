@@ -279,8 +279,16 @@ class Update(object):
                     print("Ingest terminated manually. Exiting...")
                     
     def uuid_sort(self, path_to_json):
+        self.path = Path(path_to_json,"for_review")
+        try:
+            if not os.path.exists(self.path):
+                #print("Creating directory 'for_review'...")
+                os.mkdir(self.path)
+        except OSError:
+            print("Failed to create directory 'for_review'")
+            exit()
         exists = False
-        print("Checking for duplicate UUIDs...")
+        #print("Checking for duplicate UUIDs...")
         self.ingestingDict = {}
         self.inSolrDict = {}
         files = self.get_files_from_path(path_to_json, criteria="*.json")
@@ -297,19 +305,20 @@ class Update(object):
             if uuid in self.inSolrDict.keys():
                 inSolrDupe = self.inSolrDict[uuid]
                 ingestingDupe = self.ingestingDict[uuid]
-                print("-"*45)
+                print("-"*60)
                 print(" - File '{}' has a UUID that is already associated with a file in Solr: '{}'".format(ingestingDupe,inSolrDupe))
-                print("-"*45)
+                print("-"*60)
                 overwrite = input("Overwrite existing file '{}'? (Y/N) ".format(inSolrDupe))
                 if overwrite.upper() != "Y":
-                    move = input("Move {} to 'for_review' folder and continue ingest? (Y/N) ".format(ingestingDupe))
+                    move = input("Move '{}' to 'for_review' folder and continue ingest? (Y/N) ".format(ingestingDupe))
                     if move.upper() == "Y":
                         shutil.move(Path(path_to_json,os.path.basename(file)),Path(self.path,os.path.basename(file)))
                     else:            
                         print("Ingest terminated manually.  Exiting...")
                         exit()
                 else:
-                    print("hold")
+                    print("File '{}' will be Overwritten when ingested".format(inSolrDupe))
+                 
                     
             
                 
@@ -335,12 +344,15 @@ class Update(object):
             #change where 'for_review' folder gets created
             self.path = Path(path_to_json,"for_review")
             self.dicts = []
-            print("Performing QA scan...") 
-            for i in files:
-                self.currentFile = i
-                dictAppend = self.solr.json_to_dict(i)
+            print("Performing QA scan...")
+            for file in files:
+                self.currentFile = file
+                dictAppend = self.solr.json_to_dict(file)
                 self.dicts.append(dictAppend)
                 scanHold = self.scan_dict_records(dictAppend)
+            # Initiate UUID Scan
+            print("Checking for duplicate UUIDs...")
+            self.uuid_sort(path_to_json)
             if len(self.scanCatch) != 0:
                 print("QA health check found {} error(s) in {} file(s) ".format((len(self.fileProbList)),len(self.scanCatch)))
                 print("-"*60)
@@ -360,10 +372,7 @@ class Update(object):
                             print("Creating directory 'for_review'...")
                             print("Moving files to directory 'for_review'...")
                         for file in self.scanCatch:
-                            shutil.move(Path(path_to_json,file),Path(path,os.path.basename(file)))
-                            #os.rename(Path(path_to_json,file),Path(path,os.path.basename(file)))
-                            #print(Path(path_to_json,file))
-                            #print(Path(path,os.path.basename(file)))
+                            shutil.move(Path(path_to_json,file),Path(self.path,os.path.basename(file)))
                         self.success = True
                         self.readyToIngest = True
                         print( "{} record(s) successfully moved to 'for_review'".format((len(self.scanCatch))))
@@ -380,10 +389,7 @@ class Update(object):
         else:
             print("No files found.  Exiting...")
 
-        # Initiate UUID Scan
-        self.uuid_sort(path_to_json)
-            
-	
+                	
     def delete(self, uuid):
         # setup query to delete a single record
         # the delete operation is handled by delete_query
