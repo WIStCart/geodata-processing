@@ -1,6 +1,6 @@
 <!--
     Geodata@Wisconsin - Transformation from ISO 19139 XML into GeoBlacklight Solr json
-    May 2019
+    September 2019
 	 
     Based on the work of the Big Ten Academic Alliance Geoportal
 	 
@@ -446,7 +446,7 @@ up the specified text -->
       </xsl:when>
 
       <xsl:when
-        test="gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent[1]/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimeInstant">
+        test="gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent[1]/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimeInstant">
         <xsl:text>"dct_temporal_sm": ["</xsl:text>
         <xsl:value-of
           select="substring(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent[1]/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimeInstant/gml:timePosition, 1, 4)"/>
@@ -548,17 +548,24 @@ up the specified text -->
           <xsl:value-of select="gmd:linkage/gmd:URL"/>
           <xsl:text>\"</xsl:text>
         </xsl:when>
-
+        <xsl:otherwise>
+            <!-- Sometimes the protocol is missing, in which case we don't know what the URL represents. -->
+            <xsl:text>\"\":\"</xsl:text><xsl:text>\"</xsl:text>
+        </xsl:otherwise>
       </xsl:choose>
 		  
-      <!-- add a comma if not the last dist element -->
+            <!-- add a comma if not the last dist element.  The trick here is sometimes OnlineResources are missing the protocol as noted above.  Without the "otherwise" clause above, the net results is a ,, in the dct_references_s field... which causes a fatal error in GBL -->
       <xsl:if test="position() != last()">
         <xsl:text>,</xsl:text>
       </xsl:if>
     </xsl:for-each>
-    <xsl:text>,\"http://www.isotc211.org/schemas/2005/gmd/\":\"</xsl:text>
-	<xsl:value-of select="concat($metadataBaseURL,$metadataFile)"/>
-    <xsl:text>\"</xsl:text>
+    
+    <!-- only insert a metadata link if we actually found other protocols above.  There are some edge cases where a file is missing all linkage information. -->
+    <xsl:if test="//gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource">
+        <xsl:text>,\"http://www.isotc211.org/schemas/2005/gmd/\":\"</xsl:text>
+        <xsl:value-of select="concat($metadataBaseURL,$metadataFile)"/>
+        <xsl:text>\"</xsl:text>
+    </xsl:if>
     <xsl:text>}",&#xa;</xsl:text>
     
     
