@@ -306,6 +306,7 @@ class Update(object):
                         exit()
                 else:
                     print("hold")
+        print("UUID Health Check Complete")
                     
             
                 
@@ -324,6 +325,7 @@ class Update(object):
         self.fileProbList = []
         self.uuidDict = {}
         self.sortYN = ""
+        self.dupeUUID = ""
         files = self.get_files_from_path(path_to_json, criteria="*.json")
         if files:
             cwd = os.getcwd()
@@ -350,6 +352,7 @@ class Update(object):
                 print("-"*60)
                 self.sortYN = input("Sort {} failed files into review folder and continue? (Y/N) ".format((len(self.scanCatch))))
             else:
+                self.uuid_sort(path_to_json)
                 print("QA Health Check Passed!")
                 self.readyToIngest = True
             if (scanHold == False and self.sortYN.upper()== "Y"):
@@ -365,6 +368,7 @@ class Update(object):
                         self.success = True
                         self.readyToIngest = True
                         print( "{} record(s) successfully moved to 'for_review'".format((len(self.scanCatch))))
+                        self.uuid_sort(path_to_json)
                     except OSError:
                         print("OS Failure")
             elif self.sortYN.upper() == "N":
@@ -379,7 +383,7 @@ class Update(object):
             print("No files found.  Exiting...")
 
         # Initiate UUID Scan
-        self.uuid_sort(path_to_json)
+        # self.uuid_sort(path_to_json)
             
 	
     def delete(self, uuid):
