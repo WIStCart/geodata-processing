@@ -19,9 +19,8 @@ Dependencies: Python 3.x, pysolr
 
 
 to-do:
-- Change Argument Names to Something more universally understood (Consult with Jim Here)
 
-- Update Syntax to remove duplicate Print Statements 
+- Create UUID Filter on Duplicate UUIDs
 
 - Develop UI or GUI  
 
@@ -145,24 +144,18 @@ class Update(object):
         # perform QA checks on dictionary object before it is ingested
         status = True
         d = list_of_dicts
-        # print(d["layer_slug_s"])
         # Check if required elements have valid data
-        # currentErrorsList = []
-            #print(self.uuidList)
         try:
             if(("dc_identifier_s" not in d.keys()) or ((d["dc_identifier_s"] == ""))):
                 if os.path.basename(self.currentFile) not in self.scanCatch:
                     self.scanCatch.append(os.path.basename(self.currentFile))
                 self.fileProbList.append("File '" + os.path.basename(self.currentFile)+ "' has null field 'dc_identifier_s'")
             if(("layer_slug_s" not in d.keys()) or ((d["layer_slug_s"] == ""))):
-                #currentErrorsList.append("layer_slug_s")
                 if os.path.basename(self.currentFile) not in self.scanCatch:
                     self.scanCatch.append(os.path.basename(self.currentFile))
                 self.fileProbList.append("File '" + os.path.basename(self.currentFile)+ "' has null field 'layer_slug_s'")
-            if ((d["layer_slug_s"]) in self.uuidList):
-                if os.path.basename(self.currentFile) not in self.scanCatch:
-                    self.scanCatch.append(os.path.basename(self.currentFile))
-                self.fileProbList.append("File '" + os.path.basename(self.currentFile)+ "' {} in 'layer_slug_s' already exists".format(d["layer_slug_s"]))  
+            if ((d["layer_slug_s"]) in self.uuidDict.values()):
+                self.dupeUUID = str(d["layer_slug_s"])
             if("solr_geom" not in d.keys() or ("NaN" in d["solr_geom"])):
                 if os.path.basename(self.currentFile) not in self.scanCatch:
                     self.scanCatch.append(os.path.basename(self.currentFile))
@@ -198,7 +191,10 @@ class Update(object):
                 self.fileProbList.append("File '" + os.path.basename(self.currentFile)+ "' has null field 'solr_year_i'")
                # if(d["solr_year_i"] == 9999):
                 #   scanCatch += "solr_year_i\n"
-            self.uuidList.append(d["layer_slug_s"])
+            #self.uuidList.append(d["layer_slug_s"])
+            self.uuidDict.update({os.path.basename(self.currentFile): d["layer_slug_s"]})
+            
+            
             
         except (KeyError,TypeError):
             print("QA Scan Error on file" + os.path.basename(self.currentFile))
@@ -279,16 +275,8 @@ class Update(object):
                     print("Ingest terminated manually. Exiting...")
                     
     def uuid_sort(self, path_to_json):
-        self.path = Path(path_to_json,"for_review")
-        try:
-            if not os.path.exists(self.path):
-                #print("Creating directory 'for_review'...")
-                os.mkdir(self.path)
-        except OSError:
-            print("Failed to create directory 'for_review'")
-            exit()
         exists = False
-        #print("Checking for duplicate UUIDs...")
+        print("Checking for duplicate UUIDs...")
         self.ingestingDict = {}
         self.inSolrDict = {}
         files = self.get_files_from_path(path_to_json, criteria="*.json")
@@ -305,20 +293,19 @@ class Update(object):
             if uuid in self.inSolrDict.keys():
                 inSolrDupe = self.inSolrDict[uuid]
                 ingestingDupe = self.ingestingDict[uuid]
-                print("-"*60)
+                print("-"*45)
                 print(" - File '{}' has a UUID that is already associated with a file in Solr: '{}'".format(ingestingDupe,inSolrDupe))
-                print("-"*60)
+                print("-"*45)
                 overwrite = input("Overwrite existing file '{}'? (Y/N) ".format(inSolrDupe))
                 if overwrite.upper() != "Y":
-                    move = input("Move '{}' to 'for_review' folder and continue ingest? (Y/N) ".format(ingestingDupe))
+                    move = input("Move {} to 'for_review' folder and continue ingest? (Y/N) ".format(ingestingDupe))
                     if move.upper() == "Y":
                         shutil.move(Path(path_to_json,os.path.basename(file)),Path(self.path,os.path.basename(file)))
                     else:            
                         print("Ingest terminated manually.  Exiting...")
                         exit()
                 else:
-                    print("File '{}' will be Overwritten when ingested".format(inSolrDupe))
-                 
+                    print("hold")
                     
             
                 
@@ -335,25 +322,27 @@ class Update(object):
         self.success = False
         self.scanCatch = []
         self.fileProbList = []
-        self.uuidList = []
-        #self.fileErrorDict = {}
+        self.uuidDict = {}
         self.sortYN = ""
         files = self.get_files_from_path(path_to_json, criteria="*.json")
         if files:
             cwd = os.getcwd()
             #change where 'for_review' folder gets created
-            self.path = Path(path_to_json,"for_review")
+            path = Path(path_to_json,"for_review")
             self.dicts = []
-            print("Performing QA scan...")
-            for file in files:
-                self.currentFile = file
-                dictAppend = self.solr.json_to_dict(file)
+            print("Performing QA scan...") 
+            for i in files:
+                self.currentFile = i
+                dictAppend = self.solr.json_to_dict(i)
                 self.dicts.append(dictAppend)
                 scanHold = self.scan_dict_records(dictAppend)
-            # Initiate UUID Scan
-            print("Checking for duplicate UUIDs...")
-            self.uuid_sort(path_to_json)
             if len(self.scanCatch) != 0:
+                if len(self.uuidDict) > 1:
+                    for item in self.uuidDict.keys():
+                        if self.uuidDict[item] == self.dupeUUID:
+                            if item not in self.scanCatch:
+                                self.scanCatch.append(item)
+                            self.fileProbList.append("File '{}' has duplicate UUID: '{}' ".format(item, self.dupeUUID))
                 print("QA health check found {} error(s) in {} file(s) ".format((len(self.fileProbList)),len(self.scanCatch)))
                 print("-"*60)
                 for bad_file in self.fileProbList:
@@ -372,7 +361,7 @@ class Update(object):
                             print("Creating directory 'for_review'...")
                             print("Moving files to directory 'for_review'...")
                         for file in self.scanCatch:
-                            shutil.move(Path(path_to_json,file),Path(self.path,os.path.basename(file)))
+                            shutil.move(Path(path_to_json,file),Path(path,os.path.basename(file)))
                         self.success = True
                         self.readyToIngest = True
                         print( "{} record(s) successfully moved to 'for_review'".format((len(self.scanCatch))))
@@ -389,7 +378,10 @@ class Update(object):
         else:
             print("No files found.  Exiting...")
 
-                	
+        # Initiate UUID Scan
+        self.uuid_sort(path_to_json)
+            
+	
     def delete(self, uuid):
         # setup query to delete a single record
         # the delete operation is handled by delete_query
