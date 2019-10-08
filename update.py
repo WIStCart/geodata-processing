@@ -131,9 +131,9 @@ class Update(object):
         else: 
             # if instance not specified, default to dev
             print("Instance argument is null. Defaulting to dev...")
-            print("Currently this is actually defaulting to test")
-            SOLR_INSTANCE = "test"
-            SOLR_URL = SOLR_URL_TEST
+            #print("Currently this is actually defaulting to test")
+            SOLR_INSTANCE = "dev"
+            SOLR_URL = SOLR_URL_DEV
 
         self.solr = SolrInterface(url=SOLR_URL)
         self.uuid = UUID
@@ -276,34 +276,38 @@ class Update(object):
                     
     def uuid_sort(self, path_to_json):
         exists = False
-        print("Checking for duplicate UUIDs...")
+        print("Checking for duplicate UUIDs. This may take a minute...")
         self.ingestingDict = {}
         self.inSolrDict = {}
-        files = self.get_files_from_path(path_to_json, criteria="*.json")
+        files = self.get_files_from_path(path_to_json, criteria="*.json") 
         for file in files:
             #self.ingestingList.append(os.path.basename(file))
             uuidDict = self.solr.json_to_dict(file)
             uuid = uuidDict["layer_slug_s"]
-            self.ingestingDict[uuid] = str(os.path.basename(file))
+            self.ingestingDict[uuid] = str(os.path.basename(file))  
             results = self.solr.uuid_scan(uuid)
             for result in results:
                 re_uuid = result["layer_slug_s"]
+                re_title = result["dc_title_s"]
                 self.inSolrDict[re_uuid] = str(os.path.basename(file))
                 #self.inSolrDict[str(os.path.basename(file))] = re_uuid
             if uuid in self.inSolrDict.keys():
                 inSolrDupe = self.inSolrDict[uuid]
                 ingestingDupe = self.ingestingDict[uuid]
                 print("-"*45)
-                print(" - File '{}' has a UUID that is already associated with a file in Solr: '{}'".format(ingestingDupe,inSolrDupe))
+                print(" - File '{}' has a UUID that is already associated with a record in Solr: '{}'".format(ingestingDupe,re_title))
                 print("-"*45)
-                overwrite = input("Overwrite existing file '{}'? (Y/N) ".format(inSolrDupe))
-                if overwrite.upper() != "Y":
+                overwrite = input("Overwrite existing record '{}'? (Y/N) ".format(re_title))
+                #apply_all = input("Apply this answer '{}' to all future records? (Y/N)".format(overwrite))
+                if overwrite.upper() == "N":
                     move = input("Move {} to 'for_review' folder and continue ingest? (Y/N) ".format(ingestingDupe))
                     if move.upper() == "Y":
                         shutil.move(Path(path_to_json,os.path.basename(file)),Path(self.path,os.path.basename(file)))
                     else:            
                         print("Ingest terminated manually.  Exiting...")
-                        exit()
+                        exit()                    
+                #elif overwrite.upper() == "Y":
+                    #apply_all = input("There are {} files remaining with existing records. Overwrite All?".format())
                 else:
                     print("hold")
         print("UUID Health Check Complete")
