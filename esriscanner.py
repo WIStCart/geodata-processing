@@ -1,10 +1,10 @@
 """
 esriscanner.py
 
-Authors: Ben Segal, Jim Lacy, Eli Wilz
+Authors: Ben Segal, Jim Lacy
 
 Description: 
-This script is designed to run each day and scan Esri open data sites for data.  No attempt is made to track new/removed datasets.  Instead, our model is to start fresh with a new set of records each day. The process begins by first wiping out any existing records for each site in solr, then re-ingesting whatever is found during the scan.  This guarantees, as much as we can, that links to these scanned datasets are accurate and up-to-date.
+This script is designed to run each day and scan Esri open data sites for data.  No attempt is made to track new/removed datasets.  Instead, our model is to start fresh with a new set of records each day. This guarantees, as much as we can, that links to these scanned datasets are accurate and up-to-date.
 
 Dependencies: Python 3.x
 """
@@ -24,7 +24,6 @@ import ruamel.yaml as yaml
 To-do:
 
  - examine geographic envelope of each record
-      - if bounding box is off the coast of west africa, ignore record
       - if bounding box has a smaller extent than Wisconsin, override collection name... should *not* be labeled Statewide (example:  DNR records for Rock River)
  - see if we can cook up a method to exclude docs, apps
  - scan keywords field for iso categories
@@ -128,8 +127,7 @@ def json2gbl (jsonUrl, createdBy, siteName, collectionName, prefix, postfix):
             # Hub typically outputs a full url with UUID for the identifier.  We just want the uuid.
             identifier = dataset["identifier"].split('/')[-1]
             #print(identifier)
-
-            
+         
             # create slug from end of identifier
             # needs more work, not sure how reliable this method is
             # parse on /, and take rightmost element
@@ -140,29 +138,33 @@ def json2gbl (jsonUrl, createdBy, siteName, collectionName, prefix, postfix):
             modifiedDate = dataset["modified"]
             
             # DCAT records from Hub make no references to the type of geometry!!
-            geomType = ""
+            # for now, we default all of these records to Mixed... no better option 
+            geomType = "Mixed"
             
             # create references from distribution        
+            #print(">>>>>>>>>>>" + dataset["title"])
             references = "{"
             for refs in dataset["distribution"]:
                 url=getURL(refs)
+                #print(refs["format"])
                 #print(url)
-
                 if (refs["format"] == "Web Page" and url != "invalid"):
                     references += '\"http://schema.org/url\":\"' + url + '\",'
-                #elif (refs["format"] == "Esri REST" and url != "invalid"):
-                #        references += '\"urn:x-esri:serviceType:ArcGIS#FeatureLayer\":\"'  + url +  '\",'
-                #elif (refs["format"] == "GeoJSON" and url != "invalid"):
-                #    references += '\"http://schema.org/downloadUrl\":\"' + url + '\",'
-                #elif (refs["format"] == "CSV" and url != "invalid"):
-                #    references += '\"http://schema.org/downloadUrl\":\"' + url + '\",'
-                #elif (refs["format"] == "KML" and url != "invalid"):
-                #    references += '\"http://schema.org/downloadUrl\":\"' + url + '\",'
+                elif (refs["format"] == "Esri REST" and url != "invalid"):
+                        if ('FeatureServer') in url:
+                            references += '\"urn:x-esri:serviceType:ArcGIS#FeatureLayer\":\"'  + url +  '\",'
+                            #print("Found featureServer")
+                        elif ('ImageServer') in url:
+                            references += '\"urn:x-esri:serviceType:ArcGIS#ImageMapLayer\":\"'  + url +  '\",'
+                            #print("Found ImageServer")
+                        elif ('MapServer') in url:
+                            references += '\"urn:x-esri:serviceType:ArcGIS#DynamicMapLayer\":\"'  + url +  '\",'
+                            #print("Found MapServer Layer")
                 elif (refs["format"] == "ZIP" and url != "invalid"):
                     references += '\"http://schema.org/downloadUrl\":\"' + url + '\",'     
             references += "}"
             references = references.replace(",}", "}")
-                  
+            #print("\n")       
             # format gbl record
             gbl = {
                 "geoblacklight_version": "1.0",
@@ -173,7 +175,7 @@ def json2gbl (jsonUrl, createdBy, siteName, collectionName, prefix, postfix):
                 "dct_provenance_s": createdBy,
                 "layer_id_s": "", 
                 "layer_slug_s": slug,
-                "layer_geom_type_s": "", 
+                "layer_geom_type_s": geomType, 
                 "layer_modified_dt": "",
                 "dc_format_s": "File", 
                 "dc_language_s": "English",
@@ -193,7 +195,6 @@ def json2gbl (jsonUrl, createdBy, siteName, collectionName, prefix, postfix):
           
             # Strip special characters from title for json filename      
             outFileName=re.sub('[^A-Za-z0-9]+', '',dataset["title"])
-            #print(outFileName)
             
             # dump the generated GBL record to a file
             with open(path + "\\" + outFileName + ".json", 'w') as jsonfile:
