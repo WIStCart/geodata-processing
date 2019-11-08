@@ -23,8 +23,23 @@ Sites:
     SiteName: "WEM"
     DatasetPrefix: ""
     DatasetPostfix: ", WEM" 
-    DefaultCollection: "Statewide"    
-    # Add department of health services... check sagic site
+    DefaultCollection: "Statewide"
+  DPI_OpenData:
+    CollectionName: "Wisconsin Open Data Sites"
+    CreatedBy: "Wisconsin Department of Public Instruction"
+    SiteURL: "https://data-wi-dpi.opendata.arcgis.com/data.json"
+    SiteName: "DPI"
+    DatasetPrefix: ""
+    DatasetPostfix: ", WI DPI" 
+    DefaultCollection: "Statewide"     
+  DHS_OpenData:
+    CollectionName: "Wisconsin Open Data Sites"
+    CreatedBy: "Wisconsin Department of Health Services"
+    SiteURL: "https://data.dhsgis.wi.gov/data.json"
+    SiteName: "DHS"
+    DatasetPrefix: ""
+    DatasetPostfix: ", WI DHS" 
+    DefaultCollection: "Statewide"   
   # Cities
   Madison_OpenData:
     CollectionName: "Wisconsin Open Data Sites"
@@ -33,7 +48,7 @@ Sites:
     SiteName: "CityOfMadison"
     DatasetPrefix: ""
     DatasetPostfix: ", City of Madison"
-    DefaultCollection: "Municipal Data" 
+    DefaultCollection: "" 
   WisconsinRapids_OpenData:
     CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "City of Wisconsin Rapids"
@@ -41,7 +56,7 @@ Sites:
     SiteName: "CityOfWisconsinRapids"
     DatasetPrefix: ""
     DatasetPostfix: ", City of Wisconsin Rapids" 
-    DefaultCollection: "Municipal Data"     
+    DefaultCollection: ""     
   # RPCs
   CapitalRPC_OpenData:
     CollectionName: "Wisconsin Open Data Sites"
@@ -85,7 +100,7 @@ Sites:
     DatasetPrefix: ""
     DatasetPostfix: ", Columbia County"  
     DefaultCollection: ""    
-# Dane County not functioning as of September 6, 2019
+# Dane County not functioning as of October 3, 2019
 # DaneCounty_OpenData: 
   #   CollectionName: "Dane County Open Data"
   #   CreatedBy: "Dane County, WI"
@@ -158,14 +173,13 @@ Sites:
     DatasetPrefix: ""
     DatasetPostfix: ", Waupaca County"
     DefaultCollection: ""
-  # Waushara under construction
-  #WausharaCounty_OpenData:
-   # CollectionName: "Waushara County Open Data"
-   # CreatedBy: "Waushara County"
-   #SiteURL: "hhttp://data-waushara.opendata.arcgis.com/data.json"
-   # SiteName: "data-waushara"
-   # DatasetPrefix: ""
-   # DatasetPostfix: ", Waushara County"
+  WausharaCounty_OpenData:
+    CollectionName: "Wisconsin Open Data Sites"
+    CreatedBy: "Waushara County"
+    SiteURL: "http://data-waushara.opendata.arcgis.com/data.json"
+    SiteName: "WausharaCounty"
+    DatasetPrefix: ""
+    DatasetPostfix: ", Waushara County"
   WoodCounty_OpenData:
     CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Wood County"
