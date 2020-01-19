@@ -1,79 +1,128 @@
 Sites:
-  # State Agencies
+  # make sure URL checker is working
+  CheddarCounty_OpenData:
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
+    CreatedBy: "Cheddar County"
+    SiteURL: "http://opendata.whatever.com/datar.json"
+    SiteName: "CheddarCounty"
+    DatasetPrefix: ""
+    DatasetPostfix: ", Cheddar County"
+    SkipList: ""
+ # State Agencies
   LTSB_OpenData: 
-    CollectionName: "Wisconsin Open Data Sites"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
+      - CollectionName: "State Agency Open Data"
     CreatedBy: "Wisconsin Legislative Technology Services Bureau"
     SiteURL: "https://data-ltsb.opendata.arcgis.com/data.json"
     SiteName: "WILTSB"
     DatasetPrefix: ""
     DatasetPostfix: ", WI LTSB"
-    DefaultCollection: "Statewide"
+    SkipList: ""
   WiDNR_OpenData: 
-    CollectionName: "Wisconsin Open Data Sites"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
+      - CollectionName: "State Agency Open Data"
     CreatedBy: "Wisconsin Department of Natural Resources"
     SiteURL: "http://data-wi-dnr.opendata.arcgis.com/data.json"
     SiteName: "WIDNR"
     DatasetPrefix: ""
     DatasetPostfix: ", WI DNR"
-    DefaultCollection: "Statewide"
+    SkipList: # DNR includes a lot of very odd items in their data catalog
+      - UUID: "56ac067c4f36488e8e615ad6de495b95" # Presto app
+      - UUID: "4506324090d7496da868c4a025c56cf6" # Go Wild site
+      - UUID: "bf33290f978e43d5ab1665d78fab34e0" # Census site
+      - UUID: "41983ced80674b6d89ecbef6ad308b25" # EVAAL web app
+      - UUID: "4c81d81ceb444aec8b4ac5b74768d4c5" # Landnet Documentation
+      - UUID: "e1e89ae505594459a46407f1daf4ad5d" # GCSM Documentation
+      - UUID: "fd4d0c43abc04b4ab915586d9a0e89dd" # GCSM Full Report
+      - UUID: "13adbad479c141d09de58fb71623af2b" # reed canary metadata
+      - UUID: "438c9dbdf5374faeba3339253e0c231c" # managed lands metadata
+      - UUID: "74399552b45c426fa484b3b5fa55b7f5_1" # start of goofy DNR "-test" records
+      - UUID: "0fdf9589fe014831be9ed462393c77d7_1" 
+      - UUID: "548b1d7a9aa14ede9455fd4ab33f6f6f_2" 
+      - UUID: "f902715c7291423296f3b2532633bd4a_2" 
+      - UUID: "8d3ffad51df64028b06d1be44b1dd0c4_4"  
+      - UUID: "4b6b9d7d17bd4a02af03b7b2bb452a8c_3" 
+      - UUID: "dea061ddaca64957ab91a54482f89330_3"
+      - UUID: "59d7bcef2bdf47ed98d8f8cdf1d84530_0"
+      - UUID: "d8e3a3750ba74178b79e2d3389efa8c5_1" 
+      - UUID: "bfd8232f2e944d6fad52267f756e2d53_0" 
+      - UUID: "89ca29931aa343debb8ffded4cc70805_2" # end of goofy DNR -test records
+      - UUID: "b6cff8bd00304b73bb1d32f7678ecf34" # Wiscland 2 accuracy report
+      - UUID: "b6cff8bd00304b73bb1d32f7678ecf34" # Wiscland 2 User Guide
+      - UUID: "d48ca6f0c7ea4da9ad40d3ccc1643568" # Link to LTSB Data
+      - UUID: "09c67bfa6ae244e1a926f7f4e66842f0" # Link to SNA web page
+      - UUID: "f5070a4357594347b29dffe5543f9d23" # Link to NHI web page
   WEM_OpenData:
-    CollectionName: "Wisconsin Open Data Sites"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
+      - CollectionName: "State Agency Open Data"
     CreatedBy: "Wisconsin Emergency Management"
     SiteURL: "http://data-wem.opendata.arcgis.com/data.json"
     SiteName: "WEM"
     DatasetPrefix: ""
     DatasetPostfix: ", WEM" 
-    DefaultCollection: "Statewide"
+    SkipList: ""
   DPI_OpenData:
-    CollectionName: "Wisconsin Open Data Sites"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
+      - CollectionName: "State Agency Open Data"
     CreatedBy: "Wisconsin Department of Public Instruction"
     SiteURL: "https://data-wi-dpi.opendata.arcgis.com/data.json"
     SiteName: "DPI"
     DatasetPrefix: ""
     DatasetPostfix: ", WI DPI" 
-    DefaultCollection: "Statewide"     
+    SkipList: ""    
   DHS_OpenData:
-    CollectionName: "Wisconsin Open Data Sites"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
+      - CollectionName: "State Agency Open Data"
     CreatedBy: "Wisconsin Department of Health Services"
     SiteURL: "https://data.dhsgis.wi.gov/data.json"
     SiteName: "DHS"
     DatasetPrefix: ""
-    DatasetPostfix: ", WI DHS" 
-    DefaultCollection: "Statewide"   
+    DatasetPostfix: ", WI DHS"  
+    SkipList: ""
   # Cities
   Madison_OpenData:
-    CollectionName: "Wisconsin Open Data Sites"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "City of Madison"
     SiteURL: "http://data-cityofmadison.opendata.arcgis.com/data.json"
     SiteName: "CityOfMadison"
     DatasetPrefix: ""
     DatasetPostfix: ", City of Madison"
-    DefaultCollection: "" 
+    SkipList: ""
   WisconsinRapids_OpenData:
-    CollectionName: "Wisconsin Open Data Sites"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "City of Wisconsin Rapids"
     SiteURL: "http://rapidsdata-wisconsinrapids.opendata.arcgis.com/data.json"
     SiteName: "CityOfWisconsinRapids"
     DatasetPrefix: ""
-    DatasetPostfix: ", City of Wisconsin Rapids" 
-    DefaultCollection: ""     
+    DatasetPostfix: ", City of Wisconsin Rapids"  
+    SkipList: ""
   # RPCs
   CapitalRPC_OpenData:
-    CollectionName: "Wisconsin Open Data Sites"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Capital Area Regional Planning Commission"
     SiteURL: "https://data-carpc.opendata.arcgis.com/data.json"
     SiteName: "CARPC"
     DatasetPrefix: ""
-    DatasetPostfix: ", CARPC"  
-    DefaultCollection: "" 
+    DatasetPostfix: ", CARPC" 
+    SkipList: ""    
   ECWRPC_OpenData:
-    CollectionName: "Wisconsin Open Data Sites"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "East Central Wisconsin Regional Planning Commission"
     SiteURL: "http://data-ecwrpc.opendata.arcgis.com/data.json"
     SiteName: "ECWRPC"
     DatasetPrefix: ""
     DatasetPostfix: ", ECWRPC"
-    DefaultCollection: "" 
+    SkipList: ""
 # SEWRPC coming winter of 2019/2020
 # SEWRPC_OpenData:
   # CollectionName: "Southeastern Wisconsin RPC"
@@ -82,25 +131,26 @@ Sites:
   # SiteName: ""
   # DatasetPrefix: ""
   # DatasetPostfix: ", Southeastern WI RPC"      
-  # DefaultCollection: "RPC Data" 
-  # Counties
+# Counties
   AshlandCounty_OpenData:
-    CollectionName: "Wisconsin Open Data Sites"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Ashland County"
     SiteURL: "https://data-ashlandcountywi.opendata.arcgis.com/data.json"
     SiteName: "AshlandCounty"
     DatasetPrefix: ""
-    DatasetPostfix: ", Ashland County"  
-    DefaultCollection: ""
+    DatasetPostfix: ", Ashland County" 
+    SkipList: ""    
   ColumbiaCounty_OpenData:
-    CollectionName: "Wisconsin Open Data Sites"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Columbia County"
     SiteURL: "http://opendata-cclid.opendata.arcgis.com/data.json"
     SiteName: "ColumbiaCounty"
     DatasetPrefix: ""
-    DatasetPostfix: ", Columbia County"  
-    DefaultCollection: ""    
-# Dane County not functioning as of October 3, 2019
+    DatasetPostfix: ", Columbia County" 
+    SkipList: ""    
+# Dane County not functioning as of 12/3/2019
 # DaneCounty_OpenData: 
   #   CollectionName: "Dane County Open Data"
   #   CreatedBy: "Dane County, WI"
@@ -108,83 +158,93 @@ Sites:
   #   SiteName: "gis-countyofdane"
   #   DatasetPrefix: ""
   #   DatasetPostfix: ", Dane County"
-  #DefaultCollection: ""  
   MilwaukeeCounty_OpenData:
-    CollectionName: "Wisconsin Open Data Sites"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Milwaukee County"
     SiteURL: "http://gis-mclio.opendata.arcgis.com/data.json"
     SiteName: "MilwaukeeCounty"
     DatasetPrefix: ""
-    DatasetPostfix: ", Milwaukee County"  
-    DefaultCollection: ""    
+    DatasetPostfix: ", Milwaukee County" 
+    SkipList: ""    
   OutagamieCounty_OpenData:
-    CollectionName: "Wisconsin Open Data Sites"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Outagamie County"
     SiteURL: "http://data-ocgis.opendata.arcgis.com/data.json"
     SiteName: "OutagamieCounty"
     DatasetPrefix: ""
-    DatasetPostfix: ", Outagamie County"   
-    DefaultCollection: ""
+    DatasetPostfix: ", Outagamie County"
+    SkipList: ""    
   RacineCounty_OpenData:
-    CollectionName: "Wisconsin Open Data Sites"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Racine County"
     SiteURL: "http://data-racinecounty.opendata.arcgis.com/data.json"
     SiteName: "RacineCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Racine County" 
-    DefaultCollection: ""
+    SkipList: ""
   StCroixCounty_OpenData:
-    CollectionName: "Wisconsin Open Data Sites"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "St. Croix County"
-    SiteURL: "https://sccgis-scccdd.opendata.arcgis.com/data.json"
+    SiteURL: "https://gis-scccdd.opendata.arcgis.com//data.json"
     SiteName: "StCroixCounty"
     DatasetPrefix: ""
-    DatasetPostfix: ", St. Croix County"  
-    DefaultCollection: ""
+    DatasetPostfix: ", St. Croix County"
+    SkipList: ""    
   SaukCounty_OpenData:
-    CollectionName: "Wisconsin Open Data Sites"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Sauk County"
     SiteURL: "https://data-saukgis.opendata.arcgis.com/data.json"
     SiteName: "SaukCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Sauk County"
-    DefaultCollection: ""
+    SkipList: ""
   VilasCounty_OpenData:
-    CollectionName: "Wisconsin Open Data Sites"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Vilas County"
     SiteURL: "https://data-vilas.opendata.arcgis.com/data.json"
     SiteName: "VilasCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Vilas County" 
-    DefaultCollection: ""
+    SkipList: ""
   WaukeshaCounty_OpenData:
-    CollectionName: "Wisconsin Open Data Sites"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Waukesha County"
     SiteURL: "http://data-waukeshacounty.opendata.arcgis.com/data.json"
     SiteName: "WaukeshaCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Waukesha County"
-    DefaultCollection: ""
+    SkipList: ""
   WaupacaCounty_OpenData:
-    CollectionName: "Wisconsin Open Data Sites"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Waupaca County"
     SiteURL: "https://data2017-04-05t135915451z-waupacacounty.opendata.arcgis.com/data.json"
     SiteName: "WaupacaCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Waupaca County"
-    DefaultCollection: ""
+    SkipList: ""
   WausharaCounty_OpenData:
-    CollectionName: "Wisconsin Open Data Sites"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Waushara County"
     SiteURL: "http://data-waushara.opendata.arcgis.com/data.json"
     SiteName: "WausharaCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Waushara County"
+    SkipList: ""
   WoodCounty_OpenData:
-    CollectionName: "Wisconsin Open Data Sites"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Wood County"
     SiteURL: "http://opendata.woodcogis.com/data.json"
     SiteName: "WoodCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Wood County"
-    DefaultCollection: ""
+    SkipList: ""

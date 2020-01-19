@@ -25,7 +25,6 @@ To-do:
 
  - examine geographic envelope of each record
       - if bounding box has a smaller extent than Wisconsin, override collection name... should *not* be labeled Statewide (example:  DNR records for Rock River)
- - see if we can cook up a method to exclude docs, apps
  - scan keywords field for iso categories
     
 """
@@ -65,10 +64,35 @@ def checkValidity(dataset):
     if 'spatial' not in dataset: 
         msg += "          No bounding box found."
         validData = False
+    
+    # make sure download is present, otherwise fail
+    # is this actually what we want????
+    # no.  This removes links to ftp downloads that an agency might have cataloged. 
+    
+    #reflist = []
+    #for refs in dataset["distribution"]:
+    #    reflist.append(refs["title"])
+    
+    #examine the url to see if its a real rest end point, versus a link to a pdf document for example?
+    # "accessURL": "https://gis.co.sauk.wi.us/arcgis/rest/services/Sauk/Apr2019Results_CommonFile_FGD/MapServer"
+    
+    # Need a method to filter out the strange stuff that agencies sometimes decide to include in their open data portals.
+    # such as links to reports, or web mapping apps (we aim to catalog data, not apps)
+    # DNR: link to national map, link to statewide parcel page, 
+    
+    #if (('Shapefile' not in reflist) or ('GeoJSON' not in reflist) or ('KML' not in reflist) or ('CSV' not in reflist)):
+    # the statement will not work if a dataset is only available via csv
+    # if ((true) or (false)) then proceed... this statement will always result in true, and therefore dataset will be skipped
+    #if ('Shapefile' not in reflist) or ('CSV' not in reflist):
+    #if ('CSV' not in reflist):
+       # print(reflist)
+        #msg += "          No download file found. Skipping record."
+        #validData = False
+        
     return validData,msg
 
 def getURL(refs):
-    # For uknown reasons, ARGIS Hub is inconsistent in outputting the type of url.
+    # For unknown reasons, ARGIS Hub is inconsistent in outputting the type of url.
     # Sometimes references use the key of "accessURL," other times "downloadURL"
     # This function checks to see which is present, and returns appropriate url
     # in addition, distribution methods may be defined, but the URL is missing.  For example:
@@ -79,16 +103,18 @@ def getURL(refs):
 					"mediaType": "application/json"
 		}"""
     if ('accessURL') in refs:
-        url=refs["accessURL"]
+       # split statement was added in Jan 2020 because Esri started adding a querystring for outSR with some odd formatting that caused parsing issues
+        url=refs["accessURL"].split('?')[0]
+        #print(url)
     elif ('downloadURL') in refs:
-        url=refs["downloadURL"]
+        url=refs["downloadURL"].split('?')[0]
     else:   
         #error, no url found
         url="invalid"
     return url
     
 
-def json2gbl (jsonUrl, createdBy, siteName, collectionName, prefix, postfix):
+def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix,skiplist):
     
     # subfolders for scanned sites will be dumped here
     basedir = "d:\projects\geodata\geodata-processing\scanner"
@@ -104,15 +130,31 @@ def json2gbl (jsonUrl, createdBy, siteName, collectionName, prefix, postfix):
     
     # grab json data from url
     s = urllib.request.urlopen(jsonUrl).read()
-    
+   
     # decode data grabbed from url
     d = json.loads(s.decode('utf-8'))
     
+    # Parse through the collections defined for each site           
+    collectionList = []
+    for CollectionName in collections:
+        collectionList.append(CollectionName["CollectionName"])
+    #print(collectionList)
+    
+    # Parse through the collections defined for each site           
+    uuidList = []
+    for uuid in skiplist:
+        uuidList.append(uuid["UUID"])
+    
     # loop through each dataset in the json file
     # note: Esri's dcat records call everything a "dataset"
-    for dataset in d["dataset"]:                       
+    for dataset in d["dataset"]:  
+        
+        # read DCAT dataset identifier
+        # Hub typically outputs a full url with UUID for the identifier.  We just want the uuid.
+        identifier = dataset["identifier"].split('/')[-1]
+ 
         validData,msg = checkValidity(dataset)
-        if validData:           
+        if validData and (identifier not in uuidList):             
             # call html strip function
             description = strip_tags(dataset["description"])
                  
@@ -122,12 +164,7 @@ def json2gbl (jsonUrl, createdBy, siteName, collectionName, prefix, postfix):
             # generate bounding box
             coordinates = [l for l in dataset["spatial"].split(',')]
             envelope = "ENVELOPE(" + coordinates[0] + ", " +  coordinates[2] + ", " + coordinates[3] + ", " + coordinates[1] + ")"
-            
-            # read DCAT dataset identifier
-            # Hub typically outputs a full url with UUID for the identifier.  We just want the uuid.
-            identifier = dataset["identifier"].split('/')[-1]
-            #print(identifier)
-         
+                    
             # create slug from end of identifier
             # needs more work, not sure how reliable this method is
             # parse on /, and take rightmost element
@@ -137,7 +174,7 @@ def json2gbl (jsonUrl, createdBy, siteName, collectionName, prefix, postfix):
             # ArcGIS Hub's handling of dates is sketchy at best
             modifiedDate = dataset["modified"]
             
-            # DCAT records from Hub make no references to the type of geometry!!
+            # Esri DCAT records from Hub make no references to the type of geometry!!
             # for now, we default all of these records to Mixed... no better option 
             geomType = "Mixed"
             
@@ -179,7 +216,7 @@ def json2gbl (jsonUrl, createdBy, siteName, collectionName, prefix, postfix):
                 "layer_modified_dt": "",
                 "dc_format_s": "File", 
                 "dc_language_s": "English",
-                "dct_isPartOf_sm": collectionName,
+                "dct_isPartOf_sm": collectionList,
                 "dc_creator_sm": createdBy,
                 "dc_type_s": "Dataset",
                 "dc_subject_sm": "",
@@ -190,19 +227,30 @@ def json2gbl (jsonUrl, createdBy, siteName, collectionName, prefix, postfix):
                 "solr_year_i": modifiedDate[0:4], 
                 "dct_references_s": references,
                 "uw_supplemental_s" : "",
-                "uw_notice_s": "This dataset was automatically cataloged from the author's Open Data Portal. In some cases, publication year and bounding coordinates shown here may be incorrect.  Please check the 'More details at' link for additional information.",
+                "uw_notice_s": "This dataset was automatically cataloged from the author's Open Data Portal. In some cases, publication year and bounding coordinates shown here may be incorrect. Additional download formats may be available on the author's website. Please check the 'More details at' link for additional information.",
             }
           
-            # Strip special characters from title for json filename      
-            outFileName=re.sub('[^A-Za-z0-9]+', '',dataset["title"])
+            # In the past, we generated filenames based on the dataset title.  But oddly, some sites have multiple instances of datasets with the same name.  
+            outFileName = slug
             
             # dump the generated GBL record to a file
             with open(path + "\\" + outFileName + ".json", 'w') as jsonfile:
                 json.dump(gbl, jsonfile, indent=1)
-        else:
+        elif not validData:
             print("     Validity check failed on " + prefix + dataset["title"] + postfix)
             print(msg)
+        else:
+            print("Skipping dataset: " + prefix + dataset["title"] + postfix)
    
+def validSite (siteURL):
+    req = urllib.request.Request(siteURL)
+    try: urllib.request.urlopen(req)
+    except urllib.error.URLError as e:
+        print(e.reason)
+        return False
+    else:
+        return True
+
    
 # loop through each site in OpenData.yml and call json2gbl function
 with open("OpenData.yml") as stream:
@@ -210,4 +258,10 @@ with open("OpenData.yml") as stream:
     for siteCode in theDict["Sites"]:
         site = theDict["Sites"][siteCode]
         print("\n\nProcessing Site: " + siteCode)
-        json2gbl(site["SiteURL"], site["CreatedBy"], site["SiteName"], site["CollectionName"],site["DatasetPrefix"],site["DatasetPostfix"])
+        #print(site["Collections"])
+        if validSite(site["SiteURL"]):
+            json2gbl(site["SiteURL"], site["CreatedBy"], site["SiteName"], site["Collections"],site["DatasetPrefix"],site["DatasetPostfix"],site["SkipList"])
+            #os.system("pause")
+        else:
+            print("**** Site Failure, check URL for " + site["CreatedBy"] + "****")
+        
