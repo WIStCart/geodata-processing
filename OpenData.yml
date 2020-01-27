@@ -10,36 +10,35 @@ Sites:
     DatasetPostfix: ", Cheddar County"
     SkipList: ""
  # State Agencies
+ # first pass of skiplists done for all agencies - Jim 1/21/20
   LTSB_OpenData: 
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
-      - CollectionName: "State Agency Open Data"
+      - CollectionName: "State Agency Data"
     CreatedBy: "Wisconsin Legislative Technology Services Bureau"
     SiteURL: "https://data-ltsb.opendata.arcgis.com/data.json"
     SiteName: "WILTSB"
     DatasetPrefix: ""
     DatasetPostfix: ", WI LTSB"
-    SkipList: ""
+    SkipList: ""  
   WiDNR_OpenData: 
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
-      - CollectionName: "State Agency Open Data"
+      - CollectionName: "State Agency Data"
     CreatedBy: "Wisconsin Department of Natural Resources"
     SiteURL: "http://data-wi-dnr.opendata.arcgis.com/data.json"
     SiteName: "WIDNR"
     DatasetPrefix: ""
     DatasetPostfix: ", WI DNR"
-    SkipList: # DNR includes a lot of very odd items in their data catalog
-      - UUID: "56ac067c4f36488e8e615ad6de495b95" # Presto app
-      - UUID: "4506324090d7496da868c4a025c56cf6" # Go Wild site
-      - UUID: "bf33290f978e43d5ab1665d78fab34e0" # Census site
-      - UUID: "41983ced80674b6d89ecbef6ad308b25" # EVAAL web app
+    SkipList: 
+      - UUID: "4506324090d7496da868c4a025c56cf6" # Link to Go Wild site
+      - UUID: "bf33290f978e43d5ab1665d78fab34e0" # Link to Census site
       - UUID: "4c81d81ceb444aec8b4ac5b74768d4c5" # Landnet Documentation
-      - UUID: "e1e89ae505594459a46407f1daf4ad5d" # GCSM Documentation
-      - UUID: "fd4d0c43abc04b4ab915586d9a0e89dd" # GCSM Full Report
-      - UUID: "13adbad479c141d09de58fb71623af2b" # reed canary metadata
-      - UUID: "438c9dbdf5374faeba3339253e0c231c" # managed lands metadata
-      - UUID: "74399552b45c426fa484b3b5fa55b7f5_1" # start of goofy DNR "-test" records
+      - UUID: "e1e89ae505594459a46407f1daf4ad5d" # GCSM Documentation **
+      - UUID: "fd4d0c43abc04b4ab915586d9a0e89dd" # GCSM Full Report **
+      - UUID: "13adbad479c141d09de58fb71623af2b" # reed canary metadata **
+      - UUID: "438c9dbdf5374faeba3339253e0c231c" # managed lands metadata **
+      - UUID: "74399552b45c426fa484b3b5fa55b7f5_1" # start of DNR "-test" records
       - UUID: "0fdf9589fe014831be9ed462393c77d7_1" 
       - UUID: "548b1d7a9aa14ede9455fd4ab33f6f6f_2" 
       - UUID: "f902715c7291423296f3b2532633bd4a_2" 
@@ -49,16 +48,17 @@ Sites:
       - UUID: "59d7bcef2bdf47ed98d8f8cdf1d84530_0"
       - UUID: "d8e3a3750ba74178b79e2d3389efa8c5_1" 
       - UUID: "bfd8232f2e944d6fad52267f756e2d53_0" 
-      - UUID: "89ca29931aa343debb8ffded4cc70805_2" # end of goofy DNR -test records
-      - UUID: "b6cff8bd00304b73bb1d32f7678ecf34" # Wiscland 2 accuracy report
+      - UUID: "89ca29931aa343debb8ffded4cc70805_2" # end of DNR -test records
       - UUID: "b6cff8bd00304b73bb1d32f7678ecf34" # Wiscland 2 User Guide
-      - UUID: "d48ca6f0c7ea4da9ad40d3ccc1643568" # Link to LTSB Data
-      - UUID: "09c67bfa6ae244e1a926f7f4e66842f0" # Link to SNA web page
-      - UUID: "f5070a4357594347b29dffe5543f9d23" # Link to NHI web page
+      - UUID: "d48ca6f0c7ea4da9ad40d3ccc1643568" # Link to LTSB site
+      - UUID: "765da338772b402a8c6a31a949616f6e" # link to Statewide parcel map site
+      - UUID: "8d68ad46853d48dcb492318de5c9ebd0" # link to national map 
+      - UUID: "96787e926ca34e07b1df3db6e320b340" # link to DNR interactive mapping applications **
+      - UUID: "9cff1d04434740dcb468941ae0a70d90" # link to wisconsinview 
   WEM_OpenData:
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
-      - CollectionName: "State Agency Open Data"
+      - CollectionName: "State Agency Data"
     CreatedBy: "Wisconsin Emergency Management"
     SiteURL: "http://data-wem.opendata.arcgis.com/data.json"
     SiteName: "WEM"
@@ -68,23 +68,24 @@ Sites:
   DPI_OpenData:
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
-      - CollectionName: "State Agency Open Data"
+      - CollectionName: "State Agency Data"
     CreatedBy: "Wisconsin Department of Public Instruction"
     SiteURL: "https://data-wi-dpi.opendata.arcgis.com/data.json"
     SiteName: "DPI"
     DatasetPrefix: ""
     DatasetPostfix: ", WI DPI" 
-    SkipList: ""    
+    SkipList: "" 
   DHS_OpenData:
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
-      - CollectionName: "State Agency Open Data"
+      - CollectionName: "State Agency Data"
     CreatedBy: "Wisconsin Department of Health Services"
     SiteURL: "https://data.dhsgis.wi.gov/data.json"
     SiteName: "DHS"
     DatasetPrefix: ""
     DatasetPostfix: ", WI DHS"  
-    SkipList: ""
+    SkipList: 
+      - UUID: "ca921d70bdd84ae8bc84cd09abd822d7" # link to census geography website 
   # Cities
   Madison_OpenData:
     Collections:
@@ -150,14 +151,15 @@ Sites:
     DatasetPrefix: ""
     DatasetPostfix: ", Columbia County" 
     SkipList: ""    
-# Dane County not functioning as of 12/3/2019
-# DaneCounty_OpenData: 
-  #   CollectionName: "Dane County Open Data"
-  #   CreatedBy: "Dane County, WI"
-  #   SiteURL: "https://gis-countyofdane.opendata.arcgis.com/data.json"
-  #   SiteName: "gis-countyofdane"
-  #   DatasetPrefix: ""
-  #   DatasetPostfix: ", Dane County"
+  DaneCounty_OpenData: 
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
+    CreatedBy: "Dane County, WI"
+    SiteURL: "https://gis-countyofdane.opendata.arcgis.com/data.json"
+    SiteName: "gis-countyofdane"
+    DatasetPrefix: ""
+    DatasetPostfix: ", Dane County"
+    SkipList: ""  
   MilwaukeeCounty_OpenData:
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
