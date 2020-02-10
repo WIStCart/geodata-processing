@@ -1,10 +1,10 @@
 """
 Update.py
- 
+
 Author(s): Jim Lacy, Ben Segal, Eli Wilz
-  
-Description: 
-This script is designed to interact with a Solr instance running the GeoBlacklight 1.0 Schema.  It can perform one of five operations: 
+
+Description:
+This script is designed to interact with a Solr instance running the GeoBlacklight 1.0 Schema.  It can perform one of five operations:
 1. Upload and and then ingest a directory of GBL-formatted json files. Optional: recurse into subfolders.
 2. Delete a named "collection" from the Solr index
 3. Delete a single record from the Index using the unique ID (uuid)
@@ -22,7 +22,7 @@ to-do:
 
 - Create UUID Filter on Duplicate UUIDs
 
-- Develop UI or GUI  
+- Develop UI or GUI
 
 
 """
@@ -79,8 +79,8 @@ class SolrInterface(object):
                 print(confirmMessage.format(num_recs=s.hits))
             else:
                 print("Okay, nothing deleted from " + SOLR_INSTANCE + " instance. Exiting...")
-        
-                
+
+
     def json_to_dict(self, json_doc):
         # read data from one json file
         #print("Reading input file " + json_doc)
@@ -95,7 +95,7 @@ class SolrInterface(object):
             return j
         except UnboundLocalError:
             print("Syntax Error may effect the quality of this ingest")
-        
+
 
     def add_dict_list_to_solr(self, list_of_dicts):
         # ingest dictionary to Solr
@@ -107,13 +107,13 @@ class SolrInterface(object):
             print("Solr Error: {e}".format(e=e))
             print("*********************\n\n")
             return False
-        
+
     def uuid_scan(self, uuid):
         results = self.solr.search(uuid)
         return results
 
 
-          
+
 class Update(object):
 
 
@@ -128,19 +128,19 @@ class Update(object):
             SOLR_URL = SOLR_URL_TEST
         elif INSTANCE=="dev":
             SOLR_URL = SOLR_URL_DEV
-        else: 
+        else:
             # if instance not specified, default to dev
             print("Instance argument is null. Defaulting to dev...")
             #print("Currently this is actually defaulting to test")
-            SOLR_INSTANCE = "dev"
-            SOLR_URL = SOLR_URL_DEV
+            SOLR_INSTANCE = "test"
+            SOLR_URL = SOLR_URL_TEST
 
         self.solr = SolrInterface(url=SOLR_URL)
         self.uuid = UUID
         self.collection = COLLECTION
         self.provenance = PROVENANCE
-     
-    def scan_dict_records(self, list_of_dicts):
+
+    def qa_test(self, list_of_dicts):
         # perform QA checks on dictionary object before it is ingested
         status = True
         d = list_of_dicts
@@ -181,11 +181,11 @@ class Update(object):
                 if os.path.basename(self.currentFile) not in self.scanCatch:
                     self.scanCatch.append(os.path.basename(self.currentFile))
                 self.fileProbList.append("File '" + os.path.basename(self.currentFile)+ "' has null field 'dc_description_s'")
-            if(("dc_subject_sm" not in d.keys()) or ((d["dc_subject_sm"] == ""))):
-                if os.path.basename(self.currentFile) not in self.scanCatch:
-                    self.scanCatch.append(os.path.basename(self.currentFile))
-                self.fileProbList.append("File '" + os.path.basename(self.currentFile)+ "' has null field 'dc_subject_sm'")   
-            if (("solr_year_i" not in d.keys()) or ((d["solr_year_i"] == ""))):
+            # if(("dc_subject_sm" not in d.keys()) or ((d["dc_subject_sm"] == ""))):
+            #     if os.path.basename(self.currentFile) not in self.scanCatch:
+            #         self.scanCatch.append(os.path.basename(self.currentFile))
+            #     self.fileProbList.append("File '" + os.path.basename(self.currentFile)+ "' has null field 'dc_subject_sm'")
+            # if (("solr_year_i" not in d.keys()) or ((d["solr_year_i"] == ""))):
                 if os.path.basename(self.currentFile) not in self.scanCatch:
                     self.scanCatch.append(os.path.basename(self.currentFile))
                 self.fileProbList.append("File '" + os.path.basename(self.currentFile)+ "' has null field 'solr_year_i'")
@@ -193,26 +193,26 @@ class Update(object):
                 #   scanCatch += "solr_year_i\n"
             #self.uuidList.append(d["layer_slug_s"])
             self.uuidDict.update({os.path.basename(self.currentFile): d["layer_slug_s"]})
-            
-            
-            
+
+
+
         except (KeyError,TypeError):
             print("QA Scan Error on file" + os.path.basename(self.currentFile))
             exit()
         # Testing using a dictionary to hold errors instead
         #if currentErrorsList:
             #self.fileErrorDict.update({self.currentFile:currentErrorsList})
-        
+
         # If issues, print message and layer ids, set status to false
         if (len(self.scanCatch) != 0):
             status = False
             #print("\nQA health check failed for " + d["dc_title_s"])
-                  #"\nThe following fields are either missing data or have invalid entries: " + scanCatch) 
+                  #"\nThe following fields are either missing data or have invalid entries: " + scanCatch)
             # also send these result to a log file
-        
+
         #print(d["layer_slug_s"] + "\n")
         return status
-        
+
     def get_files_from_path(self, start_path, criteria="*"):
         # construct a list of json files to read
         # process fails if input directory contains a trailing \
@@ -220,13 +220,12 @@ class Update(object):
         if self.RECURSIVE:
             for path, folder, ffiles in os.walk(start_path):
                 for i in fnmatch.filter(ffiles, criteria):
-                    #files.append(os.path.join(path, i))
                     files.append(Path(path, i))
         else:
             #files = glob(os.path.join(start_path, criteria))
             files = Path(start_path).glob(criteria)
-        return files  
-    
+        return files
+
     def add_single(self, path_to_json):
         self.ingested = False
         arg = (path_to_json.strip("\\"))
@@ -245,79 +244,103 @@ class Update(object):
             # delete file from original location so it's copy can be moved back after ingest
             if self.success and len(os.listdir(temp)) == 0:
                 os.remove(arg)
-                
-            # move file back if necesary   
+
+            # move file back if necesary
             if self.sortYN.upper() == "Y" and len(os.listdir(temp)) != 0:
                 os.rename(newPath,arg)
             # delete temporary folder
-            shutil.rmtree(temp)   
+            shutil.rmtree(temp)
         else:
             print("File not found. Please enter a valid path to a single json file")
-            
-                   
+
+
     def add_folder(self, path_to_json):
         self.scan(path_to_json)
         files = self.get_files_from_path(path_to_json, criteria="*.json")
         if files and self.success == True:
             self.dicts = []
-            print("Preparing for ingest. This may take a minute...")
             for i in files:
                 dictAppend = self.solr.json_to_dict(i)
                 self.dicts.append(dictAppend)
-            if self.readyToIngest == True:
-                confirm = input("Ingest {} file(s) into {} instance of Solr? (Y/N) ".format((len(self.dicts)),SOLR_INSTANCE))
-                if confirm.upper() == "Y":
-                    print("Ingesting {} records(s) into Solr. This may take a minute...".format(len(self.dicts)))
-                    ingest_result = self.solr.add_dict_list_to_solr(self.dicts)
-                    print("{} record(s) successfully ingested into {} instance of Solr".format(len(self.dicts), SOLR_INSTANCE))
-                    self.ingested = True
+            if self.readyToIngest == True and len(self.dicts) != 0:
+                if len(self.dicts) == 0:
+                    print("All Files Moved to 'for_review', Nothing to Ingest")
                 else:
-                    print("Ingest terminated manually. Exiting...")
-                    
-    def uuid_sort(self, path_to_json):
+                    print("Preparing for ingest. This may take a minute...")
+                    confirm = input("Ingest {} file(s) into {} instance of Solr? (Y/N) ".format((len(self.dicts)),SOLR_INSTANCE))
+                    if confirm.upper() == "Y":
+                        print("Ingesting {} records(s) into Solr. This may take a minute...".format(len(self.dicts)))
+                        ingest_result = self.solr.add_dict_list_to_solr(self.dicts)
+                        print("{} record(s) successfully ingested into {} instance of Solr".format(len(self.dicts), SOLR_INSTANCE))
+                        self.ingested = True
+                    else:
+                        print("Ingest terminated manually. Exiting...")
+
+    def uuid_overwrite(self, path_to_json):
         exists = False
         print("Checking for duplicate UUIDs. This may take a minute...")
         self.ingestingDict = {}
         self.inSolrDict = {}
-        files = self.get_files_from_path(path_to_json, criteria="*.json") 
+        self.recordCount = int(len(self.dicts))
+        files = self.get_files_from_path(path_to_json, criteria="*.json")
+        apply_all_flag = False
+        counter = int(len(self.dicts)-1)
         for file in files:
             #self.ingestingList.append(os.path.basename(file))
             uuidDict = self.solr.json_to_dict(file)
             uuid = uuidDict["layer_slug_s"]
-            self.ingestingDict[uuid] = str(os.path.basename(file))  
+            self.ingestingDict[uuid] = str(os.path.basename(file))
             results = self.solr.uuid_scan(uuid)
             for result in results:
                 re_uuid = result["layer_slug_s"]
                 re_title = result["dc_title_s"]
                 self.inSolrDict[re_uuid] = str(os.path.basename(file))
-                #self.inSolrDict[str(os.path.basename(file))] = re_uuid
-            if uuid in self.inSolrDict.keys():
+
+            if uuid in self.inSolrDict.keys() and apply_all_flag == False:
                 inSolrDupe = self.inSolrDict[uuid]
                 ingestingDupe = self.ingestingDict[uuid]
+                self.dupeCount = self.dupeCount + 1
                 print("-"*45)
                 print(" - File '{}' has a UUID that is already associated with a record in Solr: '{}'".format(ingestingDupe,re_title))
                 print("-"*45)
-                overwrite = input("Overwrite existing record '{}'? (Y/N) ".format(re_title))
-                #apply_all = input("Apply this answer '{}' to all future records? (Y/N)".format(overwrite))
-                if overwrite.upper() == "N":
-                    move = input("Move {} to 'for_review' folder and continue ingest? (Y/N) ".format(ingestingDupe))
+                overwrite = input("Overwrite existing record '{}'? or type 'All' to overwrite {} remaining record(s) (Y/N/A) ".format(re_title, self.recordCount))
+                if overwrite.upper() == "N" or overwrite.upper() == "NO":
+                    move = input("Move {} to 'for_review' folder and continue processing? (Y/N) ".format(ingestingDupe))
                     if move.upper() == "Y":
-                        shutil.move(Path(path_to_json,os.path.basename(file)),Path(self.path,os.path.basename(file)))
-                    else:            
+                        self.recordCount = (self.recordCount - 1)
+                        print("PATH: " + str(self.path))
+                        print("PATHTOJSON: " + str(path_to_json))
+                        folders = [f.name for f in os.scandir(path_to_json) if f.is_dir()]
+                        for folder in folders:
+                            recursivePath = Path(path_to_json,folder)
+                            recursiveReview = Path(recursivePath,"for_review")
+                            print(recursivePath)
+                            print(recursiveReview)
+                            print("MOVE FROM: " + str(Path(recursivePath,os.path.basename(file))))
+                            print("MOVE TO: " + str(recursiveReview))
+                            if not os.path.exists(self.path):
+                                os.mkdir(self.path)
+                            shutil.move(Path(recursivePath,os.path.basename(file)),Path(self.path,os.path.basename(file)))
+                    elif move.upper() == "N":
                         print("Ingest terminated manually.  Exiting...")
-                        exit()                    
-                #elif overwrite.upper() == "Y":
-                    #apply_all = input("There are {} files remaining with existing records. Overwrite All?".format())
+                        exit()
+                    else:
+                        print("Unrecognized Command, Exiting...")
+                        exit()
+                elif overwrite.upper() == "Y" or overwrite.upper() =="YES":
+                    apply_all_flag = False
+                elif overwrite.upper() == "A" or overwrite.upper() == "ALL":
+                    apply_all_flag = True
                 else:
-                    print("hold")
-        print("UUID Health Check Complete")
-                    
-            
-                
-            #else:
-                #print(" - File {} is good to go with its unique uuid {}.".format(os.path.basename(file),uuid))
-            
+                    print("Unrecognized Command, Exiting...")
+                    exit()
+            elif uuid in self.inSolrDict.keys():
+                pass
 
+        #if self.dupeCount != 0:
+            #print("NOTICE: Overwriting {} records where UUID is associated with an existing record in Solr.".format(str(self.dupeCount)))
+
+        print("UUID Health Check Complete")
 
     def scan(self, path_to_json):
         global SOLR_INSTANCE
@@ -330,18 +353,20 @@ class Update(object):
         self.uuidDict = {}
         self.sortYN = ""
         self.dupeUUID = ""
+        self.dupeCount = 0
         files = self.get_files_from_path(path_to_json, criteria="*.json")
         if files:
             cwd = os.getcwd()
             #change where 'for_review' folder gets created
-            path = Path(path_to_json,"for_review")
+            self.path = Path(path_to_json,"for_review")
             self.dicts = []
-            print("Performing QA scan...") 
+            print("Performing QA scan...")
+            qaTestResult = False
             for i in files:
                 self.currentFile = i
                 dictAppend = self.solr.json_to_dict(i)
                 self.dicts.append(dictAppend)
-                scanHold = self.scan_dict_records(dictAppend)
+                qaTestResult = self.qa_test(dictAppend)
             if len(self.scanCatch) != 0:
                 if len(self.uuidDict) > 1:
                     for item in self.uuidDict.keys():
@@ -356,23 +381,25 @@ class Update(object):
                 print("-"*60)
                 self.sortYN = input("Sort {} failed files into review folder and continue? (Y/N) ".format((len(self.scanCatch))))
             else:
-                self.uuid_sort(path_to_json)
+                self.uuid_overwrite(path_to_json)
                 print("QA Health Check Passed!")
                 self.readyToIngest = True
-            if (scanHold == False and self.sortYN.upper()== "Y"):
+            if (qaTestResult == False and self.sortYN.upper()== "Y"):
                     try:
-                        if os.path.exists(path):
+                        if os.path.exists(self.path):
                             print("Moving files to directory 'for_review'...")
                         else:
                             os.mkdir(path)
                             print("Creating directory 'for_review'...")
                             print("Moving files to directory 'for_review'...")
                         for file in self.scanCatch:
-                            shutil.move(Path(path_to_json,file),Path(path,os.path.basename(file)))
+                            if not os.path.exists(self.path):
+                                os.mkdir(self.path)
+                            shutil.move(Path(path_to_json,file),Path(self.path,os.path.basename(file)))
                         self.success = True
                         self.readyToIngest = True
                         print( "{} record(s) successfully moved to 'for_review'".format((len(self.scanCatch))))
-                        self.uuid_sort(path_to_json)
+                        self.uuid_overwrite(path_to_json)
                     except OSError:
                         print("OS Failure")
             elif self.sortYN.upper() == "N":
@@ -382,29 +409,25 @@ class Update(object):
                 self.success = True
             else:
                 print("Unrecognized Input, Scan Ended")
-                self.success = False  
+                self.success = False
         else:
             print("No files found.  Exiting...")
 
-        # Initiate UUID Scan
-        # self.uuid_sort(path_to_json)
-            
-	
     def delete(self, uuid):
         # setup query to delete a single record
         # the delete operation is handled by delete_query
         self.solr.delete_query("layer_slug_s:" + self.uuid)
-        
+
     def delete_collection(self, collection):
         # setup query to delete an entire collection
         # print("Collection passed is: " + self.collection)
         self.solr.delete_query("dct_isPartOf_sm:" + '"' + self.collection + '"')
-        
+
     def delete_provenance(self, provenance):
         # setup query to delete all records from specified provenance
         # print("Provenance passed is: " + self.provenance)
-        self.solr.delete_query("dct_provenance_s:" + '"' + self.provenance + '"')  
-        
+        self.solr.delete_query("dct_provenance_s:" + '"' + self.provenance + '"')
+
     def purge(self):
         # setup query to purge all records from Solr
         self.solr.delete_query("*:*")
@@ -433,35 +456,35 @@ def main():
     group.add_argument(
         "-dc",
         "--delete-collection",
-        help="Remove an entire collection from the Solr index.")  
+        help="Remove an entire collection from the Solr index.")
     group.add_argument(
         "-dp",
         "--delete-provenance",
         help="Remove all records from Solr index that belong \
-        to the specified provenance.")         
+        to the specified provenance.")
     group.add_argument(
         "-d",
         "--delete",
         help="Delete the provided unique record ID (layer_slug) \
-            from the Solr index.")  
+            from the Solr index.")
     group.add_argument(
         "-p",
         "--purge",
         action='store_true',
-        help="Delete the entire Solr index.") 
-    group = parser.add_mutually_exclusive_group(required=False)   
+        help="Delete the entire Solr index.")
+    group = parser.add_mutually_exclusive_group(required=False)
     group.add_argument(
         "-i",
         "--instance",
         choices={"prod", "test","dev"},
         help="Identify which instance of Solr to use.")
-    
+
     args = parser.parse_args()
     interface = Update(SOLR_USERNAME, SOLR_PASSWORD, FORCE=args.addFolder, SCAN=args.scan, COLLECTION=args.delete_collection, PROVENANCE=args.delete_provenance, UUID=args.delete,INSTANCE=args.instance, RECURSIVE=args.recursive, PURGE=args.purge)
-    
+
     inPath = args.addSingleFile
     if (inPath is not None and inPath[-1] != '\\'):
-            inPath += '\\'     
+            inPath += '\\'
     if args.addSingleFile:
         interface.add_single(inPath)
     elif args.addFolder:
@@ -471,7 +494,7 @@ def main():
     elif args.delete_collection:
         interface.delete_collection(args.delete_collection)
     elif args.delete_provenance:
-        interface.delete_provenance(args.delete_provenance)           
+        interface.delete_provenance(args.delete_provenance)
     elif args.delete:
         interface.delete(args.delete)
     elif args.purge:
