@@ -311,16 +311,32 @@ class Update(object):
                         print("PATH: " + str(self.path))
                         print("PATHTOJSON: " + str(path_to_json))
                         folders = [f.name for f in os.scandir(path_to_json) if f.is_dir()]
-                        for folder in folders:
-                            recursivePath = Path(path_to_json,folder)
-                            recursiveReview = Path(recursivePath,"for_review")
-                            print(recursivePath)
-                            print(recursiveReview)
-                            print("MOVE FROM: " + str(Path(recursivePath,os.path.basename(file))))
-                            print("MOVE TO: " + str(recursiveReview))
+                        #print(folders)
+                        if len(folders) >= 2:
+                            print("This is a recursive")
+                            for folder in folders:
+                                recursivePath = Path(path_to_json,folder)
+                                recursiveReview = Path(recursivePath,"for_review")
+                                moveSource = str(recursivePath)
+                                moveDestination = str(self.path)
+                                print("PATH: " + str(recursivePath))
+                                print("REVIEW: " + str(recursiveReview))
+                                #print("MOVE FROM: " + str(Path(recursivePath,os.path.basename(file))))
+                                #print("MOVE TO: " + str(recursiveReview))
+                                if not os.path.exists(self.path):
+                                    os.mkdir(self.path)
+                        else:
+                            print("Not a Recursive")
                             if not os.path.exists(self.path):
                                 os.mkdir(self.path)
-                            shutil.move(Path(recursivePath,os.path.basename(file)),Path(self.path,os.path.basename(file)))
+                            moveSource = Path(path_to_json,os.path.basename(file))
+                            moveDestination = Path(self.path,os.path.basename(file))
+                            print("Source: " + str(Path(path_to_json,os.path.basename(file))))
+                            print("Destination: " + str(Path(self.path,os.path.basename(file))))
+                            shutil.move(moveSource,moveDestination)
+                        #'test-scenarios\\eli-testdata\\tiny\\two\\Good_1.json
+                        #shutil.move(Path(recursivePath,os.path.basename(file)),Path(self.path,os.path.basename(file)))
+
                     elif move.upper() == "N":
                         print("Ingest terminated manually.  Exiting...")
                         exit()
@@ -367,6 +383,10 @@ class Update(object):
                 dictAppend = self.solr.json_to_dict(i)
                 self.dicts.append(dictAppend)
                 qaTestResult = self.qa_test(dictAppend)
+            if len(self.dicts) == 0:
+                print("ERROR: No Files Found, Use argument '-r' to ingest from subfolders")
+                exit()
+
             if len(self.scanCatch) != 0:
                 if len(self.uuidDict) > 1:
                     for item in self.uuidDict.keys():
@@ -389,7 +409,7 @@ class Update(object):
                         if os.path.exists(self.path):
                             print("Moving files to directory 'for_review'...")
                         else:
-                            os.mkdir(path)
+                            os.mkdir(self.path)
                             print("Creating directory 'for_review'...")
                             print("Moving files to directory 'for_review'...")
                         for file in self.scanCatch:
@@ -472,7 +492,7 @@ def main():
         "--purge",
         action='store_true',
         help="Delete the entire Solr index.")
-    group = parser.add_mutually_exclusive_group(required=False)
+    group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument(
         "-i",
         "--instance",
