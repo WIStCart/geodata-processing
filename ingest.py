@@ -17,14 +17,13 @@ All updates to Solr are "auto-committed" (changes are effective immediately)
 
 Find Step-by-step descriptions of each function in the README File (this doesn't exist yet)
 
-Dependencies: Python 3.x, pysolr, shutil
+Dependencies: Python 3.x, pysolr, shutil, pathlib
 
 """
 import os
 import json
 import argparse
 import sys
-from pathlib import Path
 from glob import glob
 import fnmatch
 import requests
@@ -35,6 +34,8 @@ from config import *
 # e.g., pip install pysolr
 import pysolr
 import shutil
+from pathlib import Path
+
 
 class SolrInterface(object):
 

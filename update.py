@@ -187,12 +187,18 @@ class Update(object):
         self.uuidDict = {}
         self.sortYN = ""
         self.dupeUUID = ""
+        folders = [f.name for f in os.scandir(path_to_json) if f.is_dir()]
+        if len(folders) >= 2:
+            self.isRecursive = True
+        else:
+            self.isRecursive = False
         files = self.get_files_from_path(path_to_json, criteria="*.json")
         if files:
             cwd = os.getcwd()
             #change where 'for_review' folder gets created
             self.path = Path(path_to_json,"for_review")
             self.dicts = []
+            self.recordCount = int(len(self.dicts))
             print("Performing QA scan...")
             qaTestResult = False
             for i in files:
@@ -206,11 +212,11 @@ class Update(object):
 
             if len(self.failedFiles) != 0:
                 if len(self.uuidDict) > 1:
-                    for item in self.uuidDict.keys():
-                        if self.uuidDict[item] == self.dupeUUID:
+                    for failedFile in self.uuidDict.keys():
+                        if self.uuidDict[failedFile] == self.dupeUUID:
                             if failedFile not in self.failedFiles:
                                 self.failedFiles.append(failedFile)
-                            self.fileProbList.append("File '{}' has duplicate UUID: '{}' ".format(item, self.dupeUUID))
+                            self.fileProbList.append("File '{}' has duplicate UUID: '{}' ".format(failedFile, self.dupeUUID))
                 print("QA health check found {} error(s) in {} file(s) ".format((len(self.fileProbList)),len(self.failedFiles)))
                 print("-"*60)
                 for bad_file in self.fileProbList:
@@ -219,8 +225,12 @@ class Update(object):
                 self.sortYN = input("Sort {} failed files into review folder and continue? (Y/N) ".format((len(self.failedFiles))))
             else:
                 self.uuid_overwrite(path_to_json)
-                print("QA Health Check Passed!")
                 self.readyToIngest = True
+                if self.recordCount == 0:
+                    print("NOTICE: All records moved to 'for_review'. Nothing to ingest. Exiting...")
+                    exit()
+                else:
+                    print("QA Health Check Passed!")
             if (qaTestResult == False and self.sortYN.upper()== "Y"):
                     try:
                         if os.path.exists(self.path):
@@ -232,6 +242,7 @@ class Update(object):
                         for file in self.failedFiles:
                             if not os.path.exists(self.path):
                                 os.mkdir(self.path)
+                            self.recordCount = (self.recordCount - 1)
                             shutil.move(Path(path_to_json,file),Path(self.path,os.path.basename(file)))
                         self.success = True
                         self.readyToIngest = True
@@ -253,6 +264,10 @@ class Update(object):
     def add_single(self, path_to_json):
         self.ingested = False
         arg = (path_to_json.strip("\\"))
+
+        file=os.path.basename(arg)
+
+
         if os.path.isfile(arg) and ".json" in arg:
             temp = "temp"
             if not os.path.exists(temp):
@@ -287,17 +302,17 @@ class Update(object):
                 dictAppend = self.solr.json_to_dict(i)
                 self.dicts.append(dictAppend)
             if self.readyToIngest == True and len(self.dicts) != 0:
-                ingestCount = (self.recordCount-(len(self.failedFiles)))
+                self.ingestCount = (self.recordCount-(len(self.failedFiles)))
                 if len(self.dicts) == 0:
                     print("All Files Moved to 'for_review', Nothing to Ingest")
                 else:
                     print("Preparing for ingest. This may take a minute...")
-                confirm = input("Ingest {} file(s) into {} instance of Solr? (Y/N) ".format(ingestCount,SOLR_INSTANCE))
+                confirm = input("Ingest {} file(s) into {} instance of Solr? (Y/N) ".format(self.ingestCount,SOLR_INSTANCE))
 
                 if confirm.upper() == "Y":
-                    print("Ingesting {} records(s) into Solr. This may take a minute...".format(ingestCount))
+                    print("Ingesting {} records(s) into Solr. This may take a minute...".format(self.ingestCount))
                     ingest_result = self.solr.add_dict_list_to_solr(self.dicts)
-                    print("{} record(s) successfully ingested into {} instance of Solr.".format(ingestCount,SOLR_INSTANCE))
+                    print("{} record(s) successfully ingested into {} instance of Solr.".format(self.ingestCount,SOLR_INSTANCE))
                     self.ingested = True
                 else:
                     print("Ingest terminated manually. Exiting...")
@@ -327,7 +342,11 @@ class Update(object):
                 print("-"*45)
                 print(" - File '{}' has a UUID that is already associated with a record in Solr: '{}'".format(ingestingDupe,re_title))
                 print("-"*45)
-                overwrite = input("Overwrite existing record '{}'? or type 'All' to overwrite {} remaining record(s) (Y/N/A) ".format(re_title, self.recordCount))
+                self.DIRLEN = (len([name for name in os.listdir(path_to_json) if os.path.isfile(os.path.join(path_to_json, name))]))
+                if self.isRecursive == True:
+                    overwrite = input("Overwrite existing record '{}'? or type 'All' to overwrite {} remaining record(s) (Y/N/A) ".format(re_title, self.recordCount))
+                if self.isRecursive == False:
+                    overwrite = input("Overwrite existing record '{}'? or type 'All' to overwrite {} remaining record(s) (Y/N/A) ".format(re_title, self.DIRLEN))
                 if overwrite.upper() == "N" or overwrite.upper() == "NO":
                     move = input("Move {} to 'for_review' folder and continue processing? (Y/N) ".format(ingestingDupe))
                     if move.upper() == "Y":
@@ -370,9 +389,10 @@ class Update(object):
                     exit()
             elif uuid in self.inSolrDict.keys():
                 pass
+        self.DIRLEN = (len([name for name in os.listdir(path_to_json) if os.path.isfile(os.path.join(path_to_json, name))]))
+        if self.DIRLEN != 0:
+            print("NOTICE: Overwriting {} records where UUID is associated with an existing record in Solr.".format(self.DIRLEN))
 
-        if self.recordCount != 0:
-            print("NOTICE: Overwriting {} records where UUID is associated with an existing record in Solr.".format(self.recordCount))
 
         print("UUID Health Check Complete")
 
