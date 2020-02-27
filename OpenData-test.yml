@@ -1,9 +1,20 @@
 Sites:
+  # make sure URL checker is working
+  CheddarCounty_OpenData:
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
+    CreatedBy: "Cheddar County"
+    SiteURL: "http://opendata.whatever.com/datar.json"
+    SiteName: "CheddarCounty"
+    DatasetPrefix: ""
+    DatasetPostfix: ", Cheddar County"
+    SkipList: ""
  # State Agencies
  # first pass of skiplists done for all agencies - Jim 1/21/20
   LTSB_OpenData: 
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
+      - CollectionName: "State Agency Data"
     CreatedBy: "Wisconsin Legislative Technology Services Bureau"
     SiteURL: "https://data-ltsb.opendata.arcgis.com/data.json"
     SiteName: "WILTSB"
@@ -13,6 +24,7 @@ Sites:
   WiDNR_OpenData: 
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
+      - CollectionName: "State Agency Data"
     CreatedBy: "Wisconsin Department of Natural Resources"
     SiteURL: "http://data-wi-dnr.opendata.arcgis.com/data.json"
     SiteName: "WIDNR"
@@ -46,6 +58,7 @@ Sites:
   WEM_OpenData:
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
+      - CollectionName: "State Agency Data"
     CreatedBy: "Wisconsin Emergency Management"
     SiteURL: "http://data-wem.opendata.arcgis.com/data.json"
     SiteName: "WEM"
@@ -55,6 +68,7 @@ Sites:
   DPI_OpenData:
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
+      - CollectionName: "State Agency Data"
     CreatedBy: "Wisconsin Department of Public Instruction"
     SiteURL: "https://data-wi-dpi.opendata.arcgis.com/data.json"
     SiteName: "DPI"
@@ -64,6 +78,7 @@ Sites:
   DHS_OpenData:
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
+      - CollectionName: "State Agency Data"
     CreatedBy: "Wisconsin Department of Health Services"
     SiteURL: "https://data.dhsgis.wi.gov/data.json"
     SiteName: "DHS"
