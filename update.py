@@ -63,22 +63,21 @@ class SolrInterface(object):
         # global SOLR_INSTANCE
         # execute delete query
         s = self.solr.search(self.escape_query(query), **{"rows": "0"})
+        num_recs = s.hits
         if s.hits == 0:
-            print("No records found in " + SOLR_INSTANCE + " instance. Nothing to delete.  Exiting...")
+            print("No records found in {} instance. Nothing to delete.  Exiting...".format(SOLR_INSTANCE))
         else:
-            inMessage = "Are you sure you want to delete {num_recs} record(s) from " + SOLR_INSTANCE + " instance? (Y/N): "
-            are_you_sure = input(inMessage.format(num_recs=s.hits))
+            inMessage = "Are you sure you want to delete {} record(s) from {} instance? (Y/N): ".format(num_recs,SOLR_INSTANCE)
+            are_you_sure = input(inMessage.format(num_recs))
             if are_you_sure.lower() == "y":
                 self.solr.delete(q=self.escape_query(query))
-                confirmMessage = "{num_recs} record(s) deleted from " + SOLR_INSTANCE + " instance."
-                print(confirmMessage.format(num_recs=s.hits))
+                print("{} record(s) deleted from {} instance.".format(num_recs,SOLR_INSTANCE))
             else:
-                print("Okay, nothing deleted from " + SOLR_INSTANCE + " instance. Exiting...")
+                print("Okay, nothing deleted from {} instance. Exiting...".format(SOLR_INSTANCE))
 
 
     def json_to_dict(self, json_doc):
         # read data from one json file
-        #print("Reading input file " + json_doc)
         try:
             j = json.load(open(json_doc, "rt", encoding="utf8"))
             return j
@@ -152,10 +151,11 @@ class Update(object):
                         self.failedFiles.append(os.path.basename(self.currentFile))
                     self.fileProbList.append("File '{}' has null field '{}'".format(os.path.basename(self.currentFile),key))
                 if ((d["layer_slug_s"]) in self.uuidDict.values()):
-                         self.dupeUUID = str(d["layer_slug_s"])
-                self.uuidDict.update({os.path.basename(self.currentFile): d["layer_slug_s"]})
+                    self.dupeUUID = str(d["layer_slug_s"])
+                    self.uuidDict.update({os.path.basename(self.currentFile): d["layer_slug_s"]})
+
         except (KeyError,TypeError):
-            print("QA Scan Error on file" + os.path.basename(self.currentFile))
+            print("QA Scan Error on file {}".format(os.path.basename(self.currentFile)))
             exit()
 
         # If a file has failed, switch the status to False
@@ -211,16 +211,18 @@ class Update(object):
                 exit()
 
             if len(self.failedFiles) != 0:
-                if len(self.uuidDict) > 1:
+                if len(self.uuidDict) != 0:
                     for failedFile in self.uuidDict.keys():
+                        print(self.uuidDict[failedFile], self.dupeUUID)
                         if self.uuidDict[failedFile] == self.dupeUUID:
+                            self.fileProbList.append("File '{}' has duplicate UUID: '{}' ".format(failedFile, self.dupeUUID))
                             if failedFile not in self.failedFiles:
                                 self.failedFiles.append(failedFile)
-                            self.fileProbList.append("File '{}' has duplicate UUID: '{}' ".format(failedFile, self.dupeUUID))
+
                 print("QA health check found {} error(s) in {} file(s) ".format((len(self.fileProbList)),len(self.failedFiles)))
                 print("-"*60)
                 for bad_file in self.fileProbList:
-                    print(" - "+ bad_file)
+                    print(" - {}".format(bad_file))
                 print("-"*60)
                 self.sortYN = input("Sort {} failed files into review folder and continue? (Y/N) ".format((len(self.failedFiles))))
             else:
@@ -230,6 +232,8 @@ class Update(object):
                     print("NOTICE: All records moved to 'for_review'. Nothing to ingest. Exiting...")
                     exit()
                 else:
+                    if len(self.inSolrDict) != 0:
+                        print("NOTICE: Overwriting {} records where UUID is associated with an existing record in Solr.".format(self.DIRLEN))
                     print("QA Health Check Passed!")
             if (qaTestResult == False and self.sortYN.upper()== "Y"):
                     try:
@@ -294,7 +298,10 @@ class Update(object):
 
 
     def add_folder(self, path_to_json):
-        self.scan(path_to_json)
+        try:
+            self.scan(path_to_json)
+        except FileNotFoundError:
+            print("ERROR:")
         files = self.get_files_from_path(path_to_json, criteria="*.json")
         if files and self.success == True:
             self.dicts = []
@@ -327,8 +334,8 @@ class Update(object):
         apply_all_flag = False
         counter = int(len(self.dicts)-1)
         for file in files:
-            uuidDict = self.solr.json_to_dict(file)
-            uuid = uuidDict["layer_slug_s"]
+            self.uuidDict = self.solr.json_to_dict(file)
+            uuid = self.uuidDict["layer_slug_s"]
             self.ingestingDict[uuid] = str(os.path.basename(file))
             results = self.solr.uuid_scan(uuid)
             for result in results:
@@ -390,28 +397,20 @@ class Update(object):
             elif uuid in self.inSolrDict.keys():
                 pass
         self.DIRLEN = (len([name for name in os.listdir(path_to_json) if os.path.isfile(os.path.join(path_to_json, name))]))
-        if self.DIRLEN != 0:
-            print("NOTICE: Overwriting {} records where UUID is associated with an existing record in Solr.".format(self.DIRLEN))
-
-
-        print("UUID Health Check Complete")
-
-
 
     def delete(self, uuid):
         # setup query to delete a single record
         # the delete operation is handled by delete_query
-        self.solr.delete_query("layer_slug_s:" + self.uuid)
+        self.solr.delete_query("layer_slug_s:{}".format(self.uuid))
 
     def delete_collection(self, collection):
         # setup query to delete an entire collection
-        # print("Collection passed is: " + self.collection)
-        self.solr.delete_query("dct_isPartOf_sm:" + '"' + self.collection + '"')
+        self.solr.delete_query('dct_isPartOf_sm:"{}"'.format(self.collection))
 
     def delete_provenance(self, provenance):
         # setup query to delete all records from specified provenance
-        # print("Provenance passed is: " + self.provenance)
-        self.solr.delete_query("dct_provenance_s:" + '"' + self.provenance + '"')
+        self.solr.delete_query("dct_provenance_s:{}".format(self.provenance))
+
 
     def purge(self):
         # setup query to purge all records from Solr
