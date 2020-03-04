@@ -137,6 +137,9 @@ class Update(object):
         # perform QA checks on dictionary object before it is ingested
         status = True
         d = list_of_dicts
+        file = os.path.basename(self.currentFile)
+        uuid = d["layer_slug_s"]
+
         # Add JSON Keys that are checked to see if they are null
         keyList = ["dc_identifier_s","layer_slug_s","solr_geom",
                     "dct_provenance_s","dc_rights_s","geoblacklight_version",
@@ -148,11 +151,22 @@ class Update(object):
             for key in keyList:
                 if((key not in d.keys()) or ((d[key] == ""))):
                     if os.path.basename(self.currentFile) not in self.failedFiles:
-                        self.failedFiles.append(os.path.basename(self.currentFile))
-                    self.fileProbList.append("File '{}' has null field '{}'".format(os.path.basename(self.currentFile),key))
-                if ((d["layer_slug_s"]) in self.uuidDict.values()):
-                    self.dupeUUID = str(d["layer_slug_s"])
-                    self.uuidDict.update({os.path.basename(self.currentFile): d["layer_slug_s"]})
+                        self.failedFiles.append(file)
+                    self.fileProbList.append("File '{}' has null field '{}'".format(file,key))
+
+            if uuid not in self.dumbDict.values():
+                self.dumbDict.update({file : uuid})
+            else:
+                key_list = list(self.dumbDict.keys())
+                val_list = list(self.dumbDict.values())
+                dupe_file = key_list[val_list.index(uuid)]
+                print("")
+                print("ERROR: Attempting to upload Duplicate UUIDs.")
+                print("-"*45)
+                print(" - Files '{}' and '{}' have the same UUID: '{}'".format(file,dupe_file,uuid))
+                print("-"*45)
+                print("Exiting...")
+                exit()
 
         except (KeyError,TypeError):
             print("QA Scan Error on file {}".format(os.path.basename(self.currentFile)))
@@ -172,7 +186,6 @@ class Update(object):
                 for i in fnmatch.filter(ffiles, criteria):
                     files.append(Path(path, i))
         else:
-            #files = glob(os.path.join(start_path, criteria))
             files = Path(start_path).glob(criteria)
         return files
 
@@ -182,6 +195,8 @@ class Update(object):
             SOLR_INSTANCE = args.instance
             print("Solr Instance: {}".format(SOLR_INSTANCE))
         self.success = False
+        #self.dumbList = []
+        self.dumbDict = {}
         self.failedFiles = []
         self.fileProbList = []
         self.uuidDict = {}
@@ -206,19 +221,12 @@ class Update(object):
                 dictAppend = self.solr.json_to_dict(i)
                 self.dicts.append(dictAppend)
                 qaTestResult = self.qa_test(dictAppend)
+            #self.uuid_report(path_to_json)
             if len(self.dicts) == 0:
                 print("ERROR: No Files Found, Use argument '-r' to ingest from subfolders")
                 exit()
 
             if len(self.failedFiles) != 0:
-                if len(self.uuidDict) != 0:
-                    for failedFile in self.uuidDict.keys():
-                        print(self.uuidDict[failedFile], self.dupeUUID)
-                        if self.uuidDict[failedFile] == self.dupeUUID:
-                            self.fileProbList.append("File '{}' has duplicate UUID: '{}' ".format(failedFile, self.dupeUUID))
-                            if failedFile not in self.failedFiles:
-                                self.failedFiles.append(failedFile)
-
                 print("QA health check found {} error(s) in {} file(s) ".format((len(self.fileProbList)),len(self.failedFiles)))
                 print("-"*60)
                 for bad_file in self.fileProbList:
@@ -351,9 +359,9 @@ class Update(object):
                 print("-"*45)
                 self.DIRLEN = (len([name for name in os.listdir(path_to_json) if os.path.isfile(os.path.join(path_to_json, name))]))
                 if self.isRecursive == True:
-                    overwrite = input("Overwrite existing record '{}'? or type 'All' to overwrite {} remaining record(s) (Y/N/A) ".format(re_title, self.recordCount))
+                    overwrite = input("Overwrite existing record '{}'? or type '(A)ll' to overwrite {} remaining record(s) (Y/N/A) ".format(re_title, self.recordCount))
                 if self.isRecursive == False:
-                    overwrite = input("Overwrite existing record '{}'? or type 'All' to overwrite {} remaining record(s) (Y/N/A) ".format(re_title, self.DIRLEN))
+                    overwrite = input("Overwrite existing record '{}'? or type '(A)ll' to overwrite {} remaining record(s) (Y/N/A) ".format(re_title, self.DIRLEN))
                 if overwrite.upper() == "N" or overwrite.upper() == "NO":
                     move = input("Move {} to 'for_review' folder and continue processing? (Y/N) ".format(ingestingDupe))
                     if move.upper() == "Y":
