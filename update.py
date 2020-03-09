@@ -20,8 +20,6 @@ Dependencies: Python 3.x, pysolr
 
 to-do:
 
-- Rename language to be the same as ingest.py
-
 - Develop UI or GUI
 
 
@@ -141,7 +139,7 @@ class Update(object):
         uuid = d["layer_slug_s"]
 
         # Add JSON Keys that are checked to see if they are null
-        keyList = ["dc_identifier_s","layer_slug_s","solr_geom",
+        keyList = ["dc_title_s", "dc_identifier_s","layer_slug_s","solr_geom",
                     "dct_provenance_s","dc_rights_s","geoblacklight_version",
                     "dc_creator_sm","dc_description_s","solr_year_i"]
 
@@ -149,19 +147,19 @@ class Update(object):
         # The QA Test
         try:
             for key in keyList:
-                if((key not in d.keys()) or ((d[key] == ""))):
+                if (key not in d.keys()) or ((d[key] == "")) or d[key] == ['']:
                     if os.path.basename(self.currentFile) not in self.failedFiles:
                         self.failedFiles.append(file)
                     self.fileProbList.append("File '{}' has null field '{}'".format(file,key))
 
-            if uuid not in self.dumbDict.values():
-                self.dumbDict.update({file : uuid})
+            if uuid not in self.dupeDict.values():
+                self.dupeDict.update({file : uuid})
             else:
-                key_list = list(self.dumbDict.keys())
-                val_list = list(self.dumbDict.values())
+                key_list = list(self.dupeDict.keys())
+                val_list = list(self.dupeDict.values())
                 dupe_file = key_list[val_list.index(uuid)]
-                print("")
-                print("ERROR: Attempting to upload Duplicate UUIDs.")
+                print("-"*45)
+                print(" ERROR: Attempting to upload Duplicate UUIDs.")
                 print("-"*45)
                 print(" - Files '{}' and '{}' have the same UUID: '{}'".format(file,dupe_file,uuid))
                 print("-"*45)
@@ -195,8 +193,7 @@ class Update(object):
             SOLR_INSTANCE = args.instance
             print("Solr Instance: {}".format(SOLR_INSTANCE))
         self.success = False
-        #self.dumbList = []
-        self.dumbDict = {}
+        self.dupeDict = {}
         self.failedFiles = []
         self.fileProbList = []
         self.uuidDict = {}
@@ -221,7 +218,6 @@ class Update(object):
                 dictAppend = self.solr.json_to_dict(i)
                 self.dicts.append(dictAppend)
                 qaTestResult = self.qa_test(dictAppend)
-            #self.uuid_report(path_to_json)
             if len(self.dicts) == 0:
                 print("ERROR: No Files Found, Use argument '-r' to ingest from subfolders")
                 exit()
@@ -241,7 +237,7 @@ class Update(object):
                     exit()
                 else:
                     if len(self.inSolrDict) != 0:
-                        print("NOTICE: Overwriting {} records where UUID is associated with an existing record in Solr.".format(self.DIRLEN))
+                        print("NOTICE: Overwriting {} records where UUID is associated with an existing record in Solr.".format(self.recordCount))
                     print("QA Health Check Passed!")
             if (qaTestResult == False and self.sortYN.upper()== "Y"):
                     try:
@@ -276,10 +272,7 @@ class Update(object):
     def add_single(self, path_to_json):
         self.ingested = False
         arg = (path_to_json.strip("\\"))
-
         file=os.path.basename(arg)
-
-
         if os.path.isfile(arg) and ".json" in arg:
             temp = "temp"
             if not os.path.exists(temp):
@@ -309,7 +302,7 @@ class Update(object):
         try:
             self.scan(path_to_json)
         except FileNotFoundError:
-            print("ERROR:")
+            print("ERROR: Not a valid file path.")
         files = self.get_files_from_path(path_to_json, criteria="*.json")
         if files and self.success == True:
             self.dicts = []
@@ -340,7 +333,6 @@ class Update(object):
         self.recordCount = int(len(self.dicts))
         files = self.get_files_from_path(path_to_json, criteria="*.json")
         apply_all_flag = False
-        counter = int(len(self.dicts)-1)
         for file in files:
             self.uuidDict = self.solr.json_to_dict(file)
             uuid = self.uuidDict["layer_slug_s"]
@@ -354,11 +346,13 @@ class Update(object):
             if uuid in self.inSolrDict.keys() and apply_all_flag == False:
                 inSolrDupe = self.inSolrDict[uuid]
                 ingestingDupe = self.ingestingDict[uuid]
-                print("-"*45)
+                print("")
+                print("-"*90)
                 print(" - File '{}' has a UUID that is already associated with a record in Solr: '{}'".format(ingestingDupe,re_title))
-                print("-"*45)
+                print("-"*90)
                 self.DIRLEN = (len([name for name in os.listdir(path_to_json) if os.path.isfile(os.path.join(path_to_json, name))]))
                 if self.isRecursive == True:
+                    print(" ")
                     overwrite = input("Overwrite existing record '{}'? or type '(A)ll' to overwrite {} remaining record(s) (Y/N/A) ".format(re_title, self.recordCount))
                 if self.isRecursive == False:
                     overwrite = input("Overwrite existing record '{}'? or type '(A)ll' to overwrite {} remaining record(s) (Y/N/A) ".format(re_title, self.DIRLEN))
@@ -369,10 +363,8 @@ class Update(object):
                         folders = [f.name for f in os.scandir(path_to_json) if f.is_dir()]
                         if len(folders) >= 2:
                             for folder in folders:
-                                recursivePath = Path(path_to_json,folder)
-                                reviewPath = Path(path_to_json,"for_review")
-                                moveSource = Path(recursivePath,ingestingDupe)
-                                moveDestination = Path(reviewPath,ingestingDupe)
+                                moveSource = Path(Path(path_to_json,folder),ingestingDupe)
+                                moveDestination = Path(Path(path_to_json,"for_review"),ingestingDupe)
                                 try:
                                     if not os.path.exists(self.path):
                                         os.mkdir(self.path)
@@ -418,7 +410,6 @@ class Update(object):
     def delete_provenance(self, provenance):
         # setup query to delete all records from specified provenance
         self.solr.delete_query("dct_provenance_s:{}".format(self.provenance))
-
 
     def purge(self):
         # setup query to purge all records from Solr
