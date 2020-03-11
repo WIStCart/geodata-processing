@@ -22,9 +22,6 @@ to-do:
 
 - create a README
 - decide what should maintain in repository
-
-
-
 """
 
 import os
@@ -194,6 +191,7 @@ class Update(object):
         if SOLR_INSTANCE == "":
             SOLR_INSTANCE = args.instance
             print("Solr Instance: {}".format(SOLR_INSTANCE))
+        ## scan runs first, so it holds the global variables for other functions
         self.success = False
         self.dupeDict = {}
         self.failedFiles = []
@@ -201,11 +199,13 @@ class Update(object):
         self.uuidDict = {}
         self.sortYN = ""
         self.dupeUUID = ""
+        # to get the counts right on files being ingested, it's important for the function to know if it is recursive or not
         folders = [f.name for f in os.scandir(path_to_json) if f.is_dir()]
         if len(folders) >= 2:
             self.isRecursive = True
         else:
             self.isRecursive = False
+        # get the files, and only procede if there are files
         files = self.get_files_from_path(path_to_json, criteria="*.json")
         if files:
             cwd = os.getcwd()
@@ -215,15 +215,19 @@ class Update(object):
             self.recordCount = int(len(self.dicts))
             print("Performing QA scan...")
             qaTestResult = False
+            ## add files to a dictionary so that they can be put into the qa test
             for i in files:
                 self.currentFile = i
                 dictAppend = self.solr.json_to_dict(i)
                 self.dicts.append(dictAppend)
                 qaTestResult = self.qa_test(dictAppend)
+            ## if there is nothing in the dictionary, it probably means you're trying to ingest into a subfolders but didn't select recursive
             if len(self.dicts) == 0:
                 print("ERROR: No Files Found, Use argument '-r' to ingest from subfolders")
                 exit()
 
+            ## self.failedFiles is a list that holds all the files that failed the QA test
+            ## self.fileProbList is a list of the actual problems with a file.
             if len(self.failedFiles) != 0:
                 print("QA health check found {} error(s) in {} file(s) ".format((len(self.fileProbList)),len(self.failedFiles)))
                 print("-"*60)
@@ -232,15 +236,19 @@ class Update(object):
                 print("-"*60)
                 self.sortYN = input("Sort {} failed files into review folder and continue? (Y/N) ".format((len(self.failedFiles))))
             else:
+                ## run the duplicate UUID function
                 self.uuid_overwrite(path_to_json)
                 self.readyToIngest = True
+                ## checks if all files have been moved
                 if self.recordCount == 0:
                     print("NOTICE: All records moved to 'for_review'. Nothing to ingest. Exiting...")
                     exit()
                 else:
+                ## overwrite notice
                     if len(self.inSolrDict) != 0:
                         print("NOTICE: Overwriting {} records where UUID is associated with an existing record in Solr.".format(self.recordCount))
                     print("QA Health Check Passed!")
+            ## when files are ready to be moved, this is the part of this function that moves them to 'for review'
             if (qaTestResult == False and self.sortYN.upper()== "Y"):
                     try:
                         if os.path.exists(self.path):
@@ -301,10 +309,13 @@ class Update(object):
 
 
     def add_folder(self, path_to_json):
+        ## try scan, if files don't exist, throw an error
         try:
             self.scan(path_to_json)
         except FileNotFoundError:
             print("ERROR: Not a valid file path.")
+
+        ## get all of the files to be added, create a list of dictionarys, and ingest.
         files = self.get_files_from_path(path_to_json, criteria="*.json")
         if files and self.success == True:
             self.dicts = []
@@ -319,6 +330,7 @@ class Update(object):
                     print("Preparing for ingest. This may take a minute...")
                 confirm = input("Ingest {} file(s) into {} instance of Solr? (Y/N) ".format(self.ingestCount,SOLR_INSTANCE))
 
+                ## add_dict_list_to_solr is the function that actually adds the records to Solr
                 if confirm.upper() == "Y":
                     print("Ingesting {} records(s) into Solr. This may take a minute...".format(self.ingestCount))
                     ingest_result = self.solr.add_dict_list_to_solr(self.dicts)
@@ -328,6 +340,8 @@ class Update(object):
                     print("Ingest terminated manually. Exiting...")
 
     def uuid_overwrite(self, path_to_json):
+        ## this function checks the uuids you're ingesting against the ones in Solr by creating two dictionaries and comparing them
+        ## it generates an error that says which records have the same UUID and whether or not you want to overwrite
         exists = False
         print("Checking for duplicate UUIDs. This may take a minute...")
         self.ingestingDict = {}
@@ -360,6 +374,7 @@ class Update(object):
                     overwrite = input("Overwrite existing record '{}'? or type '(A)ll' to overwrite {} remaining record(s) (Y/N/A) ".format(re_title, self.DIRLEN))
                 if overwrite.upper() == "N" or overwrite.upper() == "NO":
                     move = input("Move {} to 'for_review' folder and continue processing? (Y/N) ".format(ingestingDupe))
+                    ## this is where the movement of files exists
                     if move.upper() == "Y":
                         self.recordCount = (self.recordCount - 1)
                         folders = [f.name for f in os.scandir(path_to_json) if f.is_dir()]
@@ -411,7 +426,7 @@ class Update(object):
 
     def delete_provenance(self, provenance):
         # setup query to delete all records from specified provenance
-        self.solr.delete_query("dct_provenance_s:{}".format(self.provenance))
+        self.solr.delete_query("dct_provenance_s:" + '"' + self.provenance + '"')
 
     def purge(self):
         # setup query to purge all records from Solr
