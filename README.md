@@ -99,23 +99,33 @@ python update.py -i test -p
 
 ### Individual Function Descriptions
 
+#### add_folder 
+This function is used to add a folder of GeoBlacklight-formatted json files to Solr. It works by running the scan function to generate a dictionary of files that are ready 
+to be ingested into Solr and then ingesting the folder.
 
-## Ingest.py
+#### add_single 
+This function is used to add a single GeoBlacklight-formatted json file to Solr. It works by creating a temporary folder, adding the single file to that folder, 
+running the add_folder function, and then deleting the temporary folder.
 
-## Usage
+#### get_files_from_path(path_to_json, criteria)
+This function takes the path that is given, and returns a list of all the files that fit a certain criteria. In this script it is used to identify json files in a directory.
 
-```python
-import foobar
+#### qa_test(self, list_of_dicts)
+This is the function that runs the QA test on each individual json. The first thing it checks for is "layer_slug_s" which is where each files individual UUID is stored. If any 
+of the files that you are trying to ingest have duplicate uuids, it will stop the ingest until you fix it.
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
+The next thing it checks that the rest of the JSON keys are not null, or missing entirely. All files that fail the QA test are added to the list self.failedFiles.
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+#### scan
+This function is used to run the series of QA tests that creates a folder that is ready to be ingested, and moves all of the bad files into a 'for_review' directory. It is also used 
+to hold a lot of the variables used in other functions because it is the function that always runs first. This function is used to display the total number of errors found, and is used to
+move bad files to the 'for_review' folder. 
 
-Please make sure to update tests as appropriate.
+#### uuid_overwrite
+This function checks the uuids you are trying to ingest against the records that are already in Solr and confirms that you are willing to overwrite them. if there are duplicate UUIDs, this gives you the option to
+check each record individually, and either confirm or move, or confirm all ready to be overwritten.
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+
+
+
+
