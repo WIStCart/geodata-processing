@@ -20,7 +20,9 @@ Dependencies: Python 3.x, pysolr
 
 to-do:
 
-- Develop UI or GUI
+- create a README
+- decide what should maintain in repository
+
 
 
 """
@@ -347,9 +349,9 @@ class Update(object):
                 inSolrDupe = self.inSolrDict[uuid]
                 ingestingDupe = self.ingestingDict[uuid]
                 print("")
-                print("-"*90)
+                print("-"*45)
                 print(" - File '{}' has a UUID that is already associated with a record in Solr: '{}'".format(ingestingDupe,re_title))
-                print("-"*90)
+                print("-"*45)
                 self.DIRLEN = (len([name for name in os.listdir(path_to_json) if os.path.isfile(os.path.join(path_to_json, name))]))
                 if self.isRecursive == True:
                     print(" ")
@@ -416,6 +418,9 @@ class Update(object):
         self.solr.delete_query("*:*")
 
 def main():
+    print('-'*45)
+    print(" "*10+"- Update version 3.0 -")
+    print('-'*45)
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "-r",
