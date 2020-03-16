@@ -5,6 +5,7 @@ GeoblackLight record -->
     xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
     xmlns:mets="http://www.loc.gov/METS/"
     xmlns:uwdcGeo="http://digital.library.wisc.edu/1711.dl/UWDC-Geo"
+    xmlns:mods="http://www.loc.gov/mods/v3"
     xmlns:gml="http://www.opengis.net/gml"
     xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -28,6 +29,11 @@ GeoblackLight record -->
     <xsl:variable name="masterObject">
         <xsl:value-of select="tokenize(/mets:mets/@OBJID,':')[2]"/> 
     </xsl:variable>
+    
+    <!-- Parse title -->    
+    <xsl:variable name="townshipLabel">
+            <xsl:value-of select="tokenize(/mets:mets/@LABEL,':')[2]"/>             
+    </xsl:variable>
    
     <!-- Parse out child object used to grab derived products (IIIF image) --> 
     <xsl:variable name="contentIds">    
@@ -47,6 +53,7 @@ GeoblackLight record -->
         <xsl:value-of select="tokenize(/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/uwdcGeo:geographicDescription/uwdcGeo:footprint/gml:Envelope/gml:lowerCorner,' ')[1]"/>
     </xsl:variable> 
      
+
     <!-- Start of JSON output -->
     <xsl:text>{&#xa;</xsl:text>
     
@@ -59,10 +66,10 @@ GeoblackLight record -->
     <xsl:text>",&#xa;</xsl:text>
     
     <!-- Title - The name of the resource -->
-    <xsl:text>"dc_title_s": "</xsl:text>    
+    <xsl:text>"dc_title_s": "Historic PLSS Plat Map:</xsl:text>    
     <xsl:call-template name="removeBrackets">
-        <xsl:with-param name="text" select="/mets:mets/@LABEL"/>
-    </xsl:call-template>  
+        <xsl:with-param name="text" select="$townshipLabel"/>
+    </xsl:call-template>
     <xsl:text>",&#xa;</xsl:text>
     
     <!-- Description - hardcoded since description is the same for all maps -->
@@ -97,35 +104,26 @@ GeoblackLight record -->
     <xsl:text>"dc_subject_sm": </xsl:text>     
     <xsl:text>"Planning and Cadastral</xsl:text>
     <xsl:text>",&#xa;</xsl:text>
-
-    <!-- Spatial Coverage
-	This field is for place name keywords
-	-->
-    <xsl:text>"dct_spatial_sm": [</xsl:text>  
-    <xsl:for-each select="/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/ns1:mods/ns1:subject[@authority = 'lcsh']" xmlns:ns1="http://www.loc.gov/mods/v3">
-        <xsl:text>"</xsl:text>
-        <xsl:value-of select="ns1:geographic"/>
-        <xsl:text>"</xsl:text>
-        <xsl:if test="position() != last()">
-            <xsl:text>,</xsl:text>
-        </xsl:if>
-    </xsl:for-each>
-    <xsl:text>],&#xa;</xsl:text>
-      
-    <!-- Temporal Coverage
-	This represents the "Ground Condition" of the resource, meaning the time period data was collected or is intended to represent. Displays on the item page in the Year value.
-	-->
-    <!-- content date: range YYYY-YYYY if dates differ  -->
-    <xsl:text>"dct_temporal_sm": ["</xsl:text>
-    <xsl:text>1832-1866</xsl:text>      
-    <xsl:text>"],&#xa;</xsl:text>      
-             
-    <!-- Solr Year
-	This is an integer field in the form YYYY that is used for indexing in the Year & Time Period facets.  
-	Uses same data as temporal coverage per Jaime
-	-->
-    <xsl:text>"solr_year_i": ["1866"],&#xa;</xsl:text>
-
+    
+    <xsl:text>"dct_spatial_sm": [""]</xsl:text>  
+    <xsl:text>,&#xa;</xsl:text>
+    
+    <!-- If a specific start date is definted, use dct_temporal_sm to set a range; otherwise, set solr_year_i with a single date -->
+    <xsl:choose>
+        <xsl:when test="/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:originInfo/mods:dateIssued[@point='start']">
+            <xsl:text>"dct_temporal_sm": ["</xsl:text>
+            <xsl:value-of select="/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:originInfo/mods:dateIssued[@point='start']"/>
+            <xsl:text>-</xsl:text>  
+            <xsl:value-of select="/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:originInfo/mods:dateIssued[@point='end']"/>    
+            <xsl:text>"],&#xa;</xsl:text> 
+        </xsl:when> 
+        <xsl:otherwise>
+            <xsl:text>"solr_year_i": ["</xsl:text>
+            <xsl:value-of select="tokenize(/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:originInfo/mods:dateIssued,'-')[1]"/> 
+            <xsl-text>"],&#xa;</xsl-text>
+        </xsl:otherwise>
+    </xsl:choose>
+  
     <!-- References 
 	This element is a hash of key/value pairs for different types of external links. It external services and references using the CatInterOp approach.
 	-->       
@@ -158,7 +156,7 @@ GeoblackLight record -->
     
     <!-- Supplemental info	-->
     <xsl:text>"uw_supplemental_s": "</xsl:text> 
-    <xsl:text>The historic plat maps range from 1832 to 1866. Each individual map will contain the specific date of creation.</xsl:text>
+    <xsl:text>The original historic plat maps were created from 1832 to 1866. In most cases, the UW Digital Collections Center does not record a specific creation date for each individual map.</xsl:text>
     <xsl:text>",&#xa;</xsl:text>
      
     <!-- Insert placeholder for our per-dataset notices	-->
@@ -168,3 +166,4 @@ GeoblackLight record -->
     <!-- end of JSON output -->
 </xsl:template>    
 </xsl:stylesheet>
+
