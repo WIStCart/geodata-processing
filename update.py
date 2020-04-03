@@ -140,7 +140,7 @@ class Update(object):
         # Add JSON Keys that are checked to see if they are null
         keyList = ["dc_title_s", "dc_identifier_s","layer_slug_s","solr_geom",
                     "dct_provenance_s","dc_rights_s","geoblacklight_version",
-                    "dc_creator_sm","dc_description_s","solr_year_i"]
+                    "dc_creator_sm","dc_description_s","dct_temporal_s"]
 
         # Check if required elements have valid data
         # The QA Test
