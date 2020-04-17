@@ -462,7 +462,7 @@ up the specified text -->
     <xsl:choose>
         <xsl:when
       test="gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent[1]/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/gml:beginPosition/text() != ''">
-      <xsl:text>"solr_year_i": ["</xsl:text>
+      <xsl:text>"solr_year_i": </xsl:text>
       <xsl:value-of
         select="substring(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent[1]/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/gml:beginPosition, 1, 4)"/>
       <xsl:if
@@ -472,15 +472,15 @@ up the specified text -->
           select="substring(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent[1]/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/gml:endPosition, 1, 4)"
         />
       </xsl:if>
-      <xsl:text>"],&#xa;</xsl:text>
+      <xsl:text>,&#xa;</xsl:text>
     </xsl:when>
     
        <xsl:when
       test="gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent[1]/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimeInstant">
-      <xsl:text>"solr_year_i": ["</xsl:text>
+      <xsl:text>"solr_year_i": </xsl:text>
       <xsl:value-of
         select="substring(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent[1]/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimeInstant/gml:timePosition, 1, 4)"/>
-      <xsl:text>"],&#xa;</xsl:text>
+      <xsl:text>,&#xa;</xsl:text>
     </xsl:when>
   </xsl:choose>
   
