@@ -14,7 +14,7 @@ GeoblackLight record -->
     <xsl:import href="utilities.xsl"/>
     <xd:doc scope="stylesheet">
         <xd:desc>
-            <xd:p><xd:b>Created on:</xd:b> Jun 17, 2019</xd:p>
+            <xd:p><xd:b>Created on:</xd:b> April 15, 2020</xd:p>
             <xd:p><xd:b>Author:</xd:b> Jim Lacy</xd:p>
             <xd:p></xd:p>
         </xd:desc>
@@ -22,8 +22,12 @@ GeoblackLight record -->
     
     <xsl:output method="text" version="1.0" omit-xml-declaration="yes" indent="no" media-type="application/json"/>
     <xsl:strip-space elements="*"/>
-      
+       
 <xsl:template match="/">
+    
+    <xsl:variable name="lB">[</xsl:variable>
+    <xsl:variable name="rB">]</xsl:variable>
+    <xsl:variable name="surveyNotesBaseUrl" select="'http://digicoll.library.wisc.edu/cgi-bin/SurveyNotes/SurveyNotes-idx?type=PLSS'"/> 
     
     <!-- Extract unique dataset ID -->    
     <xsl:variable name="masterObject">
@@ -34,7 +38,7 @@ GeoblackLight record -->
     <xsl:variable name="townshipLabel">
             <xsl:value-of select="tokenize(/mets:mets/@LABEL,':')[2]"/>             
     </xsl:variable>
-   
+       
     <!-- Parse out child object used to grab derived products (IIIF image) --> 
     <xsl:variable name="contentIds">    
         <xsl:value-of select="tokenize(/mets:mets/mets:structMap[@TYPE='physical']/mets:div/mets:div[@ORDER='1']/@CONTENTIDS,':')[3]"/>
@@ -66,14 +70,13 @@ GeoblackLight record -->
     <xsl:text>",&#xa;</xsl:text>
     
     <!-- Title - The name of the resource -->
-    <xsl:text>"dc_title_s": "Historic PLSS Plat Map:</xsl:text>    
-    <xsl:call-template name="removeBrackets">
-        <xsl:with-param name="text" select="$townshipLabel"/>
-    </xsl:call-template>
+    <xsl:variable name="modifiedTownshipLabel" select="replace(replace(replace(replace(replace(replace($townshipLabel, 'Wisconsin', 'WI'),' North','N'),' West','W'),' East','E'),'Township ','T'),'Range ','R')"></xsl:variable>
+    <xsl:text>"dc_title_s": "Original PLSS Plat Map:</xsl:text> 
+        <xsl:value-of select="translate(translate($modifiedTownshipLabel, $lB, ''),$rB,'')"/>
     <xsl:text>",&#xa;</xsl:text>
-    
+      
     <!-- Description - hardcoded since description is the same for all maps -->
-    <xsl:text>"dc_description_s": "The field notes and plat maps of the public land survey of Wisconsin are a valuable resource for original land survey information, as well as for understanding Wisconsin's landscape history. The survey of Wisconsin was conducted between 1832 and 1866 by the federal General Land Office. This work established the township, range and section grid; the pattern upon which land ownership and land use is based. The survey records were transferred to the Wisconsin Board of Commissioners of Public Lands after the original survey was completed. Since that time, these records have been available for consultation at the BCPL's office in Madison, as hand-transcriptions, and more recently on microfilm. Now, they are being made available via the internet as electronic images.",&#xa;</xsl:text>       
+    <xsl:text>"dc_description_s": "The field notes and plat maps of the public land survey of Wisconsin are a valuable resource for original land survey information, as well as for understanding Wisconsin's landscape history. The survey of Wisconsin was conducted between 1832 and 1866 by the federal General Land Office. This work established the township, range and section grid; the pattern upon which land ownership and land use is based. The survey records were transferred to the Wisconsin Board of Commissioners of Public Lands (BCPL) after the original survey was completed. Since that time, these records have been available for consultation at the BCPL's office in Madison, as hand-transcriptions, and more recently on microfilm. Now, they are being made available via the internet as electronic images.",&#xa;</xsl:text>       
     
     <!-- Rights - Always public for GeoData@WI -->	 
     <xsl:text>"dc_rights_s": "Public",&#xa;</xsl:text>
@@ -95,20 +98,19 @@ GeoblackLight record -->
     
     <!-- Is Part Of
 	aka, collection names assigned to the dataset -->
-    <xsl:text>"dct_isPartOf_sm": "Wisconsin Public Land Survey Records",&#xa;</xsl:text>
+    <xsl:text>"dct_isPartOf_sm": ["Wisconsin Public Land Survey Records"],&#xa;</xsl:text>
     
     <!-- Creator - The person(s) or organization that created the resource -->
-    <xsl:text>"dc_creator_sm": "United States General Land Office",&#xa;</xsl:text>
+    <xsl:text>"dc_creator_sm": ["United States General Land Office"],&#xa;</xsl:text>
     
     <!-- Subject - These are theme or topic keywords -->
     <xsl:text>"dc_subject_sm": </xsl:text>     
-    <xsl:text>"Planning and Cadastral</xsl:text>
-    <xsl:text>",&#xa;</xsl:text>
+    <xsl:text>["Planning and Cadastral"],&#xa;</xsl:text>
     
     <xsl:text>"dct_spatial_sm": [""]</xsl:text>  
     <xsl:text>,&#xa;</xsl:text>
     
-    <!-- If a specific start date is definted, use dct_temporal_sm to set a range; otherwise, set solr_year_i with a single date -->
+    <!-- If a specific start date is defined, use dct_temporal_sm for display and uw_date_range_drsim for date range; otherwise, set solr_year_i and dct_temporal_s with a single date -->
     <xsl:choose>
         <xsl:when test="/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:originInfo/mods:dateIssued[@point='start']">
             <xsl:text>"dct_temporal_sm": ["</xsl:text>
@@ -116,10 +118,20 @@ GeoblackLight record -->
             <xsl:text>-</xsl:text>  
             <xsl:value-of select="/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:originInfo/mods:dateIssued[@point='end']"/>    
             <xsl:text>"],&#xa;</xsl:text> 
+                  
+            <xsl:text>"uw_date_range_drsim": ["[</xsl:text>
+            <xsl:value-of select="/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:originInfo/mods:dateIssued[@point='start']"/>
+            <xsl:text> TO </xsl:text>  
+            <xsl:value-of select="/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:originInfo/mods:dateIssued[@point='end']"/>    
+            <xsl:text>]"],&#xa;</xsl:text> 
+                    
         </xsl:when> 
         <xsl:otherwise>
-            <xsl:text>"solr_year_i": ["</xsl:text>
-            <xsl:value-of select="tokenize(/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:originInfo/mods:dateIssued,'-')[1]"/> 
+            <xsl:text>"solr_year_i": </xsl:text>
+                <xsl:value-of select="tokenize(/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:originInfo/mods:dateIssued,'-')[1]"/> 
+            <xsl-text>,&#xa;</xsl-text>
+            <xsl:text>"dct_temporal_sm": ["</xsl:text>
+                <xsl:value-of select="tokenize(/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:originInfo/mods:dateIssued,'-')[1]"/> 
             <xsl-text>"],&#xa;</xsl-text>
         </xsl:otherwise>
     </xsl:choose>
@@ -154,14 +166,34 @@ GeoblackLight record -->
         <xsl:value-of select="$southBoundLatitude"/>
     <xsl:text>)",&#xa;</xsl:text>
     
+    
+    <!-- parse out township and range
+        always found at the same character positions, so this is safe to do with absolute positions -->
+    <xsl:variable name="township">
+        <xsl:value-of select="substring($modifiedTownshipLabel,6,3)"/>
+    </xsl:variable>
+    <xsl:variable name="range">
+        <xsl:value-of select="substring($modifiedTownshipLabel,12,3)"/>
+    </xsl:variable>
+    
     <!-- Supplemental info	-->
     <xsl:text>"uw_supplemental_s": "</xsl:text> 
-    <xsl:text>The original historic plat maps were created from 1832 to 1866. In most cases, the UW Digital Collections Center does not record a specific creation date for each individual map.</xsl:text>
-    <xsl:text>",&#xa;</xsl:text>
+    <xsl:text>The original historic plat maps for Wisconsin were created between 1832 and 1866. In most cases, the UW Digital Collections Center does not record a specific creation date for the original maps.  However, the collection also contains maps which correct previous editions.  These more modern maps typically have a specific date or year defined.  To view the original survey notes associated with this plat map, please visit </xsl:text>
+    <xsl:value-of select="$surveyNotesBaseUrl"/>
+    <xsl:text>&#38;town=T</xsl:text>
+    <xsl:value-of select="substring(concat('0000', $township),1 + string-length($township))"/>
+    <xsl:text>&#38;range=R</xsl:text>
+    <xsl:value-of select="substring(concat('0000', $range),1 + string-length($range))"/>
+    <xsl:text>.",&#xa;</xsl:text>
      
+     <!--
+    <xsl:value-of select="substring(concat('          ', $alphanumeric-field), 1 + string-length($alphanumeric-field))" />
+    -->
+    
+    
     <!-- Insert placeholder for our per-dataset notices	-->
     <xsl:text>"uw_notice_s": ""&#xa;</xsl:text>   
-    
+        
     <xsl:text>}</xsl:text>
     <!-- end of JSON output -->
 </xsl:template>    
