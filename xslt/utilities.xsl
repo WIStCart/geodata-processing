@@ -22,14 +22,7 @@
         <xsl:value-of select="normalize-space(translate(translate(translate($text, $vQ, $sQ),$escapeChar,' '),'&#xA;',''))"/>
     </xsl:template>
     
-    <xsl:template name="removeBrackets">
-        <xsl:param name="text" />
-        <!-- some standardized constants -->
-        <xsl:variable name="lB">[</xsl:variable>
-        <xsl:variable name="rB">]</xsl:variable>
-        <xsl:value-of select="translate(translate($text, $lB, ''),$rB,'')"/>
-    </xsl:template>
-    
+   
     <!-- template used for converting strings to Title Case -->
     <xsl:template name="TitleCase">
         <xsl:param name="text" /> 

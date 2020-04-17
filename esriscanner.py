@@ -117,7 +117,7 @@ def getURL(refs):
 def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix,skiplist):
     
     # subfolders for scanned sites will be dumped here
-    basedir = "d:\projects\geodata\geodata-processing\scanner"
+    basedir = "R:\scripts\collections\opendata"
     path = os.path.join(basedir,siteName)
     
     # if site folder already exists, delete
@@ -201,6 +201,10 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix,skiplis
                     references += '\"http://schema.org/downloadUrl\":\"' + url + '\",'     
             references += "}"
             references = references.replace(",}", "}")
+            dc_creator_sm = []
+            dc_creator_sm.append(createdBy)
+            dct_temporal_sm = []
+            dct_temporal_sm.append(modifiedDate[0:4])
             #print("\n")       
             # format gbl record
             gbl = {
@@ -217,14 +221,14 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix,skiplis
                 "dc_format_s": "File", 
                 "dc_language_s": "English",
                 "dct_isPartOf_sm": collectionList,
-                "dc_creator_sm": createdBy,
+                "dc_creator_sm": dc_creator_sm,
                 "dc_type_s": "Dataset",
                 "dc_subject_sm": "",
                 "dct_spatial_sm": "", 
                 "dct_issued_s": "", 
-                "dct_temporal_sm": "", 
+                "dct_temporal_sm": dct_temporal_sm, 
                 "solr_geom": envelope,
-                "solr_year_i": modifiedDate[0:4], 
+                "solr_year_i": int(modifiedDate[0:4]), 
                 "dct_references_s": references,
                 "uw_supplemental_s" : "",
                 "uw_notice_s": "This dataset was automatically cataloged from the author's Open Data Portal. In some cases, publication year and bounding coordinates shown here may be incorrect. Additional download formats may be available on the author's website. Please check the 'More details at' link for additional information.",
@@ -253,7 +257,7 @@ def validSite (siteURL):
 
    
 # loop through each site in OpenData.yml and call json2gbl function
-with open("OpenData.yml") as stream:
+with open("r:\scripts\OpenData.yml") as stream:
     theDict = yaml.safe_load(stream)
     for siteCode in theDict["Sites"]:
         site = theDict["Sites"][siteCode]
