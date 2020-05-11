@@ -110,7 +110,7 @@ GeoblackLight record -->
     <xsl:text>"dct_spatial_sm": [""]</xsl:text>  
     <xsl:text>,&#xa;</xsl:text>
     
-    <!-- If a specific start date is defined, use dct_temporal_sm for display and uw_date_range_drsim for date range; otherwise, set solr_year_i and dct_temporal_s with a single date -->
+    <!-- If a specific start date is defined, use dct_temporal_sm for display and solr_year_i for time period; otherwise, set solr_year_i and dct_temporal_s with a single date -->
     <xsl:choose>
         <xsl:when test="/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:originInfo/mods:dateIssued[@point='start']">
             <xsl:text>"dct_temporal_sm": ["</xsl:text>
@@ -118,13 +118,10 @@ GeoblackLight record -->
             <xsl:text>-</xsl:text>  
             <xsl:value-of select="/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:originInfo/mods:dateIssued[@point='end']"/>    
             <xsl:text>"],&#xa;</xsl:text> 
-                  
-            <xsl:text>"uw_date_range_drsim": ["[</xsl:text>
+            <xsl:text>"solr_year_i": </xsl:text>
             <xsl:value-of select="/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:originInfo/mods:dateIssued[@point='start']"/>
-            <xsl:text> TO </xsl:text>  
-            <xsl:value-of select="/mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:originInfo/mods:dateIssued[@point='end']"/>    
-            <xsl:text>]"],&#xa;</xsl:text> 
-                    
+            <xsl-text>,&#xa;</xsl-text>     
+                              
         </xsl:when> 
         <xsl:otherwise>
             <xsl:text>"solr_year_i": </xsl:text>
@@ -176,23 +173,24 @@ GeoblackLight record -->
         <xsl:value-of select="substring($modifiedTownshipLabel,12,3)"/>
     </xsl:variable>
     
-    <!-- Supplemental info	-->
+    <!-- Supplemental info	
+    The \n\n is inserted to force a paragraph break that is rendered via css.  Otherwise this prints as one long block of text by default.
+    -->
     <xsl:text>"uw_supplemental_s": "</xsl:text> 
-    <xsl:text>The original historic plat maps for Wisconsin were created between 1832 and 1866. In most cases, the UW Digital Collections Center does not record a specific creation date for the original maps.  However, the collection also contains maps which correct previous editions.  These more modern maps typically have a specific date or year defined.  To view the original survey notes associated with this plat map, please visit </xsl:text>
+    <xsl:text>The original historic plat maps for Wisconsin were created between 1832 and 1866. In most cases, the UW Digital Collections Center does not record a specific creation date for the original maps.  However, the collection also contains maps which correct previous editions.  These more modern maps typically have a specific date or year defined.\n\nTo view the survey notes associated with this plat map, please visit </xsl:text>
     <xsl:value-of select="$surveyNotesBaseUrl"/>
     <xsl:text>&#38;town=T</xsl:text>
+    <!-- Need to pad with zeros -->
     <xsl:value-of select="substring(concat('0000', $township),1 + string-length($township))"/>
     <xsl:text>&#38;range=R</xsl:text>
     <xsl:value-of select="substring(concat('0000', $range),1 + string-length($range))"/>
     <xsl:text>.",&#xa;</xsl:text>
-     
-     <!--
-    <xsl:value-of select="substring(concat('          ', $alphanumeric-field), 1 + string-length($alphanumeric-field))" />
-    -->
-    
-    
+   
     <!-- Insert placeholder for our per-dataset notices	-->
-    <xsl:text>"uw_notice_s": ""&#xa;</xsl:text>   
+    <xsl:text>"uw_notice_s": "",&#xa;</xsl:text>   
+    
+    <!-- Adjust the score for this collection of items.  This is used to lower the items in search results if desired.  Negative boosts are not allowed, so the standard practice in Solr is to boost all other items by a large amount. -->
+    <xsl:text>"uw_deprioritize_item_b": true&#xa;</xsl:text>  
         
     <xsl:text>}</xsl:text>
     <!-- end of JSON output -->
