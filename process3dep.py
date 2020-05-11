@@ -5,7 +5,7 @@ Purpose: Query the USGS Sciencebase catalog via their Python API to retrieve a s
 
 Author: Jim Lacy, University of Wisconsin-Madison
 
-Thanks to Dell Long and Drew ? from the US Geological Survey Fort Collins Science Center for providing code samples and guidance!
+Thanks to Dell Long and Drew Ignizio from the US Geological Survey Fort Collins Science Center for providing code samples and guidance!
 
 """
 
