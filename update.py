@@ -121,9 +121,8 @@ class Update(object):
         else:
             # if instance not specified, default to dev
             print("Instance argument is null. Defaulting to dev...")
-            #print("Currently this is actually defaulting to test")
             SOLR_INSTANCE = "dev"
-            SOLR_URL = SOLR_URL_TEST
+            SOLR_URL = SOLR_URL_DEV
 
         self.solr = SolrInterface(url=SOLR_URL)
         self.uuid = UUID
@@ -140,7 +139,7 @@ class Update(object):
         # Add JSON Keys that are checked to see if they are null
         keyList = ["dc_title_s", "dc_identifier_s","layer_slug_s","solr_geom",
                     "dct_provenance_s","dc_rights_s","geoblacklight_version",
-                    "dc_creator_sm","dc_description_s","dct_temporal_sm"]
+                    "dc_creator_sm","dc_description_s"]
 
         # Check if required elements have valid data
         # The QA Test
