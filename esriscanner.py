@@ -64,30 +64,6 @@ def checkValidity(dataset):
     if 'spatial' not in dataset: 
         msg += "          No bounding box found."
         validData = False
-    
-    # make sure download is present, otherwise fail
-    # is this actually what we want????
-    # no.  This removes links to ftp downloads that an agency might have cataloged. 
-    
-    #reflist = []
-    #for refs in dataset["distribution"]:
-    #    reflist.append(refs["title"])
-    
-    #examine the url to see if its a real rest end point, versus a link to a pdf document for example?
-    # "accessURL": "https://gis.co.sauk.wi.us/arcgis/rest/services/Sauk/Apr2019Results_CommonFile_FGD/MapServer"
-    
-    # Need a method to filter out the strange stuff that agencies sometimes decide to include in their open data portals.
-    # such as links to reports, or web mapping apps (we aim to catalog data, not apps)
-    # DNR: link to national map, link to statewide parcel page, 
-    
-    #if (('Shapefile' not in reflist) or ('GeoJSON' not in reflist) or ('KML' not in reflist) or ('CSV' not in reflist)):
-    # the statement will not work if a dataset is only available via csv
-    # if ((true) or (false)) then proceed... this statement will always result in true, and therefore dataset will be skipped
-    #if ('Shapefile' not in reflist) or ('CSV' not in reflist):
-    #if ('CSV' not in reflist):
-       # print(reflist)
-        #msg += "          No download file found. Skipping record."
-        #validData = False
         
     return validData,msg
 
@@ -103,11 +79,9 @@ def getURL(refs):
 					"mediaType": "application/json"
 		}"""
     if ('accessURL') in refs:
-       # split statement was added in Jan 2020 because Esri started adding a querystring for outSR with some odd formatting that caused parsing issues
-        url=refs["accessURL"].split('?')[0]
-        #print(url)
+        url=refs["accessURL"]
     elif ('downloadURL') in refs:
-        url=refs["downloadURL"].split('?')[0]
+        url=refs["downloadURL"]
     else:   
         #error, no url found
         url="invalid"
@@ -183,9 +157,12 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix,skiplis
             references = "{"
             for refs in dataset["distribution"]:
                 url=getURL(refs)
-                #print(refs["format"])
+                #Fix the encoding of goofy querystring now intrinsic to Esri download links
+                url = url.replace("\"","%22").replace(",","%2C").replace("{","%7B").replace("}","%7D")
                 #print(url)
-                if (refs["format"] == "Web Page" and url != "invalid"):
+                
+                # Seriously, Esri sometimes outputs "Web page" or "Web Page" for the page reference.  Ugh!
+                if (refs["format"].lower() == "web page" and url != "invalid"):
                     references += '\"http://schema.org/url\":\"' + url + '\",'
                 elif (refs["format"] == "Esri REST" and url != "invalid"):
                         if ('FeatureServer') in url:
@@ -217,20 +194,17 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix,skiplis
                 "layer_id_s": "", 
                 "layer_slug_s": slug,
                 "layer_geom_type_s": geomType, 
-                "layer_modified_dt": "",
                 "dc_format_s": "File", 
                 "dc_language_s": "English",
                 "dct_isPartOf_sm": collectionList,
                 "dc_creator_sm": dc_creator_sm,
                 "dc_type_s": "Dataset",
-                "dc_subject_sm": "",
                 "dct_spatial_sm": "", 
                 "dct_issued_s": "", 
                 "dct_temporal_sm": dct_temporal_sm, 
                 "solr_geom": envelope,
                 "solr_year_i": int(modifiedDate[0:4]), 
                 "dct_references_s": references,
-                "uw_supplemental_s" : "",
                 "uw_notice_s": "This dataset was automatically cataloged from the author's Open Data Portal. In some cases, publication year and bounding coordinates shown here may be incorrect. Additional download formats may be available on the author's website. Please check the 'More details at' link for additional information.",
             }
           
