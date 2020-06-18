@@ -1,3 +1,7 @@
+#
+# Check this link periodically to locate new sites:
+# https://hub.arcgis.com/search?collection=Site&q=wisconsin
+#
 Sites:
  # State Agencies
  # first pass of skiplists done for all agencies - Jim 1/21/20
@@ -90,6 +94,15 @@ Sites:
     DatasetPrefix: ""
     DatasetPostfix: ", City of Wisconsin Rapids"  
     SkipList: ""
+  Hudson_OpenData:
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
+    CreatedBy: "City of Hudson"
+    SiteURL: "https://share-open-data-hudsonwi.opendata.arcgis.com/data.json"
+    SiteName: "CityOfHudson"
+    DatasetPrefix: ""
+    DatasetPostfix: ", City of Hudson"  
+    SkipList: ""
   # RPCs
   CapitalRPC_OpenData:
     Collections:
@@ -99,7 +112,9 @@ Sites:
     SiteName: "CARPC"
     DatasetPrefix: ""
     DatasetPostfix: ", CARPC" 
-    SkipList: ""    
+    SkipList: 
+      - UUID: "00719e989d25460bbbdc6d336e281026" # icon?
+      - UUID: "e09ffd4c81f6466cb669b0948f9cc626" # favicon    
   ECWRPC_OpenData:
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
@@ -108,15 +123,7 @@ Sites:
     SiteName: "ECWRPC"
     DatasetPrefix: ""
     DatasetPostfix: ", ECWRPC"
-    SkipList: ""
-# SEWRPC coming winter of 2019/2020
-# SEWRPC_OpenData:
-  # CollectionName: "Southeastern Wisconsin RPC"
-  # CreatedBy: "Southeastern Wisconsin RPC"
-  # SiteURL: ""
-  # SiteName: ""
-  # DatasetPrefix: ""
-  # DatasetPostfix: ", Southeastern WI RPC"      
+    SkipList: ""  
 # Counties
   AshlandCounty_OpenData:
     Collections:
@@ -135,7 +142,21 @@ Sites:
     SiteName: "ColumbiaCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Columbia County" 
-    SkipList: ""    
+    SkipList: 
+      - UUID: "8b3b470883a744aeb60e5fff0a319ce7" # Light gray canvas
+      - UUID: "86de95d4e0244cba80f0fa2c9403a7b2" # Esri imagery
+      - UUID: "413fd05bbd7342f5991d5ec96f4f8b18" # Esri imagery with labels
+      - UUID: "509e2d6b034246d692a461724ae2d62c" # national georaphic   
+      - UUID: "48b8cec7ebf04b5fbdcaf70d09daff21" # Oceans
+      - UUID: "5d2bfa736f8448b3a1708e1f6be23eed" # Open Street Map
+      - UUID: "aab054ab883c4a4094c72e949566ad40" # Terrain with labels
+      - UUID: "6e03e8c26aad4b9c92a87c1063ddb0e3" # topographic      
+      - UUID: "931d892ac7a843d7ba29d085e0433465" # USA topos     
+      - UUID: "6d9fa6d159ae4a1f80b9e296ed300767" # National Map 
+      - UUID: "36aebc211b034996aa53543d7e534d40" # Basemap ortho    
+      - UUID: "ea6c5bfd2633403a928f57ee307b061c" # Basemap hybrid ortho      
+      - UUID: "e6bc11121cbe4ca8a41a5f4139a9aaf7" # Basemap terain 
+      - UUID: "edb817841be5481d818c352b7cb05543" # Basemap roads      
   DaneCounty_OpenData: 
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
@@ -163,6 +184,15 @@ Sites:
     DatasetPrefix: ""
     DatasetPostfix: ", Outagamie County"
     SkipList: ""    
+  PierceCounty_OpenData:
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
+    CreatedBy: "Pierce County"
+    SiteURL: "https://data-piercecounty-wi.hub.arcgis.com/data.json"
+    SiteName: "PierceCounty"
+    DatasetPrefix: ""
+    DatasetPostfix: ", Pierce County"
+    SkipList: ""    
   RacineCounty_OpenData:
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
@@ -172,11 +202,21 @@ Sites:
     DatasetPrefix: ""
     DatasetPostfix: ", Racine County" 
     SkipList: ""
+ # Rock County taken out of production   
+ # RockCounty_OpenData:
+ #   Collections:
+ #     - CollectionName: "Wisconsin Open Data Sites"
+ #   CreatedBy: "Rock County"
+ #   SiteURL: "https://data-rockcountylio.opendata.arcgis.com/data.json"
+ #   SiteName: "RockCounty"
+ #   DatasetPrefix: ""
+ #   DatasetPostfix: ", Rock County" 
+ #   SkipList: ""
   StCroixCounty_OpenData:
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "St. Croix County"
-    SiteURL: "https://gis-scccdd.opendata.arcgis.com//data.json"
+    SiteURL: "https://gis-scccdd.opendata.arcgis.com/data.json"
     SiteName: "StCroixCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", St. Croix County"
