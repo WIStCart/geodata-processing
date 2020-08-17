@@ -202,7 +202,8 @@ up the specified text -->
 	<xsl:text>",&#xa;</xsl:text>
 
 	<!-- Modified Date - Last modification date for the metadata record.  Not used for GeoData@WI -->
-    <xsl:text>"layer_modified_dt": "",&#xa;</xsl:text>
+    <!-- July 2020, removing this line entirely.  Newest version of pysolr has issues pushing empty string into solr, I think because it must strictly enforce the _dt type This caused failures in the "update" script. -->
+    <!-- <xsl:text>"layer_modified_dt": "",&#xa;</xsl:text>  -->
 
 	<!-- Dataset Format  -	This indicates the file format of the data. If a download link is included, this value shows up on the item page display in the download widget.
 	-->
