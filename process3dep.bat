@@ -1,2 +1,2 @@
 @echo off
-"%CONDA_PREFIX%/python" process3dep.py %*
+"%CONDA_PREFIX%/python" r:\scripts\process3dep.py %*
