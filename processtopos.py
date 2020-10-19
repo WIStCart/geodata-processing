@@ -18,9 +18,9 @@ import uuid
 
 # Could loop through all three USGS topo collections, but we choose to simply run the script three times (once per topo collection)
 # pick one of the following base IDs
-#base_item_id = "4f554260e4b018de15819c88"  # All Historic Topographic Maps (pre-US Topo)
+base_item_id = "4f554260e4b018de15819c88"  # All Historic Topographic Maps (pre-US Topo)
 #base_item_id = "4f554236e4b018de15819c85"  # US Topos 
-base_item_id = "5061bc99e4b0ce47085a8d03"  # US Topos Historical
+#base_item_id = "5061bc99e4b0ce47085a8d03"  # US Topos Historical
 
 outputfolder = "r:/scripts/collections/USGS_Topos/gbl/"  # be sure to incude trailing slash
 extent_id = 20  # Sciencebase ID for Wisconsin.  No idea how they come up with these state IDs.  Not FIPS.
@@ -95,7 +95,7 @@ while items and 'items' in items:
               
         for date in item['dates']:
             try:
-                if date['type'] == 'Start':
+                if date['type'] == 'Publication':
                     pubdate = date['dateString']
                     if len(pubdate) == 4:
                         # assume field only contains a year in length of date is four characters
