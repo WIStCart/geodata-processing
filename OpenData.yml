@@ -3,11 +3,12 @@
 # https://hub.arcgis.com/search?collection=Site&q=wisconsin
 #
 Sites:
- # State Agencies
+ # Wisconsin State Agencies
  # first pass of skiplists done for all agencies - Jim 1/21/20
   LTSB_OpenData: 
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
+      - CollectionName: "Wisconsin State Agencies"
     CreatedBy: "Wisconsin Legislative Technology Services Bureau"
     SiteURL: "https://data-ltsb.opendata.arcgis.com/data.json"
     SiteName: "WILTSB"
@@ -17,6 +18,7 @@ Sites:
   WiDNR_OpenData: 
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
+      - CollectionName: "Wisconsin State Agencies"
     CreatedBy: "Wisconsin Department of Natural Resources"
     SiteURL: "http://data-wi-dnr.opendata.arcgis.com/data.json"
     SiteName: "WIDNR"
@@ -50,6 +52,7 @@ Sites:
   WEM_OpenData:
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
+      - CollectionName: "Wisconsin State Agencies"
     CreatedBy: "Wisconsin Emergency Management"
     SiteURL: "http://data-wem.opendata.arcgis.com/data.json"
     SiteName: "WEM"
@@ -59,6 +62,7 @@ Sites:
   DPI_OpenData:
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
+      - CollectionName: "Wisconsin State Agencies"
     CreatedBy: "Wisconsin Department of Public Instruction"
     SiteURL: "https://data-wi-dpi.opendata.arcgis.com/data.json"
     SiteName: "DPI"
@@ -68,6 +72,7 @@ Sites:
   DHS_OpenData:
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
+      - CollectionName: "Wisconsin State Agencies"
     CreatedBy: "Wisconsin Department of Health Services"
     SiteURL: "https://data.dhsgis.wi.gov/data.json"
     SiteName: "DHS"
@@ -166,6 +171,30 @@ Sites:
     DatasetPrefix: ""
     DatasetPostfix: ", Dane County"
     SkipList: ""  
+  EauClaire_OpenData: 
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
+    CreatedBy: "Eau Claire County"
+    SiteURL: "https://hub-eccounty.hub.arcgis.com/data.json"
+    SiteName: "EauClaireCounty"
+    DatasetPrefix: ""
+    DatasetPostfix: ", Eau Claire County"
+    SkipList: 
+      - UUID: "911585fefd1b4cc985fd2987b87ba5cc" # Terms of Use
+      - UUID: "1968d7a592764c1cabe5d75716d4f7a4" # open data page
+      - UUID: "9775333888c24c43931605fd6814d967" # Maps and Apps page
+      - UUID: "81d2312ae0534891a6fb627227c54303" # Story Maps page 
+      - UUID: "ccdf610a5d7c4ff4971d72c081a81664" # second link to open data page?
+  Kenosha_OpenData: 
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
+    CreatedBy: "Kenosha County"
+    SiteURL: "https://dataportal.kenoshacounty.org/data.json"
+    SiteName: "Kenosha County"
+    DatasetPrefix: ""
+    DatasetPostfix: ", Kenosha County"
+    SkipList:
+      - UUID: "d522c851aec2422d8427dbaa96935b87_0" # bad bounding box for Citizen Reporter
   MilwaukeeCounty_OpenData:
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
