@@ -1,13 +1,14 @@
 """
 process_earthexplorer.py
 
-Authors: Jim Lacy, Josh Seibel, Abby Gleason
+Authors: Jim Lacy, Abby Gleason, Josh Seibel 
 
 Description: Queries the USGS Earth Explorer API for image datasets and outputs results to 
 a shapefile and dbf tables.
 
-To run the script, replace filename variable contents with script file location (lines 352 and 617) and ensure 
-maxResults in searchScene payload is set to 50,000 (lines 47 and 51).
+To run the script replace filename variable contents with script file location (line 346),
+set the location of the clip_layer (line 349) in relation to this script, and ensure 
+maxResults in searchScene payload is set to 50,000 (lines 51 and 55).
 
 Dependencies: Python 3.x, ArcPro python environment
 """
@@ -25,7 +26,7 @@ apiURL = "https://m2m.cr.usgs.gov/api/api/json/stable"
 
 print("Script started at " + datetime.now().strftime("%d/%m/%Y %H:%M:%S"))
 
-# Get API key with a login
+# Get an EarthExplorer API key with username and password login for EarthExplorer
 def getKey(url, username, password):
     loginUrl = url + "/login"
     payLoad = {'username': username, 'password': password}
@@ -33,7 +34,9 @@ def getKey(url, username, password):
     loginInfo = r.json()
     return loginInfo["data"]
 
-# Get search results for each dataset
+# Get image records of entity ID and their coordinates for each dataset that are within a time frame and within a spatial boundary
+# Append returned results to searchResults Array
+# Defaults: All 5 available datasets (Aerial Combine, NHAP, NAPP, DOQ QQ, and High Res Ortho), year round, and rough WI outline
 searchResults = []
 def searchScenes(url,key, start, end): 
     start = str(start) + "-01-01"
@@ -42,6 +45,8 @@ def searchScenes(url,key, start, end):
     datasetNames = ["aerial_combin", "nhap", "napp", "doq_qq", "high_res_ortho"]
 
     for dataset in datasetNames:
+        ## Might be able to do without as the error might have gone away - 11/2/20
+        # Checks if dataset is doq_qq and changes the parameters as there was an issue with Earth Explorer api and not returning certain years for doq_qq
         if dataset == "doq_qq":
             payLoad = {"maxResults":50000, "datasetName":dataset, "sceneFilter":{"acquisitionFilter":{"start": start, "end": end}, "spatialFilter":{"filterType":"geojson","geoJson":{"type":"Polygon","coordinates":[[[-87.462,44.209],[-87.493,44.288],[-87.488,44.411],[-87.403,44.528],[-87.242,44.781],[-87.022,45.103],[-86.882,45.253],[-86.768,45.422],[-86.853,45.451],[-86.984,45.437],[-87.029,45.341],[-87.243,45.205],[-87.453,44.921],[-87.659,44.851],[-87.779,44.714],[-87.930,44.593],[-87.990,44.595],[-87.900,44.763],[-87.773,44.912],[-87.561,44.980],[-87.558,45.129],[-87.690,45.193],[-87.637,45.294],[-87.602,45.403],[-87.709,45.414],[-87.816,45.382],[-87.743,45.527],[-87.742,45.697],[-87.843,45.762],[-87.960,45.809],[-88.076,45.822],[-88.019,45.904],[-88.211,45.994],[-88.468,46.044],[-88.781,46.070],[-89.092,46.170],[-90.068,46.374],[-90.263,46.578],[-90.546,46.640],[-90.697,46.723],[-90.475,46.842],[-90.359,46.909],[-90.372,47.098],[-90.738,47.102],[-91.117,46.939],[-91.481,46.818],[-91.702,46.771],[-91.891,46.720],[-92.036,46.757],[-92.345,46.727],[-92.333,46.106],[-92.763,45.917],[-92.819,45.786],[-92.947,45.687],[-92.920,45.540],[-92.728,45.473],[-92.743,45.368],[-92.838,45.209],[-92.835,44.962],[-92.845,44.842],[-92.856,44.699],[-92.673,44.594],[-92.476,44.511],[-92.279,44.395],[-92.151,44.380],[-92.068,44.302],[-91.936,44.174],[-91.851,44.064],[-91.546,43.972],[-91.374,43.809],[-91.384,43.633],[-91.277,43.334],[-91.171,43.294],[-91.271,43.178],[-91.255,42.963],[-91.216,42.810],[-91.126,42.719],[-90.920,42.616],[-90.755,42.529],[-90.645,42.473],[-89.857,42.477],[-88.077,42.477],[-87.767,42.479],[-87.753,42.592],[-87.728,42.723],[-87.750,42.883],[-87.797,43.019],[-87.838,43.208],[-87.789,43.370],[-87.690,43.579],[-87.657,43.770],[-87.653,43.962],[-87.462,44.209]]]}}},"metadataType":"summary"}
             headers = {'X-Auth-Token':key}
@@ -53,7 +58,9 @@ def searchScenes(url,key, start, end):
         results = r.json()
         searchResults.append(results)
 
-# Get response from downloadOptions and downloadRequests
+# Query the api for download-request and download-options, returns the result in native format
+# Allows for error handeling and attempts to get a record 10 times if an error occurs
+# apiRequest(url: request to be send, payload: parameters of request, api key, requestName: downloadOptions/downloadRequests, atempts: number of times to try and get response, timeout: time to allow a response from api)
 def apiRequest(url, payLoad, key, requestName, attempts, timeout=600):
     headers = {'X-Auth-Token':key}
     c = 0
@@ -82,11 +89,41 @@ def apiRequest(url, payLoad, key, requestName, attempts, timeout=600):
     newResult = "{0} Error".format(requestName)
     return newResult
 
-# Create payloads to get download URLs, send to apiRequest and return the results to main code
+# Constructs the api request payload to be sent for download-options
+# Sends a list of entityIds to the request, max can be 50000 records at a time so splits list in half through recursion and joins result back together
+def downloadOptions(url, key, datasetName, entityId_list):
+    searchUrl = url + "/download-options"
+    results = []
+    if len(entityId_list) < 47999:
+        entityIds = (",").join(entityId_list)
+        payLoad = {"entityIds":entityIds, "datasetName":datasetName}
+        r = apiRequest(searchUrl, payLoad, key, "DownloadOptions", 10)
+        # Checks if the request returned valid records before converting to json and returning, otherwise it records the record as an error
+        if r == "DownloadOptions Error":
+            for entity in r:
+                failed_records.append(entity)
+                results.append({"entityId": entity, "url": "DownloadOptions Error", "fileSize": 0})
+        # Split record list in half and call self function, join the results
+        else:
+            results = r
+        result = results.json()
+        data = result['data']
+    else:
+        first_half = entityId_list[:len(entityId_list)//2]
+        first_result = downloadOptions(url, key, datasetName, first_half)
+        second_half = entityId_list[len(entityId_list)//2:]
+        second_result = downloadOptions(url, key, datasetName, second_half)
+        data = first_result + second_result
+
+    return data
+
+# Constructs the api request payload to be sent for download-request
+# Sends a list of entityIds to the request, limits the number of records send at a time, if above limit it splits list in half through recursion and joins result back together
 failed_records = []
 def downloadRequests(url, key, entityObjectList, systemIds):
     requestUrl = url + "/download-request"
     result = []
+    # limit number of records in list set to request
     if len(entityObjectList) < 500:
         newPayLoad = { "downloadApplication": systemIds, "downloads": entityObjectList, "systemId": systemIds }
         newR = apiRequest (requestUrl, newPayLoad, key, "DownloadURL", 10)
@@ -100,6 +137,7 @@ def downloadRequests(url, key, entityObjectList, systemIds):
             for entity in entityObjectList:
                 failed_records.append(entity)
                 result.append({"entityId": entity["entityId"], "url": "DownloadURL Error"})
+    # Split record list in half and call self function, join the results
     else:
         first_half = entityObjectList[:len(entityObjectList)//2]
         first_result = downloadRequests(url, key, first_half, systemId)
@@ -109,34 +147,8 @@ def downloadRequests(url, key, entityObjectList, systemIds):
 
     return result
 
-# Query API for the download information
-def downloadOptions(url, key, datasetName, entityId_list):
-    searchUrl = url + "/download-options"
-    results = []
-    if len(entityId_list) < 47999:
-        entityIds = (",").join(entityId_list)
-        payLoad = {"entityIds":entityIds, "datasetName":datasetName}
-        r = apiRequest(searchUrl, payLoad, key, "DownloadOptions", 10)
-        if r == "DownloadOptions Error":
-            for entity in r:
-                failed_records.append(entity)
-                results.append({"entityId": entity, "url": "DownloadOptions Error", "fileSize": 0})
-        else:
-            results = r
-        result = results.json()
-        data = result['data']
-    else:
-        first_half = entityId_list[:len(entityId_list)//2]
-        first_result = downloadOptions(url, key, datasetName, first_half)
-        second_half = entityId_list[len(entityId_list)//2:]
-        second_result = downloadOptions(url, key, datasetName, second_half)
-        data = first_result + second_result
-    # result = results.json()
-    # data = result['data']
-    return data
-
+# Filters the record for highest resolution product available, appends it to a list and returns the list
 product_list = []
-# Retrieves highest resolution product
 def filterRes(products, data):
     filtered = []
     product_list.clear()
@@ -168,7 +180,7 @@ def filterRes(products, data):
             product_list.append({"entityId": product["entityId"], "dwnldProd": 'Not available for download'})
     return filtered
 
-# Get filesizes
+# Get the sizes of the image files from the json data
 def getFilesizes(downloads, res_list, filesizes):
     for item in downloads:
         for entityId in res_list:
@@ -328,10 +340,13 @@ def createOrthoTable(entityId, dataset):
                         datast_siz = item['metadata'][i]['value']
                 high_res_ortho_cursor.insertRow([entityId, beg_date, end_date, EPSG, map_proj, location, datum, dataset, proj_zone, sensor, sens_type, num_bands, vendor, resolution, res_units, img_name, agency, datast_siz])
 
-## MAIN CODE ##
+#################
+##  MAIN CODE  ##
+#################
 filepath = "C:/Users/amgleason2/Documents/py-script/py-scripts"
 createOutput(filepath)
 arcpy.env.workspace = filepath
+clip_layer = "Wisconsin_State_Boundary_24K_Buff.shp"
 
 # Set global variables+
 decades = [1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020]
@@ -349,13 +364,11 @@ out_path_nhap = out_path + "/" + nhap_table_outname
 out_path_napp = out_path + "/" + napp_table_outname
 out_path_ortho = out_path + "/" + high_res_ortho_table_outname
 out_path_doq = out_path + "/" + doq_qq_table_outname
-clip_layer = "Wisconsin_State_Boundary_24K_Buff.shp"
 geometry_type = "POINT"
 has_m = "DISABLED"
 has_z = "DISABLED"
 field_length = 200
 spatial_ref=arcpy.SpatialReference(4326)
-
 arcpy.env.overwriteOutput = True
 
 # Create shapefile and add fields
@@ -614,7 +627,7 @@ for dataset in datasets:
 del cursor
 
 # Clip output layer using Wisconsin Boundaries + 1 mile buffer
-clipped_name = "output/10-12-new/EarthExplorer_WI_Imagery_" + date + "_clipped.shp"
+clipped_name = "output/EarthExplorer_WI_Imagery_" + date + "_clipped.shp"
 
 arcpy.Clip_analysis(out_path_main, clip_layer, clipped_name)
 print("Clipped shapefile created")
