@@ -128,7 +128,7 @@ def get_iso_topic_categories(keywords):
                  'structure':'Structure',
                  'transportation':'Transportation',
                  'utilitiesCommunication':'Utilities and Communication',
-                 'utilities and communication':'Utilities and Communication'
+                 'utilities and communication':'Utilities and Communication',
                  'utilities & communication':'Utilities and Communication'
                  }
 
