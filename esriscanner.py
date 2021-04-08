@@ -30,10 +30,10 @@ import ruamel.yaml as yaml
 
 
 # Subfolders for scanned sites will be dumped here
-output_basedir = "d:\\temp\\opendata"
+output_basedir = "R:\\scripts\\collections\\opendata"
 
 # YAML configuration file
-config_file = "D:\jim\SCO\projects\geodata\geodata-processing\OpenData.yml"
+config_file = "r:\\scripts\\OpenData.yml"
 
 # Strip html from description
 class MLStripper(HTMLParser):
@@ -107,9 +107,11 @@ def get_iso_topic_categories(keywords):
                  'geoscientific':'Geoscientific Information',
                  'geoscientific information':'Geoscientific Information',
                  'health':'Health',
-                 'imagery and basemaps':'Imagery and Basemaps',
-                 'imagerybasemapsearthcover':'Imagery and Basemaps',
-                 'imagery & basemaps':'Imagery and Basemaps',
+                 'imagery and base maps':'Imagery and Base Maps',
+                 'imagerybasemapsearthcover':'Imagery and Base Maps',
+                 'imagery & basemaps':'Imagery and Base Maps',
+                 'imagery & base maps':'Imagery and Base Maps',
+                 'imagery and base maps':'Imagery and Base Maps',
                  'inland waters':'Inland Waters',
                  'inlandwaters':'Inland Waters',
                  'intelligence and military':'Intelligence and Military',
