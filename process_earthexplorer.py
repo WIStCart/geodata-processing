@@ -222,7 +222,7 @@ def addFields(table_outname, fieldnames):
             else:
                 arcpy.AddField_management(table_outname, fieldnames[i], "TEXT", "", "", field_length, fieldnames[i], "NULLABLE", "REQUIRED", "")
 
-# Create Aerial Combin Table
+# Create Aerial Combine Table
 def createAerialTable(entityId, dataset):
     for results in searchResults:
         data = results['data']
