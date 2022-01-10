@@ -12,24 +12,27 @@ Thanks to Dell Long and Drew Ignizio from the US Geological Survey Fort Collins 
 from sciencebasepy import SbSession
 import json
 from datetime import datetime
+from datetime import timezone
 import uuid
 
 ####### Define constants used for all items
 
-# Could loop through all three USGS topo collections, but we choose to simply run the script three times (once per topo collection)
+# Could loop through topo collections, but we choose to simply run the script twice (once per topo collection)
 # pick one of the following base IDs
-base_item_id = "4f554260e4b018de15819c88"  # All Historic Topographic Maps (pre-US Topo)
-#base_item_id = "4f554236e4b018de15819c85"  # US Topos 
+
+#base_item_id = "4f554260e4b018de15819c88"  # All Historic Topographic Maps (pre-US Topo)
+base_item_id = "4f554236e4b018de15819c85"  # US Topos 
+
+# The following is redundant, and should not be used.  Item 4f554236e4b018de15819c85 already contains historic US Topos in addition to current topos
 #base_item_id = "5061bc99e4b0ce47085a8d03"  # US Topos Historical
 
 outputfolder = "r:/scripts/collections/USGS_Topos/gbl/"  # be sure to incude trailing slash
 extent_id = 20  # Sciencebase ID for Wisconsin.  No idea how they come up with these state IDs.  Not FIPS.
 fields = "identifiers,title,webLinks,id,body,dates,spatial" # fields to retrieve in query
 maxRecords = 100  # Max number of records to query at a time.  There is a hard limit of 1000 enforced by Sciencebase.
-
+now = datetime.now(timezone.utc) # used to populate layer_modified_dt, which must be in UTC
 dct_isPartOf_sm = ["USGS Topographic Maps"]   # are these data part of a collection?  
 dc_rights_s = "Public"
-dc_format_s = "GeoPDF"
 dc_type_s = "Dataset"
 layer_geom_type_s = "Image"
 dct_provenance_s = "U.S. Geological Survey" # could be retrieved from json response, but this works
@@ -41,7 +44,6 @@ dct_spatial_sm = [""]   # We don't use spatial keywords at UW
 
 # fields unique to University of Wisconsin
 uw_deprioritize_item_b = True  # we want topo records to appear lower in search results so they don't overwhelm other items
-uw_supplemental_s = ""
 uw_notice_s = ""
 # end University of Wisconsin
 
@@ -54,46 +56,54 @@ print("Processing...")
 # Send query to Sciencebase and store json response in "items"
 # See https://github.com/usgs/sciencebasepy/blob/master/Searching%20ScienceBase%20with%20ScienceBasePy.ipynb for syntax guidance
 items = sb.find_items({'ancestors': base_item_id,'filter': 'extentQuery={"extent":' + str(extent_id) + '}','fields':fields,'max': maxRecords})
-#print("Found %s items" % items['total'])
+print("Found %s items" % items['total'])
 
 while items and 'items' in items:
     for item in items['items']:
-        #print(item)    
+        #print(item) 
+        onlinelink = "" 
+        downloadUrl = "" 
+        metadataUrl = ""
+        downloadsList = [] # create new list for download links
+        references_s = {}
         for i_link in item['webLinks']:
-            try:
-                if i_link['title']=='GeoPDF' or i_link['title']=='Geospatial PDF':
-                    downloadUrl = i_link['uri']
-            except:
-                downloadUrl = ''
-            # Geoblacklight currently only supports one download per item
-            # future: include GeoTIFFs when they are available
-            """try:
-                if i_link['title'] == 'GeoTIFF':
-                    downloadUrl = i_link['uri']
-            except:
-                downloadUrl = '' """
-            try:
-                if i_link['type'] == 'browseImage':
-                    thumbnail_path_ss = i_link['uri']
-            except:
-                thumbnail_path_ss = ''
-            try:
-                if i_link['type'] == 'Online Link':
-                    onlinelink = i_link['uri']
-            except:
-                onlinelink = ''
+            #print(i_link)               
+            if i_link['type'] == 'download':
+                downloadUri = i_link['uri']
+                label = i_link['title']              
+                downloadDict = {'url':downloadUri,'label':label}
+                downloadsList.append(downloadDict)
+                #print(downloadsList)
+            elif i_link['type'] == 'browseImage':
+                thumbnail_path_ss = i_link['uri']
+                #print("Thumbnail Path: " + thumbnail_path_ss)
+            elif i_link['type'] == 'originalMetadata':
+                metadataUrl = i_link['uri']
+                references_s["http://www.opengis.net/cat/csw/csdgm"] = metadataUrl
+                #print("Metadata Url: " + metadataUrl)
+            elif i_link['type'] == 'Online Link':
+                onlinelink = i_link['uri']
+                references_s["http://schema.org/url"] = onlinelink
+                #print("Online Link: " + onlinelink)
         
-        for metadata_link in item['identifiers']:
-            try:
-                #print(metadata_link)
-                if metadata_link['scheme'] == 'processingUrl':
-                    metadataUrl = metadata_link['key']
-            except:
-                metadataUrl = ''
-
-        dct_references_s = '{"http://schema.org/url":"%s","http://schema.org/downloadUrl":"%s","http://www.opengis.net/cat/csw/csdgm":"%s"}' % (onlinelink,downloadUrl,metadataUrl)
-              
+        if metadataUrl == '':
+        # this means the metadata url was not found in the "weblinks" section, so let's look in identifiers instead
+        # no idea why USGS chooses to put the metadata link in different spots!          
+            for identifiers in item['identifiers']:
+                if identifiers['scheme'] == 'processingUrl':
+                    references_s["http://www.opengis.net/cat/csw/csdgm"] = identifiers['key']
+                 
+        references_s["http://schema.org/downloadUrl"] = downloadsList       
+        dct_references_s = json.dumps(references_s)
+               
+        if len(downloadsList) > 1:
+            dc_format_s = "Multiple Formats" # this means both GeoPDF and GeoTIFF are options.  This was suggested by Karen M.
+        else:
+            #dc_format_s = downloadsList[0]["label"] # This is the more elegant approach, but USGS is inconsistent with labeling of GeoPDF format! ("GeoPDF", "Geospatial PDF")
+            dc_format_s = "GeoPDF" 
+            
         for date in item['dates']:
+            # need to double-check this try-except statement?
             try:
                 if date['type'] == 'Publication':
                     pubdate = date['dateString']
@@ -109,9 +119,6 @@ while items and 'items' in items:
                 year = 9999    
         
         for boundingBox, coordinates in item['spatial'].items():
-                #print(coordinates)
-                #for key in coordinates:
-                #    print(key + ':', coordinates[key])
                 east = coordinates['maxX']
                 west = coordinates['minX']
                 north = coordinates['maxY']
@@ -119,7 +126,7 @@ while items and 'items' in items:
 
         solr_geom = "ENVELOPE(%s,%s,%s,%s)" % (west, east, north, south)
         
-        ###### Construct json object for our GBL record
+        ###### Construct dictionary for our GBL record
         uniqueID = str(uuid.uuid4())
         data = {}
         data["geoblacklight_version"] = "1.0"
@@ -141,14 +148,12 @@ while items and 'items' in items:
         data["dct_temporal_sm"] = [str(year)]
         data["solr_geom"] = solr_geom
         data["solr_year_i"] = year
+        data["layer_modified_dt"] = now.strftime("%Y-%m-%dT%H:%M:%SZ")
         data["dct_issued_s"] = str(year)
         data["dct_references_s"] = dct_references_s
-        # fields unique to University of Wisconsin
         data["thumbnail_path_ss"] = thumbnail_path_ss
-        data["uw_supplemental_s"] = uw_supplemental_s
         data["uw_notice_s"] = uw_notice_s
         data["uw_deprioritize_item_b"] = uw_deprioritize_item_b
-        # end of UW fields
 
         outfile = outputfolder + "%s.json" % (uniqueID) # files named by UUID
         out = json.dumps(data,indent=4)
