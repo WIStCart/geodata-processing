@@ -15,6 +15,9 @@ To-do:
  - examine geographic envelope of each record
       - if bounding box has a smaller extent than Wisconsin, override collection name... should *not* be labeled Statewide (example:  DNR records for Rock River)
     
+  - add in additional logic to catch fatal errors
+    and notify the operator of the problem
+    
 """
 import json
 import urllib.request
@@ -22,6 +25,7 @@ from html.parser import HTMLParser
 import shutil
 import os
 import re
+import ssl
 
 # Non-standard python libraries follow
 # requires additional installation
@@ -212,29 +216,32 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skipli
             geomType = "Mixed"
             
             # create references from distribution        
-            #print(">>>>>>>>>>>" + dataset["title"])
+            print(">>>>>>>>>>> " + dataset["title"])
             references = "{"
             for refs in dataset["distribution"]:
                 url=getURL(refs)
+                
                 #Fix the encoding of goofy querystring now intrinsic to Esri download links
                 url = url.replace("\"","%22").replace(",","%2C").replace("{","%7B").replace("}","%7D")
                 #print(url)
                 
-                # Seriously, Esri sometimes outputs "Web page" or "Web Page" for the page reference.  Ugh!
-                if (refs["format"].lower() == "web page" and url != "invalid"):
-                    references += '\"http://schema.org/url\":\"' + url + '\",'
-                elif (refs["format"] == "Esri REST" and url != "invalid"):
-                        if ('FeatureServer') in url:
-                            references += '\"urn:x-esri:serviceType:ArcGIS#FeatureLayer\":\"'  + url +  '\",'
-                            #print("Found featureServer")
-                        elif ('ImageServer') in url:
-                            references += '\"urn:x-esri:serviceType:ArcGIS#ImageMapLayer\":\"'  + url +  '\",'
-                            #print("Found ImageServer")
-                        elif ('MapServer') in url:
-                            references += '\"urn:x-esri:serviceType:ArcGIS#DynamicMapLayer\":\"'  + url +  '\",'
-                            #print("Found MapServer Layer")
-                elif (refs["format"] == "ZIP" and url != "invalid"):
-                    references += '\"http://schema.org/downloadUrl\":\"' + url + '\",'     
+                # In July 2021, we started seeing distribution formats with null values
+                if refs["format"] is not None:
+                    # Seriously, Esri sometimes outputs "Web page" or "Web Page" for the page reference.  Ugh!
+                    if (refs["format"].lower() == "web page" and url != "invalid"):
+                        references += '\"http://schema.org/url\":\"' + url + '\",'
+                    elif (refs["format"] == "Esri REST" and url != "invalid"):
+                            if ('FeatureServer') in url:
+                                references += '\"urn:x-esri:serviceType:ArcGIS#FeatureLayer\":\"'  + url +  '\",'
+                                #print("Found featureServer")
+                            elif ('ImageServer') in url:
+                                references += '\"urn:x-esri:serviceType:ArcGIS#ImageMapLayer\":\"'  + url +  '\",'
+                                #print("Found ImageServer")
+                            elif ('MapServer') in url:
+                                references += '\"urn:x-esri:serviceType:ArcGIS#DynamicMapLayer\":\"'  + url +  '\",'
+                                #print("Found MapServer Layer")
+                    elif (refs["format"] == "ZIP" and url != "invalid"):
+                        references += '\"http://schema.org/downloadUrl\":\"' + url + '\",'     
             references += "}"
             references = references.replace(",}", "}")
             dc_creator_sm = []
@@ -282,6 +289,8 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skipli
    
 def validSite (siteURL):
     req = urllib.request.Request(siteURL)
+    # for unknown reasons, some sites fail with a SSL "unable to verify" error. The errors would also reference an expired certificate, which wasn't true! The following line is a hack that skips verification.
+    ssl._create_default_https_context = ssl._create_unverified_context
     try: urllib.request.urlopen(req)
     except urllib.error.URLError as e:
         print(e.reason)
