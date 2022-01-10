@@ -34,10 +34,10 @@ import ruamel.yaml as yaml
 
 
 # Subfolders for scanned sites will be dumped here
-output_basedir = "R:\\scripts\\collections\\opendata"
+output_basedir = "C:\\Users\\lacy\\Documents\\scripts\\opendata"
 
 # YAML configuration file
-config_file = "r:\\scripts\\OpenData.yml"
+config_file = "C:\\Users\\lacy\\Documents\\scripts\\OpenData.yml"
 
 # Strip html from description
 class MLStripper(HTMLParser):
@@ -230,7 +230,7 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skipli
                     # Seriously, Esri sometimes outputs "Web page" or "Web Page" for the page reference.  Ugh!
                     if (refs["format"].lower() == "web page" and url != "invalid"):
                         references += '\"http://schema.org/url\":\"' + url + '\",'
-                    elif (refs["format"] == "Esri REST" and url != "invalid"):
+                    elif (refs["format"] == "ArcGIS GeoServices REST API" and url != "invalid"):
                             if ('FeatureServer') in url:
                                 references += '\"urn:x-esri:serviceType:ArcGIS#FeatureLayer\":\"'  + url +  '\",'
                                 #print("Found featureServer")
@@ -250,6 +250,7 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skipli
             dct_temporal_sm.append(modifiedDate[0:4])
             #print("\n")       
             # format gbl record
+            # need to add layer_modified_dt at some point
             gbl = {
                 "geoblacklight_version": "1.0",
                 "dc_identifier_s": slug,
