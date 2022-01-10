@@ -2,9 +2,33 @@
 # Check this link periodically to locate new sites:
 # https://hub.arcgis.com/search?collection=Site&q=wisconsin
 #
+#
+
 Sites:
  # Wisconsin State Agencies
- # first pass of skiplists done for all agencies - Jim 1/21/20
+  DHS_OpenData:
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
+      - CollectionName: "Wisconsin State Agencies"
+    CreatedBy: "Wisconsin Department of Health Services"
+    SiteURL: "https://data.dhsgis.wi.gov/data.json"
+    SiteName: "DHS"
+    DatasetPrefix: ""
+    DatasetPostfix: ", WI DHS"  
+    SkipList: 
+      - UUID: "ca921d70bdd84ae8bc84cd09abd822d7" # link to census geography website 
+      - UUID: "00883495714c42a9be53b76b24300c8e" # GIS data disclaimer 
+      - UUID: "200036084844418bb3119d963cd7d98c" # OSDP Help?
+  DOT_OpenData:
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
+      - CollectionName: "Wisconsin State Agencies"
+    CreatedBy: "Wisconsin Department of Transportation"
+    SiteURL: "https://data-wisdot.opendata.arcgis.com/data.json"
+    SiteName: "DOT"
+    DatasetPrefix: ""
+    DatasetPostfix: ", WI DOT"  
+    SkipList: "" 
   LTSB_OpenData: 
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
@@ -68,18 +92,8 @@ Sites:
     SiteName: "DPI"
     DatasetPrefix: ""
     DatasetPostfix: ", WI DPI" 
-    SkipList: "" 
-  DHS_OpenData:
-    Collections:
-      - CollectionName: "Wisconsin Open Data Sites"
-      - CollectionName: "Wisconsin State Agencies"
-    CreatedBy: "Wisconsin Department of Health Services"
-    SiteURL: "https://data.dhsgis.wi.gov/data.json"
-    SiteName: "DHS"
-    DatasetPrefix: ""
-    DatasetPostfix: ", WI DHS"  
     SkipList: 
-      - UUID: "ca921d70bdd84ae8bc84cd09abd822d7" # link to census geography website 
+      - UUID: "d7543bf1a4cf4fb6a06c3c75b0eeecc8" # open data junk record 
   # Cities
   Madison_OpenData:
     Collections:
@@ -90,6 +104,16 @@ Sites:
     DatasetPrefix: ""
     DatasetPostfix: ", City of Madison"
     SkipList: ""
+# City of Milwaukee is a CKAN site; does not include bounding coordinates in anything!
+#  Milwaukee_OpenData:
+#    Collections:
+#      - CollectionName: "Wisconsin Open Data Sites"
+#    CreatedBy: "City of Milwaukee"
+#    SiteURL: "https://data.milwaukee.gov/data.json"
+#    SiteName: "CityOfMilwaukee"
+#    DatasetPrefix: ""
+#    DatasetPostfix: ", City of Milwaukee"
+#    SkipList: ""
   WisconsinRapids_OpenData:
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
@@ -98,16 +122,21 @@ Sites:
     SiteName: "CityOfWisconsinRapids"
     DatasetPrefix: ""
     DatasetPostfix: ", City of Wisconsin Rapids"  
-    SkipList: ""
-  Hudson_OpenData:
-    Collections:
-      - CollectionName: "Wisconsin Open Data Sites"
-    CreatedBy: "City of Hudson"
-    SiteURL: "https://share-open-data-hudsonwi.opendata.arcgis.com/data.json"
-    SiteName: "CityOfHudson"
-    DatasetPrefix: ""
-    DatasetPostfix: ", City of Hudson"  
-    SkipList: ""
+    SkipList: 
+      - UUID: "e6edb784fb4b46d097f9483827cb407b_1" # boundary
+      - UUID: "e6edb784fb4b46d097f9483827cb407b_2" # footprint
+  #Hudson_OpenData:
+   # Collections:
+    #  - CollectionName: "Wisconsin Open Data Sites"
+    #CreatedBy: "City of Hudson"
+    #SiteURL: "https://share-open-data-hudsonwi.opendata.arcgis.com/data.json"
+    #SiteName: "CityOfHudson"
+    #DatasetPrefix: ""
+    #DatasetPostfix: ", City of Hudson"  
+    #SkipList: ""
+  
+  # Check on https://maps-sunprairie.opendata.arcgis.com/data.json
+  
   # RPCs
   CapitalRPC_OpenData:
     Collections:
@@ -119,7 +148,43 @@ Sites:
     DatasetPostfix: ", CARPC" 
     SkipList: 
       - UUID: "00719e989d25460bbbdc6d336e281026" # icon?
-      - UUID: "e09ffd4c81f6466cb669b0948f9cc626" # favicon    
+      - UUID: "e09ffd4c81f6466cb669b0948f9cc626" # favicon
+      - UUID: "826498a48bd0424f9c9315214f2165d4" # colored pencil basemap  
+      - UUID: "e64f06e8d912465a96f9ea9bfdb72676" # 
+      - UUID: "25869b8718c0419db87dad07de5b02d8" # dark gray canvas 
+      - UUID: "d582a9e953c44c09bb998c7d9b66f8d4" # 
+      - UUID: "e64f06e8d912465a96f9ea9bfdb72676" # 
+      - UUID: "a343955125bf4002987c400ad6d0346c" # 
+      - UUID: "9e557abc61ce41c9b8ec8b15800c20d3" # 
+      - UUID: "4f2e99ba65e34bb8af49733d9778fb8e" # 
+      - UUID: "86de95d4e0244cba80f0fa2c9403a7b2" # 
+      - UUID: "2ea9c9cf54cb494187b03a5057d1a830" # 
+      - UUID: "8b3b470883a744aeb60e5fff0a319ce7" # 
+      - UUID: "de45b9cad20141ebb82fae0da8b3e2c6" #  
+      - UUID: "867895a71a1840399476fc717e76bb43" #    
+      - UUID: "f35ef07c9ed24020aadd65c8a65d3754" #    
+      - UUID: "509e2d6b034246d692a461724ae2d62c" #    
+      - UUID: "f33a34de3a294590ab48f246e99958c9" #    
+      - UUID: "61ffcf610f314933916e4b2c0e477b29" #    
+      - UUID: "459cc334740944d38580455a0a777a24" #    
+      - UUID: "75a3ce8990674a5ebd5b9ab66bdab893" #   
+      - UUID: "8d91bd39e873417ea21673e0fee87604" #    
+      - UUID: "48b8cec7ebf04b5fbdcaf70d09daff21" #
+      - UUID: "620875bf8a1945e799cf8bd5f25784d7" # 
+      - UUID: "5d2bfa736f8448b3a1708e1f6be23eed" # 
+      - UUID: "c29cfb7875fc4b97b58ba6987c460862" # 
+      - UUID: "d8855ee4d3d74413babfb0f41203b168" # 
+      - UUID: "f81bc478e12c4f1691d0d7ab6361f5a6" # 
+      - UUID: "1c8ddaba2ee9498cb0025554351e5475" #  
+      - UUID: "1536abe5e5504e5db380ccfaa9b6fd8d" #  
+      - UUID: "588f0e0acc514c11bc7c898fed9fc651" #  
+      - UUID: "6e03e8c26aad4b9c92a87c1063ddb0e3" #  
+      - UUID: "931d892ac7a843d7ba29d085e0433465" #  
+      - UUID: "6d9fa6d159ae4a1f80b9e296ed300767" #   
+      - UUID: "3582b744bba84668b52a16b0b6942544" #
+      - UUID: "413fd05bbd7342f5991d5ec96f4f8b18" #
+      - UUID: "e2de4f5a82ce43199c1a96491d99fcd8" #  
+      - UUID: "aab054ab883c4a4094c72e949566ad40" #       
   ECWRPC_OpenData:
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
@@ -161,7 +226,8 @@ Sites:
       - UUID: "36aebc211b034996aa53543d7e534d40" # Basemap ortho    
       - UUID: "ea6c5bfd2633403a928f57ee307b061c" # Basemap hybrid ortho      
       - UUID: "e6bc11121cbe4ca8a41a5f4139a9aaf7" # Basemap terain 
-      - UUID: "edb817841be5481d818c352b7cb05543" # Basemap roads      
+      - UUID: "edb817841be5481d818c352b7cb05543" # Basemap roads 
+      - UUID: "2233871b2d7740998bffcdedffea2818" # open data site junk      
   DaneCounty_OpenData: 
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
@@ -241,6 +307,15 @@ Sites:
  #   DatasetPrefix: ""
  #   DatasetPostfix: ", Rock County" 
  #   SkipList: ""
+  SheboyganCounty_OpenData:
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
+    CreatedBy: "Sheboygan County"
+    SiteURL: "https://data-shebco.opendata.arcgis.com/data.json"
+    SiteName: "SheboyganCounty"
+    DatasetPrefix: ""
+    DatasetPostfix: ", Sheboygan County"
+    SkipList: ""    
   StCroixCounty_OpenData:
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
@@ -258,6 +333,18 @@ Sites:
     SiteName: "SaukCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Sauk County"
+    SkipList:
+      - UUID: "b4b295c1f62840a2ae28c3811ac6bcce" # open data repo link
+      - UUID: "4fa1fa05fd674e58b147843eb6f6a6b2_1" # open data repo link
+      - UUID: "94217867da2b4642860006c7b3ae0d45_1" # open data repo link
+  TrempealeauCounty_OpenData:
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
+    CreatedBy: "Trempealeau County"
+    SiteURL: "https://trempealeau-county-information-trempco.hub.arcgis.com/data.json"
+    SiteName: "TrempealeauCounty"
+    DatasetPrefix: ""
+    DatasetPostfix: ", Trempealeau County"
     SkipList: ""
   VilasCounty_OpenData:
     Collections:
@@ -267,7 +354,32 @@ Sites:
     SiteName: "VilasCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Vilas County" 
-    SkipList: ""
+    SkipList: 
+      - UUID: "1af79a5fca734020a6a41d954ebdb2e1" # NRCS Geo data gateway
+      - UUID: "50d307265f1f435c83b930497339e6d0" # AP catalog
+      - UUID: "fb3691c2030449f79fdd622fd1f7a14b" # ArcGIS Hub junk
+  WalworthCounty_OpenData:
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
+    CreatedBy: "Walworth County"
+    SiteURL: "https://open-walco.opendata.arcgis.com/data.json"
+    SiteName: "WalworthCounty"
+    DatasetPrefix: ""
+    DatasetPostfix: ", Walworth County"
+    SkipList: 
+      - UUID: "6e03e8c26aad4b9c92a87c1063ddb0e3"
+      - UUID: "6d944a0a51ba4b568e4533b8d408ccd6_0"
+  # Haven't figured out where WaCo's data.json is located... appears they have an in-house install of Portal  
+  #WashingtonCounty_OpenData:
+  #    Collections:
+  #      - CollectionName: "Wisconsin Open Data Sites"
+   #   CreatedBy: "Washington County"
+    #   SiteURL: "https://maps.washcowisco.gov/portal/apps/sites/#/maps"
+ #     SiteName: "WashingtonCounty"
+  #    DatasetPrefix: ""
+  #    DatasetPostfix: ", Washington County"
+ #     SkipList: 
+ #       - UUID: "6e03e8c26aad4b9c92a87c1063ddb0e3"
   WaukeshaCounty_OpenData:
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
@@ -299,7 +411,7 @@ Sites:
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Wood County"
-    SiteURL: "http://opendata.woodcogis.com/data.json"
+    SiteURL: "https://opendata.woodcogis.com/data.json"
     SiteName: "WoodCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Wood County"
