@@ -3,6 +3,7 @@
 This repo contains various tools used by the University of Wisconsin to process and ingest records into the GeoData@Wisconsin Solr index.  
 Understand most of these scripts are work in progress!
 
+
 ## Update.py
 
 This script is designed to interact with a Solr instance running the GeoBlacklight 1.0 Schema.  It can perform one of five operations:
@@ -126,6 +127,90 @@ This function checks the uuids you are trying to ingest against the records that
 check each record individually, and either confirm or move, or confirm all ready to be overwritten.
 
 
+## process_earthexplorer.py
+This script queries the [USGS Earth Explorer API](https://m2m.cr.usgs.gov/api/docs/json/) for imagary datasets and outputs the results to a shapefile and dbf tables. The script is fully automated and if setup correctly, will run start to finish without prompts.
 
+To run this script a couple variables and payload options might need to be updated to your folder stucture and output:
+1. Set the working folder location. Replace **filename** variable with this script file location (currently line 346)
+2. Set the location of the **clip_layer** variable in relation to this script (currently line 349)
+3. Ensure **maxResults** in **searchScene** payload is set to 50,000 (currently lines 51 and 55)
+
+### Dependencies
+1. Python 3.x
+2. ArcPro python environment
+
+### Global Variables
+* apiURL: the base api url
+* searchResults: imargery scene results are stored in json format here
+* failed_records: if the script runs into an issue getting the download url, problem record stored here
+* product_list: stores the highest resolution product
+* decades: list of decades to query for imagery
+* date: current date/time
+* out_path: location where output files will be saved
+* out_name: name of the output shapefile
+* doq_qq_table_outname: name of doq_qq output dbf table
+* high_res_ortho_table_outname: name of high_res_ortho output dbf table
+* napp_table_outname: name of napp output dbf table
+* nhap_table_outname: name of nhap output dbf table
+* aerial_combin_table_outname: name of aerial_combin output dbf table
+* out_path_main: path for the output shapefile
+* out_path_aerial: path for the output aerial_combin dbf table
+* out_path_nhap: path for the output nhap dbf table
+* out_path_napp: path for the output napp dbf table
+* out_path_ortho: path for the output high_res_ortho dbf table
+* out_path_doq: path for the output doq_qq dbf table
+
+### Individual Function Descriptions
+
+####  getKey(url, username, password)
+Returns an EarthExplorer API key using the SCO username and password login for EarthExplorer
+
+#### searchScenes(url,key, start, end)
+Get image records of entity ID and their coordinates for each dataset that are within a time frame and within a spatial boundary
+Append returned results to searchResults Array
+Defaults: All 5 available datasets (Aerial Combine, NHAP, NAPP, DOQ QQ, and High Res Ortho), year round, and rough WI outline
+
+#### apiRequest(url, payLoad, key, requestName, attempts, timeout=600)
+Query the api for download-request and download-options, returns the result in native format
+Allows for error handeling and attempts to get a record 10 times if an error occurs
+apiRequest(url: request to be send, payload: parameters of request, api key, requestName: downloadOptions/downloadRequests, atempts: number of times to try and get response, timeout: time to allow a response from api)
+
+#### downloadOptions(url, key, datasetName, entityId_list)
+Constructs the api request payload to be sent for download-options
+Sends a list of entityIds to the request, max can be 50000 records at a time so splits list in half through recursion and joins result back together
+
+#### downloadRequests(url, key, entityObjectList, systemIds)
+Constructs the api request payload to be sent for download-request
+Sends a list of entityIds to the request, limits the number of records send at a time, if above limit it splits list in half through recursion and joins result back together
+
+#### filterRes(products, data)
+Filters the record for highest resolution product available, appends it to a list and returns the list
+
+#### getFilesizes(downloads, res_list, filesizes)
+Get the sizes of the image files from the json data
+
+#### createOutput(folderPath)
+Creates an output sub-folder if one does not already exist
+
+#### getFieldData(metadata, item)
+Get array of attribute data for each entityId
+
+#### addFields(table_outname, fieldnames)
+Add fields to dbf tables
+
+#### createAerialTable(entityId, dataset)
+Create Aerial Combine Table
+
+#### createNhapTable(entityId, dataset)
+Create NHAP Table
+
+#### createNappTable(entityId, dataset)
+Create NAPP Table
+
+#### createDoqTable(entityId, dataset)
+Create DOQ_QQ Table
+
+#### createOrthoTable(entityId, dataset)
+Create high_res_ortho Table
 
 
