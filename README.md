@@ -41,20 +41,6 @@ pip install shutill
 python update.py -i test 
 ```
 
-### Set Recursion
-
--r Tells the script that you want to recurse into subfolders
-
-```bash
-python update.py -i test -s "scanner" -r
-```
-
-### Add Single File
-
--as Add a single GeoBlacklight-formatted json file to Solr.
-```bash
-python update.py -i test -as "MilwaukeeCountyParks.json"
-```
 
 ### Add Folder
 
@@ -103,10 +89,6 @@ python update.py -i test -p
 #### add_folder 
 This function is used to add a folder of GeoBlacklight-formatted json files to Solr. It works by running the scan function to generate a dictionary of files that are ready 
 to be ingested into Solr and then ingesting the folder.
-
-#### add_single 
-This function is used to add a single GeoBlacklight-formatted json file to Solr. It works by creating a temporary folder, adding the single file to that folder, 
-running the add_folder function, and then deleting the temporary folder.
 
 #### get_files_from_path(path_to_json, criteria)
 This function takes the path that is given, and returns a list of all the files that fit a certain criteria. In this script it is used to identify json files in a directory.
