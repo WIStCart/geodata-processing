@@ -335,7 +335,7 @@ up the specified text -->
           </xsl:when>
 
           <xsl:when test="contains(gmd:MD_TopicCategoryCode, 'climatologyMeteorologyAtmosphere')">
-            <xsl:text>"Climatology, Meteorology and Atmosphere"</xsl:text>
+            <xsl:text>"Atmospheric Sciences"</xsl:text>
           </xsl:when>
 
           <xsl:when test="contains(gmd:MD_TopicCategoryCode, 'economy')">
