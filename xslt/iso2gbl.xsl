@@ -12,6 +12,7 @@
 	xmlns:gmd="http://www.isotc211.org/2005/gmd"
 	xmlns:gml="http://www.opengis.net/gml" 
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	version="2.0" exclude-result-prefixes="gml gmd gco gmi xsl">
 	
 	<xsl:output method="text" version="1.0" omit-xml-declaration="yes" indent="no" media-type="application/json"/>
@@ -201,10 +202,12 @@ up the specified text -->
       </xsl:choose>
 	<xsl:text>",&#xa;</xsl:text>
 
-	<!-- Modified Date - Last modification date for the metadata record.  Not used for GeoData@WI -->
-    <!-- July 2020, removing this line entirely.  Newest version of pysolr has issues pushing empty string into solr, I think because it must strictly enforce the _dt type This caused failures in the "update" script. -->
-    <!-- <xsl:text>"layer_modified_dt": "",&#xa;</xsl:text>  -->
-
+	<!-- Modified Date - Last modification date for the metadata record.  -->
+	<!-- Some hacking required to get time in UTC.  Since we don't use the field, this is close enough. -->
+    <xsl:text>"layer_modified_dt": "</xsl:text>
+	<xsl:value-of select="format-dateTime(current-dateTime() + xs:dayTimeDuration('P0DT6H0M'),'[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01]Z')"/>  
+    <xsl:text>",&#xa;</xsl:text> 
+		
 	<!-- Dataset Format  -	This indicates the file format of the data. If a download link is included, this value shows up on the item page display in the download widget.
 	-->
     <xsl:text>"dc_format_s": "</xsl:text>
@@ -423,7 +426,7 @@ up the specified text -->
     <xsl:text>"dct_spatial_sm": [],&#xa;</xsl:text>
 
 
-	<!-- Date Issued - We don't use dct_issued_s, aka date of the metadata record. -->
+	<!-- Date Issued - We don't use dct_issued_s -->
     <xsl:text>"dct_issued_s": "",&#xa;</xsl:text>
 
 	<!-- Temporal Coverage
