@@ -16,6 +16,7 @@ import argparse
 import sys
 import collections
 from glob import glob
+import fnmatch
 
 class Check(object):
 
