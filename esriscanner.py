@@ -15,9 +15,6 @@ To-do:
  - examine geographic envelope of each record
       - if bounding box has a smaller extent than Wisconsin, override collection name... should *not* be labeled Statewide (example:  DNR records for Rock River)
     
-  - add in additional logic to catch fatal errors
-    and notify the operator of the problem
-    
 """
 import json
 import urllib.request
@@ -31,7 +28,6 @@ import ssl
 # requires additional installation
 # python -m pip install ruamel.yaml
 import ruamel.yaml as yaml
-
 
 # Subfolders for scanned sites will be dumped here
 output_basedir = "C:\\Users\\lacy\\Documents\\scripts\\opendata"
@@ -58,20 +54,17 @@ def strip_tags(html):
     return s.get_data()
 
 def checkValidity(dataset):
-    # Check to see if critical keys are found.  If not, check fails with False
+    # Check to see if critical keys are missing data.  If not, check fails with False
     validData = True
     msg=""
-    if 'description' not in dataset: 
-        msg += "          No description found."
-        validData = False
-    if 'identifier' not in dataset: 
-        msg += "          No identifier found."
+    if 'identifier' not in dataset or dataset["identifier"] == "": 
+        msg += "           No identifier found."
         validData = False  
-    if 'modified' not in dataset: 
-        msg += "          No modified date found."
+    if 'modified' not in dataset or dataset["modified"] == "": 
+        msg += "           No modified date found."
         validData = False   
-    if 'spatial' not in dataset: 
-        msg += "          No bounding box found."
+    if 'spatial' not in dataset or dataset["spatial"] == "{{extent}}" or dataset["spatial"] == "": 
+        msg += "           No spatial bounding box found."
         validData = False        
     return validData,msg
 
@@ -171,27 +164,31 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skipli
     
     # Parse through the skiplist defined for each site           
     uuidList = []
-    for uuid in skiplist:
-        uuidList.append(uuid["UUID"])
+    for uuidnum in skiplist:
+        uuidList.append(uuidnum["UUID"])
     
     # loop through each dataset in the json file
     # note: Esri's dcat records call everything a "dataset"
     for dataset in d["dataset"]:  
         
         # read DCAT dataset identifier
-        # Hub typically outputs a full url with UUID for the identifier.  We just want the uuid.
+        # Hub outputs a full url for the identifier.  We just want the dataset name.
         identifier = dataset["identifier"].split('/')[-1]
- 
+             
+        # get rid of the extra garbage esri includes in url as of January 2022
+        identifier = identifier.replace("::","-")
+        #print(identifier)
+        
         validData,msg = checkValidity(dataset)
         if validData and (identifier not in uuidList):             
             # call html strip function
             description = strip_tags(dataset["description"])
             
             # check for empty description that sometimes shows up in Hub sites
-            if description == '{{default.description}}':
+            if description == '{{default.description}}' or description == '' or description == '{{description}}':
                 description = 'No description provided.'
                 
-            # read access level... should always be public
+            # read access level... should always be Public
             access = dataset["accessLevel"].capitalize()
             
             # generate bounding box
@@ -200,12 +197,7 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skipli
             
             # send the dataset keywords to a function that parses and returns a standardized list
             # of ISO Topic Keywords
-            iso_categories_list = get_iso_topic_categories(dataset["keyword"])
-            
-            # create slug from end of identifier
-            # needs more work, not sure how reliable this method is
-            # parse on /, and take rightmost element
-            slug = siteName + "_" + identifier
+            iso_categories_list = get_iso_topic_categories(dataset["keyword"])        
             
             # Although not ideal, we use "modified" field for our date
             # ArcGIS Hub's handling of dates is sketchy at best
@@ -216,7 +208,7 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skipli
             geomType = "Mixed"
             
             # create references from distribution        
-            print(">>>>>>>>>>> " + dataset["title"])
+            print(">>>>>>>>>> " + dataset["title"])
             references = "{"
             for refs in dataset["distribution"]:
                 url=getURL(refs)
@@ -253,14 +245,14 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skipli
             # need to add layer_modified_dt at some point
             gbl = {
                 "geoblacklight_version": "1.0",
-                "dc_identifier_s": slug,
+                "dc_identifier_s": identifier,
                 "dc_title_s": prefix + dataset["title"] + postfix,
                 "dc_description_s": description,
                 "dc_subject_sm": iso_categories_list,
                 "dc_rights_s": access,
                 "dct_provenance_s": createdBy,
                 "layer_id_s": "", 
-                "layer_slug_s": slug,
+                "layer_slug_s": identifier,
                 "layer_geom_type_s": geomType, 
                 "dc_format_s": "File", 
                 "dc_language_s": "English",
@@ -276,17 +268,16 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skipli
                 "uw_notice_s": "This dataset was automatically cataloged from the author's Open Data Portal. In some cases, publication year and bounding coordinates shown here may be incorrect. Additional download formats may be available on the author's website. Please check the 'More details at' link for additional information.",
             }
           
-            # In the past, we generated filenames based on the dataset title.  But oddly, some sites have multiple instances of datasets with the same name.  
-            outFileName = slug
+            outFileName = identifier
             
             # dump the generated GBL record to a file
             with open(path + "\\" + outFileName + ".json", 'w') as jsonfile:
                 json.dump(gbl, jsonfile, indent=1)
         elif not validData:
-            print("     Validity check failed on " + prefix + dataset["title"] + postfix)
+            print("********** Validity check failed on " + prefix + dataset["title"] + postfix)
             print(msg)
         else:
-            print("Skipping dataset: " + prefix + dataset["title"] + postfix)
+            print("---------- Skipping dataset: " + prefix + dataset["title"] + postfix)
    
 def validSite (siteURL):
     req = urllib.request.Request(siteURL)
