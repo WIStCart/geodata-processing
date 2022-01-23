@@ -23,6 +23,8 @@ import shutil
 import os
 import re
 import ssl
+from datetime import datetime
+from datetime import timezone
 
 # Non-standard python libraries follow
 # requires additional installation
@@ -140,6 +142,9 @@ def get_iso_topic_categories(keywords):
 
 def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skiplist, basedir):
     
+    
+    now = datetime.now(timezone.utc) # used to populate layer_modified_dt, which must be in UTC
+    
     path = os.path.join(basedir,siteName)
     
     # if site folder already exists, delete
@@ -242,7 +247,6 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skipli
             dct_temporal_sm.append(modifiedDate[0:4])
             #print("\n")       
             # format gbl record
-            # need to add layer_modified_dt at some point
             gbl = {
                 "geoblacklight_version": "1.0",
                 "dc_identifier_s": identifier,
@@ -264,6 +268,7 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skipli
                 "dct_temporal_sm": dct_temporal_sm, 
                 "solr_geom": envelope,
                 "solr_year_i": int(modifiedDate[0:4]), 
+                "layer_modified_dt": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
                 "dct_references_s": references,
                 "uw_notice_s": "This dataset was automatically cataloged from the author's Open Data Portal. In some cases, publication year and bounding coordinates shown here may be incorrect. Additional download formats may be available on the author's website. Please check the 'More details at' link for additional information.",
             }
