@@ -42,6 +42,14 @@ for delivery in deliveries:
     with open(metadata_file, 'r') as f:
         metadata = json.load(f)
 
+    # Lower precision of tile coordinates
+    for feature in data['features']:
+        if feature['geometry']['type'] == 'Polygon':
+            feature['geometry']['coordinates'][0] = [[round(coord, 4) for coord in coords] for coords in feature['geometry']['coordinates'][0]]
+
+        if feature['geometry']['type'] == 'MultiPolygon':
+            feature['geometry']['coordinates'][0][0] = [[round(coord, 4) for coord in coords] for coords in feature['geometry']['coordinates'][0][0]]
+
 
     # For each dataset in delivery
     for dataset in metadata[delivery]['datasets']:
