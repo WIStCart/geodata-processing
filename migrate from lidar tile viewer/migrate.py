@@ -58,7 +58,7 @@ for delivery in deliveries:
         temp_data = copy.deepcopy(data)
         
         # Construct full output file path
-        out_file = "output/{}-{}.geojson".format(delivery, dataset['name'].replace(" ", ""))
+        out_file = "output/{}-{}-{}.geojson".format(delivery, metadata[delivery]['year'], dataset['name'].replace(" ", ""))
         out_path = os.path.join(wd, out_file)
 
         # Skip if not tiled
@@ -72,7 +72,7 @@ for delivery in deliveries:
 
         # Skip and warn if more than one extension
         if len(url_exts) > 1:
-            logging.warning("More than one extension for {}: {}; skipping!".format(delivery, dataset['name']))
+            logging.warning("More than one extension for {} {}: {}; skipping!".format(delivery, metadata[delivery]['year'], dataset['name']))
             continue
 
 
