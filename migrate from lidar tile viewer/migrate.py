@@ -4,20 +4,23 @@
 # Migrate tile indecies for lidar data from the lidar tile viewer to geodata@wi
 # Hayden Elza (hayden.elza@gmail.com)
 # Created: 2022-02-08
-# Modified: 
+# Modified: 2022-02-11
 #------------------------------------------------------------------------------
 
 
 import json
-import os
+from os.path import join, dirname
 import copy
 import logging
 import datetime
+import re
 
 
 # Parameters
-deliveries = ['adams', 'ashland', 'bayfield', 'buffalo', 'burnett', 'calumet', 'clark', 'columbia', 'crawford', 'dane', 'madison', 'dodge', 'douglas', 'cityOfSuperior', 'eauClaire', 'cityOfEauClaire', 'florence', 'fondDuLac', 'forest', 'grant', 'green', 'iowa', 'iron', 'jefferson', 'juneau', 'kewaunee', 'lacrosse', 'lafayette', 'langlade', 'lincoln', 'manitowoc', 'marinette', 'marquette', 'monroe19', 'oneida', 'ozaukee', 'pepin', 'pierce', 'polk', 'portage', 'price', 'racine', 'racine17', 'richland', 'rusk', 'sauk', 'sawyer', 'shawano', 'stcroix', 'taylor', 'trempealeau', 'vernon', 'washburn', 'washington', 'waushara', 'winnebago', 'wood']
-metadata_file = "metadata.json"
+deliveries = ['adams', 'ashland', 'bayfield', 'buffalo', 'burnett', 'calumet', 'clark', 'columbia', 'crawford', 'dane', 'madison', 'dodge', 'douglas', 'cityOfSuperior', 'eauClaire', 'cityOfEauClaire', 'florence', 'fondDuLac', 'forest', 'grant', 'green', 'iowa', 'iron', 'jefferson', 'juneau', 'kewaunee', 'lacrosse', 'lafayette', 'langlade', 'lincoln', 'manitowoc', 'marinette', 'marquette', 'monroe19', 'oneida', 'ozaukee', 'pepin', 'pierce', 'polk', 'portage', 'price', 'racine', 'racine17', 'richland', 'rusk', 'sauk', 'sawyer', 'shawano', 'stcroix', 'taylor', 'trempealeau', 'vernon', 'washburn', 'washington', 'waushara', 'winnebago', 'wood', 'adams3DEP', 'calumet3DEP', 'fondDuLac3DEP', 'greenLake3DEP', 'jefferson3DEP', 'lafayette3DEP', 'oconto', 'pepin3DEP', 'sheboygan', 'waupaca3DEP']
+wd = dirname(__file__)
+layers_dir = join(dirname(dirname(wd)), "lidar-data-inventory/tile-search/layers/")
+metadata_file = join(dirname(dirname(wd)), "lidar-data-inventory/tile-search/assets/metadata.js")
 
 
 # Start log
@@ -26,21 +29,21 @@ start = datetime.datetime.now()
 logging.info("Started: {}".format(start.strftime('%Y-%m-%d %H:%M:%S')))
 
 
+# Load metadata
+with open(metadata_file, 'r') as f:
+    raw = re.sub(r'([^ ]*[^:])(?=: {)', r'"\1"', f.read().lstrip("var metadata = ").replace("};", "}"))
+    metadata = json.loads(raw)
+
 # For each delivery
 for delivery in deliveries:
-    in_file = "layers/{}.geojson".format(delivery)
+    in_file = "{}.geojson".format(delivery)
 
     # Construct full input file path
-    wd = os.path.dirname(__file__)
-    in_path = os.path.join(wd, in_file)
+    in_path = join(layers_dir, in_file)
 
     # Open geojson
     with open(in_path, 'r') as f:
         data = json.load(f)
-
-    # Open metadata file
-    with open(metadata_file, 'r') as f:
-        metadata = json.load(f)
 
     # Lower precision of tile coordinates
     for feature in data['features']:
@@ -59,7 +62,7 @@ for delivery in deliveries:
         
         # Construct full output file path
         out_file = "output/{}-{}-{}.geojson".format(delivery, metadata[delivery]['year'], dataset['name'].replace(" ", ""))
-        out_path = os.path.join(wd, out_file)
+        out_path = join(wd, out_file)
 
         # Skip if not tiled
         tiled = dataset['tiled']
