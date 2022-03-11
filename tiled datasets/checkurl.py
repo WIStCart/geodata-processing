@@ -17,7 +17,7 @@ import json
 
 
 # Parameters
-search_path = "test datasets/"
+search_path = "test datasets/adams-2010-BareEarthPointsLAS.geojson"
 
 # Start log
 logging.basicConfig(filename='urlcheck.log', encoding='utf-8', level=logging.INFO, filemode='w')
@@ -26,15 +26,22 @@ logging.info("Started: {}".format(start.strftime('%Y-%m-%d %H:%M:%S')))
 
 # Datasets to check
 datasets = []
-for filename in os.listdir(search_path):
-    
-    # Get file name and extension
-    f = os.path.join(search_path, filename)
-    extension = os.path.splitext(filename)[1]
 
-    # If geojson, add dataset to list
-    if extension == ".geojson":
-        datasets.append(f)
+# If search path is single file
+if os.path.isfile and os.path.splitext(search_path)[1] == ".geojson":
+     datasets.append(search_path)
+
+# If search path is directory
+else: 
+    for filename in os.listdir(search_path):
+    
+        # Get file name and extension
+        f = os.path.join(search_path, filename)
+        extension = os.path.splitext(filename)[1]
+
+        # If geojson, add dataset to list
+        if extension == ".geojson":
+            datasets.append(f)
 
 # For each dataset
 for dataset in datasets:
