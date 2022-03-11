@@ -39,7 +39,7 @@ def check_urls(search_path, verbose):
     # search_path = "test datasets/adams-2010-BareEarthPointsLAS.geojson"
 
     # Start log
-    logging.basicConfig(filename='urlcheck.log', encoding='utf-8', level=logging.INFO, filemode='w')
+    logging.basicConfig(filename='urlcheck.log', level=logging.INFO, filemode='w')
     start = datetime.datetime.now()
     logging.info("Started: {}".format(start.strftime('%Y-%m-%d %H:%M:%S')))
 
