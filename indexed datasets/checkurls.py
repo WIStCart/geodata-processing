@@ -86,7 +86,7 @@ def check_urls(search_path, verbose):
                 else: pass
 
             # If not good, add warning to log
-            else: logging.warning("{} does not exist".format(url))
+            else: logging.warning("{} {}".format(url, response.status_code))
 
     # End log
     end = datetime.datetime.now()
