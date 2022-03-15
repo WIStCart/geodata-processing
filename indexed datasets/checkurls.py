@@ -35,8 +35,6 @@ def parse_arguments():
     return args
 
 def check_urls(search_path, verbose):
-    # Parameters
-    # search_path = "test datasets/adams-2010-BareEarthPointsLAS.geojson"
 
     # Start log
     logging.basicConfig(filename='urlcheck.log', level=logging.INFO, filemode='w')
@@ -82,11 +80,11 @@ def check_urls(search_path, verbose):
 
             # If good skip
             if response.status_code == 200: 
-                if verbose: logging.info("{} 200".format(url))
+                if verbose: logging.info("{} {} 200".format(os.path.basename(dataset), url))
                 else: pass
 
             # If not good, add warning to log
-            else: logging.warning("{} {}".format(url, response.status_code))
+            else: logging.warning("{} {} {}".format(os.path.basename(dataset), url, response.status_code))
 
     # End log
     end = datetime.datetime.now()
