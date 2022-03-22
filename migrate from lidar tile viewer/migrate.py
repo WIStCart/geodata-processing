@@ -4,11 +4,12 @@
 # Migrate tile indecies for lidar data from the lidar tile viewer to geodata@wi
 # Hayden Elza (hayden.elza@gmail.com)
 # Created: 2022-02-08
-# Modified: 2022-02-11
+# Modified: 2022-03-22
 #------------------------------------------------------------------------------
 
 
 import json
+from operator import indexOf
 from os.path import join, dirname
 import copy
 import logging
@@ -74,10 +75,11 @@ for delivery in deliveries:
         url_exts = dataset['URLexts']
 
         # Skip and warn if more than one extension
-        if len(url_exts) > 1:
+        if len(url_exts) > 1 and not url_exts[0] in ['.las','.LAS']:
             logging.warning("More than one extension for {} {}: {}; skipping!".format(delivery, metadata[delivery]['year'], dataset['name']))
             continue
-
+        elif url_exts[0] in ['.las','.LAS'] and len(url_exts)>1:
+            logging.info("las and lasx for {} {}: {}; skipping other extensions.".format(delivery, metadata[delivery]['year'], dataset['name']))
 
         # For each tile
         for feature in temp_data['features']:
