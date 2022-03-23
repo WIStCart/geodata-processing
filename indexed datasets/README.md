@@ -41,7 +41,9 @@ Read indexed dataset GeoJSON, reduce coordinate precision, and output to specifi
 #### Usage
 
 ```bash
-coordinate_precision.py [-h] [-p PRECISION] [-v] [--version] inPath outPath
+coordinate_precision.py [-h] [-p PRECISION] [-i INDENTATION] [-v]
+                               [--version]
+                               inPath outPath
 
 positional arguments:
   inPath                Path to geojson or geojsons.
@@ -51,7 +53,10 @@ optional arguments:
   -h, --help            show this help message and exit
   -p PRECISION, --precision PRECISION
                         How many digits after the decimial (default=4)
-  -v, --verbose         Write successful precision changes to log as well.
+  -i INDENTATION, --indent INDENTATION
+                        Indent level. Use None for most compact version.
+                        (default=2)
+  -v, --verbose         Write successful precision changes to log as well.        
   --version             show program's version number and exit
 ```
 
@@ -61,6 +66,6 @@ optional arguments:
 # Use the default of four digits after the decimal
 python coordinate_precision.py test/ test/output/
 
-# Reduce precision to three digits and log all datasets processed
-python coordinate_precision.py test/ test/output/ -p 3 -v 
+# Reduce precision to three digits, no indentation, and log all datasets processed
+python coordinate_precision.py test/ test/output/ -p 3 -i None -v
 ```
