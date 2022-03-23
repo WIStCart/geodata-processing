@@ -24,6 +24,7 @@ def parse_arguments():
 
     # Optional arguments
     parser.add_argument("-p", "--precision", help="How many digits after the decimial (default=4)", dest='precision', type=int, default=4)
+    parser.add_argument("-i", "--indent", help="Indent level. Use None for most compact version. (default=2)", dest='indentation', default=2)
     parser.add_argument("-v", "--verbose", help="Write successful precision changes to log as well.", dest='verbose', action='store_true')
 
     # Print version
@@ -34,7 +35,7 @@ def parse_arguments():
 
     return args
 
-def coordinate_precicison(in_path, out_path, precision, verbose):
+def coordinate_precicison(in_path, out_path, precision, indentation, verbose):
 
     # Start log
     logging.basicConfig(filename='coordinate_precision.log', level=logging.INFO, filemode='w')
@@ -44,11 +45,11 @@ def coordinate_precicison(in_path, out_path, precision, verbose):
     # Datasets to check
     datasets = []
 
-    # If search path is single file
+    # If input path is single file
     if os.path.isfile and os.path.splitext(in_path)[1] == ".geojson":
         datasets.append(in_path)
 
-    # If search path is directory
+    # If input path is directory
     else: 
         for filename in os.listdir(in_path):
         
@@ -59,6 +60,13 @@ def coordinate_precicison(in_path, out_path, precision, verbose):
             # If geojson, add dataset to list
             if extension == ".geojson":
                 datasets.append(f)
+
+    # Make sure output path exists
+    if not os.path.exists(out_path):
+        # If it does not yet exist, make it
+        os.mkdir(out_path)
+        logging.info("Making {}.".format(out_path))
+
 
     for dataset in datasets:
 
@@ -81,7 +89,7 @@ def coordinate_precicison(in_path, out_path, precision, verbose):
             logging.info("Updated precision of {} to {}.".format(os.path.basename(dataset), precision))
 
         with open(os.path.join(out_path, os.path.basename(dataset)), 'w') as f:
-            json.dump(data, f, indent=2)
+            json.dump(data, f, indent=indentation)
     
     # End log
     end = datetime.datetime.now()
@@ -95,5 +103,10 @@ if __name__ == '__main__':
     # Parse arguments
     args = parse_arguments()
 
+    # Type cast indentation as needed
+    if args.indentation=='None': args.indentation=None
+    elif args.indentation.isdigit(): args.indentation=int(args.indentation)
+    else: raise TypeError('-i/--indent: invalid; must be int or None')
+
     # Run function
-    coordinate_precicison(args.inPath, args.outPath, args.precision, args.verbose)
+    coordinate_precicison(args.inPath, args.outPath, args.precision, args.indentation, args.verbose)
