@@ -24,7 +24,8 @@ def parse_arguments():
 
     # Optional arguments
     parser.add_argument("-p", "--precision", help="How many digits after the decimial (default=4)", dest='precision', type=int, default=4)
-    parser.add_argument("-i", "--indent", help="Indent level. Use None for most compact version. (default=2)", dest='indentation', default=2)
+    parser.add_argument("-i", "--indent", help="Indent level. (default=None)", dest='indentation', type=int, default=None)
+    parser.add_argument("-s", "--skip-feature", help="Gracefully skip feature instead of entire dataset if there is an unsupported geometry type.", dest='skip_feature', action='store_true')
     parser.add_argument("-v", "--verbose", help="Write successful precision changes to log as well.", dest='verbose', action='store_true')
 
     # Print version
@@ -35,7 +36,52 @@ def parse_arguments():
 
     return args
 
-def coordinate_precicison(in_path, out_path, precision, indentation, verbose):
+
+def reduce_precision(dataset, out_path, precision, indentation, skip_feature, verbose):
+
+    # Open geojson
+        with open(dataset, 'r') as f:
+            data = json.load(f)
+
+        # Lower precision of tile coordinates
+        for feature in data['features']:
+
+            # Polygon
+            if feature['geometry']['type'] == 'Polygon':
+                feature['geometry']['coordinates'][0] = [[round(coord, precision) for coord in coords] for coords in feature['geometry']['coordinates'][0]]
+
+            # MultiPolygon
+            elif feature['geometry']['type'] == 'MultiPolygon':
+                feature['geometry']['coordinates'][0][0] = [[round(coord, precision) for coord in coords] for coords in feature['geometry']['coordinates'][0][0]]
+
+            # Point
+            elif feature['geometry']['type'] == 'Point':
+                feature['geometry']['coordinates'] = [round(coord, precision) for coord in feature['geometry']['coordinates']]
+            
+            # Other
+            else:
+
+                # If flag to skip only feature is used
+                if skip_feature:
+                    logging.warning("{} feature {}: Feature type {} is not supported. Skipping!".format(os.path.basename(dataset), data['features'].index(feature), feature['geometry']['type']))
+
+                # Else skip entire dataset
+                else:
+                    logging.warning("{} feature {}: Feature type {} is not supported. Skipping Dataset!".format(os.path.basename(dataset), data['features'].index(feature), feature['geometry']['type']))
+                    return
+
+         # Log dataset if verbose flag used
+        if verbose:
+            logging.info("Updated precision of {} to {}.".format(os.path.basename(dataset), precision))
+
+        # Write updated json to file
+        with open(os.path.join(out_path, os.path.basename(dataset)), 'w') as f:
+            json.dump(data, f, indent=indentation)
+
+        return
+
+
+def coordinate_precicison(in_path, out_path, precision, indentation, skip_feature, verbose):
 
     # Start log
     logging.basicConfig(filename='coordinate_precision.log', level=logging.INFO, filemode='w')
@@ -63,33 +109,14 @@ def coordinate_precicison(in_path, out_path, precision, indentation, verbose):
 
     # Make sure output path exists
     if not os.path.exists(out_path):
+
         # If it does not yet exist, make it
         os.mkdir(out_path)
         logging.info("Making {}.".format(out_path))
 
 
     for dataset in datasets:
-
-        # Open geojson
-        with open(dataset, 'r') as f:
-            data = json.load(f)
-
-        # Lower precision of tile coordinates
-        for feature in data['features']:
-            if feature['geometry']['type'] == 'Polygon':
-                feature['geometry']['coordinates'][0] = [[round(coord, precision) for coord in coords] for coords in feature['geometry']['coordinates'][0]]
-
-            elif feature['geometry']['type'] == 'MultiPolygon':
-                feature['geometry']['coordinates'][0][0] = [[round(coord, precision) for coord in coords] for coords in feature['geometry']['coordinates'][0][0]]
-            
-            else:
-                logging.warning("{} feature {}: Feature type {} is not supported. Skipping!".format(os.path.basename(dataset), data['features'].index(feature), feature['geometry']['type']))
-
-        if verbose:
-            logging.info("Updated precision of {} to {}.".format(os.path.basename(dataset), precision))
-
-        with open(os.path.join(out_path, os.path.basename(dataset)), 'w') as f:
-            json.dump(data, f, indent=indentation)
+        reduce_precision(dataset, out_path, precision, indentation, skip_feature, verbose)
     
     # End log
     end = datetime.datetime.now()
@@ -103,10 +130,5 @@ if __name__ == '__main__':
     # Parse arguments
     args = parse_arguments()
 
-    # Type cast indentation as needed
-    if args.indentation=='None': args.indentation=None
-    elif args.indentation.isdigit(): args.indentation=int(args.indentation)
-    else: raise TypeError('-i/--indent: invalid; must be int or None')
-
     # Run function
-    coordinate_precicison(args.inPath, args.outPath, args.precision, args.indentation, args.verbose)
+    coordinate_precicison(args.inPath, args.outPath, args.precision, args.indentation, args.skip_feature, args.verbose)
