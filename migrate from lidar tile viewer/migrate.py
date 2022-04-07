@@ -9,7 +9,6 @@
 
 
 import json
-from operator import indexOf
 from os.path import join, dirname
 import copy
 import logging
@@ -74,13 +73,11 @@ for delivery in deliveries:
         base_url = dataset['baseURL']
         url_exts = dataset['URLexts']
 
-        # Skip and warn if more than one extension
-        if len(url_exts) > 1 and not url_exts[0] in ['.las','.LAS']:
-            logging.warning("More than one extension for {} {}: {}; skipping!".format(delivery, metadata[delivery]['year'], dataset['name']))
+        # Skip and warn if more than one extension and not las
+        if len(url_exts) > 1 and not url_exts[0][-4:] in ['.las','.LAS']:
+            logging.warning("More than one extension for {} {}: {}, extensions: {}; skipping!".format(delivery, metadata[delivery]['year'], dataset['name'], url_exts))
             continue
-        elif url_exts[0] in ['.las','.LAS'] and len(url_exts)>1:
-            logging.info("las and lasx for {} {}: {}; skipping other extensions.".format(delivery, metadata[delivery]['year'], dataset['name']))
-
+        
         # For each tile
         for feature in temp_data['features']:
             tile_name = str(feature['properties']['tileName'])
