@@ -17,7 +17,6 @@ import re
 
 
 # Parameters
-deliveries = ['adams', 'ashland', 'bayfield', 'buffalo', 'burnett', 'calumet', 'clark', 'columbia', 'crawford', 'dane', 'madison', 'dodge', 'douglas', 'cityOfSuperior', 'eauClaire', 'cityOfEauClaire', 'florence', 'fondDuLac', 'forest', 'grant', 'green', 'iowa', 'iron', 'jefferson', 'juneau', 'kewaunee', 'lacrosse', 'lafayette', 'langlade', 'lincoln', 'manitowoc', 'marinette', 'marquette', 'monroe19', 'oneida', 'ozaukee', 'pepin', 'pierce', 'polk', 'portage', 'price', 'racine', 'racine17', 'richland', 'rusk', 'sauk', 'sawyer', 'shawano', 'stcroix', 'taylor', 'trempealeau', 'vernon', 'washburn', 'washington', 'waushara', 'winnebago', 'wood', 'adams3DEP', 'calumet3DEP', 'fondDuLac3DEP', 'greenLake3DEP', 'jefferson3DEP', 'lafayette3DEP', 'oconto', 'pepin3DEP', 'sheboygan', 'waupaca3DEP']
 wd = dirname(__file__)
 layers_dir = join(dirname(dirname(wd)), "lidar-data-inventory/tile-search/layers/")
 metadata_file = join(dirname(dirname(wd)), "lidar-data-inventory/tile-search/assets/metadata.js")
@@ -33,6 +32,9 @@ logging.info("Started: {}".format(start.strftime('%Y-%m-%d %H:%M:%S')))
 with open(metadata_file, 'r') as f:
     raw = re.sub(r'([^ ]*[^:])(?=: {)', r'"\1"', f.read().lstrip("var metadata = ").replace("};", "}"))
     metadata = json.loads(raw)
+
+# Generate deliveries list from metadata
+deliveries = [key for key in metadata.keys()]
 
 # For each delivery
 for delivery in deliveries:
