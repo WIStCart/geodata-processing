@@ -176,3 +176,27 @@ def minify_geojson(path, indentation):
         # Write with desired indent
         with open(dataset, 'w') as f:
             json.dump(data, f, indent=indentation)
+
+def update_url(path, new_url):
+
+    # Datasets to process
+    datasets = get_datasets_list(path)
+
+    # For each dataset
+    for dataset in datasets:
+
+        # Read geojson
+        with open(dataset, 'r') as f:
+            data = json.load(f)
+        
+        # For each feature
+        for feature in data['features']:
+
+            # Update websiteUrl
+            feature['properties']['websiteUrl'] = new_url
+
+    # Write update geojson to file
+    with open(dataset, 'w') as f:
+            json.dump(data, f)
+
+update_url("test/","https://www.sco.wisc.edu/data/elevationlidar/")

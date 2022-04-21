@@ -102,3 +102,26 @@ python minify_geojson.py "test/"
 # Use and indentation level of four
 python minify_geojson.py "test/" -i 4
 ```
+
+### `update_url.py`
+
+Update websiteUrl of geojson to specified new url.
+
+#### Usage
+
+```bash
+update_url.py [-h] path newUrl
+
+positional arguments:
+  path        Path to geojson or geojsons.
+  newUrl      The new websiteUrl.
+
+optional arguments:
+  -h, --help  show this help message and exit
+```
+
+### Example
+
+```bash
+python update_url.py "test/" "https://www.sco.wisc.edu/data/elevationlidar/"
+```
