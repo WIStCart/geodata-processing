@@ -4,14 +4,14 @@
 
 
 
-### `checkurls.py`
+### `check_urls.py`
 
 Check URLs in geojson of indexed datasets to confirm they resolve.
 
 #### Usage
 
 ```bash
-checkurls.py [-h] [-v] [--version] searchPath
+check_urls.py [-h] [-v] [--version] searchPath
 
 positional arguments:
   searchPath     Path to geojson or geojsons.
@@ -26,10 +26,10 @@ optional arguments:
 
 ```bash
 # Write only bad requests to log
-python checkurls.py "test datasets/"
+python check_urls.py "test datasets/"
 
 # Write all responses to log
-python checkurls.py "test datasets/adams-2010-BareEarthPointsLAS.geojson" -v
+python check_urls.py "test datasets/adams-2010-BareEarthPointsLAS.geojson" -v
 ```
 
 
