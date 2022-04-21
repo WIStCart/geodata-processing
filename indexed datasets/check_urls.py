@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #------------------------------------------------------------------------------
-# checkurls.py
+# check_urls.py
 # Check URLs in geojson of tiled datasets to confirm they resolve.
 # Hayden Elza (hayden.elza@gmail.com)
 # Created: 2022-03-11
