@@ -1,6 +1,6 @@
 # Geodata Processing
 
-## Tiled Datasets
+## Indexed Datasets
 
 
 
@@ -32,7 +32,7 @@ python check_urls.py "test datasets/"
 python check_urls.py "test datasets/adams-2010-BareEarthPointsLAS.geojson" -v
 ```
 
-
+---
 
 ### `coordinate_precision.py`
 
@@ -75,6 +75,8 @@ python coordinate_precision.py test/ test/output/
 python coordinate_precision.py test/ test/output/ -p 3 -i 2 -v
 ```
 
+---
+
 ### `minify_geojson.py`
 
 Minify geojson to have no return/new lines and no indentation. Optionally choose an indentation level.
@@ -102,6 +104,8 @@ python minify_geojson.py "test/"
 # Use and indentation level of four
 python minify_geojson.py "test/" -i 4
 ```
+
+---
 
 ### `update_url.py`
 
