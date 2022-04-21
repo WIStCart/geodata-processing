@@ -100,14 +100,13 @@ def reduce_precision(dataset, out_path, precision, indentation, skip_feature, ve
 
     return
 
-
 def coordinate_precicison(in_path, out_path, precision, indentation, skip_feature, verbose):
 
     # Start log
     log = logger('coordinate_precision.log')
     log.start()
 
-    # Datasets to check
+    # Datasets to process
     datasets = get_datasets_list(in_path)
 
     # Make sure output path exists
@@ -161,3 +160,19 @@ def check_urls(search_path, verbose):
 
     # End log
     log.end()
+
+def minify_geojson(path, indentation):
+
+    # Datasets to process
+    datasets = get_datasets_list(path)
+
+    # For each dataset
+    for dataset in datasets:
+
+        # Read geojson
+        with open(dataset, 'r') as f:
+            data = json.load(f)
+
+        # Write with desired indent
+        with open(dataset, 'w') as f:
+            json.dump(data, f, indent=indentation)
