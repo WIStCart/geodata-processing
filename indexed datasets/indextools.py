@@ -198,5 +198,3 @@ def update_url(path, new_url):
     # Write update geojson to file
     with open(dataset, 'w') as f:
             json.dump(data, f)
-
-update_url("test/","https://www.sco.wisc.edu/data/elevationlidar/")
