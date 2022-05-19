@@ -88,14 +88,14 @@ for delivery in deliveries:
             title = tile_name
             label = tile_name
             download_url = base_url + tile_name + url_exts[0]
-            website_url = base_url[:base_url.rindex('/')]
+            # website_url = base_url[:base_url.rindex('/')]
 
             # Redefine properties
             feature['properties'] = {
                 'title': title,
                 'label': label,
                 'downloadUrl': download_url,
-                'websiteUrl': website_url,
+                'websiteUrl': "https://www.sco.wisc.edu/data/elevationlidar/",
             }
 
 
