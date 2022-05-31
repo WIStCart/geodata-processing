@@ -1,17 +1,17 @@
 # Geodata Processing
 
-## Tiled Datasets
+## Indexed Datasets
 
 
 
-### `checkurls.py`
+### `check_urls.py`
 
 Check URLs in geojson of indexed datasets to confirm they resolve.
 
 #### Usage
 
 ```bash
-checkurls.py [-h] [-v] [--version] searchPath
+check_urls.py [-h] [-v] [--version] searchPath
 
 positional arguments:
   searchPath     Path to geojson or geojsons.
@@ -26,13 +26,13 @@ optional arguments:
 
 ```bash
 # Write only bad requests to log
-python checkurls.py "test datasets/"
+python check_urls.py "test datasets/"
 
 # Write all responses to log
-python checkurls.py "test datasets/adams-2010-BareEarthPointsLAS.geojson" -v
+python check_urls.py "test datasets/adams-2010-BareEarthPointsLAS.geojson" -v
 ```
 
-
+---
 
 ### `coordinate_precision.py`
 
@@ -73,4 +73,59 @@ python coordinate_precision.py test/ test/output/
 
 # Reduce precision to three digits, indentation of 2, and log all datasets processed
 python coordinate_precision.py test/ test/output/ -p 3 -i 2 -v
+```
+
+---
+
+### `minify_geojson.py`
+
+Minify geojson to have no return/new lines and no indentation. Optionally choose an indentation level.
+
+#### Usage
+
+```bash
+minify_geojson.py [-h] [-i INDENTATION] path
+
+positional arguments:
+  path                  Path to geojson or geojsons.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INDENTATION, --indent INDENTATION
+                        Indent level. (default=None)
+```
+
+#### Example
+
+```bash
+# Use the default to minify
+python minify_geojson.py "test/"
+
+# Use and indentation level of four
+python minify_geojson.py "test/" -i 4
+```
+
+---
+
+### `update_url.py`
+
+Update websiteUrl of geojson to specified new url.
+
+#### Usage
+
+```bash
+update_url.py [-h] path newUrl
+
+positional arguments:
+  path        Path to geojson or geojsons.
+  newUrl      The new websiteUrl.
+
+optional arguments:
+  -h, --help  show this help message and exit
+```
+
+### Example
+
+```bash
+python update_url.py "test/" "https://www.sco.wisc.edu/data/elevationlidar/"
 ```
