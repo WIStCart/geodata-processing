@@ -55,13 +55,13 @@ for feature in metadata['features']:
 
     # Store new filename into download URL
     new_url = url_1stPart + new_f_name
-    dwnload_url = new_url
-    break
-print(metadata['features'][0]["properties"]["downloadUrl"])
+    feature["properties"]["downloadUrl"] = new_url
 
-# has problem to replace the old url
+# # Check the result
+# for i in range(len(metadata['features'])):
+#     print(metadata["features"][i]["properties"]["downloadUrl"])
 
 # Write the GeoJSON to a new file (indent=2)
-with open("C:\\Users\\mlstudent\\Documents\\GitHub\\geodata-processing\\migrate from lidar tile viewer\\fixed\\monroe-2010-BareEarthLAS_fixed.geojson", 'w') as f:
+with open("C:\\Users\\mlstudent\\Documents\\GitHub\\geodata-processing\\migrate from lidar tile viewer\\fixed\\monroe-2010-BareEarthLAS.geojson", 'w') as f:
     json.dump(metadata, f, indent=2)
 
