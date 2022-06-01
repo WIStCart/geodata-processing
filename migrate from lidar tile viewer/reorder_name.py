@@ -9,7 +9,7 @@
 
 # Import libraries
 import json
-from os.path import basename, dirname, join
+from os.path import basename, dirname, join, splitext
 
 
 
@@ -33,42 +33,19 @@ for dataset in datasets:
     # Iterrate through features
     for feature in metadata['features']:
         # Read the download URL
-        dwnload_url = feature["properties"]["downloadUrl"]
+        download_url = feature["properties"]["downloadUrl"]
 
         # Get the filename
-        f_name = basename(dwnload_url)
+        fname, ext = splitext(basename(download_url))
 
         # Break the filename into pieces (township/range/section)
-        name_0 = f_name[0]
-        name_ts = f_name[3:5]
-        name_r = f_name[-6:-4]
-        name_s = f_name[7:9]
-        name_ext = f_name[-4:]
-        try:
-            name_r = int(name_r)
-            name_r = str(name_r)
-        except:
-            name_r = f_name[-5:-4]
-        try:
-            name_s = int(name_s)
-            name_s = str(name_s)
-        except:
-            name_s = f_name[8:9]
+        # Example: 2 T20 S36 R1 --> 2200136
+        [dir, twp, sec, rng] = fname.split(' ')
 
-        # Concatenate a new filename (Use zfill)
-        url_dir_leng = len(dwnload_url)-len(f_name)
-        url_1stPart = dwnload_url[:url_dir_leng]
-        name_r_2d = name_r.zfill(2)
-        name_s_2d = name_s.zfill(2)
-        new_f_name = name_0 + name_ts + name_r_2d + name_s_2d + name_ext
-
-        # Store new filename into download URL
-        new_url = url_1stPart + new_f_name
-        feature["properties"]["downloadUrl"] = new_url
-
-    # # Check the result
-    # for i in range(len(metadata['features'])):
-    #     print(metadata["features"][i]["properties"]["downloadUrl"])
+        new_fname = "{}{:02d}{:02d}{:02d}{}".format(dir, int(twp[1:]), int(rng[1:]), int(sec[1:]), ext)
+        
+        # Update downloadUrl
+        feature["properties"]["downloadUrl"] = "{}/{}".format('/'.join(download_url.split('/')[:-1]), new_fname)
 
     # Write the GeoJSON to a new file (indent=2)
     with open(out_path, 'w') as f:
