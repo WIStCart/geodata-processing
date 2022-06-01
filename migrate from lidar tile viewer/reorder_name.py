@@ -21,6 +21,9 @@ datasets = ["monroe-2010-BareEarthLAS.geojson","monroe-2010-BearEarthSHP.geojson
 # Iterate through datasets
 for dataset in datasets:
 
+    if dataset=="monroe-2010-BearEarthSHP.geojson": suffix = "__POINTS"
+    else: suffix = ""
+
     # Build paths
     file_path = join(wd, "output/", dataset)
     out_path = join(wd, "fixed/", dataset)
@@ -38,11 +41,12 @@ for dataset in datasets:
         # Get the filename
         fname, ext = splitext(basename(download_url))
 
-        # Break the filename into pieces (township/range/section)
+        # Break the filename into pieces (township/range/section) and reorder to form new file name
         # Example: 2 T20 S36 R1 --> 2200136
         [dir, twp, sec, rng] = fname.split(' ')
+        new_fname = "{}{:02d}{:02d}{:02d}{}{}".format(dir, int(twp[1:]), int(rng[1:]), int(sec[1:]), suffix, ext)
 
-        new_fname = "{}{:02d}{:02d}{:02d}{}".format(dir, int(twp[1:]), int(rng[1:]), int(sec[1:]), ext)
+
         
         # Update downloadUrl
         feature["properties"]["downloadUrl"] = "{}/{}".format('/'.join(download_url.split('/')[:-1]), new_fname)
