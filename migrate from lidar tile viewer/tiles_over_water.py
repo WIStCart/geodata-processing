@@ -28,14 +28,14 @@ output_dir = join(wd, "fixed/")
 datasets = [
     {
         'tiles': "marinette.geojson",
-        'indicies': [
+        'indices': [
             "marinette-2014-PointsCalibratedRawSwath.geojson",
             "marinette-2014-PointsClassifiedLAS.geojson"
         ]
     },
     {
         'tiles': "ashland.geojson",
-        'indicies': ["ashland-2014-ClassifiedPoints.geojson"]
+        'indices': ["ashland-2014-ClassifiedPoints.geojson"]
     }
 ]
 
@@ -44,7 +44,7 @@ for dataset in datasets:
 
     # Build paths
     tiles_geojson = join(tile_search_dir, dataset['tiles'])
-    indicies = [index for index in dataset['indicies']]
+    indices = [index for index in dataset['indices']]
 
     # Get set of tiles from tile viewer geojson (lidar-data-inventory/tile-search/layers/)
     with open(tiles_geojson, "r") as f:
@@ -56,7 +56,7 @@ for dataset in datasets:
     print(len(tiles))
 
     # Iterate through each index
-    for index in indicies:
+    for index in indices:
 
         # Open index
         with open(join(index_dir, index), "r") as f:
@@ -76,7 +76,7 @@ for dataset in datasets:
 
     # Remaining list of tiles are missing from all datasets so should be removed 
     # Iterate through each index
-    for index in indicies:
+    for index in indices:
 
         # Open index
         with open(join(index_dir, index), "r") as f:
