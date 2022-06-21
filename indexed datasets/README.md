@@ -129,3 +129,35 @@ optional arguments:
 ```bash
 python update_url.py "test/" "https://www.sco.wisc.edu/data/elevationlidar/"
 ```
+
+---
+
+### `remove_missing_tiles.py`
+
+Remove tiles from index geojson where downloadUrl returns 404.
+
+#### Usage
+
+```bash
+remove_missing_tiles.py [-h] [-i INDENTATION] [-v] inPath outPath
+
+positional arguments:
+  inPath                Path to geojson or geojsons.
+  outPath               Output path to place updated geojsons.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INDENTATION, --indent INDENTATION
+                        Indent level. (default=None)
+  -v, --verbose         Write successful precision changes to log as well.
+```
+
+#### Example
+
+```bash
+# Use the default of four digits after the decimal
+python coordinate_precision.py test/ test/output/
+
+# Reduce precision to three digits, indentation of 2, and log all datasets processed
+python coordinate_precision.py test/ test/output/ -p 3 -i 2 -v
+```
