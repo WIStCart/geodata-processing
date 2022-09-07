@@ -4,7 +4,7 @@
 # Tools for indexed datasets used in geodata@wisc
 # Hayden Elza (hayden.elza@gmail.com)
 # Created: 2022-04-21
-# Modified: 
+# Modified: 2022-06-21
 #------------------------------------------------------------------------------
 
 
@@ -198,3 +198,50 @@ def update_url(path, new_url):
     # Write update geojson to file
     with open(dataset, 'w') as f:
             json.dump(data, f)
+
+def remove_missing_tiles(in_path, out_path, indentation, verbose):
+
+    from copy import deepcopy
+
+    # Start log
+    log = logger('remove_missing_tiles_{}.log'.format(datetime.datetime.now().strftime('%Y-%m-%d_%H%M')))
+    log.start()
+
+    # Datasets to process
+    datasets = get_datasets_list(in_path)
+
+    # For each dataset
+    for dataset in datasets:
+
+        # Open dataset
+        with open(dataset, "r") as f:
+            data = json.load(f)
+
+        # Create a copy of the data to edit
+        temp_data = deepcopy(data)
+
+        # Iterate through each feature of data
+        for feature in data['features']:
+
+            url = feature['properties']['downloadUrl']
+
+            # Check downloadUrl of each feature; HEAD request (faster than GET request as we are ignoring the body)
+            response = requests.head(url)
+
+            # If not good, add warning to log and remove from geojson
+            if response.status_code == 404:
+                temp_data['features'].remove(feature)
+                logging.info("{} {} {} >>> Removed from index.".format(os.path.basename(dataset), url, response.status_code))
+
+            # If good skip
+            else: 
+                if verbose and response.status_code == 200: logging.info("{} {} {}".format(os.path.basename(dataset), url, response.status_code))
+                if response.status_code != 200: logging.warning("{} {} {}".format(os.path.basename(dataset), url, response.status_code))
+                else: pass
+        
+        # Save updated index geojson to file
+        with open(os.path.join(out_path, os.path.basename(dataset)), 'w') as f:
+            json.dump(temp_data, f, indent=indentation)
+    
+    # End log
+    log.end()
