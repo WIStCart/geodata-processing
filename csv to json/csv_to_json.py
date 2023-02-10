@@ -111,5 +111,8 @@ data = read_csv(input_file)
 # Checks header for required keys
 check_header(schema, data[0])
 
-# Creates JSON and adds it to the output folder
-create_json(schema, gbl_template, data[0], output_dir)
+# Iterates through all rows of data
+for row in data:
+    
+    # Creates JSON and adds it to the output folder
+    create_json(schema, gbl_template, row, output_dir)
