@@ -20,7 +20,7 @@ import uuid
 # Could loop through topo collections, but we choose to simply run the script twice (once per topo collection)
 # pick one of the following base IDs
 
-#base_item_id = "4f554260e4b018de15819c88"  # All Historic Topographic Maps (pre-US Topo)
+#base_item_id = "4f554260e4b018de15819c88"  # All Historic Topographic Maps (pre-US Topo) 
 base_item_id = "4f554236e4b018de15819c85"  # US Topos 
 
 # The following is redundant, and should not be used.  Item 4f554236e4b018de15819c85 already contains historic US Topos in addition to current topos
@@ -82,7 +82,12 @@ while items and 'items' in items:
                 references_s["http://www.opengis.net/cat/csw/csdgm"] = metadataUrl
                 #print("Metadata Url: " + metadataUrl)
             elif i_link['type'] == 'Online Link':
-                onlinelink = i_link['uri']
+                # hack to account for USGS not updating Sciencebase with correct link to historic topos
+                if base_item_id == '4f554260e4b018de15819c88':
+                    onlinelink = "https://www.usgs.gov/programs/national-geospatial-program/historical-topographic-maps-preserving-past"
+                    #print(onlinelink)
+                else:
+                    onlinelink = i_link['uri']
                 references_s["http://schema.org/url"] = onlinelink
                 #print("Online Link: " + onlinelink)
         
@@ -126,12 +131,19 @@ while items and 'items' in items:
 
         solr_geom = "ENVELOPE(%s,%s,%s,%s)" % (west, east, north, south)
         
+        # ugly hack!  The most recent US Topos do not contain a year in the title
+        if year >= 2022:    
+            title = "%s %s" % (item['title'],year)
+        else:
+            title = item['title']
+        #print(title)   
+        
         ###### Construct dictionary for our GBL record
         uniqueID = str(uuid.uuid4())
         data = {}
         data["geoblacklight_version"] = "1.0"
         data["dc_identifier_s"] = uniqueID
-        data["dc_title_s"] = item['title']
+        data["dc_title_s"] = title
         data["dc_description_s"] = item['body']
         data["dc_rights_s"] = dc_rights_s
         data["dct_provenance_s"] = dct_provenance_s
