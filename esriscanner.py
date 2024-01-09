@@ -18,6 +18,7 @@ To-do:
 """
 import json
 import urllib.request
+from urllib.parse import urlparse, parse_qs
 from html.parser import HTMLParser
 import shutil
 import os
@@ -25,6 +26,7 @@ import re
 import ssl
 from datetime import datetime
 from datetime import timezone
+from socket import timeout
 
 # Non-standard python libraries follow
 # requires additional installation
@@ -32,10 +34,10 @@ from datetime import timezone
 import ruamel.yaml as yaml
 
 # Subfolders for scanned sites will be dumped here
-output_basedir = "C:\\Users\\lacy\\Documents\\scripts\\opendata"
+output_basedir = "C:\\Users\\lacy.ad\\Documents\\scripts\\opendata"
 
 # YAML configuration file
-config_file = "C:\\Users\\lacy\\Documents\\scripts\\OpenData.yml"
+config_file = "C:\\Users\\lacy.ad\\Documents\\scripts\\OpenData.yml"
 
 # Strip html from description
 class MLStripper(HTMLParser):
@@ -65,7 +67,7 @@ def checkValidity(dataset):
     if 'modified' not in dataset or dataset["modified"] == "": 
         msg += "           No modified date found."
         validData = False   
-    if 'spatial' not in dataset or dataset["spatial"] == "{{extent}}" or dataset["spatial"] == "": 
+    if 'spatial' not in dataset or dataset["spatial"] == "{{extent}}" or dataset["spatial"] == "" or dataset["spatial"] =="{{extent:computeSpatialProperty}}": 
         msg += "           No spatial bounding box found."
         validData = False        
     return validData,msg
@@ -85,6 +87,7 @@ def getURL(refs):
         url=refs["accessURL"]
     elif ('downloadURL') in refs:
         url=refs["downloadURL"]
+        print(url)
     else:   
         #error, no url found
         url="invalid"
@@ -138,7 +141,33 @@ def get_iso_topic_categories(keywords):
         if keyvalue:
             iso_categories_list.append(keyvalue)
     return iso_categories_list
-  
+
+
+def add_dataset_collections(keywords):
+    # parse the provided keyword list and map found keywords to specific GeoData collections
+    
+    collection_list = []  
+    # format is keyword:collection
+    collection_crosswalk = {'climate':'Climate',
+                             'climate change':'Climate',
+                             'Environmental justice':'Climate',
+                             'environmental justice':'Climate',
+                             'groundwater':'Geology and Groundwater',
+                             'geology':'Geology and Groundwater',
+                             'watershed':'Geology and Groundwater',
+                             'water table':'Geology and Groundwater',
+                             'GCSM':'Geology and Groundwater',
+                             'surficial deposits':'Geology and Groundwater'}
+
+    for keyword in keywords:
+        keyvalue = collection_crosswalk.get(keyword.lower())      
+        if keyvalue:
+            collection_list.append(keyvalue)
+            #print("Key value is " + str(keyvalue))
+            #print("appended to list")
+    #print(collection_list)
+    return collection_list
+
 
 def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skiplist, basedir):
     
@@ -156,34 +185,43 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skipli
     os.makedirs(path)
     
     # grab json data from url
-    s = urllib.request.urlopen(jsonUrl).read()
+    s = urllib.request.urlopen(jsonUrl,data=None,timeout=30).read()
    
     # decode data grabbed from url
     d = json.loads(s.decode('utf-8'))
     
     # Parse through the collections defined for each site           
-    collectionList = []
+    site_collections = []
     for CollectionName in collections:
-        collectionList.append(CollectionName["CollectionName"])
-    #print(collectionList)
+        site_collections.append(CollectionName["CollectionName"])  
+    #print(site_collections)
     
     # Parse through the skiplist defined for each site           
     uuidList = []
     for uuidnum in skiplist:
         uuidList.append(uuidnum["UUID"])
-    
+ 
     # loop through each dataset in the json file
     # note: Esri's dcat records call everything a "dataset"
     for dataset in d["dataset"]:  
-        
+        #print(dataset)
         # read DCAT dataset identifier
-        # Hub outputs a full url for the identifier.  We just want the dataset name.
-        identifier = dataset["identifier"].split('/')[-1]
-             
-        # get rid of the extra garbage esri includes in url as of January 2022
-        identifier = identifier.replace("::","-")
+        # Esri keeps messing with the formatting of this field!
+        #
+        # Also, it appears that at times the "unique" ID found in the querystring is replicated across multiple 
+        # datasets. My hack is to append the "sublayer" number to the identifier.  Without taking this action,
+        # there will be situations where records will be overwritten since we name json files based on the 
+        # identifier.
+        querystring = parse_qs(urlparse(dataset["identifier"]).query)
+        if len(querystring) > 1:
+            #print(querystring)
+            identifier = siteName + "-" + querystring["id"][0] + querystring["sublayer"][0]
+        else:
+            identifier = siteName + "-" + querystring["id"][0]
         #print(identifier)
-        
+        #print(dataset["title"])
+        dataset_collections = []
+        collections = []
         validData,msg = checkValidity(dataset)
         if validData and (identifier not in uuidList):             
             # call html strip function
@@ -198,11 +236,19 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skipli
             
             # generate bounding box
             coordinates = [l for l in dataset["spatial"].split(',')]
+            #print(coordinates)
             envelope = "ENVELOPE(" + coordinates[0] + ", " +  coordinates[2] + ", " + coordinates[3] + ", " + coordinates[1] + ")"
             
             # send the dataset keywords to a function that parses and returns a standardized list
             # of ISO Topic Keywords
-            iso_categories_list = get_iso_topic_categories(dataset["keyword"])        
+            iso_categories_list = get_iso_topic_categories(dataset["keyword"])
+
+            # send the dataset keywords to a function that parses and returns a standardized standardized collection names
+            dataset_collections = add_dataset_collections(dataset["keyword"])
+            if dataset_collections:
+                collections = dataset_collections + site_collections
+            else:
+                collections = site_collections
             
             # Although not ideal, we use "modified" field for our date
             # ArcGIS Hub's handling of dates is sketchy at best
@@ -213,8 +259,9 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skipli
             geomType = "Mixed"
             
             # create references from distribution        
-            print(">>>>>>>>>> " + dataset["title"])
+            #print(">>>>>>>>>> " + dataset["title"])
             references = "{"
+            references += '\"http://schema.org/url\":\"' + dataset["landingPage"] + '\",'
             for refs in dataset["distribution"]:
                 url=getURL(refs)
                 
@@ -224,10 +271,7 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skipli
                 
                 # In July 2021, we started seeing distribution formats with null values
                 if refs["format"] is not None:
-                    # Seriously, Esri sometimes outputs "Web page" or "Web Page" for the page reference.  Ugh!
-                    if (refs["format"].lower() == "web page" and url != "invalid"):
-                        references += '\"http://schema.org/url\":\"' + url + '\",'
-                    elif (refs["format"] == "ArcGIS GeoServices REST API" and url != "invalid"):
+                    if (refs["format"] == "ArcGIS GeoServices REST API" and url != "invalid"):
                             if ('FeatureServer') in url:
                                 references += '\"urn:x-esri:serviceType:ArcGIS#FeatureLayer\":\"'  + url +  '\",'
                                 #print("Found featureServer")
@@ -247,10 +291,11 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skipli
             dct_temporal_sm.append(modifiedDate[0:4])
             #print("\n")       
             # format gbl record
+            #print(dataset["title"])
             gbl = {
                 "geoblacklight_version": "1.0",
                 "dc_identifier_s": identifier,
-                "dc_title_s": prefix + dataset["title"] + postfix,
+                "dc_title_s": prefix + str(dataset["title"]) + postfix,
                 "dc_description_s": description,
                 "dc_subject_sm": iso_categories_list,
                 "dc_rights_s": access,
@@ -260,7 +305,7 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skipli
                 "layer_geom_type_s": geomType, 
                 "dc_format_s": "File", 
                 "dc_language_s": "English",
-                "dct_isPartOf_sm": collectionList,
+                "dct_isPartOf_sm": collections,
                 "dc_creator_sm": dc_creator_sm,
                 "dc_type_s": "Dataset",
                 "dct_spatial_sm": "", 
@@ -288,14 +333,14 @@ def validSite (siteURL):
     req = urllib.request.Request(siteURL)
     # for unknown reasons, some sites fail with a SSL "unable to verify" error. The errors would also reference an expired certificate, which wasn't true! The following line is a hack that skips verification.
     ssl._create_default_https_context = ssl._create_unverified_context
-    try: urllib.request.urlopen(req)
+    #print(siteURL)
+    try: urllib.request.urlopen(req,data=None,timeout=30)
     except urllib.error.URLError as e:
         print(e.reason)
         return False
     else:
         return True
-
-   
+  
 # loop through each site in OpenData.yml and call json2gbl function
 with open(config_file) as stream:
     theDict = yaml.safe_load(stream)
@@ -303,7 +348,10 @@ with open(config_file) as stream:
         site = theDict["Sites"][siteCode]
         print("\n\nProcessing Site: " + siteCode)
         #print(site["Collections"])
+        #print(site["DatasetPrefix"])
+        #print(site["DatasetPostfix"])
         if validSite(site["SiteURL"]):
+            print(site["SiteURL"])
             json2gbl(site["SiteURL"], site["CreatedBy"], site["SiteName"], site["Collections"],site["DatasetPrefix"],site["DatasetPostfix"],site["SkipList"],output_basedir)
             #os.system("pause")
         else:
