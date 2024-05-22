@@ -17,9 +17,11 @@ To-do:
 
 """
 import json
-import shutil
+import logging
 import os
 import re
+import shutil
+import sys
 
 from argparse import ArgumentParser, FileType
 from datetime import datetime, timezone
@@ -92,7 +94,7 @@ def getURL(refs):
         url=refs["accessURL"]
     elif ('downloadURL') in refs:
         url=refs["downloadURL"]
-        print(url)
+        log.info(url)
     else:
         #error, no url found
         url="invalid"
@@ -168,9 +170,9 @@ def add_dataset_collections(keywords):
         keyvalue = collection_crosswalk.get(keyword.lower())
         if keyvalue:
             collection_list.append(keyvalue)
-            #print("Key value is " + str(keyvalue))
-            #print("appended to list")
-    #print(collection_list)
+            log.debug("Key value is " + str(keyvalue))
+            log.debug("appended to list")
+    log.debug(collection_list)
     return collection_list
 
 
@@ -191,7 +193,7 @@ def json2gbl (d, createdBy, siteName, collections, prefix, postfix, skiplist, ba
     site_collections = []
     for CollectionName in collections:
         site_collections.append(CollectionName["CollectionName"])
-    #print(site_collections)
+    log.debug(site_collections)
 
     # Parse through the skiplist defined for each site
     uuidList = []
@@ -201,7 +203,7 @@ def json2gbl (d, createdBy, siteName, collections, prefix, postfix, skiplist, ba
     # loop through each dataset in the json file
     # note: Esri's dcat records call everything a "dataset"
     for dataset in d["dataset"]:
-        #print(dataset)
+        log.debug(dataset)
         # read DCAT dataset identifier
         # Esri keeps messing with the formatting of this field!
         #
@@ -211,12 +213,12 @@ def json2gbl (d, createdBy, siteName, collections, prefix, postfix, skiplist, ba
         # identifier.
         querystring = parse_qs(urlparse(dataset["identifier"]).query)
         if len(querystring) > 1:
-            #print(querystring)
+            log.debug(querystring)
             identifier = siteName + "-" + querystring["id"][0] + querystring["sublayer"][0]
         else:
             identifier = siteName + "-" + querystring["id"][0]
-        #print(identifier)
-        #print(dataset["title"])
+        log.debug(identifier)
+        log.debug(dataset["title"])
         dataset_collections = []
         collections = []
         validData,msg = checkValidity(dataset)
@@ -233,7 +235,7 @@ def json2gbl (d, createdBy, siteName, collections, prefix, postfix, skiplist, ba
 
             # generate bounding box
             coordinates = dataset["spatial"].split(',')
-            #print(coordinates)
+            log.debug(coordinates)
             envelope = "ENVELOPE(" + coordinates[0] + ", " +  coordinates[2] + ", " + coordinates[3] + ", " + coordinates[1] + ")"
 
             # send the dataset keywords to a function that parses and returns a standardized list
@@ -256,7 +258,7 @@ def json2gbl (d, createdBy, siteName, collections, prefix, postfix, skiplist, ba
             geomType = "Mixed"
 
             # create references from distribution
-            #print(">>>>>>>>>> " + dataset["title"])
+            log.debug(">>>>>>>>>> " + dataset["title"])
             references = "{"
             references += '\"http://schema.org/url\":\"' + dataset["landingPage"] + '\",'
             for refs in dataset["distribution"]:
@@ -264,20 +266,20 @@ def json2gbl (d, createdBy, siteName, collections, prefix, postfix, skiplist, ba
 
                 #Fix the encoding of goofy querystring now intrinsic to Esri download links
                 url = url.replace("\"","%22").replace(",","%2C").replace("{","%7B").replace("}","%7D")
-                #print(url)
+                log.debug(url)
 
                 # In July 2021, we started seeing distribution formats with null values
                 if refs["format"] is not None:
                     if (refs["format"] == "ArcGIS GeoServices REST API" and url != "invalid"):
                             if ('FeatureServer') in url:
                                 references += '\"urn:x-esri:serviceType:ArcGIS#FeatureLayer\":\"'  + url +  '\",'
-                                #print("Found featureServer")
+                                log.debug("Found featureServer")
                             elif ('ImageServer') in url:
                                 references += '\"urn:x-esri:serviceType:ArcGIS#ImageMapLayer\":\"'  + url +  '\",'
-                                #print("Found ImageServer")
+                                log.debug("Found ImageServer")
                             elif ('MapServer') in url:
                                 references += '\"urn:x-esri:serviceType:ArcGIS#DynamicMapLayer\":\"'  + url +  '\",'
-                                #print("Found MapServer Layer")
+                                log.debug("Found MapServer Layer")
                     elif (refs["format"] == "ZIP" and url != "invalid"):
                         references += '\"http://schema.org/downloadUrl\":\"' + url + '\",'
             references += "}"
@@ -286,9 +288,9 @@ def json2gbl (d, createdBy, siteName, collections, prefix, postfix, skiplist, ba
             dc_creator_sm.append(createdBy)
             dct_temporal_sm = []
             dct_temporal_sm.append(modifiedDate[0:4])
-            #print("\n")
+
             # format gbl record
-            #print(dataset["title"])
+            log.debug(dataset["title"])
             gbl = {
                 "geoblacklight_version": "1.0",
                 "dc_identifier_s": identifier,
@@ -321,15 +323,15 @@ def json2gbl (d, createdBy, siteName, collections, prefix, postfix, skiplist, ba
             with open(path + "\\" + outFileName + ".json", 'w') as jsonfile:
                 json.dump(gbl, jsonfile, indent=1)
         elif not validData:
-            print("********** Validity check failed on " + prefix + dataset["title"] + postfix)
-            print(msg)
+            log.info("********** Validity check failed on " + prefix + dataset["title"] + postfix)
+            log.info(msg)
         else:
-            print("---------- Skipping dataset: " + prefix + dataset["title"] + postfix)
+            log.info("---------- Skipping dataset: " + prefix + dataset["title"] + postfix)
 
 @t.retry(retry=t.retry_if_exception_type((Timeout,HTTPError,),),
          wait=t.wait_exponential_jitter(initial=3.0, max=10.0, jitter=1.0),
          stop=t.stop_after_attempt(5),
-         after=lambda x,y: print((x, y,)))
+         after=lambda x: log.info("retrying"))
 def getSiteJSON(siteURL, session):
     try:
         resp = session.get(siteURL, timeout=30)
@@ -338,7 +340,9 @@ def getSiteJSON(siteURL, session):
     resp.raise_for_status()
     return resp.json()
 
+log = None
 def main():
+    global log
     '''Main body of script'''
     ap = ArgumentParser(description='''Scans ESRI hubs for distributions''')
     ap.add_argument('--config-file', default=r"C:\Users\lacy.ad\Documents\scripts\OpenData.yml")
@@ -347,24 +351,34 @@ def main():
     # YAML configuration file
     with open(args.config_file) as stream:
         theDict = yaml.load(stream)
+    log = logging.getLogger(__file__)
+    # default log level is info
+    handler = logging.StreamHandler(sys.stdout)
+    handler.setFormatter(logging.Formatter('%(message)s'))
+    log.addHandler(handler)
+
+    log.setLevel(logging.getLevelNamesMapping().get(
+        theDict.get('log_level', 'INFO').upper()
+    ))
+
     # Subfolders for scanned sites will be dumped here
     output_basedir = theDict.get('output_basedir', r"C:\Users\lacy.ad\Documents\scripts\opendata")
 
     # loop through each site in OpenData.yml and call json2gbl function
     for siteCode in theDict["Sites"]:
         site = theDict["Sites"][siteCode]
-        print("\n\nProcessing Site: " + siteCode)
-        #print(site["Collections"])
-        #print(site["DatasetPrefix"])
-        #print(site["DatasetPostfix"])
+        log.info("\nProcessing Site: " + siteCode)
+        log.debug(site["Collections"])
+        log.debug(site["DatasetPrefix"])
+        log.debug(site["DatasetPostfix"])
         site_data = None
         try:
             site_data = getSiteJSON(site['SiteURL'], session)
         except Exception as e:
-            print(e)
-            print("**** Site Failure, check URL for " + site["CreatedBy"] + "****")
+            log.info(str(e))
+            log.info("**** Site Failure, check URL for " + site["CreatedBy"] + "****")
             continue
-        print(site["SiteURL"])
+        log.info(site["SiteURL"])
         json2gbl(site_data, site["CreatedBy"], site["SiteName"], site["Collections"],site["DatasetPrefix"],site["DatasetPostfix"],site["SkipList"],output_basedir)
 
 if __name__ == '__main__':
