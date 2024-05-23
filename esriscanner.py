@@ -356,10 +356,11 @@ def main():
     handler = logging.StreamHandler(sys.stdout)
     handler.setFormatter(logging.Formatter('%(message)s'))
     log.addHandler(handler)
+    levelname = theDict.get('log_level', 'INFO').upper()
+    if levelname not in {'CRITICAL', 'FATAL', 'ERROR', 'WARN', 'WARNING', 'INFO', 'DEBUG', 'NOTSET'}:
+        raise RuntimeError('configuration error: {levelname} is not a log level in Python')
+    log.setLevel(getattr(logging, levelname))
 
-    log.setLevel(logging.getLevelNamesMapping().get(
-        theDict.get('log_level', 'INFO').upper()
-    ))
 
     # Subfolders for scanned sites will be dumped here
     output_basedir = theDict.get('output_basedir', r"C:\Users\lacy.ad\Documents\scripts\opendata")
