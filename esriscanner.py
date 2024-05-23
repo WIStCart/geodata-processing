@@ -345,12 +345,18 @@ def main():
     global log
     '''Main body of script'''
     ap = ArgumentParser(description='''Scans ESRI hubs for distributions''')
-    ap.add_argument('--config-file', default=r"C:\Users\lacy.ad\Documents\scripts\OpenData.yml")
+    ap.add_argument('--config-file', default=r"C:\Users\lacy.ad\Documents\scripts\OpenData.yml", help="Path to configuration file")
+    ap.add_argument('--secrets-file', default=r"C:\Users\lacy.ad\Documents\scripts\secrets.yml", help="Path to secret configuration file! Do not commit to version control!")
     args = ap.parse_args()
     session = requests.Session()
     # YAML configuration file
     with open(args.config_file) as stream:
         theDict = yaml.load(stream)
+    # If a secrets file exists, merge it's contents into theDict! Note that in case of key collision, secrets-file wins
+    #   please make sure to name the file 'secrets.yml' wherever it might be placed, so .gitignore will ignore it
+    if os.path.exists(args.secrets_file):
+        with open(args.secrets_file) as stream:
+            theDict |= yaml.load(stream)
     log = logging.getLogger(__file__)
     # default log level is info
     handler = logging.StreamHandler(sys.stdout)
