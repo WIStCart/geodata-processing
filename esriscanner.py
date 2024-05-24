@@ -21,11 +21,14 @@ import logging
 import os
 import re
 import shutil
+import smtplib
+import ssl
 import sys
 
 from argparse import ArgumentParser, FileType
 from datetime import datetime, timezone
 from html.parser import HTMLParser
+from io import StringIO
 from urllib.parse import urlparse, parse_qs
 
 
@@ -80,6 +83,7 @@ def checkValidity(dataset):
     return validData,"\t".join(errors)
 
 def getURL(refs):
+    global produce_report
     # For unknown reasons, ARGIS Hub is inconsistent in outputting the type of url.
     # Sometimes references use the key of "accessURL," other times "downloadURL"
     # This function checks to see which is present, and returns appropriate url
@@ -94,10 +98,12 @@ def getURL(refs):
         url=refs["accessURL"]
     elif ('downloadURL') in refs:
         url=refs["downloadURL"]
-        log.info(url)
     else:
         #error, no url found
         url="invalid"
+        add_to_report(f"Distribution missing all known keys: keys actually present are: {list(refs.keys())}")
+        produce_report = True
+    log.info(url)
     return url
 
 def get_iso_topic_categories(keywords):
@@ -333,6 +339,7 @@ def json2gbl (d, createdBy, siteName, collections, prefix, postfix, skiplist, ba
          stop=t.stop_after_attempt(5),
          after=lambda x: log.info("retrying"))
 def getSiteJSON(siteURL, session):
+    global report_target
     try:
         resp = session.get(siteURL, timeout=30)
     except SSLError:
@@ -340,9 +347,14 @@ def getSiteJSON(siteURL, session):
     resp.raise_for_status()
     return resp.json()
 
+def add_to_report(message):
+    print(message, file=report_target)
+
 log = None
+produce_report = False
+report_target = StringIO("")
 def main():
-    global log
+    global log, report_target, produce_report
     '''Main body of script'''
     ap = ArgumentParser(description='''Scans ESRI hubs for distributions''')
     ap.add_argument('--config-file', default=r"C:\Users\lacy.ad\Documents\scripts\OpenData.yml", help="Path to configuration file")
@@ -352,21 +364,21 @@ def main():
     # YAML configuration file
     with open(args.config_file) as stream:
         theDict = yaml.load(stream)
-    # If a secrets file exists, merge it's contents into theDict! Note that in case of key collision, secrets-file wins
+    # If a secrets file exists, insert its contents into theDict under 'secrets'
     #   please make sure to name the file 'secrets.yml' wherever it might be placed, so .gitignore will ignore it
     if os.path.exists(args.secrets_file):
         with open(args.secrets_file) as stream:
-            theDict |= yaml.load(stream)
+            theDict['secrets'] = yaml.load(stream)
     log = logging.getLogger(__file__)
-    # default log level is info
     handler = logging.StreamHandler(sys.stdout)
     handler.setFormatter(logging.Formatter('%(message)s'))
     log.addHandler(handler)
+
+    # default log level is info
     levelname = theDict.get('log_level', 'INFO').upper()
     if levelname not in {'CRITICAL', 'FATAL', 'ERROR', 'WARN', 'WARNING', 'INFO', 'DEBUG', 'NOTSET'}:
         raise RuntimeError('configuration error: {levelname} is not a log level in Python')
     log.setLevel(getattr(logging, levelname))
-
 
     # Subfolders for scanned sites will be dumped here
     output_basedir = theDict.get('output_basedir', r"C:\Users\lacy.ad\Documents\scripts\opendata")
@@ -375,6 +387,7 @@ def main():
     for siteCode in theDict["Sites"]:
         site = theDict["Sites"][siteCode]
         log.info("\nProcessing Site: " + siteCode)
+        add_to_report(f"Site {siteCode}:")
         log.debug(site["Collections"])
         log.debug(site["DatasetPrefix"])
         log.debug(site["DatasetPostfix"])
@@ -387,6 +400,24 @@ def main():
             continue
         log.info(site["SiteURL"])
         json2gbl(site_data, site["CreatedBy"], site["SiteName"], site["Collections"],site["DatasetPrefix"],site["DatasetPostfix"],site["SkipList"],output_basedir)
+    # If any errors that trigger reporting happened (right now just invalid URLs)
+    # produce any configured reports
+    if 'report_file' in theDict and produce_report:
+        with open(theDict['report_file'], 'w') as file:
+            file.write(report_target.getvalue())
+    if 'report_email' in theDict and produce_report:
+        port = theDict['report_email'].get('port', 465)  # For SSL
+        smtp_server = theDict['report_email']['smtp_server']
+        sender_email = theDict['report_email']['sender_email']
+        receiver_email = theDict['report_email']['receiver_email']
+        password = theDict['secrets']['email_password']
+        message = report_target.getvalue()
+
+        context = ssl.create_default_context()
+        with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
+            server.login(sender_email, password)
+            server.sendmail(sender_email, receiver_email, message)
+
 
 if __name__ == '__main__':
     main()
