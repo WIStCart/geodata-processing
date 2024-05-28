@@ -104,7 +104,6 @@ def getURL(refs):
         #error, no url found
         url="invalid"
         add_to_report(f"Distribution missing all known keys: keys actually present are: {list(refs.keys())}")
-        produce_report = True
     log.info(url)
     return url
 
@@ -349,7 +348,10 @@ def getSiteJSON(siteURL, session):
     resp.raise_for_status()
     return resp.json()
 
-def add_to_report(message):
+def add_to_report(message, activate_report=True):
+    global produce_report
+    if activate_report:
+        produce_report = True
     print(message, file=report_target)
 
 log = None
@@ -390,7 +392,7 @@ def main():
     for siteCode in theDict["Sites"]:
         site = theDict["Sites"][siteCode]
         log.info("\nProcessing Site: " + siteCode)
-        add_to_report(f"Site {siteCode}:")
+        add_to_report(f"Site {siteCode}:", activate_report=False)
         log.debug(site["Collections"])
         log.debug(site["DatasetPrefix"])
         log.debug(site["DatasetPostfix"])
@@ -400,6 +402,7 @@ def main():
         except Exception as e:
             log.info(str(e))
             log.info("**** Site Failure, check URL for " + site["CreatedBy"] + "****")
+            add_to_report("Site Failure, check URL for " + site["CreatedBy"])
             continue
         log.info(site["SiteURL"])
         json2gbl(site_data, site["CreatedBy"], site["SiteName"], site["Collections"],site["DatasetPrefix"],site["DatasetPostfix"],site["SkipList"],output_basedir)
