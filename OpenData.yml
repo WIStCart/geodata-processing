@@ -4,15 +4,16 @@
 #
 #
 
-#output_basedir: '../esriscanner_output'
-#report_file: '../esriscanner.report.txt' # set this to path for a report on specific errors
+output_basedir: '../esriscanner_output'
+report_file: '../esriscanner.report.txt' # set this to path for a report on specific errors
+log_level: 'WARN'
 
 # Email settings go here
-#report_email:
-#  smtp_server: 'server.go.here'
-#  sender_email: 'sender_go@here.com'
-#  receiver_email: 'whom.to.email@here.com'
-#  port: 465 # default smtp port
+report_email:
+  smtp_server: 'smtp.wiscmail.wisc.edu'
+  sender_email: 'lacy@wisc.edu'
+  receiver_email: 'lacy@wisc.edu'
+  port: 25 # default smtp port
 
 # Note: email_password is configured in secrets.yml
 
@@ -23,7 +24,7 @@ Sites:
       - CollectionName: "Wisconsin Open Data Sites"
       - CollectionName: "Wisconsin State Agencies"
     CreatedBy: "Wisconsin Department of Agriculture, Trade, and Consumer Protection"
-    SiteURL: "https://gis-widatcp.opendata.arcgis.com/api/feed/dcat-us/1.1.json"
+    SiteURL: "https://giss-widatcp.opendata.arcgis.com/api/feed/dcat-us/1.1.json"
     SiteName: "DATCP"
     DatasetPrefix: ""
     DatasetPostfix: ", WI DATCP"

@@ -5,6 +5,8 @@ Ben Segal and Jim Lacy
 Wisconsin State Cartographer's Office
 GeoData@Wisconsin
 
+Special thanks to Dave Mayo from Harvard University for contributing a number of important logging, notification, and other quality improvements!
+
 Description:
 This script is designed to run periodically and scan Esri open data sites for metadata, and output a series of GeoBlacklight metadata files for all items found.  No attempt is made to track new/removed datasets.  Instead, our model is to start fresh with a new set of records each run. This guarantees, as much as we can, that links to these scanned datasets are accurate and up-to-date.  We have a separate process to ingest GBL metadata records produced by this script.
 
@@ -351,7 +353,7 @@ def add_to_report(message):
     print(message, file=report_target)
 
 log = None
-produce_report = False
+produce_report = True
 report_target = StringIO("")
 def main():
     global log, report_target, produce_report
@@ -376,6 +378,7 @@ def main():
 
     # default log level is info
     levelname = theDict.get('log_level', 'INFO').upper()
+    print(levelname)
     if levelname not in {'CRITICAL', 'FATAL', 'ERROR', 'WARN', 'WARNING', 'INFO', 'DEBUG', 'NOTSET'}:
         raise RuntimeError('configuration error: {levelname} is not a log level in Python')
     log.setLevel(getattr(logging, levelname))
@@ -406,16 +409,14 @@ def main():
         with open(theDict['report_file'], 'w') as file:
             file.write(report_target.getvalue())
     if 'report_email' in theDict and produce_report:
-        port = theDict['report_email'].get('port', 465)  # For SSL
+        port = theDict['report_email'].get('port', 25)
         smtp_server = theDict['report_email']['smtp_server']
         sender_email = theDict['report_email']['sender_email']
         receiver_email = theDict['report_email']['receiver_email']
-        password = theDict['secrets']['email_password']
-        message = report_target.getvalue()
+        email_subject = theDict['report_email']['email_subject']
+        message = 'Subject: {}\n\n{}'.format(email_subject, report_target.getvalue())
 
-        context = ssl.create_default_context()
-        with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
-            server.login(sender_email, password)
+        with smtplib.SMTP(smtp_server, port) as server:
             server.sendmail(sender_email, receiver_email, message)
 
 

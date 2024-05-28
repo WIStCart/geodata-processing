@@ -1,0 +1,40 @@
+#
+# Check this link periodically to locate new sites:
+# https://hub.arcgis.com/search?collection=Site&q=wisconsin
+#
+#
+
+output_basedir: '../esriscanner_output'
+report_file: '../esriscanner.report.txt' # set this to path for a report on specific errors
+log_level: 'ERROR'
+
+# Email settings go here
+report_email:
+  smtp_server: 'smtp.wiscmail.wisc.edu'
+  sender_email: 'geodata@sco.wisc.edu'
+  receiver_email: 'lacy@wisc.edu'
+  email_subject: 'Error detected during DCAT record scan'
+  port: 25 # default smtp port
+
+Sites:
+ # Wisconsin State Agencies
+  DATCP_OpenData:
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
+      - CollectionName: "Wisconsin State Agencies"
+    CreatedBy: "Wisconsin Department of Agriculture, Trade, and Consumer Protection"
+    SiteURL: "https://gis-widatcp.opendata.arcgis.com/api/feed/dcat-us/1.1.json"
+    SiteName: "DATCP"
+    DatasetPrefix: ""
+    DatasetPostfix: ", WI DATCP"
+    SkipList: ""
+  DHS_OpenData:
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
+      - CollectionName: "Wisconsin State Agencies"
+    CreatedBy: "Wisconsin Department of Health Services"
+    SiteURL: "https://data.dhsgis.wi.gov/api/feed/dcat-us/1.1.json"
+    SiteName: "DHS"
+    DatasetPrefix: ""
+    DatasetPostfix: ", WI DHS"
+    SkipList: ""
