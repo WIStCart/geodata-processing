@@ -19,12 +19,15 @@ import shutil
 import smtplib
 import ssl
 import sys
+import pysolr
+import glob
 
 from argparse import ArgumentParser, FileType
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from io import StringIO
 from urllib.parse import urlparse, parse_qs
+from requests.auth import HTTPBasicAuth
 
 # External python libraries follow
 # requires additional installation
@@ -380,6 +383,49 @@ def getSiteJSON(siteURL, session):
     resp.raise_for_status()
     return resp.json()
 
+def read_json_files(folder_path):
+    global report_target
+    json_pattern = os.path.join(folder_path, '**', '*.json')
+    file_list = glob.glob(json_pattern, recursive=True)
+    all_json_data = [] #collect all json data
+
+    for json_filename in file_list:
+        try:
+            with open(json_filename, 'r') as f:
+                json_data = json.load(f)
+                all_json_data.append(json_data)  # Append data to the list
+        except (ValueError, FileNotFoundError) as e:
+            log.info(f"Error processing {json_filename}: {e}")   
+    return(all_json_data)
+
+def escape_query(raw_query):
+    # Uncertain if this is really necessary
+    return raw_query.replace("'", "\'")
+
+def add_collection(solr,data,solr_url):
+    try:
+        solr.add(data)
+        return True
+    except pysolr.SolrError as e:
+        log.info("\n\n*********************")
+        log.info("Solr Error: {e}".format(e=e))
+        log.info("*********************\n")
+        add_to_report("Add Collection to Solr:")
+        add_to_report(f"     **** Can't reach Solr server {solr_url}\n")
+        return False
+
+def delete_collection(solr,collection,solr_url):
+    try:
+        solr.delete(q=escape_query('dct_isPartOf_sm:"{}"'.format(collection)))
+        return True
+    except pysolr.SolrError as e:
+        log.info("\n\n*********************")
+        log.info("Solr Error: {e}".format(e=e))
+        log.info("*********************\n")
+        add_to_report("\nDelete Solr Collection:")
+        add_to_report(f"     **** Can't reach Solr server {solr_url}\n")
+        return False
+        
 def add_to_report(message, activate_report=True):
     global produce_report
     if activate_report:
@@ -391,9 +437,10 @@ produce_report = False
 report_target = StringIO("")
 def main():
     global log, report_target, produce_report
-    
+     
     ap = ArgumentParser(description='''Scans ESRI hub sites for records''')
     ap.add_argument('--config-file', default=r"OpenData.yml", help="Path to configuration file")
+    ap.add_argument('--secrets-file', default=r"secrets.yml", help="Path to secret configuration file! Do not commit to version control!")
     args = ap.parse_args()
     session = requests.Session()
     
@@ -401,11 +448,15 @@ def main():
     with open(args.config_file) as stream:
         theDict = yaml.load(stream)
     
+    if os.path.exists(args.secrets_file):
+        with open(args.secrets_file) as stream:
+            theDict |= yaml.load(stream)
+            
     log = logging.getLogger(__file__)
     handler = logging.StreamHandler(sys.stdout)
     handler.setFormatter(logging.Formatter('%(message)s'))
     log.addHandler(handler)
-
+    
     log.info("Starting ArcGIS Hub scanner....")
     
     # default log level is info
@@ -434,8 +485,19 @@ def main():
         log.debug(site["SiteURL"])
         json2gbl(site_data, site["CreatedBy"], site["SiteName"], site["Collections"],site["DatasetPrefix"],site["DatasetPostfix"],site["SkipList"],site["MaxExtent"].split(','),output_basedir)
     
-    # insert ingest here?
-    
+    # Should we push the records to Solr?
+    if theDict["Solr"]["solr_ingest"]:
+        log.info("Ready to ingest records...")      
+        auth = HTTPBasicAuth(theDict["Solr"]["solr_username"],theDict["Solr"]["solr_password"])
+        solr_url = theDict["Solr"]["solr_url"]
+        solr = pysolr.Solr(solr_url, always_commit=True, timeout=30, auth=auth) 
+        collection = theDict["Solr"]["collection"]
+        log.info(f"\nDeleting existing {collection}...")
+        delete_collection(solr,collection,solr_url)
+        json_data = read_json_files(output_basedir)
+        log.info("Pushing new data to Solr...") 
+        add_collection(solr,json_data,solr_url)
+        
     # Produce and send report if triggered
     if 'report_folder' in theDict and produce_report:
         now = datetime.now().strftime("%Y-%m-%d-%H%M")
