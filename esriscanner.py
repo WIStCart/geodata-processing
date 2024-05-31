@@ -5,39 +5,40 @@ Ben Segal and Jim Lacy
 Wisconsin State Cartographer's Office
 GeoData@Wisconsin
 
-Description: 
-This script is designed to run periodically and scan Esri open data sites for metadata, and output a series of GeoBlacklight metadata files for all items found.  No attempt is made to track new/removed datasets.  Instead, our model is to start fresh with a new set of records each run. This guarantees, as much as we can, that links to these scanned datasets are accurate and up-to-date.  We have a separate process to ingest GBL metadata records produced by this script.
+Special thanks to Dave Mayo from Harvard University for contributing a number of important logging, notification, and other quality improvements!
 
-Dependencies: Python 3.x
+Description:
+This script is designed to run periodically and scan Esri open data sites for metadata, and output a series of GeoBlacklight metadata files for all items found.  No attempt is made to track new/removed datasets.  Instead, our model is to start fresh with a new set of records each run. This guarantees, as much as we can, that links to these scanned datasets are accurate and up-to-date.  
 
-To-do:
-
- - examine geographic envelope of each record
-      - if bounding box has a smaller extent than Wisconsin, override collection name... should *not* be labeled Statewide (example:  DNR records for Rock River)
-    
 """
 import json
-import urllib.request
-from urllib.parse import urlparse, parse_qs
-from html.parser import HTMLParser
-import shutil
+import logging
 import os
 import re
+import shutil
+import smtplib
 import ssl
-from datetime import datetime
-from datetime import timezone
-from socket import timeout
+import sys
 
-# Non-standard python libraries follow
+from argparse import ArgumentParser, FileType
+from datetime import datetime, timezone
+from html.parser import HTMLParser
+from io import StringIO
+from urllib.parse import urlparse, parse_qs
+
+# External python libraries follow
 # requires additional installation
-# python -m pip install ruamel.yaml
-import ruamel.yaml as yaml
+# python -m pip install -r requirements.txt
+import requests
+from requests.exceptions import *
 
-# Subfolders for scanned sites will be dumped here
-output_basedir = "C:\\Users\\lacy.ad\\Documents\\scripts\\opendata"
+from ruamel.yaml import YAML
+yaml = YAML()
 
-# YAML configuration file
-config_file = "C:\\Users\\lacy.ad\\Documents\\scripts\\OpenData.yml"
+import tenacity as t # we need a lot of properties from tenacity so using short name
+
+# minX/West, minY/South, maxX/east, maxY/North
+spatial_coords = re.compile(r'(?P<minX>[^,]+),(?P<minY>[^,]+),(?P<maxX>[^,]+),(?P<maxY>[^,]+)')
 
 # Strip html from description
 class MLStripper(HTMLParser):
@@ -51,7 +52,7 @@ class MLStripper(HTMLParser):
         self.fed.append(d)
     def get_data(self):
         return ''.join(self.fed)
-        
+
 def strip_tags(html):
     s = MLStripper()
     s.feed(html)
@@ -60,19 +61,18 @@ def strip_tags(html):
 def checkValidity(dataset):
     # Check to see if critical keys are missing data.  If not, check fails with False
     validData = True
-    msg=""
-    if 'identifier' not in dataset or dataset["identifier"] == "": 
-        msg += "           No identifier found."
-        validData = False  
-    if 'modified' not in dataset or dataset["modified"] == "": 
-        msg += "           No modified date found."
-        validData = False   
-    if 'spatial' not in dataset or dataset["spatial"] == "{{extent}}" or dataset["spatial"] == "" or dataset["spatial"] =="{{extent:computeSpatialProperty}}": 
-        msg += "           No spatial bounding box found."
-        validData = False        
-    return validData,msg
+    errors = []
+
+    if 'identifier' not in dataset or not dataset["identifier"]:
+        errors.append("No identifier found.")
+        validData = False
+    if 'modified' not in dataset or not dataset["modified"]:
+        errors.append("No modified date found.")
+        validData = False
+    return validData,"\t".join(errors)
 
 def getURL(refs):
+    global produce_report
     # For unknown reasons, ARGIS Hub is inconsistent in outputting the type of url.
     # Sometimes references use the key of "accessURL," other times "downloadURL"
     # This function checks to see which is present, and returns appropriate url
@@ -87,16 +87,16 @@ def getURL(refs):
         url=refs["accessURL"]
     elif ('downloadURL') in refs:
         url=refs["downloadURL"]
-        print(url)
-    else:   
+    else:
         #error, no url found
         url="invalid"
+        add_to_report(f"     Distribution missing all known distribution keys: keys actually present are: {list(refs.keys())}")
     return url
 
 def get_iso_topic_categories(keywords):
     # parse the provided keyword list and extract/standardize all found ISO keywords
-    
-    iso_categories_list = []   
+
+    iso_categories_list = []
     iso_crosswalk = {'biota':'Biota',
                  'boundaries':'Boundaries',
                  'climatologyMeteorologyAtmosphere':'Atmospheric Sciences',
@@ -142,11 +142,47 @@ def get_iso_topic_categories(keywords):
             iso_categories_list.append(keyvalue)
     return iso_categories_list
 
+def validate_coordinates(coordinates,maxextent):
+    fixed_coordinates = list(coordinates)
+             
+    # Coordinates are in the order: west, south, east, north
+    # Check and fix western boundary  
+    if coordinates[0] < maxextent[0]: 
+        fixed_coordinates[0] = maxextent[0]
+        log.debug(f"     Western boundary changed from {coordinates[0]} to {fixed_coordinates[0]}.")
+    
+    # Check and fix southern boundary
+    # and make sure it is in northern hemisphere
+    if coordinates[1] < maxextent[1] or coordinates[1] < 0:
+        fixed_coordinates[1] = maxextent[1]
+        log.debug(f"     Southern boundary changed from {coordinates[1]} to {fixed_coordinates[1]}.")    
+        
+    # Check and fix eastern boundary
+    if coordinates[2] > maxextent[2]:
+        fixed_coordinates[2] = maxextent[2]
+        log.debug(f"     Eastern boundary changed from {coordinates[2]} to {fixed_coordinates[2]}.")
+    
+    # Check and fix northern boundary
+    # and make sure it is in northern hemisphere
+    if coordinates[3] > maxextent[3] or coordinates[1] < 0:
+        fixed_coordinates[3] = maxextent[3]
+        log.debug(f"     Northern boundary changed from {coordinates[3]} to {fixed_coordinates[3]}.")
+    
+    # We have seen situations where listed extent is only a point!
+    # (Debateable whether this is correct or not)
+    # or westernmost coordinate is larger than east
+    # or northernmost coordinate is smaller than south
+    if coordinates[0] == coordinates[2] or coordinates[1] == coordinates[3] or coordinates[0] > coordinates[2] or coordinates[1] > coordinates[3]:
+        log.debug(f"     Suspect coordinates changed to MaxExtent")
+        fixed_coordinates = maxextent
+             
+    return fixed_coordinates
+
 
 def add_dataset_collections(keywords):
     # parse the provided keyword list and map found keywords to specific GeoData collections
-    
-    collection_list = []  
+
+    collection_list = []
     # format is keyword:collection
     collection_crosswalk = {'climate':'Climate',
                              'climate change':'Climate',
@@ -160,85 +196,86 @@ def add_dataset_collections(keywords):
                              'surficial deposits':'Geology and Groundwater'}
 
     for keyword in keywords:
-        keyvalue = collection_crosswalk.get(keyword.lower())      
+        keyvalue = collection_crosswalk.get(keyword.lower())
         if keyvalue:
             collection_list.append(keyvalue)
-            #print("Key value is " + str(keyvalue))
-            #print("appended to list")
-    #print(collection_list)
+            log.debug("Key value is " + str(keyvalue))
+            log.debug("appended to list")
+    log.debug(collection_list)
     return collection_list
 
 
-def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skiplist, basedir):
-    
+def json2gbl (d, createdBy, siteName, collections, prefix, postfix, skiplist, maxextent, basedir):
     
     now = datetime.now(timezone.utc) # used to populate layer_modified_dt, which must be in UTC
-    
+
     path = os.path.join(basedir,siteName)
-    
+
     # if site folder already exists, delete
     # we start fresh each run
     if (os.path.isdir(path) == True):
         shutil.rmtree(path)
-    
+
     # create folder to hold json output files
     os.makedirs(path)
-    
-    # grab json data from url
-    s = urllib.request.urlopen(jsonUrl,data=None,timeout=30).read()
-   
-    # decode data grabbed from url
-    d = json.loads(s.decode('utf-8'))
-    
-    # Parse through the collections defined for each site           
+
+    # Parse through the collections defined for each site
     site_collections = []
     for CollectionName in collections:
-        site_collections.append(CollectionName["CollectionName"])  
-    #print(site_collections)
-    
-    # Parse through the skiplist defined for each site           
+        site_collections.append(CollectionName["CollectionName"])
+    log.debug(site_collections)
+
+    # Parse through the skiplist defined for each site
     uuidList = []
     for uuidnum in skiplist:
         uuidList.append(uuidnum["UUID"])
- 
+
     # loop through each dataset in the json file
     # note: Esri's dcat records call everything a "dataset"
-    for dataset in d["dataset"]:  
-        #print(dataset)
+    for dataset in d["dataset"]:
+        log.debug(dataset)
         # read DCAT dataset identifier
         # Esri keeps messing with the formatting of this field!
         #
-        # Also, it appears that at times the "unique" ID found in the querystring is replicated across multiple 
+        # Also, it appears that at times the "unique" ID found in the querystring is replicated across multiple
         # datasets. My hack is to append the "sublayer" number to the identifier.  Without taking this action,
-        # there will be situations where records will be overwritten since we name json files based on the 
+        # there will be situations where records will be overwritten since we name json files based on the
         # identifier.
         querystring = parse_qs(urlparse(dataset["identifier"]).query)
         if len(querystring) > 1:
-            #print(querystring)
+            log.debug(querystring)
             identifier = siteName + "-" + querystring["id"][0] + querystring["sublayer"][0]
         else:
             identifier = siteName + "-" + querystring["id"][0]
-        #print(identifier)
-        #print(dataset["title"])
+        log.debug(identifier)
+        log.debug(dataset["title"])
         dataset_collections = []
         collections = []
         validData,msg = checkValidity(dataset)
-        if validData and (identifier not in uuidList):             
+        if validData and (identifier not in uuidList):
             # call html strip function
             description = strip_tags(dataset["description"])
-            
+
             # check for empty description that sometimes shows up in Hub sites
             if description == '{{default.description}}' or description == '' or description == '{{description}}':
                 description = 'No description provided.'
-                
+
             # read access level... should always be Public
             access = dataset["accessLevel"].capitalize()
-            
+
             # generate bounding box
-            coordinates = [l for l in dataset["spatial"].split(',')]
-            #print(coordinates)
-            envelope = "ENVELOPE(" + coordinates[0] + ", " +  coordinates[2] + ", " + coordinates[3] + ", " + coordinates[1] + ")"
-            
+            maxextents_list = [float(value) for value in maxextent]
+            if spatial_coords.match(dataset.get("spatial", "")):
+                coordinates = dataset["spatial"].split(',')
+                coordinates_list = [float(value) for value in coordinates]         
+                valid_coordinates = validate_coordinates(coordinates_list, maxextents_list)            
+                envelope = f"ENVELOPE({valid_coordinates[0]},{valid_coordinates[2]},{valid_coordinates[3]},{valid_coordinates[1]})"
+            else:
+                # In the past we ignored datasets (mostly apps) that lacked a valid bounding box
+                # now including...
+                log.debug(f"          No spatial bounding box found{('spatial' in dataset and ' in ' + dataset['spatial']) or None}.")
+                envelope = f"ENVELOPE({maxextents_list[0]},{maxextents_list[2]},{maxextents_list[3]},{maxextents_list[1]})"
+
             # send the dataset keywords to a function that parses and returns a standardized list
             # of ISO Topic Keywords
             iso_categories_list = get_iso_topic_categories(dataset["keyword"])
@@ -249,49 +286,49 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skipli
                 collections = dataset_collections + site_collections
             else:
                 collections = site_collections
-            
+
             # Although not ideal, we use "modified" field for our date
             # ArcGIS Hub's handling of dates is sketchy at best
             modifiedDate = dataset["modified"]
-            
+
             # Esri DCAT records from Hub make no references to the type of geometry!!
-            # For now, we default all of these records to Mixed... no better option 
+            # For now, we default all of these records to Mixed... no better option
             geomType = "Mixed"
-            
-            # create references from distribution        
-            #print(">>>>>>>>>> " + dataset["title"])
+
+            # create references from distribution
+            log.debug(">>>>>>>>>> " + dataset["title"])
             references = "{"
             references += '\"http://schema.org/url\":\"' + dataset["landingPage"] + '\",'
             for refs in dataset["distribution"]:
                 url=getURL(refs)
-                
+
                 #Fix the encoding of goofy querystring now intrinsic to Esri download links
                 url = url.replace("\"","%22").replace(",","%2C").replace("{","%7B").replace("}","%7D")
-                #print(url)
-                
+                log.debug(url)
+
                 # In July 2021, we started seeing distribution formats with null values
                 if refs["format"] is not None:
                     if (refs["format"] == "ArcGIS GeoServices REST API" and url != "invalid"):
                             if ('FeatureServer') in url:
                                 references += '\"urn:x-esri:serviceType:ArcGIS#FeatureLayer\":\"'  + url +  '\",'
-                                #print("Found featureServer")
+                                log.debug("Found featureServer")
                             elif ('ImageServer') in url:
                                 references += '\"urn:x-esri:serviceType:ArcGIS#ImageMapLayer\":\"'  + url +  '\",'
-                                #print("Found ImageServer")
+                                log.debug("Found ImageServer")
                             elif ('MapServer') in url:
                                 references += '\"urn:x-esri:serviceType:ArcGIS#DynamicMapLayer\":\"'  + url +  '\",'
-                                #print("Found MapServer Layer")
+                                log.debug("Found MapServer Layer")
                     elif (refs["format"] == "ZIP" and url != "invalid"):
-                        references += '\"http://schema.org/downloadUrl\":\"' + url + '\",'     
+                        references += '\"http://schema.org/downloadUrl\":\"' + url + '\",'
             references += "}"
             references = references.replace(",}", "}")
             dc_creator_sm = []
             dc_creator_sm.append(createdBy)
             dct_temporal_sm = []
             dct_temporal_sm.append(modifiedDate[0:4])
-            #print("\n")       
+
             # format gbl record
-            #print(dataset["title"])
+            log.debug(dataset["title"])
             gbl = {
                 "geoblacklight_version": "1.0",
                 "dc_identifier_s": identifier,
@@ -300,60 +337,122 @@ def json2gbl (jsonUrl, createdBy, siteName, collections, prefix, postfix, skipli
                 "dc_subject_sm": iso_categories_list,
                 "dc_rights_s": access,
                 "dct_provenance_s": createdBy,
-                "layer_id_s": "", 
+                "layer_id_s": "",
                 "layer_slug_s": identifier,
-                "layer_geom_type_s": geomType, 
-                "dc_format_s": "File", 
+                "layer_geom_type_s": geomType,
+                "dc_format_s": "File",
                 "dc_language_s": "English",
                 "dct_isPartOf_sm": collections,
                 "dc_creator_sm": dc_creator_sm,
                 "dc_type_s": "Dataset",
-                "dct_spatial_sm": "", 
-                "dct_issued_s": "", 
-                "dct_temporal_sm": dct_temporal_sm, 
+                "dct_spatial_sm": "",
+                "dct_issued_s": "",
+                "dct_temporal_sm": dct_temporal_sm,
                 "solr_geom": envelope,
-                "solr_year_i": int(modifiedDate[0:4]), 
+                "solr_year_i": int(modifiedDate[0:4]),
                 "layer_modified_dt": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
                 "dct_references_s": references,
                 "uw_notice_s": "This dataset was automatically cataloged from the author's Open Data Portal. In some cases, publication year and bounding coordinates shown here may be incorrect. Additional download formats may be available on the author's website. Please check the 'More details at' link for additional information.",
             }
-          
+
             outFileName = identifier
-            
+
             # dump the generated GBL record to a file
             with open(path + "\\" + outFileName + ".json", 'w') as jsonfile:
                 json.dump(gbl, jsonfile, indent=1)
         elif not validData:
-            print("********** Validity check failed on " + prefix + dataset["title"] + postfix)
-            print(msg)
+            log.info("     Validity check failed on " + prefix + dataset["title"] + postfix)
+            log.info(msg)
         else:
-            print("---------- Skipping dataset: " + prefix + dataset["title"] + postfix)
-   
-def validSite (siteURL):
-    req = urllib.request.Request(siteURL)
-    # for unknown reasons, some sites fail with a SSL "unable to verify" error. The errors would also reference an expired certificate, which wasn't true! The following line is a hack that skips verification.
-    ssl._create_default_https_context = ssl._create_unverified_context
-    #print(siteURL)
-    try: urllib.request.urlopen(req,data=None,timeout=30)
-    except urllib.error.URLError as e:
-        print(e.reason)
-        return False
-    else:
-        return True
-  
-# loop through each site in OpenData.yml and call json2gbl function
-with open(config_file) as stream:
-    theDict = yaml.safe_load(stream)
+            log.info("     Skipping dataset: " + prefix + dataset["title"] + postfix)
+
+@t.retry(retry=t.retry_if_exception_type((Timeout,HTTPError,),),
+         wait=t.wait_exponential_jitter(initial=3.0, max=10.0, jitter=1.0),
+         stop=t.stop_after_attempt(5),
+         after=lambda x: log.info("Retrying..."))
+         
+def getSiteJSON(siteURL, session):
+    global report_target
+    try:
+        resp = session.get(siteURL, timeout=30)
+    except SSLError:
+        resp = session.get(siteURL, timeout=30, verify=False)
+    resp.raise_for_status()
+    return resp.json()
+
+def add_to_report(message, activate_report=True):
+    global produce_report
+    if activate_report:
+        produce_report = True
+    print(message, file=report_target)
+
+log = None
+produce_report = False
+report_target = StringIO("")
+def main():
+    global log, report_target, produce_report
+    
+    ap = ArgumentParser(description='''Scans ESRI hub sites for records''')
+    ap.add_argument('--config-file', default=r"OpenData.yml", help="Path to configuration file")
+    args = ap.parse_args()
+    session = requests.Session()
+    
+    # YAML configuration file
+    with open(args.config_file) as stream:
+        theDict = yaml.load(stream)
+    
+    log = logging.getLogger(__file__)
+    handler = logging.StreamHandler(sys.stdout)
+    handler.setFormatter(logging.Formatter('%(message)s'))
+    log.addHandler(handler)
+
+    log.info("Starting ArcGIS Hub scanner....")
+    
+    # default log level is info
+    levelname = theDict.get('log_level', 'INFO').upper()   
+    if levelname not in {'CRITICAL', 'FATAL', 'ERROR', 'WARN', 'WARNING', 'INFO', 'DEBUG', 'NOTSET'}:
+        raise RuntimeError('configuration error: {levelname} is not a log level in Python')
+    log.setLevel(getattr(logging, levelname))
+    log.info("Logging level is set to " + levelname)
+
+    # Subfolders for scanned sites will be dumped here
+    output_basedir = theDict.get('output_basedir', r"d://scripts//opendata")
+
+    # loop through each site in OpenData.yml and call json2gbl function
     for siteCode in theDict["Sites"]:
         site = theDict["Sites"][siteCode]
-        print("\n\nProcessing Site: " + siteCode)
-        #print(site["Collections"])
-        #print(site["DatasetPrefix"])
-        #print(site["DatasetPostfix"])
-        if validSite(site["SiteURL"]):
-            print(site["SiteURL"])
-            json2gbl(site["SiteURL"], site["CreatedBy"], site["SiteName"], site["Collections"],site["DatasetPrefix"],site["DatasetPostfix"],site["SkipList"],output_basedir)
-            #os.system("pause")
-        else:
-            print("**** Site Failure, check URL for " + site["CreatedBy"] + "****")
-        
+        log.info("\nProcessing Site: " + siteCode)
+        add_to_report(f"\nSite {siteCode}:", activate_report=False)
+        site_data = None
+        try:
+            site_data = getSiteJSON(site['SiteURL'], session)
+        except Exception as e:
+            log.info(str(e))
+            log.info("     Site Failure, check URL")
+            add_to_report("     Site Failure, check URL")
+            continue
+        log.debug(site["SiteURL"])
+        json2gbl(site_data, site["CreatedBy"], site["SiteName"], site["Collections"],site["DatasetPrefix"],site["DatasetPostfix"],site["SkipList"],site["MaxExtent"].split(','),output_basedir)
+    
+    # insert ingest here?
+    
+    # Produce and send report if triggered
+    if 'report_folder' in theDict and produce_report:
+        now = datetime.now().strftime("%Y-%m-%d-%H%M")
+        report_file = f"{theDict['report_folder']}scanlog_{now}.txt"
+        with open(report_file, 'w') as file:
+            file.write(report_target.getvalue())
+   
+    if 'report_email' in theDict and produce_report:
+        port = theDict['report_email'].get('port', 25)
+        smtp_server = theDict['report_email']['smtp_server']
+        sender_email = theDict['report_email']['sender_email']
+        receiver_email = theDict['report_email']['receiver_email']
+        email_subject = theDict['report_email']['email_subject']
+        message = 'Subject: {}\n\n{}'.format(email_subject, report_target.getvalue())
+
+        with smtplib.SMTP(smtp_server, port) as server:
+            server.sendmail(sender_email, receiver_email, message)
+
+if __name__ == '__main__':
+    main()

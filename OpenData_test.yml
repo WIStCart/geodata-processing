@@ -4,9 +4,29 @@
 #
 #
 
+output_basedir: 'd://scripts/opendata//'
+report_folder: 'd://scripts//logs//'
+log_level: 'INFO'
+
+# Solr Processing
+Solr:
+    solr_url: ''
+    solr_ingest: true
+
+# Email settings
+report_email:
+  smtp_server: 'smtp.wiscmail.wisc.edu'
+  sender_email: 'geodata@sco.wisc.edu'
+  receiver_email: 'lacy@wisc.edu'
+  email_subject: 'Error detected during ArcGIS Hub record scan'
+  port: 25 
+
+# Remember: MaxExtent is defined as W,S,E,N
+
 Sites:
  # Wisconsin State Agencies
   DATCP_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
       - CollectionName: "Wisconsin State Agencies"
@@ -14,9 +34,10 @@ Sites:
     SiteURL: "https://gis-widatcp.opendata.arcgis.com/api/feed/dcat-us/1.1.json"
     SiteName: "DATCP"
     DatasetPrefix: ""
-    DatasetPostfix: ", WI DATCP"  
+    DatasetPostfix: ", WI DATCP"
     SkipList: ""
   DHS_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
       - CollectionName: "Wisconsin State Agencies"
@@ -24,9 +45,10 @@ Sites:
     SiteURL: "https://data.dhsgis.wi.gov/api/feed/dcat-us/1.1.json"
     SiteName: "DHS"
     DatasetPrefix: ""
-    DatasetPostfix: ", WI DHS"  
+    DatasetPostfix: ", WI DHS"
     SkipList: ""
   DOT_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
       - CollectionName: "Wisconsin State Agencies"
@@ -34,9 +56,10 @@ Sites:
     SiteURL: "https://data-wisdot.opendata.arcgis.com/api/feed/dcat-us/1.1.json"
     SiteName: "DOT"
     DatasetPrefix: ""
-    DatasetPostfix: ", WI DOT"  
-    SkipList: "" 
-  LTSB_OpenData: 
+    DatasetPostfix: ", WI DOT"
+    SkipList: ""
+  LTSB_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
       - CollectionName: "Wisconsin State Agencies"
@@ -45,8 +68,9 @@ Sites:
     SiteName: "WILTSB"
     DatasetPrefix: ""
     DatasetPostfix: ", WI LTSB"
-    SkipList: ""  
-  OOR_OpenData: 
+    SkipList: ""
+  OOR_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
       - CollectionName: "Wisconsin State Agencies"
@@ -55,8 +79,9 @@ Sites:
     SiteName: "WIOOR"
     DatasetPrefix: ""
     DatasetPostfix: ", WI Office of Outdoor Recreation"
-    SkipList: ""  
-  WiDNR_OpenData: 
+    SkipList: ""
+  WiDNR_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
       - CollectionName: "Wisconsin State Agencies"
@@ -65,12 +90,13 @@ Sites:
     SiteName: "WIDNR"
     DatasetPrefix: ""
     DatasetPostfix: ", WI DNR"
-    SkipList: 
-      - UUID: "WIDNR-e1e89ae505594459a46407f1daf4ad5d" 
-      - UUID: "WIDNR-fd4d0c43abc04b4ab915586d9a0e89dd" 
-      - UUID: "WIDNR-4c81d81ceb444aec8b4ac5b74768d4c5" 
-      - UUID: "WIDNR-b6cff8bd00304b73bb1d32f7678ecf34"    
+    SkipList:
+      - UUID: "WIDNR-e1e89ae505594459a46407f1daf4ad5d"
+      - UUID: "WIDNR-fd4d0c43abc04b4ab915586d9a0e89dd"
+      - UUID: "WIDNR-4c81d81ceb444aec8b4ac5b74768d4c5"
+      - UUID: "WIDNR-b6cff8bd00304b73bb1d32f7678ecf34"
   WEM_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
       - CollectionName: "Wisconsin State Agencies"
@@ -78,9 +104,10 @@ Sites:
     SiteURL: "http://data-wem.opendata.arcgis.com/api/feed/dcat-us/1.1.json"
     SiteName: "WEM"
     DatasetPrefix: ""
-    DatasetPostfix: ", WEM" 
+    DatasetPostfix: ", WEM"
     SkipList: ""
   DPI_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
       - CollectionName: "Wisconsin State Agencies"
@@ -88,11 +115,12 @@ Sites:
     SiteURL: "https://data-wi-dpi.opendata.arcgis.com/api/feed/dcat-us/1.1.json"
     SiteName: "DPI"
     DatasetPrefix: ""
-    DatasetPostfix: ", WI DPI" 
-    SkipList: 
+    DatasetPostfix: ", WI DPI"
+    SkipList:
       - UUID: "DPI-d7543bf1a4cf4fb6a06c3c75b0eeecc8"
   # Cities and Villages
   Fitchburg_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "City of Fitchburg"
@@ -100,8 +128,9 @@ Sites:
     SiteName: "CityOfFitchburg"
     DatasetPrefix: ""
     DatasetPostfix: ", City of Fitchburg"
-    SkipList: ""   
+    SkipList: ""
   Greenville_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Village of Greenville"
@@ -109,8 +138,9 @@ Sites:
     SiteName: "VillageOfGreenville"
     DatasetPrefix: ""
     DatasetPostfix: ", Village of Greenvile"
-    SkipList: ""      
+    SkipList: ""
   Madison_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "City of Madison"
@@ -118,8 +148,8 @@ Sites:
     SiteName: "CityOfMadison"
     DatasetPrefix: ""
     DatasetPostfix: ", City of Madison"
-    SkipList: 
-      - UUID: "cityofmadison-city-calendar-of-events"  
+    SkipList:
+      - UUID: "cityofmadison-city-calendar-of-events"
 # City of Milwaukee is a CKAN site; does not include bounding coordinates in anything!
 #  Milwaukee_OpenData:
 #    Collections:
@@ -131,84 +161,89 @@ Sites:
 #    DatasetPostfix: ", City of Milwaukee"
 #    SkipList: ""
   CityOfWaukesha_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "City of Waukesha"
     SiteURL: "https://data-waukesha.opendata.arcgis.com/api/feed/dcat-us/1.1.json"
     SiteName: "CityOfWaukesha"
     DatasetPrefix: ""
-    DatasetPostfix: ", City of Waukesha"  
+    DatasetPostfix: ", City of Waukesha"
     SkipList:
       - UUID: "CityOfWaukesha-cfa990537f804182817d5f0f326cfdd625"
   WisconsinRapids_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "City of Wisconsin Rapids"
     SiteURL: "http://rapidsdata-wisconsinrapids.opendata.arcgis.com/api/feed/dcat-us/1.1.json"
     SiteName: "CityOfWisconsinRapids"
     DatasetPrefix: ""
-    DatasetPostfix: ", City of Wisconsin Rapids"  
+    DatasetPostfix: ", City of Wisconsin Rapids"
     SkipList: ""
   SunPrairie_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "City of Sun Prairie"
     SiteURL: "https://maps-sunprairie.opendata.arcgis.com/api/feed/dcat-us/1.1.json"
     SiteName: "CityOfSunPrairie"
     DatasetPrefix: ""
-    DatasetPostfix: ", City of Sun Prairie"  
+    DatasetPostfix: ", City of Sun Prairie"
     SkipList: ""
   # RPCs
   CapitalRPC_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Capital Area Regional Planning Commission"
     SiteURL: "https://data-carpc.opendata.arcgis.com/api/feed/dcat-us/1.1.json"
     SiteName: "CARPC"
     DatasetPrefix: ""
-    DatasetPostfix: ", CARPC" 
-    SkipList: 
-      - UUID: "CARPC-931d892ac7a843d7ba29d085e0433465"   
-      - UUID: "CARPC-3a027eeb87224144be6c4a4c9bd9aa84"    
-      - UUID: "CARPC-c3a5217d22d94e6f9d30a0964395cf89" 
-      - UUID: "CARPC-31f1f67253074ef9afe46cd905bff07a" 
-      - UUID: "wi-dnr-24k-hydro-flowlines-rivers-streams"   
-      - UUID: "CARPC-6d9fa6d159ae4a1f80b9e296ed300767"   
+    DatasetPostfix: ", CARPC"
+    SkipList:
+      - UUID: "CARPC-931d892ac7a843d7ba29d085e0433465"
+      - UUID: "CARPC-3a027eeb87224144be6c4a4c9bd9aa84"
+      - UUID: "CARPC-c3a5217d22d94e6f9d30a0964395cf89"
+      - UUID: "CARPC-31f1f67253074ef9afe46cd905bff07a"
+      - UUID: "wi-dnr-24k-hydro-flowlines-rivers-streams"
+      - UUID: "CARPC-6d9fa6d159ae4a1f80b9e296ed300767"
       - UUID: "CARPC-android-icon-36x36"
-      - UUID: "CARPC-d582a9e953c44c09bb998c7d9b66f8d4" 
-      - UUID: "CARPC-826498a48bd0424f9c9315214f2165d4" 
-      - UUID: "CARPC-e64f06e8d912465a96f9ea9bfdb72676" 
-      - UUID: "CARPC-9e557abc61ce41c9b8ec8b15800c20d3" 
-      - UUID: "CARPC-4f2e99ba65e34bb8af49733d9778fb8e" 
-      - UUID: "CARPC-3582b744bba84668b52a16b0b6942544" 
-      - UUID: "CARPC-413fd05bbd7342f5991d5ec96f4f8b18" 
-      - UUID: "CARPC-867895a71a1840399476fc717e76bb43"   
-      - UUID: "CARPC-f35ef07c9ed24020aadd65c8a65d3754"  
-      - UUID: "CARPC-f33a34de3a294590ab48f246e99958c9"  
-      - UUID: "CARPC-459cc334740944d38580455a0a777a24"  
+      - UUID: "CARPC-d582a9e953c44c09bb998c7d9b66f8d4"
+      - UUID: "CARPC-826498a48bd0424f9c9315214f2165d4"
+      - UUID: "CARPC-e64f06e8d912465a96f9ea9bfdb72676"
+      - UUID: "CARPC-9e557abc61ce41c9b8ec8b15800c20d3"
+      - UUID: "CARPC-4f2e99ba65e34bb8af49733d9778fb8e"
+      - UUID: "CARPC-3582b744bba84668b52a16b0b6942544"
+      - UUID: "CARPC-413fd05bbd7342f5991d5ec96f4f8b18"
+      - UUID: "CARPC-867895a71a1840399476fc717e76bb43"
+      - UUID: "CARPC-f35ef07c9ed24020aadd65c8a65d3754"
+      - UUID: "CARPC-f33a34de3a294590ab48f246e99958c9"
+      - UUID: "CARPC-459cc334740944d38580455a0a777a24"
       - UUID: "CARPC-75a3ce8990674a5ebd5b9ab66bdab893"
-      - UUID: "CARPC-8d91bd39e873417ea21673e0fee87604" 
-      - UUID: "CARPC-e2de4f5a82ce43199c1a96491d99fcd8" 
-      - UUID: "CARPC-aab054ab883c4a4094c72e949566ad40"  
-      - UUID: "CARPC-25869b8718c0419db87dad07de5b02d8"    
+      - UUID: "CARPC-8d91bd39e873417ea21673e0fee87604"
+      - UUID: "CARPC-e2de4f5a82ce43199c1a96491d99fcd8"
+      - UUID: "CARPC-aab054ab883c4a4094c72e949566ad40"
+      - UUID: "CARPC-25869b8718c0419db87dad07de5b02d8"
       - UUID: "CARPC-a343955125bf4002987c400ad6d0346c"
       - UUID: "CARPC-2ea9c9cf54cb494187b03a5057d1a830"
-      - UUID: "CARPC-de45b9cad20141ebb82fae0da8b3e2c6" 
-      - UUID: "CARPC-61ffcf610f314933916e4b2c0e477b29" 
-      - UUID: "CARPC-620875bf8a1945e799cf8bd5f25784d7" 
-      - UUID: "CARPC-f81bc478e12c4f1691d0d7ab6361f5a6" 
-      - UUID: "CARPC-1c8ddaba2ee9498cb0025554351e5475"  
-      - UUID: "CARPC-1536abe5e5504e5db380ccfaa9b6fd8d"  
+      - UUID: "CARPC-de45b9cad20141ebb82fae0da8b3e2c6"
+      - UUID: "CARPC-61ffcf610f314933916e4b2c0e477b29"
+      - UUID: "CARPC-620875bf8a1945e799cf8bd5f25784d7"
+      - UUID: "CARPC-f81bc478e12c4f1691d0d7ab6361f5a6"
+      - UUID: "CARPC-1c8ddaba2ee9498cb0025554351e5475"
+      - UUID: "CARPC-1536abe5e5504e5db380ccfaa9b6fd8d"
       - UUID: "CARPC-588f0e0acc514c11bc7c898fed9fc651"
-      - UUID: "CARPC-c29cfb7875fc4b97b58ba6987c460862" 
-      - UUID: "CARPC-48b8cec7ebf04b5fbdcaf70d09daff21" 
-      - UUID: "CARPC-509e2d6b034246d692a461724ae2d62c" 
-      - UUID: "CARPC-5d2bfa736f8448b3a1708e1f6be23eed"  
-      - UUID: "CARPC-6e03e8c26aad4b9c92a87c1063ddb0e3" 
-      - UUID: "CARPC-86de95d4e0244cba80f0fa2c9403a7b2" 
-      - UUID: "CARPC-8b3b470883a744aeb60e5fff0a319ce7" 
-      - UUID: "CARPC-d8855ee4d3d74413babfb0f41203b168"      
+      - UUID: "CARPC-c29cfb7875fc4b97b58ba6987c460862"
+      - UUID: "CARPC-48b8cec7ebf04b5fbdcaf70d09daff21"
+      - UUID: "CARPC-509e2d6b034246d692a461724ae2d62c"
+      - UUID: "CARPC-5d2bfa736f8448b3a1708e1f6be23eed"
+      - UUID: "CARPC-6e03e8c26aad4b9c92a87c1063ddb0e3"
+      - UUID: "CARPC-86de95d4e0244cba80f0fa2c9403a7b2"
+      - UUID: "CARPC-8b3b470883a744aeb60e5fff0a319ce7"
+      - UUID: "CARPC-d8855ee4d3d74413babfb0f41203b168"
   ECWRPC_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "East Central Wisconsin Regional Planning Commission"
@@ -216,8 +251,9 @@ Sites:
     SiteName: "ECWRPC"
     DatasetPrefix: ""
     DatasetPostfix: ", ECWRPC"
-    SkipList: ""  
+    SkipList: ""
   SEWRPC_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Southeastern Wisconsin Regional Planning Commission"
@@ -225,18 +261,20 @@ Sites:
     SiteName: "SEWRPC"
     DatasetPrefix: ""
     DatasetPostfix: ", SEWRPC"
-    SkipList: ""  
+    SkipList: ""
 # Counties
   AdamsCounty_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Adams County"
     SiteURL: "https://adams-county-open-data-portal-adams-county-wi.hub.arcgis.com/api/feed/dcat-us/1.1.json"
     SiteName: "AdamsCounty"
     DatasetPrefix: ""
-    DatasetPostfix: ", Adams County" 
-    SkipList: "" 
+    DatasetPostfix: ", Adams County"
+    SkipList: ""
   AshlandCounty_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
       - CollectionName: "Coastal"
@@ -244,40 +282,42 @@ Sites:
     SiteURL: "https://data-ashlandcountywi.opendata.arcgis.com/api/feed/dcat-us/1.1.json"
     SiteName: "AshlandCounty"
     DatasetPrefix: ""
-    DatasetPostfix: ", Ashland County" 
-    SkipList: "" 
+    DatasetPostfix: ", Ashland County"
+    SkipList: ""
   CalumetCounty_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Calumet County"
     SiteURL: "https://gis-calumet.hub.arcgis.com/api/feed/dcat-us/1.1.json"
     SiteName: "CalumetCounty"
     DatasetPrefix: ""
-    DatasetPostfix: ", Calumet County" 
-    SkipList: ""     
+    DatasetPostfix: ", Calumet County"
+    SkipList: ""
   ColumbiaCounty_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Columbia County"
     SiteURL: "http://opendata-cclid.opendata.arcgis.com/api/feed/dcat-us/1.1.json"
     SiteName: "ColumbiaCounty"
     DatasetPrefix: ""
-    DatasetPostfix: ", Columbia County" 
-    SkipList: 
+    DatasetPostfix: ", Columbia County"
+    SkipList:
       - UUID: "ColumbiaCounty-25869b8718c0419db87dad07de5b02d8"
       - UUID: "ColumbiaCounty-48b8cec7ebf04b5fbdcaf70d09daff21"
-      - UUID: "ColumbiaCounty-2233871b2d7740998bffcdedffea2818"  
-      - UUID: "ColumbiaCounty-509e2d6b034246d692a461724ae2d62c"  
-      - UUID: "ColumbiaCounty-5d2bfa736f8448b3a1708e1f6be23eed"  
+      - UUID: "ColumbiaCounty-2233871b2d7740998bffcdedffea2818"
+      - UUID: "ColumbiaCounty-509e2d6b034246d692a461724ae2d62c"
+      - UUID: "ColumbiaCounty-5d2bfa736f8448b3a1708e1f6be23eed"
       - UUID: "ColumbiaCounty-6e03e8c26aad4b9c92a87c1063ddb0e3"
-      - UUID: "ColumbiaCounty-86de95d4e0244cba80f0fa2c9403a7b2"  
-      - UUID: "ColumbiaCounty-8b3b470883a744aeb60e5fff0a319ce7" 
-      - UUID: "ColumbiaCounty-d8855ee4d3d74413babfb0f41203b168" 
-      - UUID: "ColumbiaCounty-6d9fa6d159ae4a1f80b9e296ed300767" 
+      - UUID: "ColumbiaCounty-86de95d4e0244cba80f0fa2c9403a7b2"
+      - UUID: "ColumbiaCounty-8b3b470883a744aeb60e5fff0a319ce7"
+      - UUID: "ColumbiaCounty-d8855ee4d3d74413babfb0f41203b168"
+      - UUID: "ColumbiaCounty-6d9fa6d159ae4a1f80b9e296ed300767"
       - UUID: "ColumbiaCounty-931d892ac7a843d7ba29d085e0433465"
       - UUID: "ColumbiaCounty-413fd05bbd7342f5991d5ec96f4f8b18"
       - UUID: "ColumbiaCounty-aab054ab883c4a4094c72e949566ad40"
-#   DaneCounty_OpenData: 
+#   DaneCounty_OpenData:
 #     Collections:
 #       - CollectionName: "Wisconsin Open Data Sites"
 #     CreatedBy: "Dane County"
@@ -285,8 +325,9 @@ Sites:
 #     SiteName: "DaneCounty"
 #     DatasetPrefix: ""
 #     DatasetPostfix: ", Dane County"
-#     SkipList: ""  
-  EauClaire_OpenData: 
+#     SkipList: ""
+  EauClaire_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Eau Claire County"
@@ -294,15 +335,16 @@ Sites:
     SiteName: "EauClaireCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Eau Claire County"
-    SkipList: 
+    SkipList:
       - UUID: "termsofuse"
       - UUID: "open-data"
       - UUID: "maps-apps"
       - UUID: "stories"
       - UUID: "EauClaireCounty-ab478acb9f074747bfe288660cfe13a6_0"
       - UUID: "eccounty-public-notification-1"
-      - UUID: "eccounty-wg-extreme"       
-  Jackson_OpenData: 
+      - UUID: "eccounty-wg-extreme"
+  Jackson_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Jackson County"
@@ -310,10 +352,11 @@ Sites:
     SiteName: "JacksonCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Jackson County"
-    SkipList: ""     
+    SkipList: ""
   #Marquette County in the works
   #https://hub-marqco.hub.arcgis.com/data.json
-  Kenosha_OpenData: 
+  Kenosha_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
       - CollectionName: "Coastal"
@@ -324,11 +367,11 @@ Sites:
     DatasetPostfix: ", Kenosha County"
     SkipList:
       - UUID: "kenoshacounty-citizenreportsrprtr-new"
-      - UUID: "kenoshacounty-public-notification"       
+      - UUID: "kenoshacounty-public-notification"
   #Marquette County in the works
   #https://hub-marqco.hub.arcgis.com/data.json
-  
   MilwaukeeCounty_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
       - CollectionName: "Coastal"
@@ -336,9 +379,10 @@ Sites:
     SiteURL: "http://gis-mclio.opendata.arcgis.com/api/feed/dcat-us/1.1.json"
     SiteName: "MilwaukeeCounty"
     DatasetPrefix: ""
-    DatasetPostfix: ", Milwaukee County" 
-    SkipList: ""    
+    DatasetPostfix: ", Milwaukee County"
+    SkipList: ""
   OutagamieCounty_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Outagamie County"
@@ -346,8 +390,9 @@ Sites:
     SiteName: "OutagamieCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Outagamie County"
-    SkipList: ""    
+    SkipList: ""
   PierceCounty_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Pierce County"
@@ -355,8 +400,9 @@ Sites:
     SiteName: "PierceCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Pierce County"
-    SkipList: ""    
+    SkipList: ""
   RacineCounty_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
       - CollectionName: "Coastal"
@@ -364,9 +410,10 @@ Sites:
     SiteURL: "http://data-racinecounty.opendata.arcgis.com/api/feed/dcat-us/1.1.json"
     SiteName: "RacineCounty"
     DatasetPrefix: ""
-    DatasetPostfix: ", Racine County" 
+    DatasetPostfix: ", Racine County"
     SkipList: ""
   SheboyganCounty_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
       - CollectionName: "Coastal"
@@ -375,8 +422,9 @@ Sites:
     SiteName: "SheboyganCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Sheboygan County"
-    SkipList: ""    
+    SkipList: ""
   StCroixCounty_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "St. Croix County"
@@ -384,8 +432,9 @@ Sites:
     SiteName: "StCroixCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", St. Croix County"
-    SkipList: ""    
+    SkipList: ""
   SaukCounty_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Sauk County"
@@ -396,6 +445,7 @@ Sites:
     SkipList:
       - UUID: "saukgis-sauk-county-open-data-repository"
   TrempealeauCounty_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Trempealeau County"
@@ -405,14 +455,15 @@ Sites:
     DatasetPostfix: ", Trempealeau County"
     SkipList: ""
   VilasCounty_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Vilas County"
     SiteURL: "https://data-vilas.opendata.arcgis.com/api/feed/dcat-us/1.1.json"
     SiteName: "VilasCounty"
     DatasetPrefix: ""
-    DatasetPostfix: ", Vilas County" 
-    SkipList: 
+    DatasetPostfix: ", Vilas County"
+    SkipList:
       - UUID: "vilas-usda-nrcs-geospatial-data-gateway"
       - UUID: "vilas-sco-wi-aerial-photography-catalog"
       - UUID: "vilas-vilas-county-geodata-hub"
@@ -426,11 +477,12 @@ Sites:
 #    SiteName: "WalworthCounty"
 #    DatasetPrefix: ""
 #    DatasetPostfix: ", Walworth County"
-#    SkipList: 
+#    SkipList:
 #      - UUID: "walco-wdnr-surface-water-data-viewer"
 #      - UUID: "walco-world-topo-map-collector"
-#      - UUID: "WalworthCounty-6e03e8c26aad4b9c92a87c1063ddb0e3"  
+#      - UUID: "WalworthCounty-6e03e8c26aad4b9c92a87c1063ddb0e3"
   WashingtonCounty_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Washington County"
@@ -440,6 +492,7 @@ Sites:
     DatasetPostfix: ", Washington County"
     SkipList: ""
   WaukeshaCounty_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Waukesha County"
@@ -449,6 +502,7 @@ Sites:
     DatasetPostfix: ", Waukesha County"
     SkipList: ""
   WaupacaCounty_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Waupaca County"
@@ -458,6 +512,7 @@ Sites:
     DatasetPostfix: ", Waupaca County"
     SkipList: ""
   WausharaCounty_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Waushara County"
@@ -467,6 +522,7 @@ Sites:
     DatasetPostfix: ", Waushara County"
     SkipList: ""
   WoodCounty_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
       - CollectionName: "Wisconsin Open Data Sites"
     CreatedBy: "Wood County"
