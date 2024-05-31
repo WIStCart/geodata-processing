@@ -8,14 +8,7 @@ GeoData@Wisconsin
 Special thanks to Dave Mayo from Harvard University for contributing a number of important logging, notification, and other quality improvements!
 
 Description:
-This script is designed to run periodically and scan Esri open data sites for metadata, and output a series of GeoBlacklight metadata files for all items found.  No attempt is made to track new/removed datasets.  Instead, our model is to start fresh with a new set of records each run. This guarantees, as much as we can, that links to these scanned datasets are accurate and up-to-date.  We have a separate process to ingest GBL metadata records produced by this script.
-
-Dependencies: Python 3.x
-
-To-do:
-
- - examine geographic envelope of each record
-      - if bounding box has a smaller extent than Wisconsin, override collection name... should *not* be labeled Statewide (example:  DNR records for Rock River)
+This script is designed to run periodically and scan Esri open data sites for metadata, and output a series of GeoBlacklight metadata files for all items found.  No attempt is made to track new/removed datasets.  Instead, our model is to start fresh with a new set of records each run. This guarantees, as much as we can, that links to these scanned datasets are accurate and up-to-date.  
 
 """
 import json
@@ -33,7 +26,6 @@ from html.parser import HTMLParser
 from io import StringIO
 from urllib.parse import urlparse, parse_qs
 
-
 # External python libraries follow
 # requires additional installation
 # python -m pip install -r requirements.txt
@@ -45,7 +37,8 @@ yaml = YAML()
 
 import tenacity as t # we need a lot of properties from tenacity so using short name
 
-
+# minX/West, minY/South, maxX/east, maxY/North
+spatial_coords = re.compile(r'(?P<minX>[^,]+),(?P<minY>[^,]+),(?P<maxX>[^,]+),(?P<maxY>[^,]+)')
 
 # Strip html from description
 class MLStripper(HTMLParser):
@@ -65,8 +58,6 @@ def strip_tags(html):
     s.feed(html)
     return s.get_data()
 
-# minX/West, minY/South, maxX/east, maxY/North
-spatial_coords = re.compile(r'(?P<minX>[^,]+),(?P<minY>[^,]+),(?P<maxX>[^,]+),(?P<maxY>[^,]+)')
 def checkValidity(dataset):
     # Check to see if critical keys are missing data.  If not, check fails with False
     validData = True
@@ -77,10 +68,6 @@ def checkValidity(dataset):
         validData = False
     if 'modified' not in dataset or not dataset["modified"]:
         errors.append("No modified date found.")
-        validData = False
-    # Known "bad" values include "{{extent}} and {{extent:computeSpatialProperty}}"
-    if not spatial_coords.match(dataset.get("spatial", "")):
-        errors.append(f"No spatial bounding box found{('spatial' in dataset and ' in ' + dataset['spatial']) or None}.")
         validData = False
     return validData,"\t".join(errors)
 
@@ -103,8 +90,7 @@ def getURL(refs):
     else:
         #error, no url found
         url="invalid"
-        add_to_report(f"Distribution missing all known keys: keys actually present are: {list(refs.keys())}")
-    log.info(url)
+        add_to_report(f"     Distribution missing all known distribution keys: keys actually present are: {list(refs.keys())}")
     return url
 
 def get_iso_topic_categories(keywords):
@@ -156,6 +142,42 @@ def get_iso_topic_categories(keywords):
             iso_categories_list.append(keyvalue)
     return iso_categories_list
 
+def validate_coordinates(coordinates,maxextent):
+    fixed_coordinates = list(coordinates)
+             
+    # Coordinates are in the order: west, south, east, north
+    # Check and fix western boundary  
+    if coordinates[0] < maxextent[0]: 
+        fixed_coordinates[0] = maxextent[0]
+        log.debug(f"     Western boundary changed from {coordinates[0]} to {fixed_coordinates[0]}.")
+    
+    # Check and fix southern boundary
+    # and make sure it is in northern hemisphere
+    if coordinates[1] < maxextent[1] or coordinates[1] < 0:
+        fixed_coordinates[1] = maxextent[1]
+        log.debug(f"     Southern boundary changed from {coordinates[1]} to {fixed_coordinates[1]}.")    
+        
+    # Check and fix eastern boundary
+    if coordinates[2] > maxextent[2]:
+        fixed_coordinates[2] = maxextent[2]
+        log.debug(f"     Eastern boundary changed from {coordinates[2]} to {fixed_coordinates[2]}.")
+    
+    # Check and fix northern boundary
+    # and make sure it is in northern hemisphere
+    if coordinates[3] > maxextent[3] or coordinates[1] < 0:
+        fixed_coordinates[3] = maxextent[3]
+        log.debug(f"     Northern boundary changed from {coordinates[3]} to {fixed_coordinates[3]}.")
+    
+    # We have seen situations where listed extent is only a point!
+    # (Debateable whether this is correct or not)
+    # or westernmost coordinate is larger than east
+    # or northernmost coordinate is smaller than south
+    if coordinates[0] == coordinates[2] or coordinates[1] == coordinates[3] or coordinates[0] > coordinates[2] or coordinates[1] > coordinates[3]:
+        log.debug(f"     Suspect coordinates changed to MaxExtent")
+        fixed_coordinates = maxextent
+             
+    return fixed_coordinates
+
 
 def add_dataset_collections(keywords):
     # parse the provided keyword list and map found keywords to specific GeoData collections
@@ -183,7 +205,8 @@ def add_dataset_collections(keywords):
     return collection_list
 
 
-def json2gbl (d, createdBy, siteName, collections, prefix, postfix, skiplist, basedir):
+def json2gbl (d, createdBy, siteName, collections, prefix, postfix, skiplist, maxextent, basedir):
+    
     now = datetime.now(timezone.utc) # used to populate layer_modified_dt, which must be in UTC
 
     path = os.path.join(basedir,siteName)
@@ -241,9 +264,17 @@ def json2gbl (d, createdBy, siteName, collections, prefix, postfix, skiplist, ba
             access = dataset["accessLevel"].capitalize()
 
             # generate bounding box
-            coordinates = dataset["spatial"].split(',')
-            log.debug(coordinates)
-            envelope = "ENVELOPE(" + coordinates[0] + ", " +  coordinates[2] + ", " + coordinates[3] + ", " + coordinates[1] + ")"
+            maxextents_list = [float(value) for value in maxextent]
+            if spatial_coords.match(dataset.get("spatial", "")):
+                coordinates = dataset["spatial"].split(',')
+                coordinates_list = [float(value) for value in coordinates]         
+                valid_coordinates = validate_coordinates(coordinates_list, maxextents_list)            
+                envelope = f"ENVELOPE({valid_coordinates[0]},{valid_coordinates[2]},{valid_coordinates[3]},{valid_coordinates[1]})"
+            else:
+                # In the past we ignored datasets (mostly apps) that lacked a valid bounding box
+                # now including...
+                log.debug(f"          No spatial bounding box found{('spatial' in dataset and ' in ' + dataset['spatial']) or None}.")
+                envelope = f"ENVELOPE({maxextents_list[0]},{maxextents_list[2]},{maxextents_list[3]},{maxextents_list[1]})"
 
             # send the dataset keywords to a function that parses and returns a standardized list
             # of ISO Topic Keywords
@@ -330,15 +361,16 @@ def json2gbl (d, createdBy, siteName, collections, prefix, postfix, skiplist, ba
             with open(path + "\\" + outFileName + ".json", 'w') as jsonfile:
                 json.dump(gbl, jsonfile, indent=1)
         elif not validData:
-            log.info("********** Validity check failed on " + prefix + dataset["title"] + postfix)
+            log.info("     Validity check failed on " + prefix + dataset["title"] + postfix)
             log.info(msg)
         else:
-            log.info("---------- Skipping dataset: " + prefix + dataset["title"] + postfix)
+            log.info("     Skipping dataset: " + prefix + dataset["title"] + postfix)
 
 @t.retry(retry=t.retry_if_exception_type((Timeout,HTTPError,),),
          wait=t.wait_exponential_jitter(initial=3.0, max=10.0, jitter=1.0),
          stop=t.stop_after_attempt(5),
-         after=lambda x: log.info("retrying"))
+         after=lambda x: log.info("Retrying..."))
+         
 def getSiteJSON(siteURL, session):
     global report_target
     try:
@@ -355,62 +387,62 @@ def add_to_report(message, activate_report=True):
     print(message, file=report_target)
 
 log = None
-produce_report = True
+produce_report = False
 report_target = StringIO("")
 def main():
     global log, report_target, produce_report
-    '''Main body of script'''
-    ap = ArgumentParser(description='''Scans ESRI hubs for distributions''')
-    ap.add_argument('--config-file', default=r"C:\Users\lacy.ad\Documents\scripts\OpenData.yml", help="Path to configuration file")
-    ap.add_argument('--secrets-file', default=r"C:\Users\lacy.ad\Documents\scripts\secrets.yml", help="Path to secret configuration file! Do not commit to version control!")
+    
+    ap = ArgumentParser(description='''Scans ESRI hub sites for records''')
+    ap.add_argument('--config-file', default=r"OpenData.yml", help="Path to configuration file")
     args = ap.parse_args()
     session = requests.Session()
+    
     # YAML configuration file
     with open(args.config_file) as stream:
         theDict = yaml.load(stream)
-    # If a secrets file exists, insert its contents into theDict under 'secrets'
-    #   please make sure to name the file 'secrets.yml' wherever it might be placed, so .gitignore will ignore it
-    if os.path.exists(args.secrets_file):
-        with open(args.secrets_file) as stream:
-            theDict['secrets'] = yaml.load(stream)
+    
     log = logging.getLogger(__file__)
     handler = logging.StreamHandler(sys.stdout)
     handler.setFormatter(logging.Formatter('%(message)s'))
     log.addHandler(handler)
 
+    log.info("Starting ArcGIS Hub scanner....")
+    
     # default log level is info
-    levelname = theDict.get('log_level', 'INFO').upper()
-    print(levelname)
+    levelname = theDict.get('log_level', 'INFO').upper()   
     if levelname not in {'CRITICAL', 'FATAL', 'ERROR', 'WARN', 'WARNING', 'INFO', 'DEBUG', 'NOTSET'}:
         raise RuntimeError('configuration error: {levelname} is not a log level in Python')
     log.setLevel(getattr(logging, levelname))
+    log.info("Logging level is set to " + levelname)
 
     # Subfolders for scanned sites will be dumped here
-    output_basedir = theDict.get('output_basedir', r"C:\Users\lacy.ad\Documents\scripts\opendata")
+    output_basedir = theDict.get('output_basedir', r"d://scripts//opendata")
 
     # loop through each site in OpenData.yml and call json2gbl function
     for siteCode in theDict["Sites"]:
         site = theDict["Sites"][siteCode]
         log.info("\nProcessing Site: " + siteCode)
-        add_to_report(f"Site {siteCode}:", activate_report=False)
-        log.debug(site["Collections"])
-        log.debug(site["DatasetPrefix"])
-        log.debug(site["DatasetPostfix"])
+        add_to_report(f"\nSite {siteCode}:", activate_report=False)
         site_data = None
         try:
             site_data = getSiteJSON(site['SiteURL'], session)
         except Exception as e:
             log.info(str(e))
-            log.info("**** Site Failure, check URL for " + site["CreatedBy"] + "****")
-            add_to_report("Site Failure, check URL for " + site["CreatedBy"])
+            log.info("     Site Failure, check URL")
+            add_to_report("     Site Failure, check URL")
             continue
-        log.info(site["SiteURL"])
-        json2gbl(site_data, site["CreatedBy"], site["SiteName"], site["Collections"],site["DatasetPrefix"],site["DatasetPostfix"],site["SkipList"],output_basedir)
-    # If any errors that trigger reporting happened (right now just invalid URLs)
-    # produce any configured reports
-    if 'report_file' in theDict and produce_report:
-        with open(theDict['report_file'], 'w') as file:
+        log.debug(site["SiteURL"])
+        json2gbl(site_data, site["CreatedBy"], site["SiteName"], site["Collections"],site["DatasetPrefix"],site["DatasetPostfix"],site["SkipList"],site["MaxExtent"].split(','),output_basedir)
+    
+    # insert ingest here?
+    
+    # Produce and send report if triggered
+    if 'report_folder' in theDict and produce_report:
+        now = datetime.now().strftime("%Y-%m-%d-%H%M")
+        report_file = f"{theDict['report_folder']}scanlog_{now}.txt"
+        with open(report_file, 'w') as file:
             file.write(report_target.getvalue())
+   
     if 'report_email' in theDict and produce_report:
         port = theDict['report_email'].get('port', 25)
         smtp_server = theDict['report_email']['smtp_server']
@@ -421,7 +453,6 @@ def main():
 
         with smtplib.SMTP(smtp_server, port) as server:
             server.sendmail(sender_email, receiver_email, message)
-
 
 if __name__ == '__main__':
     main()
