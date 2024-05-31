@@ -4,14 +4,15 @@
 #
 #
 
-output_basedir: 'd://scripts/opendata//'
-report_folder: 'd://scripts//logs//'
+output_basedir: 'd:\scripts\opendata\'
+report_folder: 'd:\scripts\logs\'
 log_level: 'INFO'
 
 # Solr Processing
 Solr:
-    solr_url: ''
+    solr_url: 'https://geodata-dev.shc.wisc.edu/solr/geodata-core/'
     solr_ingest: true
+    collection: 'Wisconsin Open Data Sites'
 
 # Email settings
 report_email:

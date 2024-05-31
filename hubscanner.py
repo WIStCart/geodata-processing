@@ -1,5 +1,5 @@
 """
-esriscanner.py
+hubscanner.py
 
 Ben Segal and Jim Lacy
 Wisconsin State Cartographer's Office
@@ -213,11 +213,6 @@ def json2gbl (d, createdBy, siteName, collections, prefix, postfix, skiplist, ma
     now = datetime.now(timezone.utc) # used to populate layer_modified_dt, which must be in UTC
 
     path = os.path.join(basedir,siteName)
-
-    # if site folder already exists, delete
-    # we start fresh each run
-    if (os.path.isdir(path) == True):
-        shutil.rmtree(path)
 
     # create folder to hold json output files
     os.makedirs(path)
@@ -457,18 +452,24 @@ def main():
     handler.setFormatter(logging.Formatter('%(message)s'))
     log.addHandler(handler)
     
-    log.info("Starting ArcGIS Hub scanner....")
-    
     # default log level is info
     levelname = theDict.get('log_level', 'INFO').upper()   
     if levelname not in {'CRITICAL', 'FATAL', 'ERROR', 'WARN', 'WARNING', 'INFO', 'DEBUG', 'NOTSET'}:
         raise RuntimeError('configuration error: {levelname} is not a log level in Python')
     log.setLevel(getattr(logging, levelname))
-    log.info("Logging level is set to " + levelname)
+    
+    log.info("\nStarting ArcGIS Hub scanner....")
+    log.info("\nLogging level is set to " + levelname)
 
     # Subfolders for scanned sites will be dumped here
-    output_basedir = theDict.get('output_basedir', r"d://scripts//opendata")
+    output_basedir = theDict.get('output_basedir')
 
+    # Clean out existing files from output folder
+    sub_folders_pattern = f'{output_basedir}*\\'
+    sub_folders_list = glob.glob(sub_folders_pattern)
+    for sub_folder in sub_folders_list:
+        shutil.rmtree(sub_folder)
+    
     # loop through each site in OpenData.yml and call json2gbl function
     for siteCode in theDict["Sites"]:
         site = theDict["Sites"][siteCode]
@@ -487,15 +488,15 @@ def main():
     
     # Should we push the records to Solr?
     if theDict["Solr"]["solr_ingest"]:
-        log.info("Ready to ingest records...")      
-        auth = HTTPBasicAuth(theDict["Solr"]["solr_username"],theDict["Solr"]["solr_password"])
+        log.info("\nReady to ingest records...")      
+        auth = HTTPBasicAuth(theDict["solr_username"],theDict["solr_password"])
         solr_url = theDict["Solr"]["solr_url"]
         solr = pysolr.Solr(solr_url, always_commit=True, timeout=30, auth=auth) 
         collection = theDict["Solr"]["collection"]
         log.info(f"\nDeleting existing {collection}...")
         delete_collection(solr,collection,solr_url)
         json_data = read_json_files(output_basedir)
-        log.info("Pushing new data to Solr...") 
+        log.info("\nPushing new data to Solr...") 
         add_collection(solr,json_data,solr_url)
         
     # Produce and send report if triggered
