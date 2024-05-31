@@ -404,9 +404,10 @@ def add_collection(solr,data,solr_url):
     except pysolr.SolrError as e:
         log.info("\n\n*********************")
         log.info("Solr Error: {e}".format(e=e))
+        add_to_report("Solr Error: {e}".format(e=e))
         log.info("*********************\n")
         add_to_report("Add Collection to Solr:")
-        add_to_report(f"     **** Can't reach Solr server {solr_url}\n")
+        add_to_report(f"     **** Solr error: {solr_url}\n")
         return False
 
 def delete_collection(solr,collection,solr_url):
@@ -416,9 +417,10 @@ def delete_collection(solr,collection,solr_url):
     except pysolr.SolrError as e:
         log.info("\n\n*********************")
         log.info("Solr Error: {e}".format(e=e))
+        add_to_report("Solr Error: {e}".format(e=e))
         log.info("*********************\n")
         add_to_report("\nDelete Solr Collection:")
-        add_to_report(f"     **** Can't reach Solr server {solr_url}\n")
+        add_to_report(f"     **** Solr error: {solr_url}\n")
         return False
         
 def add_to_report(message, activate_report=True):
