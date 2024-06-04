@@ -4,13 +4,13 @@
 #
 #
 
-output_basedir: 'd:\scripts\opendata\'
-report_folder: 'd:\scripts\logs\'
+output_basedir: 'd:\hubs\json\'
+report_folder: 'd:\hubs\logs\'
 log_level: "INFO"
 
 # Solr Processing
 Solr:
-    solr_url: 'https://geodata-dev.shc.wisc.edu/solr/geodata-core/'
+    solr_url: 'https://geodata.wisc.edu/solr/geodata-core/'
     solr_ingest: true
     collection: "Wisconsin Open Data Sites"
 
@@ -25,7 +25,8 @@ report_email:
 # Remember: MaxExtent is defined as W,S,E,N
 
 Sites:
- # Wisconsin State Agencies
+  # Wisconsin State Agencies
+  # Skiplists for agencies last updated June 3, 2024
   DATCP_OpenData:
     MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
@@ -47,7 +48,10 @@ Sites:
     SiteName: "DHS"
     DatasetPrefix: ""
     DatasetPostfix: ", WI DHS"
-    SkipList: ""
+    SkipList:
+      - UUID: "DHS-ca921d70bdd84ae8bc84cd09abd822d7"
+      - UUID: "DHS-00883495714c42a9be53b76b24300c8e"
+      - UUID: "DHS-200036084844418bb3119d963cd7d98c"    
   DOT_OpenData:
     MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
@@ -96,6 +100,12 @@ Sites:
       - UUID: "WIDNR-fd4d0c43abc04b4ab915586d9a0e89dd"
       - UUID: "WIDNR-4c81d81ceb444aec8b4ac5b74768d4c5"
       - UUID: "WIDNR-b6cff8bd00304b73bb1d32f7678ecf34"
+      - UUID: "WIDNR-4506324090d7496da868c4a025c56cf6"
+      - UUID: "WIDNR-9cff1d04434740dcb468941ae0a70d90"
+      - UUID: "WIDNR-bf33290f978e43d5ab1665d78fab34e0"
+      - UUID: "WIDNR-8d68ad46853d48dcb492318de5c9ebd0"
+      - UUID: "WIDNR-d48ca6f0c7ea4da9ad40d3ccc1643568"
+      - UUID: "WIDNR-765da338772b402a8c6a31a949616f6e"    
   WEM_OpenData:
     MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
@@ -120,6 +130,7 @@ Sites:
     SkipList:
       - UUID: "DPI-d7543bf1a4cf4fb6a06c3c75b0eeecc8"
   # Cities and Villages
+  # Skiplists for cities and villages last updated June 3, 2024
   Fitchburg_OpenData:
     MaxExtent: "-89.4915584,42.9388349,-89.3563747,43.0431665"
     Collections:
@@ -130,16 +141,17 @@ Sites:
     DatasetPrefix: ""
     DatasetPostfix: ", City of Fitchburg"
     SkipList: ""
-  Greenville_OpenData:
-    MaxExtent: "-88.6255828,44.2422574,-88.4916606,44.3345059"
-    Collections:
-      - CollectionName: "Wisconsin Open Data Sites"
-    CreatedBy: "Village of Greenville"
-    SiteURL: "https://village-of-greenville-greenville-wi.hub.arcgis.com/api/feed/dcat-us/1.1.json"
-    SiteName: "VillageOfGreenville"
-    DatasetPrefix: ""
-    DatasetPostfix: ", Village of Greenvile"
-    SkipList: ""
+# Greenville currently only contains links to documents, no data
+#  Greenville_OpenData:
+#    MaxExtent: "-88.6255828,44.2422574,-88.4916606,44.3345059"
+#    Collections:
+#      - CollectionName: "Wisconsin Open Data Sites"
+#    CreatedBy: "Village of Greenville"
+#    SiteURL: "https://village-of-greenville-greenville-wi.hub.arcgis.com/api/feed/dcat-us/1.1.json"
+#    SiteName: "VillageOfGreenville"
+#    DatasetPrefix: ""
+#    DatasetPostfix: ", Village of Greenvile"
+#    SkipList:""
   Madison_OpenData:
     MaxExtent: "-89.5846878,42.9977468,-89.2248210,43.1785382"
     Collections:
@@ -150,7 +162,7 @@ Sites:
     DatasetPrefix: ""
     DatasetPostfix: ", City of Madison"
     SkipList:
-      - UUID: "cityofmadison-city-calendar-of-events"
+      - UUID: "CityOfMadison-9707ce85a9554be89e46f9fd2a4fec333"
   CityOfWaukesha_OpenData:
     MaxExtent: "-88.3142881,42.9370664,-88.1709791,43.0649399"
     Collections:
@@ -183,6 +195,7 @@ Sites:
     DatasetPostfix: ", City of Sun Prairie"
     SkipList: ""
   # RPCs
+  # Skiplists for RPCs last updated June 3, 2024
   CapitalRPC_OpenData:
     MaxExtent: "-89.9055054,42.8463041,-88.9745690,43.3213091"
     Collections:
@@ -233,6 +246,7 @@ Sites:
       - UUID: "CARPC-86de95d4e0244cba80f0fa2c9403a7b2"
       - UUID: "CARPC-8b3b470883a744aeb60e5fff0a319ce7"
       - UUID: "CARPC-d8855ee4d3d74413babfb0f41203b168"
+      - UUID: "CARPC-00719e989d25460bbbdc6d336e281026"
   ECWRPC_OpenData:
     MaxExtent: "-89.7053127,43.5487825,-87.9345571,45.2174304"
     Collections:
@@ -253,7 +267,8 @@ Sites:
     DatasetPrefix: ""
     DatasetPostfix: ", SEWRPC"
     SkipList: ""
-# Counties
+  # Counties
+  # Skiplists for RPCs last updated June 3, 2024
   AdamsCounty_OpenData:
     MaxExtent: "-89.90239979,43.6426049,-89.59968022,44.24944132"
     Collections:
@@ -308,6 +323,8 @@ Sites:
       - UUID: "ColumbiaCounty-931d892ac7a843d7ba29d085e0433465"
       - UUID: "ColumbiaCounty-413fd05bbd7342f5991d5ec96f4f8b18"
       - UUID: "ColumbiaCounty-aab054ab883c4a4094c72e949566ad40"
+      - UUID: "ColumbiaCounty-3d66e986942348698ae68f130ce949f42"
+      - UUID: "ColumbiaCounty-9539d56dd6534e949de742e70d44b96a0"
   EauClaire_OpenData:
     MaxExtent: "-91.65035011,44.59668005,-90.92226075,44.8577283"
     Collections:
@@ -317,14 +334,7 @@ Sites:
     SiteName: "EauClaireCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Eau Claire County"
-    SkipList:
-      - UUID: "termsofuse"
-      - UUID: "open-data"
-      - UUID: "maps-apps"
-      - UUID: "stories"
-      - UUID: "EauClaireCounty-ab478acb9f074747bfe288660cfe13a6_0"
-      - UUID: "eccounty-public-notification-1"
-      - UUID: "eccounty-wg-extreme"
+    SkipList: ""
   Jackson_OpenData:
     MaxExtent: "-91.16558473,44.15511218,-90.31257148,44.59691485"
     Collections:
@@ -345,9 +355,7 @@ Sites:
     SiteName: "KenoshaCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Kenosha County"
-    SkipList:
-      - UUID: "kenoshacounty-citizenreportsrprtr-new"
-      - UUID: "kenoshacounty-public-notification"
+    SkipList: ""
   MilwaukeeCounty_OpenData:
     MaxExtent: "-88.06337065,42.84200375,-87.82616684,43.19211554"
     Collections:
@@ -400,7 +408,14 @@ Sites:
     SiteName: "SheboyganCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Sheboygan County"
-    SkipList: ""
+    SkipList:
+      - UUID: "SheboyganCounty-e52ed4bdd26d40c89a482fab7a249aaf"
+      - UUID: "SheboyganCounty-ff751a4250824a0aa65a29d1ac3add43"
+      - UUID: "SheboyganCounty-eec04509bf8c45d4b493b841aa5908e7"
+      - UUID: "SheboyganCounty-5c46afb16574469880656438923bce8d"
+      - UUID: "SheboyganCounty-7fe9c7d5d1724b879b92fc5938e8cbcc"
+      - UUID: "SheboyganCounty-36ddd9860cdc4e9a8b1c7d0161b4c8aa"
+      - UUID: "SheboyganCounty-9ef5e1efc66c488291a0b009aa5a5019"
   StCroixCounty_OpenData:
     MaxExtent: "-92.76319163,44.85778519,-92.1363378,45.2063148"
     Collections:
@@ -421,7 +436,7 @@ Sites:
     DatasetPrefix: ""
     DatasetPostfix: ", Sauk County"
     SkipList:
-      - UUID: "saukgis-sauk-county-open-data-repository"
+      - UUID: "SaukCounty-b4b295c1f62840a2ae28c3811ac6bcce"
   TrempealeauCounty_OpenData:
     MaxExtent: "-91.55904403,44.02537822,-91.16558473,44.59691485"
     Collections:
@@ -431,7 +446,8 @@ Sites:
     SiteName: "TrempealeauCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Trempealeau County"
-    SkipList: ""
+    SkipList: 
+      - UUID: "TrempealeauCounty-afc1effa8b5c4a98a0f35ca54e61d018"
   VilasCounty_OpenData:
     MaxExtent: "-90.04322049,45.89714105,-88.9326508,46.07351613"
     Collections:
@@ -442,10 +458,8 @@ Sites:
     DatasetPrefix: ""
     DatasetPostfix: ", Vilas County"
     SkipList:
-      - UUID: "vilas-usda-nrcs-geospatial-data-gateway"
-      - UUID: "vilas-sco-wi-aerial-photography-catalog"
-      - UUID: "vilas-vilas-county-geodata-hub"
       - UUID: "VilasCounty-fb3691c2030449f79fdd622fd1f7a14b"
+      - UUID: "VilasCounty-08a1bcad6ffc4d6eaacbb5382436986a"
   WashingtonCounty_OpenData:
     MaxExtent: "-88.4179916,43.19471212,-88.04056576,43.54245289"
     Collections:

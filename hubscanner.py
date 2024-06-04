@@ -316,8 +316,9 @@ def json2gbl (d, createdBy, siteName, collections, prefix, postfix, skiplist, ma
                             elif ('MapServer') in url:
                                 references += '\"urn:x-esri:serviceType:ArcGIS#DynamicMapLayer\":\"'  + url +  '\",'
                                 log.debug("Found MapServer Layer")
-                    elif (refs["format"] == "ZIP" and url != "invalid"):
-                        references += '\"http://schema.org/downloadUrl\":\"' + url + '\",'
+                    # temporarily removing download links, which are currently unreliable
+                    #elif (refs["format"] == "ZIP" and url != "invalid"):
+                    #    references += '\"http://schema.org/downloadUrl\":\"' + url + '\",'
             references += "}"
             references = references.replace(",}", "}")
             dc_creator_sm = []
@@ -493,7 +494,7 @@ def main():
         log.info("\nReady to ingest records...")      
         auth = HTTPBasicAuth(theDict["solr_username"],theDict["solr_password"])
         solr_url = theDict["Solr"]["solr_url"]
-        solr = pysolr.Solr(solr_url, always_commit=True, timeout=30, auth=auth) 
+        solr = pysolr.Solr(solr_url, always_commit=True, timeout=180, auth=auth) 
         collection = theDict["Solr"]["collection"]
         log.info(f"\nDeleting existing {collection}...")
         delete_collection(solr,collection,solr_url)
