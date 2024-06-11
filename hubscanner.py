@@ -1,5 +1,5 @@
 """
-esriscanner.py
+hubscanner.py
 
 Ben Segal and Jim Lacy
 Wisconsin State Cartographer's Office
@@ -19,12 +19,15 @@ import shutil
 import smtplib
 import ssl
 import sys
+import pysolr
+import glob
 
 from argparse import ArgumentParser, FileType
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from io import StringIO
 from urllib.parse import urlparse, parse_qs
+from requests.auth import HTTPBasicAuth
 
 # External python libraries follow
 # requires additional installation
@@ -211,11 +214,6 @@ def json2gbl (d, createdBy, siteName, collections, prefix, postfix, skiplist, ma
 
     path = os.path.join(basedir,siteName)
 
-    # if site folder already exists, delete
-    # we start fresh each run
-    if (os.path.isdir(path) == True):
-        shutil.rmtree(path)
-
     # create folder to hold json output files
     os.makedirs(path)
 
@@ -318,8 +316,9 @@ def json2gbl (d, createdBy, siteName, collections, prefix, postfix, skiplist, ma
                             elif ('MapServer') in url:
                                 references += '\"urn:x-esri:serviceType:ArcGIS#DynamicMapLayer\":\"'  + url +  '\",'
                                 log.debug("Found MapServer Layer")
-                    elif (refs["format"] == "ZIP" and url != "invalid"):
-                        references += '\"http://schema.org/downloadUrl\":\"' + url + '\",'
+                    # temporarily removing download links, which are currently unreliable
+                    #elif (refs["format"] == "ZIP" and url != "invalid"):
+                    #    references += '\"http://schema.org/downloadUrl\":\"' + url + '\",'
             references += "}"
             references = references.replace(",}", "}")
             dc_creator_sm = []
@@ -380,6 +379,51 @@ def getSiteJSON(siteURL, session):
     resp.raise_for_status()
     return resp.json()
 
+def read_json_files(folder_path):
+    global report_target
+    json_pattern = os.path.join(folder_path, '**', '*.json')
+    file_list = glob.glob(json_pattern, recursive=True)
+    all_json_data = [] #collect all json data
+
+    for json_filename in file_list:
+        try:
+            with open(json_filename, 'r') as f:
+                json_data = json.load(f)
+                all_json_data.append(json_data)  # Append data to the list
+        except (ValueError, FileNotFoundError) as e:
+            log.info(f"Error processing {json_filename}: {e}")   
+    return(all_json_data)
+
+def escape_query(raw_query):
+    # Uncertain if this is really necessary
+    return raw_query.replace("'", "\'")
+
+def add_collection(solr,data,solr_url):
+    try:
+        solr.add(data)
+        return True
+    except pysolr.SolrError as e:
+        log.info("\n\n*********************")
+        log.info("Solr Error: {e}".format(e=e))
+        add_to_report("Solr Error: {e}".format(e=e))
+        log.info("*********************\n")
+        add_to_report("Add Collection to Solr:")
+        add_to_report(f"     **** Solr error: {solr_url}\n")
+        return False
+
+def delete_collection(solr,collection,solr_url):
+    try:
+        solr.delete(q=escape_query('dct_isPartOf_sm:"{}"'.format(collection)))
+        return True
+    except pysolr.SolrError as e:
+        log.info("\n\n*********************")
+        log.info("Solr Error: {e}".format(e=e))
+        add_to_report("Solr Error: {e}".format(e=e))
+        log.info("*********************\n")
+        add_to_report("\nDelete Solr Collection:")
+        add_to_report(f"     **** Solr error: {solr_url}\n")
+        return False
+        
 def add_to_report(message, activate_report=True):
     global produce_report
     if activate_report:
@@ -391,9 +435,10 @@ produce_report = False
 report_target = StringIO("")
 def main():
     global log, report_target, produce_report
-    
+     
     ap = ArgumentParser(description='''Scans ESRI hub sites for records''')
     ap.add_argument('--config-file', default=r"OpenData.yml", help="Path to configuration file")
+    ap.add_argument('--secrets-file', default=r"secrets.yml", help="Path to secret configuration file! Do not commit to version control!")
     args = ap.parse_args()
     session = requests.Session()
     
@@ -401,23 +446,33 @@ def main():
     with open(args.config_file) as stream:
         theDict = yaml.load(stream)
     
+    if os.path.exists(args.secrets_file):
+        with open(args.secrets_file) as stream:
+            theDict |= yaml.load(stream)
+            
     log = logging.getLogger(__file__)
     handler = logging.StreamHandler(sys.stdout)
     handler.setFormatter(logging.Formatter('%(message)s'))
     log.addHandler(handler)
-
-    log.info("Starting ArcGIS Hub scanner....")
     
     # default log level is info
     levelname = theDict.get('log_level', 'INFO').upper()   
     if levelname not in {'CRITICAL', 'FATAL', 'ERROR', 'WARN', 'WARNING', 'INFO', 'DEBUG', 'NOTSET'}:
         raise RuntimeError('configuration error: {levelname} is not a log level in Python')
     log.setLevel(getattr(logging, levelname))
-    log.info("Logging level is set to " + levelname)
+    
+    log.info("\nStarting ArcGIS Hub scanner....")
+    log.info("\nLogging level is set to " + levelname)
 
     # Subfolders for scanned sites will be dumped here
-    output_basedir = theDict.get('output_basedir', r"d://scripts//opendata")
+    output_basedir = theDict.get('output_basedir')
 
+    # Clean out existing files from output folder
+    sub_folders_pattern = f'{output_basedir}*\\'
+    sub_folders_list = glob.glob(sub_folders_pattern)
+    for sub_folder in sub_folders_list:
+        shutil.rmtree(sub_folder)
+    
     # loop through each site in OpenData.yml and call json2gbl function
     for siteCode in theDict["Sites"]:
         site = theDict["Sites"][siteCode]
@@ -434,8 +489,19 @@ def main():
         log.debug(site["SiteURL"])
         json2gbl(site_data, site["CreatedBy"], site["SiteName"], site["Collections"],site["DatasetPrefix"],site["DatasetPostfix"],site["SkipList"],site["MaxExtent"].split(','),output_basedir)
     
-    # insert ingest here?
-    
+    # Should we push the records to Solr?
+    if theDict["Solr"]["solr_ingest"]:
+        log.info("\nReady to ingest records...")      
+        auth = HTTPBasicAuth(theDict["solr_username"],theDict["solr_password"])
+        solr_url = theDict["Solr"]["solr_url"]
+        solr = pysolr.Solr(solr_url, always_commit=True, timeout=180, auth=auth) 
+        collection = theDict["Solr"]["collection"]
+        log.info(f"\nDeleting existing {collection}...")
+        delete_collection(solr,collection,solr_url)
+        json_data = read_json_files(output_basedir)
+        log.info("\nPushing new data to Solr...") 
+        add_collection(solr,json_data,solr_url)
+        
     # Produce and send report if triggered
     if 'report_folder' in theDict and produce_report:
         now = datetime.now().strftime("%Y-%m-%d-%H%M")
