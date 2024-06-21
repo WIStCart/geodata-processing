@@ -9,7 +9,7 @@
 
 
 import argparse
-from indextools import coordinate_precicison
+from indextools import coordinate_precision
 
 
 def parse_arguments():
@@ -39,4 +39,4 @@ if __name__ == '__main__':
     args = parse_arguments()
 
     # Run function
-    coordinate_precicison(args.inPath, args.outPath, args.precision, args.indentation, args.skip_feature, args.verbose)
+    coordinate_precision(args.inPath, args.outPath, args.precision, args.indentation, args.skip_feature, args.verbose)
