@@ -2,9 +2,10 @@
 #------------------------------------------------------------------------------
 # indextools.py
 # Tools for indexed datasets used in geodata@wisc
-# Hayden Elza (hayden.elza@gmail.com)
+# Hayden Elza (elza@wisc.edu)
+# Jim Lacy (lacy@wisc.edu)
 # Created: 2022-04-21
-# Modified: 2022-06-21
+# Modified: 2024-06-21
 #------------------------------------------------------------------------------
 
 
@@ -12,8 +13,9 @@ import os
 import logging, datetime
 import json
 import requests
-
-
+from requests.exceptions import *
+from urllib.parse import urlparse
+      
 class logger:
     
     def __init__(self, filename, level=logging.INFO, filemode='w'):
@@ -100,7 +102,7 @@ def reduce_precision(dataset, out_path, precision, indentation, skip_feature, ve
 
     return
 
-def coordinate_precicison(in_path, out_path, precision, indentation, skip_feature, verbose):
+def coordinate_precision(in_path, out_path, precision, indentation, skip_feature, verbose):
 
     # Start log
     log = logger('coordinate_precision.log')
@@ -131,7 +133,7 @@ def check_urls(search_path, verbose):
 
     # Datasets to check
     datasets = get_datasets_list(search_path)
-
+        
     # For each dataset
     for dataset in datasets:
 
@@ -143,21 +145,30 @@ def check_urls(search_path, verbose):
         urls = []
         for feature in data['features']:
             urls.append(feature['properties']['downloadUrl'])
-
+        
+        # Create a session for this check.  This seems to avoid creating security/DDOS concerns 
+        # by re-using the same connection.
+        session = requests.Session()
+               
         # Check each url
-        for url in urls:
-
-            # HEAD request (faster than GET request as we are ignoring the body)
-            response = requests.head(url)
-
-            # If good skip
-            if response.status_code == 200: 
-                if verbose: logging.info("{} {} 200".format(os.path.basename(dataset), url))
-                else: pass
-
-            # If not good, add warning to log
-            else: logging.warning("{} {} {}".format(os.path.basename(dataset), url, response.status_code))
-
+        print(f"Checking links in {os.path.basename(dataset)}...")
+        logging.info(f"Checking links in {os.path.basename(dataset)}...")
+        
+        for url in urls:           
+            try:
+                response = session.head(url, timeout=5) 
+                if response.status_code == 200:
+                    pass
+                else: 
+                    logging.warning(f"Not Found: {url}")
+                    print(f"Not Found: {url}")
+            except requests.RequestException as e:
+                # exception will be thrown if the server can't be reached
+                print(f"Error connecting to server {urlparse(url).netloc}")
+                logging.info(f"Error connecting to server {urlparse(url).netloc}")
+        
+        session.close()
+    
     # End log
     log.end()
 
@@ -219,26 +230,34 @@ def remove_missing_tiles(in_path, out_path, indentation, verbose):
 
         # Create a copy of the data to edit
         temp_data = deepcopy(data)
-
-        # Iterate through each feature of data
-        for feature in data['features']:
-
-            url = feature['properties']['downloadUrl']
-
-            # Check downloadUrl of each feature; HEAD request (faster than GET request as we are ignoring the body)
-            response = requests.head(url)
-
-            # If not good, add warning to log and remove from geojson
-            if response.status_code == 404:
-                temp_data['features'].remove(feature)
-                logging.info("{} {} {} >>> Removed from index.".format(os.path.basename(dataset), url, response.status_code))
-
-            # If good skip
-            else: 
-                if verbose and response.status_code == 200: logging.info("{} {} {}".format(os.path.basename(dataset), url, response.status_code))
-                if response.status_code != 200: logging.warning("{} {} {}".format(os.path.basename(dataset), url, response.status_code))
-                else: pass
         
+        logging.info(f"Processing {os.path.basename(dataset)}...")
+        print(f"Processing {os.path.basename(dataset)}...")
+        
+        # Create a session for this check.  This seems to avoid creating security/DDOS concerns 
+        # by re-using the same connection.
+        session = requests.Session()
+        
+        # Iterate through each feature of data
+        for feature in data['features']:                
+            url = feature['properties']['downloadUrl']           
+            try:
+                # Check downloadUrl of each feature; HEAD request (faster than GET request as we are ignoring the body)
+                response = session.head(url, timeout=5) 
+                       
+                # If not good, give warning and remove from geojson
+                # This assumes the user has already run a url check, and is ready to pull tiles that give a 404!
+                if response.status_code == 404:
+                    temp_data['features'].remove(feature)
+                    logging.info(f"{url} >>> Tile removed from GeoJSON index.")
+                    print(f"{url} >>> Tile removed from GeoJSON index.")
+            except requests.RequestException as e:
+                # exception will be thrown if the server can't be reached
+                print(f"Error connecting to server {urlparse(url).netloc}")
+                logging.info(f"Error connecting to server {urlparse(url).netloc}")
+         
+        session.close()
+            
         # Save updated index geojson to file
         with open(os.path.join(out_path, os.path.basename(dataset)), 'w') as f:
             json.dump(temp_data, f, indent=indentation)
