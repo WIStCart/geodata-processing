@@ -316,8 +316,9 @@ def json2gbl (d, createdBy, siteName, collections, prefix, postfix, skiplist, ma
                             elif ('MapServer') in url:
                                 references += '\"urn:x-esri:serviceType:ArcGIS#DynamicMapLayer\":\"'  + url +  '\",'
                                 log.debug("Found MapServer Layer")
-                    # temporarily removing download links, which are currently unreliable
-                    #elif (refs["format"] == "ZIP" and url != "invalid"):
+                    # Removing download links which are unreliable as of June 2024 due to how
+                    # Esri has chosen to implement the Esri DCAT-US standard. 
+                    # elif (refs["format"] == "ZIP" and url != "invalid"):
                     #    references += '\"http://schema.org/downloadUrl\":\"' + url + '\",'
             references += "}"
             references = references.replace(",}", "}")
@@ -351,7 +352,7 @@ def json2gbl (d, createdBy, siteName, collections, prefix, postfix, skiplist, ma
                 "solr_year_i": int(modifiedDate[0:4]),
                 "layer_modified_dt": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
                 "dct_references_s": references,
-                "uw_notice_s": "This dataset was automatically cataloged from the author's Open Data Portal. In some cases, publication year and bounding coordinates shown here may be incorrect. Additional download formats may be available on the author's website. Please check the 'More details at' link for additional information.",
+                "uw_notice_s": "This dataset was automatically cataloged from the author's Open Data Portal. In some cases, publication year and bounding coordinates shown here may be incorrect. Please check the 'More details at' link for additional information including download options.",
             }
 
             outFileName = identifier
