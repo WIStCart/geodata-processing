@@ -56,8 +56,9 @@ def get_datasets_list(in_path):
             # If geojson, add dataset to list
             if extension == ".geojson":
                 datasets.append(f)
-
-    return datasets
+    
+    datasets_sorted = sorted(datasets)    
+    return datasets_sorted
 
 def reduce_precision(dataset, out_path, precision, indentation, skip_feature, verbose):
 
