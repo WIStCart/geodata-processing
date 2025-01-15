@@ -11,6 +11,7 @@ log_level: "INFO"
 # Solr Processing
 Solr:
     solr_url: 'https://geodata.wisc.edu/solr/geodata-core/'
+    #solr_url: 'https://geodata-prod-new-2.sco.wisc.edu/solr/geodata-core/'
     solr_ingest: true
     collection: "Wisconsin Open Data Sites"
 
@@ -22,11 +23,32 @@ report_email:
   email_subject: "Error detected during ArcGIS Hub record scan"
   port: 25 
 
-# Remember: MaxExtent is defined as W,S,E,N
+# Remember: MaxExtent is defined as W,S,E,N aka minx,miny,maxx,maxy
 
 Sites:
   # Wisconsin State Agencies
   # Skiplists for agencies last updated June 3, 2024
+  WiDNR_OpenData:
+    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
+      - CollectionName: "Wisconsin State Agencies"
+    CreatedBy: "Wisconsin Department of Natural Resources"
+    SiteURL: "http://data-wi-dnr.opendata.arcgis.com/api/feed/dcat-us/1.1.json"
+    SiteName: "WIDNR"
+    DatasetPrefix: ""
+    DatasetPostfix: ", WI DNR"
+    SkipList:
+      - UUID: "WIDNR-e1e89ae505594459a46407f1daf4ad5d"
+      - UUID: "WIDNR-fd4d0c43abc04b4ab915586d9a0e89dd"
+      - UUID: "WIDNR-4c81d81ceb444aec8b4ac5b74768d4c5"
+      - UUID: "WIDNR-b6cff8bd00304b73bb1d32f7678ecf34"
+      - UUID: "WIDNR-4506324090d7496da868c4a025c56cf6"
+      - UUID: "WIDNR-9cff1d04434740dcb468941ae0a70d90"
+      - UUID: "WIDNR-bf33290f978e43d5ab1665d78fab34e0"
+      - UUID: "WIDNR-8d68ad46853d48dcb492318de5c9ebd0"
+      - UUID: "WIDNR-d48ca6f0c7ea4da9ad40d3ccc1643568"
+      - UUID: "WIDNR-765da338772b402a8c6a31a949616f6e"  
   DATCP_OpenData:
     MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
@@ -51,7 +73,8 @@ Sites:
     SkipList:
       - UUID: "DHS-ca921d70bdd84ae8bc84cd09abd822d7"
       - UUID: "DHS-00883495714c42a9be53b76b24300c8e"
-      - UUID: "DHS-200036084844418bb3119d963cd7d98c"    
+      - UUID: "DHS-200036084844418bb3119d963cd7d98c"  
+      - UUID: "DHS-ddd1345fbccd4fff9ba1dbb2d9949c790"   
   DOT_OpenData:
     MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
@@ -84,28 +107,7 @@ Sites:
     SiteName: "WIOOR"
     DatasetPrefix: ""
     DatasetPostfix: ", WI Office of Outdoor Recreation"
-    SkipList: ""
-  WiDNR_OpenData:
-    MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
-    Collections:
-      - CollectionName: "Wisconsin Open Data Sites"
-      - CollectionName: "Wisconsin State Agencies"
-    CreatedBy: "Wisconsin Department of Natural Resources"
-    SiteURL: "http://data-wi-dnr.opendata.arcgis.com/api/feed/dcat-us/1.1.json"
-    SiteName: "WIDNR"
-    DatasetPrefix: ""
-    DatasetPostfix: ", WI DNR"
-    SkipList:
-      - UUID: "WIDNR-e1e89ae505594459a46407f1daf4ad5d"
-      - UUID: "WIDNR-fd4d0c43abc04b4ab915586d9a0e89dd"
-      - UUID: "WIDNR-4c81d81ceb444aec8b4ac5b74768d4c5"
-      - UUID: "WIDNR-b6cff8bd00304b73bb1d32f7678ecf34"
-      - UUID: "WIDNR-4506324090d7496da868c4a025c56cf6"
-      - UUID: "WIDNR-9cff1d04434740dcb468941ae0a70d90"
-      - UUID: "WIDNR-bf33290f978e43d5ab1665d78fab34e0"
-      - UUID: "WIDNR-8d68ad46853d48dcb492318de5c9ebd0"
-      - UUID: "WIDNR-d48ca6f0c7ea4da9ad40d3ccc1643568"
-      - UUID: "WIDNR-765da338772b402a8c6a31a949616f6e"    
+    SkipList: "" 
   WEM_OpenData:
     MaxExtent: "-92.963806,42.456089,-86.708961,47.456089"
     Collections:
@@ -141,17 +143,6 @@ Sites:
     DatasetPrefix: ""
     DatasetPostfix: ", City of Fitchburg"
     SkipList: ""
-# Greenville currently only contains links to documents, no data
-#  Greenville_OpenData:
-#    MaxExtent: "-88.6255828,44.2422574,-88.4916606,44.3345059"
-#    Collections:
-#      - CollectionName: "Wisconsin Open Data Sites"
-#    CreatedBy: "Village of Greenville"
-#    SiteURL: "https://village-of-greenville-greenville-wi.hub.arcgis.com/api/feed/dcat-us/1.1.json"
-#    SiteName: "VillageOfGreenville"
-#    DatasetPrefix: ""
-#    DatasetPostfix: ", Village of Greenvile"
-#    SkipList:""
   Madison_OpenData:
     MaxExtent: "-89.5846878,42.9977468,-89.2248210,43.1785382"
     Collections:
@@ -356,6 +347,17 @@ Sites:
     DatasetPrefix: ""
     DatasetPostfix: ", Kenosha County"
     SkipList: ""
+  Kewaunee_OpenData:
+    MaxExtent: "-87.774447,44.319692,-87.376468,44.683298"
+    Collections:
+      - CollectionName: "Wisconsin Open Data Sites"
+      - CollectionName: "Coastal"
+    CreatedBy: "Kewaunee County"
+    SiteURL: "https://kewaunee-county-open-data-portal-kewauneeco.hub.arcgis.com/api/feed/dcat-us/1.1.json"
+    SiteName: "KewauneeCounty"
+    DatasetPrefix: ""
+    DatasetPostfix: ", Kewaunee County"
+    SkipList: ""
   MilwaukeeCounty_OpenData:
     MaxExtent: "-88.06337065,42.84200375,-87.82616684,43.19211554"
     Collections:
@@ -397,7 +399,9 @@ Sites:
     SiteName: "RacineCounty"
     DatasetPrefix: ""
     DatasetPostfix: ", Racine County"
-    SkipList: ""     
+    SkipList:
+      - UUID: "RacineCounty-73e98d144603416999f090db202b6ddc4"
+      - UUID: "RacineCounty-7be670f41acf47008ea46ed7cc20ab8b0"
   RockCounty_OpenData:
     MaxExtent: "-89.408837,42.474293,-88.741322,42.862919"
     Collections:
@@ -476,6 +480,7 @@ Sites:
     SkipList:
       - UUID: "VilasCounty-fb3691c2030449f79fdd622fd1f7a14b"
       - UUID: "VilasCounty-08a1bcad6ffc4d6eaacbb5382436986a"
+      - UUID: "VilasCounty-9ec88a16555e41c088607b651ec724c4"
   WashingtonCounty_OpenData:
     MaxExtent: "-88.4179916,43.19471212,-88.04056576,43.54245289"
     Collections:

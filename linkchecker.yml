@@ -1,0 +1,28 @@
+# Configuration file for GeoData@Wisconsin link checker
+
+# Solr connections
+Solr:
+  test: "https://geodata-test.sco.wisc.edu/solr/geodata-core/"
+  prod: "https://geodata.wisc.edu/solr/geodata-core/"
+  dev: "https://geodata-dev.shc.wisc.edu/solr/geodata-core/"
+
+# Email settings
+report_email:
+  smtp_server: "smtp.wiscmail.wisc.edu"
+  sender_email: "geodata@sco.wisc.edu"
+  receiver_email: "help@sco.wisc.edu"
+  email_subject: "GeoData@Wisconsin Link Report"
+  port: 25 
+
+# List of sites we should ignore (base urls only)
+# This could be used to skip sites that seems to have persistent connection problems, or sites that we don't feel a need to check frequently
+# can also be used to skip sites we maintain if we only want to check external sites. 
+skip:
+  #  - url: "https://prd-tnm.s3.amazonaws.com"
+  #- url: "https://thor-f5.er.usgs.gov"
+  #- url: "https://gisdata.wisc.edu"
+  #- url: "https://web.s3.wisc.edu"
+  #- url: "https://asset.library.wisc.edu"
+  #- url: "https://search.library.wisc.edu"
+  - url: "https://www.marathoncounty.gov"
+  - url: "https://www.fdlco.wi.gov"
