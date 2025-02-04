@@ -30,11 +30,17 @@ import requests
 from requests.exceptions import *
 from ruamel.yaml import YAML
 yaml = YAML()
+import re
 import tenacity as t # we need a lot of properties from tenacity so using short name
 
 # Make sure you have the right libraries installed with: 
 # python -m pip install -r requirements.txt
 # Note: reminder to use python3 when in Ubuntu/unix
+
+
+# minX/West, minY/South, maxX/east, maxY/North
+# Esri keeps tinkering with how they handle envelopes.  Adding this back in...
+spatial_coords = re.compile(r'(?P<minX>[^,]+),(?P<minY>[^,]+),(?P<maxX>[^,]+),(?P<maxY>[^,]+)')
 
 # Strip html from description
 class MLStripper(HTMLParser):
@@ -65,9 +71,9 @@ def checkValidity(dataset):
     if 'title' not in dataset or not dataset["title"] or dataset["title"]=="{{name}}":
         errors.append(f"          No valid title found")
         validData = False
-    if (not isinstance(dataset["spatial"], dict)):
-        errors.append(f"          No valid valid spatial bounding box found in {dataset['spatial']}")
-        validData = False
+    #if (not isinstance(dataset["spatial"], dict)):
+    #    errors.append(f"          No valid valid spatial bounding box found in {dataset['spatial']}")
+    #    validData = False
     return validData,"\n".join(errors)
 
 def getURL(refs):
@@ -251,19 +257,25 @@ def json2gbl (d, createdBy, siteName, collections, prefix, postfix, skiplist, ma
 
                 # generate bounding box
                 maxextents_list = [float(value) for value in maxextent]
-                spatial = dataset["spatial"]
-                log.debug(f"{spatial}")
+                #spatial = dataset["spatial"]
+                #log.debug(f"{spatial}")
 
-                if spatial["type"]=="envelope":
+                """if spatial["type"]=="envelope":
                     log.debug(f"{spatial['type']}")
                     log.debug(f"{spatial['coordinates']}")
                     coordinates = [float(coord) for pair in spatial['coordinates'] for coord in pair]
                     log.debug(f"{coordinates}")       
                     valid_coordinates = validate_coordinates(coordinates, maxextents_list)            
                     envelope = f"ENVELOPE({valid_coordinates[0]},{valid_coordinates[2]},{valid_coordinates[3]},{valid_coordinates[1]})"
+                """
+                if spatial_coords.match(dataset.get("spatial", "")):
+                    coordinates = dataset["spatial"].split(',')
+                    coordinates_list = [float(value) for value in coordinates]         
+                    valid_coordinates = validate_coordinates(coordinates_list, maxextents_list)            
+                    envelope = f"ENVELOPE({valid_coordinates[0]},{valid_coordinates[2]},{valid_coordinates[3]},{valid_coordinates[1]})"
                 else:
-                    log.info(f"{spatial['type']}")
-                    log.info(f"{spatial['coordinates']}")
+                    #log.info(f"{spatial['type']}")
+                    #log.info(f"{spatial['coordinates']}")
                     log.info(f"          No spatial bounding box found{('spatial' in dataset and ' in ' + dataset['spatial']) or None}.")
                     envelope = f"ENVELOPE({maxextents_list[0]},{maxextents_list[2]},{maxextents_list[3]},{maxextents_list[1]})"
                 
