@@ -169,7 +169,7 @@ def check_urls(search_path, verbose):
             except requests.RequestException as e:
                 # exception will be thrown if the server can't be reached
                 print(f"Error connecting to server {urlparse(url).netloc}")
-                logging.info(f"Error connecting to server {urlparse(url).netloc}")
+                logging.error(f"Error connecting to server {urlparse(url).netloc}")
         
         session.close()
     
