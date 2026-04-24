@@ -159,7 +159,10 @@ def check_urls(search_path, verbose):
             try:
                 response = session.head(url, timeout=5) 
                 if response.status_code == 200:
-                    pass
+                    if verbose:
+                        logging.info(f"{url}: Success")
+                    else:
+                        pass
                 else: 
                     logging.warning(f"Not Found: {url}")
                     print(f"Not Found: {url}")
